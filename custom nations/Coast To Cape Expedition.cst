@@ -1,0 +1,116 @@
+name="Coast To Cape Expedition"
+adjective="Coast to Cape"
+country_colors={
+	flag=28
+	color=8
+	symbol_index=119
+	flag_colors={
+		13 14 9 
+	}
+}
+index=1151
+graphical_culture=5
+technology_group=8
+religion=14
+government=1
+government_reform=417
+government_rank=1
+idea={
+	{
+		level=10
+		index=119
+		name=""
+		desc=""
+	}
+ {
+		level=20
+		index=64
+		name=""
+		desc=""
+	}
+ {
+		level=12
+		index=107
+		name=""
+		desc=""
+	}
+ {
+		level=60
+		index=123
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=103
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=33
+		name=""
+		desc=""
+	}
+ {
+		level=2
+		index=44
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=96
+		name=""
+		desc=""
+	}
+ {
+		level=30
+		index=146
+		name=""
+		desc=""
+	}
+ {
+		level=30
+		index=63
+		name=""
+		desc=""
+	}
+ 
+}
+culture="chihan"
+monarch={
+	admin=10
+	diplomacy=10
+	military=10
+	age=41
+	female=no
+	name="Tingkui I"
+	dynasty="Dai"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"just_personality"
+		"strict_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=no
+	name="Xiang I"
+	dynasty="Dai"
+	is_null=no
+}
+queen={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=yes
+	name="Yanxiang I"
+	dynasty="Ye"
+	is_null=no
+}

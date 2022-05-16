@@ -1,0 +1,119 @@
+name="Imperial Rome"
+adjective="Roman"
+country_colors={
+	flag=0
+	color=5
+	symbol_index=111
+	flag_colors={
+		7 2 8 
+	}
+}
+index=1273
+graphical_culture=1
+technology_group=1
+religion=1
+government=1
+government_reform=78
+government_rank=3
+idea={
+	{
+		level=5
+		index=80
+		name="Conquering the World in Self Defense"
+		desc=""
+	}
+ {
+		level=1
+		index=0
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=3
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=81
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=88
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=82
+		name=""
+		desc=""
+	}
+ 
+}
+culture="roman"
+monarch={
+	admin=10
+	diplomacy=10
+	military=10
+	age=40
+	female=yes
+	name="Augustus"
+	dynasty="Caesar"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"just_personality"
+		"careful_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=no
+	name="Luigi I"
+	dynasty="Caesar"
+	is_null=no
+}
+queen={
+	admin=2
+	diplomacy=4
+	military=6
+	age=19
+	female=no
+	name="Elio"
+	dynasty="Caesar"
+	is_null=no
+	personality={
+		"greedy_personality"
+	}
+}

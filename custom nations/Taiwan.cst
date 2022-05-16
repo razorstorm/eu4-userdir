@@ -1,0 +1,115 @@
+name="Taiwan"
+adjective="Taiwanese"
+country_colors={
+	flag=17
+	color=20
+	symbol_index=22
+	flag_colors={
+		5 0 13 
+	}
+}
+index=1273
+graphical_culture=3
+technology_group=8
+religion=14
+government=1
+government_reform=73
+government_rank=3
+idea={
+	{
+		level=2
+		index=77
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=97
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=170
+		name=""
+		desc=""
+	}
+ {
+		level=5
+		index=63
+		name=""
+		desc=""
+	}
+ {
+		level=40
+		index=0
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=27
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=146
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=112
+		name=""
+		desc=""
+	}
+ {
+		level=35
+		index=48
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=119
+		name=""
+		desc=""
+	}
+ 
+}
+culture="hubei"
+monarch={
+	admin=10
+	diplomacy=10
+	military=10
+	age=25
+	female=no
+	name="Kapono I"
+	dynasty="Alani"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"expansionist_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=no
+	name="Feleti I"
+	dynasty="Alani"
+	is_null=no
+}
+queen={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=yes
+	name="Nohealani I"
+	dynasty="Sanoe"
+	is_null=no
+}

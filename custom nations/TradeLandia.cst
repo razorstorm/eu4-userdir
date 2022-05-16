@@ -1,0 +1,122 @@
+name="TradeLandia"
+adjective="TradeLandian"
+country_colors={
+	flag=35
+	color=20
+	symbol_index=20
+	flag_colors={
+		14 16 6 
+	}
+}
+index=1423
+graphical_culture=1
+technology_group=1
+religion=5
+government=9
+government_reform=251
+government_rank=3
+idea={
+	{
+		level=100
+		index=43
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=39
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=40
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=183
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=245
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=37
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=82
+		name=""
+		desc=""
+	}
+ 
+}
+culture="flemish"
+monarch={
+	admin=100
+	diplomacy=100
+	military=100
+	age=40
+	religion=5
+	culture="flemish"
+	female=yes
+	name="Badeloge I"
+	dynasty="van Wassenaer"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"entrepreneur_personality"
+		"calm_personality"
+	}
+}
+heir={
+	admin=-1
+	diplomacy=-1
+	military=-1
+	age=1791
+	religion=5
+	culture="flemish"
+	female=no
+	name="No Heir"
+	dynasty="nodynasty"
+	is_null=yes
+}
+queen={
+	admin=-1
+	diplomacy=-1
+	military=-1
+	age=1791
+	religion=5
+	culture="flemish"
+	female=no
+	name="No Consort"
+	dynasty="nodynasty"
+	is_null=yes
+}

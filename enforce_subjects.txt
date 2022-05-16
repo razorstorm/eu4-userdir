@@ -1,0 +1,61 @@
+every_subject_country = {
+    add_legitimacy = 100
+    change_religion = ROOT
+    add_devotion = 100
+    add_horde_unity = 100
+    set_meritocracy = 100
+    add_republican_tradition = 100
+    add_treasury = 100000
+    set_dynasty = ROOT
+    add_prestige = 100
+    add_stability = 3
+    change_culture = ROOT
+    add_corruption = -100
+    add_war_exhaustion = -100
+    add_harmonized_religion = catholic
+    add_harmonized_religion = pagan
+    add_harmonized_religion = buddhism
+    add_harmonized_religion = sunni
+    add_harmonized_religion = sikhism
+    add_harmonized_religion = animism
+    add_harmonized_religion = zoroastrian
+    add_harmonized_religion = jewish
+    add_harmonized_religion = mahayana
+    add_harmonized_religion = vajrayana
+    add_harmonized_religion = hinduism
+    every_owned_province = {
+        limit = {
+            NOT = { has_province_modifier = bauplatz_plus_1 }
+            NOT = { has_province_modifier = bauplatz_plus_2 }
+            NOT = { has_province_modifier = bauplatz_plus_3 }
+            NOT = { has_province_modifier = bauplatz_plus_4 }
+            NOT = { has_province_modifier = bauplatz_plus_5 }
+            NOT = { has_province_modifier = bauplatz_plus_6 }
+        }
+        remove_province_modifier = bauplatz_plus_1
+        remove_province_modifier = bauplatz_plus_2
+        remove_province_modifier = bauplatz_plus_3
+        remove_province_modifier = bauplatz_plus_4
+        remove_province_modifier = bauplatz_plus_5
+        add_permanent_province_modifier = {
+            name = bauplatz_plus_6
+            duration = -1
+        }
+    }
+    add_estate_loyalty = {
+        estate = estate_church
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_nobles
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_burghers
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_dhimmi
+        loyalty = 100
+    }
+}

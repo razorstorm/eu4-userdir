@@ -1,0 +1,120 @@
+name="Russian Empire"
+adjective="Russian"
+country_colors={
+	flag=19
+	color=5
+	symbol_index=22
+	flag_colors={
+		4 5 12 
+	}
+}
+index=1229
+graphical_culture=2
+technology_group=2
+religion=6
+government=1
+government_reform=131
+government_rank=2
+idea={
+	{
+		level=1
+		index=76
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=0
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=3
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=77
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=37
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=78
+		name=""
+		desc=""
+	}
+ 
+}
+culture="novgorodian"
+monarch={
+	admin=7
+	diplomacy=7
+	military=7
+	age=30
+	female=yes
+	name="Dobrava I"
+	dynasty="Lyubech"
+	is_null=no
+	personality={
+		"keen_recruiter_personality"
+	}
+}
+heir={
+	admin=3
+	diplomacy=3
+	military=3
+	age=15
+	female=yes
+	name="Praskovya I"
+	dynasty="Lyubech"
+	is_null=no
+	personality={
+		"sadistic_personality"
+	}
+}
+queen={
+	admin=3
+	diplomacy=3
+	military=3
+	age=20
+	female=no
+	name="Igor I"
+	dynasty="Pleskov"
+	is_null=no
+	personality={
+		"easygoing_personality"
+	}
+}

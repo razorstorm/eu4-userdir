@@ -1,0 +1,181 @@
+guiTypes = {
+	
+	### DEFAULT POPUP
+	eu3dialogtype = {
+		name = "NameHeirDialog"
+		backGround="Background"
+		position = { x=-450 y=-320 }
+		size = { x=1000 y=640 }
+		orientation="CENTER"
+		moveable = 1
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		guiButtonType = {
+			name = "Background"	
+			quadTextureSprite ="SandboxFloaterBackground"
+		}
+		
+		iconType =
+		{
+			name ="message_band"
+			spriteType = "GFX_message_band"
+			position = { x= -30 y = 46 }
+		}
+		
+		instantTextBoxType = {
+				name = "Header"
+				position = { x = 118 y = 38 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 760
+				maxHeight = 40
+				fixedsize = yes
+				format = centre
+			}
+		
+		instantTextBoxType = {
+				name = "Line1"
+				position = { x = 118 y = 82 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "Title"	
+				maxWidth = 760
+				maxHeight = 48
+				format = centre
+			}
+
+		iconType =
+		{
+			name ="popup_edittextbox_bg"
+			spriteType = "GFX_popup_edittextbox_bg"
+			position = { x= 176 y = 226 }
+		}
+			
+		instantTextBoxType = {
+				name = "Line2"
+				position = { x = 118 y = 270 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 760
+				maxHeight = 40	
+				format = centre
+			}
+			
+		editBoxType =
+		{
+			name = "Line3"
+			font = "vic_22"
+			#position = { x= 192 y= 174 }
+			position = { x= 192 y= 244 }
+			borderSize = { x = 0 y = 0 }	
+			text = ""
+			size = { x=614 y=40 }
+		}
+		
+		guiButtonType = {
+			name = "random_heir_name"
+			position = { x = 812 y = 222 }
+			spriteType = "GFX_nation_designer_random_button"
+		}
+			
+			
+		instantTextBoxType = {
+				name = "Line4"
+				position = { x = 38 y = 270 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 920
+				maxHeight = 40	
+				format = centre
+			}
+			
+		instantTextBoxType = {
+				name = "Line5"
+				position = { x = 38 y =320 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 920
+				maxHeight = 40	
+				format = centre
+			}
+			
+		instantTextBoxType = {
+				name = "Line6"
+				position = { x = 38 y = 370 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = ""	
+				maxWidth = 920
+				maxHeight = 40	
+				format = centre
+			}
+		
+		shieldtype = 
+		{
+			name ="LeftShield"
+			spriteType = "standarddialogshield"
+			position = { x= -2 y = 38 }
+		}
+		
+		shieldtype = 
+		{
+			name ="RightShield"
+			spriteType = "standarddialogshield"
+			position = { x= 814 y = 38 }
+		}
+		
+		
+		guiButtonType = {
+			name = "DeclineButton"
+			position = { x=154 y =540}
+			quadTextureSprite ="largefloaterbutton"
+			buttonText = "CANCEL"
+			buttonFont = "vic_18"
+			shortcut = "z"
+			extra_shortcut = "ESCAPE"
+		}
+		
+		guiButtonType = {
+			name = "AgreeButton"
+			position = { x=548 y =540}
+			quadTextureSprite ="largefloaterbutton"
+			buttonText = "OK"
+			buttonFont = "vic_18"
+			shortcut = "c"
+			extra_shortcut = "RETURN"
+			clicksound = ok_click
+		}
+		
+		guiButtonType = {
+			name = "CenterOK"
+			position = { x=350 y =540}
+			quadTextureSprite ="largefloaterbutton"
+			buttonText = "OK"
+			buttonFont = "vic_18"
+			shortcut = "RETURN"
+			clicksound = ok_click
+		}
+		
+		
+		guiButtonType = {
+			name = "Settings"	
+			quadTextureSprite ="MessageSettingsButton"
+			position = { x=64 y=64 }
+		}
+	}
+	
+}
+

@@ -1,0 +1,15 @@
+version="1.2"
+tags={
+	"Events"
+	"Gameplay"
+	"National Ideas"
+	"Historical"
+	"Expansion"
+}
+name="Land of the Free (USA Overhaul Mod)"
+replace_path="common/bookmarks"
+replace_path="gfx/loadingscreens"
+picture="thumbnail.png"
+supported_version="1.33.*"
+path="F:/Steam/steamapps/workshop/content/236850/2677462796"
+remote_file_id="2677462796"

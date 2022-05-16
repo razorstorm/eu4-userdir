@@ -1,0 +1,119 @@
+name="Jiu"
+adjective="Jiu"
+country_colors={
+	flag=0
+	color=8
+	symbol_index=58
+	flag_colors={
+		3 8 2 
+	}
+}
+index=1273
+graphical_culture=5
+technology_group=8
+religion=14
+government=1
+government_reform=73
+government_rank=3
+idea={
+	{
+		level=4
+		index=77
+		name=""
+		desc=""
+	}
+ {
+		level=15
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=20
+		index=114
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=33
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=170
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=100
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=88
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=50
+		index=95
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=119
+		name=""
+		desc=""
+	}
+ 
+}
+culture="hubei"
+monarch={
+	admin=10
+	diplomacy=10
+	military=10
+	age=41
+	female=no
+	name="Xianzhang I"
+	dynasty="Jiu"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"just_personality"
+		"strict_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=yes
+	name="Chunmei II"
+	dynasty="Jiu"
+	is_null=no
+}
+queen={
+	admin=5
+	diplomacy=4
+	military=4
+	age=25
+	female=yes
+	name="Xiaoying I"
+	dynasty="Jiu"
+	is_null=no
+	personality={
+		"industrious_personality"
+	}
+}

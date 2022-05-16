@@ -1,0 +1,15 @@
+name="Ming China Flavour"
+tags={
+	"Expansion"
+	"Gameplay"
+	"Religion"
+	"Balance"
+	"Events"
+	"Historical"
+	"Missions And Decisions"
+}
+picture="thumbnail.png"
+version="3.2.2"
+supported_version="1.33.*"
+path="F:/Steam/steamapps/workshop/content/236850/2583207030"
+remote_file_id="2583207030"

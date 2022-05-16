@@ -1,0 +1,121 @@
+name="Rylsk"
+adjective="Rylsk"
+country_colors={
+	flag=13
+	color=6
+	symbol_index=22
+	flag_colors={
+		0 14 8 
+	}
+}
+index=1229
+graphical_culture=2
+technology_group=2
+religion=6
+government=1
+government_reform=131
+government_rank=2
+idea={
+	{
+		level=1
+		index=76
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=0
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=3
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=77
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=37
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=78
+		name=""
+		desc=""
+	}
+ 
+}
+culture="ryazanian"
+monarch={
+	admin=7
+	diplomacy=7
+	military=7
+	age=40
+	female=no
+	name="Gavriil I"
+	dynasty="Slutsky"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"ambitious_personality"
+	}
+}
+heir={
+	admin=3
+	diplomacy=3
+	military=3
+	age=15
+	female=yes
+	name="Theodora I"
+	dynasty="Slutsky"
+	is_null=no
+	personality={
+		"xenophobic_personality"
+	}
+}
+queen={
+	admin=3
+	diplomacy=3
+	military=3
+	age=20
+	female=yes
+	name="Liudmila I"
+	dynasty="Slutsky"
+	is_null=no
+	personality={
+		"calm_personality"
+	}
+}

@@ -1,0 +1,180 @@
+guiTypes = {
+
+	windowType = {
+		name = "countryview"
+		backGround=""
+		#position = { x=44 y=0 }	
+		position = { x=-1156 y=0 }	
+		show_position = { x=44 y =0 }
+		hide_position = { x=-1156 y =0 }	
+		animation_type = "decelerated"
+		animation_time = 300	
+		size = { x=2048 y=200 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+	
+		windowType = {
+		name = "countryview_tabs"
+		backGround=""
+		position = { x=-26 y=6 }	
+		size = { x=2048 y=200 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no	
+	
+			iconType =
+			{
+			name =" "
+			spriteType = "GFX_tab_detail"
+			position = { x= 30 y = 336 }
+			Orientation = "UPPER_LEFT"
+
+			}		
+	
+			guiButtonType =
+			{
+				name ="tab_court"
+				quadTextureSprite= "GFX_tab_court"
+				position = { x= -6 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "1"
+				
+			}		
+	
+			guiButtonType =
+			{
+				name ="tab_gov"
+				quadTextureSprite= "GFX_tab_local_government"
+				position = { x= 70 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "2"
+				
+			}
+	
+			guiButtonType =
+			{
+				name ="tab_diplomacy"
+				quadTextureSprite= "GFX_tab_policies"
+				position = { x= 146 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "3"
+				
+			}
+						
+			guiButtonType =
+			{
+				name ="tab_economy"
+				quadTextureSprite= "GFX_tab_economy"
+				position = { x= 224 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "4"
+				
+			}	
+			
+			guiButtonType =
+			{
+				name ="tab_trade"
+				quadTextureSprite= "GFX_tab_domestic_trade"
+				position = { x= 300 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "5"
+				
+			}
+		
+			guiButtonType =
+			{
+				name ="tab_technology"
+				quadTextureSprite= "GFX_tab_domestic_technology"
+				position = { x= 376 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "6"
+				
+			}	
+
+			guiButtonType =
+			{
+				name ="tab_ideas"
+				quadTextureSprite= "GFX_tab_domestic_ideas"
+				position = { x= 454 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "7"
+				
+			}
+			
+			guiButtonType =
+			{
+				name ="tab_missions"
+				quadTextureSprite= "GFX_tab_domestic_mission"
+				position = { x= 528 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "8"
+				
+			}
+			
+			guiButtonType =
+			{
+				name ="tab_decisions"
+				quadTextureSprite= "GFX_tab_decisions"
+				position = { x= 606 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "9"
+				
+			}
+			
+			guiButtonType =
+			{
+				name ="tab_stability"
+				quadTextureSprite= "GFX_tab_domestic_government"
+				position = { x= 680 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "0"
+				
+			}
+
+			guiButtonType =
+			{
+				name ="tab_religion"
+				quadTextureSprite= "GFX_tab_religion"
+				position = { x= 758 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = ","
+				
+			}
+
+			guiButtonType =
+			{
+				name ="tab_military"
+				quadTextureSprite= "GFX_tab_military" 
+				position = { x= 834 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "."
+				
+			}	
+			
+			guiButtonType =
+			{
+				name ="tab_subjects"
+				quadTextureSprite= "GFX_tab_subjects"
+				position = { x= 912 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "'"
+				
+			}
+			
+			guiButtonType =
+			{
+				name ="tab_estates"
+				quadTextureSprite= "GFX_tab_estates"
+				position = { x= 988 y = 336 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "k"
+				
+			}
+		}
+	}
+}

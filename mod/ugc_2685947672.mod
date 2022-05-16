@@ -1,0 +1,16 @@
+version="1"
+tags={
+	"Balance"
+	"Missions And Decisions"
+	"New Nations"
+	"Events"
+	"Expansion"
+	"Historical"
+	"Alternative History"
+}
+name="To Victoria: Rule Britannia"
+replace_path="common/bookmarks"
+picture="thumbnail.png"
+supported_version="1.32.*"
+path="F:/Steam/steamapps/workshop/content/236850/2685947672"
+remote_file_id="2685947672"

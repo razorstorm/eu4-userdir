@@ -1,0 +1,1088 @@
+guiTypes = {
+
+	windowType = {
+		name = "aggressiveness_window"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=32 y=32 }
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		moveable = 0
+		Orientation = "LOWER_LEFT"
+		
+		iconType =
+		{
+			name ="aggressiveness_icon"
+			spriteType = "GFX_aggressiveness_icon"
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	windowType = {
+		name = "ferocity_window"
+		backGround=""
+		position = { x=0 y=0 }	
+		size = { x=32 y=32 }
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		moveable = 0
+		Orientation = "LOWER_LEFT"
+		
+		iconType =
+		{
+			name ="ferocity_icon"
+			spriteType = "GFX_ferocity_icon"
+			position = { x = 0 y = 0 }
+		}
+	}
+			
+	### COLONISATION WINDOW
+	windowType = {
+		name = "colonisationpanel"
+		backGround=""
+		#position = { x=0 y=-800 }	
+		position = { x=-1000 y=-800 }
+		show_position = { x=0 y =-800 }
+		hide_position = { x=-1000 y =-800 }	
+		animation_type = "decelerated"
+		animation_time = 300	
+		size = { x=600 y=1140 }
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		moveable = 0
+		Orientation = "LOWER_LEFT"
+
+		iconType =
+		{
+			name ="province_terrain"
+			spriteType = "GFX_colony_terrain_steppe"
+			position = { x= 10 y = -152 }
+		}
+		
+		iconType =
+		{
+			name ="background"
+			spriteType = "GFX_colonisation_bg"
+			position = { x= -18 y = -276 }
+		}	
+		
+
+		
+		guiButtonType = {
+			name = "close_button"
+			position = { x=598 y =-258}
+			quadTextureSprite ="GFX_closebutton2"
+			shortcut = "ESCAPE"
+			clicksound = close_window
+		}
+			
+		instantTextBoxType = {
+			name = "province_name"
+			position = { x = 60 y = -238 }
+			textureFile = ""
+			font = "vic_22s"
+			borderSize = {x = 8 y = 8}
+			text = "Province name"	
+			maxWidth = 512
+			maxHeight = 128	
+			fixedsize = yes
+		}
+		
+		OverlappingElementsBoxType = {
+				name = "modifiers"
+				position = { x = 374 y = 328 }
+				size = { x = 228 y = 64 }
+				Orientation = "UPPER_LEFT"
+				format = left
+				spacing = 2
+		}		
+
+		iconType =
+		{
+			name ="strait_indicator"
+			spriteType = "GFX_strait"
+			position = { x = 370 y = 396 }
+			scale = 1.1
+		}
+		
+		
+		iconType =
+		{
+			name ="tax_base_icon"
+			spriteType ="GFX_icon_tax_base"	
+			position = { x = 20 y = 32 }
+		}
+
+		instantTextBoxType = {
+			name = "tax_base_value"
+			position = { x = 80 y = 36 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "123"
+			maxWidth = 80
+			maxHeight = 40
+			format = centre
+			fixedsize = yes				
+		}
+		
+		iconType =
+		{
+			name ="prod_base_icon"
+			spriteType ="GFX_production_icon"
+			position = { x= 184 y = 32 }
+		}	
+
+		instantTextBoxType = {
+			name = "prod_base_value"
+			position = { x = 240 y = 36 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "123"
+			maxWidth = 80
+			maxHeight = 40
+			format = centre
+			fixedsize = yes				
+		}
+
+		iconType =
+		{
+			name ="mp_base_icon"
+			spriteType ="GFX_text_icon_manpower"	
+			position = { x= 348 y = 32 }
+		}	
+
+		instantTextBoxType = {
+			name = "mp_base_value"
+			position = { x = 404 y = 36 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "123"
+			maxWidth = 80
+			maxHeight = 40
+			format = centre
+			fixedsize = yes				
+		}			
+
+		iconType = {
+			name ="development_icon"
+			spriteType = "GFX_development_icon"
+			position = { x = 516 y = 32 }
+		}
+
+		instantTextBoxType = {
+			name = "development_value"
+			position = { x = 564 y = 36}
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "123"
+			maxWidth = 80
+			maxHeight = 40
+			format = centre
+			fixedsize = yes				
+		}
+		
+		### Shown if colony
+		windowType = {
+			name = "colonist_window"
+			backGround=""
+			position = { x=0 y= 98 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+		
+			iconType =
+			{
+				name ="if_colony_bg"
+				spriteType = "GFX_if_colony_bg"
+				position = { x= 28 y = -4 }
+				Orientation = "UPPER_LEFT"
+			}
+		
+			iconType =
+			{
+				name ="colony_icon"
+				spriteType = "GFX_colony_icon"
+				position = { x= 24 y = 12 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "culture_label"
+				position = { x = 160 y = 4 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "CULTURE"	
+				maxWidth = 256
+				maxHeight = 64
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "culture_type"
+				position = { x = 374 y = 4 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "FGDSFHDF"	
+				maxWidth = 256
+				maxHeight = 64
+				format = right
+			}
+			
+			instantTextBoxType = {
+				name = "population_label"
+				position = { x = 160 y = 40 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "LEDGER_POPULATION"	
+				maxWidth = 224
+				maxHeight = 64
+				format = left
+			}
+		
+			iconType =
+			{
+				name ="city_progress"
+				spriteType = "GFX_provinceView_progressbar"
+				position = { x = 434 y = 54}
+			}
+			
+			iconType =
+			{
+				name ="city_progress_frame"
+				spriteType = "GFX_provinceView_morale_frame_long"
+				position = { x = 420 y = 46}
+			}
+			
+			instantTextBoxType = {
+				name = "growth_label"
+				position = { x = 160 y = 80 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "PW_GROWTH"	
+				maxWidth = 256
+				maxHeight = 64
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "growth_value"
+				position = { x = 128 y = 80 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "1111%"	
+				maxWidth = 256
+				maxHeight = 64
+				format = right
+			}
+			
+			instantTextBoxType = {
+				name = "growth_chance_label"
+				position = { x = 390 y = 80 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "PW_GROWTH_CHANCE"	
+				maxWidth = 256
+				maxHeight = 64
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "growth_chance_value"
+				position = { x = 378 y = 80 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				text = "1111%"	
+				maxWidth = 256
+				maxHeight = 64
+				format = right
+			}
+		}
+		
+		### Shown if no colony
+		windowType = {
+			name = "no_colonist_window"
+			backGround=""
+			position = { x=0 y= 160 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			
+			instantTextBoxType = {
+				name = "no_colony_label"
+				position = { x = 150 y = -32 }
+				font = "vic_29"	
+				borderSize = {x = 0 y = 0}	
+				text = "NO_COLONY_PRESENT"	
+				maxWidth = 370
+				maxHeight = 58	
+				format = center	
+			}
+			instantTextBoxType = {
+				name = "region_text"
+				position = { x = 10 y = 40 }
+				font = "vic_18"	
+				borderSize = {x = 8 y = 8}	
+				text = "NO_COLONY_PRESENT"	
+				maxWidth = 664
+				maxHeight = 80	
+				format = center	
+			}
+			instantTextBoxType = {
+				name = "tribal_owner"
+				position = { x = 150 y = 16 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "TRIBAL_OWNER"	
+				maxWidth = 370
+				maxHeight = 58	
+				format = center	
+			}
+			iconType =
+			{
+				name = "devastation_icon"
+				spriteType = "GFX_devestation_icon"
+				position = { x= 490 y = 30 }
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "devastation_value"
+				position = { x = 540 y = 40 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "0%"	
+				maxWidth = 100
+				maxHeight = 58	
+				format = right	
+			}
+			guiButtonType = {
+				name = "migrate_tribe_button"
+				position = { x=490 y = 80}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "MIGRATE"
+				buttonFont = "vic_18"
+			}
+
+			guiButtonType = {
+				name = "settle_tribe_button"
+				position = { x=490 y = 80}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "SETTLE"
+				buttonFont = "vic_18"
+			}
+			guiButtonType = {
+				name = "add_tribal_land_button"
+				position = { x=490 y = 80}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "ADD_TRIBAL_LAND_COL_WIN"
+				buttonFont = "vic_18"
+			}
+		}
+		
+		### Shows the current controller if colony exist
+		windowType = {
+			name = "controller_window"
+			backGround=""
+			position = { x=0 y= 200 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+		
+			### controller_shield is moved way down below controller_window a t m. TODO: Redesign whole panel.
+			guiButtonType ={
+				name ="controller_shield"
+				spriteType = "GFX_shield_small"
+				position = { x= 20 y = -102 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType = {
+				name ="trade_company_button"
+				quadTextureSprite = "GFX_tradecompany_indicators"
+				position = { x = 64 y = -52 }
+				hint_tag = "hint_hre"
+				frame = 1
+			}
+			
+			iconType =
+			{
+				name ="trade_company_icon"
+				spriteType = "GFX_tradecompany_indicators"
+				position = { x = 42 y = -80 }
+				Orientation = "UPPER_LEFT"
+				frame = 1
+				hint_tag = "hint_hre"
+			}
+
+			instantTextBoxType = {
+				name = "unrest_label"
+				position = { x = 0 y = 26 }
+				font = "vic_18"	
+				borderSize = {x = 4 y = 4}	
+				text = "LEDGER_UNREST"	
+				maxWidth = 160
+				maxHeight = 40	
+				format = center	
+				fixedsize = yes
+				hint_tag = "hint_revoltrisk"
+			}
+			
+			instantTextBoxType = {
+				name = "unrest_value"
+				position = { x = 18 y = 56 }
+				font = "vic_18"	
+				borderSize = {x = 4 y = 4}	
+				text = "2222%"	
+				maxWidth = 128
+				maxHeight = 40	
+				format = center	
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "tribal_owner"
+				position = { x = 150 y = 16 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "TRIBAL_OWNER"	
+				maxWidth = 370
+				maxHeight = 58	
+				format = center	
+			}
+			instantTextBoxType = {
+				name = "region_text"
+				position = { x = 140 y = 40 }
+				font = "vic_18"	
+				borderSize = {x = 8 y = 8}	
+				text = "NO_COLONY_PRESENT"	
+				maxWidth = 512
+				maxHeight = 52	
+				format = center	
+				fixedsize = yes
+			}	
+		}
+		
+		### Shows religion, trade goods and economical value
+		windowType = {
+			name = "economy_window"
+			backGround=""
+			position = { x=0 y= 320 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			
+			iconType =
+			{
+				name ="religion_icon"
+				spriteType = "GFX_icon_religion"
+				position = { x= 44 y = 14 }
+				hint_tag = "hint_religion"
+			}
+			
+			iconType =
+			{
+				name ="resource_icon"
+				spriteType = "GFX_resource_icon"
+				position = { x= 208 y = 14 }
+			}
+		}
+		
+		windowType = {
+			name = "present_envoy_window"
+			backGround=""
+			position = { x=-10 y= 478 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			
+			
+			iconType =
+			{
+				name ="colonist_bg"
+				spriteType = "GFX_banner_yellow_248"
+				position = { x= 22 y = 12 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType =
+			{
+				name ="colonist_icon"
+				spriteType = "GFX_icon_settler"
+				position = { x= 26 y = 12 }
+				Orientation = "UPPER_LEFT"
+				hint_tag = "hint_colonist"
+			}
+			
+			
+			instantTextBoxType = {
+				name = "colonist_name"
+				position = { x = 92 y = 28 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "COLONIST NAME"	
+				maxWidth = 380
+				maxHeight = 36	
+				format = left
+			}
+			
+			iconType =
+			{
+				name ="colonist_progress"
+				spriteType = "GFX_provinceView_progressbar"
+				position = { x = 40 y = 76}
+				hint_tag = "hint_colonisttime"
+			}
+			
+			iconType =
+			{
+				name ="city_progress_frame"
+				spriteType = "GFX_provinceView_morale_frame_long"
+				position = { x = 24 y = 68}
+				hint_tag = "hint_settlergrowth"
+			}
+			
+			
+			instantTextBoxType = {
+				name = "num_of_colonist"
+				position = { x = 34 y = 102 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "+150 colonists at 26th of January 1643"	
+				maxWidth = 638
+				maxHeight = 36	
+				format = left
+			}
+
+			guiButtonType = {
+				name = "goto_home_province"
+				position = { x=500 y = 80 }
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "GOTO"
+				buttonFont = "vic_18"
+			}
+			
+			guiButtonType = {
+				name = "cancel_colonist"
+				position = { x=500 y = 12}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "RECALL"
+				buttonFont = "vic_18"
+			}
+		}
+		
+		
+		
+		### Shown if you can send colonist
+		windowType = {
+			name = "send_envoy_window"
+			backGround=""
+			position = { x= 0 y= 484 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			
+			
+			iconType =
+			{
+				name ="time_banner"
+				spriteType = "GFX_banner_yellow_248"
+				position = { x= 12 y = 6 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType =
+			{
+				name ="time_icon"
+				spriteType = "GFX_icon_time"
+				position = { x= 30 y = 2 }
+				Orientation = "UPPER_LEFT"
+				hint_tag = "hint_colonisttime"
+			}
+			
+			instantTextBoxType = {
+				name = "time_label"
+				position = { x = 100 y = 18 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "PP_TIME"	
+				maxWidth = 512
+				maxHeight = 36	
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "time_value"
+				position = { x = 130 y = 18 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "123456 DAYS"	
+				maxWidth = 256
+				maxHeight = 36	
+				format = right
+			}
+			
+			iconType =
+			{
+				name ="chance_banner"
+				spriteType = "GFX_banner_yellow_248"
+				position = { x= 12 y = 72 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType =
+			{
+				name ="chance_icon"
+				spriteType = "GFX_icon_chance"
+				position = { x= 30 y = 66 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "chance_label"
+				position = { x = 100 y = 86 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "PP_CHANCE"	
+				maxWidth = 512
+				maxHeight = 36	
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "chance_value"
+				position = { x = 130 y = 86 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "123%"	
+				maxWidth = 256
+				maxHeight = 36	
+				format = right
+			}
+			
+			guiButtonType = {
+				name = "send_colonist"
+				position = { x=490 y = 6}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "SEND"
+				buttonFont = "vic_18"
+			}	
+			
+			guiButtonType = {
+				name = "abandon_colony"
+				position = { x=490 y = 74}
+				quadTextureSprite ="GFX_button_straight_87_32"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "ABANDON_MERCHANT"
+				buttonFont = "vic_18"
+			}	
+			
+			
+			guiButtonType = {
+				name = "siberian_frontier"
+				position = { x=456 y =-768}
+				quadTextureSprite ="GFX_siberian_mechanic_button"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+			}	
+			
+		}
+		
+		
+		
+		windowType = {
+			name = "natives_window"
+			backGround=""
+			position = { x=0 y= 600 }	
+			size = { x=600 y=300 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			
+			iconType =
+			{
+				name ="natives_icon"
+				spriteType = "GFX_natives"
+				position = { x = 34 y = 12}
+			}
+			
+			instantTextBoxType = {
+				name = "natives_label"
+				position = { x = 196 y = 44 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "PP_NATIVES"	
+				maxWidth = 512
+				maxHeight = 36	
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "natives_value"
+				position = { x = 420 y = 40 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "123456"	
+				maxWidth = 200
+				maxHeight = 36	
+				format = right
+			}
+			
+			instantTextBoxType = {
+				name = "aggressiveness_label"
+				position = { x = 196 y = 84 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "PP_AGGRESSIVE"	
+				maxWidth = 128
+				maxHeight = 36	
+				format = left
+			}
+			
+			OverlappingElementsBoxType = {
+				name = "aggressiveness_box"
+				position = { x = 420 y = 84 }
+				size = { x = 200 y = 32 }
+				Orientation = "UPPER_LEFT"
+				format = right
+				spacing = 2
+			}
+			
+		#	instantTextBoxType = {
+		#		name = "aggressiveness_value"
+		#		position = { x = 420 y = 84 }
+		#		font = "vic_18"	
+		#		borderSize = {x = 0 y = 0}	
+		#		text = "123456"	
+		#		maxWidth = 256
+		#		maxHeight = 36	
+		#		format = left
+		#	}
+			
+			instantTextBoxType = {
+				name = "ferocity_label"
+				position = { x = 196 y = 126 }
+				font = "vic_18"	
+				borderSize = {x = 0 y = 0}	
+				text = "PP_FEROCITY"	
+				maxWidth = 512
+				maxHeight = 36	
+				format = left
+			}
+			
+			OverlappingElementsBoxType = {
+				name = "ferocity_box"
+				position = { x = 420 y = 126 }
+				size = { x = 200 y = 32 }
+				Orientation = "UPPER_LEFT"
+				format = right
+				spacing = 2
+			}
+			
+		#	instantTextBoxType = {
+		#		name = "ferocity_value"
+		#		position = { x = 360 y = 126 }
+		#		font = "vic_18"	
+		#		borderSize = {x = 0 y = 0}	
+		#		text = "123456"	
+		#		maxWidth = 256
+		#		maxHeight = 36	
+		#		format = left
+		#	}
+		}
+
+		windowType = {
+			name = "select_minority_culture_window"
+			backGround =""
+			position = { x= 8 y=-1048 }	
+			size = { x=400 y= 60 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "LOWER_LEFT"
+			
+			iconType = {
+				name ="bg"
+				spriteType = "GFX_send_colonists_overlay"
+				position = { x= 0 y = 0 }
+			}
+		
+			instantTextBoxType = {
+				name = "send_colonist_label"
+				position = { x = 30 y = 12 }
+				textureFile = ""
+				font = "vic_18"
+				text = "COLONIZE_PROVINCE"	
+				maxWidth = 560
+				maxHeight = 48	
+				format = centre
+				fixedsize = yes
+			}
+			
+			guiButtonType = {
+				name = "send_colonist_button"
+				position = { x = 30 y = 80 }
+				quadTextureSprite = "GFX_button_straight_300_32"
+				buttonFont = "vic_18"
+				text = "SEND_COLONIST"	
+			}
+
+			instantTextBoxType = {
+				name = "expel_minority_label"
+				position = { x = 30 y = 170 }
+				textureFile = ""
+				font = "vic_18"
+				text = "EXPEL_MINORITIES"	
+				maxWidth = 560
+				maxHeight = 48	
+				format = centre
+				fixedsize = yes
+			}
+
+			listboxType = {
+				name ="listbox"
+				position = { x = 30 y = 240 }
+				backGround=""
+				size = { x= 592 y = 360 }
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+			}
+
+			guiButtonType = {
+				name = "cancel_button"
+				position = { x=224 y = 610 }
+				quadTextureSprite ="GFX_standard_button_105"
+				buttonText = "CANCEL"
+				buttonFont = "vic_18"
+				shortcut = "ESCAPE"
+				clicksound=click
+			}
+
+			windowType = {
+				name = "select_minority_province_window"
+				backGround =""
+				position = { x=664 y=-66 }	
+				size = { x=400 y= 60 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+				Orientation = "LOWER_LEFT"
+				
+				iconType = {
+					name ="bg"
+					spriteType = "GFX_expel_colonist_bg"
+					position = { x= 0 y = 0 }
+				}
+			
+				instantTextBoxType = {
+					name = "label"
+					position = { x = 30 y = 26 }
+					textureFile = ""
+					font = "vic_18"
+					text = "SELECT_PROVINCE"	
+					maxWidth = 560
+					maxHeight = 48	
+					format = centre
+					fixedsize = yes
+				}
+				
+				listboxType = {
+					name ="listbox"
+					position = { x = 16 y = 80 }
+					backGround=""
+					size = { x= 642 y = 620 }
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+				}
+
+				guiButtonType = {
+					name = "cancel_button"
+					position = { x=214 y = 728 }
+					quadTextureSprite ="GFX_standard_button_105"
+					buttonText = "CANCEL"
+					buttonFont = "vic_18"
+					shortcut = "ESCAPE"
+					clicksound=click
+				}
+			}
+		}	
+	}
+
+	### LIST ENTRY
+	
+windowType = {
+		name = "send_colonist_button"
+		#backGround =""
+		position = { x=0 y=0 }	
+		size = { x=600 y= 72 }
+		#moveable = 0
+		#dontRender = ""
+		#horizontalBorder = ""
+
+
+		#checkboxType = {
+		#	name = "list_button"
+		#	position = { x=0 y =0}
+		#	quadTextureSprite ="GFX_send_colonists_button"	
+		#	buttonFont = "vic_18"
+		#}		
+		
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_button_straight_300_32"
+			buttonFont = "vic_18"
+		}
+		
+		instantTextBoxType = {
+			name = "list_item_label"
+			position = { x = 20 y = 14 }
+			textureFile = ""
+			font = "vic_18"
+			text = ""	
+			maxWidth = 560
+			maxHeight = 40	
+			format = centre
+			fixedsize = yes
+			alwaystransparent = yes
+		}	
+	}	
+	
+	windowType = {
+		name = "expel_colonist_entry"
+		#backGround =""
+		position = { x=1004 y=1000 }	
+		size = { x=650 y= 124 } #57
+		#moveable = 0
+		#dontRender = ""
+		#horizontalBorder = ""
+	
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_expel_colonist_entry"
+			buttonFont = "vic_18"
+		}
+		
+		instantTextBoxType = {
+			name = "list_item_label"
+			position = { x = 30 y = 10 }
+			textureFile = ""
+			font = "vic_18"
+			text = ""	
+			maxWidth = 400
+			maxHeight = 40	
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+
+		instantTextBoxType = {
+			name = "dev_bonus"
+			position = { x = 24 y = 52 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 60
+			maxHeight = 40	
+			format = right
+			fixedsize = yes
+			alwaystransparent = yes
+		}		
+		
+		iconType = {
+			name ="development_icon"
+			spriteType = "GFX_development_icon"
+			position = { x = 90 y = 44 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "settler_chance"
+			position = { x = 164 y = 52 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 120
+			maxHeight = 40	
+			format = right
+			fixedsize = yes
+			alwaystransparent = yes
+		}		
+		
+		iconType = {
+			name ="colonist_placement_chance_icon"
+			spriteType = "GFX_colonist_placement_chance"
+			position = { x = 290 y = 40 }
+			alwaystransparent = yes
+		}
+
+		
+		iconType = {
+			name = "cross_icon"
+			spriteType ="GFX_province_view_religion"	
+			position = { x = 570 y = 24 }
+			frame = 14
+			alwaystransparent = yes
+		}
+	}		
+}

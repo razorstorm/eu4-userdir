@@ -1,0 +1,185 @@
+every_owned_province = {
+	remove_building = off_5
+	add_building = munition_factory
+}
+
+2160 = {
+	add_building = plantations
+}
+
+supply_asdf = {
+    global_supply_limit_modifier = 1.00
+}
+
+ROOT = {
+    add_country_modifier = { 
+        name = napoleon_manuever
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = junior_roog_cult
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = primary_roog_cult
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = regimental_spirit
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = {
+    	name = napoleon_manuever
+		duration = -1
+        hidden = no
+    }
+    add_treasury = 1
+}
+
+695 = {
+    change_trade_goods = lead
+}
+2188 = {
+    change_trade_goods = lead
+}
+725 = {
+    change_trade_goods = lead
+}
+2117 = {
+    change_trade_goods = lead
+}
+2111 = {
+    change_trade_goods = lead
+}
+730 = {
+    change_trade_goods = lead
+}
+2190 = {
+    change_trade_goods = lead
+}
+683 = {
+    change_trade_goods = lead
+}
+
+every_owned_province = {
+    remove_building = off_5
+}
+
+
+ROOT = {
+    add_treasury = 1
+}
+
+
+ROOT = {
+    add_country_modifier = { 
+        name = napoleon_manuever
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = junior_roog_cult
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = primary_roog_cult
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = regimental_spirit
+        duration = -1
+        hidden = no
+    }
+    add_country_modifier = {
+        name = napoleon_manuever
+        duration = -1
+        hidden = no
+    }
+    add_treasury = 1
+}
+ROOT = {
+    change_adm = 6
+    change_dip = 6
+    change_mil = 6
+    add_treasury = 1
+}
+
+ROOT = {
+	remove_country_modifier = dishonored_alliance
+}
+
+ROOT = {
+    set_ruler_flag = is_immortal
+    add_treasury = 1
+}
+
+ROOT = {
+	remove_country_modifier = annexed_subjects
+}
+
+
+
+every_owned_province = {
+	limit = {
+		religion = protestant
+	}
+	change_religion = ROOT	
+}
+
+
+
+
+every_owned_province = {
+	limit = {
+		is_owned_by_trade_company = yes
+	}
+	change_religion = ROOT	
+}
+
+every_subject_country = {
+	change_religion = reformed
+	every_owned_province = {
+		limit = {
+			religion = protestant
+		}
+		change_religion = reformed	
+	}
+
+}
+
+every_owned_province = {
+	add_core = D00
+	change_religion = ROOT	
+	change_culture = ROOT
+}
+
+
+
+ROOT = {
+	change_technology_group = high_american
+	change_unit_type = high_american
+}
+
+
+define_explorer = {
+    shock = 10
+    fire = 10
+    manuever = 100000000
+    siege = 10
+}
+
+
+every_subject_country = {
+	add_legitimacy = 100
+	change_religion = catholic
+	add_devotion = 100
+	add_horde_unity = 100
+	set_meritocracy = 100
+	add_republican_tradition = 100
+}

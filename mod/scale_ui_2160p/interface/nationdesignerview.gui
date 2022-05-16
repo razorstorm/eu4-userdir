@@ -1,0 +1,2374 @@
+guiTypes = {
+
+	windowType = {
+		name = "nation_designer_window"
+		position = { x=0 y=0}	
+		size = { x=546 y=1280 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		upsound = ""
+		downsound = ""
+		
+		iconType = {
+			name ="nation_designer_bg"
+			spriteType = "GFX_nation_designer_bg"
+			position = { x= 0 y = 4 }
+		}
+	
+		instantTextBoxType = {
+			name = "tab_label"
+			position = { x = 136 y = 114 }
+			textureFile = ""
+			font = "vic_22"
+			text = "Tab Name"	
+			maxWidth = 600
+			maxHeight = 48	
+			format = centre
+			fixedsize = yes
+		}
+		
+		guiButtonType = {
+			name = "prev_tab"
+			position = { x = 90 y = 106 }
+			quadTextureSprite ="GFX_nation_designer_navigate_left"	
+		}
+	
+		guiButtonType = {
+			name = "next_tab"
+			position = { x = 724 y = 106 }
+			quadTextureSprite ="GFX_nation_designer_navigate_right"	
+		}
+	
+		instantTextBoxType = {
+			name = "points_label"
+			position = { x = 230 y = 34 }
+			textureFile = ""
+			font = "vic_22"
+			text = "ND_POINTS"	
+			maxWidth = 280
+			maxHeight = 48	
+			format = left
+			fixedsize = yes
+		}
+
+		instantTextBoxType = {
+			name = "points_number"
+			position = { x = 350 y = 34 }
+			textureFile = ""
+			font = "vic_22"
+			text = "0/1000"	
+			maxWidth = 280
+			maxHeight = 48	
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name ="points_icon"
+			spriteType = "GFX_nation_designer_points_icon"
+			position = { x= 640 y = 34 }
+		}
+
+
+		### Appearance Tab	
+		windowType = {
+			name = "colors_tab"
+			position = { x=0 y=60}
+			size = { x=546 y=1280 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+	
+			iconType = {
+				name ="appearance_bg"
+				spriteType = "GFX_nation_designer_appearance_bg"
+				position = { x= 22 y = 116 }
+			}			
+		
+			instantTextBoxType = {
+				name = "country_name_label"
+				position = { x = 86 y = 164 }
+				textureFile = ""
+				font = "vic_18"
+				text = "PP_NATION_NAME"	
+				maxWidth = 280
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}	
+			editBoxType = {
+				name = "country_name"
+				font = "Main_16"
+				position = { x = 380 y = 154 }
+				borderSize = {x = 8 y = 8}	
+				text = ""
+				size = { x=400 y=60 }
+			}
+
+			instantTextBoxType = {
+				name = "country_adjective_label"
+				position = { x = 86 y = 244 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "ND_NATION_ADJECTIVE"	
+				maxWidth = 280
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+			editBoxType = {
+				name = "country_adjective"
+				font = "Main_16"
+				position = { x = 380 y = 234 }
+				borderSize = {x = 8 y = 8}	
+				text = ""
+				size = { x=400 y=60 }
+			}
+			
+			### map color
+			instantTextBoxType = {
+				name = "map_color_label"
+				position = { x = 236 y = 334 }
+				font = "vic_18_grey"
+				text = "ND_MAP_COLOR"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "map_color_numbers"
+				position = { x = 236 y = 376 }
+				font = "vic_22"
+				text = "99/0"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			
+			guiButtonType = {
+				name = "map_color_down"
+				position = { x = 86 y = 352 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+			guiButtonType = {
+				name = "map_color_up"
+				position = { x = 740 y = 352 }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+			
+	
+			### shield stuff
+			guiButtonType = {
+				name ="shield"
+				quadTextureSprite = "GFX_shield_fancy"
+				position = { x= 280 y = 494 }
+			}
+			
+			
+			### labels
+			instantTextBoxType = {
+				name = "emblem_label"
+				position = { x = 236 y = 836 }
+				textureFile = ""
+				font = "vic_18_grey"
+				text = "ND_EMBLEM"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "template_label"
+				position = { x = 236 y = 930 }
+				textureFile = ""
+				font = "vic_18_grey"
+				text = "ND_LAYOUT"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "color1_label"
+				position = { x = 236 y = 1024 }
+				textureFile = ""
+				font = "vic_18_grey"
+				text = "ND_COLOR_1"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "color2_label"
+				position = { x = 236 y = 1118 }
+				textureFile = ""
+				font = "vic_18_grey"
+				text = "ND_COLOR_2"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "color3_label"
+				position = { x = 236 y = 1212 }
+				textureFile = ""
+				font = "vic_18_grey"
+				text = "ND_COLOR_3"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			
+			guiButtonType = {
+				name = "random_flag"
+				position = { x = 750 y = 1236 }
+				spriteType = "GFX_nation_designer_random_button"
+			}
+
+			### buttons
+			guiButtonType = {
+				name = "emblem_down"
+				position = { x = 170 y = 850 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+			guiButtonType = {
+				name = "emblem_up"
+				position = { x = 654 y = 850 }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+			guiButtonType = {
+				name = "template_down"
+				position = { x = 170 y = 944 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+			guiButtonType = {
+				name = "template_up"
+				position = { x = 654 y = 944 }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			guiButtonType = {
+				name = "color1_down"
+				position = { x = 170 y = 1038 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+			guiButtonType = {
+				name = "color1_up"
+				position = { x = 654 y = 1038 }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+			guiButtonType = {
+				name = "color2_down"
+				position = { x = 170 y = 1132 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+			guiButtonType = {
+				name = "color2_up"
+				position = { x = 654 y = 1132 }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+			guiButtonType = {
+				name = "color3_down"
+				position = { x = 170 y = 1226 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+			guiButtonType = {
+				name = "color3_up"
+				position = { x = 654 y = 1226 }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			### numbers
+			instantTextBoxType = {
+				name = "emblem_numbers"
+				position = { x = 236 y = 876 }
+				font = "vic_18"
+				text = "15/25"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "template_numbers"
+				position = { x = 236 y = 970 }
+				font = "vic_18"
+				text = "99/15"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "color1_number"
+				position = { x = 236 y = 1064 }
+				font = "vic_18"
+				text = "14"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "color2_number"
+				position = { x = 236 y = 1158 }
+				font = "vic_18"
+				text = "14"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			instantTextBoxType = {
+				name = "color3_number"
+				position = { x = 236 y = 1252 }
+				font = "vic_18"
+				text = "14"	
+				maxWidth = 400
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+				
+		}
+		
+		### Ideas Tab
+		windowType = {
+			name = "ideas_tab"
+			position = { x=0 y=60}
+			size = { x=546 y=1280 }
+			moveable = 0
+			fullScreen = no
+			
+			iconType = {
+				name ="ideas_bg"
+				spriteType = "GFX_nation_designer_ideas_bg"
+				position = { x= 22 y = 116 }
+			}
+			
+			instantTextBoxType = {
+				name = "traditions_label"
+				position = { x = 80 y = 176 }
+				font = "vic_18"
+				text = "ND_TRADITIONS"
+				maxWidth = 500
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			iconType = {
+				name ="traditions_points_icon"
+				spriteType = "GFX_nation_designer_points_icon"
+				position = { x= 752 y = 176 }
+			}
+
+			instantTextBoxType = {
+				name = "ideas_label"
+				position = { x = 80 y = 452 }
+				font = "vic_18"
+				text = "HEADER_IDEAS"
+				maxWidth = 500
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			iconType = {
+				name ="ideas_points_icon"
+				spriteType = "GFX_nation_designer_points_icon"
+				position = { x= 740 y = 452 }
+			}
+
+			instantTextBoxType = {
+				name = "ambition_label"
+				position = { x = 80 y = 1086 }
+				font = "vic_18"
+				text = "ND_AMBITION"
+				maxWidth = 500
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			iconType = {
+				name ="ambition_points_icon"
+				spriteType = "GFX_nation_designer_points_icon"
+				position = { x= 752 y = 1086 }
+			}
+
+			# Traditions (National Ideas 7-8)
+			listboxType = {
+				name ="traditions_list_box"
+				position = { x = 28 y = 236 }
+				backGround=""
+				size = { x= 800 y =200 }
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+			}
+	
+	
+			# National Ideas 0-6
+			listboxType = {
+				name ="ideas_list_box"
+				position = { x = 18 y = 512 }
+				backGround=""
+				size = { x= 800 y =510 }
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+			
+			# Ambition (National Idea 9)
+			listboxType = {
+				name ="ambition_list_box"
+				position = { x = 28 y = 1146 }
+				backGround=""
+				size = { x= 800 y =120 }
+				horizontal = 0
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+
+			iconType = {
+				name = "adm_icon"
+				spriteType = "GFX_icon_powers_administrative"
+				position = { x= 230 y = 1262 }
+			}
+
+			iconType = {
+				name = "dip_icon"
+				spriteType = "GFX_icon_powers_diplomatic"
+				position = { x= 370 y = 1262 }
+			}
+
+			iconType = {
+				name = "mil_icon"
+				spriteType = "GFX_icon_powers_military"
+				position = { x= 510 y = 1262 }
+			}
+
+			instantTextBoxType = {
+				name = "adm_percent_label"
+				position = { x = 290 y = 1276 }
+				font = "vic_18"
+				text = "10%"
+				maxWidth = 100
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "dip_percent_label"
+				position = { x = 430 y = 1276 }
+				font = "vic_18"
+				text = "20%"
+				maxWidth = 100
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "mil_percent_label"
+				position = { x = 570 y = 1276 }
+				font = "vic_18"
+				text = "70%"
+				maxWidth = 100
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "random_ideas"
+				position = { x = 740 y = 1254 }
+				spriteType = "GFX_nation_designer_random_button"
+			}
+		}
+
+		### Court Tab
+		windowType = {
+			name = "court_tab"
+			position = { x=0 y=60}
+			size = { x=546 y=1280 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			
+			iconType = {
+				name ="court_bg"
+				spriteType = "GFX_nation_designer_court_bg"
+				position = { x= 22 y = 116 }
+			}
+			
+			instantTextBoxType = {
+				name = "ruler_label"
+				position = { x = 50 y = 122 }
+				font = "vic_22"
+				text = "FE_RULER"
+				maxWidth = 160
+				maxHeight = 48	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "ruler_pts_label"
+				position = { x = 208 y = 126 }
+				textureFile = ""
+				font = "vic_18"
+				text = "0"	
+				maxWidth = 70
+				maxHeight = 40	
+				format = right
+				fixedsize = yes
+			}
+
+			iconType = {
+				name = "ruler_cost_icon"
+				position = { x = 280 y = 124 }
+				spriteType = "GFX_nation_designer_points_icon"
+			}
+			
+			###
+			instantTextBoxType = {
+				name = "ruler_name_label"
+				position = { x = 80 y = 212 }
+				font = "vic_18"
+				text = "NAME"
+				maxWidth = 190
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			editBoxType = {
+				name = "ruler_name"
+				font = "Main_16"
+				position = { x = 268 y = 200 }
+				borderSize = {x = 8 y = 8}	
+				text = ""
+				size = { x=440 y=60 }
+			}
+
+			guiButtonType = {
+				name = "random_ruler_name"
+				position = { x = 738 y = 190 }
+				spriteType = "GFX_nation_designer_random_button"
+			}
+			
+			guiButtonType = {
+				name = "ruler_gender_male"
+				position = { x = 590 y = 106 }
+				spriteType = "GFX_nation_designer_gender_male"
+			}
+			guiButtonType = {
+				name = "ruler_gender_female"
+				position = { x = 670 y = 106 }
+				spriteType = "GFX_nation_designer_gender_female"
+			}
+						
+			###
+			instantTextBoxType = {
+				name = "ruler_dynasty_label"
+				position = { x = 80 y = 288 }
+				font = "vic_18"
+				text = "ND_DYNASTY"
+				maxWidth = 190
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}		
+
+			editBoxType = {
+				name = "ruler_dynasty"
+				font = "Main_16"
+				position = { x = 268 y = 276 }
+				borderSize = {x =8 y = 8}	
+				text = ""
+				size = { x=440 y=60 }
+			}
+
+			guiButtonType = {
+				name = "ruler_random_dynasty"
+				position = { x = 738 y = 266 }
+				spriteType = "GFX_nation_designer_random_button"
+			}
+
+			### age
+			instantTextBoxType = {
+				name = "ruler_age_label"
+				position = { x = 572 y = 374 }
+				font = "vic_18"
+				text = "ND_AGE"
+				maxWidth = 200
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}		
+
+			instantTextBoxType = {
+				name = "ruler_age"
+				position = { x = 572 y = 424 }
+				font = "vic_22"
+				text = "0"
+				maxWidth = 200
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			
+			guiButtonType = {
+				name = "ruler_age_down"
+				position = { x = 582 y = 422 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "ruler_age_up"
+				position = { x = 712 y = 422  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			listboxType = 
+			{
+				name ="monarch_ruler_personality_list"
+				position = {x=538 y=458}
+				backGround=""
+				size = {x=400 y=1024}
+				Orientation = "UPPER_LEFT"
+				horizontal = 1
+				spacing = 2
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 20 y = 20}
+			}
+
+			### monarch stats
+			instantTextBoxType = {
+				name = "ruler_admin_label"
+				position = { x = 78 y = 380 }
+				font = "vic_18"
+				text = "MON_ADM_LONG"
+				maxWidth = 240
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "ruler_admin"
+				position = { x = 292 y = 382 }
+				font = "vic_18"
+				text = "0"	
+				maxWidth = 100
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}		
+
+			guiButtonType = {
+				name = "ruler_admin_down"
+				position = { x = 392 y = 374 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "ruler_admin_up"
+				position = { x = 452 y = 374  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+			
+			###
+			instantTextBoxType = {
+				name = "ruler_diplo_label"
+				position = { x = 78 y = 440 }
+				font = "vic_18"
+				text = "MON_DIP_LONG"
+				maxWidth = 240
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "ruler_diplo"
+				position = { x = 292 y = 442 }
+				font = "vic_18"
+				text = "0"	
+				maxWidth = 100
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}		
+
+			guiButtonType = {
+				name = "ruler_diplo_down"
+				position = { x = 392 y = 434 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "ruler_diplo_up"
+				position = { x = 452 y = 434  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+			
+			###
+			instantTextBoxType = {
+				name = "ruler_mil_label"
+				position = { x = 78 y = 500 }
+				font = "vic_18"
+				text = "MON_MIL_LONG"
+				maxWidth = 240
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "ruler_mil"
+				position = { x = 292 y = 502 }
+				font = "vic_18"
+				text = "0"	
+				maxWidth = 100
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}		
+
+			guiButtonType = {
+				name = "ruler_mil_down"
+				position = { x = 392 y = 494 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "ruler_mil_up"
+				position = { x = 452 y = 494  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			### HEIR
+			guiButtonType = {
+				name = "heir_enable"
+				position = { x = 742 y = 578 }
+				spriteType = "GFX_checkbox_gold_32"
+			}
+			windowType = {
+				name = "heir_window"
+				position = { x=0 y=444}
+				size = { x=546 y=300 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+	
+				instantTextBoxType = {
+					name = "heir_label"
+					position = { x = 50 y = 146 }
+					font = "vic_22"
+					text = "HEIR"
+					maxWidth = 160
+					maxHeight = 48	
+					format = left
+					fixedsize = yes
+				}
+
+				iconType = {
+					name ="heir_edit_box"
+					spriteType = "GFX_nation_designer_edit_box"
+					position = { x= 258 y = 202 }
+				}
+
+				instantTextBoxType = {
+					name = "heir_pts_label"
+					position = { x = 208 y = 150 }
+					textureFile = ""
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 70
+					maxHeight = 40	
+					format = right
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "heir_cost_icon"
+					position = { x = 280 y = 148 }
+					spriteType = "GFX_nation_designer_points_icon"
+				}
+				
+				###
+				instantTextBoxType = {
+					name = "heir_name_label"
+					position = { x = 80 y = 232 }
+					font = "vic_18"
+					text = "NAME"
+					maxWidth = 190
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				editBoxType = {
+					name = "heir_name"
+					font = "Main_16"
+					position = { x = 268 y = 222 }
+					borderSize = {x = 8 y = 8}	
+					text = ""
+					size = { x=440 y=60 }
+				}
+
+				guiButtonType = {
+					name = "random_heir_name"
+					position = { x = 738 y = 210 }
+					spriteType = "GFX_nation_designer_random_button"
+				}
+				
+				guiButtonType = {
+					name = "heir_gender_male"
+					position = { x = 590 y = 130 }
+					spriteType = "GFX_nation_designer_gender_male"
+				}
+				guiButtonType = {
+					name = "heir_gender_female"
+					position = { x = 670 y = 130 }
+					spriteType = "GFX_nation_designer_gender_female"
+				}
+				
+				### age
+				instantTextBoxType = {
+					name = "heir_age_label"
+					position = { x = 572 y = 308 }
+					font = "vic_18"
+					text = "ND_AGE"
+					maxWidth = 200
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				instantTextBoxType = {
+					name = "heir_age"
+					position = { x = 572 y = 358 }
+					font = "vic_22"
+					text = "0"
+					maxWidth = 200
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}
+				
+				guiButtonType = {
+					name = "heir_age_down"
+					position = { x = 582 y = 356 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "heir_age_up"
+					position = { x = 712 y = 356  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+
+				listboxType = 
+				{
+					name ="monarch_heir_personality_list"
+					position = {x=538 y=394}
+					backGround=""
+					size = { x=320 y=1024}
+					Orientation = "UPPER_LEFT"
+					horizontal = 1
+					spacing = 4
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 20 y = 20}
+				}
+				
+				### monarch stats
+				instantTextBoxType = {
+					name = "heir_admin_label"
+					position = { x = 78 y = 314 }
+					font = "vic_18"
+					text = "MON_ADM_LONG"
+					maxWidth = 240
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "heir_admin"
+					position = { x = 292 y = 316 }
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 100
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				guiButtonType = {
+					name = "heir_admin_down"
+					position = { x = 392 y = 308 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "heir_admin_up"
+					position = { x = 452 y = 308  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+				
+				###
+				instantTextBoxType = {
+					name = "heir_diplo_label"
+					position = { x = 78 y = 374 }
+					font = "vic_18"
+					text = "MON_DIP_LONG"
+					maxWidth = 240
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "heir_diplo"
+					position = { x = 292 y = 376 }
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 100
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				guiButtonType = {
+					name = "heir_diplo_down"
+					position = { x = 392 y = 368 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "heir_diplo_up"
+					position = { x = 452 y = 368  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+				
+				###
+				instantTextBoxType = {
+					name = "heir_mil_label"
+					position = { x = 78 y = 434 }
+					font = "vic_18"
+					text = "MON_MIL_LONG"
+					maxWidth = 240
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "heir_mil"
+					position = { x = 292 y = 436 }
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 100
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				guiButtonType = {
+					name = "heir_mil_down"
+					position = { x = 392 y = 428 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "heir_mil_up"
+					position = { x = 452 y = 428  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+			}
+			### CONSORT
+			
+			iconType = {
+				name ="court_bg_overlay"
+				spriteType = "GFX_nation_designer_court_bg_overlay"
+				position = { x= 22 y = 958 }
+			}			
+			
+			guiButtonType = {
+				name = "consort_enable"
+				position = { x = 742 y = 956 }
+				spriteType = "GFX_checkbox_gold_32"
+			}
+
+			windowType = {
+				name = "consort_window"
+				position = { x=0 y=822}
+				size = { x=546 y=300 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+	
+				instantTextBoxType = {
+					name = "consort_label"
+					position = { x = 50 y = 146 }
+					font = "vic_22"
+					text = "CONSORT"
+					maxWidth = 160
+					maxHeight = 48	
+					format = left
+					fixedsize = yes
+				}
+
+				iconType = {
+					name ="consort_edit_box"
+					spriteType = "GFX_nation_designer_edit_box"
+					position = { x= 258 y = 202 }
+				}
+
+				instantTextBoxType = {
+					name = "consort_pts_label"
+					position = { x = 208 y = 150 }
+					textureFile = ""
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 70
+					maxHeight = 40	
+					format = right
+					fixedsize = yes
+				}
+
+				iconType = {
+					name = "consort_cost_icon"
+					position = { x = 280 y = 148 }
+					spriteType = "GFX_nation_designer_points_icon"
+				}
+				
+				###
+				instantTextBoxType = {
+					name = "consort_name_label"
+					position = { x = 80 y = 232 }
+					font = "vic_18"
+					text = "NAME"
+					maxWidth = 190
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				editBoxType = {
+					name = "consort_name"
+					font = "Main_16"
+					position = { x = 268 y = 222 }
+					borderSize = {x = 8 y = 8}	
+					text = ""
+					size = { x=440 y=60 }
+				}
+
+				guiButtonType = {
+					name = "random_consort_name"
+					position = { x = 738 y = 210 }
+					spriteType = "GFX_nation_designer_random_button"
+				}
+				
+				guiButtonType = {
+					name = "consort_gender_male"
+					position = { x = 590 y = 130 }
+					spriteType = "GFX_nation_designer_gender_male"
+				}
+				guiButtonType = {
+					name = "consort_gender_female"
+					position = { x = 670 y = 130 }
+					spriteType = "GFX_nation_designer_gender_female"
+				}
+				
+				### age
+				instantTextBoxType = {
+					name = "consort_age_label"
+					position = { x = 572 y = 308 }
+					font = "vic_18"
+					text = "ND_AGE"
+					maxWidth = 200
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				instantTextBoxType = {
+					name = "consort_age"
+					position = { x = 572 y = 358 }
+					font = "vic_22"
+					text = "0"
+					maxWidth = 200
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}
+				
+				guiButtonType = {
+					name = "consort_age_down"
+					position = { x = 582 y = 356 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "consort_age_up"
+					position = { x = 712 y = 356  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+
+				listboxType = 
+				{
+					name ="monarch_consort_personality_list"
+					position = {x=538 y=394}
+					backGround=""
+					size = { x=320 y=1024}
+					Orientation = "UPPER_LEFT"
+					horizontal = 1
+					spacing = 4
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 20 y = 20}
+				}
+				
+				### monarch stats
+				instantTextBoxType = {
+					name = "consort_admin_label"
+					position = { x = 78 y = 314 }
+					font = "vic_18"
+					text = "MON_ADM_LONG"
+					maxWidth = 240
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "consort_admin"
+					position = { x = 292 y = 316 }
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 100
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				guiButtonType = {
+					name = "consort_admin_down"
+					position = { x = 392 y = 308 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "consort_admin_up"
+					position = { x = 452 y = 308  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+				
+				###
+				instantTextBoxType = {
+					name = "consort_diplo_label"
+					position = { x = 78 y = 374 }
+					font = "vic_18"
+					text = "MON_DIP_LONG"
+					maxWidth = 240
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "consort_diplo"
+					position = { x = 292 y = 376 }
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 100
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				guiButtonType = {
+					name = "consort_diplo_down"
+					position = { x = 392 y = 368 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "consort_diplo_up"
+					position = { x = 452 y = 368  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+				
+				###
+				instantTextBoxType = {
+					name = "consort_mil_label"
+					position = { x = 78 y = 434 }
+					font = "vic_18"
+					text = "MON_MIL_LONG"
+					maxWidth = 240
+					maxHeight = 40	
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "consort_mil"
+					position = { x = 292 y = 436 }
+					font = "vic_18"
+					text = "0"	
+					maxWidth = 100
+					maxHeight = 40	
+					format = centre
+					fixedsize = yes
+				}		
+
+				guiButtonType = {
+					name = "consort_mil_down"
+					position = { x = 392 y = 428 }
+					quadTextureSprite ="GFX_arrow_left_big"	
+				}
+
+				guiButtonType = {
+					name = "consort_mil_up"
+					position = { x = 452 y = 428  }
+					quadTextureSprite ="GFX_arrow_right_big"	
+				}
+			}
+		}
+
+		### GOVERNMENT TAB
+		windowType = {
+			name = "government_tab"
+			position = { x=0 y=60}
+			size = { x=546 y=1280 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType = {
+				name ="government_bg"
+				spriteType = "GFX_nation_designer_government_bg"
+				position = { x= 22 y = 116 }
+			}
+
+			instantTextBoxType = {
+				name = "gov_rank_label"
+				position = { x = 22 y = 406 }
+				font = "vic_18"
+				text = "GOV_RANK"
+				maxWidth = 300
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}		
+
+			instantTextBoxType = {
+				name = "gov_rank"
+				position = { x = 386 y = 400 }
+				font = "vic_22"
+				text = "0"
+				maxWidth = 360
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "gov_rank_down"
+				position = { x = 330 y = 400 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "gov_rank_up"
+				position = { x = 760 y = 400  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			### BUTTONS + LISTBOXES BOTTOM
+			instantTextBoxType = {
+				name = "culture_label"
+				position = { x = 70 y = 166 }
+				font = "vic_18"
+				text = "CULTURE"	
+				maxWidth = 260
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "culture_listbox_button"
+				position = { x = 310 y = 150 }
+				buttonFont = "vic_18"
+				quadTextureSprite ="GFX_button_straight_255_32"
+			}
+			iconType = {
+				name ="culture_listbox_button_glow"
+				spriteType = "GFX_button_straight_255_32_glow"
+				position = { x= 306 y = 146 }
+			}
+			
+			###
+			instantTextBoxType = {
+				name = "religion_label"
+				position = { x = 70 y = 226 }
+				font = "vic_18"
+				text = "RELIGION"	
+				maxWidth = 260
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "religion_listbox_button"
+				position = { x = 310 y = 210 }
+				buttonFont = "vic_18"
+				quadTextureSprite ="GFX_button_straight_255_32"	
+			}
+			iconType = {
+				name ="religion_listbox_button_glow"
+				spriteType = "GFX_button_straight_255_32_glow"
+				position = { x= 306 y = 206 }
+			}
+			iconType = {
+				name ="incompatible_religion_warning_icon"
+				spriteType = "GFX_incompatible_warning_icon"
+				position = { x= 780 y = 218 }
+			}				
+			
+			###
+			instantTextBoxType = {
+				name = "tech_group_label"
+				position = { x = 70 y = 286 }
+				font = "vic_18"
+				text = "ND_TECH_GROUP"	
+				maxWidth = 260
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "tech_group_listbox_button"
+				position = { x = 310 y = 270 }
+				buttonFont = "vic_18"
+				quadTextureSprite ="GFX_button_straight_255_32"	
+			}
+			iconType = {
+				name ="tech_group_listbox_button_glow"
+				spriteType = "GFX_button_straight_255_32_glow"
+				position = { x= 306 y = 266 }
+			}
+			iconType = {
+				name ="incompatible_tech_warning_icon"
+				spriteType = "GFX_incompatible_warning_icon"
+				position = { x= 780 y = 278 }
+			}
+			
+			###
+			instantTextBoxType = {
+				name = "government_label"
+				position = { x = 70 y = 346 }
+				font = "vic_18"
+				text = "CATEGORY_GOVERNMENT"
+				maxWidth = 260
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "government_listbox_button"
+				position = { x = 310 y = 332 }
+				buttonFont = "vic_18"
+				quadTextureSprite ="GFX_button_straight_255_32"	
+			}
+			iconType = {
+				name ="government_listbox_button_glow"
+				spriteType = "GFX_button_straight_255_32_glow"
+				position = { x= 306 y = 386 }
+			}
+			iconType = {
+				name ="incompatible_gov_warning_icon"
+				spriteType = "GFX_incompatible_warning_icon"
+				position = { x= 780 y = 398 }
+			}
+
+			guiButtonType = {
+				name = "gfx_spritepack_listbox_button"
+				position = { x = 516 y = 630 }
+				buttonFont = "vic_18"
+				quadTextureSprite ="GFX_button_straight_152_32"	
+				text = "ND_SPRITE_PACK"
+			}
+
+			iconType = {
+				name ="gfx_spritepack_listbox_button_glow"
+				spriteType = "GFX_button_straight_152_32_glow"
+				position = { x= 510 y = 626 }
+			}
+
+			instantTextBoxType = {
+				name = "sprite_type_label"
+				position = { x = 520 y = 770 }
+				font = "vic_22"
+				text = "SPRTE_TYPE_LABEL"
+				maxWidth = 240
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "sprite_type"
+				position = { x = 574 y = 820 }
+				font = "vic_22"
+				text = "0"
+				maxWidth = 200
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "sprite_type_down"
+				position = { x = 520 y = 820 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "sprite_type_up"
+				position = { x = 780 y = 820  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			instantTextBoxType = {
+				name = "sprite_tier_label"
+				position = { x = 520 y = 910 }
+				font = "vic_22"
+				text = "SPRITE_TIER_LABEL"
+				maxWidth = 244
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "sprite_tier"
+				position = { x = 574 y = 960 }
+				font = "vic_22"
+				text = "0"
+				maxWidth = 200
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+
+			guiButtonType = {
+				name = "sprite_tier_down"
+				position = { x = 520 y = 960 }
+				quadTextureSprite ="GFX_arrow_left_big"	
+			}
+
+			guiButtonType = {
+				name = "sprite_tier_up"
+				position = { x = 780 y = 960  }
+				quadTextureSprite ="GFX_arrow_right_big"	
+			}
+
+			iconType = {
+				name ="sprite_banner"
+				spriteType = "GFX_province_banner_foreign"
+				position = { x= 30 y = 500 }
+				scale = 0.75
+			}	
+
+			instantTextBoxType = {
+				name = "sprites_label"
+				position = { x = 296 y = 520 }
+				textureFile = ""
+				font = "vic_22"
+				text = "SPRITES_TITLE"	
+				maxWidth = 298
+				maxHeight = 48	
+				format = centre
+			}
+
+			windowType = {
+				name = "unit_viewer_window"
+				backGround=""
+				position = { x= 100 y=600 }	
+				size = { x = 340 y = 36 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType = {		
+					name ="3d_view_left_bg"
+					spriteType = "GFX_3d_unit_bg"
+					position = { x= -48 y = 20 }
+					scale = 1.0
+				}
+				
+				guiButtonType = {
+					name ="unit_viewer"
+					quadTextureSprite = "GFX_dummy_3d_combat_result_view"
+					position = { x= -36 y = 20 }
+					scale = 1.0
+				}
+			}
+			
+			### SELECT CULTURE ETC WINDOW
+			windowType = {
+				name = "select_culture_etc_win"
+				backGround =""
+				position = { x=860 y=4 }	
+				size = { x=400 y= 60 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+				
+				iconType = {
+					name ="bg"
+					spriteType = "GFX_nation_designer_list_bg"
+					position = { x= 0 y = 0 }
+				}
+			
+				instantTextBoxType = {
+					name = "label"
+					position = { x = 30 y = 26 }
+					textureFile = ""
+					font = "vic_18"
+					text = ""	
+					maxWidth = 600
+					maxHeight = 48	
+					format = centre
+					fixedsize = yes
+				}
+				
+				listboxType = {
+					name ="listbox"
+					position = { x = 66 y = 80 }
+					backGround=""
+					size = { x= 544 y = 1236 }
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+				}
+				
+				guiButtonType = {
+					name = "cancel_button"
+					position = { x=230 y = 1344 }
+					quadTextureSprite ="GFX_standard_button_105"
+					buttonText = "LEDGER_CLOSE"
+					buttonFont = "vic_18"
+					shortcut = "ESCAPE"
+					clicksound=click
+				}
+			}	
+		}
+
+		### RELIGION MODIFIER ENTRY
+		windowType = {
+			name = "edit_idea_name_window"
+			backGround =""
+			position = { x=860 y=504 }	
+			size = { x=400 y= 60 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			
+			iconType = {
+				name = "select_idea_bg"
+				spriteType = "GFX_customize_ideas_bg"
+				position = { x= 0 y = 0 }
+			}
+			
+			instantTextBoxType = {
+				name = "edit_idea_window_label"
+				position = { x = 90 y = 24 }
+				textureFile = ""
+				font = "vic_18"
+				text = "ND_CUSTOMIZE_IDEA_LABEL"	
+				maxWidth = 300
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			instantTextBoxType = {
+				name = "idea_name_label"
+				position = { x = 80 y = 100 }
+				textureFile = ""
+				font = "vic_18"
+				text = "NAME"	
+				maxWidth = 300
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			editBoxType = {
+				name = "idea_name_box"
+				font = "Main_16"
+				position = { x = 40 y = 140 }
+				borderSize = {x = 8 y = 8}	
+				text = ""
+				size = { x=760 y=60 }
+			}
+
+			instantTextBoxType = {
+				name = "idea_desc_label"
+				position = { x = 80 y = 260 }
+				textureFile = ""
+				font = "vic_18"
+				text = "MATCHMAKING_SERVER_DESC"	
+				maxWidth = 300
+				maxHeight = 40	
+				format = left
+				fixedsize = yes
+			}
+
+			editBoxType = {
+				name = "idea_desc_box"
+				font = "Main_16"
+				position = { x = 40 y = 300 }
+				borderSize = {x = 8 y = 8}	
+				text = ""
+				size = { x=760 y=220 }
+			}
+
+			guiButtonType = {
+				name = "ok_button"
+				position = { x=536 y = 556 }
+				quadTextureSprite ="GFX_standard_button_105"
+				buttonText = "ACCEPT"
+				buttonFont = "vic_18"
+				shortcut = "RETURN"
+				clicksound=click
+			}
+			
+			guiButtonType = {
+				name = "cancel_button"
+				position = { x=96 y = 556 }
+				quadTextureSprite ="GFX_standard_button_105"
+				buttonText = "GOTO_CANCEL"
+				buttonFont = "vic_18"
+				clicksound=click
+			}			
+			
+		}
+
+		
+		### Select idea modifier window
+		windowType = {
+			name = "select_idea_win"
+			backGround =""
+			position = { x=860 y=4 }	
+			size = { x=400 y= 60 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+	
+			iconType = {
+				name = "select_idea_bg"
+				spriteType = "GFX_nation_designer_select_idea_bg"
+				position = { x= 0 y = 0 }
+			}			
+			instantTextBoxType = {
+				name = "top_label"
+				position = { x = 120 y = 26 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "ND_SELECT_IDEA"	
+				maxWidth = 600
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+			}
+			### tabs
+			guiButtonType = {
+				name = "tab_adm"
+				position = { x = 22 y = 80 }
+				quadTextureSprite ="GFX_tab_small_133"	
+			}
+			guiButtonType = {
+				name = "tab_dip"
+				position = { x = 288 y = 80 }
+				quadTextureSprite ="GFX_tab_small_133"	
+			}
+			guiButtonType = {
+				name = "tab_mil"
+				position = { x = 554 y = 80 }
+				quadTextureSprite ="GFX_tab_small_133"	
+			}
+			
+			iconType = {
+				name = "tab_adm_icon"
+				spriteType = "GFX_icon_powers_administrative"
+				position = { x= 24 y = 88 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "tab_dip_icon"
+				spriteType = "GFX_icon_powers_diplomatic"
+				position = { x= 290 y = 88 }
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "tab_mil_icon"
+				spriteType = "GFX_icon_powers_military"
+				position = { x= 556 y = 88 }
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "tab_adm_text"
+				position = { x = 68 y = 100 }
+				textureFile = ""
+				font = "vic_18"
+				text = "ND_ADMINISTRATIVE"	
+				maxWidth = 210
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "tab_dip_text"
+				position = { x = 334 y = 100 }
+				textureFile = ""
+				font = "vic_18"
+				text = "ND_DIPLOMATIC"	
+				maxWidth = 210
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "tab_mil_text"
+				position = { x = 600 y = 100 }
+				textureFile = ""
+				font = "vic_18"
+				text = "ND_MILITARY"	
+				maxWidth = 210
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+						
+			guiButtonType = {
+				name = "cancel_button"
+				position = { x=316 y = 1344 }
+				quadTextureSprite ="GFX_standard_button_105"
+				buttonText = "CANCEL"
+				buttonFont = "vic_18"
+				shortcut = "ESCAPE"
+				clicksound=click
+			}
+			
+			###
+			windowType = {
+				name = "adm_modifiers_tab"
+				backGround =""
+				position = { x=0 y=0 }	
+				size = { x=400 y= 60 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+
+				listboxType = {
+					name ="listbox"
+					position = { x = 20 y = 176 }
+					backGround=""
+					size = { x= 760 y =1152 }
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+				}
+			}
+			###
+			windowType = {
+				name = "dip_modifiers_tab"
+				backGround =""
+				position = { x=0 y=0 }	
+				size = { x=400 y= 60 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+			
+				listboxType = {
+					name ="listbox"
+					position = { x = 20 y = 176 }
+					backGround=""
+					size = { x= 760 y =1152 }
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+				}
+			}
+			###
+			windowType = {
+				name = "mil_modifiers_tab"
+				backGround =""
+				position = { x=0 y=0 }	
+				size = { x=400 y= 60 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder = ""
+			
+				listboxType = {
+					name ="listbox"
+					position = { x = 20 y = 176 }
+					backGround=""
+					size = { x= 760 y =1152 }
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+				}
+			}
+		}
+	}
+
+	windowType = {
+		name = "nationdesignerview_personalitylistingitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=600 y=80 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		iconType = {
+				name = "tab_mil_icon"
+				spriteType = "GFX_icon_powers_military"
+				position = { x= 556 y = 88 }
+				alwaystransparent = yes
+			}
+			
+			instantTextBoxType = {
+				name = "tab_adm_text"
+				position = { x = 68 y = 100 }
+				textureFile = ""
+				font = "vic_18"
+				text = "ND_ADMINISTRATIVE"	
+				maxWidth = 210
+				maxHeight = 40	
+				format = centre
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+	}
+
+	################################################################################################
+	### --- Personality item
+	windowType = {
+		name = "nationdesignerview_personalityitem"
+		backGround =""
+		position = { x=0 y=0 }
+		size = { x=92 y=92 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+
+		guiButtonType = {
+			name = "personality_button_base"
+			position = { x=-22 y =-10 }
+			spriteType ="GFX_personality_button_base"
+			alwaystransparent = yes
+			clicksound=click
+		}		
+		
+		guiButtonType = {
+			name = "personality_icon"
+			position = { x=-26 y = -16 }
+			spriteType ="GFX_nation_designer_personality_unknown"
+			scale = 0.75
+			clicksound=click
+		}
+		iconType = {
+			name = "invalid_personality_icon"
+			spriteType = "GFX_incompatible_warning_icon"
+			position = { x=40 y=0 }
+		}
+		iconType = {
+			name = "no_personality_icon"
+			spriteType = "GFX_no_personality_chart"
+			position = { x= 20 y = -4 }
+		}
+		iconType = {
+			name ="no_personality_overlay"
+			spriteType = "GFX_no_provinceView_chart_overlay_0.9"
+			position = { x=-20 y= -4 }
+		}
+	}
+
+	### LIST CATEGORY ENTRY
+	windowType = {
+		name = "dropdown_listitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=400 y= 56 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+	
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_nation_designer_category_list_button"
+			buttonFont = "vic_18"
+		}
+		iconType = {
+			name ="expand"
+			spriteType = "GFX_diplo_expand_contract"
+			position = { x= 18 y = 14 }
+		}
+	}
+
+	### GOVERNMENT LIST ENTRY
+	windowType = {
+		name = "government_listitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=400 y= 176 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_nation_designer_list_button_government"
+		}
+
+		instantTextBoxType = {
+			name = "gov_item_label"
+			position = { x = 26 y = 10 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 420
+			maxHeight = 40	
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType =
+		{
+			name ="icon_gov_desc_1"
+			spriteType = "GFX_idea_empty"
+			position = { x= 30 y = 110 }
+			scale = 0.5
+		}
+		
+		instantTextBoxType = {
+			name = "gov_desc_1"
+			position = { x = 76 y = 120 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 128
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType =
+		{
+			name ="icon_gov_desc_2"
+			spriteType = "GFX_idea_empty"
+			position = { x= 192 y = 110 }
+			scale = 0.5
+		}
+		
+		instantTextBoxType = {
+			name = "gov_desc_2"
+			position = { x = 244 y = 120 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 128
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType =
+		{
+			name ="icon_gov_desc_3"
+			spriteType = "GFX_idea_empty"
+			position = { x= 358 y = 110 }
+			scale = 0.5
+			
+		}
+		
+		instantTextBoxType = {
+			name = "gov_desc_3"
+			position = { x = 410 y = 120 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 128
+			maxHeight = 64
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "list_item_pts_label"
+			position = { x = 374 y = 12 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 100
+			maxHeight = 40	
+			format = right
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "list_item_cost_icon"
+			position = { x = 482 y = 10 }
+			spriteType = "GFX_nation_designer_points_icon"
+			alwaystransparent = yes
+		}
+	}
+	
+	### RELIGION LIST ENTRY
+	windowType = {
+		name = "religion_listitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=400 y= 176 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_nation_designer_list_button_government"
+		}
+
+		iconType = {
+			name = "religion_icon"
+			position = { x = 8 y = 4 }
+			spriteType = "GFX_icon_religion"
+			scale = 0.45
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "religion_item_label"
+			position = { x = 0 y = 10 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 540
+			maxHeight = 40	
+			format = centre
+			fixedsize = yes
+		}
+		
+		listboxType = 
+		{
+			name ="religion_modifiers_listbox"
+			position = { x=-52 y = 22}
+			backGround=""
+			size = { x=400 y = 180}
+			horizontal = 0
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 20 y = 20}
+			alwaystransparent = yes
+		}
+	}
+
+	### LIST ENTRY
+	windowType = {
+		name = "dropdown_listitem_expanded"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=536 y= 56 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+	
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_nation_designer_list_button"
+			buttonFont = "vic_18"
+		}
+		
+		instantTextBoxType = {
+			name = "list_item_label"
+			position = { x = 30 y = 10 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 400
+			maxHeight = 40	
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "list_item_pts_label"
+			position = { x = 374 y = 10 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 100
+			maxHeight = 40	
+			format = right
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "list_item_cost_icon"
+			position = { x = 482 y = 8 }
+			spriteType = "GFX_nation_designer_points_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "invalid_personality_icon"
+			spriteType = "GFX_incompatible_warning_icon"
+			position = { x=400 y=2 }
+			alwaystransparent = yes
+		}
+	}
+
+	windowType = {
+		name = "dropdown_listitem_spritepack"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=536 y= 56 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+	
+		guiButtonType = {
+			name = "list_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_nation_designer_list_button"
+			buttonFont = "vic_18"
+		}
+
+		iconType = {
+			name = "picked_spritepack"
+			spriteType = "GFX_incompatible_warning_icon"
+			position = { x=500 y=2 }
+			alwaystransparent = yes
+		}
+	}
+
+	# WHEN SELECTING IDEA ENTRY
+	windowType = {
+		name = "idea_modifier_listitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=400 y= 72 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+	
+		guiButtonType = {
+			name = "idea_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="GFX_button_straight_380_32"
+			buttonFont = "vic_18"
+		}
+		instantTextBoxType = {
+			name = "idea_label"
+			position = { x = 86 y = 14 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 680
+			maxHeight = 40	
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "idea_item_icon"
+			position = { x = 6 y = -8 }
+			spriteType = "GFX_idea_empty"
+			scale = 0.65
+			alwaystransparent = yes
+		}
+	}
+
+	### SELECTED IDEA ENTRY
+	windowType = {
+		name = "idea_listitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=700 y= 72 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		guiButtonType = {
+			name = "idea_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_button_straight_300_32"
+			buttonFont = "vic_18"
+		}
+		iconType = {
+			name = "button_glow"
+			position = { x = -2 y = -4 }
+			spriteType = "GFX_button_straight_300_32_glow"
+		}
+
+		instantTextBoxType = {
+			name = "idea_label"
+			position = { x = 136 y = 14 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 450
+			maxHeight = 40	
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "idea_item_icon"
+			position = { x = 56 y = -8 }
+			spriteType = "GFX_idea_empty"
+			scale = 0.65
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "idea_item_category_icon"
+			position = { x = 10 y = 4 }
+			spriteType = "GFX_idea_empty"
+			scale = 1
+			alwaystransparent = yes
+		}	
+		
+		guiButtonType = {
+			name = "lvl_down"
+			position = { x = 590 y = 8 }
+			quadTextureSprite ="GFX_arrow_left_big"	
+		}
+		guiButtonType = {
+			name = "lvl_up"
+			position = { x = 662 y = 8 }
+			quadTextureSprite ="GFX_arrow_right_big"	
+		}
+		
+		instantTextBoxType = {
+			name = "lvl_number"
+			position = { x = 628 y = 14 }
+			textureFile = ""
+			font = "vic_18"
+			text = "0"	
+			maxWidth = 40
+			maxHeight = 40	
+			format = centre
+			fixedsize = yes
+		}
+		
+		instantTextBoxType = {
+			name = "idea_points"
+			position = { x = 706 y = 14 }
+			textureFile = ""
+			font = "vic_18"
+			text = "100"	
+			maxWidth = 76
+			maxHeight = 40	
+			format = centre
+			fixedsize = yes
+		}
+
+		guiButtonType = {
+			name = "edit_idea_name_button"
+			position = { x = 780 y = 8 }
+			quadTextureSprite ="GFX_customize_idea_button"	
+		}
+		
+		iconType = {
+			name = "edit_idea_button_glow"
+			position = { x = 776 y = 8 }
+			spriteType = "GFX_edit_idea_button_glow"
+		}		
+		
+	}
+
+	### RELIGION MODIFIER ENTRY
+	windowType = {
+		name = "nd_religion_modifier_item"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=200 y= 60 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		
+		iconType =
+		{
+			name ="modifier_icon"
+			spriteType = "GFX_heretics_tolerance_icon"
+			position = { x= 40 y = 10 }
+			scale = 0.5
+		}
+		
+		instantTextBoxType = {
+			name = "modifier_bonus"
+			position = { x = 94 y = 20 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 512
+			maxHeight = 40
+			format = left
+		}
+	}
+}

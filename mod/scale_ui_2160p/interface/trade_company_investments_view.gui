@@ -1,0 +1,120 @@
+guiTypes = {
+
+	positionType = {
+		name = "investment_list_size_large"
+		position = { x = 1626 y = 430 }
+	}
+
+	windowType = {
+		name = "trade_company_investment_view"
+		position = { x=0 y=0 }	
+		size = { x=1000 y=600 }
+
+		iconType = {
+			name = "background"
+			spriteType = "GFX_macrobuilder_trade_company_investment_banner"
+			Orientation = "UPPER_LEFT"
+			position = { x = 0 y = -30 }
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 96 y = 6 }
+			font = "vic_22"
+			text = "TRADE_COMPANY_INVESTMENTS"	
+			maxWidth = 400
+			maxHeight = 64	
+			fixedsize = yes
+		}
+		
+		listboxType = {
+			name = "investment_category_pair_list"
+			position = { x=0 y=56}
+			size = { x = 916 y = 240 }
+
+			scrollbartype = "standardlistbox_slider"
+			spacing = 0
+		}
+	}
+
+	windowType = {
+		name = "investment_category_pair_item"
+		position = { x=0 y=0 }
+		size = { x=980 y=200}
+		listboxType = {
+			name = "investment_category_list"
+			position = { x = 0 y = 30 }
+			size = { x=1200 y=600 }
+			horizontal = 1
+			spacing = 2
+		}
+	}
+	
+	windowType = {
+		name = "investment_category_item"
+		position = { x=0 y=0 }
+		size = { x=480 y=10}
+
+		iconType = {
+			name = "background"
+			spriteType = "GFX_banner_both_3"
+			Orientation = "UPPER_LEFT"
+			position = { x = 10 y = -18 }
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 60 y = -4 }
+			font = "vic_22"
+			text = "<CATEGORY>"
+			maxWidth = 400
+			maxHeight = 44
+			fixedsize = yes
+		}
+
+		listboxType = {
+			name = "investment_list"
+			position = { x = 0 y = 44 }
+			size = { x=500 y=210 }
+			horizontal = 1
+			spacing = 2
+		}
+	}
+	windowType = {
+		name = "investment_item"
+		position = { x=0 y=-50 }
+		size = { x=140 y=150 }
+
+		guiButtonType = {
+			name = "button"
+			position = { x = 20 y = 0 }
+			quadTextureSprite ="GFX_idea_unknown"	
+		}
+
+		iconType = {
+			name = "upgrade_arrow"
+			spriteType = "GFX_building_upgrade_icon"
+			Orientation = "UPPER_LEFT"
+			position = { x = 122 y = 20 }
+		}
+		
+		iconType = {
+			name = "built_icon"
+			spriteType = "GFX_built_building_icon"
+			position = { x = 46 y = 30 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "cost_text"
+			position = { x = 0 y = 88 }
+			font = "vic_22"
+			maxWidth = 140
+			maxHeight = 44
+			format = centre
+			fixedsize = yes
+		}
+
+	}
+}

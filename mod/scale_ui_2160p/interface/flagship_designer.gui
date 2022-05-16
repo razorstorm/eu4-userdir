@@ -1,0 +1,363 @@
+guiTypes = {
+    windowType = {
+		name = "flagship_modification_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=520 y=80 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		checkboxType = {
+			name = "button"
+			position = { x=0 y=0 }
+			quadTextureSprite ="GFX_flagship_modifier_button"
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+            alwaystransparent = yes
+		}
+
+		iconType =
+		{
+			name = "modification_icon"
+			spriteType = "GFX_estate_territory_L"
+			position = { x=12 y=12 }
+			Orientation = "UPPER_LEFT"
+			scale = 1
+            alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x=74 y=6 }
+			font = "vic_18"
+			borderSize = { x=2 y=2 }
+			text = ""
+			maxWidth = 360
+			maxHeight = 36
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "modifier"
+			position = { x=74 y=36 }
+			font = "vic_18"
+			borderSize = { x=2 y=2 }
+			text = ""
+			maxWidth = 560
+			maxHeight = 36
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}	
+
+		iconType = {
+			name = "maintenance_icon"
+			spriteType = "GFX_icon_maintenance"
+			position = { x=598 y=8 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.85
+            alwaystransparent = yes
+		}		
+		
+		instantTextBoxType = {
+			name = "maintenance_cost"
+			position = { x=538 y=8 }
+			font = "vic_18"
+			borderSize = { x=2 y=2 }
+			text = "1234"
+			maxWidth = 60
+			maxHeight = 56
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+            alwaystransparent = yes
+		}		
+		
+	}
+
+    windowType = {
+        name ="flagship_designer"
+        backGround="flagship_designer"
+        position = { x= 300 y=300 }
+        size = { x=512 y=740 }
+        moveable = 1
+        dontRender = ""
+        horizontalBorder= ""
+        verticalBorder= ""
+        upsound = ""
+        downsound = ""
+        fullscreen=no
+
+        listboxType =
+        {
+            name ="modifications"
+            position = { x=62 y=258}
+            backGround=""
+            size = { x=684 y=340 }
+            horizontal = 0
+            spacing = 0
+            scrollbartype = "standardlistbox_slider"
+            borderSize = { x=0 y=0}
+            Orientation = "UPPER_LEFT"
+        }
+
+        guiButtonType = {
+            name = "flagship_designer"
+            position = { x=0 y=0 }
+            quadTextureSprite ="GFX_flagship_designer_bg"
+            tooltip = ""
+            tooltipText =""
+            delayedTooltipText = ""
+        }
+
+        guiButtonType = {
+            name = "cancel"
+            position = { x=50 y=678 }
+            quadTextureSprite ="button_type_1"
+            tooltip = ""
+            tooltipText =""
+            delayedTooltipText = ""
+            buttonText = "FLAGSHIP_CANCEL"
+            buttonFont = "vic_18"
+            shortcut = "ESCAPE"
+            clicksound = click
+        }
+
+        guiButtonType = {
+            name = "build"
+            position = { x=660 y=678 }
+            quadTextureSprite ="button_type_1"
+            tooltip = ""
+            tooltipText =""
+            delayedTooltipText = ""
+            buttonText = "FLAGSHIP_BUILD"
+            buttonFont = "vic_18"
+            clicksound = click
+        }
+
+        instantTextBoxType={
+            position = {x = 120 y = 44 }
+            name = "flagship_designer_title"
+            font = "vic_22"
+            borderSize = {x = 16 y = 0}
+            maxWidth = 760
+            maxHeight = 36
+            text = ""
+            orientation = "UPPER_LEFT"
+            format = centre
+        }
+
+		iconType = {
+			name ="flagship_icon"
+			spriteType = "GFX_flagship_icon"
+			position = { x=200 y=126 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+        editBoxType = {
+            position = { x=232 y=122 }
+            name = "flagship_name"
+            #textureFile = "gfx\\interface\\small_tiles_dialog.dds"
+            font = "vic_18"
+            borderSize = { x=16 y=12  }
+            size = { x=396 y=64 }
+            text = ""
+
+            orientation = "UPPER_LEFT"
+        }
+
+		guiButtonType = {
+			name = "random_name"
+			position = { x=788 y=122}
+			quadTextureSprite ="GFX_nation_designer_random_button"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "vic_18"
+            scale = 0.8
+		}
+
+		iconType = {
+			name ="heavy_ship_icon"
+			spriteType = "GFX_unit_types_strip_mil_center_view"
+			position = { x = 22 y = 164 }
+			frame = 4
+		}		
+		
+        instantTextBoxType = {
+            name = "heavy_label"
+            position = { x = 168 y =192 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "HEAVY_SHIP"
+            maxWidth = 180
+            maxHeight = 64
+        }
+		
+        guiButtonType = {
+            name = "heavy_checkbox"
+            position = { x = 100 y = 182 }
+            quadTextureSprite ="GFX_checkbox_gold_32"
+        }
+
+		iconType = {
+			name ="light_ship_icon"
+			spriteType = "GFX_unit_types_strip_mil_center_view"
+			position = { x = 344 y = 164 }
+			frame = 5
+		}				
+		
+        instantTextBoxType = {
+            name = "light_label"
+            position = { x = 484 y =192 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "LIGHT_SHIP"
+            maxWidth = 180
+            maxHeight = 64
+        }
+
+        guiButtonType = {
+            name = "light_checkbox"
+            position = { x = 416 y = 182 }
+            quadTextureSprite ="GFX_checkbox_gold_32"
+        }
+
+		iconType = {
+			name ="galley_ship_icon"
+			spriteType = "GFX_unit_types_strip_mil_center_view"
+			position = { x = 664 y = 164 }
+			frame = 6
+		}		
+		
+        instantTextBoxType = {
+            name = "galley_label"
+            position = { x = 804 y =192 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "GALLEY"
+            maxWidth = 180
+            maxHeight = 64
+        }
+
+        guiButtonType = {
+            name = "galley_checkbox"
+            position = { x = 736 y = 182 }
+            quadTextureSprite ="GFX_checkbox_gold_32"
+        }
+		
+        iconType =
+		{
+			name = "modification_1"
+			spriteType = "GFX_playeraiprefs_question_mark"
+            position = { x=44 y=606 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name = "modification_2"
+			spriteType = "GFX_playeraiprefs_question_mark"
+            position = { x=124 y=606 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType =
+		{
+			name = "modification_3"
+			spriteType = "GFX_playeraiprefs_question_mark"
+            position = { x=204 y=606 }
+			Orientation = "UPPER_LEFT"
+		}
+
+        instantTextBoxType = {
+            name = "nr_modifications"
+            position = { x = 274 y =618 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "nr of modifications"
+            maxWidth = 380
+            maxHeight = 64
+			format = left
+        }
+		
+        instantTextBoxType = {
+            name = "total_cost_maintenance"
+            position = { x = 624 y =618 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "maintenance"
+            maxWidth = 360
+            maxHeight = 64
+			format = left
+        }		
+		
+        iconType = {
+			name ="trade_power_icon"
+			spriteType = "GFX_icon_trade_power"
+            position = { x=804 y=260 }
+		}
+        instantTextBoxType = {
+            name = "trade_power_value"
+            position = { x=874 y=272 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "1234"
+            maxWidth = 100
+            maxHeight = 36
+			format = left
+        }
+		iconType = {
+			name ="hull_size_icon"
+			spriteType = "GFX_icon_hull_size"
+            position = { x=804 y=352 }
+		}
+        instantTextBoxType = {
+            name = "hull_size_value"
+            position = { x=874 y=364 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "1234"
+            maxWidth = 100
+            maxHeight = 36
+			format = left
+        }
+		iconType = {
+			name ="cannons_icon"
+			spriteType = "GFX_icon_ship_cannons"
+            position = { x=804 y=444 }
+		}
+        instantTextBoxType = {
+            name = "cannons_value"
+            position = { x=874 y=456 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "1234"
+            maxWidth = 100
+            maxHeight = 36
+			format = left
+        }
+		iconType = {
+			name ="speed_icon"
+			spriteType = "GFX_icon_ship_speed"
+            position = { x=804 y=536 }
+		}
+        instantTextBoxType = {
+            name = "speed_value"
+            position = { x=874 y=548 }
+            font = "vic_22"
+            borderSize = {x = 0 y = 0}
+            text = "1234"
+            maxWidth = 100
+			maxHeight = 36
+			format = left
+        }
+    }
+}

@@ -1,0 +1,2934 @@
+##########################################################################################
+####################################### Settings Menu#####################################
+##########################################################################################
+
+guiTypes = {
+
+
+
+########### NEW Settings window ############################################################################
+		
+
+		windowType = {
+			name = "menu_settings"
+			backGround=""
+			position = { x= -290 y = -288 }	
+			size = { x=480 y = 1000 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			orientation = CENTER			
+			fullScreen = no
+			
+			#iconType =
+			#{
+			#	name ="frontend_settings_menu"
+			#	spriteType = "GFX_menu"
+			#	position = { x= -184 y = -136 }
+			#	Orientation = "UPPER_LEFT"
+			#}
+
+			instantTextBoxType={
+				position = {x = 120 y = 60 }
+				name = "settings_label"
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 344
+				maxHeight = 36
+				text = "SM_SETTINGS"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+
+
+
+			##### Subwindow AUDIO settings ############################################
+
+			windowType = {
+				name = "menu_settings_AUDIO"
+				backGround=""
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_audio_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType={
+					position = {x = -160 y =272 }
+					name = "mastervolume_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_MASTER_VOLUME"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				scrollbarType = {
+					name = "mastervolume_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x=188 y=262}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}
+
+
+				instantTextBoxType={
+					position = {x = -160 y =382 }
+					name = "effectvolume_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_EFFECT_VOLUME"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				
+				scrollbarType = {
+					name = "effectvolume_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x=188 y=372}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}		
+					
+				}
+
+				instantTextBoxType={
+					position = {x = -160 y =486 }
+					name = "musicvolume_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_MUSIC_VOLUME"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				scrollbarType = {
+					name = "musicvolume_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x=188 y=476}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}	
+				
+				instantTextBoxType={
+					position = {x = -160 y = 594 }
+					name = "ambient_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "AMBIENT"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+				
+				scrollbarType = {
+					name = "ambient_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x= 188 y =586}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}			
+			}
+
+
+
+			##### Subwindow Controls settings ############################################
+
+			windowType = {
+				name = "menu_settings_CONTROLS"
+				backGround=""
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_controls_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}
+
+
+				instantTextBoxType={
+					position = {x = -160 y = 488 }
+					name = "scrollspeed_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_SCROLL_SPEED"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+				
+				scrollbarType = {
+					name = "scrollspeed_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x= 210 y =478}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 5
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}
+
+
+				instantTextBoxType={
+					position = {x = -160 y = 378 }
+					name = "zoomspeed_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_ZOOM_SPEED"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				
+				scrollbarType = {
+					name = "zoomspeed_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x= 210 y =370}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}		
+					
+				}
+
+			
+				instantTextBoxType={
+					position = {x = 80 y = 240 }
+					name = "reset_shortcuts_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 400
+					maxHeight = 36
+					text = "RESET_SHORTCUTS"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				guiButtonType = {
+					name = "reset_shortcuts_btn"
+					position = { x = 184 y = 290 }
+					quadTextureSprite ="GFX_standard_button_105"	
+					tooltip = ""
+					tooltipText ="RESET_SHORTCUTS_TOOLTIP"
+					delayedTooltipText = ""
+					buttonText = "RESET"
+					buttonFont = "vic_18"
+				}
+
+			}
+
+
+
+
+
+
+			##### Subwindow Video settings ############################################
+
+			windowType = {
+				name = "menu_settings_VIDEO"
+				backGround=""
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_video_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}	
+				
+				listboxType = 
+				{
+					name ="settings_listbox"
+					position = { x = 280 y = 234 }
+					backGround=""
+					size = { x=502 y=450 }
+					Orientation = "UPPER_LEFT"
+					spacing = 4
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 0 y = 0}
+				}
+
+				instantTextBoxType={
+					position = {x = -110 y = 226 }
+					name = "display_mode_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_DISPLAY_MODE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = -110 y = 272 }
+					name = "display_mode_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "DISPLAY_MODE_WINDOWED_BORDERLESS"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				guiButtonType = {
+					name = "decrease_display_mode_button"
+					position = { x = -128 y = 254 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_display_mode_button"
+					position = { x = 196 y = 254 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}				
+				
+				instantTextBoxType={
+					position = {x = -110 y = 318 }
+					name = "resolution_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_RESOLUTION"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = -110 y = 362 }
+					name = "resolution_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				guiButtonType = {
+					name = "decrease_resolution_button"
+					position = { x = -128 y = 344 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_resolution_button"
+					position = { x = 196 y = 344 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = -110 y = 408 }
+					name = "refreshrate_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_REFRESH_RATE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = -110 y = 452 }
+					name = "refreshrate_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "decrease_refreshrate_button"
+					position = { x = -128 y = 434 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_refreshrate_button"
+					position = { x = 196 y = 434 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+				
+				instantTextBoxType={
+					position = {x = -110 y = 498 }
+					name = "multisample_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_MULTISAMPLE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = -110 y = 542 }
+					name = "multisample_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "decrease_multisample_button"
+					position = { x = -128 y = 524 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_multisample_button"
+					position = { x = 196 y = 524 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+
+				instantTextBoxType={
+					position = {x = -110 y = 588 }
+					name = "gamma_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_GAMMA"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				scrollbarType = {
+					name = "gamma_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =382 y =32 }
+					position = {x= -128 y =614}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}
+
+				#checkboxType = {
+				#	name = "shadows_checkbox"
+				#	position = { x = 80 y = 300 }
+				#	quadTextureSprite ="GFX_checkbox"	
+				#	tooltip = ""
+				#	tooltipText =""
+				#	delayedTooltipText = ""
+				#	no
+				#	buttonFont = "Main_14_black"
+	#
+	#			}
+
+	#			instantTextBoxType={
+	#				position = {x = 140 y = 320 }
+	#				name = "shadows_label"
+	#				font = "Main_14"
+	#				borderSize = {x = 0 y = 0}	
+	#				maxHeight = 36
+	#				text = "SM_SHADOWS"	
+	#				orientation = "UPPER_LEFT"
+	#				format = left
+	#			}
+
+			
+			}
+
+			##### Subwindow Game settings ############################################
+
+			windowType = {
+				name = "menu_settings_GAME"
+				backGround=""
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_game_settings_bg"
+					position = { x= -436 y = -138 }
+					Orientation = "UPPER_LEFT"
+				}	
+
+				instantTextBoxType={
+					position = {x = 112 y = 244 }
+					name = "autosave_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_AUTOSAVE_INTERVAL"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = 120 y = 300 }
+					name = "autosave_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "decrease_autosave_button"
+					position = { x = 120 y = 290 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_autosave_button"
+					position = { x = 390 y = 290 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+				instantTextBoxType = {
+					name = "autosave_tocloud_title"
+					position = { x = 188 y = 400 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "AUTOSAVE_TOCLOUD"
+					maxWidth = 512
+					maxHeight = 40	
+					format = left
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "autosave_tocloud"
+					position = { x = 120 y = 384}
+					quadTextureSprite ="GFX_checkbox_gold_32"
+					tooltip = ""
+					tooltipText =""
+					buttonFont = "vic_18"
+				}
+								
+				instantTextBoxType = {
+					name = "compress_autosaves_checkbox_label"
+					position = { x = 188 y = 486 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 80	
+					text = "COMPRESS_AUTOSAVES"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				guiButtonType = {
+					name = "compress_autosaves_checkbox"
+					position = { x = 120 y = 470 }
+					quadTextureSprite = "GFX_checkbox_gold_32"
+					tooltip = ""
+					tooltipText =""
+					buttonFont = "vic_18"
+				}
+				
+				instantTextBoxType = {
+					name = "rich_presence_label"
+					position = { x = 188 y = 576 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "RICH_PRESENCE"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				guiButtonType = {
+					name = "rich_presence_checkbox"
+					position = { x = 120 y = 560 }
+					quadTextureSprite = "GFX_checkbox_gold_32"
+					tooltip = ""
+					tooltipText =""
+					buttonFont = "vic_18"
+				}
+			}
+
+			##### Subwindow Accessibility settings ############################################
+
+			windowType = {
+				name = "menu_settings_ACCESSIBILITY"
+				backGround=""
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_multiplayer_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "visual_alerts_label"
+					position = { x = -136 y = 250 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_VISUAL_ALERTS"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "large_fonts_label"
+					position = { x = -136 y = 324 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_CHAT_LARGE_FONTS"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "text_to_speech_label"
+					position = { x = -136 y = 398 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_TTS"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "speech_to_text_label"
+					position = { x = -136 y = 478 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_STT"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "speech_to_text_shortcut_state_label"
+					position = { x = -136 y = 552 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_USE_STT_SHORTCUT"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "speech_to_text_shortcut_label"
+					position = { x = -136 y = 624 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_STT_SHORTCUT_INPUT"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 250 }
+					name = "visual_alerts_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_visual_alerts_value"
+					position = { x = 442 y = 236 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_visual_alerts_value"
+					position = { x = 666 y = 236 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 324 }
+					name = "large_fonts_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_large_fonts_value"
+					position = { x = 442 y = 310 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_large_fonts_value"
+					position = { x = 666 y = 310 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 398 }
+					name = "text_to_speech_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_text_to_speech_value"
+					position = { x = 442 y = 384 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_text_to_speech_value"
+					position = { x = 666 y = 384 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 478 }
+					name = "speech_to_text_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_speech_to_text_value"
+					position = { x = 442 y = 464 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_speech_to_text_value"
+					position = { x = 666 y = 464 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 552 }
+					name = "speech_to_text_shortcat_state_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_speech_to_text_shortcat_state_value"
+					position = { x = 442 y = 538 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_speech_to_text_shortcat_state_value"
+					position = { x = 666 y = 538 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+				iconType =
+				{
+					name ="speech_to_text_shortcut_edit_bkg"
+					spriteType = "GFX_accessibility_settings_shortcut_bkg"
+                	position = {  x= 488 y = 612 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				editBoxType={
+					name = "speech_to_text_shortcut_edit"
+					position = { x= 502 y = 624 }
+					text = ""
+					font =  "vic_18"
+					size = { x=160 y=36 }
+					use_special_chars = no
+				}
+			}
+			
+			guiButtonType = {
+					name = "ApplyButton"
+					position = { x = 286 y = 690 }
+					quadTextureSprite ="GFX_standard_button_105"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+					buttonText = "SM_APPLY"
+					buttonFont = "vic_18"
+				}
+
+
+			guiButtonType = {
+				name = "BackButton"
+				position = { x = 84 y = 690 }
+				quadTextureSprite ="GFX_standard_button_105"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "SM_BACK"
+				buttonFont = "vic_18"
+				clicksound = back_click
+			}
+			
+			guiButtonType = {
+				name = "settings_tab_1"
+				position = { x = -214 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+
+			guiButtonType = {
+				name = "settings_tab_2"
+				position = { x = -84 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+
+			guiButtonType = {
+				name = "settings_tab_3"
+				position = { x = 46 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+
+			guiButtonType = {
+				name = "settings_tab_4"
+				position = { x = 176	 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_medium"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+			
+			guiButtonType = {
+				name = "settings_tab_5"
+				position = { x = 370	 y = 106 }
+				quadTextureSprite ="GFX_settings_tab_large"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 2
+			}
+
+			instantTextBoxType={
+				position = {x = -208 y = 134 }
+				name = "gamesettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text = "SM_GAME"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = -80 y = 134 }
+				name = "videosettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text =	 "SM_VIDEO"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = 52 y = 134 }
+				name = "audiosettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text = "SM_AUDIO"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = 216 y = 134 }
+				name = "controlssettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text = "SM_CONTROLS"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = 480 y = 134 }
+				name = "accessibilityssettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 188
+				maxHeight = 36
+				text = "SETTINGS_ACCESSIBILITY"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+		}
+###### End of NEW settings ###################################################################
+
+
+
+		windowType = {
+			name = "menu_settings_ingame"
+			backGround=""
+			position = { x= -226 y = -400 }	
+			size = { x=480 y = 1000 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			orientation = CENTER
+
+
+
+
+			##### Subwindow AUDIO settings ############################################
+
+			windowType = {
+				name = "menu_settings_AUDIO"
+				backGround=""
+				size = { x=480 y = 1000 }
+				position = { x=-58 y = -2 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_audio_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType={
+					position = {x = -160 y =272 }
+					name = "mastervolume_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_MASTER_VOLUME"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				scrollbarType = {
+					name = "mastervolume_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x=188 y=262}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}
+
+
+				instantTextBoxType={
+					position = {x = -160 y =382 }
+					name = "effectvolume_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_EFFECT_VOLUME"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				
+				scrollbarType = {
+					name = "effectvolume_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x=188 y=372}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}		
+					
+				}
+
+				instantTextBoxType={
+					position = {x = -160 y =486 }
+					name = "musicvolume_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_MUSIC_VOLUME"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				scrollbarType = {
+					name = "musicvolume_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x=188 y=476}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}	
+				
+				instantTextBoxType={
+					position = {x = -160 y = 594 }
+					name = "ambient_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "AMBIENT"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+				
+				scrollbarType = {
+					name = "ambient_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x= 188 y =586}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}			
+			}
+
+
+			##### Subwindow Controls settings ############################################
+
+			windowType = {
+				name = "menu_settings_CONTROLS"
+				backGround=""
+				size = { x=480 y = 1000 }
+				position = { x=-58 y = -2 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_controls_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}
+
+
+				instantTextBoxType={
+					position = {x = -160 y = 488 }
+					name = "scrollspeed_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_SCROLL_SPEED"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+				
+				scrollbarType = {
+					name = "scrollspeed_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x= 210 y =478}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 5
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}
+	
+		
+					
+				}
+
+
+				instantTextBoxType={
+					position = {x = -160 y = 378 }
+					name = "zoomspeed_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_ZOOM_SPEED"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				
+				scrollbarType = {
+					name = "zoomspeed_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =484 y =32 }
+					position = {x= 210 y =370}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=60 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=60 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x=60 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x=60 y =240}	
+					}		
+					
+				}
+
+				instantTextBoxType={
+					position = {x = 120 y = 240 }
+					name = "reset_shortcuts_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 400
+					maxHeight = 36
+					text = "RESET_SHORTCUTS"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				guiButtonType = {
+					name = "reset_shortcuts_btn"
+					position = { x = 206 y = 290 }
+					quadTextureSprite ="GFX_standard_button_105"	
+					tooltip = ""
+					tooltipText ="RESET_SHORTCUTS_TOOLTIP"
+					delayedTooltipText = ""
+					buttonText = "RESET"
+					buttonFont = "vic_18"
+				}
+
+
+			
+
+			}
+
+
+
+
+			##### Subwindow Video settings ############################################
+
+			windowType = {
+				name = "menu_settings_VIDEO"
+				backGround=""
+				position = { x= -320 y = 200 }	
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_video_settings_bg"
+					position = { x= -174 y = -338 }
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				listboxType = 
+				{
+					name ="settings_listbox"
+					position = { x = 544 y = 30 }
+					backGround=""
+					size = { x=502 y=450}
+					Orientation = "UPPER_LEFT"
+					spacing = 4
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 0 y = 0}
+				}
+		
+				instantTextBoxType={
+					position = {x = 146 y = 28 }
+					name = "display_mode_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_DISPLAY_MODE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = 150 y = 74 }
+					name = "display_mode_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "DISPLAY_MODE_WINDOWED_BORDERLESS"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				guiButtonType = {
+					name = "decrease_display_mode_button"
+					position = { x = 110 y = 50 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_display_mode_button"
+					position = { x = 476 y = 50 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}		
+		
+				instantTextBoxType={
+					position = {x = 150 y = 120 }
+					name = "resolution_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_RESOLUTION"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = 150 y = 164 }
+					name = "resolution_value"
+					font = "Main_16"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				guiButtonType = {
+					name = "decrease_resolution_button"
+					position = { x = 110 y = 140 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_resolution_button"
+					position = { x = 476 y = 140 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 150 y = 210 }
+					name = "refreshrate_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_REFRESH_RATE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = 150 y = 254 }
+					name = "refreshrate_value"
+					font = "Main_16"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "decrease_refreshrate_button"
+					position = { x = 110 y = 230}
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_refreshrate_button"
+					position = { x = 476 y = 230 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+				
+				instantTextBoxType={
+					position = {x = 150 y = 300 }
+					name = "multisample_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_MULTISAMPLE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = 150 y = 344 }
+					name = "multisample_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "decrease_multisample_button"
+					position = { x = 110 y = 320 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_multisample_button"
+					position = { x = 476 y = 320 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+
+				instantTextBoxType={
+					position = {x = 150 y = 390 }
+					name = "gamma_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_GAMMA"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				scrollbarType = {
+					name = "gamma_slider"	
+					slider = "landslider_SliderButton"
+					track= "landslider_TrackButton"
+					leftbutton = "landslider_upButton"
+					rightbutton = "landslider_downButton"
+					size = {x =428 y =26 }
+					position = {x= 108 y =410}
+					priority = 100			
+					borderSize = {x =32 y = 32}	
+					maxValue = 100
+					minValue = 0
+					stepSize =1
+					startValue = 20
+					horizontal = 1
+					
+					guiButtonType = {
+						name = "landslider_SliderButton"	
+						quadTextureSprite = "GFX_settings_scroll_drager_blue"
+						tooltip = ""
+						tooltipText =""	
+						delayedTooltipText = ""
+						position = { x=0 y =0}
+					}
+					guiButtonType = {
+						name = "landslider_TrackButton"
+						quadTextureSprite = "yearslider_background"
+						position = { x=0 y =40}	
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""	
+					}	
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_upButton"
+						quadTextureSprite = "yearslider_leftbutton"
+						position = { x= 0 y =0}	
+					}
+					guiButtonType = {
+						# parent = "landslider_SliderButton"
+						name = "landslider_downButton"
+						quadTextureSprite = "yearslider_rightbutton"
+						position = { x= 0 y =240}	
+					}
+	
+		
+					
+				}
+
+	#			checkboxType = {
+	#				name = "shadows_checkbox"
+	#				position = { x = 80 y = 300 }
+	#				quadTextureSprite ="GFX_checkbox"	
+	#				tooltip = ""
+	#				tooltipText =""
+	#				delayedTooltipText = ""
+	#				no
+	#				buttonFont = "Main_14_black"
+	#
+	#			}
+#
+#				instantTextBoxType={
+#					position = {x = 140 y = 320 }
+#					name = "shadows_label"
+#					font = "Main_14"
+#					borderSize = {x = 0 y = 0}	
+#					maxWidth = 344
+#					maxHeight = 36
+#					text = "SM_SHADOWS"	
+#					orientation = "UPPER_LEFT"
+#					format = left
+#				}
+
+			
+
+			}
+
+			##### Subwindow Game settings ############################################
+
+			windowType = {
+				name = "menu_settings_GAME"
+				backGround=""
+				position = { x= 0 y = 100 }	
+				size = { x=480 y = 1000 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_game_settings_bg"
+					position = { x= -494 y = -238 }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType={
+					position = {x = -200 y = 140 }
+					name = "autosave_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = "SM_AUTOSAVE_INTERVAL"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+				instantTextBoxType={
+					position = {x = -198 y = 206 }
+					name = "autosave_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "decrease_autosave_button"
+					position = { x = -178 y = 190 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "increase_autosave_button"
+					position = { x = 58 y = 190 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+				instantTextBoxType = {
+					name = "autosave_tocloud_title"
+					position = { x = -112 y = 272 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "AUTOSAVE_TOCLOUD"
+					maxWidth = 512
+					maxHeight = 40	
+					format = left
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "autosave_tocloud"
+					position = { x = -180 y = 260}
+					quadTextureSprite ="GFX_checkbox_gold_32"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}				
+				
+				instantTextBoxType = {
+					name = "compress_autosaves_checkbox_label"
+					position = { x = -112 y = 348 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "COMPRESS_AUTOSAVES"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				guiButtonType = {
+					name = "compress_autosaves_checkbox"
+					position = { x = -180 y = 334 }
+					quadTextureSprite = "GFX_checkbox_gold_32"
+					tooltip = ""
+					tooltipText =""
+					buttonFont = "vic_18"
+				}
+				
+					instantTextBoxType = {
+					name = "rich_presence_label"
+					position = { x = -112 y = 424 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "RICH_PRESENCE"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				guiButtonType = {
+					name = "rich_presence_checkbox"
+					position = { x = -180 y = 410 }
+					quadTextureSprite = "GFX_checkbox_gold_32"
+					tooltip = ""
+					tooltipText =""
+					buttonFont = "vic_18"
+				}
+
+				instantTextBoxType = {
+					name = "hints_active_title"
+					position = { x = 280 y = 204 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "HINTS_ACTIVE"
+					maxWidth = 512
+					maxHeight = 40
+					format = left
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "hints_active"
+					position = { x = 210 y = 188}
+					quadTextureSprite ="GFX_checkbox_gold_32"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType = {
+					name = "hide_chat_title"
+					position = { x = 280 y = 270 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "FLOATING_CHAT"
+					maxWidth = 512
+					maxHeight = 40	
+					format = left
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "hide_chat"
+					position = { x = 210 y = 260}
+					quadTextureSprite ="GFX_checkbox_gold_32"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+				instantTextBoxType = {
+					name = "allow_hotjoin_title"
+					position = { x = 280 y = 346 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "ALLOW_HOTJOIN"
+					maxWidth = 512
+					maxHeight = 40	
+					format = left
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "allow_hotjoin"
+					position = { x = 210 y = 334}
+					quadTextureSprite ="GFX_checkbox_gold_32"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}	
+
+				instantTextBoxType = {
+					name = "allow_coop_title"
+					position = { x = 280 y = 424 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "ALLOW_COOP"
+					maxWidth = 360
+					maxHeight = 40	
+					format = left
+					vertical_alignment = center
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "allow_coop"
+					position = { x = 210 y = 410}
+					quadTextureSprite ="GFX_checkbox_gold_32"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}	
+
+				instantTextBoxType = {
+					name = "autopause_on_events_label"
+					position = { x = 280 y = 496 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					text = "AUTOPAUSE_ON_EVENTS"
+					maxWidth = 512
+					maxHeight = 40	
+					format = left
+					Orientation = "UPPER_LEFT"
+				}				
+				
+				guiButtonType = {
+					name = "autopause_on_events_button"
+					position = { x = 210 y = 486}
+					quadTextureSprite ="GFX_checkbox_gold_32"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+			}
+
+			windowType = {
+				name = "menu_settings_ACCESSIBILITY"
+				backGround=""
+				size = { x=480 y = 1000 }
+				position = { x=-58 y = -2 }
+				moveable = 0
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+
+				iconType =
+				{
+					name ="menu"
+					spriteType = "GFX_multiplayer_settings_bg"
+                    position = { x= -436 y = -136 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "visual_alerts_label"
+					position = { x = -136 y = 250 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_VISUAL_ALERTS"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "large_fonts_label"
+					position = { x = -136 y = 324 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_CHAT_LARGE_FONTS"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "text_to_speech_label"
+					position = { x = -136 y = 398 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_TTS"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "speech_to_text_label"
+					position = { x = -136 y = 478 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_STT"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "speech_to_text_shortcut_state_label"
+					position = { x = -136 y = 552 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_USE_STT_SHORTCUT"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+				instantTextBoxType = {
+					name = "speech_to_text_shortcut_label"
+					position = { x = -136 y = 624 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 0 y =0}
+					maxWidth = 512
+					maxHeight = 40	
+					text = "SETTINGS_ACCESSIBILITY_STT_SHORTCUT_INPUT"
+					orientation = "UPPER_LEFT"
+					format = left
+					fixedsize = yes
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 250 }
+					name = "visual_alerts_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_visual_alerts_value"
+					position = { x = 442 y = 236 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_visual_alerts_value"
+					position = { x = 666 y = 236 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 324 }
+					name = "large_fonts_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_large_fonts_value"
+					position = { x = 442 y = 310 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_large_fonts_value"
+					position = { x = 666 y = 310 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 398 }
+					name = "text_to_speech_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_text_to_speech_value"
+					position = { x = 442 y = 384 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_text_to_speech_value"
+					position = { x = 666 y = 384 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 478 }
+					name = "speech_to_text_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_speech_to_text_value"
+					position = { x = 442 y = 464 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_speech_to_text_value"
+					position = { x = 666 y = 464 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				instantTextBoxType={
+					position = {x = 412 y = 552 }
+					name = "speech_to_text_shortcat_state_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 344
+					maxHeight = 36
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+				guiButtonType = {
+					name = "next_speech_to_text_shortcat_state_value"
+					position = { x = 442 y = 538 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+				guiButtonType = {
+					name = "prev_speech_to_text_shortcat_state_value"
+					position = { x = 666 y = 538 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+				iconType =
+				{
+					name ="speech_to_text_shortcut_edit_bkg"
+					spriteType = "GFX_accessibility_settings_shortcut_bkg"
+                	position = {  x= 488 y = 612 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				editBoxType={
+					name = "speech_to_text_shortcut_edit"
+					position = { x= 502 y = 624 }
+					text = ""
+					font =  "vic_18"
+					size = { x=160 y=36 }
+					use_special_chars = no
+				}
+			}
+			
+			guiButtonType = {
+					name = "ApplyButton"
+					position = { x = 226 y = 700 }
+					quadTextureSprite ="GFX_standard_button_105"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+					buttonText = "SM_APPLY"
+					buttonFont = "vic_18"
+				}
+
+
+			guiButtonType = {
+				name = "BackButton"
+				position = { x = 24 y = 700 }
+				quadTextureSprite ="GFX_standard_button_105"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "SM_BACK"
+				buttonFont = "vic_18"
+				clicksound = back_click
+				shortcut = "ESCAPE"
+			}
+				
+			instantTextBoxType={
+				position = {x = 60 y = 60 }
+				name = "settings_label"
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 344
+				maxHeight = 36
+				text = "SM_SETTINGS"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			guiButtonType = {
+				name = "settings_tab_1"
+				position = { x = -274 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+
+			guiButtonType = {
+				name = "settings_tab_2"
+				position = { x = -144 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+
+			guiButtonType = {
+				name = "settings_tab_3"
+				position = { x = -14 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_small"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+
+			guiButtonType = {
+				name = "settings_tab_4"
+				position = { x = 116	 y = 116 }
+				quadTextureSprite ="GFX_settings_tab_medium"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 1
+			}
+			
+			guiButtonType = {
+				name = "settings_tab_5"
+				position = { x = 310	 y = 106 }
+				quadTextureSprite ="GFX_settings_tab_large"	
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				frame = 2
+			}
+
+			instantTextBoxType={
+				position = {x = -268 y = 134 }
+				name = "gamesettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text = "SM_GAME"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = -140 y = 134 }
+				name = "videosettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text =	 "SM_VIDEO"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = -8 y = 134 }
+				name = "audiosettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text = "SM_AUDIO"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = 150 y = 134 }
+				name = "controlssettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 128
+				maxHeight = 36
+				text = "SM_CONTROLS"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			instantTextBoxType={
+				position = {x = 420 y = 134 }
+				name = "accessibilityssettings_label"
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}	
+				maxWidth = 188
+				maxHeight = 36
+				text = "SETTINGS_ACCESSIBILITY"	
+				orientation = "UPPER_LEFT"
+				format = centre
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	windowType = {	
+		name ="SettingsMustRestartWindow"
+		backGround=""
+		position = { x=0 y =0}	
+		size = { x=1600 y =1200}
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = yes
+		
+		iconType = {
+			name = "PopUpBg"	
+			buttonMesh  ="MiscPopUpBg"
+			position = { x=-400 y=-252 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+
+		guiButtonType = {
+			name = "PopUpDialog"	
+			quadTextureSprite ="gfx_message_bg"
+			position = { x=-328 y=-188 }
+			tooltip = ""	
+			tooltipText =""
+			delayedTooltipText = ""
+			orientation = "CENTER"
+		}
+		
+
+		textBoxType={
+			name = "PopUpHeadingTextBox"
+			textureFile =""
+			font = "Main_14_plain"
+			borderSize = {x = 12 y = 12}
+			position = { x=-306 y=-192 }
+			text = "SM_ALERT"	
+			orientation = "CENTER"
+		}
+
+		textBoxType={
+			name = "MustRestartTextBox"
+			textureFile =""
+			font = "Main_14_plain"
+			borderSize = {x = 12 y = 12}
+			position = { x=0 y=-52 }
+			text = "SM_RESTART"
+			maxWidth = 630
+			orientation = "CENTER"
+			format = centre
+		}
+
+		guiButtonType = {
+			name = "MustRestart_OK_Button"
+			position = { x=-120 y =84}
+			quadTextureSprite ="button_type_1"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "OK"
+			buttonFont = "Main_14_plain"
+			orientation = "CENTER"
+			clicksound = ok_click
+		}
+
+		
+	}
+
+	windowType = {	
+		name ="settings_item"
+		backGround=""
+		position = { x=0 y =0}	
+		size = { x=500 y = 90 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullscreen = no
+		
+		instantTextBoxType={
+					position = { x =20 y = 20 }
+					name = "settings_item_label"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 240
+					maxHeight = 40
+					text = "SM_MULTISAMPLE"	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+		instantTextBoxType={
+					position = { x = 300 y = 20 }
+					name = "settings_item_value"
+					font = "vic_18"
+					borderSize = {x = 0 y = 0}	
+					maxWidth = 120
+					maxHeight = 40
+					text = ""	
+					orientation = "UPPER_LEFT"
+					format = centre
+				}
+
+
+		guiButtonType = {
+					name = "decrease_settings_item_button"
+					position = { x = 260 y =  10 }
+					quadTextureSprite ="button_left"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+
+
+		guiButtonType = {
+					name = "increase_settings_item_button"
+					position = { x = 400 y = 10 }
+					quadTextureSprite ="button_right"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+				}
+				
+	}
+}

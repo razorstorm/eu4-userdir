@@ -1,0 +1,18 @@
+every_owned_province = {
+    limit = {
+        has_building = fort_15th 
+    }
+   	add_building = fort_16th
+}
+every_owned_province = {
+    limit = {
+        has_building = fort_16th 
+    }
+   	add_building = fort_17th
+}
+every_owned_province = {
+    limit = {
+        has_building = fort_17th 
+    }
+   	add_building = fort_18th
+}

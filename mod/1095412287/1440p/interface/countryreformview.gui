@@ -1,0 +1,1002 @@
+guiTypes = {
+	positionType = {
+		name = "number_of_reforms_per_row"
+		position = { x=4 y=0 }
+	}
+
+	################################################################################################
+	### --- Select REFORMS interface ---
+	windowType = {
+		name = "gov_view_reform_select"
+		backGround=""
+		position = { x=27 y=53 }
+		size = { x=1365 y=133 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = yes
+
+
+		iconType =
+		{
+			name ="reform_domesticpanel_overlay"
+			if_resolution = {
+				max_height = 867
+				spriteType = "GFX_reform_government_bg"
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				spriteType = "GFX_reform_government_bg_large"
+			}
+			if_resolution = {
+				min_height = 1048
+				spriteType = "GFX_reform_government_bg_huge"
+			}
+			position = { x= -37 y = 247 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		iconType = {
+			name ="government_type_icon"
+			spriteType = "GFX_government_type_icon_big"
+			position = { x=-8 y=304 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+			hint_tag = "hint_govtype"
+		}
+
+
+		instantTextBoxType = {
+			name = "government_type"
+			position = { x=52	y=313 }
+			format = left
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x = 0 y = 0}
+			text = "CURRENT_GOVERNMENT_TYPE"
+			maxWidth = 533
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "reform_upgrades_available"
+			position = { x=3 y=360 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "UPGRADES_AVAILABLE"
+			maxWidth = 240
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType = {
+			name = "expand_administration_button"
+			position = { x=616 y=297 }
+			quadTextureSprite ="GFX_government_boost_states"
+			tooltip = ""
+			tooltipText = ""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = click
+			text = ""
+		}
+
+		instantTextBoxType = {
+			name = "reform_upgrades_next"
+			position = { x=259 y=360 }
+			format = right
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "UPGRADES_NEXT"
+			maxWidth = 413
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name ="reform_progress"
+			spriteType = "reform_progress"
+			position = { x=16 y=384 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		iconType = {
+			name ="reform_progress_overlay"
+			spriteType = "GFX_reform_progress_frame"
+			position = { x=-3 y=380 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "reform_progress_label"
+			position = { x=-3 y=388 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "0/100"
+			maxWidth = 675
+			maxHeight = 43
+			format = center
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+
+		smoothListboxType = {
+			name ="reform_level_list"
+			position = { x=-7 y=433 }
+			backGround=""
+			if_resolution = {
+				max_height = 867
+				size = { x=676 y=408 }
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				size = { x=676 y=611 }
+			}
+			if_resolution = {
+				min_height = 1048
+				size = { x=676 y=851 }
+			}
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 3
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 7 y = 7}
+		}
+
+		guiButtonType = {
+			name = "back_button"
+			if_resolution = {
+				max_height = 867
+				position = { x=240 y=847 }
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				position = { x=240 y=1051 }
+			}
+			if_resolution = {
+				min_height = 1048
+				position = { x=240 y=1291 }
+			}
+			quadTextureSprite = "button_type_7"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "BACK"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+
+	}
+
+	################################################################################################
+	### --- Select REFORMS interface - Reform level (available reforms + details on current one) ---
+	### --- 1-line Version
+
+	windowType = {
+		name = "gov_view_reform_level_entry_1"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=653 y=147 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name = "reform_level_title_banner"
+			position = { x=-13 y=-5 }
+			Orientation = "UPPER_LEFT"
+			quadTextureSprite ="GFX_government_reform_banner"
+		}
+
+		instantTextBoxType = {
+			name = "reform_level_title"
+			position = { x=25 y=7 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = { x=0 y=0 }
+			text = "REFORM_LEVEL_TITLE"
+			maxWidth = 400
+			maxHeight = 400
+			Orientation = "UPPER_LEFT"
+		}
+
+		listboxType = {
+			name ="reform_level_1"
+			position = { x=3 y=31 }
+			backGround=""
+			size = { x=667 y=667 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 2
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x=0 y=0 }
+		}
+
+		instantTextBoxType = {
+			name = "selected_reform_title"
+			position = { x=360 y=43 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = { x=0 y=0 }
+			text = ""
+			maxWidth = 400
+			maxHeight = 400
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "selected_reform_description"
+			position = { x=361 y=75 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			borderSize = { x=0 y=0 }
+			text = ""
+			maxWidth = 315
+			maxHeight = 400
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name = "modifier_icon_1"
+			position = { x=353 y=65 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_1"
+			position = { x=391 y=71 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_2"
+			position = { x=460 y=65 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_2"
+			position = { x=497 y=71 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_3"
+			position = { x=567 y=65 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_3"
+			position = { x=604 y=71 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_4"
+			position = { x=353 y=105 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_4"
+			position = { x=391 y=111 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_5"
+			position = { x=460 y=105 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_5"
+			position = { x=497 y=111 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_6"
+			position = { x=567 y=105 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_6"
+			position = { x=604 y=111 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+	}
+
+	################################################################################################
+	### --- Select REFORMS interface - Reform level (available reforms + details on current one) ---
+	### --- 2-lines Version
+
+	windowType = {
+		name = "gov_view_reform_level_entry_2"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=667 y=240 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+			iconType = {
+			name = "reform_level_title_banner"
+			position = { x=-13 y=-5 }
+			Orientation = "UPPER_LEFT"
+			quadTextureSprite ="GFX_government_reform_banner"
+		}
+
+		instantTextBoxType = {
+			name = "reform_level_title"
+			position = { x=25 y=7 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = { x=0 y=0 }
+			text = "REFORM_LEVEL_TITLE"
+			maxWidth = 400
+			maxHeight = 400
+			Orientation = "UPPER_LEFT"
+		}
+
+		listboxType = {
+			name ="reform_level_1"
+			position = { x=3 y=31 }
+			backGround=""
+			size = { x=667 y=667 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 2
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x=0 y=0 }
+		}
+
+		listboxType = {
+			name ="reform_level_2"
+			position = { x=3 y=137 }
+			backGround=""
+			size = { x=667 y=667 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 2
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x=0 y=0 }
+		}
+
+		instantTextBoxType = {
+			name = "selected_reform_title"
+			position = { x=360 y=43 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = { x=0 y=0 }
+			text = ""
+			maxWidth = 400
+			maxHeight = 400
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "selected_reform_description"
+			position = { x=361 y=75 }
+			format = left
+			textureFile = ""
+			font = "vic_18"
+			borderSize = { x=0 y=0 }
+			text = ""
+			maxWidth = 315
+			maxHeight = 400
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name = "modifier_icon_1"
+			position = { x=360 y=65 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_1"
+			position = { x=397 y=71 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_2"
+			position = { x=467 y=65 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_2"
+			position = { x=504 y=71 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_3"
+			position = { x=573 y=65 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_3"
+			position = { x=611 y=71 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_4"
+			position = { x=360 y=105 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_4"
+			position = { x=397 y=111 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_5"
+			position = { x=467 y=105 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_5"
+			position = { x=504 y=111 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType = {
+			name = "modifier_icon_6"
+			position = { x=573 y=105 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_6"
+			position = { x=611 y=111 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=5 y=5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+	}
+
+	################################################################################################
+	### --- Select REFORMS interface - Reform button with icon and relevant tooltips ---
+
+	windowType = {
+		name = "gov_view_reform_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=83 y=83 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name = "reform_button"
+			position = { x=0 y=13 }
+			quadTextureSprite ="GFX_reform_placeholder"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+			clicksound = back_click
+			text = ""
+		}
+
+		iconType = {
+			name = "reform_icon"
+			position = { x=0 y=13 }
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		iconType = {
+			name ="reform_selected_frame"
+			spriteType = "GFX_reform_selected_frame"
+			position = { x=0 y=13 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
+
+
+	################################################################################################
+	### --- Select LEGACY GOVERNMENT interface ---
+
+	windowType = {
+		name = "gov_view_legacy_government_select"
+		backGround=""
+		position = { x=27 y=53 }
+		size = { x=1365 y=133 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = yes
+
+
+		iconType =
+		{
+			name ="reform_domesticpanel_overlay"
+			if_resolution = {
+				max_height = 867
+				spriteType = "GFX_reform_government_bg"
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				spriteType = "GFX_reform_government_bg_legacy"
+			}
+			if_resolution = {
+				min_height = 1048
+				spriteType = "GFX_reform_government_bg_legacy"
+			}
+			position = { x= -37 y = 247 }
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		iconType = {
+			name ="government_type_icon"
+			spriteType = "GFX_government_type_icon_big"
+			position = { x=0 y=309 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+			hint_tag = "hint_govtype"
+		}
+
+		instantTextBoxType = {
+			name = "government_type"
+			position = { x=64	y=316 }
+			format = centre
+			textureFile = ""
+			font = "vic_29"
+			borderSize = {x=0 y=0}
+			text = "CURRENT_GOVERNMENT_TYPE"
+			maxWidth = 533
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+
+		smoothListboxType = {
+			name ="legacy_government_list"
+			position = { x=-7 y=433 }
+			backGround=""
+			size = { x=676 y=416 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 3
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 7 y = 7}
+		}
+
+		iconType =
+		{
+			name ="icon_current_gov_desc_1"
+			spriteType = "GFX_idea_empty"
+			position = { x=67 y = 373 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "current_gov_desc_1"
+			position = { x = 97 y = 373 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_current_gov_desc_2"
+			spriteType = "GFX_idea_empty"
+			position = { x= 175 y = 373 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "current_gov_desc_2"
+			position = { x = 209 y = 373 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_current_gov_desc_3"
+			spriteType = "GFX_idea_empty"
+			position = { x= 285 y = 373 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+
+		}
+
+		instantTextBoxType = {
+			name = "current_gov_desc_3"
+			position = { x = 320 y = 373 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_current_gov_desc_4"
+			spriteType = "GFX_idea_empty"
+			position = { x= 396 y = 373 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+
+		}
+
+		instantTextBoxType = {
+			name = "current_gov_desc_4"
+			position = { x = 431 y = 373 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_current_gov_desc_5"
+			spriteType = "GFX_idea_empty"
+			position = { x= 507 y = 373 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+
+		}
+
+		instantTextBoxType = {
+			name = "current_gov_desc_5"
+			position = { x = 541 y = 373 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		guiButtonType = {
+			name = "back_button"
+			position = { x=240 y=911 }
+			quadTextureSprite = "button_type_7"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = "BACK"
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+
+	################################################################################################
+	### --- Select LEGACY GOVERNMENT interface - Legacy government entry with relevant tooltip ---
+
+	windowType = {
+		name = "gov_view_legacy_government_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=200 y= 104 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType =
+		{
+			name ="reform_button"
+			quadTextureSprite= "GFX_govReb_change_government_entry_bg"
+			position = { x=27 y=-9 }
+			size = { x=200 y=104 }
+			Orientation = "UPPER_LEFT"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+
+		}
+
+
+		instantTextBoxType = {
+			name = "reform_cost"
+			position = { x = 468 y =12 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 80
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+			format = center
+		}
+
+		iconType =
+		{
+			name ="administrative_icon"
+			spriteType = "GFX_icon_powers_administrative"
+			position = { x= 535 y = 11 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+		}
+
+		iconType =
+		{
+			name ="eligible_noneligible"
+			spriteType = "GFX_eligible_noneligible_strip"
+			position = { x=576 y=9 }
+
+			Orientation = "UPPER_LEFT"
+		}
+
+
+		instantTextBoxType = {
+			name = "reform_title"
+			position = { x=47 y=-1 }
+			format = left
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 400
+			maxHeight = 43
+			Orientation = "UPPER_LEFT"
+
+		}
+
+		iconType =
+		{
+			name ="icon_gov_desc_1"
+			spriteType = "GFX_idea_empty"
+			position = { x=67 y = 48 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "gov_desc_1"
+			position = { x = 97 y = 53 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_gov_desc_2"
+			spriteType = "GFX_idea_empty"
+			position = { x= 175 y = 48 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "gov_desc_2"
+			position = { x = 209 y = 53 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_gov_desc_3"
+			spriteType = "GFX_idea_empty"
+			position = { x= 285 y = 48 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+
+		}
+
+		instantTextBoxType = {
+			name = "gov_desc_3"
+			position = { x = 320 y = 53 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_gov_desc_4"
+			spriteType = "GFX_idea_empty"
+			position = { x= 396 y = 48 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+
+		}
+
+		instantTextBoxType = {
+			name = "gov_desc_4"
+			position = { x = 431 y = 53 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+
+		iconType =
+		{
+			name ="icon_gov_desc_5"
+			spriteType = "GFX_idea_empty"
+			position = { x= 507 y = 48 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+
+		}
+
+		instantTextBoxType = {
+			name = "gov_desc_5"
+			position = { x = 541 y = 53 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 5 y = 5}
+			text = ""
+			maxWidth = 85
+			maxHeight = 43
+			format = left
+		}
+	}
+}

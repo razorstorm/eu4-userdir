@@ -1,0 +1,116 @@
+name="United States"
+adjective="American"
+country_colors={
+	flag=51
+	color=29
+	symbol_index=0
+	flag_colors={
+		12 16 0 
+	}
+}
+index=1151
+graphical_culture=8
+technology_group=15
+religion=1
+government=2
+government_reform=146
+government_rank=3
+idea={
+	{
+		level=3
+		index=77
+		name="Arsenal of Democracy"
+		desc=""
+	}
+ {
+		level=5
+		index=71
+		name="Ships of Steel"
+		desc=""
+	}
+ {
+		level=10
+		index=33
+		name="Melting Pot"
+		desc=""
+	}
+ {
+		level=4
+		index=78
+		name="Shock and Awe"
+		desc=""
+	}
+ {
+		level=5
+		index=146
+		name="Advanced Logistics"
+		desc=""
+	}
+ {
+		level=8
+		index=9
+		name="American Infrastructure"
+		desc=""
+	}
+ {
+		level=4
+		index=178
+		name="Manifest Destiny"
+		desc=""
+	}
+ {
+		level=10
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=20
+		index=37
+		name=""
+		desc=""
+	}
+ {
+		level=12
+		index=117
+		name=""
+		desc=""
+	}
+ 
+}
+culture="american"
+monarch={
+	admin=7
+	diplomacy=7
+	military=7
+	age=40
+	female=no
+	name="Abraham"
+	dynasty="Lincoln"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"expansionist_personality"
+		"tolerant_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=1464
+	female=no
+	name="No Heir"
+	dynasty="nodynasty"
+	is_null=yes
+}
+queen={
+	admin=0
+	diplomacy=0
+	military=0
+	age=1463
+	female=no
+	name="No Consort"
+	dynasty="nodynasty"
+	is_null=yes
+}

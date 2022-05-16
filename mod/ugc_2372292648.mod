@@ -1,0 +1,16 @@
+version="1.0"
+tags={
+	"Alternative History"
+	"Balance"
+	"Events"
+	"Gameplay"
+	"Historical"
+	"Missions And Decisions"
+	"National Ideas"
+	"New Nations"
+}
+picture="thumbnail.png"
+name="Flavor Universalis"
+supported_version="1.33.*.*"
+path="F:/Steam/steamapps/workshop/content/236850/2372292648"
+remote_file_id="2372292648"

@@ -1,0 +1,125 @@
+name="Constantinople"
+adjective="Constantinopean"
+country_colors={
+	flag=23
+	color=33
+	symbol_index=31
+	flag_colors={
+		16 1 10 
+	}
+}
+index=1402
+graphical_culture=2
+technology_group=3
+religion=6
+government=1
+government_reform=486
+government_rank=3
+idea={
+	{
+		level=100
+		index=80
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=9
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=131
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=71
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=34
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=41
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=155
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=122
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=149
+		name=""
+		desc=""
+	}
+ 
+}
+culture="goths"
+monarch={
+	admin=100
+	diplomacy=100
+	military=100
+	age=40
+	religion=6
+	culture="goths"
+	female=no
+	name="Bartolomeus I"
+	dynasty="Spartenos"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"just_personality"
+		"calm_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	religion=6
+	culture="goths"
+	female=yes
+	name="Euphrosyne I"
+	dynasty="Spartenos"
+	is_null=no
+}
+queen={
+	admin=3
+	diplomacy=1
+	military=5
+	age=19
+	religion=6
+	culture="goths"
+	female=yes
+	name="Evanthia I"
+	dynasty="Barbaros"
+	is_null=no
+	personality={
+		"inspiring_leader_personality"
+	}
+}

@@ -1,0 +1,19 @@
+supply_increased = {
+	supply_limit = 3
+	local_hostile_attrition = 5
+}
+
+blighted = {
+	# attrition = 30
+	supply_limit_modifier = -10
+	local_friendly_movement_speed = -0.5 
+	max_attrition = 100
+}
+
+blighted_country = {
+	land_attrition = 50
+}
+
+blight_immunity = {
+	land_attrition = -10000
+}

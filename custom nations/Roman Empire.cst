@@ -1,0 +1,114 @@
+name="Roman Empire"
+adjective="Roman"
+country_colors={
+	flag=45
+	color=29
+	symbol_index=71
+	flag_colors={
+		12 12 6 
+	}
+}
+index=1273
+graphical_culture=1
+technology_group=1
+religion=1
+government=1
+government_reform=64
+government_rank=2
+idea={
+	{
+		level=1
+		index=80
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=0
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=3
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=81
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=37
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=82
+		name=""
+		desc=""
+	}
+ 
+}
+culture="umbrian"
+monarch={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=yes
+	name="Giacinta I"
+	dynasty="Monaldeschi"
+	is_null=no
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	female=no
+	name="Luigi I"
+	dynasty="Monaldeschi"
+	is_null=no
+}
+queen={
+	admin=2
+	diplomacy=4
+	military=6
+	age=19
+	female=no
+	name="Elio"
+	dynasty="Bentivoglio"
+	is_null=no
+	personality={
+		"greedy_personality"
+	}
+}

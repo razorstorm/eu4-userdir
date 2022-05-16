@@ -1,0 +1,125 @@
+name="The Great Assimilator"
+adjective="Assimilated"
+country_colors={
+	flag=45
+	color=20
+	symbol_index=15
+	flag_colors={
+		5 1 1 
+	}
+}
+index=1415
+graphical_culture=1
+technology_group=1
+religion=1
+government=3
+government_reform=493
+government_rank=3
+idea={
+	{
+		level=100
+		index=103
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=85
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=99
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=144
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=145
+		name=""
+		desc=""
+	}
+ {
+		level=2
+		index=278
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=155
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=201
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=149
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=148
+		name=""
+		desc=""
+	}
+ 
+}
+culture="swabian"
+monarch={
+	admin=15
+	diplomacy=15
+	military=15
+	age=41
+	religion=1
+	culture="swabian"
+	female=no
+	name="Frederick I"
+	dynasty="von Plotzkau"
+	is_null=no
+	personality={
+		"immortal_personality"
+		"strict_personality"
+		"industrious_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	religion=1
+	culture="swabian"
+	female=no
+	name="Sobeslaus I"
+	dynasty="von Plotzkau"
+	is_null=no
+}
+queen={
+	admin=3
+	diplomacy=2
+	military=6
+	age=17
+	religion=1
+	culture="swabian"
+	female=yes
+	name="Walburg"
+	dynasty="von Plotzkau"
+	is_null=no
+	personality={
+		"inspiring_leader_personality"
+	}
+}

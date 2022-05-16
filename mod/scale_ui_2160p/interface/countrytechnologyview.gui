@@ -1,0 +1,2068 @@
+guiTypes = {
+
+	windowType = {
+		name = "countrytechnologyview"
+		#position = { x=0 y=280 }	
+		position = { x=-1200 y=280 }	
+		show_position = { x=0 y =280 }
+		hide_position = { x=-1200 y =280 }	
+		animation_type = "decelerated"
+		animation_time = 300	
+		size = { x=2048 y=200 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		upsound = tab_technology
+		
+		iconType =
+		{
+			name ="countrytechnologyview_bg"
+			spriteType = "GFX_technology_view_bg"
+			position = { x= -24 y = -20 }
+			Orientation = "UPPER_LEFT"
+
+		}
+		
+		guiButtonType = {
+			name = "close_button"
+			position = { x = 1028 y = -2 }
+			quadTextureSprite ="GFX_closebutton2"	
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_LEFT"
+			clicksound = close_window
+		}		
+	
+		instantTextBoxType = {
+			name = "window_title"
+			position = { x = 30 y = 156 }
+			textureFile = ""
+			font = "vic_29s"
+			borderSize = {x = 8 y = 8}	
+			text = "HEADER_TECHNOLOGY"	
+			maxWidth = 1024
+			maxHeight = 64
+			format = centre
+		}
+
+		listboxType = {
+			name = "tables"
+			position = { x = 0 y = 230}
+			backGround=""
+			size = { x=1040 y = 900 }
+			Orientation = "UPPER_LEFT"
+			horizontal = 0
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+		
+
+		guiButtonType =
+		{
+			name ="show_institutions"
+			spriteType = "GFX_institutions_large_icon"
+			position = { x= 28 y = 208 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_techgroup"
+			shortcut = "n"
+		}
+
+		instantTextBoxType = {
+			name = "total_tech_penalty2"
+			position = { x = 126 y = 230 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			maxWidth = 700
+			maxHeight = 64
+			format = left
+			text = "Total Tech Penalty: 70%"
+		}
+
+		iconType =
+		{
+			name = "innovativeness_icon"
+			spriteType = "GFX_innovativeness_icon"
+			position = { x= 990 y = 230 }
+		}
+
+		instantTextBoxType = {
+			name = "innovativeness_text"
+			position = { x = 892 y = 230 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}
+			maxWidth = 100
+			maxHeight = 64
+			format = right
+			text = "100.0"
+		}
+		
+		### ------- Institutions -------		
+		windowType = {
+			name = "institutions_window"
+			position = { x=22 y=566 }
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+
+			iconType = {
+				name = "bg"
+				spriteType ="GFX_country_institutions_overlay"	
+				position = { x = -36 y = -304 }
+				orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "institutions_title"
+				position = { x = 104 y = -56 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				text = "INSTITUTIONS"	
+				maxWidth = 600
+				maxHeight = 64
+				format = left
+				fixedsize = yes
+			}			
+			
+			OverlappingElementsBoxType = {
+				name = "institutions"
+				position = { x = -70 y = 158 }
+				size = { x = 1208 y = 256 }
+				Orientation = "UPPER_LEFT"
+				format = center
+				spacing = 2
+			}
+			
+			iconType = {
+				name = "institution_red_banner"
+				spriteType ="GFX_institution_red_banner"	
+				position = { x = 34 y = 300 }
+				orientation = "UPPER_LEFT"
+			}		
+			
+			iconType = {
+				name = "mod_institution_spread_icon"
+				spriteType = "GFX_institution_spread_icon"
+				position = { x= 40 y = 40 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "mod_institution_spread"
+				position = { x = 96 y = 50 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 432
+				maxHeight = 64
+				format = left
+				text = "Institution Spread: +70%"
+			}
+			
+			iconType = {
+				name ="mod_embracement_cost_icon"
+				spriteType = "GFX_institution_embracement_cost_icon"
+				position = { x= 542 y = 40 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "mod_embracement_cost"
+				position = { x = 598 y = 50 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 432
+				maxHeight = 64
+				format = left
+				text = "Embracement Cost: -20%"
+			}
+			
+			guiButtonType =
+			{
+				name ="embrace_button"
+				quadTextureSprite= "GFX_standard_button_105"
+				position = { x = 756 y = 616 }
+				Orientation = "UPPER_LEFT"
+				buttonText = "BUTTON_EMBRACE"
+				buttonFont = "vic_18"
+			}			
+			
+			instantTextBoxType = {
+				name = "name"
+				position = { x = 56 y = 312 }
+				textureFile = ""
+				font = "vic_29s"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 460
+				maxHeight = 64
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "when_embraced_label"
+				position = { x = 56 y = 380 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 400
+				maxHeight = 64
+				format = left
+				text = "WHEN_EMBRACED"
+			}
+			
+			instantTextBoxType = {
+				name = "when_embraced"
+				position = { x = 72 y = 432 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 580
+				maxHeight = 64
+				format = left
+			}
+			
+			iconType = {
+				name = "country_progress"
+				spriteType = "GFX_institution_progress"
+				position = { x = 78 y = 628 }
+			}
+			
+			iconType = {
+				name = "country_progress_frame"
+				spriteType = "GFX_institution_progress_frame"
+				position = { x = 52 y = 620 }
+			}			
+			
+			instantTextBoxType = {
+				name = "country_progress_label"
+				position = { x = 56 y = 568 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 400
+				maxHeight = 52
+				format = left
+				fixedsize = yes
+			}
+			
+			instantTextBoxType = {
+				name = "origin"
+				position = { x = 528 y = 316 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				text = "Origin: North of the Wall"	
+				maxWidth = 472
+				maxHeight = 64
+				format = right
+				fixedsize = yes
+			}
+			
+			guiButtonType =
+			{
+				name ="goto_origin"
+				quadTextureSprite= "GFX_standard_button_105"
+				position = { x = 800 y = 370 }
+				Orientation = "UPPER_LEFT"
+				buttonText = "GOTO_GOTO"
+				buttonFont = "vic_18"
+			} 
+
+			iconType = {
+				name = "spread_info_icon"
+				spriteType = "GFX_institution_spread_conditions"
+				position = { x = 572 y = 316 }
+			}
+			
+			instantTextBoxType = {
+				name = "embrace_cost"
+				position = { x = 280 y = 620 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 240
+				maxHeight = 64
+				format = center
+				text = "4322 ¤"
+			}
+			
+			instantTextBoxType = {
+				name = "penalty"
+				position = { x = 72 y = 520 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 8 y = 8}	
+				maxWidth = 600
+				maxHeight = 64
+				format = left
+			}
+			
+			guiButtonType =
+			{
+				name ="back_button"
+				quadTextureSprite= "GFX_standard_button_105"
+				position = { x = 428 y = 740 }
+				Orientation = "UPPER_LEFT"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				shortcut = "n"
+			}
+		}
+	}
+	
+	### ------- Administrative Tech Research -------		
+	windowType = {
+		name = "countrytechnologyview_table_adm_tech"
+		position = { x=0 y=0 }	
+		size = { x=1072 y=296 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		
+		instantTextBoxType = {
+			name = "tech"
+			position = { x = 168 y = 64 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "adm_tech"	
+			maxWidth = 512
+			maxHeight = 64
+			format = left
+		}	
+		
+		iconType =
+		{
+			name ="current_techlevel_bg"
+			spriteType = "GFX_prov_modifier_bg"
+			position = { x = 110 y = 54 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name = "current_tech_level"
+			position = { x = 104 y = 58 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			text = "999"	
+			maxWidth = 60
+			maxHeight = 64
+			format = centre
+		}
+		
+		guiButtonType =
+		{
+			name ="tech_research"
+			quadTextureSprite= "GFX_technology_view_research"
+			position = { x= 50 y = 106 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"	
+		}
+
+		iconType =
+		{
+			name ="tech_icon"
+			spriteType = "GFX_icon_powers_administrative_tech"
+			position = { x= 56 y = 58 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_adm"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_research_name"
+			position = { x = 70 y =120 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Research Galloop Tactic"	
+			maxWidth = 330
+			maxHeight = 84
+			format = left
+			alwaystransparent = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "tech_researchitems"
+			position = { x = 74 y = 210 }
+			size = { x = 350 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 2
+		}		
+		
+		
+		
+		iconType =
+		{
+			name ="power_progress"
+			spriteType = "GFX_technologyView_progressbar"
+			position = { x= 82 y = 292 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_adm"
+		}
+
+		iconType =
+		{
+			name ="power_progress_frame"
+			spriteType = "GFX_technologyView_progress_frame_long"
+			position = { x= 66 y = 284 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		
+		iconType =
+		{
+			name ="time_icon"
+			spriteType = "GFX_icon_time"
+			position = { x = 804 y = 56 }
+			Orientation = "UPPER_LEFT"
+		}				
+		
+		instantTextBoxType = {
+			name = "time_value"
+			position = { x = 860 y = 58 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			text = "+100%"	
+			maxWidth = 128
+			maxHeight = 64
+			format = left
+		}	
+		
+		
+		### ------- Administrative Tech Goverment/idea groups/production efficiency -------	
+		
+		
+		
+		iconType =
+		{
+			name ="tech_gov_monarchy_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock_big"
+			position = { x= 406 y = 112 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+			
+		}
+		
+		iconType =
+		{
+			name ="tech_gov_monarchy"
+			spriteType = "GFX_government_type_icon"
+			position = { x= 414 y = 122 }
+			Orientation = "UPPER_LEFT"
+			frame = 5
+		}
+
+		instantTextBoxType = {
+			name = "tech_gov_monarchy_name"
+			position = { x = 478 y = 128 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}
+		
+
+		iconType =
+		{
+			name ="tech_gov_republic_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock_big"
+			position = { x= 406 y = 174 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+		
+		}
+		
+		iconType =
+		{
+			name ="tech_gov_republic"
+			spriteType = "GFX_government_type_icon"
+			position = { x= 412 y = 184 }
+			Orientation = "UPPER_LEFT"
+			frame = 4
+		}
+
+		instantTextBoxType = {
+			name = "tech_gov_republic_name"
+			position = { x = 478 y = 192 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}
+		
+
+		iconType =
+		{
+			name ="tech_gov_tribal_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock_big"
+			position = { x= 406 y = 236 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+
+		}
+		
+		iconType =
+		{
+			name ="tech_gov_tribal"
+			spriteType = "GFX_government_type_icon"
+			position = { x= 414 y = 250 }
+			Orientation = "UPPER_LEFT"
+			frame = 2
+		}
+
+		instantTextBoxType = {
+			name = "tech_gov_tribal_name"
+			position = { x = 478 y = 256 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = ""	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}	
+		
+		iconType =
+		{
+			name ="tech_allowed_idea_groups"
+			spriteType = "GFX_icon_number_of_allowed_idea_groups"
+			position = { x= 956 y = 134 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_ideagroup"
+		}
+
+		instantTextBoxType = {
+			name = "tech_allowed_idea_groups_value"
+			position = { x = 984 y = 136 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "3"	
+			maxWidth = 84
+			maxHeight = 64
+			format = right
+			
+		}
+
+		iconType =
+		{
+			name ="tech_production_efficiency"
+			spriteType = "GFX_icon_production_efficiency"
+			position = { x= 960 y = 194 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tech_production_efficiency_value"
+			position = { x = 992 y = 196 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "3"	
+			maxWidth = 84
+			maxHeight = 64
+			format = right
+		}	
+		
+		iconType =
+		{
+			name ="tech_administrative_efficiency"
+			spriteType = "GFX_icon_administrative_efficiency"
+			position = { x= 816 y = 130 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			hint_tag = "hint_administrative_efficiency"
+		}
+
+		instantTextBoxType = {
+			name = "tech_administrative_efficiency_value"
+			position = { x = 860 y = 136 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "x%"	
+			maxWidth = 84
+			maxHeight = 64
+			format = right
+		}			
+
+		iconType =
+		{
+			name ="tech_development_efficiency"
+			spriteType = "GFX_development_icon"
+			position = { x= 816 y = 194 }
+			Orientation = "UPPER_LEFT"
+			scale = 1
+		}
+
+		instantTextBoxType = {
+			name = "tech_development_efficiency_value"
+			position = { x = 860 y = 196 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "x%"	
+			maxWidth = 84
+			maxHeight = 64
+			format = right
+		}			
+		iconType =
+		{
+			name = "buildings"
+			spriteType = "GFX_technologyView_show_buildings"
+			position = { x= 816 y = 248 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.9
+		}	
+		
+		iconType =
+		{
+			name ="tech_enable"
+			spriteType = "GFX_unitpanel_forced_march"
+			position = { x= 880 y = 260 }			
+			Orientation = "UPPER_LEFT"
+		}					
+		
+		
+		iconType =
+		{
+			name ="tech_governing_capacity"
+			spriteType = "GFX_icon_states"
+			position = { x= 956 y = 250 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name = "tech_governing_capacity_value"
+			position = { x = 984 y = 250 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "3"	
+			maxWidth = 84
+			maxHeight = 64
+			format = right
+			
+		}
+
+		
+	}
+	
+	
+	### ------- Diplomatic Tech Research -------		
+	windowType = {
+		name = "countrytechnologyview_table_dip_tech"
+		position = { x=0 y=0 }	
+		size = { x=1072 y=296 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		
+		instantTextBoxType = {
+			name = "tech"
+			position = { x = 168 y = 26 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "dip_tech"	
+			maxWidth = 512
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType =
+		{
+			name ="current_techlevel_bg"
+			spriteType = "GFX_prov_modifier_bg"
+			position = { x = 110 y = 16 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name = "current_tech_level"
+			position = { x = 104 y = 20 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			text = "999"	
+			maxWidth = 60
+			maxHeight = 64
+			format = centre
+		}		
+		
+		guiButtonType =
+		{
+			name ="tech_research"
+			quadTextureSprite= "GFX_technology_view_research"
+			position = { x= 50 y = 84 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"	
+		}
+
+		iconType =
+		{
+			name ="diplo_tech_icon"
+			spriteType = "GFX_icon_powers_diplomatic_tech"
+			position = { x= 56 y = 26 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_dip"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_research_name"
+			position = { x = 70 y =98 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Research Galloop Tactic"	
+			maxWidth = 330
+			maxHeight = 84
+			format = left
+			alwaystransparent = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "tech_researchitems"
+			position = { x = 74 y = 188 }
+			size = { x = 350 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}
+
+		iconType =
+		{
+			name ="power_progress"
+			spriteType = "GFX_technologyView_progressbar"
+			position = { x= 82 y = 276 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_dip"
+		}
+
+		iconType =
+		{
+			name ="power_progress_frame"
+			spriteType = "GFX_technologyView_progress_frame_long"
+			position = { x= 66 y = 268 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="time_icon"
+			spriteType = "GFX_icon_time"
+			position = { x = 804 y = 16 }
+			Orientation = "UPPER_LEFT"
+		}				
+		
+		instantTextBoxType = {
+			name = "time_value"
+			position = { x = 860 y = 18 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			text = "+100%"	
+			maxWidth = 128
+			maxHeight = 64
+			format = left
+		}			
+		
+		### ------- Military Tech Units/Morale -------	
+		
+		iconType =
+		{
+			name ="tech_nav_heavy_ship_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock"
+			position = { x= 406 y = 68 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+
+
+		}
+		
+		iconType =
+		{
+			name ="tech_nav_heavy_ship"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 412 y = 78 }
+			Orientation = "UPPER_LEFT"
+			frame = 4
+			scale = 0.7
+			hint_tag = "hint_heavyships"	
+			
+		}
+
+		instantTextBoxType = {
+			name = "tech_nav_heavy_ship_name"
+			position = { x = 474 y = 86 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Big ship"	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}
+		
+		
+		
+		iconType =
+		{
+			name ="tech_nav_light_ship_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock"
+			position = { x= 406 y = 128 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+
+			
+		}
+
+		iconType =
+		{
+			name ="tech_nav_light_ship"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 410 y = 136 }
+			Orientation = "UPPER_LEFT"
+			frame = 5
+			scale = 0.7
+			hint_tag = "hint_lightships"	
+		}
+
+		instantTextBoxType = {
+			name = "tech_nav_light_ship_name"
+			position = { x = 474 y = 146 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Light ship"	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}
+
+	
+		
+		
+		
+		iconType =
+		{
+			name ="tech_nav_galley_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock"
+			position = { x= 406 y = 186 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+			
+		}
+		
+		iconType =
+		{
+			name ="tech_nav_galley"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 410 y = 190 }
+			Orientation = "UPPER_LEFT"
+			frame = 6
+			scale = 0.7
+			hint_tag = "hint_galleys"		
+		}
+
+		instantTextBoxType = {
+			name = "tech_nav_galley_name"
+			position = { x = 474 y = 204 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Galley"	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}		
+		
+		
+		
+		
+		iconType =
+		{
+			name ="tech_nav_transport_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock"
+			position = { x= 406 y = 244 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+		
+		}
+
+		iconType =
+		{
+			name ="tech_nav_transport"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 410 y = 248 }
+			Orientation = "UPPER_LEFT"
+			frame = 7
+			scale = 0.7	
+			hint_tag = "hint_transports"
+		}
+
+		instantTextBoxType = {
+			name = "tech_nav_transport_name"
+			position = { x = 474 y = 262 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Transport"	
+			maxWidth = 320
+			maxHeight = 64
+			format = left
+		}		
+		
+		iconType =
+		{
+			name ="tech_enable"
+			spriteType = "GFX_spy_actions_icon"
+			position = { x= 880 y = 260 }
+			Orientation = "UPPER_LEFT"
+		}
+
+
+		iconType =
+		{
+			name ="tech_accepted_cultures"
+			spriteType = "GFX_accepted_cultures"
+			position = { x= 956 y = 260 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tech_accepted_cultures_value"
+			position = { x = 1000 y = 260 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "x%"	
+			maxWidth = 84
+			maxHeight = 64
+			format = right
+		}			
+
+		iconType =
+		{
+			name = "tech_engagement"
+			spriteType = "GFX_engagement_width_icon"
+			position = { x= 660 y = 260 } 
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_combatwidth"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_engagement_value"
+			position = { x = 704 y = 260 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 88
+			maxHeight = 64
+			format = right
+		}			
+
+		
+		iconType =
+		{
+			name ="tech_naval_morale"
+			spriteType = "GFX_icon_naval_moral"
+			position = {  x= 814 y = 196 } 
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "tech_naval_morale_value"
+			position = { x = 852 y = 204 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 96
+			maxHeight = 64
+			format = right
+		}	
+		
+		iconType =
+		{
+			name ="tech_maintenance"
+			spriteType = "GFX_icon_maintenance"
+			position = { x= 822 y = 144 } 
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tech_maintenance_value"
+			position = { x = 852 y = 148 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 96
+			maxHeight = 64
+			format = right
+		}
+
+		iconType =
+		{
+			name ="tech_trade_efficiency"
+			spriteType = "GFX_icon_trade_efficiency"
+			position = { x= 820 y = 88 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tech_trade_efficiency_value"
+			position = { x = 852 y = 88 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 96
+			maxHeight = 64
+			format = right
+		}
+
+		iconType =
+		{
+			name ="tech_trade_range"
+			spriteType = "GFX_icon_trade_range"
+			position = { x= 956 y = 88 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tech_trade_range_value"
+			position = { x = 984 y = 88 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 96
+			maxHeight = 64
+			format = right
+		}
+
+		iconType =
+		{
+			name = "tech_range"
+			spriteType = "GFX_icon_tech_range"
+			position = { x= 956 y = 148}
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_colonialrange"
+		}
+
+		instantTextBoxType = {
+			name = "tech_range_value"
+			position = { x = 984 y = 148 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 96
+			maxHeight = 64
+			format = right
+		}
+		
+		iconType =
+		{
+			name = "tech_colonial_growth"
+			spriteType = "GFX_colonial_growth"
+			position = { x= 948 y = 196 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_settlergrowth"
+			scale = 0.5
+		}	
+
+		instantTextBoxType = {
+			name = "tech_colonial_growth_value"
+			position = { x = 984 y = 204 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "25"	
+			maxWidth = 96
+			maxHeight = 64
+			format = right
+		}			
+		
+		iconType =
+		{
+			name = "buildings"
+			spriteType = "GFX_technologyView_show_buildings"
+			position = { x= 816 y = 256 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.9
+			hint_tag = "hint_buildings"
+		}						
+	}
+	
+	### ------- Military Tech Research -------		
+	windowType = {
+		name = "countrytechnologyview_table_mil_tech"
+		position = { x=0 y=0 }	
+		size = { x=1072 y=296 }
+		moveable = 0
+		Orientation = "UPPER_LEFT"
+		
+		instantTextBoxType = {
+			name = "tech"
+			position = { x = 168 y = 24 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "mil_tech"	
+			maxWidth = 512
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType =
+		{
+			name ="current_techlevel_bg"
+			spriteType = "GFX_prov_modifier_bg"
+			position = { x = 110 y = 14 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name = "current_tech_level"
+			position = { x = 104 y = 18 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			text = "999"	
+			maxWidth = 60
+			maxHeight = 64
+			format = centre
+		}
+		
+		guiButtonType =
+		{
+			name ="tech_research"
+			quadTextureSprite= "GFX_technology_view_research"
+			position = { x= 50 y = 82 }
+			Orientation = "UPPER_LEFT"
+			buttonFont = "vic_18"	
+		}
+		
+		iconType =
+		{
+			name ="tech_icon"
+			spriteType = "GFX_icon_powers_military_tech"
+			position = { x= 56 y = 18 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_mil"
+		}
+
+		instantTextBoxType = {
+			name = "tech_research_name"
+			position = { x = 70 y =96 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Research Galloop Tactic (Military 15)"	
+			maxWidth = 330
+			maxHeight = 84
+			format = left
+			alwaystransparent = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "tech_researchitems"
+			position = { x = 74 y = 184 }
+			size = { x = 350 y = 72 }
+			Orientation = "UPPER_LEFT"
+			format = left
+			spacing = 0
+		}	
+		
+		iconType =
+		{
+			name ="power_progress"
+			spriteType = "GFX_technologyView_progressbar"
+			position = { x= 82 y = 272 }
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_mil"
+		}
+
+		iconType =
+		{
+			name ="power_progress_frame"
+			spriteType = "GFX_technologyView_progress_frame_long"
+			position = { x= 66 y = 264 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType =
+		{
+			name ="time_icon"
+			spriteType = "GFX_icon_time"
+			position = { x = 804 y = 16 }
+			Orientation = "UPPER_LEFT"
+		}				
+		
+		instantTextBoxType = {
+			name = "time_value"
+			position = { x = 860 y = 18 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 8 y = 8}	
+			text = "+100%"	
+			maxWidth = 128
+			maxHeight = 64
+			format = left
+		}			
+		
+		### ------- Military Tech Units/Morale -------	
+		
+		
+		
+		iconType =
+		{
+			name ="tech_unit_infantry_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock_big"
+			position = { x= 406 y = 66}
+			Orientation = "UPPER_LEFT"
+			frame = 1
+
+		}
+		
+		iconType =
+		{
+			name ="tech_unit_infantry"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 412 y = 76 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+			scale = 0.7
+		}
+
+		instantTextBoxType = {
+			name = "tech_unit_infantry_name"
+			position = { x = 476 y = 68 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Maurician"	
+			maxWidth = 328
+			maxHeight = 64
+			format = left
+			fixedsize = yes
+			truncate = yes
+		}
+		
+		iconType = {
+			name ="tech_inf_fire"
+			spriteType = "GFX_icon_fire"
+			position = { x= 482 y = 100 }
+			scale = 0.85
+			hint_tag = "hint_firemod"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_inf_fire_value"
+			position = { x = 528 y = 104 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "+2"	
+			maxWidth = 96
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType = {
+			name ="tech_inf_shock"
+			spriteType = "GFX_icon_shock"
+			position = { x= 628 y = 102 }
+			scale = 0.85
+			hint_tag = "hint_shockmod"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_inf_shock_value"
+			position = { x = 672 y = 104 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "+2"	
+			maxWidth = 96
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType =
+		{
+			name ="tech_unit_cavalry_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock_big"
+			position = { x= 406 y = 144 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+		
+		}
+
+		iconType =
+		{
+			name ="tech_unit_cavalry"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 412 y = 154 }
+			Orientation = "UPPER_LEFT"
+			frame = 2
+			scale = 0.7
+		}
+
+		instantTextBoxType = {
+			name = "tech_unit_cavalry_name"
+			position = { x = 476 y = 146 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Knights"	
+			maxWidth = 328
+			maxHeight = 64
+			format = left
+			fixedsize = yes
+			truncate = yes
+		}
+
+		iconType = {
+			name ="tech_cav_fire"
+			spriteType = "GFX_icon_fire"
+			position = { x= 482 y = 178 }
+			scale = 0.85
+			hint_tag = "hint_firemod"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_cav_fire_value"
+			position = { x = 528 y = 182 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "+2"	
+			maxWidth = 96
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType = {
+			name ="tech_cav_shock"
+			spriteType = "GFX_icon_shock"
+			position = { x= 628 y = 180 }
+			scale = 0.85
+			hint_tag = "hint_shockmod"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_cav_shock_value"
+			position = { x = 672 y = 182 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "+2"	
+			maxWidth = 96
+			maxHeight = 64
+			format = left
+		}				
+		
+		
+		iconType =
+		{
+			name ="tech_unit_artillery_unlock"
+			spriteType = "GFX_technology_view_unitnextunlock_big"
+			position = { x= 406 y = 222 }
+			Orientation = "UPPER_LEFT"
+			frame = 1
+		
+		}
+		
+		iconType =
+		{
+			name ="tech_unit_artillery"
+			spriteType = "GFX_unit_types_strip_mil_view"
+			position = { x= 412 y = 228 }
+			Orientation = "UPPER_LEFT"
+			frame = 3
+			scale = 0.7
+		}
+
+		instantTextBoxType = {
+			name = "tech_unit_artillery_name"
+			position = { x = 476 y = 224 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "Bronze guns"	
+			maxWidth = 328
+			maxHeight = 64
+			format = left
+			fixedsize = yes
+			truncate = yes
+		}		
+		
+		iconType = {
+			name ="tech_art_fire"
+			spriteType = "GFX_icon_fire"
+			position = { x= 482 y = 256 }
+			scale = 0.85
+			hint_tag = "hint_firemod"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_art_fire_value"
+			position = { x = 528 y = 262 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "+2"	
+			maxWidth = 96
+			maxHeight = 64
+			format = left
+		}
+		
+		iconType = {
+			name ="tech_art_shock"
+			spriteType = "GFX_icon_shock"
+			position = { x= 628 y = 256 }
+			scale = 0.85
+			hint_tag = "hint_shockmod"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_art_shock_value"
+			position = { x = 672 y = 264 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "+2"	
+			maxWidth = 96
+			maxHeight = 64
+			format = left
+		}				
+				
+		
+		iconType =
+		{
+			name ="tech_land_morale"
+			spriteType = "GFX_icon_land_moral"
+			#position = { x= 800 y = 236 }
+			position = { x= 812 y = 156 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}
+
+		instantTextBoxType = {
+			name = "tech_land_morale_value"
+			#position = { x = 840 y = 246 } 
+			position = { x = 840 y = 168 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 104
+			maxHeight = 50
+			format = right
+
+		}
+
+		iconType =
+		{
+			name = "tech_supply_limit"
+			spriteType = "GFX_icon_supply_limit"
+			#position = { x= 804 y = 162 }
+			position = { x= 816 y = 224 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name = "tech_supply_limit_value"
+			#position = { x = 800 y = 168 }
+			position = { x = 840 y = 228 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 104
+			maxHeight = 50
+			format = right
+		}			
+		
+		iconType =
+		{
+			name = "tech_military_tactics"
+			spriteType = "GFX_icon_military_tactics"
+			#position = { x= 804 y = 94 } 
+			position = { x= 954 y = 108 } 
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_miltac"
+		}
+
+		instantTextBoxType = {
+			name = "tech_military_tactics_value"
+			#position = {  x = 820 y = 92 } 
+			position = { x = 986 y = 108 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 88
+			maxHeight = 64
+			format = right
+		}			
+		
+		iconType =
+		{
+			name = "tech_combatwidth"
+			spriteType = "GFX_icon_combat_width"
+			position = { x= 952 y = 168 } 
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_combatwidth"
+		}
+		
+		instantTextBoxType = {
+			name = "tech_combatwidth_value"
+			position = { x = 984 y = 168 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 88
+			maxHeight = 64
+			format = right
+		}			
+	
+		iconType =
+		{
+			name = "tech_maneuver"
+			spriteType = "GFX_icon_maneuver"
+			#position = { x= 938 y = 96 } 
+			position = { x= 816 y = 110 } 
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_maneuver"
+		}
+
+		instantTextBoxType = {
+			name = "tech_maneuver_value"
+			#position = { x = 936 y = 92 } 
+			position = {  x = 840 y = 108 } 
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 8 y = 8}	
+			text = "+2.5"	
+			maxWidth = 108
+			maxHeight = 50
+			format = right
+		}	
+
+		iconType =
+		{
+			name = "buildings"
+			spriteType = "GFX_technologyView_show_buildings"
+			position = { x= 944 y = 224 }
+			scale = 0.9
+			Orientation = "UPPER_LEFT"
+			hint_tag = "hint_buildings"
+		}		
+	}	
+	
+	################################################################################################
+	### --- Tech Research Mil Items
+	
+	windowType = {
+		name = "countrytechnologyview_researchunititem"
+		backGround =""
+		position = { x=0 y=6 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_unit_types_strip_mil_center_view"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.7
+		}	
+	}	
+	
+	windowType = {
+		name = "countrytechnologyview_researchbuildingitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_building_default"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.6
+		}		
+	}		
+	
+	windowType = {
+		name = "countrytechnologyview_researchmiltacitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_military_tactics"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			#scale = 0.5
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchlandmoraleitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_land_moral"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}		
+	}
+	
+	windowType = {
+		name = "countrytechnologyview_researchsupplylimititem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_supply_limit"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchnavalmoraleitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_naval_moral"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchnavalmaintenanceitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_maintenance"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchtradeefficiencyitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_trade_efficiency"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchtraderangeitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_trade_range"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchcolonialrangeitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_tech_range"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+	
+	windowType = {
+		name = "countrytechnologyview_researchcolonialgrowthitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_colonial_growth"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}		
+	}		
+
+	windowType = {
+		name = "countrytechnologyview_researchsupportrebelsitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_diplomacy_spy_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+	
+
+	windowType = {
+		name = "countrytechnologyview_enable_flag"
+		backGround =""
+		position = { x=4 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_tech_may_study_technology"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.6
+		}		
+	}
+
+
+	windowType = {
+		name = "countrytechnologyview_researchgovernmentitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_government_type_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchallowedideagroupsitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_tech_idea_unlocked"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchmaxstatessitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_states"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchproductionefficiencyitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_production_efficiency"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+	
+	windowType = {
+		name = "countrytechnologyview_researchadministrativeefficiencyitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_administrative_efficiency"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+		}		
+	}	
+
+
+	windowType = {
+		name = "countrytechnologyview_researchdevelopmentefficiencyitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_development_efficiency"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchacceptedculturesitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_accepted_cultures"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+
+
+	windowType = {
+		name = "countrytechnologyview_researchcombatwidthitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_combat_width"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	windowType = {
+		name = "countrytechnologyview_researchnavalengagementwidthitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_engagement_width_icon"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}
+
+	
+	windowType = {
+		name = "countrytechnologyview_researchfireitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_fire"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}	
+	
+	windowType = {
+		name = "countrytechnologyview_researchshockitem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_shock"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}	
+
+	windowType = {
+		name = "countrytechnologyview_researchmaneuveritem"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=64 y=64 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		iconType =
+		{
+			name ="item_icon"
+			spriteType = "GFX_icon_maneuver"
+			position = { x= 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}		
+	}	
+
+	windowType = {
+		name = "countrytechnologyview_institution"
+		backGround =""
+		position = { x=0 y=0 }	
+		size = { x=400 y=128 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+
+		guiButtonType =
+		{
+			name ="item_button"
+			spriteType = "GFX_icon_maneuver"
+			position = { x= -10 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}
