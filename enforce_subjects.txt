@@ -58,4 +58,8 @@ every_subject_country = {
         estate = estate_dhimmi
         loyalty = 100
     }
+    add_estate_loyalty = {
+        estate = estate_jains
+        loyalty = 100
+    }
 }

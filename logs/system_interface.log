@@ -19,7 +19,3 @@
 [fixedwindow.cpp:666]:  Illegal object boundaries with x: 925 and y: 115 in a window with size x: 916 and y: 908
 [fixedwindow.cpp:666]:  Illegal object boundaries with x: 199 and y: 840 in a window with size x: 548 and y: 892
 [fixedwindow.cpp:666]:  Illegal object boundaries with x: 150 and y: 640 in a window with size x: 397 and y: 681
-[fixedwindow.cpp:666]:  Illegal object boundaries with x: 22 and y: 294 in a window with size x: 192 and y: 345
-[fixedwindow.cpp:666]:  Illegal object boundaries with x: 308 and y: 843 in a window with size x: 762 and y: 883
-[fixedwindow.cpp:666]:  Illegal object boundaries with x: 80 and y: 843 in a window with size x: 762 and y: 883
-[fixedwindow.cpp:666]:  Illegal object boundaries with x: 480 and y: 843 in a window with size x: 762 and y: 883

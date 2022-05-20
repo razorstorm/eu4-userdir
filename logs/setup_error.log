@@ -1,943 +1,201 @@
-[gamestate.cpp:6368]: 1549.08.27 Holstein has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Albania has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Athens has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bosnia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Byzantium has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Croatia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Cyprus has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Epirus has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Moldavia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Naxos has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ragusa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Serbia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Wallachia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Nitra has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Clanricarde has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Leinster has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Thomond has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ulster has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Desmond has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sligo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kildare has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ormond has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Offaly has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Munster has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 The Isles has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 La Plata has no primary culture specified.
-[gamestate.cpp:6359]: 1549.08.27 Louisiana has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Danzig has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Lithuania has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Livonian Order has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mazovia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ducal Prussia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Curonia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Teutonic Order has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Odoyev has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Alençon has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Strasbourg has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Armagnac has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bourbonnais has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Brittany has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Foix has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Nevers has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Orleans has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Picardy has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Provence has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Anhalt has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ansbach has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Frankfurt has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Lorraine has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Magdeburg has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mecklenburg has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Saxony has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Trier has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Aragon has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Granada has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Navarra has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mantua has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Urbino has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Montferrat has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Lucca has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hainaut has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Luxembourg has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Crimea has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kazan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Novgorod has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Pskov has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tver has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yaroslavl has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Perm has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Theodoro has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Beloozero has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Rostov has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Haasa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Anizah has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Soran has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Fadl has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hejaz has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mikhlaf has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Najd has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Oman has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Rassids has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Shammar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Shirvan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yas has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hisn Kayfa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bitlis has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Candar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Dulkadir has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Karaman has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ramazan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Avaria has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Karabakh has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mushasha has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tunis has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tafilalt has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sus has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tlemcen has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Touggourt has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Djerid has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Fezzan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mzab has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Salé has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Marrakesh has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Khorasan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Qara Qoyunlu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Gilan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Imereti has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mazandaran has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Luristan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sistan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Biapas has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Fars has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Basra has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Maregheh has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ajam has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Aztec has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Zapotec has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Funj has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Loango has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jolof has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sofala has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mombasa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mogadishu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ennarea has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Wadai has no primary culture specified.
-[gamestate.cpp:6359]: 1549.08.27 Darfur has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Semien has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Beja has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Damot has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hadiya has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Janjiro has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tyo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yaka has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bunyoro has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Maravi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Lundu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tumbuka has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Makua has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Butua has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Imerina has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Betsimisaraka has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mahafaly has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Champa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Chagatai has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Dai Viet has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Amago has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Date has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hojo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hosokawa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hatakeyama has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mori has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Otomo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ouchi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Shiba has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Shimazu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Takeda has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tokugawa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Uesugi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Nanbu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kitabatake has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ando has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Chiba has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Isshiki has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kikuchi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kono has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ogasawara has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Shoni has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Satake has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Toki has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Utsunomiya has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tsutsui has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mongolia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Khmer has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Majapahit-Sunda has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Makassar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sulu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Taungu has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Yuan has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 So has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Solon has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Nanai has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Orochoni has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Xibe has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Haixi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jianzhou has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Korchin has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kara Del has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yarkand has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Sarig Yogir has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Sarig Yogir has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tsang has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Kham has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Kham has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 U has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mysore has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Madurai has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Marwar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mewar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jangladesh has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Garha has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Gwalior has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Dhundhar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Khandesh has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Venad has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Calicut has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bastar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bundelkhand has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kangra has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kutch has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kochin has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Manipur has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hadoti has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Baghelkhand has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jaffna has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Garhwal has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jharkhand has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tirhut has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Rewa Kantha has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jhalavad has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Junagarh has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Porbandar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kalinjar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kalpi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sambalpur has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Patna has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kalahandi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kandy has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Telingana has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kolathunad has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Dang has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Gorkha has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Jumla has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sirmur has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Abenaki has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Comanche has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Fox has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Osage has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Pima has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Potawatomi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Susquehannock has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Air has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Fulo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mossi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Timbuktu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Macina has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Zazzau has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ndongo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Hsenwi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kedah has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mong Mao has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mong Nai has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Prome has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Buryatia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Arapaho has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Colima has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Chinook has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Cocomes has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Haida has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Itza has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kiche has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kiowa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mixtec has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tarascan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tlapanec has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tlaxcala has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Totonac has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Xiu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Demak has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Sunda has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kutai has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Luwu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ternate has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Madyas has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Pangasinan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tondo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Maynila has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Cebu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Butuan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Calchaqui has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Colla has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Charca has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Matlatzinca has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Coixtlahuaca has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Teotitlan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Xalisco has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Huastec has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Otomi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yokotan has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tzotzil has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kaqchikel has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Chactemal has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Zia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Chorti has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Miskito has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tonala has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yokuts has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Passau has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bregenz has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bayreuth has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bologna has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Saluzzo has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Wolgast has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Stettin has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Goslar has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Cilli has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Mulhouse has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Bone has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Berau has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Barus has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Larrakia has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Yanuwa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kamilaroi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Palawa has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Tainui has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ngati Kahungunu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ngati Ranginui has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ngapuhi has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Maui has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 O'ahu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Kaua'i has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Vanua Levu has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Synthetics has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Synthetics has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Macaristan Kraliyet-i has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Macaristan Kraliyet-i has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Gran Colombia has no primary culture specified.
-[gamestate.cpp:6362]: 1549.08.27 Gran Colombia has no government type specified.
-[gamestate.cpp:6365]: 1549.08.27 Gran Colombia has no technology group specified.
-[gamestate.cpp:6368]: 1549.08.27 Gran Colombia has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Daehan has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Nanyungui has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Ejin has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Gansu has no religion specified.
-[gamestate.cpp:6368]: 1549.08.27 Champasak has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Karluk has no primary culture specified.
-[gamestate.cpp:6359]: 1549.08.27 Oroch has no primary culture specified.
-[gamestate.cpp:6359]: 1549.08.27 Yugur has no primary culture specified.
-[gamestate.cpp:6359]: 1549.08.27 Amdo has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Amdo has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Jomon has no primary culture specified.
-[gamestate.cpp:6362]: 1549.08.27 Jomon has no government type specified.
-[gamestate.cpp:6365]: 1549.08.27 Jomon has no technology group specified.
-[gamestate.cpp:6368]: 1549.08.27 Jomon has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Govenerate of East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Govenerate of East Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Govenerate of Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Govenerate of Indochina has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Dutch East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Dutch East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 First Govenerate of the East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 First Govenerate of the East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Second Govenerate of the East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Second Govenerate of the East Indies has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British Raj has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British Raj has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 First Govenerate of India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 First Govenerate of India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Second Govenerate of India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Second Govenerate of India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Third Govenerate of India has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Third Govenerate of India has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Govenerate of South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Govenerate of South Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Govenerate of West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Govenerate of West Africa has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 British Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 British Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Germanic Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Germanic Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Iberian Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Iberian Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 French Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 French Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Christian Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Christian Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Muslim Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Muslim Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Spanish Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Spanish Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 First Govenerate of the Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 First Govenerate of the Philippines has no religion specified.
-[gamestate.cpp:6359]: 1549.08.27 Second Govenerate of the Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1549.08.27 Second Govenerate of the Philippines has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Holstein has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Albania has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Athens has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bosnia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Byzantium has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Croatia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Cyprus has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Epirus has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Moldavia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Naxos has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ragusa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Serbia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Wallachia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Nitra has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Clanricarde has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Leinster has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Thomond has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ulster has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Desmond has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sligo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kildare has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ormond has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tyrconnell has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Offaly has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Munster has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 The Isles has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 La Plata has no primary culture specified.
-[gamestate.cpp:6359]: 1567.04.25 Louisiana has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Danzig has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Lithuania has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Livonian Order has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mazovia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ducal Prussia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Curonia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Teutonic Order has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Odoyev has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Alençon has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Strasbourg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Armagnac has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bourbonnais has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Brittany has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Burgundy has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Foix has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Nevers has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Orleans has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Picardy has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Provence has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Anhalt has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ansbach has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Frankfurt has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Saxe-Lauenburg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Lorraine has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Magdeburg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mecklenburg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 The Palatinate has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Salzburg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Trier has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Wurttemberg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Aragon has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Granada has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Navarra has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ferrara has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mantua has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Savoy has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Urbino has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Montferrat has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Lucca has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hainaut has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Luxembourg has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Crimea has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Georgia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kazan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Novgorod has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Pskov has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tver has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yaroslavl has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Perm has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Theodoro has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Beloozero has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Rostov has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Haasa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Anizah has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ardalan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Soran has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Fadl has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hejaz has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mikhlaf has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Najd has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Oman has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Rassids has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Shammar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Shirvan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yas has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hisn Kayfa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bitlis has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Candar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Dulkadir has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Karaman has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ramazan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Avaria has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Karabakh has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Samtskhe has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mushasha has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tunis has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tafilalt has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sus has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tlemcen has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Touggourt has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Djerid has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Fezzan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mzab has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Salé has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Marrakesh has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Uzbek has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Khorasan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Qara Qoyunlu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Gilan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Imereti has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mazandaran has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Luristan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sistan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Biapas has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Fars has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Basra has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Maregheh has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ajam has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Aztec has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Zapotec has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Benin has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Funj has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Songhai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Loango has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jolof has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sofala has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mombasa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mogadishu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ennarea has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Wadai has no primary culture specified.
-[gamestate.cpp:6359]: 1567.04.25 Darfur has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Pate has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Semien has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Beja has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Damot has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hadiya has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Janjiro has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Dongola has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tyo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kasanje has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yaka has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bunyoro has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Maravi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Lundu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tumbuka has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Makua has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Butua has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Imerina has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Betsimisaraka has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mahafaly has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Champa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Chagatai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Dai Viet has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Amago has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Date has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hojo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hosokawa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hatakeyama has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mori has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Oda has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Otomo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ouchi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Shiba has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Shimazu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Takeda has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tokugawa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Uesugi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yamana has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Nanbu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kitabatake has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ando has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Chiba has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Isshiki has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ito has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kikuchi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kono has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ogasawara has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Shoni has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Satake has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Toki has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Utsunomiya has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tsutsui has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mongolia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Khmer has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Lan Xang has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Majapahit-Sunda has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Makassar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Pattani has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sulu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Taungu has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Yuan has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 So has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Solon has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Nanai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Orochoni has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Xibe has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Haixi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jianzhou has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Korchin has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kara Del has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yarkand has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Sarig Yogir has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Sarig Yogir has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tsang has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Kham has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Kham has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Guge has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 U has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mysore has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Madurai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Marwar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mewar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jangladesh has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Garha has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Gwalior has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Dhundhar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Khandesh has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Venad has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Calicut has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bastar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bundelkhand has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kangra has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kutch has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kochin has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Manipur has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hadoti has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Baghelkhand has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jaffna has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Garhwal has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jharkhand has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tirhut has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Rewa Kantha has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jhalavad has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Junagarh has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Porbandar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kalinjar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kalpi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sambalpur has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Patna has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kalahandi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kandy has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Telingana has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kolathunad has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Dang has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Gorkha has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Jumla has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sirmur has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Abenaki has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Apache has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Comanche has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Fox has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Osage has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Pima has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Potawatomi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Susquehannock has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Air has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Dahomey has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Fulo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kong has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mossi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Timbuktu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Macina has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Zazzau has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ndongo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Hsenwi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kedah has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Muang Phuan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mong Mao has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mong Nai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Prome has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Buryatia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Arapaho has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Colima has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Chinook has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Cocomes has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Haida has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Itza has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kiche has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kiowa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mixtec has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tarascan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tlapanec has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tlaxcala has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Totonac has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Xiu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Demak has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Palembang has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Pasai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Sunda has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kutai has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Luwu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ternate has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Madyas has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Pangasinan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tondo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Maynila has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Cebu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Butuan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Calchaqui has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mapuche has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Muisca has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tupiniquim has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tupinamba has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Colla has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Charca has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Carib has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ichma has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Matlatzinca has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Coixtlahuaca has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Teotitlan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Xalisco has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Huastec has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Otomi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yokotan has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tzotzil has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kaqchikel has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Chactemal has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Zia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Chorti has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Miskito has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tonala has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yokuts has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Passau has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bregenz has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bayreuth has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bologna has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Saluzzo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Wolgast has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Stettin has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Goslar has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Cilli has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Mulhouse has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Brandenburg-Kustrin has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Bone has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Berau has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Barus has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Larrakia has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Yanuwa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kamilaroi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Palawa has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Tainui has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ngati Kahungunu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ngati Ranginui has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ngapuhi has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Maui has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 O'ahu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Kaua'i has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Vanua Levu has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Synthetics has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Synthetics has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Macaristan Kraliyet-i has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Macaristan Kraliyet-i has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Gran Colombia has no primary culture specified.
-[gamestate.cpp:6362]: 1567.04.25 Gran Colombia has no government type specified.
-[gamestate.cpp:6365]: 1567.04.25 Gran Colombia has no technology group specified.
-[gamestate.cpp:6368]: 1567.04.25 Gran Colombia has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Daehan has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Nanyungui has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Ejin has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Gansu has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Champasak has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Karluk has no primary culture specified.
-[gamestate.cpp:6359]: 1567.04.25 Oroch has no primary culture specified.
-[gamestate.cpp:6359]: 1567.04.25 Yugur has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Yugur has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Amdo has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Amdo has no religion specified.
-[gamestate.cpp:6368]: 1567.04.25 Lampung has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Jomon has no primary culture specified.
-[gamestate.cpp:6362]: 1567.04.25 Jomon has no government type specified.
-[gamestate.cpp:6365]: 1567.04.25 Jomon has no technology group specified.
-[gamestate.cpp:6368]: 1567.04.25 Jomon has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Govenerate of East Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Govenerate of East Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Govenerate of Indochina has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Govenerate of Indochina has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Dutch East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Dutch East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 First Govenerate of the East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 First Govenerate of the East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Second Govenerate of the East Indies has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Second Govenerate of the East Indies has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British Raj has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British Raj has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 First Govenerate of India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 First Govenerate of India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Second Govenerate of India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Second Govenerate of India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Third Govenerate of India has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Third Govenerate of India has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Govenerate of South Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Govenerate of South Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Govenerate of West Africa has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Govenerate of West Africa has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 British Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 British Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Germanic Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Germanic Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Iberian Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Iberian Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 French Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 French Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Christian Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Christian Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Muslim Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Muslim Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Spanish Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Spanish Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 First Govenerate of the Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 First Govenerate of the Philippines has no religion specified.
-[gamestate.cpp:6359]: 1567.04.25 Second Govenerate of the Philippines has no primary culture specified.
-[gamestate.cpp:6368]: 1567.04.25 Second Govenerate of the Philippines has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Holstein has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Albania has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Athens has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bosnia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Basileia Rhomaion has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Croatia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Morea has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Naxos has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Serbia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Wallachia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Leinster has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Thomond has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tyrone has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ulster has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tyrconnell has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 The Isles has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Danzig has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mazovia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Alençon has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Armagnac has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Auvergne has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bourbonnais has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Foix has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Nevers has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Orleans has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Anhalt has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Saxe-Lauenburg has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Lorraine has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Navarra has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Siena has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Urbino has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Montferrat has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Holland has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Crimea has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Novgorod has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Pskov has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ryazan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tver has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Yaroslavl has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Theodoro has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Rostov has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Anizah has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ardalan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Dawasir has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Fadl has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Hadramut has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Hejaz has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Makuria has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Medina has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mikhlaf has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Najran has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Oman has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Rassids has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Shammar has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bitlis has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Trebizond has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Avaria has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Karabakh has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Samtskhe has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ardabil has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tafilalt has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Touggourt has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Gilan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Imereti has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Luristan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Cherokee has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mali has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Loango has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Sofala has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Beja has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Damot has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Hadiya has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Janjiro has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Dongola has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tyo has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Lundu has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Butua has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Betsimisaraka has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mahafaly has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Arakan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bali has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Amago has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Chosokabe has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Date has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Hosokawa has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Imagawa has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Otomo has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ouchi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Shiba has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Shimazu has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Takeda has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tokugawa has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Nanbu has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kitabatake has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ando has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Chiba has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Isshiki has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ito has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kikuchi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kono has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ogasawara has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Satake has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Toki has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Utsunomiya has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tsutsui has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Luang Prabang has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Sukhothai has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Haixi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Yarkand has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mysore has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Gujarat has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Madurai has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Marwar has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Orissa has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Garha has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Garjat has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Gwalior has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kashmir has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Venad has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Calicut has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mewat has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bastar has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bundelkhand has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kotte has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kangra has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kochin has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Hadoti has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ladakh has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Baghelkhand has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Jaffna has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Garhwal has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Chanda has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Rewa Kantha has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bishnupur has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Idar has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Palitana has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kalinjar has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kalpi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Patna has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ratanpur has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kalahandi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Keonhjar has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Parlakhimidi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Jeypore has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kandy has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Telingana has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kolathunad has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Dang has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Doti has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kathmandu has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Caddo has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Choctaw has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Lenape has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mahican has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mikmaq has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Miami has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Powhatan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kong has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ndongo has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Ligor has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mong Mao has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mong Pai has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kale has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Hinono'eiteen has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kiche has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Siak has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Pangasinan has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Wanka has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Colla has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Passau has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Opole has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Glogow has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Herzegovina has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Bamberg has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Perugia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Rhade has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Koho has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Viti Levu has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Lau has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Altamaha has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Cofitachequi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Etowah has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Natchez has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Anilco has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Mohawk has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Oneida has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Cayuga has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Seneca has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Osheaga has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Tuscarora has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Peoria has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Kaskaskia has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Penawapskewi has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Welastekwewiyik has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Wampanoag has no religion specified.
+[gamestate.cpp:6359]: 1501.09.28 Synthetics has no primary culture specified.
+[gamestate.cpp:6368]: 1501.09.28 Synthetics has no religion specified.
+[gamestate.cpp:6359]: 1501.09.28 Aegeas has no primary culture specified.
+[gamestate.cpp:6359]: 1501.09.28 Elysian Settlers has no primary culture specified.
+[gamestate.cpp:6368]: 1501.09.28 Elysian Settlers has no religion specified.
+[gamestate.cpp:6368]: 1501.09.28 Helluland has no religion specified.
