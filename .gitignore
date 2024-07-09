@@ -3,7 +3,6 @@ shadercache/
 exceptions/
 gfx/
 .launcher-cache/
-
 cache/
 Screenshots/
 logs/
@@ -11,3 +10,6 @@ crashes/
 Anbennar/
 save\ games/
 save\ games\ old/
+playlists/
+playsets_backup/
+pops_filestorage/
