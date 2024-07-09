@@ -1,5 +1,0 @@
-version="1.0.0"
-name="Third Odyssey: Elysian Units"
-supported_version="1.33.3.*"
-path="F:/Steam/steamapps/workshop/content/236850/2793871810"
-remote_file_id="2793871810"

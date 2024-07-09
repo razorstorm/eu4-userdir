@@ -1,9 +1,0 @@
-name="scale_ui"
-tags={
-	"Graphics"
-	"gui"
-	"Interface"
-}
-picture="thumbnail.png"
-supported_version="1.31.3.*"
-remote_file_id="1095412287"
