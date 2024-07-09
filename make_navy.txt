@@ -1,0 +1,29 @@
+set_variable = {
+    which = myCountingVariable
+    value = 0
+}
+
+while = {
+    limit = {
+        NOT = {
+            check_variable = {
+                which = myCountingVariable
+                value = 10
+            }
+        }
+    }
+    
+
+    41 = {
+        ROOT = {
+            heavy_ship = PREV
+        }
+    }
+
+    add_treasury = 1
+
+    change_variable = {
+        which = myCountingVariable
+        value = 1
+    }
+}

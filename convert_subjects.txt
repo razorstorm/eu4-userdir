@@ -1,0 +1,6 @@
+every_subject_country = {
+    every_owned_province = {
+        change_religion = ROOT
+    }
+}
+

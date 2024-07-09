@@ -1,0 +1,54 @@
+MCH = {
+    change_country_color = { country = PSA }
+}
+
+ANU = {
+    change_country_color = { country = PSA }
+}
+
+SOO = {
+    change_country_color = { country = PSA }
+}
+
+NVK = {
+    change_country_color = { country = PSA }
+}
+
+SOL = {
+    change_country_color = { country = PSA }
+}
+
+KMC = {
+    change_country_color = { country = PSA }
+}
+
+TOK = {
+    change_country_color = { country = PSA }
+}
+
+
+every_subject_country = {
+    change_country_color = { country = PSA }
+}
+
+# ============
+# CIR = {
+#     change_country_color = { country = DTI }
+# }
+# CYP = {
+#     change_country_color = { country = DTI }
+# }
+# KNI = {
+#     change_country_color = { country = DTI }
+# }
+# CRI = {
+#     change_country_color = { country = DTI }
+# }
+# 
+# 
+# EGY = {
+#     change_country_color = { country = ORI }
+# }
+# TUR = {
+#     change_country_color = { country = ORI }
+# }

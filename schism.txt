@@ -1,0 +1,12 @@
+every_country = {
+    limit = {
+        or = {
+            religion = catholic
+            religion = reformed
+            religion = protestant
+        }
+    }
+    country_event = { 
+        id = flavor_byz.2
+    }
+}

@@ -1,0 +1,209 @@
+FRA = {
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_alaska
+                    colonial_region = colonial_canada
+                    colonial_region = colonial_eastern_america
+                    colonial_region = colonial_louisiana
+                    colonial_region = colonial_california
+                    colonial_region = colonial_mexico
+                    colonial_region = colonial_the_carribean
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_la_plata
+                    colonial_region = colonial_brazil
+                    colonial_region = colonial_australia
+                }
+            }
+
+            decolonize = THIS
+        }
+    }
+    every_owned_province = {
+        limit = {
+            OR = {
+                colonial_region = colonial_peru
+                colonial_region = colonial_colombia
+                colonial_region = colonial_alaska
+                colonial_region = colonial_canada
+                colonial_region = colonial_eastern_america
+                colonial_region = colonial_louisiana
+                colonial_region = colonial_california
+                colonial_region = colonial_mexico
+                colonial_region = colonial_the_carribean
+                colonial_region = colonial_colombia
+                colonial_region = colonial_peru
+                colonial_region = colonial_la_plata
+                colonial_region = colonial_brazil
+                colonial_region = colonial_australia
+            }
+        }
+
+        decolonize = THIS
+    }
+}
+
+CAS = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                superregion = andes_superregion
+                superregion = south_america_superregion
+            }
+        }
+        decolonize = THIS
+    }
+}
+
+
+DAN = {
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_alaska
+                    colonial_region = colonial_canada
+                    colonial_region = colonial_eastern_america
+                    colonial_region = colonial_louisiana
+                    colonial_region = colonial_california
+                    colonial_region = colonial_mexico
+                    colonial_region = colonial_the_carribean
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_la_plata
+                    colonial_region = colonial_brazil
+                    colonial_region = colonial_australia
+                }
+            }
+
+            decolonize = THIS
+        }
+    }
+    every_owned_province = {
+        limit = {
+            OR = {
+                colonial_region = colonial_peru
+                colonial_region = colonial_colombia
+                colonial_region = colonial_alaska
+                colonial_region = colonial_canada
+                colonial_region = colonial_eastern_america
+                colonial_region = colonial_louisiana
+                colonial_region = colonial_california
+                colonial_region = colonial_mexico
+                colonial_region = colonial_the_carribean
+                colonial_region = colonial_colombia
+                colonial_region = colonial_peru
+                colonial_region = colonial_la_plata
+                colonial_region = colonial_brazil
+                colonial_region = colonial_australia
+            }
+        }
+
+        decolonize = THIS
+    }
+}
+
+SPA = {
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_alaska
+                    colonial_region = colonial_canada
+                    colonial_region = colonial_eastern_america
+                    colonial_region = colonial_louisiana
+                    colonial_region = colonial_california
+                    colonial_region = colonial_mexico
+                    colonial_region = colonial_the_carribean
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_la_plata
+                    colonial_region = colonial_brazil
+                    colonial_region = colonial_australia
+                }
+            }
+
+            decolonize = THIS
+        }
+    }
+    every_owned_province = {
+        limit = {
+            OR = {
+                colonial_region = colonial_peru
+                colonial_region = colonial_colombia
+                colonial_region = colonial_alaska
+                colonial_region = colonial_canada
+                colonial_region = colonial_eastern_america
+                colonial_region = colonial_louisiana
+                colonial_region = colonial_california
+                colonial_region = colonial_mexico
+                colonial_region = colonial_the_carribean
+                colonial_region = colonial_colombia
+                colonial_region = colonial_peru
+                colonial_region = colonial_la_plata
+                colonial_region = colonial_brazil
+                colonial_region = colonial_australia
+            }
+        }
+
+        decolonize = THIS
+    }
+}
+
+
+GBR = {
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_alaska
+                    colonial_region = colonial_canada
+                    colonial_region = colonial_eastern_america
+                    colonial_region = colonial_louisiana
+                    colonial_region = colonial_california
+                    colonial_region = colonial_mexico
+                    colonial_region = colonial_the_carribean
+                    colonial_region = colonial_colombia
+                    colonial_region = colonial_peru
+                    colonial_region = colonial_la_plata
+                    colonial_region = colonial_brazil
+                    colonial_region = colonial_australia
+                }
+            }
+
+            decolonize = THIS
+        }
+    }
+    every_owned_province = {
+        limit = {
+            OR = {
+                colonial_region = colonial_peru
+                colonial_region = colonial_colombia
+                colonial_region = colonial_alaska
+                colonial_region = colonial_canada
+                colonial_region = colonial_eastern_america
+                colonial_region = colonial_louisiana
+                colonial_region = colonial_california
+                colonial_region = colonial_mexico
+                colonial_region = colonial_the_carribean
+                colonial_region = colonial_colombia
+                colonial_region = colonial_peru
+                colonial_region = colonial_la_plata
+                colonial_region = colonial_brazil
+                colonial_region = colonial_australia
+            }
+        }
+
+        decolonize = THIS
+    }
+}

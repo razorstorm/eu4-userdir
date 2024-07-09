@@ -1,0 +1,7 @@
+MNG = {
+    every_owned_province = {
+        add_devastation = -100
+        add_prosperity = 100
+    }
+    add_corruption = -100
+}

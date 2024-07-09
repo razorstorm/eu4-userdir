@@ -1,0 +1,60 @@
+add_country_modifier = {
+    name = honsai_pirate_free_waters
+    duration = -1
+}
+add_country_modifier = {
+    name = ravenmarch_restored_corveld
+    duration = -1
+}
+
+remove_country_modifier = amlharaz_economic_3
+
+add_country_modifier = { 
+    name = bulwar_city_of_light_mod
+    duration = -1  
+}
+
+
+add_country_modifier = { 
+    name = beepeck_merchant
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = A23_greatest_alenic_city
+    duration = -1  
+}
+
+
+add_country_modifier = { 
+    name = tluukt_revitalized_slavers
+    duration = -1  
+}
+add_country_modifier = { 
+    name = adv_trade_powerhouse
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hierarchy_viceroyalty_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = eord_grateful_colonists
+    duration = -1  
+}
+add_country_modifier = { 
+    name = azkare_modifier_gulf_of_rahen_controlled
+    duration = -1  
+}
+add_country_modifier = { 
+    name = bianfang_kelino_merchants
+    duration = -1  
+}
+add_country_modifier = { 
+    name = honsai_pirate_free_waters
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ravenmarch_restored_corveld
+    duration = -1  
+}

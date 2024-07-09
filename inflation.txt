@@ -1,0 +1,103 @@
+add_country_modifier = { 
+    name = national_bank_inflation
+    duration = -1  
+}
+add_country_modifier = { 
+    name = master_of_mint_boost
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hol_strict_control
+    duration = -1  
+}
+add_country_modifier = { 
+    name = approprioated_currency
+    duration = -1  
+}
+add_country_modifier = { 
+    name = strong_treasury
+    duration = -1  
+}
+add_country_modifier = { 
+    name = lan_secure_public_funds
+    duration = -1  
+}
+
+
+
+add_country_modifier = { 
+    name = ave_national_bank
+    duration = -1  
+}
+add_country_modifier = { 
+    name = bank_of_scotland
+    duration = -1  
+}
+add_country_modifier = { 
+    name = wealth_of_africa_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mint_towns_bng
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mug_riches_of_golconda_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = taula_de_canvi
+    duration = -1  
+}
+add_country_modifier = { 
+    name = pirate_all_of_the_gold
+    duration = -1  
+}
+add_country_modifier = { 
+    name = JAP_currency_regulations
+    duration = -1  
+}
+add_country_modifier = { 
+    name = lan_secure_public_funds
+    duration = -1  
+}
+add_country_modifier = { 
+    name = aju_gold_trade_deal_ally
+    duration = -1  
+}
+add_country_modifier = { 
+    name = east_africa_money_calls_money
+    duration = -1  
+}
+add_country_modifier = { 
+    name = c_a_spoils_of_war
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hsa_valuable_mineral_deposits_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = jap_balancing_koban_and_ryo_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = spa_spanish_dollar_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = usury_forgiven
+    duration = -1  
+}
+add_country_modifier = { 
+    name = pol_sejm_comply_policies
+    duration = -1  
+}
+add_country_modifier = { 
+    name = revolution_administrative_reforms
+    duration = -1  
+}
+add_country_modifier = { 
+    name = council_of_finance_mod
+    duration = -1  
+}

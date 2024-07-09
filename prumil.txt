@@ -1,0 +1,46 @@
+add_militarised_society = 100
+
+add_government_power = {
+    mechanic_type = prussian_militarization_mechanic_1
+    power_type = prussian_militarized_society_1
+    value = 100
+}
+
+add_government_power = {
+    mechanic_type = prussian_militarization_mechanic_2
+    power_type = prussian_militarized_society_2
+    value = 100
+}
+
+add_government_power = {
+    mechanic_type = prussian_militarization_mechanic_3
+    power_type = prussian_militarized_society_3
+    value = 100
+}
+
+add_government_power = {
+    mechanic_type = militarization_mechanic
+    power_type = militarized_society
+    value = 20
+}
+
+
+add_country_modifier = { 
+    name = empowered_junkers
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = teu_pru_nobles_in_general_positions
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = prussian_cheat_modifier
+    duration = -1
+    hidden = no
+}
+
+add_treasury = 1

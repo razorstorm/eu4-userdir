@@ -1,0 +1,57 @@
+
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = christian
+        }
+    }
+    add_harmonized_religion = christian
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = muslim
+        }
+    }
+    add_harmonized_religion = muslim
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = eastern
+        }
+    }
+    add_harmonized_religion = eastern
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = dharmic
+        }
+    }
+    add_harmonized_religion = dharmic
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = pagan
+        }
+    }
+    add_harmonized_religion = pagan
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = jewish_group
+        }
+    }
+    add_harmonized_religion = jewish_group
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = zoroastrian_group
+        }
+    }
+    add_harmonized_religion = zoroastrian_group
+}

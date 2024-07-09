@@ -1,0 +1,101 @@
+every_country = {
+    remove_opinion = {
+        who = ROOT
+        modifier = opinion_annex_vassal
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = opinion_unlawful_territory
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = break_marriage
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = break_marriage
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = break_alliance_war
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = dishonoured_alliance
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = declared_war_on_us
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = had_war_with_us
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = declared_war_on_neighbor
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = violated_truce_us
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = violated_truce_neighbor
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = separate_peace
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = razed_province
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = conquered_province_same_religion_group
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = conquered_province_us
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = conquered_rival_province
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = gave_province_in_peace
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = declared_war_on_enemy
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = discovery_of_evil
+    }
+    # remove_opinion = {
+    #     who = ROOT
+    #     modifier = is_hegemon
+    # }
+    remove_opinion = {
+        who = ROOT
+        modifier = claimed_throne_of_imperial
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = claimed_throne_on_us
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = claimed_throne_other_rm
+    }
+
+    add_opinion = {
+        who = ROOT 
+        modifier = opinion_friendliness  # counteract hegemon which cannot be removed
+    }
+}
+
+

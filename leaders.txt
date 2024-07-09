@@ -1,0 +1,18 @@
+add_country_modifier = { 
+    name = dhimmi_nobles
+    duration = -1  
+    desc = mod_more_merchants:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = pap_roman_leadership
+    duration = -1  
+    desc = mod_more_merchants:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = c_a_preparing_for_war
+    duration = -1  
+    desc = mod_more_merchants:0
+    hidden = no
+}

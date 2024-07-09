@@ -1,0 +1,91 @@
+every_province = {
+    set_base_tax = 0
+    set_base_production = 0
+    set_base_manpower = 0
+}
+
+every_province = {
+    add_building = fort_18th
+
+    change_trade_goods = none
+}
+
+every_country = {
+    add_corruption = -100
+
+    add_country_modifier = { 
+        name = action_and_reaction
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = sinmun_office_rejected
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = plundering_soldiers
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = rebel_leaders_executed
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = reduction_of_charles_xi
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = deteriorating_economy
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = insane_ruler
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = usurper_on_the_throne
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = tur_turkish_fear
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = tur_rebellion_line_modifier
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = janissaries_upset
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = pol_zebrzydowski_rebellion_flag
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = hol_tulip_crisis
+        duration = -1
+    }
+    add_country_modifier = { 
+        name = jap_unruly_samurai
+        duration = -1
+    } 
+}
+
+
+every_country = {
+    change_government = republic
+    change_government = monarchy
+
+    define_ruler = {
+        dynasty = ROOT
+        culture = ROOT
+        religion = ROOT
+        adm = 0
+        dip = 0
+        mil = 0
+        fixed = yes
+    }
+    add_ruler_personality = babbling_buffoon_personality
+    add_ruler_personality = immortal_personality
+    add_ruler_personality = drunkard_personality
+}

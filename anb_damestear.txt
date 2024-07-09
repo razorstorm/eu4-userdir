@@ -1,0 +1,23 @@
+4119 = {
+    change_trade_goods = damestear
+    remove_province_modifier = dwindling_resources
+    set_province_flag = permanent_damestear
+    set_province_flag = has_damestear
+    set_province_flag = homebrew_permanent_damestear
+    add_permanent_province_modifier = {
+        name = damestear_rich_deposit
+        duration = -1
+    }
+    add_permanent_province_modifier = {
+        name = permanent_damestear
+        duration = -1
+    }
+    add_permanent_province_modifier = {
+        name = has_damestear
+        duration = -1
+    }
+    add_permanent_province_modifier = {
+        name = siadan_beating_heart_of_empire
+        duration = -1
+    }
+}

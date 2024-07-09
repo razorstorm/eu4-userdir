@@ -1,0 +1,168 @@
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = workshop
+        }
+        ROOT = {
+            treasury = 45
+        }
+    }
+    add_building = workshop
+    ROOT = {
+        add_treasury = -45
+    }
+}
+
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = university
+        }
+        ROOT = {
+            treasury = 285
+        }
+    }
+    add_building = university
+    ROOT = {
+        add_treasury = -285
+    }
+}
+
+
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = cathedral
+        }
+        ROOT = {
+            treasury = 45
+        }
+    }
+    add_building = cathedral
+    ROOT = {
+        add_treasury = -45
+    }
+}
+
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = town_hall
+        }
+        ROOT = {
+            treasury = 45
+        }
+    }
+    add_building = town_hall
+    ROOT = {
+        add_treasury = -45
+    }
+}
+
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = trade_depot
+        }
+        ROOT = {
+            treasury = 135
+        }
+    }
+    add_building = trade_depot
+    ROOT = {
+        add_treasury = -135
+    }
+}
+
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = university
+        }
+        ROOT = {
+            treasury = 135
+        }
+    }
+    add_building = university
+    ROOT = {
+        add_treasury = -135
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = workshop
+            }
+            ROOT = {
+                treasury = 45
+            }
+        }
+        add_building = workshop
+        ROOT = {
+            add_treasury = -45
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = cathedral
+            }
+            ROOT = {
+                treasury = 45
+            }
+        }
+        add_building = cathedral
+        ROOT = {
+            add_treasury = -45
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = town_hall
+            }
+            ROOT = {
+                treasury = 45
+            }
+        }
+        add_building = town_hall
+        ROOT = {
+            add_treasury = -45
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = trade_depot
+            }
+            ROOT = {
+                treasury = 135
+            }
+        }
+        add_building = trade_depot
+        ROOT = {
+            add_treasury = -135
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = university
+            }
+            ROOT = {
+                treasury = 135
+            }
+        }
+        add_building = university
+        ROOT = {
+            add_treasury = -135
+        }
+    }
+
+}

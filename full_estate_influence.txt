@@ -1,0 +1,111 @@
+add_estate_influence_modifier = {
+    estate = estate_nobles
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_church
+    desc = EST_VAL_CHURCH_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_zemshina
+    desc = EST_VAL_CHURCH_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_oprichnina
+    desc = EST_VAL_CHURCH_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_burghers
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_jains
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_qizilbash
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+
+add_estate_influence_modifier = {
+    estate = estate_brahmins
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+
+add_estate_influence_modifier = {
+    estate = estate_rajput
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+
+add_estate_influence_modifier = {
+    estate = estate_dhimmi
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_nomadic_tribes
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_janissaries
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_cossacks
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_peasants
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_janissaries
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_eunuchs
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_berbers
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_settlers
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -100
+    duration = -1
+}

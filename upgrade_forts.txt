@@ -1,18 +1,60 @@
 every_owned_province = {
     limit = {
-        has_building = fort_15th 
+        has_building = fort_17th 
+        ROOT = {
+          mil_tech = 24
+        }
+        
     }
-   	add_building = fort_16th
+   	add_building = fort_18th
 }
 every_owned_province = {
     limit = {
         has_building = fort_16th 
+        ROOT = {
+          mil_tech = 19
+        }
     }
    	add_building = fort_17th
 }
 every_owned_province = {
     limit = {
-        has_building = fort_17th 
+        has_building = fort_15th 
+        ROOT = {
+          mil_tech = 14
+        }
     }
-   	add_building = fort_18th
+   	add_building = fort_16th
+}
+
+
+every_subject_country = {
+  every_owned_province = {
+    limit = {
+        has_building = fort_17th 
+        ROOT = {
+          mil_tech = 24
+        }
+        
+    }
+    add_building = fort_18th
+    }
+    every_owned_province = {
+        limit = {
+            has_building = fort_16th 
+            ROOT = {
+              mil_tech = 19
+            }
+        }
+        add_building = fort_17th
+    }
+    every_owned_province = {
+        limit = {
+            has_building = fort_15th 
+            ROOT = {
+              mil_tech = 14
+            }
+        }
+        add_building = fort_16th
+    }
 }

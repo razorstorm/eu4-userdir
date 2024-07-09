@@ -1,0 +1,143 @@
+add_country_modifier = { 
+    name = efficienct_merchants
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = india_trade_co
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = dutch_india_trade_co
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = the_staple_port
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = krantor_crane
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = mercantilism_modifier
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = jap_za
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = jap_trade_reform
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = jap_first_sake
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = hsa_trade_reform
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = ara_consulate_sea
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = ara_book_consulate_sea
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = hab_ostende_company
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = burgher_minister
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = si_better_exports
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = fc_hre_privileges
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = fc_city_league
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = fc_league_reforms
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = east_india_trade_rush
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = swahili_ports_under_portuguese_thumb
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = por_conquest_of_hormuz
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = trusted_merchants
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = reduce_trade_regulations_mod_5
+    duration = -1
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = efficienct_merchants
+    duration = -1
+    hidden = no
+}

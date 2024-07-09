@@ -1,0 +1,48 @@
+add_estate_influence_modifier = {
+    estate = estate_nobility
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_priesthood
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_merchants
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_clans
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_slaves
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_extra1
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_extra2
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_extra3
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}

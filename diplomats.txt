@@ -1,0 +1,28 @@
+add_country_modifier = { 
+    name = fra_imperial_messengers_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = swe_diplomat_from_the_north
+    duration = -1  
+}
+add_country_modifier = { 
+    name = sca_one_of_the_great_powers
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hun_hungary_poland
+    duration = -1  
+}
+add_country_modifier = { 
+    name = pol_polish_empire_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tur_eyalet_management
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mng_inner_branch_bureau_modifier
+    duration = -1  
+}

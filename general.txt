@@ -1,0 +1,7 @@
+define_general = {
+    name = "Homeguard General"
+    shock = 666
+    fire = 666
+    manuever = 666666
+    siege = 666
+}

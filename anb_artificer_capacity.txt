@@ -1,0 +1,155 @@
+6151 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+4773 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+1173 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+3252 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+3251 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+3249 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+3250 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6152 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6139 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6136 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6149 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6148 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6145 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6138 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6144 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6147 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6146 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6137 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6140 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6142 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6153 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+6141 = {
+    cede_province = ROOT
+    change_trade_goods = precursor_relics
+    add_core = ROOT
+    change_religion = ROOT
+    change_culture = ROOT
+}
+

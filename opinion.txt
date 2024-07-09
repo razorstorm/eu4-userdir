@@ -1,0 +1,14 @@
+every_country = {
+    remove_opinion = {
+        who = ROOT
+        modifier = opinion_unlawful_territory
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = opinion_annex_part_of_empire
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = rejected_alliance
+    }
+}

@@ -1,0 +1,36 @@
+add_country_modifier = { 
+    name = ven_venetian_new_world_charters
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mng_colonial_focus
+    duration = -1  
+}
+add_country_modifier = { 
+    name = estate_nobles_expedition_rights_scaling
+    duration = -1  
+}
+add_country_modifier = { 
+    name = charter_colonies_mod_1
+    duration = -1  
+}
+add_country_modifier = { 
+    name = charter_colonies_mod_2
+    duration = -1  
+}
+add_country_modifier = { 
+    name = charter_colonies_mod_3
+    duration = -1  
+}
+add_country_modifier = { 
+    name = charter_colonies_mod_4
+    duration = -1  
+}
+add_country_modifier = { 
+    name = charter_colonies_mod_5
+    duration = -1  
+}
+add_country_modifier = { 
+    name = estate_nobles_expedition_rights_scaling
+    duration = -1  
+}

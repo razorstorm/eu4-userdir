@@ -1,0 +1,6 @@
+add_country_modifier = { 
+    name = spice_colony_modifier
+    duration = -1  
+    desc = spice_colony_modifier:0
+    hidden = no
+}

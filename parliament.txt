@@ -1,0 +1,31 @@
+add_country_modifier = { 
+    name = bill_of_rights_parliament
+    duration = -1  
+    desc = master_of_southern_india:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = gbr_pax_britannica
+    duration = -1  
+    desc = master_of_southern_india:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = ave_pax_angevina
+    duration = -1  
+    desc = master_of_southern_india:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = eng_the_two_houses
+    duration = -1  
+    desc = master_of_southern_india:0
+    hidden = no
+}
+
+every_owned_province = {
+    set_seat_in_parliament = yes
+}

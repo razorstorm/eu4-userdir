@@ -1,0 +1,11 @@
+remove_country_modifier = spice_colony_modifier
+
+remove_country_modifier = temporary_colonist
+
+remove_country_modifier = colonize_the_continent
+
+
+add_country_modifier = { 
+    name = spice_colony_modifier
+    duration = -1
+}

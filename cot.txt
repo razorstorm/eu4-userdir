@@ -1,0 +1,27 @@
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 1
+        NOT = {
+            province_has_center_of_trade_of_level = 2
+        }
+    }
+    add_center_of_trade_level = 1
+    owner = {
+        add_treasury = -200
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                province_has_center_of_trade_of_level = 2
+            }
+        }
+        add_center_of_trade_level = 1
+        owner = {
+            add_treasury = -200
+        }
+    }
+}

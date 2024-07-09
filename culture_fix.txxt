@@ -1,0 +1,5 @@
+KAS = {
+    every_owned_province = {
+        change_culture = ROOT
+    }
+}

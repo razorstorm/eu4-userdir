@@ -1,0 +1,105 @@
+
+add_country_modifier = { 
+    name = patron_seduction
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = xia_summit_balanced_diplo
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = xia_diplomatic_efforts
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = diplomatic_cabinet
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = monstrous_newfound_decorum
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = honderaak_incident_prestige
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = R51_loyal_prabhia
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = jinqiu_nuanxie_chancellor
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = ultakal_decree
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = federation_establishing_contact
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = recently_helped_federation
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = magic_realm_illusion_otherworldly_glamour
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = magic_realm_illusion_simulacrum_exposed
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = magic_realm_conjuration_magnificent_feast_3
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = statesman_homunculus
+    duration = -1  
+    desc = patron_seduction:0
+    hidden = no
+}

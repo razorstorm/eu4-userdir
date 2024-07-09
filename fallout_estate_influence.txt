@@ -1,0 +1,30 @@
+add_estate_influence_modifier = {
+    estate = estate_citizens
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_bureaucrats
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_officers
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_traders
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_tribals
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}

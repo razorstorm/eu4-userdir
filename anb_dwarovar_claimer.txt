@@ -1,0 +1,4 @@
+add_country_modifier = {
+    name = dwarovar_claimer
+    duration = -1
+}

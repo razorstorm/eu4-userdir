@@ -1,0 +1,32 @@
+add_country_modifier = { 
+    name = nor_holder_of_the_kalmar_union
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ger_chancellorship
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tur_reign_of_women_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = heian_kyo
+    duration = -1  
+}
+add_country_modifier = { 
+    name = good_advise
+    duration = -1  
+}
+add_country_modifier = { 
+    name = individual_creeds_aspect_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = sister_suffragettes
+    duration = -1  
+}
+add_country_modifier = { 
+    name = muxe_at_court
+    duration = -1  
+}

@@ -1,0 +1,11 @@
+mod/
+shadercache/
+exceptions/
+gfx/
+.launcher-cache/
+
+cache/
+Screenshots/
+logs/
+crashes/
+Anbennar/

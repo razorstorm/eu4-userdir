@@ -1,0 +1,30 @@
+
+
+BUR = {
+    force_remove_rival = FRA
+    create_alliance = FRA
+    add_historical_friend = FRA
+}
+
+BUR = {
+    remove_opinion = {
+        who = ROOT
+        modifier = break_alliance
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = want_your_provinces
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = want_subject_provinces
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = refused_military_access
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = refused_to_give_gold_for_favors
+    }   
+}

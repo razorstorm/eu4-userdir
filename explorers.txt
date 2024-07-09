@@ -1,0 +1,2 @@
+create_conquistador = { tradition = 100 }
+create_explorer = { tradition = 100 }

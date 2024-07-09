@@ -1,0 +1,151 @@
+add_country_modifier = {
+    name = to_the_colours
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = dev_general_hospital
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = military_victory
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = afghanistan_secured_mug
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = ghazis_from_abroad
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = conscripting_pacifists
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = junior_enkai_cult
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = primary_enkai_cult
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = council_of_the_crusade_mod
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = rallied_volunteers_level_1
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = rallied_volunteers_level_2
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = rallied_volunteers_level_3
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = rallied_volunteers_level_4
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = rallied_volunteers_level_5
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = japan_increased_demand_of_spice
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = japan_increased_demand_of_tea
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = silesia_conquered
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = dan_plunder_and_pillaging
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = ave_iberian_conquest
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = per_tribal_warriors
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = gra_eagerness_to_serve
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = les_invalides
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = ne_fortified_village
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = che_effective_remedies
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = YEM_the_dawah
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+

@@ -1,18 +1,20 @@
-every_owned_province = {
-    limit = {
-        has_building = fort_15th 
-    }
-   	add_building = fort_16th
+add_country_modifier = { 
+    name = per_horse_population_boom_modifier
+    duration = -1  
 }
-every_owned_province = {
-    limit = {
-        has_building = fort_16th 
-    }
-   	add_building = fort_17th
+add_country_modifier = { 
+    name = per_horse_population_boom2_modifier
+    duration = -1  
 }
-every_owned_province = {
-    limit = {
-        has_building = fort_17th 
-    }
-   	add_building = fort_18th
+add_country_modifier = { 
+    name = per_horse_population_boom4_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = lxa_elephants
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mjz_dominance_of_the_horselords_modifier
+    duration = -1  
 }

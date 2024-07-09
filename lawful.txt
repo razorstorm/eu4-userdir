@@ -1,0 +1,18 @@
+every_country = {
+    remove_opinion = {
+        who = ROOT
+        modifier = unlawful_territory
+    }
+    remove_opinion_modifier = {
+        who = ROOT
+        modifier = unlawful_territory
+    }
+}
+
+every_country = {
+    reverse_remove_opinion = {
+        who = ROOT
+        modifier = unlawful_territory
+    }
+}
+

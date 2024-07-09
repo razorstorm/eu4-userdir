@@ -1,0 +1,21 @@
+
+every_province = {
+    limit = {
+        OR {
+            superregion = north_aelantir_superregion
+            superregion = ruined_sea_superregion
+            superregion = south_aelantir_superregion
+            superregion = ynn_superregion
+            superregion = torn_sea_superregion
+
+            superregion = eordand_superregion
+            superregion = effelai_superregion
+            superregion = kheionai_superregion
+            superregion = greater_taychend_superregion
+        } 
+    }
+    decolonize = THIS
+    cede_province = ---
+    set_province_flag = cant_colonize
+    destroy_province = yes
+}

@@ -1,0 +1,175 @@
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes 
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = townships
+                investor = ROOT
+            }
+        }
+        owner = {
+            treasury = 400
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = townships
+    }
+    owner = {
+        add_treasury = -400
+    }
+}
+
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes 
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = brokers_exchange
+                investor = ROOT
+            }
+        }
+        owner = {
+            treasury = 400
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = brokers_exchange
+    }
+    owner = {
+        add_treasury = -400
+    }
+}
+
+
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes 
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = company_depot
+                investor = ROOT
+            }
+        }
+        owner = {
+            treasury = 400
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = company_depot
+    }
+    owner = {
+        add_treasury = -400
+    }
+}
+
+
+
+
+
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes 
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = district
+                investor = ROOT
+            }
+        }
+        owner = {
+            treasury = 400
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = district
+    }
+    owner = {
+        add_treasury = -400
+    }
+}
+
+
+
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes 
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = military_administration
+                investor = ROOT
+            }
+        }
+        owner = {
+            treasury = 400
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = military_administration
+    }
+    owner = {
+        add_treasury = -400
+    }
+}
+
+
+
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes 
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = permanent_quarters
+                investor = ROOT
+            }
+        }
+        owner = {
+            treasury = 400
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = permanent_quarters
+    }
+    owner = {
+        add_treasury = -400
+    }
+}
+
+every_owned_province = {
+    limit = {
+        is_owned_by_trade_company = yes
+    }
+    change_religion = ROOT  
+}
+
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 1
+        NOT = {
+            province_has_center_of_trade_of_level = 2
+        }
+    }
+    add_center_of_trade_level = 1
+    owner = {
+        add_treasury = -200
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                province_has_center_of_trade_of_level = 2
+            }
+        }
+        add_center_of_trade_level = 1
+        owner = {
+            add_treasury = -200
+        }
+    }
+}

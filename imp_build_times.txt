@@ -1,0 +1,34 @@
+every_owned_province = {
+    add_province_modifier = { 
+        name = elam_centralized_building
+        duration = -1  
+    }       
+    add_province_modifier = { 
+        name = elam_centralized_building_subject
+        duration = -1  
+    } 
+    add_province_modifier = { 
+        name = kition_expanded_infrastructure
+        duration = -1  
+    } 
+    add_province_modifier = { 
+        name = jud_exploiting_cedars_soft
+        duration = -1  
+    } 
+    add_province_modifier = { 
+        name = abedju_necropolis
+        duration = -1  
+    } 
+    add_province_modifier = { 
+        name = sca_nor_naval_investment
+        duration = -1  
+    } 
+    add_province_modifier = { 
+        name = rus_state_investment
+        duration = -1  
+    } 
+    add_province_modifier = { 
+        name = fin_abundant_food_modifier
+        duration = -1  
+    } 
+}

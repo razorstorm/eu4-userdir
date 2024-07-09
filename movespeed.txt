@@ -1,0 +1,106 @@
+add_country_modifier = { 
+    name = napoleon_manuever
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = bargi_giri
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = taming_provinces
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = teu_crusader_mil_reform_3_mod
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = teu_crusader_mil_reform_4_mod
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = teu_crusade_horses_of_the_steppes
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = dlh_grand_trunk_road_modifier
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = mor_conquest_of_kanem
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = conquest_of_air
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = JAP_gokaido_stations
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = skanderbeg_rebellion
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = fin_savage_tactics_modifier
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = fra_napoleonic_warfare_modifier
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = pru_thunderous_advance_modifier
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = spa_long_range_logistics_modifier
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+
+

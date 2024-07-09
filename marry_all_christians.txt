@@ -1,0 +1,12 @@
+every_country = {
+    limit = {
+        OR = {
+            religion = catholic
+            religion = orthodox
+            religion = coptic
+        }
+    }
+    ROOT = {
+        create_marriage = PREV
+    }
+}

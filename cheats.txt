@@ -1,0 +1,248 @@
+add_country_modifier = { 
+    name = TIM_full_army_prof
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = mod_more_dip_upkeep
+    duration = -1  
+    desc = mod_more_dip_upkeep:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mod_lessTime
+    duration = -1  
+    desc = mod_lessTime:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mod_faster_envoy
+    duration = -1  
+    desc = mod_faster_envoy:0
+    hidden = no
+}
+add_country_modifier = {
+    name = mod_more_absolutism_max
+    duration = -1  
+    desc = mod_more_absolutism_max:0
+    hidden = no
+}
+add_country_modifier = {
+    name = mod_less_attration
+    duration = -1  
+    desc = mod_less_attration:0
+    hidden = no
+}
+
+add_country_modifier = {
+    name = mod_more_tradition
+    duration = -1  
+    desc = mod_more_tradition:0
+    hidden = no
+}
+
+add_country_modifier = {
+    name = more_diplomatic_relations_max
+    duration = -1  
+    desc = more_diplomatic_relations_max:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = more_diplomats
+    duration = -1  
+    desc = more_diplomats:0
+    hidden = no
+}
+
+change_adm = 6
+change_dip = 6
+change_mil = 6
+
+# define_ruler = {
+#     dynasty = ROOT
+#     culture = ROOT
+#     religion = ROOT
+#     adm = 6
+#     dip = 6
+#     mil = 6
+#     male = yes
+#     # name = "Friedrich II"
+#     fixed = yes
+# }
+
+
+add_ruler_personality = child_of_destiny_personality
+add_ruler_personality = immortal_personality
+add_ruler_personality = strict_personality
+add_ruler_personality = fee_child_of_destiny_personality
+
+add_country_modifier = { 
+    name = nor_holder_of_the_kalmar_union
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ger_chancellorship
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tur_reign_of_women_modifier
+    duration = -1  
+}
+
+##########################################################################
+# Army Professionalism | (1% yearly)
+##########################################################################
+
+add_country_modifier = { 
+    name = mng_yu_qian_manual_modifier
+    duration = -1  
+}
+
+##########################################################################
+# Culture Convert | culture_convert.txt
+##########################################################################
+
+add_country_modifier = { 
+    name = shan_relocation
+    duration = -1  
+    desc = shan_relocation:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = edict_of_potsdam_modifier
+    duration = -1  
+    desc = edict_of_potsdam_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = spa_native_reductions
+    duration = -1  
+    desc = spa_native_reductions:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mon_restoration
+    duration = -1  
+    desc = mon_restoration:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = cham_culture_resurgent
+    duration = -1  
+    desc = cham_culture_resurgent:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = lit_lithuanian_supremacy_modifier
+    duration = -1  
+    desc = lit_lithuanian_supremacy_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = fin_accelerated_assimilation_modifier
+    duration = -1  
+    desc = fin_accelerated_assimilation_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mng_sinicization_of_japan_modifier
+    duration = -1  
+    desc = mng_sinicization_of_japan_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mch_forced_integration_modifier
+    duration = -1  
+    desc = mch_forced_integration_modifier:0
+    hidden = no
+}
+
+
+every_owned_province = {
+    add_province_modifier = {
+        name = kor_manchurian_korea
+        duration = -1
+    }
+    add_province_modifier = {
+        name = sax_saxon_settlement
+        duration = -1
+    }
+    add_province_modifier = {
+        name = spa_rb_culture_shift
+        duration = -1
+    }
+}
+
+
+##########################################################################
+# Absolutism | abs.txt
+##########################################################################
+
+
+add_country_modifier = { 
+    name = teu_pru_crushed_the_revolution
+    duration = -1  
+    desc = teu_pru_crushed_the_revolution:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = dan_danish_absolutism
+    duration = -1  
+    desc = dan_danish_absolutism:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = nor_absolute_monarchy
+    duration = -1  
+    desc = nor_absolute_monarchy:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = sca_great_empire_of_scandinavia
+    duration = -1  
+    desc = sca_great_empire_of_scandinavia:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = dan_great_empire_of_scandinavia
+    duration = -1  
+    desc = dan_great_empire_of_scandinavia:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = got_curtailing_the_estates
+    duration = -1  
+    desc = got_curtailing_the_estates:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = JAP_social_hierarchy
+    duration = -1  
+    desc = JAP_social_hierarchy:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = bav_bavarian_absolutism
+    duration = -1  
+    desc = bav_bavarian_absolutism:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = kon_absolute_rulership
+    duration = -1  
+    desc = kon_absolute_rulership:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = msi_centralization_focus
+    duration = -1  
+    desc = msi_centralization_focus:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = pol_golden_era_modifier
+    duration = -1  
+    desc = pol_golden_era_modifier:0
+    hidden = no
+}

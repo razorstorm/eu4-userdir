@@ -29,7 +29,7 @@ LEGALISM={
 	to_me={
 		log=yes
 		onmap=no
-		popup=yes
+		popup=no
 		pausepopup=no
 		icon=no
 	}
@@ -385,7 +385,7 @@ NEW_TRADELEAGUE_LEADER={
 	category="cat_government"
 	option=yes
 	to_me={
-		log=yes
+		log=no
 		onmap=yes
 		popup=yes
 		pausepopup=no
@@ -538,6 +538,61 @@ OTHERJOINSOTHERTRADELEAGUE={
 		icon=no
 	}
 }
+OTHERJOINSOURHRE={
+	msg_icontype="combat"
+	category="cat_government"
+	option=yes
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=yes
+	}
+}
+WEJOINEDHRE={
+	msg_icontype="combat"
+	category="cat_government"
+	option=yes
+	from_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=yes
+	}
+}
+OTHERJOINSHRE={
+	msg_icontype="combat"
+	category="cat_government"
+	option=yes
+	interesting={
+		log=no
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=yes
+	}
+	default={
+		log=yes
+		onmap=no
+		popup=no
+		pausepopup=no
+		icon=no
+	}
+}
+OTHERJOINSOURHREDECLINE={
+	msg_icontype="combat"
+	category="cat_government"
+	option=yes
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=yes
+	}
+}
 WESLAVERAID={
 	msg_icontype="combat"
 	category="cat_military"
@@ -545,9 +600,9 @@ WESLAVERAID={
 	to_me={
 		log=yes
 		onmap=no
-		popup=no
+		popup=yes
 		pausepopup=no
-		icon=yes
+		icon=no
 	}
 }
 SLAVERAIDONUS={
@@ -678,6 +733,18 @@ NEWSEATINPARLIAMENT={
 		log=yes
 		onmap=yes
 		popup=no
+		pausepopup=no
+		icon=no
+	}
+}
+REMOVESEATINPARLIAMENT={
+	msg_icontype="gov"
+	category="cat_government"
+	option=yes
+	to_me={
+		log=yes
+		onmap=yes
+		popup=yes
 		pausepopup=no
 		icon=no
 	}
@@ -1385,6 +1452,30 @@ KNOWLEDGE_SHARING={
 	msg_icontype="diplo"
 	category="cat_diplomacy"
 	option=no
+	to_me={
+		log=yes
+		onmap=no
+		popup=no
+		pausepopup=no
+		icon=no
+	}
+}
+ASK_KNOWLEDGE_SHARING={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
+	to_me={
+		log=yes
+		onmap=no
+		popup=no
+		pausepopup=no
+		icon=no
+	}
+}
+THEM_KNOWLEDGE_SHARING={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
 	from_me={
 		log=yes
 		onmap=no
@@ -1392,13 +1483,42 @@ KNOWLEDGE_SHARING={
 		pausepopup=no
 		icon=no
 	}
-	to_me={
+}
+THEM_ASK_KNOWLEDGE_SHARING={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
+	from_me={
 		log=yes
 		onmap=no
 		popup=yes
 		pausepopup=no
 		icon=no
 	}
+}
+THIRD_KNOWLEDGE_SHARING={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
+	interesting={
+		log=no
+		onmap=no
+		popup=no
+		pausepopup=no
+		icon=no
+	}
+	default={
+		log=yes
+		onmap=no
+		popup=no
+		pausepopup=no
+		icon=no
+	}
+}
+THIRD_ASK_KNOWLEDGE_SHARING={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
 	interesting={
 		log=yes
 		onmap=no
@@ -1567,7 +1687,7 @@ TREASURE_FLEET_TO_US={
 	option=no
 	to_me={
 		log=yes
-		onmap=no
+		onmap=yes
 		popup=no
 		pausepopup=no
 		icon=yes
@@ -3522,11 +3642,11 @@ ANNEXACCEPT={
 	category="cat_diplomacy"
 	option=no
 	to_me={
-		log=no
+		log=yes
 		onmap=no
-		popup=no
+		popup=yes
 		pausepopup=no
-		icon=yes
+		icon=no
 	}
 }
 WEANNEXACCEPT={
@@ -3610,8 +3730,8 @@ ANNEXINGUS={
 	to_me={
 		log=yes
 		onmap=no
-		popup=no
-		pausepopup=yes
+		popup=yes
+		pausepopup=no
 		icon=no
 	}
 }
@@ -4975,7 +5095,7 @@ NONASSIMILATEDCULTUREGROUP={
 LEADERDIED={
 	msg_icontype="gov"
 	category="cat_government"
-	option=no
+	option=yes
 	to_me={
 		log=yes
 		onmap=no
@@ -5630,14 +5750,14 @@ ENDKNOWLEDGESHARE={
 	from_me={
 		log=yes
 		onmap=no
-		popup=yes
+		popup=no
 		pausepopup=no
 		icon=no
 	}
 	to_me={
 		log=yes
 		onmap=no
-		popup=yes
+		popup=no
 		pausepopup=no
 		icon=no
 	}
@@ -6510,9 +6630,9 @@ COLONYCITYUS={
 	to_me={
 		log=yes
 		onmap=no
-		popup=yes
+		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 FULLALLYINWAR={
@@ -7035,6 +7155,32 @@ NEWACTIVECARDINAL={
 		log=yes
 		onmap=no
 		popup=no
+		pausepopup=no
+		icon=no
+	}
+}
+NEWACTIVELOYALISTCARDINAL={
+	msg_icontype="diplo"
+	category="cat_religion"
+	option=no
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+	interesting={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+	default={
+		log=yes
+		onmap=no
+		popup=yes
 		pausepopup=no
 		icon=no
 	}
@@ -9272,6 +9418,74 @@ REBELS_ABANDON_CAUSE={
 	category="cat_event"
 	option=no
 	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+}
+SLACKEN_AUTODISABLE={
+	msg_icontype="mil"
+	category="cat_military"
+	option=yes
+	go_to="military"
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+}
+OURSIDETRUCEENDS={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+}
+THEIRSIDETRUCEENDS={
+	msg_icontype="diplo"
+	category="cat_diplomacy"
+	option=no
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+}
+CURIATRANSFER={
+	msg_icontype="gov"
+	category="cat_religion"
+	option=yes
+	to_me={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+}
+CURIATRANSFEROTHER={
+	msg_icontype="gov"
+	category="cat_religion"
+	option=yes
+	interesting={
+		log=yes
+		onmap=no
+		popup=yes
+		pausepopup=no
+		icon=no
+	}
+	default={
 		log=yes
 		onmap=no
 		popup=yes

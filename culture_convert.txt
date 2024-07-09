@@ -1,0 +1,70 @@
+add_country_modifier = { 
+    name = shan_relocation
+    duration = -1  
+    desc = shan_relocation:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = edict_of_potsdam_modifier
+    duration = -1  
+    desc = edict_of_potsdam_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = spa_native_reductions
+    duration = -1  
+    desc = spa_native_reductions:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mon_restoration
+    duration = -1  
+    desc = mon_restoration:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = cham_culture_resurgent
+    duration = -1  
+    desc = cham_culture_resurgent:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = lit_lithuanian_supremacy_modifier
+    duration = -1  
+    desc = lit_lithuanian_supremacy_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = fin_accelerated_assimilation_modifier
+    duration = -1  
+    desc = fin_accelerated_assimilation_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mng_sinicization_of_japan_modifier
+    duration = -1  
+    desc = mng_sinicization_of_japan_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = mch_forced_integration_modifier
+    duration = -1  
+    desc = mch_forced_integration_modifier:0
+    hidden = no
+}
+
+
+every_owned_province = {
+    add_province_modifier = {
+        name = kor_manchurian_korea
+        duration = -1
+    }
+    add_province_modifier = {
+        name = sax_saxon_settlement
+        duration = -1
+    }
+    add_province_modifier = {
+        name = spa_rb_culture_shift
+        duration = -1
+    }
+}

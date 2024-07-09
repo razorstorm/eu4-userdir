@@ -1,0 +1,518 @@
+
+
+# ================== Aztec ==================
+
+849 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2629 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+4572 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2626 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2615 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+4571 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2645 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+852 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+4570 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+# ================== Inca ==================
+
+2877 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2863 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2002 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2865 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2866 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+786 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2868 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+775 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2878 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2854 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2834 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+810 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2901 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2904 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2903 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2893 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2919 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+758 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2905 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2908 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2891 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2860 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2915 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2925 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2911 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2853 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2935 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2934 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2889 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2930 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2859 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2946 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2873 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+765 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+2902 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+799 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+804 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+795 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2941 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+793 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2839 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+791 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2841 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+780 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+792 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2836 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+2945 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}
+
+815 = {
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    } 
+}

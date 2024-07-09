@@ -1,0 +1,30 @@
+add_estate_influence_modifier = {
+    estate = estate_mages
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = 30
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_church
+    desc = EST_VAL_CHURCH_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_nobles
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_burghers
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}
+add_estate_influence_modifier = {
+    estate = estate_adventurers
+    desc = EST_VAL_BURGHERS_DECLINE
+    influence = -100
+    duration = -1
+}

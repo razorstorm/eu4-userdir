@@ -1,0 +1,83 @@
+HOL = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = bengal_region
+                region = hindusthan_region
+                region = west_india_region
+                region = deccan_region
+                region = coromandel_region
+                superregion = east_indies_superregion
+                superregion = oceania_superregion
+                superregion = china_superregion
+                superregion = far_east_superregion
+                superregion = africa_superregion
+                superregion = southern_africa_superregion
+            }
+        }
+        decolonize = THIS
+    }   
+}
+
+POR = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = bengal_region
+                region = hindusthan_region
+                region = west_india_region
+                region = deccan_region
+                region = coromandel_region
+                superregion = east_indies_superregion
+                superregion = oceania_superregion
+                superregion = china_superregion
+                superregion = far_east_superregion
+                superregion = africa_superregion
+                superregion = southern_africa_superregion
+            }
+        }
+        decolonize = THIS
+    }   
+}
+
+CAS = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = bengal_region
+                region = hindusthan_region
+                region = west_india_region
+                region = deccan_region
+                region = coromandel_region
+                superregion = east_indies_superregion
+                superregion = oceania_superregion
+                superregion = china_superregion
+                superregion = far_east_superregion
+                superregion = africa_superregion
+                superregion = southern_africa_superregion
+            }
+        }
+        decolonize = THIS
+    }   
+}
+
+GBR = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = bengal_region
+                region = hindusthan_region
+                region = west_india_region
+                region = deccan_region
+                region = coromandel_region
+                superregion = east_indies_superregion
+                superregion = oceania_superregion
+                superregion = china_superregion
+                superregion = far_east_superregion
+                superregion = africa_superregion
+                superregion = southern_africa_superregion
+            }
+        }
+        decolonize = THIS
+    }   
+}

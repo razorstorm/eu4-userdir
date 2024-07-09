@@ -1,0 +1,48 @@
+add_country_modifier = { 
+    name = breached_great_wall
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = hsa_hanseatic_artillery_modifier
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = mng_eastern_campaigns_modifier
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = fra_italian_wars_modifier
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = spa_bid_for_the_hab_crown_modifier
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = BYZ_experience_assaulting_thessaly
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}
+
+add_country_modifier = { 
+    name = YEM_exploit_the_chaos
+    duration = -1  
+    desc = temporary_colonist:0
+    hidden = no
+}

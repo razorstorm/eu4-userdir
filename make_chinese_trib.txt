@@ -1,0 +1,14 @@
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = tributary_state
+            is_subject_of_type = vassal
+        }
+    }
+    ROOT = {
+        create_subject = {
+            subject_type = chinese_tributary_state
+            subject = PREV
+        }
+    }
+}

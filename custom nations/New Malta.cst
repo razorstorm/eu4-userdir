@@ -1,0 +1,123 @@
+name="New Malta"
+adjective="Maltese"
+country_colors={
+	flag=2
+	color=51
+	symbol_index=109
+	flag_colors={
+		4 14 16 
+	}
+}
+index=1429
+graphical_culture=1
+technology_group=1
+religion=14
+government=7
+government_reform=791
+government_rank=3
+idea={
+	{
+		level=50
+		index=298
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=47
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=65
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=48
+		name=""
+		desc=""
+	}
+ {
+		level=6
+		index=81
+		name=""
+		desc=""
+	}
+ {
+		level=100
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=259
+		name=""
+		desc=""
+	}
+ {
+		level=50
+		index=72
+		name=""
+		desc=""
+	}
+ {
+		level=6
+		index=122
+		name=""
+		desc=""
+	}
+ 
+}
+culture="maltese"
+monarch={
+	admin=10
+	diplomacy=10
+	military=10
+	age=15
+	religion=14
+	culture="maltese"
+	female=no
+	name="Adone I"
+	dynasty="Cotoner"
+	is_null=no
+	personality={
+		"immortal_personality"
+	}
+}
+heir={
+	admin=0
+	diplomacy=0
+	military=0
+	age=0
+	religion=14
+	culture="maltese"
+	female=no
+	name="Adelmio I"
+	dynasty="Cotoner"
+	is_null=no
+}
+queen={
+	admin=4
+	diplomacy=5
+	military=4
+	age=16
+	religion=14
+	culture="maltese"
+	female=yes
+	name="Carla I"
+	dynasty="de Monte"
+	is_null=no
+	personality={
+		"infertile_personality"
+	}
+}

@@ -1,0 +1,6 @@
+every_owned_province = {
+	limit = {
+		is_owned_by_trade_company = yes
+	}
+	change_religion = ROOT	
+}

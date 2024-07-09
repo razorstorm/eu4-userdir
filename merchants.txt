@@ -1,0 +1,84 @@
+#======
+
+# Requires owning a province in india/asia
+# add_country_modifier = { 
+#     name = india_trade_co
+#     duration = -1  
+# }
+
+# Requires either owning or a vassal owning a province in india/asia
+# add_country_modifier = { 
+#     name = dutch_india_trade_co
+#     duration = -1  
+# }
+#======
+
+add_country_modifier = { 
+    name = thalassocracy
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hab_ostende_company
+    duration = -1  
+}
+add_country_modifier = { 
+    name = junior_zoroastrian_cult
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mod_more_merchants
+    duration = -1  
+}
+add_country_modifier = { 
+    name = more_merchants
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = primary_zoroastrian_cult
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = master_of_southern_india
+    duration = -1  
+}
+
+
+
+add_country_modifier = { 
+    name = JAP_trade_hegemon
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ned_dutch_free_trade
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ser_expanding_trade_networks
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hanseatic_queen_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = zim_trade_dominance
+    duration = -1  
+}
+add_country_modifier = { 
+    name = pol_thriving_center_of_gdansk_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = jap_mixed_commercial_policy_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = orm_far_east_company
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ven_wealth_of_india_modifier
+    duration = -1  
+}

@@ -1,0 +1,114 @@
+every_owned_province = {
+    add_province_modifier = { 
+        name = supply_depot_area
+        duration = -1  
+        desc = supply_depot_area_tooltip
+        hidden = no
+    }
+    add_province_modifier = { 
+        name = coastal
+        duration = -1  
+        desc = supply_depot_area_tooltip
+        hidden = no
+    }
+    add_province_modifier = { 
+        name = por_makeshift_defenses
+        duration = -1  
+        desc = supply_depot_area_tooltip
+        hidden = no
+    }
+    add_province_modifier = { 
+        name = solanki_fortress
+        duration = -1  
+        desc = supply_depot_area_tooltip
+        hidden = no
+    }
+    add_province_modifier = { 
+        name = mug_south_bengal_mod
+        duration = -1  
+        desc = supply_depot_area_tooltip
+        hidden = no
+    }
+    add_province_modifier = { 
+        name = the_great_army_reorganization
+        duration = -1  
+        desc = desc_the_great_army_reorganization:0
+        hidden = no
+    }
+
+    add_province_modifier = { 
+        name = pol_breadbasket_europe_modifier
+        duration = -1  
+        desc = pol_breadbasket_europe_modifier:0
+        hidden = no
+    }
+}
+
+
+every_owned_province = {
+    limit = {
+        NOT = {
+            has_trade_company_investment_in_area  = {
+                investment = permanent_quarters
+                investor = ROOT
+            }
+        }
+    }
+    add_trade_company_investment = {
+        investor = ROOT
+        investment = permanent_quarters
+    }
+}
+
+
+every_subject_country = {
+    add_treasury=1
+
+    every_owned_province = {
+        add_province_modifier = { 
+            name = the_great_army_reorganization
+            duration = -1  
+            desc = desc_the_great_army_reorganization:0
+            hidden = no
+        }
+        add_province_modifier = { 
+            name = supply_depot_area
+            duration = -1  
+            desc = supply_depot_area_tooltip
+            hidden = no
+        }
+        add_province_modifier = { 
+            name = coastal
+            duration = -1  
+            desc = supply_depot_area_tooltip
+            hidden = no
+        }
+        add_province_modifier = { 
+            name = por_makeshift_defenses
+            duration = -1  
+            desc = supply_depot_area_tooltip
+            hidden = no
+        }
+        add_province_modifier = { 
+            name = solanki_fortress
+            duration = -1  
+            desc = supply_depot_area_tooltip
+            hidden = no
+        }
+        add_province_modifier = { 
+            name = mug_south_bengal_mod
+            duration = -1  
+            desc = supply_depot_area_tooltip
+            hidden = no
+        }
+        add_province_modifier = { 
+            name = pol_breadbasket_europe_modifier
+            duration = -1  
+            desc = pol_breadbasket_europe_modifier:0
+            hidden = no
+        }
+
+    }
+}
+
+add_treasury=1

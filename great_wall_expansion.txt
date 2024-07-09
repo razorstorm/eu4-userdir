@@ -1,0 +1,106 @@
+
+708 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+
+2182 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+
+699 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+
+698 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+
+4223 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+701 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+702 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+697 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+2136 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+
+1816 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+
+
+4194 = {
+    add_province_modifier = { 
+        name = mng_great_wall_china_expanded_modifier
+        duration = -1  
+        desc = mng_great_wall_china_expanded_modifier:0
+        hidden = yes
+    }
+}
+

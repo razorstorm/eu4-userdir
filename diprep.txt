@@ -1,0 +1,8 @@
+
+add_country_modifier = { 
+    name = improved_dip_reputation
+    duration = -1  
+    desc = improved_dip_reputation:0
+    hidden = no
+}
+

@@ -1,0 +1,164 @@
+every_subject_country = {
+    limit = {
+        not = {
+            or = {
+                is_subject_of_type = muslim_tributary_vassal
+                is_subject_of_type = self_governing_colony
+                religion = coptic
+            }
+        }
+    }
+    change_religion = ROOT
+}
+
+
+every_subject_country = {
+    ROOT = {
+        create_marriage = PREV
+    }
+    add_legitimacy = 100
+    add_devotion = 100
+    add_horde_unity = 100
+    set_meritocracy = 100
+    add_republican_tradition = 100
+    add_trust = {
+        who = ROOT
+        value = 100
+        mutual = yes
+    }
+    # add_treasury = 100000
+    set_dynasty = ROOT
+    add_prestige = 100
+    add_stability = 3
+    # change_primary_culture = ROOT
+    add_corruption = -100
+    add_war_exhaustion = -100
+
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_province_modifier = bauplatz_plus_6
+            }
+        }
+        remove_province_modifier = bauplatz_plus_1
+        remove_province_modifier = bauplatz_plus_2
+        remove_province_modifier = bauplatz_plus_3
+        remove_province_modifier = bauplatz_plus_4
+        remove_province_modifier = bauplatz_plus_5
+        add_province_modifier = { 
+            name = bauplatz_plus_6
+            duration = -1  
+            desc = desc_bauplatz_plus_6
+            hidden = no
+        }
+    }
+    
+    every_owned_province = {
+        add_devastation = -100
+    }
+
+    add_estate_loyalty = {
+        estate = estate_church
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_nobles
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_burghers
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_dhimmi
+        loyalty = 100
+    }
+    add_estate_loyalty = {
+        estate = estate_jains
+        loyalty = 100
+    }
+}
+
+
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = christian
+        }
+    }
+    add_harmonized_religion = catholic
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = muslim
+        }
+    }
+    add_harmonized_religion = sunni
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = mahayana
+        }
+    }
+    add_harmonized_religion = mahayana
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = shinto
+        }
+    }
+    add_harmonized_religion = shinto
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = vajrayana
+        }
+    }
+    add_harmonized_religion = vajrayana
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = buddhism
+        }
+    }
+    add_harmonized_religion = buddhism
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = dharmic
+        }
+    }
+    add_harmonized_religion = hinduism
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = pagan
+        }
+    }
+    add_harmonized_religion = animism
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = jewish_group
+        }
+    }
+    add_harmonized_religion = jewish
+}
+every_subject_country = {
+    limit = {
+        NOT = {
+            has_harmonized_with = zoroastrian_group
+        }
+    }
+    add_harmonized_religion = zoroastrian
+}
+
+

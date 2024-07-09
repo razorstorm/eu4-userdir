@@ -1,0 +1,819 @@
+random_province = {
+    limit = {
+        AND = {
+            superregion = andes_superregion
+            is_empty = yes
+        }
+    }
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+}
+
+
+764 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2907 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+849 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+4571 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+4572 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2626 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+852 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+4570 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2615 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+857 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+1186 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+1184 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+1185 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+1188 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+1196 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+865 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2629 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+861 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2645 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+856 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2906 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2920 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+768 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+4615 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2904 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2888 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+785 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2868 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2859 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2879 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2895 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2637 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+769 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+758 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2892 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2911 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+759 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2933 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2930 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+792 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2901 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+747 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2929 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2890 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2833 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+800 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+803 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+799 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2836 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2842 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2839 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2840 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2908 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2881 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2883 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2879 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2896 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+761 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2916 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2918 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+790 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+794 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+805 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2828 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+2903 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+821 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+815 = {
+    set_base_production = 20
+    set_base_tax = 12
+    set_base_manpower = 10
+    change_trade_goods = gold
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
+    add_province_modifier = {
+        name = inca_improved_gold_mining_province_modifier
+        duration = -1
+    }
+}
+
+
+
+# 2250 = {
+#     set_base_production = 15
+#     set_base_tax = 12
+#     set_base_manpower = 10
+#     change_trade_goods = gold
+#     remove_province_modifier = inca_improved_gold_mining_province_modifier
+#     add_province_modifier = {
+#         name = inca_improved_gold_mining_province_modifier
+#         duration = -1
+#     }
+# }
+
+# every_owned_province = {
+#     limit = {
+#         trade_goods = gold
+#         NOT = {
+#             base_production = 15
+#         }
+#     }
+#       if = {
+#           limit = {
+#               trade_goods = gold
+#           }
+#           add_province_modifier = {
+#              name = honest_administrators
+#              duration = -1
+#           }
+#           add_province_modifier = {
+#              name = zan_great_kilwa
+#              duration = -1
+#           }
+#           add_province_modifier = {
+#              name = hsa_center_of_mineral_trade
+#              duration = -1
+#           }
+#           add_province_modifier = {
+#              name = slo_mint
+#              duration = -1
+#           }
+#           add_province_modifier = {
+#              name = PLB_pelimbang
+#              duration = -1
+#           }
+#           add_province_modifier = {
+#              name = me_sty_the_austrian_economy
+#              duration = -1
+#           }
+#           remove_
+#     set_base_production = 20
+#     set_local_autonomy = 0
+# }
+
+# every_subject_country = {
+#     every_owned_province = {
+#         limit = {
+#             trade_goods = gold
+#             NOT = {
+#                 base_production = 15
+#             }
+#         }
+#         set_base_production = 20
+#         set_local_autonomy = 0
+#     }
+# }
+
+
+

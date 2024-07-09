@@ -1,0 +1,42 @@
+PRU = {
+    restore_country_name_effect = yes
+    swap_non_generic_missions = yes
+    set_government_rank = 2
+    east_prussia_area = {
+        limit = {
+            NOT = { owned_by = ROOT }
+        }
+        add_permanent_claim = PRU
+    }
+    west_prussia_area = {
+        limit = {
+            NOT = { owned_by = ROOT }
+        }
+        add_permanent_claim = PRU
+    }
+    change_government_to_monarchy = yes
+    add_government_reform = prussian_monarchy
+    if = {
+        limit = {
+            has_reform = states_general_reform
+        }
+        remove_government_reform = states_general_reform
+    }
+    add_prestige = 25
+    change_primary_culture = prussian
+    capital_scope = {
+        change_culture = prussian
+    }
+    every_owned_province = {
+        change_culture = prussian
+    }
+    if = {
+        limit = {
+            has_custom_ideas = no
+            NOT = { has_idea_group = PRU_ideas }
+        }
+        country_event = { id = ideagroups.1 } #Swap Ideas
+    }
+    set_country_flag = formed_prussia_flag
+    override_country_name = "Prussia"
+}

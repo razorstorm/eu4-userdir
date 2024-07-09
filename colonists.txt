@@ -1,0 +1,40 @@
+# This doesnt work for some reason: https://old.reddit.com/r/EU4modding/comments/16c6akv/testing_triggers_in_run_file_dont_seem_to_work/
+
+
+# Third time running, it should add "temporary_colonist"
+
+ROOT = {
+    limit = {
+        ROOT = {
+            has_country_modifier = colonize_the_continent
+        }
+    }
+    add_country_modifier = {
+        name = temporary_colonist
+        duration = -1
+    }
+}
+
+
+# Second time running, it should add "colonize_the_continent"
+
+ROOT = {
+    limit = {
+        has_country_modifier = spice_colony_modifier
+    }
+    add_treasury = 1
+    add_country_modifier = {
+        name = colonize_the_continent
+        duration = -1
+    }
+}
+
+
+# First time running, it should add "spice_colony_modifier"
+
+add_country_modifier = { 
+    name = spice_colony_modifier
+    duration = -1  
+    desc = spice_colony_modifier:0
+    hidden = no
+}

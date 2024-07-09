@@ -1,0 +1,78 @@
+add_country_modifier = { 
+    name = bargi_giri
+    duration = -1  
+    desc = bargi_giri:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = napoleon_manuever
+    duration = -1  
+    desc = napoleon_manuever:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = taming_provinces
+    duration = -1  
+    desc = taming_provinces:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = per_swift_horses_modifier
+    duration = -1  
+    desc = per_swift_horses_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = per_swift_horses2_modifier
+    duration = -1  
+    desc = per_swift_horses2_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = per_swift_horses3_modifier
+    duration = -1  
+    desc = per_swift_horses3_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = qizilbash_cavalry_modifier
+    duration = -1  
+    desc = qizilbash_cavalry_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = teu_crusade_horses_of_the_steppes
+    duration = -1  
+    desc = teu_crusade_horses_of_the_steppes:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = dlh_grand_trunk_road_modifier
+    duration = -1  
+    desc = dlh_grand_trunk_road_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = conquest_of_air
+    duration = -1  
+    desc = conquest_of_air:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = fra_provincial_road_system
+    duration = -1  
+    desc = fra_provincial_road_system:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = pru_thunderous_advance_modifier
+    duration = -1  
+    desc = pru_thunderous_advance_modifier:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = spa_long_range_logistics_modifier
+    duration = -1  
+    desc = spa_long_range_logistics_modifier:0
+    hidden = no
+}

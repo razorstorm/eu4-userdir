@@ -1,0 +1,21 @@
+add_country_modifier = { 
+    name = remnant_colonial_small
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = Y15_north_exploration
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = Y15_winds_winter
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = mykx_contracts_colonialists
+    duration = -1  
+}
+
+

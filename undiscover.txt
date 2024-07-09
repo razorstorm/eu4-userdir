@@ -1,0 +1,31 @@
+western_cannor_superregion = {
+    undiscover_country = I06
+}
+
+dameshead_sea_region = {
+    undiscover_country = I06
+}
+
+divenhal_sea_region = {
+    undiscover_country = I06
+}
+
+westcoast_region = {
+    undiscover_country = I06
+}
+
+salahad_superregion = {
+    undiscover_country = I06
+}
+
+eastern_sarhal_superregion = {
+    undiscover_country = I06
+}
+
+southern_sarhal_superregion = {
+    undiscover_country = I06
+}
+
+western_sarhal_superregion = {
+    undiscover_country = I06
+}

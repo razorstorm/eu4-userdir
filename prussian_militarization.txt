@@ -1,0 +1,18 @@
+
+add_country_modifier = { 
+    name = teu_pru_nobles_in_general_positions
+    duration = -1  
+}
+add_country_modifier = { 
+    name = empowered_junkers
+    duration = -1  
+}
+add_country_modifier = { 
+    name = prussian_cheat_modifier
+    duration = -1  
+}
+
+set_country_flag = GER_upgrade_the_junker_primacy_flag # first enable estate privilege "junker supremacy"
+set_country_flag = GER_buff_prussian_militarization
+
+add_government_reform = german_prussian_reform

@@ -1,0 +1,45 @@
+38 = {
+    remove_province_modifier = wrecked_by_factional_riots
+}
+
+1 = {
+    add_cardinal = yes
+}
+
+12 = {
+    add_cardinal = yes
+}
+
+14 = {
+    add_cardinal = yes
+}
+
+45 = {
+    add_cardinal = yes
+}
+
+25 = {
+    add_cardinal = yes
+}
+
+38 = {
+    add_cardinal = yes
+}
+
+4142 = {
+    add_cardinal = yes
+}
+
+
+8 = {
+    change_trade_goods = cloves
+    add_building = tradecompany
+}
+
+
+
+SHY = {
+    every_owned_province = {
+        decolonize = THIS
+    }
+}

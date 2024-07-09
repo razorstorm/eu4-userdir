@@ -1,0 +1,98 @@
+
+every_province = {
+    if = {
+        limit = {
+            AND = {
+                OR = {
+                    region = west_siberia_region
+                    region = east_siberia_region
+                }
+
+            }
+        }
+        decolonize = THIS
+    }
+}
+
+
+
+2429 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+1074 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+2427 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+1075 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS  
+    }
+}
+1071 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+2433 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS    
+    }
+}
+2432 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+2428 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+4688 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}
+4691 = {
+    if = {
+        not = {
+            owned_by = ROOT
+        }
+        decolonize = THIS
+    }
+}

@@ -1,5 +1,0 @@
-ROOT = {
-    remove_country_modifier = dishonoured_alliance
-    remove_country_modifier = defender_of_faith_refused_cta
-    remove_country_modifier = annexers_legacy
-}

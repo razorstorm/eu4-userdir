@@ -1,0 +1,88 @@
+every_owned_province = {
+
+    change_culture = ROOT
+    
+    remove_province_modifier = orcish_minority_oppressed_small
+    remove_province_modifier = orcish_minority_oppressed_large
+
+    remove_province_modifier = orcish_minority_oppressed_small
+    remove_province_modifier = orcish_minority_oppressed_large
+
+    remove_province_modifier = hobgoblin_minority_oppressed_small
+    remove_province_modifier = hobgoblin_minority_oppressed_large
+
+    remove_province_modifier = goblin_minority_oppressed_small
+    remove_province_modifier = goblin_minority_oppressed_large
+
+    remove_province_modifier = troll_minority_oppressed_small
+    remove_province_modifier = troll_minority_oppressed_large
+
+    remove_province_modifier = harpy_minority_oppressed_small
+    remove_province_modifier = harpy_minority_oppressed_large
+
+    remove_province_modifier = ogre_minority_oppressed_small
+    remove_province_modifier = ogre_minority_oppressed_large
+
+    remove_province_modifier = orcish_minority_oppressed_small
+    remove_province_modifier = orcish_minority_oppressed_large
+
+
+    remove_province_modifier = orcish_mmajority_oppressed_small
+    remove_province_modifier = orcish_mmajority_oppressed_large
+
+    remove_province_modifier = elven_minority_oppressed_small
+    remove_province_modifier = elven_minority_oppressed_large
+
+
+
+#   country_event = { 
+#       id = racial_pop_events_orcish.18
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_orcish.19
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_harpy.18
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_troll.19
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_troll.18
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+
+#   country_event = { 
+#       id = racial_pop_events_goblin.19
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_goblin.18
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+
+
+#   country_event = { 
+#       id = racial_pop_events_hobgoblin.19
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_hobgoblin.18
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+
+
+
+#   country_event = { 
+#       id = racial_pop_events_ogre.19
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+#   country_event = { 
+#       id = racial_pop_events_ogre.18
+#       tooltip = CELESTIAL_EMPIRE_TOOLTIP
+#   }
+}

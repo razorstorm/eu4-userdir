@@ -1,0 +1,96 @@
+
+every_subject_country = {
+    add_treasury = 100000
+    change_government = monarchy
+
+    add_country_modifier = { 
+        name = cossack_settlers
+        duration = -1  
+        desc = cossack_settlers:0
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = sea_route_to_india
+        duration = -1  
+        desc = sea_route_to_india:0
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = puritan_colonists
+        duration = -1  
+        desc = puritan_colonists:0
+        hidden = no
+    }
+
+    add_country_modifier = {
+        name = temporary_colonist
+        duration = -1
+    }
+
+
+    add_country_modifier = {
+        name = colonize_the_continent
+        duration = -1
+    }
+
+    add_country_modifier = { 
+        name = spice_colony_modifier
+        duration = -1  
+        desc = spice_colony_modifier:0
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = liv_lva_random_new_world_colonialism
+        duration = -1  
+        hidden = no
+    }
+    add_country_modifier = { 
+        name = swe_swedish_colonialism
+        duration = -1  
+        hidden = no
+    }
+
+    # ===========
+
+
+    add_country_modifier = { 
+        name = puritan_colonists
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = council_of_the_indies_mod
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = colonial_act_modifier
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = grand_vizier_colonial_governor
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = aid_natives
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = expand_colonial_territory
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = colonial_enthusiasm
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = agenda_colonial_administration
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = casa_de_contratacion
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = colonial_policy
+        duration = -1  
+    }
+}

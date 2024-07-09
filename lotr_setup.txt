@@ -1,0 +1,50 @@
+change_dip = 5
+
+add_ruler_personality = inspiring_leader_personality
+
+add_estate_influence_modifier = {
+    estate = estate_nobles
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -30
+    duration = -1
+}
+
+
+
+add_country_modifier = { 
+    name = more_policy_slots_kat
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = fra_imperial_messengers_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = swe_diplomat_from_the_north
+    duration = -1  
+}
+add_country_modifier = { 
+    name = sca_one_of_the_great_powers
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hun_hungary_poland
+    duration = -1  
+}
+add_country_modifier = { 
+    name = pol_polish_empire_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tur_eyalet_management
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mng_inner_branch_bureau_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = chyan_diplomacy_renown
+    duration = -1  
+}

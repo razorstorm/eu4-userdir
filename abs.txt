@@ -1,0 +1,66 @@
+add_country_modifier = { 
+    name = teu_pru_crushed_the_revolution
+    duration = -1  
+    desc = teu_pru_crushed_the_revolution:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = dan_danish_absolutism
+    duration = -1  
+    desc = dan_danish_absolutism:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = nor_absolute_monarchy
+    duration = -1  
+    desc = nor_absolute_monarchy:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = sca_great_empire_of_scandinavia
+    duration = -1  
+    desc = sca_great_empire_of_scandinavia:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = dan_great_empire_of_scandinavia
+    duration = -1  
+    desc = dan_great_empire_of_scandinavia:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = got_curtailing_the_estates
+    duration = -1  
+    desc = got_curtailing_the_estates:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = JAP_social_hierarchy
+    duration = -1  
+    desc = JAP_social_hierarchy:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = bav_bavarian_absolutism
+    duration = -1  
+    desc = bav_bavarian_absolutism:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = kon_absolute_rulership
+    duration = -1  
+    desc = kon_absolute_rulership:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = msi_centralization_focus
+    duration = -1  
+    desc = msi_centralization_focus:0
+    hidden = no
+}
+add_country_modifier = { 
+    name = pol_golden_era_modifier
+    duration = -1  
+    desc = pol_golden_era_modifier:0
+    hidden = no
+}

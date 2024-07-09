@@ -1,0 +1,8 @@
+
+every_province = {
+    remove_cardinal = yes
+}
+
+every_owned_province = {
+    add_cardinal = yes
+}

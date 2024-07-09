@@ -1,0 +1,4 @@
+add_estate_loyalty = {
+    estate = all
+    loyalty = 100
+}

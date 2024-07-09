@@ -1,0 +1,5 @@
+every_subject_country = {
+    every_owned_province = {
+        remove_claim = ROOT
+    }
+}

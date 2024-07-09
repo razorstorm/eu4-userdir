@@ -1,0 +1,18 @@
+add_country_modifier = { 
+    name = dwarovar_adventurer_legacy_4
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = tluukt_means_family
+    duration = -1  
+}
+add_country_modifier = { 
+    name = siadan_the_siadanlen_express_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = siadan_imperial_courier_service
+    duration = -1  
+}
+

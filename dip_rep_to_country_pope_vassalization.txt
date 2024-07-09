@@ -1,0 +1,6 @@
+add_country_modifier = {
+    name = karma_just_right
+    duration = -1  
+    desc = karma_just_right:0
+    hidden = no
+}
