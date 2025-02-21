@@ -1,132 +1,94 @@
 add_country_modifier = { 
     name = liv_lva_random_new_world_colonialism
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = swe_swedish_colonialism
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = dan_new_world_expansion
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = nor_colonial_enthusiasm
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = sca_nor_curiosity_of_the_forefathers
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = eng_australian_colony
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = gbr_colonial_australia
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = the_darien_scheme
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = spa_hispaniola_discovered
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = irish_new_world
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = fra_to_india
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = fra_colonial_enthusiasm
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = fra_colonial_enthusiasm_2
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = gen_america_holding_mod
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = rus_expansion_into_siberia
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = mor_colonized_brazil
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = adu_new_world_discoveries
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = hab_austrian_netherlands
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = bri_colonialism
     duration = -1  
-    desc = mod_lessTime:0
-    hidden = no
 }

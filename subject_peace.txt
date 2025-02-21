@@ -1,0 +1,9 @@
+every_subject_country = {
+    save_event_target_as = subject
+    ROOT = {
+        every_subject_country = {
+            white_peace = event_target:subject 
+            add_truce_with = event_target:subject 
+        }
+    }
+}

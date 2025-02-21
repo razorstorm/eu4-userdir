@@ -1,0 +1,30 @@
+# movement_speed_in_fleet_modifier
+
+add_country_modifier = { 
+    name = caravel_ship
+    duration = -1  
+}
+add_country_modifier = { 
+    name = naval_armament_act
+    duration = -1  
+}
+add_country_modifier = { 
+    name = GER_hanseatic_doctrine_upgrade
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ned_one_world
+    duration = -1  
+}
+add_country_modifier = { 
+    name = SUN_doctrine
+    duration = -1  
+}
+add_country_modifier = { 
+    name = norwegian_sailors_upgraded
+    duration = -1  
+}
+add_country_modifier = { 
+    name = standardized_signal_book
+    duration = -1  
+}

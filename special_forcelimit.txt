@@ -1,0 +1,26 @@
+add_country_modifier = { 
+    name = mass_revolutionary_guard_modifier_country
+    duration = -1  
+}
+add_country_modifier = { 
+    name = mjz_hordesons_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tur_janissary_loyalty
+    duration = -1  
+}
+every_owned_province = {
+    add_province_modifier = { 
+        name = mass_revolutionary_guard_modifier_country
+        duration = -1  
+    }
+    add_province_modifier = { 
+        name = mjz_hordesons_modifier
+        duration = -1  
+    }
+    add_province_modifier = { 
+        name = tur_janissary_loyalty
+        duration = -1  
+    }
+}

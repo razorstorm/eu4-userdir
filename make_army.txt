@@ -1,14 +1,4 @@
-464 = {
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
-    infantry = ROOT
+CAPITAL_SCOPE = {
     infantry = ROOT
     infantry = ROOT
     infantry = ROOT
@@ -40,11 +30,23 @@
     infantry = ROOT
     infantry = ROOT
 
+
     cavalry = ROOT
     cavalry = ROOT
     cavalry = ROOT
     cavalry = ROOT
     cavalry = ROOT
 
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
+    artillery = ROOT
     artillery = ROOT
 }

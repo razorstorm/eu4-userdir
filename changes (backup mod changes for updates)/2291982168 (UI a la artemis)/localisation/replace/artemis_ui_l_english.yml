@@ -143,23 +143,23 @@
  # INSULTPOWERPROJECTIONGAIN:0 "We will gain $VALUE|Y$ PP Size"
 
  ######## Clearly you are murdering the heirs as that was most likely tha cause back then
- DISINHERIT_NOT_MONARCHY:0 "Only monarchies have balconies that allow heir-throwing!"
- DISINHERIT_NOT_DURING_REGENCY:0 "It is not possible to throw an heir from a balcony during a Regency! WEAK!"
- DISINHERIT_LOW_PRESTIGE:0 "Prestige needs to be at least $NEED|Y$ to be able to throw heirs from balconies."
- DISINHERIT_PERFORM_IRO1:0 "Throw $HEIR|Y$ from a balcony and hope for a more capable heir.\nThis will give a hit of $PRESTIGE_HIT|R$ prestige from this action."
- DISINHERITTITLE:0 "Throw from a balcony!"
- DISINHERIT_NOT_HEIR:0 "You currently have no heir which can be thrown from a balcony!"
- DISINHERIT_SUBJECT:0 "Cannot throw your overlord's heir from a balcony!"
- DISINHERIT_PENDING_EVENT:0 "Cannot throw babbies from balconies while there are pending events!"
- HEIR_DISINHERIT_HEADER:0 "Great throw! A new record!"
- HEIR_DISINHERIT_2:0 "has been yeeted"
+ # DISINHERIT_NOT_MONARCHY:0 "Only monarchies have balconies that allow heir-throwing!"
+ # DISINHERIT_NOT_DURING_REGENCY:0 "It is not possible to throw an heir from a balcony during a Regency! WEAK!"
+ # DISINHERIT_LOW_PRESTIGE:0 "Prestige needs to be at least $NEED|Y$ to be able to throw heirs from balconies."
+ # DISINHERIT_PERFORM_IRO1:0 "Throw $HEIR|Y$ from a balcony and hope for a more capable heir.\nThis will give a hit of $PRESTIGE_HIT|R$ prestige from this action."
+ # DISINHERITTITLE:0 "Throw from a balcony!"
+ # DISINHERIT_NOT_HEIR:0 "You currently have no heir which can be thrown from a balcony!"
+ # DISINHERIT_SUBJECT:0 "Cannot throw your overlord's heir from a balcony!"
+ # DISINHERIT_PENDING_EVENT:0 "Cannot throw babbies from balconies while there are pending events!"
+ # HEIR_DISINHERIT_HEADER:0 "Great throw! A new record!"
+ # HEIR_DISINHERIT_2:0 "has been yeeted"
  HEIR_DISINHERIT_3:0 "from our line of succession."
  HEIR_DISINHERIT_4:0 "This has given us a new chance for future greatness."
- HEIR_DISINHERIT_LOG:0 "We have thrown $HEIRNAME$ from a balcony."
+ # HEIR_DISINHERIT_LOG:0 "We have thrown $HEIRNAME$ from a balcony."
  COURT_Abdicate:0 "Abdicate"
  COURT_Extend_Regency:0 "Extend Regency"
  COURT_Support_Heir:0 "Support Heir"
- COURT_Yeet:0 "Yeet"
+ # COURT_Yeet:0 "Yeet"
  COURT_Assign_Heir:0 "Assign Heir"
 
  ####### Reminder that that age bonus ended and you should disable war taxes
@@ -223,7 +223,7 @@
  FIRE_PHASE:0 "£icon_fire£ Fire"
 
  ####### REstore buildings in provinceview
- RESTORE_BUILDINGS_TEXT:0 "You scared buildings away \nClick here to call them back"
+ RESTORE_BUILDINGS_TEXT:0 "Click to refresh buildings"
 
  ##### Warning on declare war
  WARN_NAVIES_OUT_OF_PORT:0 "§RSome of your navies are out of port!§!"
@@ -243,7 +243,7 @@
  nocasusbelli:0 "No CB best CB"
  
  ########### Artemis button
- artemis_button_1:1 "Artemis UI Enabled      \n     Funny lines Enabled2    \n     Let them eat cake!!"
+ artemis_button_1:1 "Artemis UI Enabled"
  button_artemis_ui:0 "artemis ddd"
  
  ######### Recruit general ... Who shall lead

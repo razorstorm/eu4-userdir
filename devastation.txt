@@ -1,3 +1,9 @@
 every_owned_province = {
     add_devastation = -100
 }
+
+every_subject_country = {
+    every_owned_province = {
+        add_devastation = -100
+    }
+}

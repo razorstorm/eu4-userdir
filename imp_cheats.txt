@@ -5,22 +5,75 @@ every_owned_province = {
     }       
 }
 
-define_ruler = {
-    dynasty = "Caesar Immortalis"
-    name = "Augustus"
-    claim = 100
-    culture = etruscan
-    age = 22
-    adm = 6
-    dip = 6
-    mil = 6
-    male = yes
-    fixed = yes
+CAPITAL_SCOPE = {
+    add_building = harbor_district
 }
-add_ruler_personality = roman_king_immortal_personality
-add_ruler_personality = strict_personality
-add_ruler_personality = legendary_leader_personality
-add_ruler_personality = aggressive_personality
-add_ruler_personality = the_great_personality
 
-clr_country_flag = tarquinius_superbus 
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = land_reclamation_5
+        duration = -1
+    }
+}
+
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+    center_of_trade = 3
+    add_center_of_trade_level = 3
+}
+
+
+CAPITAL_SCOPE = {
+    add_building = harbor_district
+}
+
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = land_reclamation_5
+        duration = -1
+    }
+}
+
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+    center_of_trade = 3
+    add_center_of_trade_level = 3
+}
+
+remove_country_modifier = no_respect_for_army_modifier
+remove_country_modifier = poor_recruitment_modifier
+
+clr_country_flag = SD_lostpriv_status_1
+clr_country_flag = SD_lostpriv_status_2
+clr_country_flag = SD_lostpriv_status_3
+clr_country_flag = SD_lostpriv_status_4
+clr_country_flag = SD_lostpriv_status_5
+clr_country_flag = SD_lostpriv_status_6
+
+clr_country_flag = SD_lostpriv_condition_1
+clr_country_flag = SD_lostpriv_condition_2
+clr_country_flag = SD_lostpriv_condition_3
+clr_country_flag = SD_lostpriv_condition_4
+clr_country_flag = SD_lostpriv_condition_5
+clr_country_flag = SD_lostpriv_condition_6
+clr_country_flag = SD_lostpriv_condition_7
+
+clr_country_flag = SD_lostpriv_jobs_1
+clr_country_flag = SD_lostpriv_jobs_2
+clr_country_flag = SD_lostpriv_jobs_3
+clr_country_flag = SD_lostpriv_jobs_4
+clr_country_flag = SD_lostpriv_jobs_5
+
+set_country_flag = SD_lostpriv_condition_3
+set_country_flag = SD_lostpriv_jobs_5
+set_country_flag = SD_lostpriv_status_5
+
+country_event = {
+    id = slaves.6
+}

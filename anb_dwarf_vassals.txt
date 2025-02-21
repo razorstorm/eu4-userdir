@@ -1,0 +1,51 @@
+Dwarven Empire
+I24 Aul-Dwarov
+
+------
+Dwarven Holds
+
+F23 Ovdal Tungr
+F47 Verkal Gulan
+H76 Arg Ordstun
+H77 Ovdal Ludhum
+H78 Seghdihr
+H79 Ovdal Kanzad
+I01 Amldihr
+I02 Krakdhumvror
+I05 Mithradhum
+I06	Er Natvir
+I07 Khugdihr
+I08 Haraz Orldhum
+I12 Orlghelovar
+I13 Verkal Skomdihr
+I15 Hehodovar
+I16 Gor Burad
+I18 Grozumdihr
+I20 Hul-az-Krakazol
+I21 Tuwad-Dhumakon
+I22 Gronstunad
+I25 Verkal Dromak
+
+------
+Enslaved Holds
+
+R81 Jade March
+
+------
+Far Holds 
+
+A20 Ruby Hold
+Y63 Verkal Ozovar
+
+------
+Expeditions
+
+H69 Silverforge Expedition/Forgemaster Union
+H70 Blueshield Company
+H96 Mithril Arm Cartel
+H68 Ruby Company
+
+------
+Other
+
+I45 Cyranvar

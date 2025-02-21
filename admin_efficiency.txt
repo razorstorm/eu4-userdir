@@ -1,138 +1,73 @@
-
-
 add_country_modifier = { 
     name = mug_viceroyalty_of_the_deccan
     duration = -1  
-    desc = mug_viceroyalty_of_the_deccan:0
-    hidden = no
 }
-
-
 add_country_modifier = { 
     name = fall_of_china
     duration = -1  
-    desc = fall_of_china:0
-    hidden = no
 }
-
-
-
 add_country_modifier = { 
     name = ger_kaiserreich
     duration = -1  
-    desc = ger_kaiserreich:0
-    hidden = no
 }
-
-
 add_country_modifier = { 
     name = hab_supreme_in_europe
     duration = -1  
-    desc = hab_supreme_in_europe:0
-    hidden = no
 }
-
-
-
 add_country_modifier = { 
     name = bur_carolingia
     duration = -1  
-    desc = bur_carolingia:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = sav_alpine_powerhouse
     duration = -1  
-    desc = sav_alpine_powerhouse:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = pru_german_confederation
     duration = -1  
-    desc = pru_german_confederation:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = french_revolution_mission
     duration = -1  
-    desc = french_revolution_mission:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = pap_papal_press_rb
     duration = -1  
-    desc = pap_papal_press_rb:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = lit_efficient_leg_proceedings_modifier
     duration = -1  
-    desc = lit_efficient_leg_proceedings_modifier:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = teu_pru_embraced_the_revolution
     duration = -1  
-    desc = teu_pru_embraced_the_revolution:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = swe_might_of_the_varangians
     duration = -1  
-    desc = swe_might_of_the_varangians:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = rus_reactionary_zeal
     duration = -1  
-    desc = rus_reactionary_zeal:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = pap_papal_press_no_rb
     duration = -1  
-    desc = pap_papal_press_no_rb:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = peasant_revolutionary_zeal
     duration = -1  
-    desc = peasant_revolutionary_zeal:0
-    hidden = no
 }
-
-
-
-
 
 add_country_modifier = { 
     name = bng_orissa_conquest
     duration = -1  
-    desc = bng_orissa_conquest:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = terrified_china
     duration = -1  
-    desc = terrified_china:0
-    hidden = no
 }
-
 add_country_modifier = { 
     name = mongol_european_conquest
     duration = -1  
-    desc = mongol_european_conquest:0
-    hidden = no
 }
-

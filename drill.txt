@@ -1,54 +1,41 @@
 add_country_modifier = { 
     name = pro_la_marseillaise
     duration = -1  
-    desc = pro_la_marseillaise:0
-    hidden = no
 }
 add_country_modifier = { 
     name = bav_professional_army
     duration = -1  
-    desc = bav_professional_army:0
-    hidden = no
 }
 add_country_modifier = { 
     name = pru_space_marines
     duration = -1  
-    desc = pru_space_marines:0
-    hidden = no
 }
 add_country_modifier = { 
     name = pru_space_marines_2
     duration = -1  
-    desc = pru_space_marines_2:0
-    hidden = no
 }
 add_country_modifier = { 
     name = kon_permanent_army_level_1
     duration = -1  
-    desc = kon_permanent_army_level_1:0
-    hidden = no
 }
 add_country_modifier = { 
     name = ada_professional_army
     duration = -1  
-    desc = ada_professional_army:0
-    hidden = no
 }
 add_country_modifier = { 
     name = pol_modernized_army_modifier
     duration = -1  
-    desc = pol_modernized_army_modifier:0
-    hidden = no
 }
 add_country_modifier = { 
     name = liv_militarized_knights
     duration = -1  
-    desc = liv_militarized_knights:0
-    hidden = no
 }
 add_country_modifier = { 
     name = dan_sca_refocus_on_personal_armies
     duration = -1  
-    desc = dan_sca_refocus_on_personal_armies:0
-    hidden = no
+}
+
+add_country_modifier = {
+    name = drill_cheat
+    duration = -1
 }

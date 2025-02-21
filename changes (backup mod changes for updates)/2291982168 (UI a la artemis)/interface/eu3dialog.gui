@@ -17,9 +17,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "DefaultDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -123,9 +123,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "DefaultDialogResizeable"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-225 y=-160 }
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -228,9 +228,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "DefaultConfirm"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }	
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -303,9 +303,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "DefaultInfoDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -368,9 +368,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "ShieldedInformationDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -447,9 +447,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "DefaultPopup"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }
 		size = { x=500 y=520 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -626,9 +626,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "ConfirmAndNameLeaderDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-250 y=-310 }	
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -638,6 +638,12 @@ guiTypes = {
 		guiButtonType = {
 			name = "Background"	
 			quadTextureSprite ="SandboxFloaterBackground"
+		}
+
+		guiButtonType = {
+			name = "Background1"	
+			quadTextureSprite ="console_background_console"
+			size = { x=500 y=420 }
 		}
 		
 		iconType =
@@ -649,7 +655,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 				name = "Title"
-				position = { x = 59 y = 36 }
+				position = { x = 59 y = 36000 }
 				textureFile = ""
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
@@ -662,7 +668,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 				name = "Description"
-				position = { x = 59 y = 75 }
+				position = { x = 59 y = 36 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
@@ -722,9 +728,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "ConfirmAndNameTeamDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }	
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -804,9 +810,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "ConfirmRemoveTeamDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }	
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -870,9 +876,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "NewColonyDialog"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }	
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -1411,9 +1417,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "NewColonyForeignDialog"
 		backGround="Background"
-		position = { x=50 y=50 }	
+		position = { x=-275 y=-310 }	
 		size = { x=500 y=420 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -2205,9 +2211,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "ImportantConfirm"
 		backGround="Background"
-		position = { x=50 y=50 }
+		position = { x=-275 y=-310 }	
 		size = { x=500 y=320 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""
@@ -2272,9 +2278,9 @@ guiTypes = {
 	eu3dialogtype = {
 		name = "ImperialIncidentPopup"
 		backGround="Background"
-		position = { x=50 y=50 }  	
+		position = { x=-320 y=-430 }	
 		size = { x=500 y=320 }
-		orientation="UPPER_LEFT"
+		orientation="CENTER"
 		moveable = 1
 		dontRender = ""
 		horizontalBorder= ""

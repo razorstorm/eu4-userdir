@@ -1,0 +1,24 @@
+add_country_modifier = {
+    name = respect_faamatai_mod
+    duration = -1
+}
+add_country_modifier = {
+    name = loyalist_leader_mod
+    duration = -1
+}
+add_country_modifier = {
+    name = monumental_pride
+    duration = -1
+}
+add_country_modifier = {
+    name = sukkot_modifier
+    duration = -1
+}
+add_country_modifier = {
+    name = civic_republicanism_focus_stability
+    duration = -1
+}
+add_country_modifier = {
+    name = reduced_stability_cost
+    duration = -1
+}

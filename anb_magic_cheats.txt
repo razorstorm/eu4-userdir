@@ -66,4 +66,23 @@ every_owned_province = {
     }
 }
 
-# Plant Growth III
+# Plant Growth IV
+every_owned_province = {
+    add_province_modifier = {
+        name = magic_realm_transmutation_plant_growth_4
+        duration = -1
+    }
+}
+
+
+# Foresight 
+add_country_modifier = {
+    name = magic_realm_divination_foresight
+    duration = -1
+}
+
+# Magnificent Feast
+add_country_modifier = {
+    name = magic_estate_magnificent_feast_3
+    duration = -1
+}

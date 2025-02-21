@@ -2,7 +2,105 @@
 add_country_modifier = { 
     name = improved_dip_reputation
     duration = -1  
-    desc = improved_dip_reputation:0
-    hidden = no
 }
 
+add_country_modifier = { 
+    name = hol_de_witt
+    duration = -1  
+}
+add_country_modifier = { 
+    name = jap_sword_of_the_daimyo
+    duration = -1  
+}
+add_country_modifier = { 
+    name = enhanced_reputation
+    duration = -1  
+}
+add_country_modifier = { 
+    name = popular_noble
+    duration = -1  
+}
+add_country_modifier = { 
+    name = guru_har_rai
+    duration = -1  
+}
+add_country_modifier = { 
+    name = wih_louise_pru
+    duration = -1  
+}
+add_country_modifier = { 
+    name = wih_abigail_adams
+    duration = -1  
+}
+add_country_modifier = { 
+    name = wih_ohatsu
+    duration = -1  
+}
+add_country_modifier = { 
+    name = wih_marthawashington
+    duration = -1  
+}
+add_country_modifier = { 
+    name = wih_nanyehi
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tengri_monks_in_capital
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tengri_tea_ceremony
+    duration = -1  
+}
+add_country_modifier = { 
+    name = foreign_contacts
+    duration = -1  
+}
+add_country_modifier = { 
+    name = the_chewa
+    duration = -1  
+}
+add_country_modifier = { 
+    name = excellent_diplomacy_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = tributary_diplomatic_influence
+    duration = -1  
+}
+add_country_modifier = { 
+    name = influential_tributary_network
+    duration = -1  
+}
+add_country_modifier = { 
+    name = harmonized_dharmic
+    duration = -1  
+}
+add_country_modifier = { 
+    name = adherence_to_shogunate
+    duration = -1  
+}
+add_country_modifier = { 
+    name = growing_power_of_the_shogunate
+    duration = -1  
+}
+add_country_modifier = { 
+    name = rajput_connections
+    duration = -1  
+}
+add_country_modifier = { 
+    name = fair_land_negotiations
+    duration = -1  
+}
+add_country_modifier = { 
+    name = eng_end_of_the_english_reformation
+    duration = -1  
+}
+add_country_modifier = { 
+    name = borgia_diplomacy
+    duration = -1  
+}
+add_country_modifier = { 
+    name = reliable_papal_banker
+    duration = -1  
+}

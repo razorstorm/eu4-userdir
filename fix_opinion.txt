@@ -3,9 +3,28 @@ every_country = {
         who = ROOT
         modifier = opinion_annex_vassal
     }
+
+    remove_opinion = {
+        who = ROOT
+        modifier = converted_our_culture
+    }
+
+    remove_opinion = {
+        who = ROOT
+        modifier = refused_to_give_sailors_for_favors
+    }
+
+    remove_opinion = {
+        who = ROOT
+        modifier = refused_to_give_sailors_for_favors
+    }
     remove_opinion = {
         who = ROOT
         modifier = opinion_unlawful_territory
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = opinion_annex_part_of_empire
     }
     remove_opinion = {
         who = ROOT
@@ -26,6 +45,18 @@ every_country = {
     remove_opinion = {
         who = ROOT
         modifier = declared_war_on_us
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = want_your_provinces
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = want_subject_provinces
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = want_your_and_subject_provinces
     }
     remove_opinion = {
         who = ROOT
@@ -75,10 +106,6 @@ every_country = {
         who = ROOT
         modifier = discovery_of_evil
     }
-    # remove_opinion = {
-    #     who = ROOT
-    #     modifier = is_hegemon
-    # }
     remove_opinion = {
         who = ROOT
         modifier = claimed_throne_of_imperial
@@ -90,11 +117,6 @@ every_country = {
     remove_opinion = {
         who = ROOT
         modifier = claimed_throne_other_rm
-    }
-
-    add_opinion = {
-        who = ROOT 
-        modifier = opinion_friendliness  # counteract hegemon which cannot be removed
     }
 }
 

@@ -51,7 +51,7 @@ mapRenderingOptions={
 	draw_ambient_objects=yes
 	draw_particles=yes
 	moving_units=no
-	minimap_units=yes
+	minimap_units=no
 	draw_terrain_in_uncolonized=yes
 	draw_state_borders=yes
 	use_compact_battle_result=no
@@ -62,13 +62,13 @@ centered_zoom_in=yes
 lastplayer="Player"
 lasthost=""
 debug_saves=0
-autosave="MONTHLY"
+autosave="HALFYEAR"
 autosave_tocloud=no
 compress_autosave=no
 compress_saves=no
 difficulty="LUCK_NONE"
 outliner={
-	16 20 2 3 15 17 7 14 4 12 5 6 8 
+	16 20 2 3 14 4 12 15 6 7 17 5 8 
 }
 outliner_open=yes
 messagelist_open=yes
@@ -84,7 +84,6 @@ disabled_alert_names={
 	"alert_reinforcing_units"
 	"alert_condottieri_ai_hire"
 	"alert_country_at_war"
-	"great_project_can_be_upgraded"
 	"alert_max_monarch_power"
 	"alert_high_overextension"
 	"alert_trade_company_investment"
@@ -92,6 +91,8 @@ disabled_alert_names={
 	"can_estate_call_diet"
 	"can_estate_sell_land"
 	"can_upgrade_trade_centre"
+	"great_project_can_be_upgraded"
+	"alert_fervor"
 }
 diplomacy_popup={
 	10 

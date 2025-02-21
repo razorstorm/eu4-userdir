@@ -1,0 +1,83 @@
+# Byzantium Colors
+
+
+change_country_color = { 
+    color = { 160 0 102 }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = march
+        }
+    }
+
+    change_country_color = { 
+        color = { 170 30 50 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = pronoia_subject_type
+            is_subject_of_type = hereditary_pronoia_subject_type
+        }
+    }
+
+    change_country_color = { 
+        color = { 160 60 122 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = vassal
+            is_subject_of_type = exarchate_subject
+        }
+    }
+
+    change_country_color = { 
+        color = { 180 70 132 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = agricultural_march
+        }
+    }
+
+    change_country_color = { 
+        color = { 150 50 130 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = se_integrated_personal_union
+            is_subject_of_type = personal_union
+            is_subject_of_type = brother_kingdom
+        }
+    }
+
+    change_country_color = { 
+        color = { 112 41 99 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = naval_march
+            is_subject_of_type = pirate_brotherhood_vassal
+        }
+    }
+
+    change_country_color = { 
+        country = SYR
+    }
+}

@@ -1,0 +1,10 @@
+every_owned_province = {
+    add_province_modifier = {
+        name = recruits_flock
+        duration = -1
+    }
+    add_province_modifier = {
+        name = wei_suo_system_reform_soldier_households_modifier
+        duration = -1
+    }
+}

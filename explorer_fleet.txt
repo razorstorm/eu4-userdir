@@ -1,0 +1,7 @@
+CAPITAL_SCOPE = {
+    light_ship = ROOT
+    light_ship = ROOT
+    light_ship = ROOT
+    light_ship = ROOT
+    light_ship = ROOT
+}

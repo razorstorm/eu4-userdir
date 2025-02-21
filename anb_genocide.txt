@@ -1,5 +1,4 @@
 every_owned_province = {
-
     change_culture = ROOT
     
     remove_province_modifier = orcish_minority_oppressed_small
@@ -27,8 +26,8 @@ every_owned_province = {
     remove_province_modifier = orcish_minority_oppressed_large
 
 
-    remove_province_modifier = orcish_mmajority_oppressed_small
-    remove_province_modifier = orcish_mmajority_oppressed_large
+    remove_province_modifier = orcish_majority_oppressed_small
+    remove_province_modifier = orcish_majority_oppressed_large
 
     remove_province_modifier = elven_minority_oppressed_small
     remove_province_modifier = elven_minority_oppressed_large

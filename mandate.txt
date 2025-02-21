@@ -1,97 +1,69 @@
 add_country_modifier = { 
     name = new_mandate_holder
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = mukden_palace_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
-}
-
-add_country_modifier = { 
-    name = kor_emperor_of_china
-    duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
-}
-
-add_country_modifier = { 
-    name = siam_mandate_modifier
-    duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = mng_empowered_admonishment_branch_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
+}
+
+add_country_modifier = { 
+    name = kor_emperor_of_china
+    duration = -1  
+}
+
+add_country_modifier = { 
+    name = siam_mandate_modifier
+    duration = -1  
 }
 
 add_country_modifier = { 
     name = mng_first_circumnavigation_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = mng_heavens_favor_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = mjz_formalized_confucian_practices_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = qng_ten_campaigns_planning_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = qng_new_chinese_dynasty_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = qng_subjugation_of_burma_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = chi_rising_dynasty_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = jap_era_tranquil_sun_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }
 
 add_country_modifier = { 
     name = mukden_palace_modifier
     duration = -1  
-    desc = new_mandate_holder:0
-    hidden = no
 }

@@ -1,0 +1,125 @@
+log = "Running Shift Development"
+log = "======================================="
+every_subject_country = {
+	log = "Processing vassal [This.GetName]"
+	ROOT = {
+		set_variable = {
+			which = taxShift
+			value = 0
+		}
+		set_variable = {
+			which = prodShift
+			value = 0
+		}
+		set_variable = {
+			which = manpowerShift
+			value = 0
+		}		
+	}
+	every_owned_province = {
+		limit = {
+			base_tax = 3
+		}
+		add_base_tax = -1
+		ROOT = {
+			change_variable = {
+				which = taxShift
+				value = 1
+			}
+			log = "Removing tax from [Prev.GetName] [ROOT.taxShift.GetValue]"
+		}
+	}
+	every_owned_province = {
+		limit = {
+			base_production = 3
+		}
+		add_base_production = -1
+		ROOT = {
+			change_variable = {
+				which = prodShift
+				value = 1
+			}
+			log = "Removing production from [Prev.GetName] [ROOT.prodShift.GetValue]"
+		}
+	}
+	every_owned_province = {
+		limit = {
+			base_manpower = 3
+		}
+		add_base_manpower = -1
+		ROOT = {
+			change_variable = {
+				which = manpowerShift
+				value = 1
+			}
+			log = "Removing manpower from [Prev.GetName] [ROOT.manpowerShift.GetValue]"
+		}
+	}
+
+	ROOT = {
+		log = "Finished removing dev from [This.GetName]. Tax: [ROOT.taxShift.GetValue] Production: [ROOT.prodShift.GetValue] Manpower: [ROOT.manpowerShift.GetValue]"
+		log = "----"
+	}
+
+	ROOT = {
+		while = {
+			limit = {
+				check_variable = {
+					which = taxShift
+					value = 1
+				}
+			}
+
+			random_owned_province = {
+				add_base_tax = 1
+				ROOT = {
+					log = "Shifting tax into [Prev.GetName] [ROOT.taxShift.GetValue]"
+					change_variable = {
+						which = taxShift
+						value = -1
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = prodShift
+					value = 1
+				}
+			}
+
+			random_owned_province = {
+				add_base_production = 1
+				ROOT = {
+					log = "Shifting production into [Prev.GetName] [ROOT.prodShift.GetValue]"
+					change_variable = {
+						which = prodShift
+						value = -1
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = manpowerShift
+					value = 1
+				}
+			}
+
+			random_owned_province = {
+				add_base_manpower = 1
+				ROOT = {
+					log = "Shifting manpower into [Prev.GetName] [ROOT.manpowerShift.GetValue]"
+					change_variable = {
+						which = manpowerShift
+						value = -1
+					}
+				}
+			}
+		}
+	}
+
+	log = "------------------------"
+}

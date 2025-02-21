@@ -1,0 +1,426 @@
+remove_country_modifier = administrative_stress_modifier_1
+remove_country_modifier = administrative_stress_modifier_2
+remove_country_modifier = administrative_stress_modifier_3
+remove_country_modifier = administrative_stress_modifier_4
+remove_country_modifier = administrative_stress_modifier_5
+
+remove_country_modifier = inefficient_land_organization_modifier_1
+remove_country_modifier = inefficient_land_organization_modifier_2
+remove_country_modifier = inefficient_land_organization_modifier_3
+remove_country_modifier = inefficient_land_organization_modifier_4
+remove_country_modifier = inefficient_land_organization_modifier_5
+
+
+# ====================== Pop Capacity
+
+CAPITAL_SCOPE = {
+    add_building = harbor_district
+}
+
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = land_reclamation_5
+        duration = -1
+    }
+}
+
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+    center_of_trade = 3
+    add_center_of_trade_level = 3
+}
+
+# ============================================
+
+remove_country_modifier = no_respect_for_army_modifier
+remove_country_modifier = poor_recruitment_modifier
+
+define_general = {
+    name = "Wang Jian"
+    shock = 6
+    fire = 6
+    manuever = 6
+    siege = 6
+}
+
+
+# ============= Removing balance modifiers 
+
+country_event = startup.4
+
+event startup.4
+
+
+# ============= Slave privileges ==========
+
+# Game is buggy and won't let you change slave privileges. Use this to do it
+
+clr_country_flag = SD_lostpriv_status_1
+clr_country_flag = SD_lostpriv_status_2
+clr_country_flag = SD_lostpriv_status_3
+clr_country_flag = SD_lostpriv_status_4
+clr_country_flag = SD_lostpriv_status_5
+clr_country_flag = SD_lostpriv_status_6
+
+clr_country_flag = SD_lostpriv_condition_1
+clr_country_flag = SD_lostpriv_condition_2
+clr_country_flag = SD_lostpriv_condition_3
+clr_country_flag = SD_lostpriv_condition_4
+clr_country_flag = SD_lostpriv_condition_5
+clr_country_flag = SD_lostpriv_condition_6
+clr_country_flag = SD_lostpriv_condition_7
+
+clr_country_flag = SD_lostpriv_jobs_1
+clr_country_flag = SD_lostpriv_jobs_2
+clr_country_flag = SD_lostpriv_jobs_3
+clr_country_flag = SD_lostpriv_jobs_4
+clr_country_flag = SD_lostpriv_jobs_5
+
+set_country_flag = SD_lostpriv_condition_3
+set_country_flag = SD_lostpriv_jobs_5
+set_country_flag = SD_lostpriv_status_5
+
+country_event = {
+    id = slaves.6
+}
+
+
+# ================== Rebalancing enemies =========
+every_country = {
+    limit = {
+        OR = {
+            tag = CHU
+            tag = WEI
+            tag = HAN
+            tag = ZHA
+            tag = YAN
+            tag = QI
+        }
+    }
+    add_country_modifier = {
+        name = free_income_cheat
+        duration = -1
+    }
+    add_country_modifier = {
+        name = jason_mod_more_leader_limit
+        duration = -1
+    }
+    add_country_modifier = {
+        name = jason_mod_more_forcelimit
+        duration = -1
+    }
+    add_country_modifier = {
+        name = migration_boost
+        duration = -1
+    } 
+    add_country_modifier = {
+        name = jason_mod_lessAN_maintenance
+        duration = -1
+    }
+    add_manpower = 20000
+    add_treasury = 100000
+
+    CAPITAL_SCOPE = {
+        infantry = THIS
+        infantry = THIS
+        infantry = THIS
+        infantry = THIS
+        cavalry = THIS
+        cavalry = THIS
+        cavalry = THIS
+        cavalry = THIS
+        cavalry = THIS
+        artillery = THIS
+        artillery = THIS
+        artillery = THIS
+        artillery = THIS
+    }
+}
+ZHA = {
+    define_general = {
+        name = "Li Mu"
+        shock = 12
+        fire = 12
+        manuever = 12
+        siege = 12
+    }
+}
+
+# ================== Buildings ======
+
+
+
+every_owned_province = {
+    limit = {
+        OR = {
+            has_building = small_city_walls
+            has_building = large_city_walls
+        }
+    }
+    add_building = fortress_building
+}
+every_owned_province = {
+    limit = {
+        is_city = yes
+        NOT = {
+            OR = {
+                has_construction = building
+                has_construction = core
+            }
+        }
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_building = big_grain_depot
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_building_construction = {
+            building = big_grain_depot
+            speed = 100
+            cost = 1
+        }
+        log = "Started building big_grain_depot in [This.GetName]"
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_building = hospital
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_building_construction = {
+            building = hospital
+            speed = 100
+            cost = 1
+        }
+        log = "Started building hospital in [This.GetName]"
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_building = imperial_road
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_building_construction = {
+            building = imperial_road
+            speed = 100
+            cost = 1
+        }
+        log = "Started building paved_road in [This.GetName]"
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_building = tax_collector
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_building_construction = {
+            building = tax_collector
+            speed = 100
+            cost = 1
+        }
+        log = "Started building tax_collector in [This.GetName]"
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_building = great_theater
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_building_construction = {
+            building = big_theater
+            speed = 100
+            cost = 1
+        }
+        log = "Started building great_theater in [This.GetName]"
+    }
+    if = {
+        limit = {
+            NOT = {
+                has_building = small_bath
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_building_construction = {
+            building = small_bath
+            speed = 100
+            cost = 1
+        }
+        log = "Started building small_bath in [This.GetName]"
+    }
+}
+
+
+# ================== Find non chinese religion provinces ========
+
+every_province = {
+    limit = {
+        religion_group = chinese_religions
+        NOT = { country_or_non_sovereign_subject_holds = ROOT }
+    }
+    log = "Province= [This.GetName] [This.GetValue]"
+}
+
+
+# ================== Fervor =========
+
+add_country_modifier = {
+    name = more_fervor_cheat
+    duration = -1
+}
+
+# ================ Autonomy =============
+
+every_owned_province = {
+    set_local_autonomy = 0
+}
+
+# ================ Autocolonize ====================
+
+
+# Auto colonize
+random_province = {
+    limit = {
+        ROOT = {
+            dip_power = 30
+        }
+        OR = {
+            superregion = china_superregion
+            superregion = korea_superregion
+            superregion = turan_superregion
+            superregion = tibet_superregion
+        }
+        is_empty = yes
+        any_neighbor_province = {
+            owned_by = ROOT
+            is_city = yes
+        }
+    }
+    ROOT = {
+        dip_power_cost = 30
+    }
+    add_siberian_construction = 1
+}
+
+
+# ============= Assign Missionaries=================
+
+set_variable = {
+    which = prov_development_var
+    value = 25
+}
+while = {
+    log = "Started outer loop [Root.myCountingVariable.GetValue]"
+    limit = {
+        check_variable = {
+            which = prov_development_var
+            value = 1
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            NOT = {
+                religion = ROOT
+                has_missionary = yes
+            }
+            variable_arithmetic_trigger = {
+
+                export_to_variable = {
+                    variable_name = prov_development_var
+                    value = development
+                    who = This
+                }
+                check_variable = {
+                    which = prov_development_var
+                    which = ROOT
+                }
+            }
+        }
+
+        log = "Found province that fits [Root.prov_development_var.GetValue] [This.GetName] [This.prov_development_var.GetValue]"
+        send_missionary = yes
+    }
+
+    subtract_variable = {
+        which = prov_development_var
+        value = 1
+    }
+
+    log = "Ended outer loop [Root.prov_development_var.GetValue]"
+}
+
+# ================== Misc =========
+
+
+every_owned_province = {
+    limit = {
+        can_build = manufactory_slave_up
+        is_state = yes
+        check_variable = { SD_slot_free = 1 }
+    }
+    add_building_construction = {
+        building = manufactory_slave_up
+        speed = 1.0
+        cost = 1.0
+    }
+}
+
+# clr_ruler_flag = ruler_grand_invasion_cb_used_once_flag
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 1
+        NOT = {
+            province_has_center_of_trade_of_level = 6
+        }
+    }
+    add_center_of_trade_level = 1
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                province_has_center_of_trade_of_level = 5
+            }
+        }
+        add_center_of_trade_level = 1
+    }
+}
+
+
+
+clr_ruler_flag = ruler_grand_invasion_cb_used_once_flag
+
+
+
+every_owned_province = {
+    limit = {
+        OR = {
+            has_building = small_city_walls
+            has_building = large_city_walls
+        }
+    }
+    add_building = fortress_building
+}

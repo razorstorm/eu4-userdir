@@ -1,0 +1,20 @@
+add_country_modifier = {
+    name = revolutionary_spirit
+    duration = -1
+}
+add_country_modifier = {
+    name = enhanced_colonial_militia
+    duration = -1
+}
+add_country_modifier = {
+    name = fc_city_league
+    duration = -1
+}
+add_country_modifier = {
+    name = mass_revolutionary_guard_modifier_country
+    duration = -1
+}
+add_country_modifier = {
+    name = new_mandate_holder
+    duration = -1
+}

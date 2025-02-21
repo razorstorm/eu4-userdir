@@ -26,26 +26,9 @@ add_country_modifier = {
     duration = -1  
 }
 add_country_modifier = { 
-    name = mod_more_merchants
-    duration = -1  
-}
-add_country_modifier = { 
-    name = more_merchants
-    duration = -1  
-}
-
-add_country_modifier = { 
-    name = primary_zoroastrian_cult
-    duration = -1  
-}
-
-add_country_modifier = { 
     name = master_of_southern_india
     duration = -1  
 }
-
-
-
 add_country_modifier = { 
     name = JAP_trade_hegemon
     duration = -1  
@@ -75,10 +58,33 @@ add_country_modifier = {
     duration = -1  
 }
 add_country_modifier = { 
+    name = primary_zoroastrian_cult
+    duration = -1  
+}
+add_country_modifier = { 
     name = orm_far_east_company
     duration = -1  
 }
 add_country_modifier = { 
     name = ven_wealth_of_india_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = ven_foreign_merchant_missions_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = hab_ostend_company_1
+    duration = -1  
+}
+
+
+
+add_country_modifier = { 
+    name = mod_more_merchants
+    duration = -1  
+}
+add_country_modifier = { 
+    name = more_merchants
     duration = -1  
 }

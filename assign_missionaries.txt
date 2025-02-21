@@ -1,0 +1,47 @@
+
+
+# Assign Missionaries
+set_variable = {
+    which = prov_development_var
+    value = 25
+}
+while = {
+    log = "Started outer loop [Root.myCountingVariable.GetValue]"
+    limit = {
+        check_variable = {
+            which = prov_development_var
+            value = 1
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            NOT = {
+                religion = ROOT
+                has_missionary = yes
+            }
+            variable_arithmetic_trigger = {
+
+                export_to_variable = {
+                    variable_name = prov_development_var
+                    value = development
+                    who = This
+                }
+                check_variable = {
+                    which = prov_development_var
+                    which = ROOT
+                }
+            }
+        }
+
+        log = "Found province that fits [Root.prov_development_var.GetValue] [This.GetName] [This.prov_development_var.GetValue]"
+        send_missionary = yes
+    }
+
+    subtract_variable = {
+        which = prov_development_var
+        value = 1
+    }
+
+    log = "Ended outer loop [Root.prov_development_var.GetValue]"
+}

@@ -1,0 +1,28 @@
+every_subject_country = {
+    add_treasury = 100000
+    change_government = monarchy
+
+    add_country_modifier = {
+        name = free_income_cheat
+        duration = -1
+    }
+
+    # add_country_modifier = {
+    #     name = gawed_gawedi_settlers
+    #     duration = -1
+    # }
+    # add_country_modifier = {
+    #     name = nathalaire_resettlement_of_goblins
+    #     duration = -1
+    # }
+    add_country_modifier = {
+        name = hierarchy_lots_of_colonists
+        duration = -1
+    }
+    add_country_modifier = {
+        name = jaddari_jadd_expedition_into_the_dark
+        duration = -1
+    }
+    remove_country_modifier = dont_colonize_but_migrate
+    change_government = monarchy
+}

@@ -1,0 +1,73 @@
+add_country_modifier = { 
+    name = mug_viceroyalty_of_the_deccan
+    duration = 5
+}
+add_country_modifier = { 
+    name = fall_of_china
+    duration = 5
+}
+add_country_modifier = { 
+    name = ger_kaiserreich
+    duration = 5
+}
+add_country_modifier = { 
+    name = hab_supreme_in_europe
+    duration = 5
+}
+add_country_modifier = { 
+    name = bur_carolingia
+    duration = 5
+}
+add_country_modifier = { 
+    name = sav_alpine_powerhouse
+    duration = 5
+}
+add_country_modifier = { 
+    name = pru_german_confederation
+    duration = 5
+}
+add_country_modifier = { 
+    name = french_revolution_mission
+    duration = 5
+}
+add_country_modifier = { 
+    name = pap_papal_press_rb
+    duration = 5
+}
+add_country_modifier = { 
+    name = lit_efficient_leg_proceedings_modifier
+    duration = 5
+}
+add_country_modifier = { 
+    name = teu_pru_embraced_the_revolution
+    duration = 5
+}
+add_country_modifier = { 
+    name = swe_might_of_the_varangians
+    duration = 5
+}
+add_country_modifier = { 
+    name = rus_reactionary_zeal
+    duration = 5
+}
+add_country_modifier = { 
+    name = pap_papal_press_no_rb
+    duration = 5
+}
+add_country_modifier = { 
+    name = peasant_revolutionary_zeal
+    duration = 5
+}
+
+add_country_modifier = { 
+    name = bng_orissa_conquest
+    duration = 5
+}
+add_country_modifier = { 
+    name = terrified_china
+    duration = 5
+}
+add_country_modifier = { 
+    name = mongol_european_conquest
+    duration = 5
+}

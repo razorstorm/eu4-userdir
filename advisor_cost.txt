@@ -1,0 +1,28 @@
+add_country_modifier = { 
+    name = tur_grand_vizier_modifier
+    duration = -1  
+}
+add_country_modifier = { 
+    name = TIM_start_of_a_renaissance
+    duration = -1  
+}
+add_country_modifier = { 
+    name = MUG_social_mobility
+    duration = -1  
+}
+add_country_modifier = { 
+    name = teu_pru_expanded_cabinet
+    duration = -1  
+}
+add_country_modifier = { 
+    name = got_trader_reign
+    duration = -1  
+}
+add_country_modifier = { 
+    name = supported_kabuki
+    duration = -1  
+}
+add_country_modifier = { 
+    name = nor_holder_of_the_kalmar_union
+    duration = -1  
+}

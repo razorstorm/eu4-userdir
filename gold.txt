@@ -1,3 +1,329 @@
+# ================== Mali ===================
+
+
+every_owned_province = {
+    limit = {
+        OR = {
+            province_id = 2240
+            province_id = 346
+            province_id = 1157
+            province_id = 1120
+            province_id = 1121
+            province_id = 4784
+            province_id = 6506
+            province_id = 6514
+            province_id = 2284
+            province_id = 1159
+            province_id = 2237
+            province_id = 1158
+            province_id = 2288
+            province_id = 2762
+            province_id = 2757
+            province_id = 2758
+            province_id = 1186
+            province_id = 4158
+            province_id = 1188
+            province_id = 1185
+            province_id = 1184
+            province_id = 1196
+            province_id = 2950
+            province_id = 6503
+        }
+    }
+    change_trade_goods = gold
+    add_province_modifier = {
+        name = paradise_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = medical_evolution
+        duration = -1
+    }
+    add_province_modifier = {
+        name = baby_boomers
+        duration = -1
+    }
+    add_province_modifier = {
+        name = economic_development_of_mazovia
+        duration = -1
+    }
+    add_province_modifier = {
+        name = holland_polders
+        duration = -1
+    }
+    add_province_modifier = {
+        name = japanese_jokamachi
+        duration = -1
+    }
+    add_province_modifier = {
+        name = tributary_overlord_trading_port
+        duration = -1
+    }
+    add_province_modifier = {
+        name = famous_icon
+        duration = -1
+    }
+    add_province_modifier = {
+        name = tr_kremlin_improvements
+        duration = -1
+    }
+    add_province_modifier = {
+        name = confiscated_appanage
+        duration = -1
+    }
+    add_province_modifier = {
+        name = regimental_town
+        duration = -1
+    }
+    add_province_modifier = {
+        name = trading_settlement
+        duration = -1
+    }
+    add_province_modifier = {
+        name = introduction_of_newcommen_engine
+        duration = -1
+    }
+    add_province_modifier = {
+        name = introduction_of_coke_blast_furnaces
+        duration = -1
+    }
+    add_province_modifier = {
+        name = jain_temples_built
+        duration = -1
+    }
+    add_province_modifier = {
+        name = medical_evolution
+        duration = -1
+    }
+    remove_province_modifier = confiscated_appanage
+
+    clr_province_flag = hf_prov_settlement
+    clr_province_flag = hf_prov_village
+    clr_province_flag = hf_prov_town
+    set_province_flag = hf_prov_city
+    
+    add_province_modifier = {
+        name = ven_ministers_of_waterways
+        duration = -1
+    }
+
+    set_local_autonomy = 0
+
+    # add_base_tax = 5
+    # add_base_production = 3
+    # add_base_manpower = 2
+}
+
+
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                province_id = 810
+                province_id = 2946
+                province_id = 795
+                province_id = 2836
+                province_id = 2842
+                province_id = 791
+                province_id = 2845
+                province_id = 4592
+                province_id = 4597
+            }
+        }
+
+        change_trade_goods = silver
+
+        add_province_modifier = {
+            name = paradise_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = medical_evolution
+            duration = -1
+        }
+        add_province_modifier = {
+            name = baby_boomers
+            duration = -1
+        }
+        add_province_modifier = {
+            name = economic_development_of_mazovia
+            duration = -1
+        }
+        add_province_modifier = {
+            name = holland_polders
+            duration = -1
+        }
+        add_province_modifier = {
+            name = japanese_jokamachi
+            duration = -1
+        }
+        add_province_modifier = {
+            name = tributary_overlord_trading_port
+            duration = -1
+        }
+        add_province_modifier = {
+            name = famous_icon
+            duration = -1
+        }
+        add_province_modifier = {
+            name = tr_kremlin_improvements
+            duration = -1
+        }
+        add_province_modifier = {
+            name = confiscated_appanage
+            duration = -1
+        }
+        add_province_modifier = {
+            name = regimental_town
+            duration = -1
+        }
+        add_province_modifier = {
+            name = trading_settlement
+            duration = -1
+        }
+        add_province_modifier = {
+            name = introduction_of_newcommen_engine
+            duration = -1
+        }
+        add_province_modifier = {
+            name = introduction_of_coke_blast_furnaces
+            duration = -1
+        }
+        add_province_modifier = {
+            name = jain_temples_built
+            duration = -1
+        }
+        add_province_modifier = {
+            name = medical_evolution
+            duration = -1
+        }
+        clr_province_flag = hf_prov_settlement
+        clr_province_flag = wales_act
+        clr_province_flag = hf_prov_town
+        set_province_flag = hf_prov_city
+        
+        add_province_modifier = {
+            name = ven_ministers_of_waterways
+            duration = -1
+        }
+
+        set_base_tax = 10
+        set_base_production = 17
+        set_base_manpower = 8
+
+        set_local_autonomy = 0
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                province_id = 808
+                province_id = 804
+                province_id = 2941
+                province_id = 2829
+                province_id = 2835
+                province_id = 811
+                province_id = 2838
+                province_id = 2881
+                province_id = 2903
+                province_id = 776
+                province_id = 2893
+                province_id = 768
+                province_id = 2843
+                province_id = 2877
+                province_id = 2901
+                province_id = 2902
+            }
+        }
+
+        change_trade_goods = gold
+
+        add_province_modifier = {
+            name = paradise_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = medical_evolution
+            duration = -1
+        }
+        add_province_modifier = {
+            name = baby_boomers
+            duration = -1
+        }
+        add_province_modifier = {
+            name = economic_development_of_mazovia
+            duration = -1
+        }
+        add_province_modifier = {
+            name = holland_polders
+            duration = -1
+        }
+        add_province_modifier = {
+            name = japanese_jokamachi
+            duration = -1
+        }
+        add_province_modifier = {
+            name = tributary_overlord_trading_port
+            duration = -1
+        }
+        add_province_modifier = {
+            name = famous_icon
+            duration = -1
+        }
+        add_province_modifier = {
+            name = tr_kremlin_improvements
+            duration = -1
+        }
+        add_province_modifier = {
+            name = confiscated_appanage
+            duration = -1
+        }
+        add_province_modifier = {
+            name = regimental_town
+            duration = -1
+        }
+        add_province_modifier = {
+            name = trading_settlement
+            duration = -1
+        }
+        add_province_modifier = {
+            name = introduction_of_newcommen_engine
+            duration = -1
+        }
+        add_province_modifier = {
+            name = introduction_of_coke_blast_furnaces
+            duration = -1
+        }
+        add_province_modifier = {
+            name = jain_temples_built
+            duration = -1
+        }
+        add_province_modifier = {
+            name = medical_evolution
+            duration = -1
+        }
+        clr_province_flag = hf_prov_settlement
+        clr_province_flag = wales_act
+        clr_province_flag = hf_prov_town
+        set_province_flag = hf_prov_city
+        
+        add_province_modifier = {
+            name = ven_ministers_of_waterways
+            duration = -1
+        }
+
+        set_base_tax = 10
+        set_base_production = 17
+        set_base_manpower = 8
+
+        set_local_autonomy = 0
+    }
+}
+
+
 # ================== Aztec ==================
 
 849 = {

@@ -3,58 +3,83 @@ every_subject_country = {
     add_treasury = 100000
     change_government = monarchy
 
-    add_country_modifier = { 
-        name = cossack_settlers
-        duration = -1  
-        desc = cossack_settlers:0
-        hidden = no
-    }
-    add_country_modifier = { 
-        name = sea_route_to_india
-        duration = -1  
-        desc = sea_route_to_india:0
-        hidden = no
-    }
-    add_country_modifier = { 
-        name = puritan_colonists
-        duration = -1  
-        desc = puritan_colonists:0
-        hidden = no
-    }
-
     add_country_modifier = {
-        name = temporary_colonist
+        name = free_income_cheat
         duration = -1
     }
 
-
+    # More colonists
     add_country_modifier = {
         name = colonize_the_continent
         duration = -1
     }
-
     add_country_modifier = { 
         name = spice_colony_modifier
         duration = -1  
-        desc = spice_colony_modifier:0
-        hidden = no
     }
-    add_country_modifier = { 
-        name = liv_lva_random_new_world_colonialism
-        duration = -1  
-        hidden = no
+    add_country_modifier = {
+        name = temporary_colonist
+        duration = -1
     }
     add_country_modifier = { 
         name = swe_swedish_colonialism
         duration = -1  
-        hidden = no
+    }
+    add_country_modifier = {
+        name = allow_frontiers_cheat
+        duration = -1
     }
 
-    # ===========
 
+    # ------------
+    # cheaper colonies
+
+    add_country_modifier = {
+        name = ven_venetian_new_world_charters
+        duration = -1
+    }
+    add_country_modifier = {
+        name = estate_nobles_expedition_rights_scaling
+        duration = -1
+    }
+    add_country_modifier = {
+        name = charter_colonies_mod_1
+        duration = -1
+    }
+    add_country_modifier = {
+        name = charter_colonies_mod_2
+        duration = -1
+    }   
+    add_country_modifier = {
+        name = charter_colonies_mod_3
+        duration = -1
+    }
+    add_country_modifier = {
+        name = charter_colonies_mod_4
+        duration = -1
+    }
+    add_country_modifier = {
+        name = charter_colonies_mod_5
+        duration = -1
+    }
+
+
+    # ------------
 
     add_country_modifier = { 
+        name = cossack_settlers
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = sea_route_to_india
+        duration = -1  
+    }
+    add_country_modifier = { 
         name = puritan_colonists
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = liv_lva_random_new_world_colonialism
         duration = -1  
     }
     add_country_modifier = { 

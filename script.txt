@@ -1,20 +1,42 @@
-add_country_modifier = { 
-    name = per_horse_population_boom_modifier
-    duration = -1  
+every_owned_province = {
+    limit = {
+        OR = {
+            province_has_center_of_trade_of_level = 1
+            province_has_center_of_trade_of_level = 2
+            province_has_center_of_trade_of_level = 3
+        }   
+        NOT = {
+            has_province_modifier = province_trade_power_modifier_cheat
+        }
+        
+    }
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+    center_of_trade = 3
+    add_center_of_trade_level = 3
 }
-add_country_modifier = { 
-    name = per_horse_population_boom2_modifier
-    duration = -1  
-}
-add_country_modifier = { 
-    name = per_horse_population_boom4_modifier
-    duration = -1  
-}
-add_country_modifier = { 
-    name = lxa_elephants
-    duration = -1  
-}
-add_country_modifier = { 
-    name = mjz_dominance_of_the_horselords_modifier
-    duration = -1  
+
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                province_has_center_of_trade_of_level = 1
+                province_has_center_of_trade_of_level = 2
+                province_has_center_of_trade_of_level = 3
+            }   
+            NOT = {
+                has_province_modifier = province_trade_power_modifier_cheat
+            }
+            
+        }
+        add_province_modifier = {
+            name = province_trade_power_modifier_cheat
+            duration = -1
+        }
+        center_of_trade = 3
+        add_center_of_trade_level = 3
+    }
 }

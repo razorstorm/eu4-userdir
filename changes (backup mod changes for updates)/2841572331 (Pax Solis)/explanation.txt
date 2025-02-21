@@ -1,0 +1,11 @@
+countrygovernmentview.gui gets rid of a pointless just_a_symbal that blocks the absolutism display
+
+countrydiplomacyview.gui gets rid of country_ruler_shadow_bg_small which generates a lot of errors
+
+Try deleting F:\Steam\steamapps\workshop\content\236850\2841572331\missions\flavorTUR.txt since it isn't supposed to be in missions/ It might be what's messing things up
+
+Also migrate F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_effects\00_scripted_effects.txt to F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_effects\00_hf_scripted_effects.txt
+
+Also migrate F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_triggers\00_scripted_triggers to F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_triggers\00_hf_scripted_triggers.txt
+
+Pax Solis has A TON of missing localization files and random broken UI elements. It feels like one specific author of the mod is just has horrible code quality and makes a habit of shipping half built features with no translations. Guess I'll have to do the work for them

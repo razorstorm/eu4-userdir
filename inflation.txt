@@ -2,10 +2,10 @@ add_country_modifier = {
     name = national_bank_inflation
     duration = -1  
 }
-add_country_modifier = { 
-    name = master_of_mint_boost
-    duration = -1  
-}
+# add_country_modifier = { 
+#     name = master_of_mint_boost
+#     duration = -1  
+# }
 add_country_modifier = { 
     name = hol_strict_control
     duration = -1  

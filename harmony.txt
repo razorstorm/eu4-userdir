@@ -1,0 +1,12 @@
+add_country_modifier = {
+    name = hordes_harmony_between_tengri_and_china
+    duration = -1
+}
+add_country_modifier = {
+    name = hordes_harmony_of_faith
+    duration = -1
+}
+add_country_modifier = {
+    name = harmonization_classics_defended
+    duration = -1
+}

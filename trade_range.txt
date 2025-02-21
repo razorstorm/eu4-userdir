@@ -1,0 +1,44 @@
+add_country_modifier = {
+    name = adventuring_merchants
+    duration = -1
+}
+add_country_modifier = {
+    name = a_moving_city
+    duration = -1
+}
+add_country_modifier = {
+    name = MAY_merchant_travels
+    duration = -1
+}
+add_country_modifier = {
+    name = dan_gold_coast_control
+    duration = -1
+}
+add_country_modifier = {
+    name = nor_great_navigators
+    duration = -1
+}
+add_country_modifier = {
+    name = got_global_piracy
+    duration = -1
+}
+add_country_modifier = {
+    name = ned_dutch_overseas_trade
+    duration = -1
+}
+add_country_modifier = {
+    name = pap_eastern_mediterranean_routes
+    duration = -1
+}
+add_country_modifier = {
+    name = che_tunnels
+    duration = -1
+}
+add_country_modifier = {
+    name = orm_beyond_arabic_ports
+    duration = -1
+}
+add_country_modifier = {
+    name = mod_more_trade_range
+    duration = -1
+}

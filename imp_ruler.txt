@@ -4,16 +4,30 @@ define_ruler = {
     claim = 100
     culture = etruscan
     age = 22
-    adm = 6
-    dip = 6
-    mil = 6
+    adm = 10
+    dip = 10
+    mil = 10
     male = yes
     fixed = yes
 }
 add_ruler_personality = roman_king_immortal_personality
+add_ruler_personality = ruler_of_destiny_personality
 add_ruler_personality = strict_personality
 add_ruler_personality = legendary_leader_personality
-add_ruler_personality = aggressive_personality
 add_ruler_personality = the_great_personality
+add_ruler_personality = aggressive_personality
+
+define_heir = {
+    dynasty = ROOT
+    name = "Tiberius"
+    adm = 10
+    dip = 10
+    mil = 10
+    male = yes
+    fixed = yes
+}
+
+add_heir_personality = immortal_personality
 
 clr_country_flag = tarquinius_superbus 
+

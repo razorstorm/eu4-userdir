@@ -1,0 +1,40 @@
+
+add_country_modifier = {
+    name = global_ship_recruit_speed_cheat
+    duration = -1
+}
+
+every_owned_province = {
+    limit = {
+        has_port = yes
+    }
+    add_province_modifier = {
+        name = local_ship_recruit_speed_cheat
+        duration = -1
+    }
+    add_province_modifier = {
+        name = global_ship_recruit_speed_cheat
+        duration = -1
+    }
+}
+
+every_subject_country = {
+    add_country_modifier = {
+        name = global_ship_recruit_speed_cheat
+        duration = -1
+    }
+    
+    every_owned_province = {
+        limit = {
+            has_port = yes
+        }
+        add_province_modifier = {
+            name = local_ship_recruit_speed_cheat
+            duration = -1
+        }
+        add_province_modifier = {
+            name = global_ship_recruit_speed_cheat
+            duration = -1
+        }
+    }
+}

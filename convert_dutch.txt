@@ -1,0 +1,12 @@
+
+every_owned_province = {
+    limit = {
+        OR = {
+            culture = wallonian
+            culture = flemish
+            culture = dutch
+            culture = burgundian
+        }
+    }
+    change_culture = ROOT
+}

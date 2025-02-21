@@ -14,9 +14,12 @@ I01 Amldihr
 I02 Krakdhumvror
 I05 Mithradhum
 I07 Khugdihr
+I08 Haraz Orldhum
 I12 Orlghelovar
 I13 Verkal Skomdihr
+I15 Hehodovar
 I16 Gor Burad
+I18 Grozumdihr
 I20 Hul-az-Krakazol
 
 ------

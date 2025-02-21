@@ -2,6 +2,8 @@
 every_province = {
     limit = {
         OR {
+            superregion = effelai_superregion
+            superregion = ruin_proper_superregion
             superregion = north_aelantir_superregion
             superregion = ruined_sea_superregion
             superregion = south_aelantir_superregion

@@ -44,7 +44,7 @@ revolution_subject = { }
 persian_satrapy = { }
 naval_march = { }
 trade_outpost = { }
-integrated_personal_union = { }
+se_integrated_personal_union = { }
 brother_kingdom = { }
 iqta_vassal = { }
 papal_sanctuary_subject = { }
@@ -295,6 +295,7 @@ puppet_state = {
 	# (continuous)
 	support_loyalists = yes
 	subsidize_armies = yes
+	divert_trade = yes
 	# (immediate)
 	placate_rulers = yes
 	replace_governor = yes
@@ -357,7 +358,7 @@ dominion = {
 	}
 
 	# Properties:
-	uses_tariffs = no
+	uses_tariffs = yes
 	can_release_in_peace = yes
 	change_colonial_type = no
 	upgrade_subject_type = yes
@@ -405,8 +406,8 @@ dominion = {
 	# Subject Interactions:
 	divert_trade = yes
 	start_colonial_war = no
-	increase_tariffs = no
-	decrease_tariffs = no
+	increase_tariffs = yes
+	decrease_tariffs = yes
 
 	# Modifiers:
 	modifier_subject = clear
@@ -420,12 +421,6 @@ dominion = {
 		trigger = {
 			num_of_cities = 15
 		}
-	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
 	}
 
 	overlord_opinion_modifier = is_dominion
@@ -521,28 +516,12 @@ dominion_tc = {
 	should_quit_wars_on_activation = no
 
 	can_fight = {
-		other_overlord = viking_settlement
-		other_overlord = colony
-		other_overlord = crown_colony
-		other_overlord = private_enterprise
-		other_overlord = self_governing_colony
-		other_overlord = annexable_colony
-		other_overlord = dominion
 		other_overlord = dominion_tc
 		neighboring_primitives = yes
-		colonial_region_nations = yes
 	}
 	can_rival = {
-		other_overlord = viking_settlement
-		other_overlord = colony
-		other_overlord = crown_colony
-		other_overlord = private_enterprise
-		other_overlord = self_governing_colony
-		other_overlord = annexable_colony
-		other_overlord = dominion
 		other_overlord = dominion_tc
 		neighboring_primitives = yes
-		colonial_region_nations = yes
 	}
 	can_ally = {
 		neighboring_primitives = yes
@@ -2658,12 +2637,6 @@ dominion_tc = {
 		}
 		modifier = dominion_overlord_trade_company_modifier_50
 	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
-	}
 
 	overlord_opinion_modifier = is_dominion
 	subject_opinion_modifier = is_dominion
@@ -2767,12 +2740,6 @@ autonomous_dominion = {
 		trigger = {
 			num_of_cities = 20
 		}
-	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
 	}
 
 	overlord_opinion_modifier = is_autonomous_dominion
@@ -4970,12 +4937,6 @@ autonomous_dominion_tc = {
 		}
 		modifier = autonomous_dominion_overlord_trade_company_modifier_50
 	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
-	}
 
 	overlord_opinion_modifier = is_autonomous_dominion
 	subject_opinion_modifier = is_autonomous_dominion
@@ -5048,6 +5009,7 @@ roman_client_kingdom = {
 	# Subject Interactions:
 	# (continuous)
 	support_loyalists = yes
+	divert_trade = yes
 	# (immediate)
 	enforce_culture = yes
 	seize_territory = yes
@@ -5246,7 +5208,7 @@ fief_subject = {
 	}
 
 	# Subject Interactions:
-	divert_trade = no
+	divert_trade = yes
 	place_relative_on_throne = yes
 	sacrifice_ruler = yes
 	sacrifice_heir = yes
@@ -5470,12 +5432,6 @@ nahuatl_vassal = {
 		}
 		modifier = nahuatl_vassal_overlord_modifier
 	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
-	}
 
 	overlord_opinion_modifier = is_nahuatl_vassal
 	subject_opinion_modifier = is_nahuatl_vassal
@@ -5546,6 +5502,7 @@ peasant_vassal = {
 	# Subject Interactions:
 	# (continuous)
 	support_loyalists = yes
+	divert_trade = yes
 	# (immediate)
 	placate_rulers = no
 	enforce_religion = yes
@@ -5595,8 +5552,12 @@ pirate_brotherhood_vassal = {
 			has_reform = pirate_king_reform
 			has_reform = war_against_the_world_doctrine_reform
 		}
-		num_of_ports = 3
 		navy_size = 20
+		num_of_owned_provinces_with = {
+			value = 3
+			has_port = yes
+			is_colony = no
+		}
 	}
 
 	# Properties:
@@ -5894,6 +5855,7 @@ sister_republic = {
 	# (continuous)
 	support_loyalists = yes
 	send_officers = yes
+	divert_trade = yes
 	# (immediate)
 	placate_rulers = no
 	enforce_religion = yes
@@ -5928,12 +5890,6 @@ sister_republic = {
 			NOT = { liberty_desire = 50 }
 		}
 		modifier = sister_republic_overlord_modifier
-	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
 	}
 
 	overlord_opinion_modifier = is_sister_republic
@@ -6477,13 +6433,6 @@ dutch_province_subject = {
 	modifier_overlord = {
 		modifier = dutch_province_subject_overlord_modifier
 	}
-	modifier_overlord = {
-		trigger = {
-			has_global_flag = dutch_province_subject_no_leader_election
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
-	}
 
 	overlord_opinion_modifier = is_dutch_province_subject
 	subject_opinion_modifier = is_dutch_province_subject
@@ -6616,53 +6565,15 @@ persian_satrapy = {
 		government = monarchy
 		OR = {
 			tag = PER
-			primary_culture = persian
+			tag = ERS
 			AND = {
-				culture_group = iranian
-				dominant_culture = ROOT
-			}
-			AND = {
-				NOT = { culture_group = iranian }
+				primary_culture = persian
 				OR = {
+					government_rank = 3
 					AND = {
-						dominant_culture = persian
-						accepted_culture = persian
+						NOT = { has_dlc = "Common Sense" }
+						total_development = 1000
 					}
-					AND = {
-						dominant_culture = luri
-						accepted_culture = luri
-					}
-					AND = {
-						dominant_culture = azerbaijani
-						accepted_culture = azerbaijani
-					}
-					AND = {
-						dominant_culture = khorasani
-						accepted_culture = khorasani
-					}
-					AND = {
-						dominant_culture = baluchi
-						accepted_culture = baluchi
-					}
-					AND = {
-						dominant_culture = afghani
-						accepted_culture = afghani
-					}
-					AND = {
-						dominant_culture = kurdish
-						accepted_culture = kurdish
-					}
-					AND = {
-						dominant_culture = mazandarani
-						accepted_culture = mazandarani
-					}
-				}
-			}
-			AND = {
-				accepted_culture = persian
-				num_of_owned_provinces_with = {
-					value = 10
-					culture = persian
 				}
 			}
 		}
@@ -6753,6 +6664,33 @@ persian_satrapy = {
 		modifier = persian_satrapy_overlord_modifier
 	}
 	modifier_overlord = {
+		modifier = persian_satrapy_overlord_per_province_modifier
+	}
+	modifier_overlord = {
+		trigger = {
+			num_of_cities = 2
+		}
+		modifier = persian_satrapy_overlord_per_province_modifier
+	}
+	modifier_overlord = {
+		trigger = {
+			num_of_cities = 3
+		}
+		modifier = persian_satrapy_overlord_per_province_modifier
+	}
+	modifier_overlord = {
+		trigger = {
+			num_of_cities = 4
+		}
+		modifier = persian_satrapy_overlord_per_province_modifier
+	}
+	modifier_overlord = {
+		trigger = {
+			num_of_cities = 5
+		}
+		modifier = persian_satrapy_overlord_per_province_modifier
+	}
+	modifier_overlord = {
 		modifier = vassal_subject
 	}
 	modifier_overlord = {
@@ -6793,9 +6731,13 @@ naval_march = {
 
 	# Triggers:
 	is_potential_overlord = {
-		num_of_ports = 5
-		navy_size = 10
 		primitives = no
+		navy_size = 10
+		num_of_owned_provinces_with = {
+			value = 5
+			has_port = yes
+			is_colony = no
+		}
 	}
 
 	# Graphics:
@@ -6915,19 +6857,19 @@ trade_outpost = {
 	}
 
 	# Properties:
-	is_voluntary = yes
+	is_voluntary = no
 	has_colonial_parent = yes
 	transfer_trade_power = yes
 	joins_overlords_wars = no
 	can_release_and_play = yes
 	overlord_can_attack = no
 	takes_diplo_slot = no
-	uses_military_focus = no
+	uses_military_focus = yes
 	can_use_claims = no
 	counts_for_borders = no
 	share_rebel_popup = no
 	can_transfer_in_peace = no
-	can_set_mil_focus = no
+	can_set_mil_focus = yes
 	overlord_can_fabricate_for = no
 	does_overlord_size_count_for_warscore_cost = no
 	can_concentrate_development = no
@@ -6997,14 +6939,14 @@ trade_outpost = {
 	subject_opinion_modifier = is_trade_outpost
 }
 
-integrated_personal_union = {
+se_integrated_personal_union = {
 	copy_from = personal_union
 	count = personal_union
 
 	# Graphics:
-	sprite = GFX_icon_integrated_personal_union
-	diplomacy_overlord_sprite = GFX_diplomacy_leadintegrated_personal_union
-	diplomacy_subject_sprite = GFX_diplomacy_amintegrated_personal_union
+	sprite = GFX_icon_se_integrated_personal_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadse_integrated_personal_union
+	diplomacy_subject_sprite = GFX_diplomacy_amse_integrated_personal_union
 
 	# Triggers:
 	is_potential_overlord = {
@@ -7029,7 +6971,7 @@ integrated_personal_union = {
 	restoration_cb = cb_restore_personal_union
 
 	modifier_subject = {
-		modifier = integrated_personal_union_modifier
+		modifier = se_integrated_personal_union_modifier
 	}
 }
 
@@ -7095,7 +7037,7 @@ brother_kingdom = {
 	# Subject Interactions:
 	# (continuous)
 	send_officers = yes
-	divert_trade = no
+	divert_trade = yes
 	# (immediate)
 	enforce_culture = yes
 	siphon_income = yes
@@ -7221,6 +7163,7 @@ iqta_vassal = {
 	# Subject Interactions:
 	# (continuous)
 	scutage = yes
+	divert_trade = yes
 	# (immediate)
 	place_relative_on_throne = yes
 	enforce_culture = yes
@@ -7874,6 +7817,8 @@ native_reserve = {
 	enforce_religion = no
 	grant_core_claim = no
 
+	divert_trade = yes
+
 	# Modifiers:
 	modifier_subject = clear
 	modifier_subject = {
@@ -8038,6 +7983,8 @@ administrative_region = {
 	siphon_income = yes
 	contribute_to_capital = yes
 
+	divert_trade = yes
+
 	# Modifiers:
 	modifier_subject = clear
 	modifier_subject = {
@@ -8179,12 +8126,6 @@ administrative_region = {
 			}
 		}
 		modifier = administrative_region_overlord_modifier_administrative_help_mil
-	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
 	}
 
 	overlord_opinion_modifier = is_administrative_region
@@ -8442,12 +8383,6 @@ banking_family_subject = {
 		}
 		modifier = banking_family_subject_demand_war_chest_contribution_overlord_modifier
 	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
-	}
 
 	overlord_opinion_modifier = is_banking_family_subject
 	subject_opinion_modifier = is_banking_family_subject
@@ -8468,6 +8403,9 @@ palatinate_vassal = {
 	}
 
 	# Properties:
+	base_liberty_desire = 10.0
+	liberty_desire_development_ratio = 0.33
+
 	max_government_rank = 2
 
 	pays_overlord = 0
@@ -8707,6 +8645,7 @@ religious_march = {
 	is_potential_overlord = {
 		primitives = no
 		OR = {
+			government = theocracy
 			full_idea_group = religious_ideas
 			AND = {
 				has_global_flag = extended_timeline_mod
@@ -9228,12 +9167,6 @@ exarchate_subject = {
 		}
 		modifier = exarchate_subject_overlord_modifier
 	}
-	modifier_overlord = {
-		trigger = {
-			marriage_with = FROM
-		}
-		modifier = royal_marriage_no_slot_cost_modifier
-	}
 
 	overlord_opinion_modifier = is_exarchate_subject
 	subject_opinion_modifier = is_exarchate_subject
@@ -9274,6 +9207,7 @@ real_union_subject = {
 
 	# Subject Interactions
 	seize_territory = yes
+
 	divert_trade = yes
 
 	# Modifiers:

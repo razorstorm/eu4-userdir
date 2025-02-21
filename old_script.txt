@@ -1,3 +1,257 @@
+# =============== Important Files =========================================
+
+# F:\Steam\steamapps\workshop\content\236850\1834079712\common\subject_types\
+# subjects_expanded_subject_types.txt
+
+# F:\Steam\steamapps\workshop\content\236850\2136257369\common\event_modifiers
+# cheat_event_modifiers.txt
+
+# F:\Steam\steamapps\common\Europa Universalis IV\common\event_modifiers
+# 00_event_modifiers
+# 01_mission_modifiers
+
+
+# Cheats
+
+# F:\Steam\steamapps\workshop\content\236850\2136257369\common\event_modifiers
+# cheat_event_modifiers
+
+# Chinese Tributaries
+
+# F:\Steam\steamapps\common\Europa Universalis IV\userdir\mod\ChineseTributaries\common\event_modifiers
+# prussian_modifiers
+
+# Third Odyssey
+
+# F:\Steam\steamapps\workshop\content\236850\387726157\common\subject_types
+
+# Pax Solis 2841572331
+
+
+
+
+
+
+
+
+# =============================
+
+
+# Pax Solis Buildings
+
+
+every_owned_province = {
+    limit = {
+        NOT = {
+            has_building = roads
+        }
+    }
+    add_building = roads
+}
+every_owned_province = {
+    limit = {
+        NOT = {
+            has_building = stage_station
+        }
+    }
+    add_building = stage_station
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = roads
+            }
+        }
+        add_building = roads
+    }
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = stage_station
+            }
+        }
+        add_building = stage_station
+    }
+}
+
+# ========
+
+# Adding governor
+every_owned_province = {
+    limit = {
+        is_state = yes
+    }
+
+    hf_remove_all_prov_ruler = yes
+    area = {
+        limit = { owned_by = FROM }
+        set_province_flag = hf_gov_estate_burghers
+        set_province_flag = hf_gov_estate_ruler
+        add_province_modifier = {
+            name = hf_gov_estate_burghers_modifier
+            duration = -1
+        }
+    }
+    owner = {
+        add_estate_loyalty = {
+            estate = estate_burghers
+            loyalty = 1
+        }
+    }
+}
+
+# 
+every_province = {
+    limit = {
+        NOT = {
+            base_tax = 1
+        }
+    }
+    add_base_tax = 1
+    log = "new province found [This.GetName] [This]"
+}
+every_province = {
+    limit = {
+        NOT = {
+            base_production = 1
+        }
+    }
+    add_base_production = 1
+}
+every_province = {
+    limit = {
+        NOT = {
+            base_manpower = 1
+        }
+    }
+    add_base_manpower = 1
+}
+
+# End 
+
+
+set_country_flag = hf_indian_colony
+
+
+every_owned_province = {
+    remove_province_modifier = estate_church_lao_animism_mod
+}
+every_subject_country = {
+    every_owned_province = {
+        remove_province_modifier = estate_church_lao_animism_mod
+    }
+}
+
+HRZ = {
+    override_country_name = "Bosnia and Herzegovina"
+}
+BOS = {
+    override_country_name = "Bosnia and Herzegovina"
+}
+
+
+# =====
+
+# No colonizing in siberia
+
+every_province = {
+    limit = {
+        OR = {
+            region = west_siberia_region
+            region = east_siberia_region
+            region = mongolia_region
+            region = manchuria_region
+        }
+        NOT = {
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+        is_colony = yes 
+    }
+
+    log = "Colonial prov to be removed = [This.GetName]"
+    decolonize = this
+}
+
+# -----
+
+# auto colonize
+
+if = {
+    limit = {
+        NOT = {
+            num_of_colonies = 11
+        }
+    }
+
+    random_province = {
+        limit = {
+            OR = {
+                region = cascadia_region
+                region = california_region
+            }
+            OR = {
+                has_port = yes
+                is_neighbor_of = ROOT
+            }
+            is_empty = yes
+        }
+        create_colony = 1
+    }
+}
+
+# ---
+
+ZUN = {
+    every_subject_country = {
+        grant_independence = yes
+    }
+
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = west_siberia_region
+                region = east_siberia_region
+                area = tannu_uriankhai_area
+                area = buryatia_area
+            }
+        }
+        log = "to be removed province [This.GetName]"
+        decolonize = THIS
+    }
+}
+# ======
+
+
+
+# Anbennar Advanced hold:
+
+
+# Advanced Hold
+ROOT = {
+    add_treasury = -3000
+    add_adm_power = -100
+    add_dip_power = -100
+    set_country_flag = building_diggy
+    set_country_flag = building_artificier_hall 
+    country_event = { 
+        id = diggy_project.3 
+    }
+    CAPITAL_SCOPE = {
+        add_province_modifier = {
+            name = developing_advanced_infrastructure
+            duration = 10
+        }
+    }
+}
+
+# =====
+
+
 every_owned_province = {
     remove_building = off_5
     add_building = munition_factory
@@ -59,6 +313,82 @@ SAV = {
 #     remove_province_modifier = inca_improved_gold_mining_province_modifier
 # }
 
+# LFA gold
+95 = {
+    change_trade_goods = gold
+    add_province_modifier = {
+        duration = -1
+        name = feo_gavras_family_gold_deposits
+    }
+    add_province_modifier = {
+        name = hun_expand_mining_rights
+        duration = -1
+    }
+    add_province_modifier = {
+        name = azt_techchitlan_1
+        duration = -1
+    }
+    add_province_modifier = {
+        name = azt_techchitlan_2
+        duration = -1
+    }
+    add_province_modifier = {
+        name = azt_techchitlan_3
+        duration = -1
+    }
+    add_province_modifier = {
+        name = azt_techchitlan_4
+        duration = -1
+    }
+    add_province_modifier = {
+        name = hab_tirol_mine
+        duration = -1
+    }
+}
+
+
+# Remove rival and add friend
+
+every_subject_country = {
+    limit = {
+        OR = {
+            tag = NOR
+            tag = SWE
+            tag = FIN
+        }
+    }
+    remove_country_modifier = allow_frontiers_cheat
+    # add_country_modifier = {
+    #     name = allow_frontiers_cheat
+    #     duration = -1
+    # }
+
+    remove_historical_rival = ROOT
+    
+    ROOT = {
+        remove_historical_rival = PREV
+    }
+
+    add_historical_friend = ROOT
+    ROOT = {
+        add_historical_friend = PREV
+    }
+}
+
+
+# mng_sail_east
+
+remove_country_modifier = mng_imperial_explorers_corps_of_the_ming_dynasty_modifier
+remove_country_modifier = mng_social_and_mercantile_exchanges_with_the_new_world_modifier
+
+add_country_modifier = {
+    name = mng_imperial_explorers_corps_of_the_ming_dynasty_modifier
+    duration = -1 
+}
+add_country_modifier = {
+    name = mng_social_and_mercantile_exchanges_with_the_new_world_modifier
+    duration = -1 
+}
 
 
 change_government = monarchy
@@ -161,7 +491,9 @@ define_heir = {
 
 add_heir_personality = immortal_personality
 
-
+4055 = {
+    create_colony = 2
+}
 
 695 = {
     change_trade_goods = lead
@@ -192,12 +524,130 @@ every_owned_province = {
     remove_building = off_5
 }
 
+every_owned_province = {
+    limit = {
+        culture = chihan
+    }
+    add_base_tax = 1 
+    add_base_production = 1 
+    add_base_manpower = 1
+}
+
+
+every_owned_province = {
+    remove_province_modifier = rebel_sentiment
+}
+
+
+
+define_consort = {
+    country_of_origin = ROOT
+    religion = ROOT
+    culture = ROOT
+    name = "Theodora"
+    female = yes
+    adm = 6
+    dip = 6
+    mil = 6
+    dynasty = ROOT
+}
+add_queen_personality = immortal_personality
+
+
+
+
+add_country_modifier = {
+    name = more_generals_cheat
+    duration = -1
+}
+
+
+
+# remove ugly claims
+every_country = {
+    every_subject_country = {
+        every_owned_province = {
+            remove_claim = PREV
+        }
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        remove_claim = ROOT
+    }
+}
+
+
+every_subject_country = {
+    every_owned_province = {
+        remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+    }
+}
+
+# Beijing
+1816 = {
+    set_base_tax = 55
+    set_base_production = 65
+    set_base_manpower = 50
+}
 
 every_owned_province = {
     add_base_tax = 1 
     add_base_production = 1 
     add_base_manpower = 1
 }
+
+# change_variable = {
+#     which = StaticArtificePoints
+#     value = 5000
+# }
+
+# Y01 = {
+#     every_owned_province = {
+#         change_religion = ROOT
+#         add_core = PREV
+#     }
+# }
+# every_owned_province = {
+#     add_base_tax = 1 
+#     add_base_production = 1 
+#     add_base_manpower = 1
+# }
+
+
+every_country = {
+    add_adm_tech = 1
+    add_dip_tech = 1
+    add_mil_tech = 1
+}
+
+# every_province = {
+#     limit = {
+#         OR {
+#             superregion = effelai_superregion
+#             superregion = ruin_proper_superregion
+#             superregion = north_aelantir_superregion
+#             superregion = ruined_sea_superregion
+#             superregion = south_aelantir_superregion
+#             superregion = ynn_superregion
+#             superregion = torn_sea_superregion
+
+#             superregion = eordand_superregion
+#             superregion = effelai_superregion
+#             superregion = kheionai_superregion
+#             superregion = greater_taychend_superregion
+#         } 
+#     }
+#     decolonize = THIS
+#     cede_province = ---
+#     set_province_flag = cant_colonize
+#     destroy_province = yes
+# }
+
+
+
+
 
 ROOT = {
     add_treasury = 1
@@ -377,6 +827,15 @@ add_estate_influence_modifier = {
     duration = -1
 }
 
+add_estate_influence_modifier = {
+    estate = estate_all_natives
+    desc = EST_VAL_NOBILITY_DECLINES
+    influence = -50
+    duration = -1
+}
+
+
+
 
 define_explorer = {
     shock = 10
@@ -524,14 +983,256 @@ capital_scope = {
 
 create_alliance = FRA
 
+change_national_focus = ADM
+# gold depletion
+
+LFA = {
+    every_owned_province = {
+        add_province_modifier = {
+            name = zan_great_kilwa
+            duration = -1
+        }
+        add_province_modifier = {
+            name = hsa_center_of_mineral_trade
+            duration = -1
+        }
+        add_province_modifier = {
+            name = mng_silver_house_of_china_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = jap_expanded_mining_operations_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = liv_lva_west_african_gold_production
+            duration = -1
+        }
+    }
+}
+
+
+# Silly setting up mega lanfang
+
+2025 = {
+    set_base_tax = 500
+    set_base_production = 500
+    set_base_manpower = 500
+
+    cede_province = LFA
+    change_trade_goods = gold
+
+    every_owned_province = {
+        add_province_modifier = {
+           name = zan_great_kilwa
+           duration = -1
+        }
+    }
+
+    every_owned_province = {
+        add_province_modifier = {
+           name = spa_aztecs_conquest_modifier
+           duration = -1
+        }
+    }
+}
+
+LFA = {
+    add_liberty_desire = -1000
+    every_owned_province = {
+        add_province_modifier = {
+            name = zan_great_kilwa
+            duration = -1
+        }
+        add_province_modifier = {
+            name = hsa_center_of_mineral_trade
+            duration = -1
+        }
+        add_province_modifier = {
+            name = mng_silver_house_of_china_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = jap_expanded_mining_operations_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = liv_lva_west_african_gold_production
+            duration = -1
+        }
+    }
+}
+
+# ---------------------
+
+
+# undiscover everything
+
+
+india_superregion = {
+    undiscover_country = LFA
+}
+east_indies_superregion = {
+    undiscover_country = LFA
+}
+oceania_superregion = {
+    undiscover_country = LFA
+}
+china_superregion = {
+    undiscover_country = LFA
+}
+europe_superregion = {
+    undiscover_country = LFA
+}
+eastern_europe_superregion = {
+    undiscover_country = LFA
+}
+tartary_superregion = {
+    undiscover_country = LFA
+}
+far_east_superregion = {
+    undiscover_country = LFA
+}
+africa_superregion = {
+    undiscover_country = LFA
+}
+southern_africa_superregion = {
+    undiscover_country = LFA
+}
+south_america_superregion = {
+    undiscover_country = LFA
+}
+andes_superregion = {
+    undiscover_country = LFA
+}
+north_america_superregion = {
+    undiscover_country = LFA
+}
+central_america_superregion = {
+    undiscover_country = LFA
+}
+near_east_superregion = {
+    undiscover_country = LFA
+}
+persia_superregion = {
+    undiscover_country = LFA
+}
+new_world_superregion = {
+    undiscover_country = LFA
+}
+west_american_sea_superregion = {
+    undiscover_country = LFA
+}
+east_american_sea_superregion = {
+    undiscover_country = LFA
+}
+north_european_sea_superregion = {
+    undiscover_country = LFA
+}
+south_european_sea_superregion = {
+    undiscover_country = LFA
+}
+west_african_sea_superregion = {
+    undiscover_country = LFA
+}
+east_african_sea_superregion = {
+    undiscover_country = LFA
+}
+indian_pacific_sea_superregion = {
+    undiscover_country = LFA
+}
+north_pacific_sea_superregion = {
+    undiscover_country = LFA
+}
+# ----------------
 
 every_owned_province = {
-    remove_province_modifier = zan_great_kilwa
-    remove_province_modifier = hsa_center_of_mineral_trade
-    remove_province_modifier = mng_silver_house_of_china_modifier
-    remove_province_modifier = jap_expanded_mining_operations_modifier
-    remove_province_modifier = liv_lva_west_african_gold_production
+    set_province_flag = floor_explored
 }
+
+
+
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 1
+        NOT = {
+            province_has_center_of_trade_of_level = 5
+        }
+        ROOT = {
+            treasury = 200
+        }
+    }
+    add_center_of_trade_level = 5
+    owner = {
+        add_treasury = -200
+    }
+}
+
+
+every_owned_province = {
+    limit = {
+        culture = moesian
+    }
+
+    change_culture = ROOT
+}
+
+
+
+CAPITAL_SCOPE = {
+    add_province_modifier = {
+        name = confluence
+        duration = -1
+    }
+    add_province_modifier = {
+        name = lakeshore
+        duration = -1
+    }
+    add_province_modifier = {
+        name = irrigation
+        duration = -1
+    }
+    add_province_modifier = {
+        name = gardens
+        duration = -1
+    }
+    add_province_modifier = {
+        name = wells
+        duration = -1
+    }
+    add_province_modifier = {
+        name = terrace
+        duration = -1
+    }
+    add_province_modifier = {
+        name = dikes
+        duration = -1
+    }
+    add_province_modifier = {
+        name = breakwaters
+        duration = -1
+    }
+    add_province_modifier = {
+        name = lighthouse
+        duration = -1
+    }
+    add_province_modifier = {
+        name = dam
+        duration = -1
+    }
+    add_province_modifier = {
+        name = valley
+        duration = -1
+    }
+    add_province_modifier = {
+        name = bayou
+        duration = -1
+    }
+}
+
+
+create_advisor = army_reformer
+create_advisor = commandant
 
 
 remove_idea_group = offensive_ideas
@@ -619,12 +1320,15 @@ add_province_modifier = {
     add_colonysize = 300
 }
 
+
+create_advisor = court_mage
+
+# hold depth
+
 4149 = {
     add_province_modifier = { 
         name = dig_3
         duration = -1  
-        desc = dig_3:0
-        hidden = yes
     }
 }
 
@@ -673,10 +1377,6 @@ add_province_modifier = {
     }
 }
 
-
-event MEE_Byzantine_Events.48
-
-
 4265 = {
     add_province_modifier = { 
         name = dig_3
@@ -686,7 +1386,6 @@ event MEE_Byzantine_Events.48
     }   
 }
 
-create_advisor = court_mage
 
 4266 = {
     add_province_modifier = { 
@@ -771,12 +1470,69 @@ add_country_modifier = {
     duration = -1  
 }
 
+every_owned_province = {
+    limit = { 
+        NOT = {
+            has_building = artisan
+        }
+        ROOT = {
+            treasury = 100
+        }
+    }
+    add_building = artisan
+    ROOT = {
+        add_treasury = -100
+    }
+}
+
 
 add_country_modifier = { 
     name = rome_navy
     duration = -1  
 }
+if = {
+    limit = {
+        has_consort = no
+    }
+    define_consort = {
+        country_of_origin = ROOT
+        religion = ROOT
+        culture = ROOT
+        name = "Theodora"
+        female = yes
+        adm = 6
+        dip = 6
+        mil = 6
+        dynasty = ROOT
+    }
+    add_queen_personality = immortal_personality
+}
 
+
+FTM = {
+    every_owned_province = {
+        add_unrest = 1000
+        add_core = EGY
+        # separatist_rebels = 1
+        change_religion = orthodox
+        change_culture = al_misr_arabic
+    }  
+}
+
+
+FTM = {
+    every_owned_province = {
+        limit = {
+            superregion = levant_superregion
+        }
+        # change_controller = PREV
+        add_unrest = 1000
+        add_core = ROOT
+        separatist_rebels = 1
+        change_religion = ROOT
+        create_revolt = 1000
+    }  
+}
 
 every_owned_province = {
     limit = {
@@ -819,10 +1575,104 @@ define_explorer = {
     siege = 6
 }
 
+CAPITAL_SCOPE = {
+    create_flagship = {
+        name = "Glory of Konstantinoupolis"
+        type = heavy_ship
+    }
+}
+
+
 
 #=========== Color switching =========
 
-TIM
+# Byzantium Color Switching
+
+
+change_country_color = { 
+    color = { 160 0 102 }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = march
+        }
+    }
+
+    change_country_color = { 
+        color = { 170 20 60 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = pronoia_subject_type
+            is_subject_of_type = hereditary_pronoia_subject_type
+        }
+    }
+
+    change_country_color = { 
+        color = { 160 60 122 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = vassal
+        }
+    }
+
+    change_country_color = { 
+        color = { 180 70 132 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = agricultural_march
+        }
+    }
+
+    change_country_color = { 
+        color = { 150 50 130 }
+    }
+}
+
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = se_integrated_personal_union
+            is_subject_of_type = personal_union
+        }
+    }
+
+    change_country_color = { 
+        color = { 254 211 63 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = naval_march
+            is_subject_of_type = pirate_brotherhood_vassal
+        }
+    }
+
+    change_country_color = { 
+        country = SYR
+    }
+}
+
+
+# =========================================================================================================
+
+# TIM
 
 
 every_subject_country = {
@@ -1148,6 +1998,15 @@ change_estate_land_share = {
     estate = estate_eunuchs
     share = -1
 }
+change_estate_land_share = {
+    estate = estate_cossacks
+    share = 3
+}
+change_estate_land_share = {
+    estate = all
+    share = -2
+}
+
 
 set_emperor_of_china = MNG
 
@@ -1156,6 +2015,53 @@ remove_heir_personality = lawgiver_personality
 add_heir_trait = immortal_personality
 change_heir_dip = 1
 
+LFA = {
+    if = {
+        limit = {
+            OR = {
+                num_of_provinces_in_states = 9 
+                num_of_provinces_in_states = 9
+            }
+        }   
+        every_owned_province = {
+            decolonize = this
+        }
+        95 = {
+            set_base_tax = 0
+            set_base_production = 0
+            set_base_manpower = 0
+        }
+    }
+
+}
+
+ROOT = {
+    add_historical_friend = FRA
+}
+FRA = {
+    add_historical_friend = ROOT
+}
+
+ROOT = {
+    add_historical_friend = MOR
+}
+MOR = {
+    add_historical_friend = ROOT
+}
+
+ROOT = {
+    add_historical_friend = GBR
+}
+GBR = {
+    add_historical_friend = ROOT
+}
+
+ROOT = {
+    add_historical_friend = MEX
+}
+MEX = {
+    add_historical_friend = ROOT
+}
 
 ERS = {
     add_historical_friend = MNG
@@ -1216,7 +2122,86 @@ every_owned_province = {
 }   
 
 
-FEE_Advisor_Event.14
+remove_country_modifier = hf_on_new_monarch
+
+event FEE_Advisor_Event.14 # student of language
+
+every_owned_province = {
+    clr_province_flag = hf_prov_settlement
+    clr_province_flag = hf_prov_village
+    clr_province_flag = hf_prov_building_town
+
+    set_province_flag = hf_prov_city
+}
+
+
+# Pax Solis Russia Colors ======================================================
+
+change_country_color = { 
+    color = { 230 180 1 }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = se_integrated_personal_union
+            is_subject_of_type = personal_union
+        }
+    }
+
+    change_country_color = { 
+        color = { 254 211 63 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = march
+        }
+    }
+
+    change_country_color = { 
+        color = { 255 170 80 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = agricultural_march
+        }
+    }
+
+    change_country_color = { 
+        color = { 200 255 60 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = vassal
+        }
+    }
+
+    change_country_color = { 
+        color = { 255 255 100 }
+    }
+}
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = religious_march
+        }
+    }
+
+    change_country_color = { 
+        color = { 175 135 1 }
+    }
+}
+
 
 
 # Rome =========================================================================
@@ -1488,6 +2473,34 @@ add_ruler_personality = fee_child_of_destiny_personality
 
 
 
+every_province = {
+    limit = {
+        NOT = {
+            base_tax = 1
+        }
+    }
+    add_base_tax = 1
+}
+
+every_province = {
+    limit = {
+        NOT = {
+            base_production = 1
+        }
+    }
+    add_base_production = 1
+}
+
+every_province = {
+    limit = {
+        NOT = {
+            base_manpower = 1
+        }
+    }
+    add_base_manpower = 1
+}
+
+
 
 every_owned_province = {
     limit = {
@@ -1501,12 +2514,12 @@ every_owned_province = {
 every_owned_province = {
     limit = {
         NOT = {
-            development = 1
+            development = 20
         }
     }
-    set_base_tax = 1
-    set_base_production = 1
-    set_base_manpower = 1
+    add_base_tax = 1
+    add_base_production = 1
+    add_base_manpower = 1
 }
 
 every_owned_province = {
@@ -1529,17 +2542,101 @@ every_owned_province = {
 
 
 every_subject_country = {
-    every_owned_province = {
-        add_devastation = -100
+    ROOT = {
+        create_subject = {
+            subject = PREV
+            subject_type = vassal
+        }
+    }
+}
+remove_country_modifier = hf_estate_int_cool_down_population
+
+
+every_owned_province = {
+    limit = {
+        not = {
+            has_building = roads
+        }
+    }
+    add_building = roads
+
+    add_province_modifier = {
+        name = hf_jianbing_modifier
+        duration = -1
     }
 }
 
 
 every_country = {
-    add_adm_tech = 1
-    add_dip_tech = 1
-    add_mil_tech = 1
+    ruined_sea_region = {
+        undiscover_country = PREV
+    }
+    effelai_superregion = {
+        undiscover_country = PREV
+    }
+    ruin_proper_superregion = {
+        undiscover_country = PREV
+    }
+    north_aelantir_superregion = {
+        undiscover_country = PREV
+    }
+    ruined_sea_superregion = {
+        undiscover_country = PREV
+    }
+    south_aelantir_superregion = {
+        undiscover_country = PREV
+    }
+    ynn_superregion = {
+        undiscover_country = PREV
+    }
+    torn_sea_superregion = {
+        undiscover_country = PREV
+    }
+    eordand_superregion = {
+        undiscover_country = PREV
+    }
+    effelai_superregion = {
+        undiscover_country = PREV
+    }
+    kheionai_superregion = {
+        undiscover_country = PREV
+    }
+    greater_taychend_superregion = {
+        undiscover_country = PREV
+    }
 }
+every_subject_country = {
+    every_owned_province = {
+        add_devastation = -100
+    }
+}
+
+add_country_modifier = {
+    name = client_states_cheat
+    duration = -1
+}
+
+
+LFA = {
+    add_liberty_desire = -100
+}
+# mandala_trade_vassal
+
+
+# Keep mexico out of america
+
+MEX = {
+    every_owned_province = {
+        limit = {
+            superregion = north_america_superregion
+        }
+        decolonize = THIS
+    }
+}
+
+
+# tributaries plus 1 mana
+mng_reformed_tributary_obligation_system_modifier
 
 every_country = {
     remove_opinion = {
@@ -1641,6 +2738,74 @@ add_country_modifier = {
 }
 
 
+# -------------
+
+# Improve capital hold metropolis infrastructure
+
+add_treasury = -3000
+add_adm_power = -100
+add_dip_power = -100
+
+set_country_flag = building_diggy
+set_country_flag = building_artificier_hall
+country_event = { id = diggy_project.3 }
+
+capital_scope = {
+    add_province_modifier = {
+        name = developing_advanced_infrastructure
+        duration = 18250
+    }
+}
+
+2999 = {
+    remove_province_modifier = dwarovkron_ruby_fragment
+    set_global_flag = dwarovkron_ruby_found
+    owner = {
+        add_country_modifier = { 
+            name = dwarovkron_ruby 
+            duration = -1 
+        }
+        country_event = { id = diggy.214 }
+    }
+}
+
+# Find dwarovkron gem fragments
+
+every_province = {
+    limit = {
+        has_province_modifier = dwarovkron_citrine_fragment
+    }
+
+    log = "Found citrine fragment in province [This.GetName]"
+}
+
+every_province = {
+    limit = {
+        has_province_modifier = dwarovkron_diamond_fragment
+    }
+
+    log = "Found diamond fragment in province [This.GetName]"
+}
+
+every_province = {
+    limit = {
+        has_province_modifier = dwarovkron_amethyst_fragment
+    }
+
+    log = "Found amethyst fragment in province [This.GetName]"
+}
+
+
+
+
+# --------
+
+# Artifice Capacity
+change_variable = {
+    which = StaticArtificePoints
+    value = -50
+}
+
 # --------
 
 # 1988 = {
@@ -1672,6 +2837,66 @@ add_country_modifier = {
 #         discover_country = PREV
 #     }
 # }
+
+
+
+every_country = {
+    ROOT = {
+        remove_opinion = {
+            who = PREV
+            modifier = colonial_relation
+        }
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = colonial_relation
+    }
+    reverse_remove_opinion = {
+        who = ROOT
+        modifier = colonial_relation
+    }
+    reverse_remove_opinion = {
+        who = THIS
+        modifier = colonial_relation
+    }
+}
+
+
+add_country_modifier = {
+    name = more_policy_slots_kat
+    duration = -1
+}
+
+
+# subject uncolonists
+every_subject_country = {
+    
+
+    remove_country_modifier = cossack_settlers
+    remove_country_modifier = sea_route_to_india
+    remove_country_modifier = puritan_colonists
+    remove_country_modifier = temporary_colonist
+    remove_country_modifier = colonize_the_continent
+    remove_country_modifier = spice_colony_modifier
+    remove_country_modifier = liv_lva_random_new_world_colonialism
+    remove_country_modifier = swe_swedish_colonialism
+    remove_country_modifier = puritan_colonists
+    remove_country_modifier = council_of_the_indies_mod
+    remove_country_modifier = colonial_act_modifier
+    remove_country_modifier = grand_vizier_colonial_governor
+    remove_country_modifier = aid_natives
+    remove_country_modifier = expand_colonial_territory
+    remove_country_modifier = colonial_enthusiasm
+    remove_country_modifier = agenda_colonial_administration
+    remove_country_modifier = casa_de_contratacion
+    remove_country_modifier = colonial_policy
+}
+
+
+
+
+
+
 
 
 every_owned_province = {
@@ -1748,3 +2973,1210 @@ ADA = {
         change_controller = ETH
     }
 }
+
+
+
+
+
+every_province = {
+    limit = {
+        superregion = central_america_superregion
+    }
+    cede_province = ROOT
+}
+
+africa_superregion = {
+    discover_country = ROOT
+}
+southern_africa_superregion = {
+    discover_country = ROOT
+}
+
+
+
+
+
+
+add_accepted_culture = beijing_culture
+
+
+every_owned_province = {
+    limit = {
+        or = {
+            culture = khorasani
+            culture = khazak
+            culture = lop
+            culture = pamiri
+            culture = turkmeni
+            culture = mongol
+            culture = nivkh
+            culture = chagatai
+            culture = evenk
+            culture = mangalai
+            culture = oirats
+            culture = yugur
+            culture = xianbei
+            culture = chahar
+            culture = khwarazm
+            culture = kamchatkan
+            culture = shandong_culture
+            culture = daur
+            culture = chukchee
+            culture = dongbei
+            culture = polynesian
+            culture = tajik
+        }
+    }
+    change_culture = ROOT
+}
+
+
+every_owned_province = {
+    limit = {
+        not = {
+            has_building = roads
+        }
+    }
+    add_building = roads
+}
+
+every_owned_province = {
+    limit = {
+        not = {
+            has_building = stage_station
+        }
+    }
+    add_building = stage_station
+}
+
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            not = {
+                has_building = roads
+            }
+        }
+        add_building = roads
+    }  
+    every_owned_province = {
+        limit = {
+            not = {
+                has_building = stage_station
+            }
+        }
+        add_building = stage_station
+    }
+}
+
+
+# Para bellum in Third Odyssey
+
+956 = {
+    province_event = { 
+        id = nhs_mission_events.24
+    }
+}
+2553 = {
+    province_event = { 
+        id = nhs_mission_events.24
+    }
+}
+952 = {
+    province_event = { 
+        id = nhs_mission_events.24
+    }
+}
+937 = {
+    province_event = { 
+        id = nhs_mission_events.24
+    }
+}
+953 = {
+    province_event = { 
+        id = nhs_mission_events.24
+    }
+}
+
+
+
+
+
+953 = {
+    change_trade_goods = elysian_silk
+}
+
+
+
+
+
+
+
+KYK = {
+    every_owned_province = {
+        limit = {
+            superregion = andes_superregion
+        }
+
+        cede_province = ROOT
+        add_core = ROOT
+    }
+}
+
+
+# Third Odyssey Prevent colonization
+
+
+
+if = {
+    limit = {
+        NOT = {
+            is_year = 1500
+        }
+    }
+
+    FRA = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    SPA = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+
+    ENG = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    SCO = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    NOR = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    DAN = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    POR = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    CAS = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+    ARA = {
+        every_owned_province = {
+            limit = {
+                OR = {
+                    superregion = south_elysia_superregion
+                    superregion = central_elysia_superregion
+                    superregion = west_elysia_superregion
+                    superregion = north_elysia_superregion
+                    superregion = northeast_elysia_superregion
+                    superregion = southeast_elysia_superregion
+                    superregion = carribean_superregion
+                    superregion = east_american_sea_superregion
+                }
+            }
+            decolonize = THIS
+        }
+    }
+
+    south_elysia_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    central_elysia_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    west_elysia_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    north_elysia_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    northeast_elysia_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    southeast_elysia_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    carribean_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+    east_american_sea_superregion = {
+        undiscover_country = FRA
+        undiscover_country = SPA
+        undiscover_country = ENG
+        undiscover_country = SCO
+        undiscover_country = NOR
+        undiscover_country = DAN
+        undiscover_country = POR
+        undiscover_country = CAS
+        undiscover_country = ARA
+
+    }
+}
+
+
+
+
+every_owned_province = {
+    set_local_autonomy = 0
+}
+
+
+# ===================
+
+# Immortal royal family
+
+if = {
+    limit = {
+        has_consort = no
+    }
+    define_consort = {
+        culture = ROOT
+        adm = 6
+        dip = 6
+        mil = 6
+        female = yes
+    }
+    add_queen_personality = immortal_personality
+}
+
+
+if = {
+    limit = {
+        has_heir = no
+    }
+    define_heir = {
+        culture = ROOT
+        dynasty = ROOT
+        claim = 100
+        adm = 6
+        dip = 6
+        mil = 6
+        female = no
+    }
+    add_heir_personality = immortal_personality
+}
+
+
+# ======================
+
+# start colonies all over alaska
+every_province = {
+    limit = {
+        or = {
+            area = alaska_area
+            area = east_alaska_area
+            area = hecate_strait_area
+            area = straits_of_georgia_area
+        }
+        is_empty = yes
+    }
+    create_colony = 1
+}
+
+# Pax Solis Cheats ==============
+
+
+
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 3
+    }
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+}
+
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 2
+        NOT = {
+            province_has_center_of_trade_of_level = 3
+        }
+        ROOT = {
+            treasury = 1000
+        }
+    }
+    add_center_of_trade_level = 1
+    owner = {
+        add_treasury = -1000
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 2
+            NOT = {
+                province_has_center_of_trade_of_level = 3
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_center_of_trade_level = 1
+        ROOT = {
+            add_treasury = -1000
+        }
+    }
+}
+
+every_country = {
+    limit = {
+        religion_group = christian
+    }
+    ROOT = {
+        create_marriage = PREV
+        add_legitimacy = 2
+    }
+}
+
+
+# Siberia
+every_province = {
+    limit = {
+        OR = {
+            region = west_siberia_region
+            region = east_siberia_region
+            region = mongolia_region
+            region = manchuria_region
+        }
+        NOT = {
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+        is_colony = yes 
+    }
+
+    log = "Colonial prov to be removed = [This.GetName]"
+    decolonize = this
+}
+
+# buildings
+every_owned_province = {
+    limit = {
+        NOT = {
+            has_building = roads
+        }
+    }
+    add_building = roads
+}
+every_owned_province = {
+    limit = {
+        NOT = {
+            has_building = stage_station
+        }
+    }
+    add_building = stage_station
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = roads
+            }
+        }
+        add_building = roads
+    }
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = stage_station
+            }
+        }
+        add_building = stage_station
+    }
+}
+
+
+# governor
+every_owned_province = {
+    limit = {
+        is_state = yes
+    }
+
+    hf_remove_all_prov_ruler = yes
+    area = {
+        limit = { owned_by = FROM }
+        set_province_flag = hf_gov_estate_burghers
+        set_province_flag = hf_gov_estate_ruler
+        add_province_modifier = {
+            name = hf_gov_estate_burghers_modifier
+            duration = -1
+        }
+    }
+    owner = {
+        add_estate_loyalty = {
+            estate = estate_burghers
+            loyalty = 1
+        }
+    }
+}
+# ======================
+
+# Peace in HRE
+
+
+every_country = {
+    limit = {
+        is_part_of_hre = yes
+    }
+
+    every_country = {
+        limit = {
+            is_part_of_hre = yes
+        }
+        white_peace = PREV
+    }
+}
+
+# ==========================
+
+# Latest Russia Pax Solis
+
+
+every_owned_province = {
+    remove_province_modifier = estate_church_lao_animism_mod
+}
+every_subject_country = {
+    every_owned_province = {
+        remove_province_modifier = estate_church_lao_animism_mod
+    }
+}
+
+every_country = {
+    limit = {
+        is_part_of_hre = yes
+    }
+
+    every_country = {
+        limit = {
+            is_part_of_hre = yes
+        }
+        white_peace = PREV
+    }
+}
+
+
+every_country = {
+    limit = {
+        is_part_of_hre = yes
+        NOT = {
+            religion = ROOT
+        }
+    }
+
+    log = "Country [This.GetName] [This.GetReligion]"
+    change_religion = ROOT
+   
+    CAPITAL_SCOPE = {
+        change_religion = ROOT
+    }
+
+    set_variable = {
+        which = counterVar
+        value = 0
+    }
+    
+    while = {
+        limit = {
+            NOT = {
+                check_variable = {
+                    which = counterVar
+                    value = 5
+                }
+            }
+        }
+
+        random_owned_province = {
+            limit = {
+                NOT = {
+                    religion = ROOT
+                }
+            }
+            change_religion = ROOT
+        }
+
+        change_variable = {
+            which = counterVar
+            value = 1
+        }
+    }
+
+}
+
+GER = {
+    override_country_name = "West German Kingdom"
+}
+MAR = {
+    override_country_name = "Russian Maratha Outpost"
+}
+CEY = {
+    override_country_name = "Russian Ceylonese Outpost"
+}
+HSA = {
+    override_country_name = "Russian Hanseatic Outpost"
+}
+ORM = {
+    override_country_name = "Russian Hormuzi Outpost"
+}
+K01 = {
+    override_country_name = "Russian Mumbaikar Outpost"
+}
+K00 = {
+    override_country_name = "Russian Cannanorean Outpost"
+}
+K03 = {
+    override_country_name = "Russian Tondai Outpost"
+}
+K04 = {
+    override_country_name = "Russian Bhimavaram Outpost"
+}
+
+
+if = {
+    limit = {
+        NOT = {
+            num_of_colonies = 11
+        }
+    }
+
+    random_province = {
+        limit = {
+            OR = {
+                region = cascadia_region
+                region = california_region
+            }
+            OR = {
+                has_port = yes
+                is_neighbor_of = ROOT
+            }
+            is_empty = yes
+        }
+        create_colony = 1
+    }
+}
+
+
+every_owned_province = {
+    remove_province_modifier = estate_church_lao_animism_mod
+}
+every_subject_country = {
+    every_owned_province = {
+        remove_province_modifier = estate_church_lao_animism_mod
+    }
+}
+
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 3
+        is_owned_by_trade_company = no
+    }
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+}
+
+every_owned_province = {
+    limit = {
+        province_has_center_of_trade_of_level = 2
+        NOT = {
+            province_has_center_of_trade_of_level = 3
+        }
+        ROOT = {
+            treasury = 1000
+        }
+    }
+    add_center_of_trade_level = 1
+    owner = {
+        add_treasury = -1000
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 2
+            NOT = {
+                province_has_center_of_trade_of_level = 3
+            }
+            ROOT = {
+                treasury = 1000
+            }
+        }
+        add_center_of_trade_level = 1
+        ROOT = {
+            add_treasury = -1000
+        }
+    }
+}
+
+every_country = {
+    limit = {
+        religion_group = christian
+    }
+    ROOT = {
+        create_marriage = PREV
+        add_legitimacy = 2
+    }
+}
+
+# Auto colonize
+if = {
+    limit = {
+        NOT = {
+            num_of_colonies = 14
+        }
+    }
+
+    random_province = {
+        limit = {
+            OR = {
+                # region = south_africa_region
+                # superregion = south_america_superregion
+
+                region = la_plata_region
+            }
+            AND = {
+                has_port = yes
+                is_neighbor_of = ROOT
+            }
+            is_empty = yes
+        }
+        create_colony = 1
+    }
+}
+
+# Siberia
+every_province = {
+    limit = {
+        OR = {
+            region = west_siberia_region
+            region = east_siberia_region
+            region = mongolia_region
+            region = manchuria_region
+        }
+        NOT = {
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+        is_colony = yes 
+    }
+
+    log = "Colonial prov to be removed = [This.GetName]"
+    decolonize = this
+}
+
+# ===============
+
+# Swapping provinces
+
+6643 = {
+    set_base_tax = 2
+    set_base_production = 2
+    set_base_manpower = 1
+    remove_country_modifier = paradise_modifier
+    remove_country_modifier = medical_evolution
+    remove_country_modifier = baby_boomers
+    remove_country_modifier = economic_development_of_mazovia
+    remove_country_modifier = holland_polders
+    remove_country_modifier = japanese_jokamachi
+    remove_country_modifier = ven_ministers_of_waterways
+
+    change_trade_goods = livestock
+}
+
+1158 = {
+    set_base_tax = 4
+    set_base_production = 15
+    set_base_manpower = 10
+
+    change_trade_goods = gold
+}
+
+
+# ======== Setting to city =================
+
+every_owned_province = {
+    clr_province_flag = hf_prov_settlement
+    clr_province_flag = hf_prov_village
+    clr_province_flag = hf_prov_building_town
+
+    set_province_flag = hf_prov_city
+
+}
+
+
+# ======== Japan Vassal Names ================
+
+override_country_name = JAPANESE_EMPIRENAME
+
+MCH = {
+    override_country_name = "Soto Manchukuo"
+}
+QNG = {
+    override_country_name = "Manchukuo"
+}
+KHA = {
+    override_country_name = "Menggukoku"
+}
+SIB = {
+    override_country_name = "Shibekoku"
+}
+KUT = {
+    override_country_name = "Borunekoku"
+}
+PAH = {
+    override_country_name = "Sumatorakoku"
+}
+K00 = {
+    override_country_name = "Papuakoku"
+}
+K01 = {
+    override_country_name = "Osutoraneshiakoku" # austronesia
+}
+K02 = {
+    override_country_name = "Mareshiakoku"
+}
+K03 = {
+    override_country_name = "Shingaporu"
+}
+SUN = {
+    override_country_name = "Jawakoku"
+}
+C04 = {
+    override_country_name = "Osutoraria Jichiryo"
+}
+KOR = {
+    override_country_name = "Chosen"
+}
+
+
+# ===== army recruit speed
+
+
+every_owned_province = {
+    add_province_modifier = {
+        name = recruits_flock
+        duration = -1
+    }
+    add_province_modifier = {
+        name = wei_suo_system_reform_soldier_households_modifier
+        duration = -1
+    }
+}
+
+# ================ Ismail I Traits =================
+add_ruler_modifier = {
+    name = ARL_conqueror
+    duration = -1
+}
+add_ruler_modifier = {
+    name = ARL_The_avenger
+    duration = -1
+}
+add_ruler_modifier = {
+    name = the_beating_of_the_drums
+    duration = -1
+}
+
+# ================ Immortal Ismail Advisor ================
+if = {
+    limit = {
+        NOT = {
+            statesman = 3
+        }
+    }
+    define_advisor = {
+        name = "Ismail"
+        type = statesman
+        skill = 3
+        cost_multiplier = 0.1
+        age = 15
+    }
+}
+
+
+
+# Ismail I
+ROOT = {
+    if = {
+        limit = {
+            NOT = {
+                statesman = 3
+            }
+        }
+        define_advisor = {
+            name = "Ismail"
+            type = statesman
+            skill = 5
+            cost_multiplier = 0.1
+            age = 15
+        }
+    }
+
+    ROOT = {
+        add_ruler_modifier = {
+            name = ARL_conqueror
+            duration = -1
+        }
+        add_ruler_modifier = {
+            name = ARL_The_avenger
+            duration = -1
+        }
+        add_ruler_modifier = {
+            name = the_beating_of_the_drums
+            duration = -1
+        }
+    }
+}
+
+# =====
+
+
+every_owned_province = {
+    limit = {
+        region = egypt_region
+    }
+}
+
+# 321 = {
+#     infantry = CYP
+#     infantry = CYP
+#     artillery = CYP
+#     infantry = CYP
+#     infantry = CYP
+#     artillery = CYP
+#     infantry = CYP
+#     infantry = CYP
+#     artillery = CYP
+#     infantry = CYP
+#     infantry = CYP
+#     artillery = CYP
+# }
+
+# 2998 = {
+#     infantry = WAL
+#     infantry = WAL
+#     artillery = WAL
+#     infantry = WAL
+#     infantry = WAL
+#     artillery = WAL
+#     infantry = WAL
+#     infantry = WAL
+#     artillery = WAL
+#     infantry = WAL
+#     infantry = WAL
+#     artillery = WAL
+# }
+
+every_owned_province = {
+    limit = {
+        OR = {
+            province_id = 578
+            province_id = 2078
+            province_id = 2079
+            province_id = 512
+            province_id = 513
+        }
+    }
+    change_trade_goods = silk
+}
+
+# ====================
+
+BUR = {
+    if = {
+        limit = {
+            is_year = 1470
+        }
+        # inherit bur
+        country_event = {
+            id = incidents_bur_inheritance.5
+        }    
+    }
+    add_country_modifier = { 
+        name = mary_is_on_the_throne
+        duration = -1
+    }
+}
+
+
+#-----
+if = {
+    limit = {
+        is_year = 1522
+        is_month = 4
+    }
+    change_price = {
+        trade_goods = silk
+        key = PERSIA_SILK
+        value = 0.2
+        duration = -1
+    }
+    change_price = {
+        trade_goods = cloth
+        key = PERSIA_CLOTH
+        value = 0.1
+        duration = -1
+    }
+    change_price = {
+        trade_goods = dyes
+        key = PERSIA_DYES
+        value = 0.1
+        duration = -1
+    }
+}
+
+
+# France get rid of papal subjugation penalty for both pax solis and normal
+add_adm_power = 150 
+add_dip_power = 150 
+add_mil_power = 150 
+add_prestige = 15 
+
+set_country_flag = general_flag_for_FU_Rome_flag 
+set_country_flag = general_flag_Rome_flag
+PAP = {
+    add_country_modifier = {
+        name = fra_integration_french_legal_code_modifier
+        duration = 7300
+    }
+    add_liberty_desire = -100
+    add_historical_friend = FRA 
+}
+add_historical_friend = PAP
+
+
+
+# HRE Wars
+
+every_country = {
+    limit = {
+        is_part_of_hre = yes
+    }
+    every_country = {
+        limit = {
+            war_with = PREV
+        }
+        log = "HRE War: [This.GetName] is at war with [Prev.GetName]"
+
+        Prev = {
+            white_peace = THIS
+        }
+    }
+}
+
+
+# Make Free HRE Electors Orange
+every_country = {
+    limit = {
+        is_elector = yes
+        is_subject = no
+        NOT = {
+            tag = FRA
+        }
+    }
+
+    change_country_color = {
+        color = { 160 80 0 }
+    }
+
+    every_subject_country = {
+        change_country_color = {
+            color = { 200 120 40 }
+        }
+    }
+}
+
+
+# ===== Anbennar get rid of magical infamy ==========
+change_variable = {
+    which = pointsWitchKing
+    value = -100
+}
+
+
+# ===== Anbennar get rid of hoardcurse end result =======
+remove_country_modifier = adequate_remuneration
