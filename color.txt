@@ -779,68 +779,89 @@ every_subject_country = {
 }
 
 # Cycling colors for a specific subject type
-
 ROOT = {
-    ROOT = {
-        set_variable = {
-            which = colorCounter
-            value = 0
+    set_country_flag = all_amlharaz_holds_flagged
+
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = amlharaz_hold
         }
-        while = {
+        if = {
             limit = {
                 NOT = {
-                    check_variable = {
-                        which = colorCounter
-                        value = 30
-                    }
+                    has_country_flag = amlharaz_hold_color_1
+                    has_country_flag = amlharaz_hold_color_2
+                    has_country_flag = amlharaz_hold_color_3
                 }
             }
-            change_variable = {
-                which = colorCounter
-                value = 1
-            }
-            random_subject_country = {
-                limit = {
-                    OR = {
-                        is_subject_of_type = amlharaz_hold
-                    }
-                    NOT = {
-                        has_country_flag = amlharaz_hold_color_1
-                        has_country_flag = amlharaz_hold_color_2
-                        has_country_flag = amlharaz_hold_color_3
-                    }
-                }
-                set_country_flag = amlharaz_hold_color_1
-            }
-            random_subject_country = {
-                limit = {
-                    OR = {
-                        is_subject_of_type = amlharaz_hold
-                    }
-                    NOT = {
-                        has_country_flag = amlharaz_hold_color_1
-                        has_country_flag = amlharaz_hold_color_2
-                        has_country_flag = amlharaz_hold_color_3
-                    }
-                }
-                set_country_flag = amlharaz_hold_color_2
-            }
-            random_subject_country = {
-                limit = {
-                    OR = {
-                        is_subject_of_type = amlharaz_hold
-                    }
-                    NOT = {
-                        has_country_flag = amlharaz_hold_color_1
-                        has_country_flag = amlharaz_hold_color_2
-                        has_country_flag = amlharaz_hold_color_3
-                    }
-                }
-                set_country_flag = amlharaz_hold_color_3
-            }
+            clr_country_flag = all_amlharaz_holds_flagged
         }
     }
 
+    set_variable = {
+        which = colorCounter
+        value = 0
+    }
+    while = {
+        limit = {
+            NOT = {
+                has_country_flag = all_amlharaz_holds_flagged
+            }
+            NOT = {
+                check_variable = {
+                    which = colorCounter
+                    value = 30
+                }
+            }
+        }
+        log = "Setting amlharaz hold color [colonyCounter.GetValue]"
+        change_variable = {
+            which = colorCounter
+            value = 1
+        }
+        random_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = amlharaz_hold
+                }
+                NOT = {
+                    has_country_flag = amlharaz_hold_color_1
+                    has_country_flag = amlharaz_hold_color_2
+                    has_country_flag = amlharaz_hold_color_3
+                }
+            }
+            set_country_flag = amlharaz_hold_color_1
+        }
+        random_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = amlharaz_hold
+                }
+                NOT = {
+                    has_country_flag = amlharaz_hold_color_1
+                    has_country_flag = amlharaz_hold_color_2
+                    has_country_flag = amlharaz_hold_color_3
+                }
+            }
+            set_country_flag = amlharaz_hold_color_2
+        }
+        random_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = amlharaz_hold
+                }
+                NOT = {
+                    has_country_flag = amlharaz_hold_color_1
+                    has_country_flag = amlharaz_hold_color_2
+                    has_country_flag = amlharaz_hold_color_3
+                }
+            }
+            set_country_flag = amlharaz_hold_color_3
+        }
+    }
+
+
+    # ================== Finished setting flags, actually change colors now ===============================================
     every_subject_country = {
         limit = {
             OR = {
@@ -853,7 +874,7 @@ ROOT = {
         }
     }
 
-
+    
     every_subject_country = {
         limit = {
             OR = {
@@ -865,8 +886,8 @@ ROOT = {
             color = { 100  100  100 }
         }
     }
-
-
+    
+    
     every_subject_country = {
         limit = {
             OR = {
@@ -878,7 +899,7 @@ ROOT = {
             color = { 60 50 70 }
         }
     }
-}
 
+}
 # ========================================================================
 

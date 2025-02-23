@@ -1,15 +1,6 @@
-
-# CAMPAIGN SPECIFIC SCRIPTS ============================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-
 ##########################################################################
 # Scripts | script.txt | Just general things to run
 ##########################################################################
-
 
 
 
@@ -24,14 +15,14 @@ ROOT = {
     while = {
         limit = {
             NOT = {
-                check_variable = {
-                    which = colonyCounter
-                    value = 10
-                }
-            }
-            NOT = {
                 num_of_colonies = 13
             }
+            # NOT = {
+            #     check_variable = {
+            #         which = colonyCounter
+            #         value = 5
+            #     }
+            # }
         }
         change_variable = {
             which = colonyCounter
@@ -41,16 +32,24 @@ ROOT = {
         random_province = {
             limit = {
                 OR = {
-                    has_terrain = dwarven_hold
-                    has_terrain = dwarven_hold_surface
-                    has_terrain = dwarven_road
+                    AND = {
+                        OR = {
+                            has_terrain = dwarven_hold
+                            has_terrain = dwarven_hold_surface
+                            has_terrain = dwarven_road
+                        }
+                        OR = {
+                            superregion = west_serpentspine_superregion
+                            superregion = east_serpentspine_superregion
+                        }
+                    }
+
+                    OR = {
+                        superregion = djinnakah_superregion
+                    }
                 }
                 OR = {
-                    superregion = west_serpentspine_superregion
-                    superregion = east_serpentspine_superregion
-                }
-                OR = {
-                    has_port = yes
+                    # has_port = yes
                     is_neighbor_of = ROOT
                 }
                 is_empty = yes
@@ -77,6 +76,24 @@ ROOT = {
 
     # Cycling colors for amlharaz holds
     ROOT = {
+        set_country_flag = all_amlharaz_holds_flagged
+
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = amlharaz_hold
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = amlharaz_hold_color_1
+                        has_country_flag = amlharaz_hold_color_2
+                        has_country_flag = amlharaz_hold_color_3
+                    }
+                }
+                clr_country_flag = all_amlharaz_holds_flagged
+            }
+        }
+
         set_variable = {
             which = colorCounter
             value = 0
@@ -84,12 +101,16 @@ ROOT = {
         while = {
             limit = {
                 NOT = {
+                    has_country_flag = all_amlharaz_holds_flagged
+                }
+                NOT = {
                     check_variable = {
                         which = colorCounter
                         value = 30
                     }
                 }
             }
+            log = "Setting amlharaz hold color [colonyCounter.GetValue]"
             change_variable = {
                 which = colorCounter
                 value = 1
@@ -176,21 +197,41 @@ ROOT = {
         }
 
     }
-    # every_subject_country = {
-    #     limit = {
-    #         OR = {
-    #             is_subject_of_type = crown_colony
-    #             is_subject_of_type = dominion
-    #         }
-    #     }
-    #     change_country_color = {
-    #         color = { 60  90  230 }
-    #     }
-    # }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = crown_colony
+                is_subject_of_type = dominion
+            }
+        }
+        change_country_color = {
+            color = { 120 120 120 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = march
+            }
+        }
+        change_country_color = {
+            color = { 110 30 30 }
+        }
+    }
+
     
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = native_reserve
+            }
+        }
+        change_country_color = {
+            color = { 150 150 150 }
+        }
+    }
 }
-
-
 
 ##########################################################################
 # Total Conversion Mod Specific Changes
@@ -199,11 +240,11 @@ ROOT = {
 # ===== Anbennar Specific ===============
 ROOT = {
     # Liberate Command Vassals
-    R62 = {
-        every_subject_country = {
-            grant_independence = yes
-        }
-    }
+    # R62 = {
+    #     every_subject_country = {
+    #         grant_independence = yes
+    #     }
+    # }
 
     # Loreseeker 
     if = {
@@ -393,12 +434,7 @@ ROOT = {
         }
     }
 
-
-    every_subject_country = {
-        change_religion = ROOT
-    }
-    # rail speed
-
+    # Explored
     every_owned_province = {
         set_province_flag = floor_explored
     }
@@ -510,6 +546,22 @@ ROOT = {
 
     # Hold dev
     ROOT = {
+        set_country_flag = all_holds_deved
+
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = amlharaz_hold
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        development = 70
+                    }
+                }
+                clr_country_flag = all_holds_deved
+            }
+        }
+
         set_variable = {
             which = myCountingVariable
             value = 0
@@ -517,6 +569,9 @@ ROOT = {
         
         while = {
             limit = {
+                NOT = {
+                    has_country_flag = all_holds_deved
+                }
                 NOT = {
                     check_variable = {
                         which = myCountingVariable
@@ -545,19 +600,6 @@ ROOT = {
                 value = 1
             }
         }
-        
-        
-        every_owned_province = {
-            limit = {
-                OR = {
-                    has_terrain = dwarven_hold
-                    has_terrain = dwarven_hold_surface
-                }
-            }
-            center_of_trade = 3
-            add_center_of_trade_level = 3
-        }
-        
     }
 
 
@@ -581,151 +623,150 @@ ROOT = {
 }
 
 # ===== Pax Solis Specific ==============
-ROOT = {
-    CAPITAL_SCOPE = {
-        if = {
-            limit = {
-                NOT = {
-                    has_building = university
-                }
-            }
-            add_building = university
-        }
-    }
+# ROOT = {
+#     CAPITAL_SCOPE = {
+#         if = {
+#             limit = {
+#                 NOT = {
+#                     has_building = university
+#                 }
+#             }
+#             add_building = university
+#         }
+#     }
 
-    # Pax Solis Auto Set Town Sizes
-    every_owned_province = {
-        limit = { 
-            NOT = { development = 4 } 
-        }
+#     # Pax Solis Auto Set Town Sizes
+#     every_owned_province = {
+#         limit = { 
+#             NOT = { development = 4 } 
+#         }
         
-        clr_province_flag = hf_prov_settlement
-        clr_province_flag = hf_prov_village
-        clr_province_flag = hf_prov_town
-        clr_province_flag = hf_prov_city
+#         clr_province_flag = hf_prov_settlement
+#         clr_province_flag = hf_prov_village
+#         clr_province_flag = hf_prov_town
+#         clr_province_flag = hf_prov_city
 
-        set_province_flag = hf_prov_settlement
-    }
-    every_owned_province = {
-        limit = { 
-            development = 4
-            NOT = { development = 6 } 
-        }
+#         set_province_flag = hf_prov_settlement
+#     }
+#     every_owned_province = {
+#         limit = { 
+#             development = 4
+#             NOT = { development = 6 } 
+#         }
         
-        clr_province_flag = hf_prov_settlement
-        clr_province_flag = hf_prov_village
-        clr_province_flag = hf_prov_town
-        clr_province_flag = hf_prov_city
+#         clr_province_flag = hf_prov_settlement
+#         clr_province_flag = hf_prov_village
+#         clr_province_flag = hf_prov_town
+#         clr_province_flag = hf_prov_city
 
-        set_province_flag = hf_prov_village
-    }
-    every_owned_province = {
-        limit = { 
-            development = 6
-            NOT = { development = 8 } 
-        }
+#         set_province_flag = hf_prov_village
+#     }
+#     every_owned_province = {
+#         limit = { 
+#             development = 6
+#             NOT = { development = 8 } 
+#         }
         
-        clr_province_flag = hf_prov_settlement
-        clr_province_flag = hf_prov_village
-        clr_province_flag = hf_prov_town
-        clr_province_flag = hf_prov_city
+#         clr_province_flag = hf_prov_settlement
+#         clr_province_flag = hf_prov_village
+#         clr_province_flag = hf_prov_town
+#         clr_province_flag = hf_prov_city
 
-        set_province_flag = hf_prov_town
-    }
-    every_owned_province = {
-        limit = { 
-            development = 8
-        }
+#         set_province_flag = hf_prov_town
+#     }
+#     every_owned_province = {
+#         limit = { 
+#             development = 8
+#         }
         
-        clr_province_flag = hf_prov_settlement
-        clr_province_flag = hf_prov_village
-        clr_province_flag = hf_prov_town
-        clr_province_flag = hf_prov_city
+#         clr_province_flag = hf_prov_settlement
+#         clr_province_flag = hf_prov_village
+#         clr_province_flag = hf_prov_town
+#         clr_province_flag = hf_prov_city
 
-        set_province_flag = hf_prov_city
-    }
-
-
-
-    # Pax Solis Inflation
-    add_country_modifier = { 
-        name = strong_treasury
-        duration = -1  
-    }
-    add_country_modifier = { 
-        name = hol_strict_control
-        duration = -1  
-    }
+#         set_province_flag = hf_prov_city
+#     }
 
 
-    # buildings
-    every_owned_province = {
-        limit = {
-            NOT = {
-                has_building = roads
-            }
-        }
-        add_building = roads
-    }
-    every_owned_province = {
-        limit = {
-            NOT = {
-                has_building = stage_station
-            }
-        }
-        add_building = stage_station
-    }
 
-    every_subject_country = {
-        every_owned_province = {
-            limit = {
-                NOT = {
-                    has_building = roads
-                }
-            }
-            add_building = roads
-        }
-        every_owned_province = {
-            limit = {
-                NOT = {
-                    has_building = stage_station
-                }
-            }
-            add_building = stage_station
-        }
-    }
+#     # Pax Solis Inflation
+#     add_country_modifier = { 
+#         name = strong_treasury
+#         duration = -1  
+#     }
+#     add_country_modifier = { 
+#         name = hol_strict_control
+#         duration = -1  
+#     }
 
 
-    # governor
-    every_owned_province = {
-        limit = {
-            is_state = yes
-        }
+#     # buildings
+#     every_owned_province = {
+#         limit = {
+#             NOT = {
+#                 has_building = roads
+#             }
+#         }
+#         add_building = roads
+#     }
+#     every_owned_province = {
+#         limit = {
+#             NOT = {
+#                 has_building = stage_station
+#             }
+#         }
+#         add_building = stage_station
+#     }
 
-        hf_remove_all_prov_ruler = yes
-        area = {
-            limit = { owned_by = FROM }
-            set_province_flag = hf_gov_estate_burghers
-            set_province_flag = hf_gov_estate_ruler
-            add_province_modifier = {
-                name = hf_gov_estate_burghers_modifier
-                duration = -1
-            }
-        }
-        owner = {
-            add_estate_loyalty = {
-                estate = estate_burghers
-                loyalty = 1
-            }
-        }
-    }
-}
+#     every_subject_country = {
+#         every_owned_province = {
+#             limit = {
+#                 NOT = {
+#                     has_building = roads
+#                 }
+#             }
+#             add_building = roads
+#         }
+#         every_owned_province = {
+#             limit = {
+#                 NOT = {
+#                     has_building = stage_station
+#                 }
+#             }
+#             add_building = stage_station
+#         }
+#     }
 
-# GENERAL SCRIPTS ========================================================================================================================================================================#
+
+#     # governor
+#     every_owned_province = {
+#         limit = {
+#             is_state = yes
+#         }
+
+#         hf_remove_all_prov_ruler = yes
+#         area = {
+#             limit = { owned_by = FROM }
+#             set_province_flag = hf_gov_estate_burghers
+#             set_province_flag = hf_gov_estate_ruler
+#             add_province_modifier = {
+#                 name = hf_gov_estate_burghers_modifier
+#                 duration = -1
+#             }
+#         }
+#         owner = {
+#             add_estate_loyalty = {
+#                 estate = estate_burghers
+#                 loyalty = 1
+#             }
+#         }
+#     }
+# }
+
 # ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
-# ======================================================================================================================================================================================= #
+###########################################################################################################################################################################################
+# GENERAL SCRIPTS                                                                                                                                                                         #
+###########################################################################################################################################################################################
 # ======================================================================================================================================================================================= #
 
 ##########################################################################
