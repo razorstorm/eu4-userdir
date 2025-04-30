@@ -3,6 +3,15 @@ every_country = {
         who = ROOT
         modifier = opinion_annex_vassal
     }
+    remove_opinion = {
+        who = ROOT
+        modifier = tributary_refused_tribute
+    }    
+
+    remove_opinion = {
+        who = ROOT
+        modifier = they_force_vassalized_us
+    }
 
     remove_opinion = {
         who = ROOT

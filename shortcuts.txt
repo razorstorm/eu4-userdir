@@ -576,6 +576,7 @@ top_section_window = {
 	"states_tab_button"="s"
 	"close_button"="ESCAPE"
 	"history"="h"
+	"add_parliament"="z"
 }
 change_culture_view = {
 	"back_button"="ESCAPE"
@@ -603,7 +604,9 @@ ee_upgrade_buildings_window = {
 }
 state_window = {
 	"view_edicts_button"="d"
+	"core_all"="x"
 	"concentrate_development"="x"
+	"make_state"="x"
 }
 select_building = {
 	"back_button"="ESCAPE"
@@ -715,7 +718,7 @@ send_envoy_window = {
 }
 carpet_siege_panel = {
 	"accept_button"="c"
-	"cancel_button"="ESCAPE"
+	"cancel_button"="shift+z"
 }
 ReturnCoreDialog = {
 	"AgreeButton"="c"

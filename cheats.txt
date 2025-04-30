@@ -26,13 +26,13 @@ add_country_modifier = {
 }
 
 add_country_modifier = {
-    name = more_diplomatic_relations_max
+    name = jason_mod_more_dip_upkeep
     duration = -1  
 }
 
 add_country_modifier = {
-    name = jason_mod_more_dip_upkeep
-    duration = -1  
+    name = jason_mod_extremely_more_dip_upkeep
+    duration = -1
 }
 
 add_country_modifier = { 
@@ -43,6 +43,17 @@ add_country_modifier = {
 add_country_modifier = { 
     name = jason_mod_more_dips
     duration = -1  
+}
+
+add_country_modifier = {
+    name = client_states_cheat
+    duration = -1
+}
+
+# 2 flagships
+add_country_modifier = {
+    name = ned_one_world
+    duration = -1
 }
 
 ##########################################################################
@@ -94,31 +105,99 @@ change_adm = 6
 change_dip = 6
 change_mil = 6
 
-define_ruler = {
-    # dynasty = ROOT
-    # dynasty = "Komnenos"
-    culture = ROOT
-    religion = ROOT
-    adm = 10
-    dip = 10
-    mil = 10
-    male = yes
-    # name = "Peter I \"The Great\""
-    # name = "Napoleon"
-    # dynasty = "Bonaparte"
-    # fixed = yes
+if = {
+    limit = {
+        NOT = {
+            OR = {
+                tag = AZT
+                tag = RUS
+                tag = TUR
+                tag = MJZ
+                tag = BYZ
+                tag = NHS
+                tag = ENG
+                tag = GBR
+            }
+        }
+    }
+    define_ruler = {
+        dynasty = ROOT
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        fixed = yes
+    }
+}
+if = {
+    limit = {
+        tag = ENG
+        tag = GBR
+    }
+    define_ruler = {
+        dynasty = "Lancaster"
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        name = "Henry V"
+        fixed = yes
+    }
+}
+if = {
+    limit = {
+        tag = MJZ
+    }
+    define_ruler = {
+        dynasty = ROOT
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        name = "Kangxi"
+        fixed = yes
+    }
+}
+if = {
+    limit = {
+        OR = {
+            tag = BYZ
+            tag = NHS
+        }
+    }
+    define_ruler = {
+        dynasty = "Palaiologos"
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        name = "Constantine XII \"The Great\""
+        fixed = yes
+    }
 }
 
+if = {
+    limit = {
+        tag = AZT
+    }
+    set_ruler_flag = azt_montezuma    
+}
 
 add_ruler_personality = ruler_of_destiny_personality
 add_ruler_personality = immortal_personality
+add_ruler_personality = legendary_conqueror_personality
 add_ruler_personality = scholar_personality
-# add_ruler_personality = fee_child_of_destiny_personality
 
-add_country_modifier = { 
-    name = nor_holder_of_the_kalmar_union
-    duration = -1  
-}
+
+# Adding advisor pool
 add_country_modifier = { 
     name = ger_chancellorship
     duration = -1  
@@ -164,4 +243,27 @@ add_country_modifier = {
 add_country_modifier = {
     name = jason_mod_more_absolutism_max
     duration = -1  
+}
+
+
+##########################################################################
+# Ship Build times
+##########################################################################
+
+every_owned_province = {
+    limit = {
+        has_port = yes
+    }
+    add_country_modifier = {
+        name = global_ship_recruit_speed_cheat
+        duration = -1
+    }
+    # add_province_modifier = {
+    #     name = global_ship_recruit_speed_cheat
+    #     duration = -1
+    # }
+    add_province_modifier = {
+        name = local_ship_recruit_speed_cheat
+        duration = -1
+    }
 }

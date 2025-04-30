@@ -778,7 +778,7 @@ every_subject_country = {
     }
 }
 
-# Cycling colors for a specific subject type
+# Outdated Cycling colors for a specific subject type
 ROOT = {
     set_country_flag = all_amlharaz_holds_flagged
 
@@ -901,5 +901,248 @@ ROOT = {
     }
 
 }
+
+# Updated Cycling Colors:
+ROOT = {
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = to_elysian_governor
+            }
+            NOT = {
+                tag = KYK
+            }
+            NOT = {
+                OR = {
+                    has_country_flag = subject_color_1
+                    has_country_flag = subject_color_2
+                    has_country_flag = subject_color_3
+                }
+            }
+        }
+        random_list = {
+            33 = {
+                set_country_flag = subject_color_1
+                log = "Setting subject_color_1 to [This.GetName]"
+            }
+            33 = {
+                set_country_flag = subject_color_2
+                log = "Setting subject_color_2 to [This.GetName]"
+            }
+            33 = {
+                set_country_flag = subject_color_3
+                log = "Setting subject_color_3 to [This.GetName]"
+            }
+        }
+    }
+
+    # ================== Finished setting flags, actually change colors now ===============================================
+    every_subject_country = {
+        limit = {
+            has_country_flag = subject_color_1
+        }
+        change_country_color = {
+            color = { 122 22 80 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            has_country_flag = subject_color_2
+        }
+        change_country_color = {
+            color = { 142 42 100 }
+        }
+    } 
+    every_subject_country = {
+        limit = {
+            has_country_flag = subject_color_3
+        }
+        change_country_color = {
+            color = { 162 62 120 }
+        }
+    }
+}
+
 # ========================================================================
 
+# Dwarves
+
+ROOT = {
+    # every_subject_country = {
+    #   restore_country_color = yes
+    # }
+
+    change_country_color = {
+        color = { 30  30  30 }
+    }
+
+    # Cycling colors for amlharaz holds
+    ROOT = {
+        set_country_flag = all_amlharaz_holds_flagged
+
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = amlharaz_hold
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_country_flag = amlharaz_hold_color_1
+                            has_country_flag = amlharaz_hold_color_2
+                            has_country_flag = amlharaz_hold_color_3
+                        }
+                    }
+                }
+                ROOT = {
+                    clr_country_flag = all_amlharaz_holds_flagged
+                }
+            }
+        }
+
+        set_variable = {
+            which = colorCounter
+            value = 0
+        }
+        while = {
+            limit = {
+                NOT = {
+                    has_country_flag = all_amlharaz_holds_flagged
+                }
+                NOT = {
+                    check_variable = {
+                        which = colorCounter
+                        value = 30
+                    }
+                }
+            }
+            log = "Setting amlharaz hold color [colonyCounter.GetValue]"
+            change_variable = {
+                which = colorCounter
+                value = 1
+            }
+            random_subject_country = {
+                limit = {
+                    OR = {
+                        is_subject_of_type = amlharaz_hold
+                    }
+                    NOT = {
+                        OR = {
+                            has_country_flag = amlharaz_hold_color_1
+                            has_country_flag = amlharaz_hold_color_2
+                            has_country_flag = amlharaz_hold_color_3
+                        }
+                    }
+                }
+                set_country_flag = amlharaz_hold_color_1
+            }
+            random_subject_country = {
+                limit = {
+                    OR = {
+                        is_subject_of_type = amlharaz_hold
+                    }
+                    NOT = {
+                        OR = {
+                            has_country_flag = amlharaz_hold_color_1
+                            has_country_flag = amlharaz_hold_color_2
+                            has_country_flag = amlharaz_hold_color_3
+                        }
+                    }
+                }
+                set_country_flag = amlharaz_hold_color_2
+            }
+            random_subject_country = {
+                limit = {
+                    OR = {
+                        is_subject_of_type = amlharaz_hold
+                    }
+                    NOT = {
+                        OR = {
+                            has_country_flag = amlharaz_hold_color_1
+                            has_country_flag = amlharaz_hold_color_2
+                            has_country_flag = amlharaz_hold_color_3
+                        }
+                    }
+                }
+                set_country_flag = amlharaz_hold_color_3
+            }
+        }
+
+
+        # ================== Finished setting flags, actually change colors now ===============================================
+        every_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = amlharaz_hold
+                }
+                has_country_flag = amlharaz_hold_color_1
+            }
+            change_country_color = {
+                color = { 70  70  70 }
+            }
+        }
+    
+        
+        every_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = amlharaz_hold
+                }
+                has_country_flag = amlharaz_hold_color_2
+            }
+            change_country_color = {
+                color = { 100  100  100 }
+            }
+        }
+        
+        
+        every_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = amlharaz_hold
+                }
+                has_country_flag = amlharaz_hold_color_3
+            }
+            change_country_color = {
+                color = { 60 50 70 }
+            }
+        }
+
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = crown_colony
+                is_subject_of_type = dominion
+            }
+        }
+        change_country_color = {
+            color = { 120 120 120 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = march
+            }
+        }
+        change_country_color = {
+            color = { 80 20 20 }
+        }
+    }
+    
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = native_reserve
+            }
+        }
+        change_country_color = {
+            color = { 150 150 150 }
+        }
+    }
+}
+
+# ============================================================================================================================================

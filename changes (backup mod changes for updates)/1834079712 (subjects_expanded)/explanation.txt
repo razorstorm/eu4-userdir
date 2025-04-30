@@ -1,3 +1,5 @@
 For turning off divert trade from brother kingdoms and giving it to integrated personal unions instead.
 
 also giving dominions treasure fleets by giving it tarifs 
+
+Also making it so every subject type uses military focus, even if they don't join wars. Makes the UI cleaner

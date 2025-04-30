@@ -822,14 +822,12 @@ ROOT = {
 
 add_estate_influence_modifier = {
     estate = estate_nhs_nobles
-    desc = EST_VAL_NOBILITY_DECLINES
     influence = -30
     duration = -1
 }
 
 add_estate_influence_modifier = {
     estate = estate_all_natives
-    desc = EST_VAL_NOBILITY_DECLINES
     influence = -50
     duration = -1
 }
@@ -1150,6 +1148,21 @@ every_owned_province = {
     set_province_flag = floor_explored
 }
 
+
+# Convert jimi states into tributaries
+MNG = {
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = jimi_state
+        }
+        MNG = {
+            create_subject = {
+                subject_type = tributary_state
+                subject = PREV
+            }
+        }
+    }
+}
 
 
 every_owned_province = {
@@ -2002,10 +2015,6 @@ change_estate_land_share = {
     estate = estate_cossacks
     share = 3
 }
-change_estate_land_share = {
-    estate = all
-    share = -2
-}
 
 
 set_emperor_of_china = MNG
@@ -2034,7 +2043,19 @@ LFA = {
     }
 
 }
+ROOT = {
+    add_historical_friend = GOL
+}
+GOL = {
+    add_historical_friend = ROOT
+}
 
+ROOT = {
+    remove_historical_rival = GOL
+}
+GOL = {
+    remove_historical_rival = ROOT
+}
 ROOT = {
     add_historical_friend = FRA
 }
@@ -2125,6 +2146,7 @@ every_owned_province = {
 remove_country_modifier = hf_on_new_monarch
 
 event FEE_Advisor_Event.14 # student of language
+event consort_events.311 # consort of the people
 
 every_owned_province = {
     clr_province_flag = hf_prov_settlement
@@ -3590,6 +3612,77 @@ every_owned_province = {
         }
     }
 }
+
+# Colonization
+
+
+ROOT = {  
+    set_variable = {
+        which = colonyCounter
+        value = 0
+    }
+    while = {
+        limit = {
+            NOT = {
+                num_of_colonies = 4
+            }
+            NOT = {
+                check_variable = {
+                    which = colonyCounter
+                    value = 5
+                }
+            }
+        }
+        change_variable = {
+            which = colonyCounter
+            value = 1
+        }
+        log = "Loop iteration [colonyCounter.GetValue]"
+        random_province = {
+            limit = {
+                OR = {
+                    AND = {
+                        # OR = {
+                        #     has_terrain = dwarven_hold
+                        #     has_terrain = dwarven_hold_surface
+                        #     has_terrain = dwarven_road
+                        # }
+                        # OR = {
+                        #     superregion = west_serpentspine_superregion
+                        #     superregion = east_serpentspine_superregion
+                        # }
+                    }
+
+                    OR = {
+                        superregion = south_elysia_superregion
+                        superregion = central_elysia_superregion
+                        superregion = west_elysia_superregion
+                        superregion = north_elysia_superregion
+                        superregion = northeast_elysia_superregion
+                        superregion = southeast_elysia_superregion
+                        superregion = carribean_superregion
+                        superregion = east_american_sea_superregion
+                        superregion = south_elysia_superregion
+                    }
+                }
+                # OR = {
+                #     has_port = yes
+                #     is_neighbor_of = ROOT
+                # }
+                OR = {
+                    # is_island = yes
+                    is_neighbor_of = ROOT
+                }
+                is_empty = yes
+                has_discovered = ROOT
+            }
+            log = "Creating colony in: [This.GetName]"
+            create_colony = 1
+        }
+    }
+}
+
+
 # ======================
 
 # Peace in HRE
@@ -4180,3 +4273,368 @@ change_variable = {
 
 # ===== Anbennar get rid of hoardcurse end result =======
 remove_country_modifier = adequate_remuneration
+
+
+##########################################################################
+# Forcing Subject to Colonize in Correct Area
+##########################################################################
+
+K00 = {
+    every_owned_province = {
+        limit = {
+            NOT = {
+                region = carribeans_region
+            }
+        }
+
+        decolonize = this
+        log = "K00 Province [This.GetName] is not in the carribeans region."
+
+        random_province = {
+            limit = {
+                region = carribeans_region
+                is_empty = yes
+            }
+            discover_country = ROOT 
+            discover_country = K00
+
+            add_siberian_construction = 10
+            cede_province = K00
+            log = "Colony will be moved to Province [This.GetName]."
+        }
+
+    }
+}
+
+
+##########################################################################
+# Names of Eyalets
+##########################################################################
+
+
+ROOT = {
+    DS6 = {
+        override_country_name = "Caliphal South Africa"
+    }
+    DW6 = {
+        override_country_name = "Caliphal West Africa"
+    }
+    BRZ = {
+        override_country_name = "Caliphal Brazil"
+    }
+    KIK = {
+        override_country_name = "Caliphal Central Africa"
+    }
+    K06 = {
+        override_country_name = "Caliphal Farmlands of Kyiv"
+    }
+    ADU = {
+        override_country_name = "Sultanate of Andalusia"
+    }
+    PRO = {
+        override_country_name = "Eyalet of Provence"
+    }
+    GOL = {
+        override_country_name = "Golden Sword Of The Caliph"
+    }
+    CIR = {
+        override_country_name = "Wall of the Faith"   
+    }
+    PER = {
+        override_country_name = "Sultanate of Persia"
+    }
+    VL1 = {
+        override_country_name = "Yemenese Sword of the South"
+    }
+    VL8 = {
+        override_country_name = "Eyalet of Tunis"
+    }
+    ALG = {
+        override_country_name = "Eyalet of Algiers"
+    }
+    MOR = {
+        override_country_name = "Eyalet of Morocco"
+    }
+    KZH = {
+        override_country_name = "Eyalet of Kazakh"
+    }
+    TI4 = {
+        override_country_name = "Eyalet of Samarqand"
+    }
+    ADA = {
+        override_country_name = "Pirate Emirate of Somalia"
+    }
+    KZ5 = {
+        override_country_name = "Eyalet of Kypshak"
+    }
+    GNV = {
+        override_country_name = "Timar of Geneva"
+    }
+    PAL = {
+        override_country_name = "Palatinate of the Rhine"
+    }
+    K07 = {
+        override_country_name = "Eyalet of Beyaz Rusya"
+    }
+    ANT = {
+        override_country_name = "March of Madagascar"
+    }
+    WLS = {
+        override_country_name = "Eyalet of Wales"
+    }
+    HUN = {
+        override_country_name = "Eyalet of Hungary"
+    }
+    LIT = {
+        override_country_name = "Eyalet of Lithuania"
+    }
+    POL = {
+        override_country_name = "Eyalet of Poland"
+    }
+    PSA = {
+        override_country_name = "Eyalet of Sumatra"
+    }
+}
+
+
+# Proportionally increase development:
+every_owned_province = {
+    if = {
+        limit = {
+            development = 80
+        }
+        add_base_tax = 8
+        add_base_production = 12
+        add_base_manpower = 5
+    }
+    else_if = {
+        limit = {
+            development = 50
+        }
+        add_base_tax = 5
+        add_base_production = 8
+        add_base_manpower = 4
+    }
+    else_if = {
+        limit = {
+            development = 30
+        }
+        add_base_tax = 3
+        add_base_production = 5
+        add_base_manpower = 2
+    }
+    else_if = {
+        limit = {
+            development = 10
+        }
+        add_base_tax = 2
+        add_base_production = 3
+        add_base_manpower = 1
+    }
+    else = {
+        add_base_tax = 1
+        add_base_production = 2
+        add_base_manpower = 1
+    }
+}
+
+
+
+
+# Finding unowned provinces of my culture:
+
+every_province = {
+    limit = {
+        culture_group = south_slavic
+        # culture = slovene
+        NOT = {
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+    }
+
+    log = "Unowned province [This.GetName] is in south_slavic cultural group"
+}
+
+# Updating noculture
+every_owned_province = {
+    limit = {
+        culture = noculture
+    }
+    log = "Province [This.GetName] has noculture"
+    change_culture = ROOT
+}
+
+
+# Force Burgundian Personal Union
+
+if = {
+    limit = {
+        BUR = {
+            NOT = {
+                is_subject_of_type = real_union_subject
+            }
+        }
+    }
+    create_subject = {
+        subject_type = real_union_subject
+        subject = BUR
+    }
+}
+
+
+
+# Banners in every province
+every_owned_province = {
+    add_province_modifier = {
+        name = allow_banners_capital_modifier
+        duration = -1
+    } 
+}
+
+
+# Naval March Upgrades
+
+2999 = {
+    # add_base_tax = 5
+    # add_base_production = 10
+    # add_base_manpower = 3
+
+    add_province_modifier = {
+        name = per_naval_command_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = devils_gate_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = important_natural_harbor
+        duration = -1
+    }
+    add_province_modifier = {
+        name = trade_post_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = venice_galley_conscription
+        duration = -1
+    }
+    add_province_modifier = {
+        name = expansion_of_the_shipbuilding_industry
+        duration = -1
+    }
+    add_province_modifier = {
+        name = per_naval_command_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = hsa_maritime_hegemon_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = tur_barbary_pirates
+        duration = -1
+    }
+    add_province_modifier = {
+        name = qng_presence_global_market_modifier
+        duration = -1
+    }
+    add_province_modifier = {
+        name = feo_lubeck
+        duration = -1
+    }
+    add_province_modifier = {
+        name = GER_wilhelmshaven_modifier
+        duration = -1
+    }
+}
+
+
+# Naval march upgrades
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = naval_march
+            is_subject_of_type = pirate_brotherhood_vassal
+        }
+    }
+    capital_scope = {
+        add_province_modifier = {
+            name = per_naval_command_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = devils_gate_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = important_natural_harbor
+            duration = -1
+        }
+        add_province_modifier = {
+            name = trade_post_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = venice_galley_conscription
+            duration = -1
+        }
+        add_province_modifier = {
+            name = expansion_of_the_shipbuilding_industry
+            duration = -1
+        }
+        add_province_modifier = {
+            name = hsa_maritime_hegemon_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = tur_barbary_pirates
+            duration = -1
+        }
+        add_province_modifier = {
+            name = qng_presence_global_market_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = feo_lubeck
+            duration = -1
+        }
+        add_province_modifier = {
+            name = GER_wilhelmshaven_modifier
+            duration = -1
+        }
+        add_province_modifier = {
+            name = jason_mod_more_forcelimit
+            duration = -1
+        }
+    }
+}
+
+
+
+
+
+BUR = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                culture = dutch
+                culture = frisian
+            }
+        }
+        cede_province = NED
+    }
+}
+BUR = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                culture = wallonian
+            }
+        }
+        cede_province = BEL
+    }
+}

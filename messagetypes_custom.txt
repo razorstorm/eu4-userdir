@@ -90,9 +90,9 @@ GAIN_HEGEMON_US={
 	option=no
 	to_me={
 		log=yes
-		onmap=no
-		popup=yes
-		pausepopup=no
+		onmap=yes
+		popup=no
+		pausepopup=yes
 		icon=no
 	}
 }
@@ -5158,10 +5158,10 @@ CENTEROFREFORMDONE={
 	option=yes
 	to_me={
 		log=yes
-		onmap=no
-		popup=yes
+		onmap=yes
+		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 CENTEROFREFORMREMOVE={
@@ -5183,9 +5183,9 @@ RELIGIOUSCENTERREMOVE={
 	to_me={
 		log=yes
 		onmap=no
-		popup=yes
+		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 DIPLOMAT_RETURNED={
@@ -6630,9 +6630,9 @@ COLONYCITYUS={
 	to_me={
 		log=yes
 		onmap=no
-		popup=yes
+		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 FULLALLYINWAR={
@@ -8661,9 +8661,9 @@ INVALID_TRADING_POLICY={
 	to_me={
 		log=yes
 		onmap=yes
-		popup=yes
+		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 NEW_ARMY_PROFESSIONALISM_ABILITY={

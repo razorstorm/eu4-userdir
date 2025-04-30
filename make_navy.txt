@@ -14,10 +14,10 @@ while = {
     }
     
 
-    4564 = {
+    2142 = {
     # CAPITAL_SCOPE = {
         ROOT = {
-            # galley = PREV
+            # galley = ROOT
             light_ship = PREV
             # heavy_ship = PREV
             # transport = PREV

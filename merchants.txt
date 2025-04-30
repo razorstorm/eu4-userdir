@@ -88,3 +88,11 @@ add_country_modifier = {
     name = more_merchants
     duration = -1  
 }
+add_country_modifier = { 
+    name = jason_mod_more_merchants
+    duration = -1  
+}
+add_country_modifier = { 
+    name = jason_more_merchants_cheat
+    duration = -1  
+}

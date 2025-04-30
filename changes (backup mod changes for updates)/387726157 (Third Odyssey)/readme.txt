@@ -1,0 +1,1 @@
+Adding a new to_autonomous_imperial_protectorate subject type

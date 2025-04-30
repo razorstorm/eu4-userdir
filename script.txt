@@ -1,42 +1,101 @@
-every_owned_province = {
+every_province = {
     limit = {
         OR = {
-            province_has_center_of_trade_of_level = 1
-            province_has_center_of_trade_of_level = 2
-            province_has_center_of_trade_of_level = 3
-        }   
-        NOT = {
-            has_province_modifier = province_trade_power_modifier_cheat
+            owned_by = ROOT
+            owned_by_subject_of = ROOT
         }
-        
+
+        OR = {
+            # ================== Central America | Aztec ==================
+            OR = {
+                province_id = 849
+                province_id = 2629
+                province_id = 4572
+                province_id = 2626
+                province_id = 2615
+                province_id = 4571
+                province_id = 2645
+                province_id = 852
+                province_id = 4570
+            }
+            # ================== South America | Inca ==================
+            OR = {
+                province_id = 2877
+                province_id = 2863
+                province_id = 2002
+                province_id = 2865
+                province_id = 2866
+                province_id = 786
+                province_id = 2868
+                province_id = 2909
+                province_id = 2899
+                province_id = 775
+                province_id = 2878
+                province_id = 2854
+                province_id = 2834
+                province_id = 810
+                province_id = 2901
+                province_id = 2904
+                province_id = 2903
+                province_id = 2893
+                province_id = 2919
+                province_id = 758
+                province_id = 2905
+                province_id = 2908
+                province_id = 2891
+                province_id = 2860
+                province_id = 2915
+                province_id = 2925
+                province_id = 2911
+                province_id = 2853
+                province_id = 2935
+                province_id = 2934
+                province_id = 2889
+                province_id = 2930
+                province_id = 2859
+                province_id = 2946
+                province_id = 2873
+                province_id = 765
+                province_id = 2902
+                province_id = 799
+                province_id = 804
+                province_id = 795
+                province_id = 2941
+                province_id = 793
+                province_id = 2839
+                province_id = 791
+                province_id = 2841
+                province_id = 780
+                province_id = 792
+                province_id = 814
+                province_id = 2826
+                province_id = 812
+                province_id = 813
+                province_id = 2822
+                province_id = 2836
+                province_id = 2945
+                province_id = 815
+                province_id = 818
+            }
+        }
     }
+
+    set_base_production = 20
+    set_base_tax = 8
+    set_base_manpower = 6
+    change_trade_goods = gold
+    set_local_autonomy = 0
+    remove_province_modifier = inca_improved_gold_mining_province_modifier
     add_province_modifier = {
-        name = province_trade_power_modifier_cheat
+        name = inca_improved_gold_mining_province_modifier
         duration = -1
     }
-    center_of_trade = 3
-    add_center_of_trade_level = 3
 }
 
 
-every_subject_country = {
+K02 = {
     every_owned_province = {
-        limit = {
-            OR = {
-                province_has_center_of_trade_of_level = 1
-                province_has_center_of_trade_of_level = 2
-                province_has_center_of_trade_of_level = 3
-            }   
-            NOT = {
-                has_province_modifier = province_trade_power_modifier_cheat
-            }
-            
-        }
-        add_province_modifier = {
-            name = province_trade_power_modifier_cheat
-            duration = -1
-        }
-        center_of_trade = 3
-        add_center_of_trade_level = 3
+        add_core = K02
+        set_local_autonomy = 0
     }
 }

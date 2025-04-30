@@ -1,0 +1,5679 @@
+# OBS! Full modding not supported. Code support still needed to remove/rename the original subject types.
+# Custom ones CAN be created with scriptable diplomatic actions (see "dummy" at the bottom of this file), although this is not currently very functional.
+
+# If used, copy_from should be put at the very top ( things above it will be overwitten )
+
+# Triggers will be evaluated in the scope of the Subject, with the Overlord as its FROM scope.
+# Exception: is_potential_overlord is evaluated in the scope of the potential Overlord, with no particular subject in mind.
+
+# count = x is used (means it "counts as" x in some triggers).
+
+# copy_from copies everything except count, is_potential_overlord, and can_be_established
+
+# relative_power_class decides how Subjects are grouped together when considering relative strenghth towards overlord:
+# If it is 0 they won't consider relative power and if it is 1 they will only consider their own power (and those supporting their independence) compared to their Overlord's.
+# Otherwise they will sum up the power of every Subject of the same relative_power_class as themselves, and all countries who support either themselves or one of their allies in the same relative_power_class.
+
+# diplomacy_view_class decides how subjects are grouped together in diplomacy view and in foreign province view:
+# 0 means it won't be listed
+# 1 means it will be listed together only with the same subject type
+# Other values means it will be listed together with all subjects of the same diplomacy_view_class
+
+# The following status checks are considered in old triggers:
+
+# is_colonial_nation  & is_former_colonial_nation
+#        checks the 'has_colonial_parent = yes' attribute
+
+# is_lesser_in_union, junior_union_with, senior_union_with & years_in_union_under
+#		checks the 'has_overlords_ruler = yes' attribute
+
+
+# Forward declaring all subject types so they can refer to each other in triggers etc. 
+
+# Completely scripted subject type (no code used). Add any number of these. Check common/new_diplomatic_actions for how to make visible in game.
+
+elysian_subject =
+{
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_elysian_subject
+	diplomacy_overlord_sprite = GFX_diplomacy_leadelysian_subject
+	diplomacy_subject_sprite = GFX_diplomacy_amelysian_subject
+
+	# Properties:
+	transfer_trade_if_merchant_republic = yes
+	can_be_annexed = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	can_have_subjects_of_other_types = no
+	takes_diplo_slot = no
+	can_release_in_peace = no
+	can_transfer_in_peace = no
+	can_use_claims = yes
+
+	extend_trading_range = yes
+	counts_for_borders = yes
+	eats_overlords_colonies = yes
+
+	max_government_rank = 1
+
+	liberty_desire_development_ratio = 0.06
+	base_liberty_desire = -25.0
+	liberty_desire_same_dynasty = -5
+	pays_overlord = 1.2
+	military_focus = 1.2
+
+	relative_power_class = 1
+	diplomacy_view_class = 5
+	
+	restoration_cb = cb_disloyal_vassal
+
+	# Subject Interactions:
+	scutage = no
+	subsidize_armies = yes
+	divert_trade = yes
+	fortify_march = yes
+	send_additional_troops = yes
+	conscript_general = yes
+	press_sailors = yes
+	send_additional_troops = yes
+	grant_province = no
+	grant_core_claim = no
+	enforce_religion = no
+
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_nation
+	}
+	modifier_subject = {
+		modifier = elysian_subject_bonus
+	}
+	# Land Force Limit Penalty
+	modifier_subject = {
+		modifier = elysian_subject_reduced_forcelimit_penalty
+		trigger = {
+			overlord = {
+				mission_completed = to_the_eagle_rises_mission
+			}
+		}
+	}
+	##
+	modifier_subject = {
+		modifier = elysian_subject_liberty1 #+5%
+		trigger = {
+			overlord = {
+				absolutism = 10
+				NOT = { absolutism = 20 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty2 #+10%
+		trigger = {
+			overlord = {
+				absolutism = 20
+				NOT = { absolutism = 30 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty3 #+15%
+		trigger = {
+			overlord = {
+				absolutism = 30
+				NOT = { absolutism = 40 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty4 #+20%
+		trigger = {
+			overlord = {
+				absolutism = 40
+				NOT = { absolutism = 50 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty5 #+25%
+		trigger = {
+			overlord = {
+				absolutism = 50
+				NOT = { absolutism = 60 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty6 #+30%
+		trigger = {
+			overlord = {
+				absolutism = 60
+				NOT = { absolutism = 70 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty7 #+35%
+		trigger = {
+			overlord = {
+				absolutism = 70
+				NOT = { absolutism = 80 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = elysian_subject_liberty8 #+40%
+		trigger = {
+			overlord = {
+				absolutism = 80
+				NOT = { absolutism = 90 }
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = elysian_subject_liberty9 #+45%
+		trigger = {
+			overlord = {
+				absolutism = 90
+				NOT = { absolutism = 100 }
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = elysian_subject_liberty10 #+50%
+		trigger = {
+			overlord = {
+				absolutism = 100
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = elysian_subject_stability1 #-5%
+		trigger = {
+			stability = 1
+		}
+	}
+
+	modifier_subject = {
+		modifier = elysian_subject_stability2 #-10%
+		trigger = {
+			stability = 2
+		}
+	}
+
+	modifier_subject = {
+		modifier = elysian_subject_stability3 #-15%
+		trigger = {
+			stability = 3
+		}
+	}
+	
+	modifier_overlord = {
+		trigger = {
+			overlord = {
+				NOT = { mission_completed = to_the_eagle_rises_mission }
+			}
+		}
+		modifier = elysian_subject_maint_over
+	}
+
+	modifier_overlord = {
+		trigger = {
+			overlord = {
+				mission_completed = to_the_eagle_rises_mission
+			}
+		}
+		modifier = elysian_subject_maint_over_reduced
+	}
+
+	modifier_subject = {
+		modifier = never_again_falter_subject
+		trigger = {
+			overlord = {
+				has_idea = never_again_falter
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = to_colonial_subsidies_subject
+		trigger = {
+			has_country_flag = to_subsidising_colonisation
+			NOT = { has_country_modifier = nhs_constrained_resources }
+			# num_of_colonists = 1
+		}
+	}
+	modifier_overlord = {
+		modifier = to_colonial_subsidies_overlord
+		trigger = {
+			has_country_flag = to_subsidising_colonisation
+			NOT = { has_country_modifier = nhs_constrained_resources }
+			# num_of_colonists = 1
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_extra_merchant_exarch
+		trigger = {
+			check_variable = {
+                which = to_exarch_owned_provinces_for_merchant
+                which = to_exarch_needed_provinces_for_merchant
+            }
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_extra_merchant_exarch_2
+		trigger = {
+			tag = ELG
+			NOT = { has_country_flag = to_block_exarch_second_merchant }
+			check_variable = {
+                which = to_exarch_owned_provinces_for_merchant_2
+                which = to_exarch_needed_provinces_for_merchant_2
+            }
+		}
+	}
+
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_crack_down_on_heresy }
+		modifier = to_crack_down_on_heresy_penalty
+	}
+
+	modifier_subject = {
+		trigger = {
+			tag = EEW
+			has_global_flag = to_kastrioti_rule_albania
+			has_reform = to_exarch_reform_monarchy_locked_dynasty
+		}
+		modifier = to_reduced_liberty_desire_exarch_albania
+	}
+
+	modifier_subject = {
+		trigger = {
+			tag = EEN
+			has_global_flag = to_orhans_descendant_rules_anatolia
+			has_reform = to_exarch_reform_monarchy_locked_dynasty
+		}
+		modifier = to_reduced_liberty_desire_exarch_anatolia
+	}
+
+	# Code generated by exarchs/exarch_generation.py
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 1 } }
+		modifier = to_exarch_aid_penalty_1
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 2 } }
+		modifier = to_exarch_aid_penalty_2
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 3 } }
+		modifier = to_exarch_aid_penalty_3
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 4 } }
+		modifier = to_exarch_aid_penalty_4
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 5 } }
+		modifier = to_exarch_aid_penalty_5
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 6 } }
+		modifier = to_exarch_aid_penalty_6
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 7 } }
+		modifier = to_exarch_aid_penalty_7
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 8 } }
+		modifier = to_exarch_aid_penalty_8
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 9 } }
+		modifier = to_exarch_aid_penalty_9
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 10 } }
+		modifier = to_exarch_aid_penalty_10
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 11 } }
+		modifier = to_exarch_aid_penalty_11
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 12 } }
+		modifier = to_exarch_aid_penalty_12
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 13 } }
+		modifier = to_exarch_aid_penalty_13
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 14 } }
+		modifier = to_exarch_aid_penalty_14
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 15 } }
+		modifier = to_exarch_aid_penalty_15
+	}
+	modifier_overlord = {
+		trigger = { has_country_modifier = to_exarch_aid check_variable = { which = to_exarch_send_aid_cost value = 16 } }
+		modifier = to_exarch_aid_penalty_16
+	}	
+
+	### Monument modifier
+	# Hagia Sophia
+	modifier_overlord = {
+		modifier = to_om_hagia_sophia_1_mod
+		trigger = {
+			owns = 151
+			overlord = {
+				151 = {
+					has_great_project = {
+						type = hagia_sophia
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = hagia_sophia
+							tier = 2
+						}
+					}
+					religion = PREV
+					OR = {
+						religion = orthodox
+						religion = elysian_orthodoxy
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_hagia_sophia_2_mod
+		trigger = {
+			owns = 151
+			overlord = {
+				151 = {
+					has_great_project = {
+						type = hagia_sophia
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = hagia_sophia
+							tier = 3
+						}
+					}
+					religion = PREV
+					OR = {
+						religion = orthodox
+						religion = elysian_orthodoxy
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_hagia_sophia_3_mod
+		trigger = {
+			owns = 151
+			overlord = {
+				151 = {
+					has_great_project = {
+						type = hagia_sophia
+						tier = 3
+					}
+					religion = PREV
+					OR = {
+						religion = orthodox
+						religion = elysian_orthodoxy
+						religion = coptic
+						religion = catholic
+						religion_group = muslim
+					}
+				}
+			}
+		}
+	}
+	# Stonehenge
+	# modifier_overlord = {
+	# 	modifier = to_om_stonehenge_1_mod
+	# 	trigger = {
+	# 		owns = 234
+	# 		overlord = {
+	# 			234 = {
+	# 				has_great_project = {
+	# 					type = stonehenge
+	# 					tier = 1
+	# 				}
+	# 				OR = {
+	# 					AND = {
+	# 						religion_group = pagan
+	# 						religion = PREV
+	# 					}
+	# 					AND = {
+	# 						culture = english
+	# 						OR = {
+	# 							culture = PREV
+	# 							PREV = {
+	# 								accepted_culture = PREV
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_stonehenge_2_mod
+	# 	trigger = {
+	# 		owns = 234
+	# 		overlord = {
+	# 			234 = {
+	# 				has_great_project = {
+	# 					type = stonehenge
+	# 					tier = 2
+	# 				}
+	# 				OR = {
+	# 					AND = {
+	# 						religion_group = pagan
+	# 						religion = PREV
+	# 					}
+	# 					AND = {
+	# 						culture = english
+	# 						OR = {
+	# 							culture = PREV
+	# 							PREV = {
+	# 								accepted_culture = PREV
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_stonehenge_3_mod
+	# 	trigger = {
+	# 		owns = 234
+	# 		overlord = {
+	# 			234 = {
+	# 				has_great_project = {
+	# 					type = stonehenge
+	# 					tier = 3
+	# 				}
+	# 				OR = {
+	# 					AND = {
+	# 						religion_group = pagan
+	# 						religion = PREV
+	# 					}
+	# 					AND = {
+	# 						culture = english
+	# 						OR = {
+	# 							culture = PREV
+	# 							PREV = {
+	# 								accepted_culture = PREV
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# Tower of London
+	modifier_overlord = {
+		modifier = to_om_tower_of_london_1_mod
+		trigger = {
+			owns = 236
+			overlord = {
+				236 = {
+					has_great_project = {
+						type = tower_of_london
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = tower_of_london
+							tier = 2
+						}
+					}
+					OR = {
+						culture = english
+						culture = normand
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_tower_of_london_2_mod
+		trigger = {
+			owns = 236
+			overlord = {
+				236 = {
+					has_great_project = {
+						type = tower_of_london
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = tower_of_london
+							tier = 3
+						}
+					}
+					OR = {
+						culture = english
+						culture = normand
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_tower_of_london_3_mod
+		trigger = {
+			owns = 236
+			overlord = {
+				236 = {
+					has_great_project = {
+						type = tower_of_london
+						tier = 3
+					}
+					OR = {
+						culture = english
+						culture = normand
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# Parthenon
+	modifier_overlord = {
+		modifier = to_om_parthenon_1_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					NOT = { has_province_flag = to_parthenon_militarist }
+					NOT = { has_province_flag = to_parthenon_moderate }
+					NOT = { has_province_flag = to_parthenon_humanist }
+					has_great_project = {
+						type = parthenon
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 2
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_2_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					NOT = { has_province_flag = to_parthenon_militarist }
+					NOT = { has_province_flag = to_parthenon_moderate }
+					NOT = { has_province_flag = to_parthenon_humanist }
+					has_great_project = {
+						type = parthenon
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 3
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_3_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					NOT = { has_province_flag = to_parthenon_militarist }
+					NOT = { has_province_flag = to_parthenon_moderate }
+					NOT = { has_province_flag = to_parthenon_humanist }
+					has_great_project = {
+						type = parthenon
+						tier = 3
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Parthenon - Humanist
+	modifier_overlord = {
+		modifier = to_om_parthenon_1_humanist_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_humanist
+					has_great_project = {
+						type = parthenon
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 2
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_2_humanist_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_humanist
+					has_great_project = {
+						type = parthenon
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 3
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_3_humanist_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_humanist
+					has_great_project = {
+						type = parthenon
+						tier = 3
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Parthenon - Moderate
+	modifier_overlord = {
+		modifier = to_om_parthenon_1_moderate_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_moderate
+					has_great_project = {
+						type = parthenon
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 2
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_2_moderate_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_moderate
+					has_great_project = {
+						type = parthenon
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 3
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_3_moderate_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_moderate
+					has_great_project = {
+						type = parthenon
+						tier = 3
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Parthenon - Militarist
+	modifier_overlord = {
+		modifier = to_om_parthenon_1_militarist_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_militarist
+					has_great_project = {
+						type = parthenon
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 2
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_2_militarist_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_militarist
+					has_great_project = {
+						type = parthenon
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = parthenon
+							tier = 3
+						}
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_parthenon_3_militarist_mod
+		trigger = {
+			owns = 146
+			overlord = {
+				146 = {
+					has_province_flag = to_parthenon_militarist
+					has_great_project = {
+						type = parthenon
+						tier = 3
+					}
+					OR = {
+						AND = {
+							religion_group = pagan
+							religion = PREV
+						}
+						AND = {
+							culture = greek
+							OR = {
+								culture = PREV
+								PREV = {
+									accepted_culture = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	# Petra
+	# modifier_overlord = {
+	# 	modifier = to_om_petra_1_mod
+	# 	trigger = {
+	# 		owns = 2327
+	# 		overlord = {
+	# 			2327 = {
+	# 				has_great_project = {
+	# 					type = petra
+	# 					tier = 1
+	# 				}
+	# 				NOT = {
+	# 					has_great_project = {
+	# 						type = petra
+	# 						tier = 2
+	# 					}
+	# 				}
+	# 				OR = {
+	# 					culture = al_suryah_arabic
+	# 					culture = bedouin_arabic
+	# 				}
+	# 				OR = {
+	# 					culture = PREV
+	# 					PREV = {
+	# 						accepted_culture = PREV
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_petra_2_mod
+	# 	trigger = {
+	# 		owns = 2327
+	# 		overlord = {
+	# 			2327 = {
+	# 				has_great_project = {
+	# 					type = petra
+	# 					tier = 2
+	# 				}
+	# 				NOT = {
+	# 					has_great_project = {
+	# 						type = petra
+	# 						tier = 3
+	# 					}
+	# 				}
+	# 				OR = {
+	# 					culture = al_suryah_arabic
+	# 					culture = bedouin_arabic
+	# 				}
+	# 				OR = {
+	# 					culture = PREV
+	# 					PREV = {
+	# 						accepted_culture = PREV
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_petra_3_mod
+	# 	trigger = {
+	# 		owns = 2327
+	# 		overlord = {
+	# 			2327 = {
+	# 				has_great_project = {
+	# 					type = petra
+	# 					tier = 3
+	# 				}
+	# 				OR = {
+	# 					culture = al_suryah_arabic
+	# 					culture = bedouin_arabic
+	# 				}
+	# 				OR = {
+	# 					culture = PREV
+	# 					PREV = {
+	# 						accepted_culture = PREV
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# Cologne Cathedral
+	modifier_overlord = {
+		modifier = to_om_cologne_cathedral_1_mod
+		trigger = {
+			owns = 85
+			overlord = {
+				85 = {
+					has_great_project = {
+						type = cologne_cathedral
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = cologne_cathedral
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_cologne_cathedral_2_mod
+		trigger = {
+			owns = 85
+			overlord = {
+				85 = {
+					has_great_project = {
+						type = cologne_cathedral
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = cologne_cathedral
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_cologne_cathedral_3_mod
+		trigger = {
+			owns = 85
+			overlord = {
+				85 = {
+					has_great_project = {
+						type = cologne_cathedral
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Kremlin
+	modifier_overlord = {
+		modifier = to_om_kremlin_3_mod
+		trigger = {
+			owns = 295
+			overlord = {
+				295 = {
+					has_great_project = {
+						type = kremlin
+						tier = 3
+					}
+					culture_group = east_slavic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# St. Peters Cathedral
+	modifier_overlord = {
+		modifier = to_om_stpeters_cathedral_1_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = stpeters_cathedral
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = stpeters_cathedral
+							tier = 2
+						}
+					}
+					religion = catholic
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_stpeters_cathedral_2_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = stpeters_cathedral
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = stpeters_cathedral
+							tier = 3
+						}
+					}
+					religion = catholic
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_stpeters_cathedral_3_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = stpeters_cathedral
+						tier = 3
+					}
+					religion = catholic
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Notre Dame Cathedral
+	modifier_overlord = {
+		modifier = to_om_notre_dame_cathedral_1_mod
+		trigger = {
+			owns = 183
+			overlord = {
+				183 = {
+					has_great_project = {
+						type = notre_dame_cathedral
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = notre_dame_cathedral
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_notre_dame_cathedral_2_mod
+		trigger = {
+			owns = 183
+			overlord = {
+				183 = {
+					has_great_project = {
+						type = notre_dame_cathedral
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = notre_dame_cathedral
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_notre_dame_cathedral_3_mod
+		trigger = {
+			owns = 183
+			overlord = {
+				183 = {
+					has_great_project = {
+						type = notre_dame_cathedral
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Ambras Castle
+	modifier_overlord = {
+		modifier = to_om_ambras_castle_1_mod
+		trigger = {
+			owns = 73
+			overlord = {
+				73 = {
+					has_great_project = {
+						type = ambras_castle
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = ambras_castle
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_ambras_castle_2_mod
+		trigger = {
+			owns = 73
+			overlord = {
+				73 = {
+					has_great_project = {
+						type = ambras_castle
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = ambras_castle
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_ambras_castle_3_mod
+		trigger = {
+			owns = 73
+			overlord = {
+				73 = {
+					has_great_project = {
+						type = ambras_castle
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Alhambra
+	modifier_overlord = {
+		modifier = to_om_alhambra_1_mod
+		trigger = {
+			owns = 223
+			overlord = {
+				223 = {
+					has_great_project = {
+						type = alhambra
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = alhambra
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_alhambra_2_mod
+		trigger = {
+			owns = 223
+			overlord = {
+				223 = {
+					has_great_project = {
+						type = alhambra
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = alhambra
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_alhambra_3_mod
+		trigger = {
+			owns = 223
+			overlord = {
+				223 = {
+					has_great_project = {
+						type = alhambra
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Ait Benhaddou
+	modifier_overlord = {
+		modifier = to_om_ait_benhaddou_1_mod
+		trigger = {
+			owns = 4568
+			overlord = {
+				4568 = {
+					has_great_project = {
+						type = ait_benhaddou
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = ait_benhaddou
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_ait_benhaddou_2_mod
+		trigger = {
+			owns = 4568
+			overlord = {
+				4568 = {
+					has_great_project = {
+						type = ait_benhaddou
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = ait_benhaddou
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_ait_benhaddou_3_mod
+		trigger = {
+			owns = 4568
+			overlord = {
+				4568 = {
+					has_great_project = {
+						type = ait_benhaddou
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Registan Square (only for Muslims)
+	# Pyramid of Cheops
+	# modifier_overlord = {
+	# 	modifier = to_om_pyramid_of_cheops_1_mod
+	# 	trigger = {
+	# 		owns = 361
+	# 		overlord = {
+	# 			361 = {
+	# 				has_great_project = {
+	# 					type = pyramid_of_cheops
+	# 					tier = 1
+	# 				}
+	# 				NOT = {
+	# 					has_great_project = {
+	# 						type = pyramid_of_cheops
+	# 						tier = 2
+	# 					}
+	# 				}
+	# 				OR = {
+	# 					AND = {
+	# 						religion_group = pagan
+	# 						religion = PREV
+	# 					}
+	# 					AND = {
+	# 						culture_group = turko_semitic
+	# 						OR = {
+	# 							culture = PREV
+	# 							PREV = {
+	# 								accepted_culture = PREV
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_pyramid_of_cheops_2_mod
+	# 	trigger = {
+	# 		owns = 361
+	# 		overlord = {
+	# 			361 = {
+	# 				has_great_project = {
+	# 					type = pyramid_of_cheops
+	# 					tier = 2
+	# 				}
+	# 				NOT = {
+	# 					has_great_project = {
+	# 						type = pyramid_of_cheops
+	# 						tier = 3
+	# 					}
+	# 				}
+	# 				OR = {
+	# 					AND = {
+	# 						religion_group = pagan
+	# 						religion = PREV
+	# 					}
+	# 					AND = {
+	# 						culture_group = turko_semitic
+	# 						OR = {
+	# 							culture = PREV
+	# 							PREV = {
+	# 								accepted_culture = PREV
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_pyramid_of_cheops_3_mod
+	# 	trigger = {
+	# 		owns = 361
+	# 		overlord = {
+	# 			361 = {
+	# 				has_great_project = {
+	# 					type = pyramid_of_cheops
+	# 					tier = 3
+	# 				}
+	# 				OR = {
+	# 					AND = {
+	# 						religion_group = pagan
+	# 						religion = PREV
+	# 					}
+	# 					AND = {
+	# 						culture_group = turko_semitic
+	# 						OR = {
+	# 							culture = PREV
+	# 							PREV = {
+	# 								accepted_culture = PREV
+	# 							}
+	# 						}
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# Baku Ateshgah (only for Zoroastrians)
+	# Kiev Pechersk Lavra
+	modifier_overlord = {
+		modifier = to_om_kiev_pechersk_lavra_1_mod
+		trigger = {
+			owns = 280
+			overlord = {
+				280 = {
+					has_great_project = {
+						type = kiev_pechersk_lavra
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = kiev_pechersk_lavra
+							tier = 2
+						}
+					}
+					OR = {
+						religion = elysian_orthodoxy
+						religion = orthodox
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_kiev_pechersk_lavra_2_mod
+		trigger = {
+			owns = 280
+			overlord = {
+				280 = {
+					has_great_project = {
+						type = kiev_pechersk_lavra
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = kiev_pechersk_lavra
+							tier = 3
+						}
+					}
+					OR = {
+						religion = elysian_orthodoxy
+						religion = orthodox
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_kiev_pechersk_lavra_3_mod
+		trigger = {
+			owns = 280
+			overlord = {
+				280 = {
+					has_great_project = {
+						type = kiev_pechersk_lavra
+						tier = 3
+					}
+					OR = {
+						religion = elysian_orthodoxy
+						religion = orthodox
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Belem Tower
+	modifier_overlord = {
+		modifier = to_om_belem_tower_1_mod
+		trigger = {
+			owns = 227
+			overlord = {
+				227 = {
+					has_great_project = {
+						type = belem_tower
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = belem_tower
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_belem_tower_2_mod
+		trigger = {
+			owns = 227
+			overlord = {
+				227 = {
+					has_great_project = {
+						type = belem_tower
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = belem_tower
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_belem_tower_3_mod
+		trigger = {
+			owns = 227
+			overlord = {
+				227 = {
+					has_great_project = {
+						type = belem_tower
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Mausoleum at Halicarnassus
+	# modifier_overlord = {
+	# 	modifier = to_om_mausoleum_at_halicarnassus_1_mod
+	# 	trigger = {
+	# 		owns = 319
+	# 		overlord = {
+	# 			319 = {
+	# 				has_great_project = {
+	# 					type = mausoleum_at_halicarnassus
+	# 					tier = 1
+	# 				}
+	# 				NOT = {
+	# 					has_great_project = {
+	# 						type = mausoleum_at_halicarnassus
+	# 						tier = 2
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_mausoleum_at_halicarnassus_2_mod
+	# 	trigger = {
+	# 		owns = 319
+	# 		overlord = {
+	# 			319 = {
+	# 				has_great_project = {
+	# 					type = mausoleum_at_halicarnassus
+	# 					tier = 2
+	# 				}
+	# 				NOT = {
+	# 					has_great_project = {
+	# 						type = mausoleum_at_halicarnassus
+	# 						tier = 3
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_om_mausoleum_at_halicarnassus_3_mod
+	# 	trigger = {
+	# 		owns = 319
+	# 		overlord = {
+	# 			319 = {
+	# 				has_great_project = {
+	# 					type = mausoleum_at_halicarnassus
+	# 					tier = 3
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# Heddal Stave Church
+	modifier_overlord = {
+		modifier = to_om_heddal_stave_church_1_mod
+		trigger = {
+			owns = 4144
+			overlord = {
+				4144 = {
+					has_great_project = {
+						type = heddal_stave_church
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = heddal_stave_church
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_heddal_stave_church_2_mod
+		trigger = {
+			owns = 4144
+			overlord = {
+				4144 = {
+					has_great_project = {
+						type = heddal_stave_church
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = heddal_stave_church
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_heddal_stave_church_3_mod
+		trigger = {
+			owns = 4144
+			overlord = {
+				4144 = {
+					has_great_project = {
+						type = heddal_stave_church
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Versailles
+	modifier_overlord = {
+		modifier = to_om_versailles_1_mod
+		trigger = {
+			owns = 183
+			overlord = {
+				183 = {
+					has_great_project = {
+						type = versailles
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = versailles
+							tier = 2
+						}
+					}
+					culture_group = french
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_versailles_2_mod
+		trigger = {
+			owns = 183
+			overlord = {
+				183 = {
+					has_great_project = {
+						type = versailles
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = versailles
+							tier = 3
+						}
+					}
+					culture_group = french
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_versailles_3_mod
+		trigger = {
+			owns = 183
+			overlord = {
+				183 = {
+					has_great_project = {
+						type = versailles
+						tier = 3
+					}
+					culture_group = french
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# El Escorial
+	modifier_overlord = {
+		modifier = to_om_el_escorial_1_mod
+		trigger = {
+			owns = 217
+			overlord = {
+				217 = {
+					has_great_project = {
+						type = el_escorial
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = el_escorial
+							tier = 2
+						}
+					}
+					culture_group = iberian
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_el_escorial_2_mod
+		trigger = {
+			owns = 217
+			overlord = {
+				217 = {
+					has_great_project = {
+						type = el_escorial
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = el_escorial
+							tier = 3
+						}
+					}
+					culture_group = iberian
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_el_escorial_3_mod
+		trigger = {
+			owns = 217
+			overlord = {
+				217 = {
+					has_great_project = {
+						type = el_escorial
+						tier = 3
+					}
+					culture_group = iberian
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# Kaaba (Muslims only)
+	# Holy City of Jerusalem
+	modifier_overlord = {
+		modifier = to_om_holy_city_jerusalem_1_mod
+		trigger = {
+			owns = 379
+			overlord = {
+				379 = {
+					has_great_project = {
+						type = holy_city_jerusalem
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = holy_city_jerusalem
+							tier = 2
+						}
+					}
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+						religion = jewish
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_holy_city_jerusalem_2_mod
+		trigger = {
+			owns = 379
+			overlord = {
+				379 = {
+					has_great_project = {
+						type = holy_city_jerusalem
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = holy_city_jerusalem
+							tier = 3
+						}
+					}
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+						religion = jewish
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_holy_city_jerusalem_3_mod
+		trigger = {
+			owns = 379
+			overlord = {
+				379 = {
+					has_great_project = {
+						type = holy_city_jerusalem
+						tier = 3
+					}
+					OR = {
+						religion_group = christian
+						religion_group = muslim
+						religion = jewish
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Bam Citadel
+	modifier_overlord = {
+		modifier = to_om_bam_citadel_1_mod
+		trigger = {
+			owns = 2220
+			overlord = {
+				2220 = {
+					has_great_project = {
+						type = bam_citadel
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = bam_citadel
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_bam_citadel_2_mod
+		trigger = {
+			owns = 2220
+			overlord = {
+				2220 = {
+					has_great_project = {
+						type = bam_citadel
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = bam_citadel
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_bam_citadel_3_mod
+		trigger = {
+			owns = 2220
+			overlord = {
+				2220 = {
+					has_great_project = {
+						type = bam_citadel
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Bran Castle
+	modifier_overlord = {
+		modifier = to_om_bran_castle_1_mod
+		trigger = {
+			owns = 4128
+			overlord = {
+				4128 = {
+					has_great_project = {
+						type = bran_castle
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = bran_castle
+							tier = 2
+						}
+					}
+					culture_group = carpathian
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_bran_castle_2_mod
+		trigger = {
+			owns = 4128
+			overlord = {
+				4128 = {
+					has_great_project = {
+						type = bran_castle
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = bran_castle
+							tier = 3
+						}
+					}
+					culture_group = carpathian
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_bran_castle_3_mod
+		trigger = {
+			owns = 4128
+			overlord = {
+				4128 = {
+					has_great_project = {
+						type = bran_castle
+						tier = 3
+					}
+					culture_group = carpathian
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# Brandenburg Gate
+	modifier_overlord = {
+		modifier = to_om_brandenburg_gate_1_mod
+		trigger = {
+			owns = 50
+			overlord = {
+				50 = {
+					has_great_project = {
+						type = brandenburg_gate
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = brandenburg_gate
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_brandenburg_gate_2_mod
+		trigger = {
+			owns = 50
+			overlord = {
+				50 = {
+					has_great_project = {
+						type = brandenburg_gate
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = brandenburg_gate
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_brandenburg_gate_3_mod
+		trigger = {
+			owns = 50
+			overlord = {
+				50 = {
+					has_great_project = {
+						type = brandenburg_gate
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Buda Castle
+	modifier_overlord = {
+		modifier = to_om_buda_castle_1_mod
+		trigger = {
+			owns = 153
+			overlord = {
+				153 = {
+					has_great_project = {
+						type = buda_castle
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = buda_castle
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_buda_castle_2_mod
+		trigger = {
+			owns = 153
+			overlord = {
+				153 = {
+					has_great_project = {
+						type = buda_castle
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = buda_castle
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_buda_castle_3_mod
+		trigger = {
+			owns = 153
+			overlord = {
+				153 = {
+					has_great_project = {
+						type = buda_castle
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Doge's Palace
+	modifier_overlord = {
+		modifier = to_om_doges_palace_1_mod
+		trigger = {
+			owns = 112
+			overlord = {
+				112 = {
+					has_great_project = {
+						type = doges_palace
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = doges_palace
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_doges_palace_2_mod
+		trigger = {
+			owns = 112
+			overlord = {
+				112 = {
+					has_great_project = {
+						type = doges_palace
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = doges_palace
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_doges_palace_3_mod
+		trigger = {
+			owns = 112
+			overlord = {
+				112 = {
+					has_great_project = {
+						type = doges_palace
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Duomo di Milano
+	modifier_overlord = {
+		modifier = to_om_duomo_milano_1_mod
+		trigger = {
+			owns = 104
+			overlord = {
+				104 = {
+					has_great_project = {
+						type = duomo_milano
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = duomo_milano
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_duomo_milano_2_mod
+		trigger = {
+			owns = 104
+			overlord = {
+				104 = {
+					has_great_project = {
+						type = duomo_milano
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = duomo_milano
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_duomo_milano_3_mod
+		trigger = {
+			owns = 104
+			overlord = {
+				104 = {
+					has_great_project = {
+						type = duomo_milano
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Dutch Polders
+	modifier_overlord = {
+		modifier = to_om_dutch_polders_1_mod
+		trigger = {
+			owns = 97
+			overlord = {
+				97 = {
+					has_great_project = {
+						type = dutch_polders
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = dutch_polders
+							tier = 2
+						}
+					}
+					OR = {
+						culture = dutch
+						culture = flemish
+						culture = frisian
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_dutch_polders_2_mod
+		trigger = {
+			owns = 97
+			overlord = {
+				97 = {
+					has_great_project = {
+						type = dutch_polders
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = dutch_polders
+							tier = 3
+						}
+					}
+					OR = {
+						culture = dutch
+						culture = flemish
+						culture = frisian
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_dutch_polders_3_mod
+		trigger = {
+			owns = 97
+			overlord = {
+				97 = {
+					has_great_project = {
+						type = dutch_polders
+						tier = 3
+					}
+					OR = {
+						culture = dutch
+						culture = flemish
+						culture = frisian
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# Etchmiadzin Cathedral (Coptic)
+	# Historical Center of Prague (Why is this a monument??)
+	modifier_overlord = {
+		modifier = to_om_prague_1_mod
+		trigger = {
+			owns = 266
+			overlord = {
+				266 = {
+					has_great_project = {
+						type = prague
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = prague
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_prague_2_mod
+		trigger = {
+			owns = 266
+			overlord = {
+				266 = {
+					has_great_project = {
+						type = prague
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = prague
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_prague_3_mod
+		trigger = {
+			owns = 266
+			overlord = {
+				266 = {
+					has_great_project = {
+						type = prague
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Holy City of Kairouan (Muslim)
+	# Imam Hussein and Al-Abbas Holy Shrines (Shiite)
+	# Krakow Cloth Hall
+	modifier_overlord = {
+		modifier = to_om_krakow_cloth_hall_1_mod
+		trigger = {
+			owns = 262
+			overlord = {
+				262 = {
+					has_great_project = {
+						type = krakow_cloth_hall
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = krakow_cloth_hall
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_krakow_cloth_hall_2_mod
+		trigger = {
+			owns = 262
+			overlord = {
+				262 = {
+					has_great_project = {
+						type = krakow_cloth_hall
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = krakow_cloth_hall
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_krakow_cloth_hall_3_mod
+		trigger = {
+			owns = 262
+			overlord = {
+				262 = {
+					has_great_project = {
+						type = krakow_cloth_hall
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Maidan-e Naqsh-e Jahan (Muslim)
+	# Malbork Castle
+	modifier_overlord = {
+		modifier = to_om_malbork_castle_1_mod
+		trigger = {
+			owns = 1841
+			overlord = {
+				1841 = {
+					has_great_project = {
+						type = malbork_castle
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = malbork_castle
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_malbork_castle_2_mod
+		trigger = {
+			owns = 1841
+			overlord = {
+				1841 = {
+					has_great_project = {
+						type = malbork_castle
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = malbork_castle
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_malbork_castle_3_mod
+		trigger = {
+			owns = 1841
+			overlord = {
+				1841 = {
+					has_great_project = {
+						type = malbork_castle
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Malta Forts
+	modifier_overlord = {
+		modifier = to_om_malta_forts_1_mod
+		trigger = {
+			owns = 126
+			overlord = {
+				126 = {
+					has_great_project = {
+						type = malta_forts
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = malta_forts
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_malta_forts_2_mod
+		trigger = {
+			owns = 126
+			overlord = {
+				126 = {
+					has_great_project = {
+						type = malta_forts
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = malta_forts
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_malta_forts_3_mod
+		trigger = {
+			owns = 126
+			overlord = {
+				126 = {
+					has_great_project = {
+						type = malta_forts
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Rila Monasteries
+	modifier_overlord = {
+		modifier = to_om_rila_monasteries_1_mod
+		trigger = {
+			owns = 4703
+			overlord = {
+				4703 = {
+					has_great_project = {
+						type = rila_monasteries
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = rila_monasteries
+							tier = 2
+						}
+					}
+					OR = {
+						religion = elysian_orthodoxy
+						religion = orthodox
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_rila_monasteries_2_mod
+		trigger = {
+			owns = 4703
+			overlord = {
+				4703 = {
+					has_great_project = {
+						type = rila_monasteries
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = rila_monasteries
+							tier = 3
+						}
+					}
+					OR = {
+						religion = elysian_orthodoxy
+						religion = orthodox
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_rila_monasteries_3_mod
+		trigger = {
+			owns = 4703
+			overlord = {
+				4703 = {
+					has_great_project = {
+						type = rila_monasteries
+						tier = 3
+					}
+					OR = {
+						religion = elysian_orthodoxy
+						religion = orthodox
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Royal Palace of Caserta
+	modifier_overlord = {
+		modifier = to_om_royal_palace_caserta_1_mod
+		trigger = {
+			owns = 121
+			overlord = {
+				121 = {
+					has_great_project = {
+						type = royal_palace_caserta
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = royal_palace_caserta
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_royal_palace_caserta_2_mod
+		trigger = {
+			owns = 121
+			overlord = {
+				121 = {
+					has_great_project = {
+						type = royal_palace_caserta
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = royal_palace_caserta
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_royal_palace_caserta_3_mod
+		trigger = {
+			owns = 121
+			overlord = {
+				121 = {
+					has_great_project = {
+						type = royal_palace_caserta
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	# Santa Maria del Fiore
+	modifier_overlord = {
+		modifier = to_om_santa_maria_del_fiore_1_mod
+		trigger = {
+			owns = 116
+			overlord = {
+				116 = {
+					has_great_project = {
+						type = santa_maria_del_fiore
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = santa_maria_del_fiore
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_santa_maria_del_fiore_2_mod
+		trigger = {
+			owns = 116
+			overlord = {
+				116 = {
+					has_great_project = {
+						type = santa_maria_del_fiore
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = santa_maria_del_fiore
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_santa_maria_del_fiore_3_mod
+		trigger = {
+			owns = 116
+			overlord = {
+				116 = {
+					has_great_project = {
+						type = santa_maria_del_fiore
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	# Spiral Minaret of Samarra (Muslim)
+	# Sultan Ahmed Mosque (Muslim)
+	# Ulm Minster
+	modifier_overlord = {
+		modifier = to_om_ulm_minster_great_project_1_mod
+		trigger = {
+			owns = 1872
+			overlord = {
+				1872 = {
+					has_great_project = {
+						type = ulm_minster_great_project
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = ulm_minster_great_project
+							tier = 2
+						}
+					}
+					culture_group = germanic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_ulm_minster_great_project_2_mod
+		trigger = {
+			owns = 1872
+			overlord = {
+				1872 = {
+					has_great_project = {
+						type = ulm_minster_great_project
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = ulm_minster_great_project
+							tier = 3
+						}
+					}
+					culture_group = germanic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_ulm_minster_great_project_3_mod
+		trigger = {
+			owns = 1872
+			overlord = {
+				1872 = {
+					has_great_project = {
+						type = ulm_minster_great_project
+						tier = 3
+					}
+					culture_group = germanic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	# Winter Palace
+	modifier_overlord = {
+		modifier = to_om_winter_palace_1_mod
+		trigger = {
+			owns = 33
+			overlord = {
+				33 = {
+					has_great_project = {
+						type = winter_palace
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = winter_palace
+							tier = 2
+						}
+					}
+					culture_group = east_slavic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_winter_palace_2_mod
+		trigger = {
+			owns = 33
+			overlord = {
+				33 = {
+					has_great_project = {
+						type = winter_palace
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = winter_palace
+							tier = 3
+						}
+					}
+					culture_group = east_slavic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_winter_palace_3_mod
+		trigger = {
+			owns = 33
+			overlord = {
+				33 = {
+					has_great_project = {
+						type = winter_palace
+						tier = 3
+					}
+					culture_group = east_slavic
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# baalbek_temple_complex
+	modifier_overlord = {
+		modifier = to_nhs_baalbek_temple_complex_1_mod
+		trigger = {
+			owns = 382
+			overlord = {
+				382 = {
+					has_great_project = {
+						type = nhs_baalbek_temple_complex
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_baalbek_temple_complex
+							tier = 2
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_baalbek_temple_complex_2_mod
+		trigger = {
+			owns = 382
+			overlord = {
+				382 = {
+					has_great_project = {
+						type = nhs_baalbek_temple_complex
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_baalbek_temple_complex
+							tier = 3
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_baalbek_temple_complex_3_mod
+		trigger = {
+			owns = 382
+			overlord = {
+				382 = {
+					has_great_project = {
+						type = nhs_baalbek_temple_complex
+						tier = 3
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# nhs_diocletian_palace
+	modifier_overlord = {
+		modifier = to_nhs_diocletian_palace_1_mod
+		trigger = {
+			owns = 136
+			overlord = {
+				136 = {
+					has_great_project = {
+						type = nhs_diocletian_palace
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_diocletian_palace
+							tier = 2
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_diocletian_palace_2_mod
+		trigger = {
+			owns = 136
+			overlord = {
+				136 = {
+					has_great_project = {
+						type = nhs_diocletian_palace
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_diocletian_palace
+							tier = 3
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_diocletian_palace_3_mod
+		trigger = {
+			owns = 136
+			overlord = {
+				136 = {
+					has_great_project = {
+						type = nhs_diocletian_palace
+						tier = 3
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# nhs_amphitheatre_of_thysdrus
+	modifier_overlord = {
+		modifier = to_nhs_amphitheatre_of_thysdrus_1_mod
+		trigger = {
+			owns = 2473
+			overlord = {
+				2473 = {
+					has_great_project = {
+						type = nhs_amphitheatre_of_thysdrus
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_amphitheatre_of_thysdrus
+							tier = 2
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_amphitheatre_of_thysdrus_2_mod
+		trigger = {
+			owns = 2473
+			overlord = {
+				2473 = {
+					has_great_project = {
+						type = nhs_amphitheatre_of_thysdrus
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_amphitheatre_of_thysdrus
+							tier = 3
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_amphitheatre_of_thysdrus_3_mod
+		trigger = {
+			owns = 2473
+			overlord = {
+				2473 = {
+					has_great_project = {
+						type = nhs_amphitheatre_of_thysdrus
+						tier = 3
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# nhs_colosseum
+	modifier_overlord = {
+		modifier = to_nhs_colosseum_1_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_colosseum
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_colosseum
+							tier = 2
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_colosseum_2_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_colosseum
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_colosseum
+							tier = 3
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_colosseum_3_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_colosseum
+						tier = 3
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# nhs_pantheon
+	modifier_overlord = {
+		modifier = to_nhs_pantheon_1_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_pantheon
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_pantheon
+							tier = 2
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_pantheon_2_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_pantheon
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_pantheon
+							tier = 3
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_pantheon_3_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_pantheon
+						tier = 3
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# nhs_pantheon_syncretic
+	modifier_overlord = {
+		modifier = to_nhs_pantheon_syncretic_1_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_pantheon_syncretic
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_pantheon_syncretic
+							tier = 2
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_pantheon_syncretic_2_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_pantheon_syncretic
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_pantheon_syncretic
+							tier = 3
+						}
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nhs_pantheon_syncretic_3_mod
+		trigger = {
+			owns = 118
+			overlord = {
+				118 = {
+					has_great_project = {
+						type = nhs_pantheon_syncretic
+						tier = 3
+					}
+					religion = pantheon_worship
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# falun_copper_mine
+	modifier_overlord = {
+		modifier = to_falun_copper_mine_2_mod
+		trigger = {
+			owns = 8
+			8 = {
+				has_great_project = {
+					type = falun_copper_mine
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = falun_copper_mine
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_falun_copper_mine_3_mod
+		trigger = {
+			owns = 8
+			8 = {
+				has_great_project = {
+					type = falun_copper_mine
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# kronborg
+	modifier_overlord = {
+		modifier = to_kronborg_1_mod
+		trigger = {
+			owns = 12
+			12 = {
+				has_great_project = {
+					type = kronborg
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = kronborg
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_kronborg_2_mod
+		trigger = {
+			owns = 12
+			12 = {
+				has_great_project = {
+					type = kronborg
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = kronborg
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_kronborg_3_mod
+		trigger = {
+			owns = 12
+			12 = {
+				has_great_project = {
+					type = kronborg
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# visby_city
+	modifier_overlord = {
+		modifier = to_visby_city_1_mod
+		trigger = {
+			owns = 25
+			25 = {
+				has_great_project = {
+					type = visby_city
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = visby_city
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_visby_city_2_mod
+		trigger = {
+			owns = 25
+			25 = {
+				has_great_project = {
+					type = visby_city
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = visby_city
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_visby_city_3_mod
+		trigger = {
+			owns = 25
+			25 = {
+				has_great_project = {
+					type = visby_city
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# trakai_castle
+	modifier_overlord = {
+		modifier = to_trakai_castle_1_mod
+		trigger = {
+			owns = 270
+			270 = {
+				has_great_project = {
+					type = trakai_castle
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = trakai_castle
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_trakai_castle_2_mod
+		trigger = {
+			owns = 270
+			270 = {
+				has_great_project = {
+					type = trakai_castle
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = trakai_castle
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_trakai_castle_3_mod
+		trigger = {
+			owns = 270
+			270 = {
+				has_great_project = {
+					type = trakai_castle
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# palace_of_the_popes
+	modifier_overlord = {
+		modifier = to_palace_of_the_popes_1_mod
+		trigger = {
+			owns = 202
+			overlord = {
+				202 = {
+					has_great_project = {
+						type = palace_of_the_popes
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = palace_of_the_popes
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_palace_of_the_popes_2_mod
+		trigger = {
+			owns = 202
+			overlord = {
+				202 = {
+					has_great_project = {
+						type = palace_of_the_popes
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = palace_of_the_popes
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_palace_of_the_popes_3_mod
+		trigger = {
+			owns = 202
+			overlord = {
+				202 = {
+					has_great_project = {
+						type = palace_of_the_popes
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# edinburgh_castle
+	modifier_overlord = {
+		modifier = to_edinburgh_castle_2_mod
+		trigger = {
+			owns = 248
+			overlord = {
+				248 = {
+					has_great_project = {
+						type = edinburgh_castle
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = edinburgh_castle
+							tier = 3
+						}
+					}
+					OR = {
+						culture = scottish
+						culture = highland_scottish
+						culture_group = british
+						culture = anglois
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_edinburgh_castle_3_mod
+		trigger = {
+			owns = 248
+			overlord = {
+				248 = {
+					has_great_project = {
+						type = edinburgh_castle
+						tier = 3
+					}
+					OR = {
+						culture = scottish
+						culture = highland_scottish
+						culture_group = british
+						culture = anglois
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# aljaferia_palace
+	modifier_overlord = {
+		modifier = to_aljaferia_palace_1_mod
+		trigger = {
+			owns = 214
+			214 = {
+				has_great_project = {
+					type = aljaferia_palace
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = aljaferia_palace
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_aljaferia_palace_2_mod
+		trigger = {
+			owns = 214
+			214 = {
+				has_great_project = {
+					type = aljaferia_palace
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = aljaferia_palace
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_aljaferia_palace_3_mod
+		trigger = {
+			owns = 214
+			214 = {
+				has_great_project = {
+					type = aljaferia_palace
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# aljaferia_palace
+	modifier_overlord = {
+		modifier = to_divrigi_hospital_mosque_1_mod
+		trigger = {
+			owns = 4310
+			4310 = {
+				has_great_project = {
+					type = divrigi_hospital_mosque
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = divrigi_hospital_mosque
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_divrigi_hospital_mosque_2_mod
+		trigger = {
+			owns = 4310
+			4310 = {
+				has_great_project = {
+					type = divrigi_hospital_mosque
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = divrigi_hospital_mosque
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_divrigi_hospital_mosque_3_mod
+		trigger = {
+			owns = 4310
+			4310 = {
+				has_great_project = {
+					type = divrigi_hospital_mosque
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# st_basil_cathedral
+	modifier_overlord = {
+		modifier = to_st_basil_cathedral_1_mod
+		trigger = {
+			owns = 202
+			overlord = {
+				202 = {
+					has_great_project = {
+						type = st_basil_cathedral
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = st_basil_cathedral
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_st_basil_cathedral_2_mod
+		trigger = {
+			owns = 202
+			overlord = {
+				202 = {
+					has_great_project = {
+						type = st_basil_cathedral
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = st_basil_cathedral
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_st_basil_cathedral_3_mod
+		trigger = {
+			owns = 202
+			overlord = {
+				202 = {
+					has_great_project = {
+						type = st_basil_cathedral
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# kazan_kremlin
+	modifier_overlord = {
+		modifier = to_kazan_kremlin_1_mod
+		trigger = {
+			owns = 1082
+			overlord = {
+				1082 = {
+					has_great_project = {
+						type = kazan_kremlin
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = kazan_kremlin
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_kazan_kremlin_2_mod
+		trigger = {
+			owns = 1082
+			overlord = {
+				1082 = {
+					has_great_project = {
+						type = kazan_kremlin
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = kazan_kremlin
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_kazan_kremlin_3_mod
+		trigger = {
+			owns = 1082
+			overlord = {
+				1082 = {
+					has_great_project = {
+						type = kazan_kremlin
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	# golestan_palace
+	modifier_overlord = {
+		modifier = to_golestan_palace_1_mod
+		trigger = {
+			owns = 428
+			428 = {
+				has_great_project = {
+					type = golestan_palace
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = golestan_palace
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_golestan_palace_2_mod
+		trigger = {
+			owns = 428
+			428 = {
+				has_great_project = {
+					type = golestan_palace
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = golestan_palace
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_golestan_palace_3_mod
+		trigger = {
+			owns = 428
+			428 = {
+				has_great_project = {
+					type = golestan_palace
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# nizwa_fort
+	modifier_overlord = {
+		modifier = to_nizwa_fort_1_mod
+		trigger = {
+			owns = 403
+			403 = {
+				has_great_project = {
+					type = nizwa_fort
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = nizwa_fort
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nizwa_fort_2_mod
+		trigger = {
+			owns = 403
+			403 = {
+				has_great_project = {
+					type = nizwa_fort
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = nizwa_fort
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_nizwa_fort_3_mod
+		trigger = {
+			owns = 403
+			403 = {
+				has_great_project = {
+					type = nizwa_fort
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# city_of_sanaa
+	modifier_overlord = {
+		modifier = to_city_of_sanaa_1_mod
+		trigger = {
+			owns = 390
+			390 = {
+				has_great_project = {
+					type = city_of_sanaa
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = city_of_sanaa
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_city_of_sanaa_2_mod
+		trigger = {
+			owns = 390
+			390 = {
+				has_great_project = {
+					type = city_of_sanaa
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = city_of_sanaa
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_city_of_sanaa_3_mod
+		trigger = {
+			owns = 390
+			390 = {
+				has_great_project = {
+					type = city_of_sanaa
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# al_azhar_university
+	modifier_overlord = {
+		modifier = to_al_azhar_university_1_mod
+		trigger = {
+			owns = 361
+			361 = {
+				has_great_project = {
+					type = al_azhar_university
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = al_azhar_university
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_al_azhar_university_2_mod
+		trigger = {
+			owns = 361
+			361 = {
+				has_great_project = {
+					type = al_azhar_university
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = al_azhar_university
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_al_azhar_university_3_mod
+		trigger = {
+			owns = 361
+			361 = {
+				has_great_project = {
+					type = al_azhar_university
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# venetian_arsenal_gp
+	modifier_overlord = {
+		modifier = to_venetian_arsenal_gp_3_mod
+		trigger = {
+			owns = 112
+			112 = {
+				has_great_project = {
+					type = venetian_arsenal_gp
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# amsterdam_bourse
+	modifier_overlord = {
+		modifier = to_amsterdam_bourse_2_mod
+		trigger = {
+			owns = 97
+			overlord = {
+				97 = {
+					has_great_project = {
+						type = amsterdam_bourse
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = amsterdam_bourse
+							tier = 3
+						}
+					}
+					OR = {
+						culture = dutch
+						culture = flemish
+						culture = frisian
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_amsterdam_bourse_3_mod
+		trigger = {
+			owns = 97
+			overlord = {
+				97 = {
+					has_great_project = {
+						type = amsterdam_bourse
+						tier = 3
+					}
+					OR = {
+						culture = dutch
+						culture = flemish
+						culture = frisian
+					}
+					OR = {
+						culture = PREV
+						PREV = {
+							accepted_culture = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# golden_kremnica
+	modifier_overlord = {
+		modifier = to_golden_kremnica_1_mod
+		trigger = {
+			owns = 154
+			154 = {
+				has_great_project = {
+					type = golden_kremnica
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = golden_kremnica
+						tier = 2
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_golden_kremnica_2_mod
+		trigger = {
+			owns = 154
+			154 = {
+				has_great_project = {
+					type = golden_kremnica
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = golden_kremnica
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_golden_kremnica_3_mod
+		trigger = {
+			owns = 154
+			154 = {
+				has_great_project = {
+					type = golden_kremnica
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# schonbrunn_palace
+	modifier_overlord = {
+		modifier = to_schonbrunn_palace_1_mod
+		trigger = {
+			owns = 134
+			overlord = {
+				134 = {
+					has_great_project = {
+						type = schonbrunn_palace
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = schonbrunn_palace
+							tier = 2
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_schonbrunn_palace_2_mod
+		trigger = {
+			owns = 134
+			overlord = {
+				134 = {
+					has_great_project = {
+						type = schonbrunn_palace
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = schonbrunn_palace
+							tier = 3
+						}
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_schonbrunn_palace_3_mod
+		trigger = {
+			owns = 134
+			overlord = {
+				134 = {
+					has_great_project = {
+						type = schonbrunn_palace
+						tier = 3
+					}
+					religion_group = christian
+					religion = PREV
+				}
+			}
+		}
+	}
+
+	# suez_canal
+	modifier_overlord = {
+		modifier = to_om_suez_canal_3_mod
+		trigger = {
+			owns = 4316
+			4316 = {
+				OR = {
+					has_great_project = {
+						type = suez_canal
+						tier = 3
+					}
+					has_great_project = {
+						type = suez_canal_outward_boost
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	# kiel_canal
+	modifier_overlord = {
+		modifier = to_om_kiel_canal_3_mod
+		trigger = {
+			owns = 1775
+			1775 = {
+				OR = {
+					has_great_project = {
+						type = kiel_canal
+						tier = 3
+					}
+					has_great_project = {
+						type = kiel_canal_outward_boost
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+	###
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+
+elysian_subject_varangian =
+{
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_elysian_subject
+	diplomacy_overlord_sprite = GFX_diplomacy_leadelysian_subject
+	diplomacy_subject_sprite = GFX_diplomacy_amelysian_subject
+
+	# Properties:
+	transfer_trade_if_merchant_republic = yes
+	can_be_annexed = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	overlord_can_attack = no
+	can_have_subjects_of_other_types = no
+	takes_diplo_slot = no
+	can_release_in_peace = no
+	can_transfer_in_peace = no
+	can_fight_independence_war = no
+
+	extend_trading_range = yes
+
+	max_government_rank = 1
+
+	liberty_desire_development_ratio = 0
+	base_liberty_desire = -50
+	pays_overlord = 0
+	military_focus = 2
+
+	relative_power_class = 0
+	diplomacy_view_class = 5
+	
+	restoration_cb = cb_disloyal_vassal
+
+	# Subject Interactions:
+	fortify_march = yes
+	send_additional_troops = yes
+	conscript_general = yes
+	press_sailors = yes
+	placate_rulers = no
+	grant_province = no
+	grant_core_claim = no
+	divert_trade = yes
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = nhs2_varangian_guard_mod
+	}
+	modifier_subject = {
+		modifier = never_again_falter_subject
+		trigger = {
+			overlord = {
+				has_idea = never_again_falter
+			}
+		}
+	}
+
+	# Malta Forts
+	modifier_overlord = {
+		modifier = to_om_malta_forts_1_mod
+		trigger = {
+			owns = 126
+			overlord = {
+				126 = {
+					has_great_project = {
+						type = malta_forts
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = malta_forts
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_malta_forts_2_mod
+		trigger = {
+			owns = 126
+			overlord = {
+				126 = {
+					has_great_project = {
+						type = malta_forts
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = malta_forts
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_malta_forts_3_mod
+		trigger = {
+			owns = 126
+			overlord = {
+				126 = {
+					has_great_project = {
+						type = malta_forts
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+
+nhs_imperial_associate =
+{
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_elysian_subject
+	diplomacy_overlord_sprite = GFX_diplomacy_leadelysian_subject
+	diplomacy_subject_sprite = GFX_diplomacy_amelysian_subject
+
+	# Properties:
+	has_overlords_ruler = no
+	can_fight_independence_war = yes
+	is_voluntary = no									# Whether they can leave the relationship whenever they want
+	transfer_trade_power = no
+	transfer_trade_if_merchant_republic = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_be_integrated = no
+	can_be_annexed = yes #50 years timer
+	can_release_and_play = no							# "Release Colony" in SubjectView
+	uses_tariffs = no
+	dynamically_created_during_history = no				# If the country is automatically created. ( Makes for special checks during history )
+	eats_overlords_colonies = no						# Wheter subject assumes control of overlord's colonies in same colonial region.
+	has_colonial_parent = no							# Regulates most rules that should hold only for colonies
+	overlord_can_attack = yes
+	overlord_can_be_subject = no
+	can_have_subjects_of_other_types = yes
+	takes_diplo_slot = yes
+	has_power_projection = yes
+	can_release_in_peace = no
+	uses_military_focus = yes
+	overlord_protects_external = no						# Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
+	counts_for_borders = yes							# Whether distance between borders counts this subject type as part of its overlord's borders.
+	overlord_enforce_peace_attacking = no				# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
+	can_use_claims = yes								# Whether the overlord can use the subject's claims and cores for declaring war
+	gives_daimyo_bonuses = no
+	gets_help_with_rebels = no							# Only for AI. Bidirectional.
+	share_rebel_popup = yes								# Whether the Overlord gets popups about Subject's rebels and sees them in Stability View.
+	separatists_become_subjects = no					# Whether separatist rebels enforcing demands will become subjects of the overlord.
+	allows_taking_land_without_independence = no
+	can_transfer_in_peace = no							# Whether this subject type can be made into a vassal with the "Transfer Subject" Age Ability.
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = yes				# Requires Cradle of Civilization
+	can_union_break = no								# Only works together with has_overlords_ruler
+	
+	liberty_desire_negative_prestige = 2.0
+	liberty_desire_development_ratio = 0.05
+	military_focus = 0.66
+
+	extend_trading_range = yes
+
+	relative_power_class = 1
+	
+	restoration_cb = cb_restore_personal_union
+
+	# Subject Interactions:
+	embargo_rivals = yes
+	support_loyalists = yes
+	subsidize_armies = yes
+	scutage = no
+	send_officers = yes
+	divert_trade = yes
+	# (immediate)
+	placate_rulers = no
+	place_relative_on_throne = no
+	enforce_religion = yes
+	customize_subject = no
+	replace_governor = no
+	grant_province = yes
+	enforce_culture = no
+	siphon_income = yes
+	fortify_march = yes
+	seize_territory = yes
+	start_colonial_war = no
+	grant_core_claim = yes
+	sacrifice_ruler = no
+	sacrifice_heir = no
+	increase_tariffs = no
+	decrease_tariffs = no
+	takeondebt = yes
+	bestow_gifts = no
+	send_additional_troops = no
+	demand_artifacts = no
+	demand_additional_tribute = no
+	force_seppuku = no
+	press_sailors = no
+	contribute_to_capital = no
+	force_isolation = no
+	return_land = no
+	conscript_general = no
+	knowledge_sharing = yes
+	# (special)
+	sword_hunt = no
+	sankin_kotai = no
+	expel_ronin = no
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_overlord = {
+		modifier = union_subject
+	}
+
+	modifier_subject = {
+		modifier = never_again_falter_subject
+		trigger = {
+			overlord = {
+				has_idea = never_again_falter
+			}
+		}
+	}
+
+	modifier_subject = {
+		modifier = to_colonial_subsidies_subject
+		trigger = {
+			has_country_flag = to_subsidising_colonisation
+			NOT = { has_country_modifier = nhs_constrained_resources }
+			# num_of_colonists = 1
+		}
+	}
+	modifier_overlord = {
+		modifier = to_colonial_subsidies_overlord
+		trigger = {
+			has_country_flag = to_subsidising_colonisation
+			NOT = { has_country_modifier = nhs_constrained_resources }
+			# num_of_colonists = 1
+		}
+	}
+	
+	overlord_opinion_modifier = is_iassociate
+	subject_opinion_modifier = is_iassociate
+}
+
+to_imperial_protectorate = {
+	copy_from = default
+	# Graphics:
+	sprite = GFX_icon_protectorate
+	diplomacy_overlord_sprite = GFX_diplomacy_leadprotectorates # The one that the overlord sees
+	diplomacy_subject_sprite = GFX_diplomacy_inprotectorate	# The one that the subject sees
+	
+	# Properties:
+	can_fight_independence_war = yes
+	is_voluntary = no									# Whether they can leave the relationship whenever they want
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = no
+	joins_overlords_wars = no
+	joins_colonial_wars = no
+	can_be_integrated = no
+	can_release_and_play = no							# "Release Colony" in SubjectView
+	uses_tariffs = no
+	dynamically_created_during_history = no				# If the country is automatically created. ( Makes for special checks during history )
+	eats_overlords_colonies = no						# Wheter subject assumes control of overlord's colonies in same colonial region.
+	has_colonial_parent = no							# Regulates most rules that should hold only for colonies
+	overlord_can_attack = yes
+	overlord_can_be_subject = no
+	can_have_subjects_of_other_types = yes
+	can_be_annexed = yes
+	takes_diplo_slot = no
+	has_power_projection = yes
+	can_release_in_peace = yes
+	uses_military_focus = no
+	overlord_protects_external = yes						# Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
+	counts_for_borders = yes							# Whether distance between borders counts this subject type as part of its overlord's borders.
+	overlord_enforce_peace_attacking = no				# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
+	can_use_claims = yes								# Whether the overlord can use the subject's claims and cores for declaring war
+	gives_daimyo_bonuses = no
+	gets_help_with_rebels = yes							# Only for AI. Bidirectional.
+	share_rebel_popup = no								# Whether the Overlord gets popups about Subject's rebels and sees them in Stability View.
+	separatists_become_subjects = no					# Whether separatist rebels enforcing demands will become subjects of the overlord.
+	allows_taking_land_without_independence = no
+	can_transfer_in_peace = no							# Whether this subject type can be made into a vassal with the "Transfer Subject" Age Ability.
+	can_set_mil_focus = no
+	can_send_missionary_to_subject = yes				# Requires Cradle of Civilization
+	can_union_break = no								# Only works together with has_overlords_ruler
+	overlord_can_fabricate_for = yes
+	does_overlord_size_count_for_warscore_cost = no
+	is_colony_subtype = no
+	is_march = no
+	forms_trade_companies = yes
+	can_concentrate_development = no
+	can_have_great_projects_moved_by_overlord = yes
+	extend_trading_range = yes
+
+	can_be_co_belligerented = yes
+	must_accept_cta_from_overlord = yes
+	opinion_cost_to_join_offensive_wars = 100
+	opinion_cost_to_join_defensive_wars = 50
+	opinion_cost_instead_of_favors_cost = yes
+
+	max_government_rank = 0								# 0 means no limit
+	trust_on_start = 0									# Overlord and subject will each get this much extra trust with each other at game start
+
+	base_liberty_desire = -10.0
+	liberty_desire_development_ratio = 0.01
+	liberty_desire_same_dynasty = 0.0
+	liberty_desire_revolution = 30.0					# Liberty desire at 100% revolution spread in country
+	pays_overlord = 1.0									# 1.0 represents the amount payed by vassals
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	military_focus = 1.0								# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
+
+	relative_power_class = 1 							# See description above
+	diplomacy_view_class = 1							# See description above
+
+	can_fight = {
+		independent_nations = yes
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		other_overlord = all
+	}
+	can_ally = {
+		same_overlord = to_imperial_protectorate
+	}
+	can_marry = {
+		same_overlord = to_imperial_protectorate
+	}
+
+	# Subject Interactions:
+	# (continuous)
+	embargo_rivals = yes
+	support_loyalists = no
+	subsidize_armies = no
+	scutage = no
+	send_officers = yes
+	divert_trade = yes
+	# (immediate)
+	placate_rulers = yes
+	place_relative_on_throne = no
+	enforce_religion = yes
+	customize_subject = no
+	replace_governor = no
+	grant_province = yes
+	enforce_culture = no
+	siphon_income = no
+	fortify_march = no
+	seize_territory = yes
+	start_colonial_war = no
+	grant_core_claim = yes
+	sacrifice_ruler = no
+	sacrifice_heir = no
+	increase_tariffs = no
+	decrease_tariffs = no
+	takeondebt = yes
+	bestow_gifts = no
+	send_additional_troops = no
+	demand_artifacts = no
+	demand_additional_tribute = no
+	force_seppuku = no
+	press_sailors = no
+	contribute_to_capital = no
+	force_isolation = no
+	return_land = no
+	conscript_general = no
+	knowledge_sharing = yes
+	# (special)
+	sword_hunt = no
+	sankin_kotai = no
+	expel_ronin = no
+
+	# Modifiers:
+	modifier_subject = clear # Use this to clear after copy_from.
+	modifier_overlord = clear
+
+	modifier_subject = {
+		modifier = trade_protectorate_subject_modifier
+	}
+
+	modifier_overlord = {
+		modifier = to_large_protectorate
+		trigger = {
+			home_trade_node = {
+				has_most_province_trade_power = ROOT
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_protectorate_disloyal_penalty
+		trigger = {
+			liberty_desire = 75
+		}
+	}
+
+	modifier_subject = {
+		modifier = to_imperial_protectorate_adm_mod
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = to_imperial_protectorate_adm_mod_tt
+				overlord = {
+					PREV = {
+						NOT = { adm_tech = PREV }
+					}
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = to_imperial_protectorate_dip_mod
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = to_imperial_protectorate_dip_mod_tt
+				overlord = {
+					PREV = {
+						NOT = { dip_tech = PREV }
+					}
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = to_imperial_protectorate_mil_mod
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = to_imperial_protectorate_mil_mod_tt
+				overlord = {
+					PREV = {
+						NOT = { mil_tech = PREV }
+					}
+				}
+			}
+		}
+	}
+
+	# modifier_subject = {
+	# 	modifier = never_again_falter_subject
+	# 	trigger = {
+	# 		overlord = {
+	# 			has_idea = never_again_falter
+	# 		}
+	# 	}
+	# }
+	
+	# modifier_subject = {
+	# 	modifier = to_colonial_subsidies_subject
+	# 	trigger = {
+	# 		has_country_flag = to_subsidising_colonisation
+	# 		NOT = { has_country_modifier = nhs_constrained_resources }
+	# 		# num_of_colonists = 1
+	# 	}
+	# }
+	# modifier_overlord = {
+	# 	modifier = to_colonial_subsidies_overlord
+	# 	trigger = {
+	# 		has_country_flag = to_subsidising_colonisation
+	# 		NOT = { has_country_modifier = nhs_constrained_resources }
+	# 		# num_of_colonists = 1
+	# 	}
+	# }
+
+	overlord_opinion_modifier = is_iprotectorate
+	subject_opinion_modifier = is_iprotectorate
+}
+
+to_autonomous_imperial_protectorate = {
+	copy_from = to_imperial_protectorate
+	transfer_trade_power = no
+	can_be_annexed = no
+	divert_trade = no
+	pays_overlord = 0.0	
+
+	modifier_subject = clear # Use this to clear after copy_from.
+	modifier_overlord = clear
+}
+
+to_elysian_governor = {
+	copy_from = default
+	# Graphics:
+	sprite = GFX_icon_elysian_subject
+	diplomacy_overlord_sprite = GFX_diplomacy_leadelysian_subject
+	diplomacy_subject_sprite = GFX_diplomacy_amelysian_subject
+	
+	# Properties:
+	can_fight_independence_war = no
+	is_voluntary = no									# Whether they can leave the relationship whenever they want
+	transfer_trade_power = yes
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_be_integrated = no
+	can_release_and_play = no							# "Release Colony" in SubjectView
+	uses_tariffs = no
+	dynamically_created_during_history = no				# If the country is automatically created. ( Makes for special checks during history )
+	eats_overlords_colonies = yes						# Wheter subject assumes control of overlord's colonies in same colonial region.
+	has_colonial_parent = no							# Regulates most rules that should hold only for colonies
+	overlord_can_attack = no
+	overlord_can_be_subject = yes
+	can_have_subjects_of_other_types = yes
+	can_be_annexed = no
+	takes_diplo_slot = no
+	has_power_projection = no
+	can_release_in_peace = no
+	uses_military_focus = yes
+	overlord_protects_external = yes						# Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
+	counts_for_borders = yes							# Whether distance between borders counts this subject type as part of its overlord's borders.
+	overlord_enforce_peace_attacking = no				# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
+	can_use_claims = yes								# Whether the overlord can use the subject's claims and cores for declaring war
+	gives_daimyo_bonuses = no
+	gets_help_with_rebels = yes							# Only for AI. Bidirectional.
+	share_rebel_popup = yes								# Whether the Overlord gets popups about Subject's rebels and sees them in Stability View.
+	separatists_become_subjects = no					# Whether separatist rebels enforcing demands will become subjects of the overlord.
+	allows_taking_land_without_independence = no
+	can_transfer_in_peace = no							# Whether this subject type can be made into a vassal with the "Transfer Subject" Age Ability.
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = yes				# Requires Cradle of Civilization
+	can_union_break = no								# Only works together with has_overlords_ruler
+	overlord_can_fabricate_for = yes
+	does_overlord_size_count_for_warscore_cost = yes
+	is_colony_subtype = no
+	is_march = no
+	forms_trade_companies = yes
+	can_concentrate_development = no
+	can_have_great_projects_moved_by_overlord = yes
+	extend_trading_range = yes
+
+	max_government_rank = 2								# 0 means no limit
+	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
+	trust_on_start = 100									# Overlord and subject will each get this much extra trust with each other at game start
+
+	base_liberty_desire = -50.0
+	liberty_desire_negative_prestige = 0.0
+	liberty_desire_development_ratio = 0.0
+	liberty_desire_same_dynasty = 0.0
+	liberty_desire_revolution = 30.0					# Liberty desire at 100% revolution spread in country
+	pays_overlord = 1.0									# 1.0 represents the amount payed by vassals
+	forcelimit_to_overlord = 0.25						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.25					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.25							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.25							# Percent of subject FL to use as base for modifiers
+	military_focus = 1.0								# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
+
+	relative_power_class = 0 							# See description above
+	should_quit_wars_on_activation = yes
+	diplomacy_view_class = 0							# See description above
+
+	# Subject Interactions:
+	# (continuous)
+	embargo_rivals = yes
+	support_loyalists = no
+	subsidize_armies = yes
+	scutage = no
+	send_officers = yes
+	divert_trade = yes
+	# (immediate)
+	placate_rulers = yes
+	place_relative_on_throne = yes
+	enforce_religion = yes
+	customize_subject = no
+	replace_governor = yes
+	grant_province = yes
+	enforce_culture = no
+	siphon_income = no
+	fortify_march = no
+	seize_territory = no
+	start_colonial_war = no
+	grant_core_claim = yes
+	sacrifice_ruler = no
+	sacrifice_heir = no
+	increase_tariffs = no
+	decrease_tariffs = no
+	takeondebt = yes
+	bestow_gifts = no
+	send_additional_troops = no
+	demand_artifacts = no
+	demand_additional_tribute = no
+	force_seppuku = no
+	press_sailors = no
+	contribute_to_capital = no
+	force_isolation = no
+	return_land = no
+	conscript_general = no
+	knowledge_sharing = yes
+	# (special)
+	sword_hunt = no
+	sankin_kotai = no
+	expel_ronin = no
+
+	# Modifiers:
+	modifier_subject = clear # Use this to clear after copy_from.
+	modifier_overlord = clear
+
+	overlord_opinion_modifier = is_elysian_governor
+	subject_opinion_modifier = is_elysian_governor
+
+	modifier_overlord = {
+		modifier = to_om_elysian_highways_3_mod
+		trigger = {
+			has_saved_global_event_target = to_elysian_highways_province
+			event_target:to_elysian_highways_province = {
+				has_great_project = {
+					type = to_elysian_highways_project
+					tier = 3
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_cothon_1_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					has_great_project = {
+						type = nhs_cothon
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_cothon
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_cothon_2_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					has_great_project = {
+						type = nhs_cothon
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_cothon
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_cothon_3_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					has_great_project = {
+						type = nhs_cothon
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_alexandrian_library_1_mod
+		trigger = {
+			owns = 2554
+			overlord = {
+				2554 = {
+					has_great_project = {
+						type = nhs_alexandrian_library
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_alexandrian_library
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_alexandrian_library_2_mod
+		trigger = {
+			owns = 2554
+			overlord = {
+				2554 = {
+					has_great_project = {
+						type = nhs_alexandrian_library
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_alexandrian_library
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_alexandrian_library_3_mod
+		trigger = {
+			owns = 2554
+			overlord = {
+				2554 = {
+					has_great_project = {
+						type = nhs_alexandrian_library
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_hippodrome_1_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					has_great_project = {
+						type = nhs_hippodrome
+						tier = 1
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_hippodrome
+							tier = 2
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_hippodrome_2_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					has_great_project = {
+						type = nhs_hippodrome
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_hippodrome
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_hippodrome_3_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					has_great_project = {
+						type = nhs_hippodrome
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_elysian_arsenal_2_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					has_great_project = {
+						type = nhs_elysian_arsenal
+						tier = 2
+					}
+					NOT = {
+						has_great_project = {
+							type = nhs_elysian_arsenal
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_elysian_arsenal_3_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					has_great_project = {
+						type = nhs_elysian_arsenal
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v1_1_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					OR = {
+						AND = {
+							has_great_project = {
+								type = nhs_temple_of_marble_emperors_v1
+								tier = 1
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_temple_of_marble_emperors_v1
+									tier = 2
+								}
+							}
+						}
+						AND = {
+							has_great_project = {
+								type = nhs_hagia_theotoke_v1
+								tier = 1
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_hagia_theotoke_v1
+									tier = 2
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v1_2_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					OR = {
+						AND = {
+							has_great_project = {
+								type = nhs_temple_of_marble_emperors_v1
+								tier = 2
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_temple_of_marble_emperors_v1
+									tier = 3
+								}
+							}
+						}
+						AND = {
+							has_great_project = {
+								type = nhs_hagia_theotoke_v1
+								tier = 2
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_hagia_theotoke_v1
+									tier = 3
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v1_3_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					OR = {
+						has_great_project = {
+							type = nhs_temple_of_marble_emperors_v1
+							tier = 3
+						}
+						has_great_project = {
+							type = nhs_hagia_theotoke_v1
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v2_1_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					OR = {
+						AND = {
+							has_great_project = {
+								type = nhs_temple_of_marble_emperors_v2
+								tier = 1
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_temple_of_marble_emperors_v2
+									tier = 2
+								}
+							}
+						}
+						AND = {
+							has_great_project = {
+								type = nhs_hagia_theotoke_v2
+								tier = 1
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_hagia_theotoke_v2
+									tier = 2
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v2_2_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					OR = {
+						AND = {
+							has_great_project = {
+								type = nhs_temple_of_marble_emperors_v2
+								tier = 2
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_temple_of_marble_emperors_v2
+									tier = 3
+								}
+							}
+						}
+						AND = {
+							has_great_project = {
+								type = nhs_hagia_theotoke_v2
+								tier = 2
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_hagia_theotoke_v2
+									tier = 3
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v2_3_mod
+		trigger = {
+			owns = 953
+			overlord = {
+				953 = {
+					OR = {
+						has_great_project = {
+							type = nhs_temple_of_marble_emperors_v2
+							tier = 3
+						}
+						has_great_project = {
+							type = nhs_hagia_theotoke_v2
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v3_1_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					OR = {
+						AND = {
+							has_great_project = {
+								type = nhs_temple_of_marble_emperors_v3
+								tier = 1
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_temple_of_marble_emperors_v3
+									tier = 2
+								}
+							}
+						}
+						AND = {
+							has_great_project = {
+								type = nhs_hagia_theotoke_v3
+								tier = 1
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_hagia_theotoke_v3
+									tier = 2
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v3_2_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					OR = {
+						AND = {
+							has_great_project = {
+								type = nhs_temple_of_marble_emperors_v3
+								tier = 2
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_temple_of_marble_emperors_v3
+									tier = 3
+								}
+							}
+						}
+						AND = {
+							has_great_project = {
+								type = nhs_hagia_theotoke_v3
+								tier = 2
+							}
+							NOT = {
+								has_great_project = {
+									type = nhs_hagia_theotoke_v3
+									tier = 3
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = to_om_temple_of_marble_emperors_v3_3_mod
+		trigger = {
+			owns = 950
+			overlord = {
+				950 = {
+					OR = {
+						has_great_project = {
+							type = nhs_temple_of_marble_emperors_v3
+							tier = 3
+						}
+						has_great_project = {
+							type = nhs_hagia_theotoke_v3
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# panama_canal
+	modifier_overlord = {
+		modifier = to_om_panama_canal_3_mod
+		trigger = {
+			owns = 835
+			835 = {
+				OR = {
+					has_great_project = {
+						type = panama_canal
+						tier = 3
+					}
+					has_great_project = {
+						type = panama_canal_outward_boost
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	# zacatecas_mine_city
+	modifier_overlord = {
+		modifier = to_om_zacatecas_mine_city_2_mod
+		trigger = {
+			owns = 856
+			856 = {
+				has_great_project = {
+					type = zacatecas_mine_city
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = zacatecas_mine_city
+						tier = 3
+					}
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_zacatecas_mine_city_3_mod
+		trigger = {
+			owns = 856
+			856 = {
+				has_great_project = {
+					type = zacatecas_mine_city
+					tier = 3
+				}
+			}
+		}
+	}
+
+	# tortuga_island
+	modifier_overlord = {
+		modifier = to_om_tortuga_island_1_mod
+		trigger = {
+			owns = 489
+			489 = {
+				has_great_project = {
+					type = tortuga_island
+					tier = 1
+				}
+				NOT = {
+					has_great_project = {
+						type = tortuga_island
+						tier = 2
+					}
+				}
+			}
+			overlord = {
+				OR = {
+					has_government_attribute = is_pirate_republic_reform
+					has_global_flag = golden_age_of_piracy
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_tortuga_island_2_mod
+		trigger = {
+			owns = 489
+			489 = {
+				has_great_project = {
+					type = tortuga_island
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = tortuga_island
+						tier = 3
+					}
+				}
+			}
+			overlord = {
+				OR = {
+					has_government_attribute = is_pirate_republic_reform
+					has_global_flag = golden_age_of_piracy
+				}
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_tortuga_island_3_mod
+		trigger = {
+			owns = 489
+			489 = {
+				has_great_project = {
+					type = tortuga_island
+					tier = 3
+				}
+			}
+			overlord = {
+				OR = {
+					has_government_attribute = is_pirate_republic_reform
+					has_global_flag = golden_age_of_piracy
+				}
+			}
+		}
+	}
+
+	# cahokia
+	modifier_overlord = {
+		modifier = to_om_cahokia_2_mod
+		trigger = {
+			owns = 917
+			917 = {
+				has_great_project = {
+					type = cahokia
+					tier = 2
+				}
+				NOT = {
+					has_great_project = {
+						type = cahokia
+						tier = 3
+					}
+				}
+			}
+			overlord = {
+				mission_completed = to_control_andronika_mission
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_cahokia_3_mod_pagan
+		trigger = {
+			owns = 917
+			917 = {
+				has_great_project = {
+					type = cahokia
+					tier = 3
+				}
+			}
+			overlord = {
+				mission_completed = to_control_andronika_mission
+				religion_group = pagan
+			}
+		}
+	}
+
+	modifier_overlord = {
+		modifier = to_om_cahokia_3_mod_non_pagan
+		trigger = {
+			owns = 917
+			917 = {
+				has_great_project = {
+					type = cahokia
+					tier = 3
+				}
+			}
+			overlord = {
+				mission_completed = to_control_andronika_mission
+				NOT = { religion_group = pagan }
+			}
+		}
+	}
+}
