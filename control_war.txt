@@ -1,0 +1,8 @@
+every_country = {
+	limit = {
+		war_with = ROOT
+	}
+	every_owned_province = {
+		change_controller = ROOT
+	}
+}

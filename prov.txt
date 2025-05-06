@@ -1,118 +1,9 @@
 ##########################################################################
 # Scripts | script.txt | Just general things to run
 ##########################################################################
-QUD = {
-    grant_independence = yes
-}
-# every_subject_country = {
-#     limit = {
-#         is_subject_of_type = tributary_state
-#     }
-
-#     ROOT = {
-#         create_subject = {
-#             subject_type = jimi_state
-#             subject = PREV
-#         }
-#     }
-# }
 
 
 
-
-# Names
-ROOT = {
-    ROOT = {
-        override_country_name = "Khaganate of The Golden Horde"
-    }
-	# Subtribes
-    KHA = {
-        override_country_name = "Mongolian Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    PRU = {
-        override_country_name = "Teutonic Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    ZUN = {
-        override_country_name = "Dzungarian Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    KLK = {
-        override_country_name = "Khalka Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    SHC = {
-        override_country_name = "Sahalea Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    AB1 = {
-        override_country_name = "Yeke Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    SSB = {
-        override_country_name = "Sibe Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-
-    # Marches | Legion States. Legions were military units of 10000 men. These are heavily militarized subject states, together they make up many of the inummerable "Immortal Bows of the Khaganate".
-    # CIR = {
-    #     override_country_name = "Caucasian Tumen Üls"
-    # }
-
-    # Defensive Marches | Zakh means borderlands, erhaps Khyazgaar Uls? Meaning border state. These are heavily fortified borderland subject states, together they make up many of the inummerable "Immortal Shields of the Khaganate".
-    # ORM = {
-    #     override_country_name = "Hormuz Zakh Uls"
-    CIR = {
-        override_country_name = "Caucasian Zakh Üls"
-    }
-    # }
-
-    # Native Reserves | Obog means ethnic tribe
-    TK3 = {
-        override_country_name = "Transcaspian Obog"
-    }
-
-    # Cliques | Bülüüg means clique
-    XX1 = {
-        override_country_name = "Xi-Xia Buluug"
-    }
-
-    # Vassals | Kharya'at Uls means directly controlled subject state
-    
-    # Tributaries and Jimi States | Orsun means loose subject
-    SRV = {
-        override_country_name = "Shirvani Orsun Uls"
-    }
-    SYG = {
-        override_country_name = "Yuguri Orsun Uls"
-    }
-    DLH = {
-        override_country_name = "Delhiite Orsun Uls"
-    }
-    BLT = {
-        override_country_name = "Bolori Orsun Uls"
-    }
-    TI3 = {
-        override_country_name = "Kabulian Orsun Uls"
-    }
-    KJT = {
-        override_country_name = "Kanjut Orsun Uls"
-    }
-    SK1 = {
-        override_country_name = "Balti Orsun Uls"
-    }
-    FEO = {
-        override_country_name = "East Gothic Orsun Uls"
-    }
-}
 
 # Frontiers
 random_owned_province = {
@@ -244,9 +135,10 @@ add_country_modifier = {
 # }
 
 ##########################################################################
-# Changing Colors | color.txt | This should be edited EACH CAMPAIGN
+# Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
 ##########################################################################
 
+# Colors
 ROOT = {
     # every_subject_country = {
     #   restore_country_color = yes
@@ -402,6 +294,121 @@ ROOT = {
         change_country_color = {
             color = { 190 150 170 }
         }
+    }
+}
+
+# Names
+ROOT = {
+    ROOT = {
+        override_country_name = "Khaganate of The Golden Horde"
+    }
+	# Subtribes
+    # Major Subtribes
+    KHA = {
+        override_country_name = "Mongolian Khanate"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+    ZUN = {
+        override_country_name = "Dzungarian Khanate"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+    # Subtribes
+    PRU = {
+        override_country_name = "Teutonic Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+    KLK = {
+        override_country_name = "Khalka Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+    AB1 = {
+        override_country_name = "Yeke Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+
+    # Subtribes to be annexed
+    NJZ = {
+        override_country_name = "Ningxia Core Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+    HHH = {
+        override_country_name = "Skewbald Core Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde    
+    }
+    SHC = {
+        override_country_name = "Sahalea Core Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+
+    # Minor Subtribes 
+    SSB = {
+        override_country_name = "Sibe Minor Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+
+    # Marches | Legion States. Legions were military units of 10000 men. These are heavily militarized subject states, together they make up many of the inummerable "Immortal Bows of the Khaganate".
+    # CIR = {
+    #     override_country_name = "Caucasian Tumen Üls"
+    # }
+
+    # Defensive Marches | Zakh means borderlands, erhaps Khyazgaar Uls? Meaning border state. These are heavily fortified borderland subject states, together they make up many of the inummerable "Immortal Shields of the Khaganate".
+    # ORM = {
+    #     override_country_name = "Hormuz Zakh Uls"
+    CIR = {
+        override_country_name = "Caucasian Zakh Üls"
+    }
+    # }
+
+    # Native Reserves | Obog means ethnic tribe
+    TK3 = {
+        override_country_name = "Transcaspian Obog"
+    }
+
+    # Cliques | Bülüüg means clique
+    XX1 = {
+        override_country_name = "Xi-Xia Buluug"
+    }
+
+    # Vassals | Kharya'at Uls means directly controlled subject state
+    
+    # Tributaries and Jimi States | Orsun means loose subject
+    SRV = {
+        override_country_name = "Shirvani Orsun Uls"
+    }
+    SYG = {
+        override_country_name = "Yuguri Orsun Uls"
+    }
+    DLH = {
+        override_country_name = "Delhiite Orsun Uls"
+    }
+    BLT = {
+        override_country_name = "Bolori Orsun Uls"
+    }
+    TI3 = {
+        override_country_name = "Kabulian Orsun Uls"
+    }
+    KJT = {
+        override_country_name = "Kanjut Orsun Uls"
+    }
+    SK1 = {
+        override_country_name = "Balti Orsun Uls"
+    }
+    FEO = {
+        override_country_name = "East Gothic Orsun Uls"
+    }
+
+    # Pirates
+    GOT = {
+        override_country_name = "Pirates of Gotland"
     }
 }
 

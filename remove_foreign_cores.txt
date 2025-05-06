@@ -4,14 +4,7 @@ every_country = {
         NOT = {
             is_subject_of = ROOT
         }
-        NOT = {
-            OR = { # not any of these are allowed
-                   # not and is allow unless they fail EVERY condition : i.e. simultaneously was never GOL an was never GLH In this case it makes no difference tbf
-                is_or_was_tag = GOL
-                is_or_was_tag = GLH
-                scope = ROOT
-            }
-        }
+        ai = yes
     }
     save_event_target_as = foreign_country
     ROOT = {

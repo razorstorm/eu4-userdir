@@ -1,0 +1,12 @@
+every_subject_country = {
+    limit = {
+        is_subject_of_type = tributary_state
+    }
+
+    ROOT = {
+        create_subject = {
+            subject_type = jimi_state
+            subject = PREV
+        }
+    }
+}
