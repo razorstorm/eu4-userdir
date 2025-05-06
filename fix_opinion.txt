@@ -20,6 +20,15 @@ every_country = {
 
     remove_opinion = {
         who = ROOT
+        modifier = break_alliance
+    }
+    remove_opinion = {
+        who = ROOT
+        modifier = break_alliance_war
+    }
+
+    remove_opinion = {
+        who = ROOT
         modifier = refused_to_give_sailors_for_favors
     }
 
