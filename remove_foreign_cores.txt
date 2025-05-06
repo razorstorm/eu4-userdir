@@ -1,0 +1,27 @@
+# Remove foreign cores on us
+every_country = {
+    limit = {
+        NOT = {
+            is_subject_of = ROOT
+        }
+        NOT = {
+            OR = { # not any of these are allowed
+                   # not and is allow unless they fail EVERY condition : i.e. simultaneously was never GOL an was never GLH In this case it makes no difference tbf
+                is_or_was_tag = GOL
+                is_or_was_tag = GLH
+                scope = ROOT
+            }
+        }
+    }
+    save_event_target_as = foreign_country
+    ROOT = {
+        every_owned_province = {
+            remove_core = event_target:foreign_country
+        }
+    }
+    every_subject_country = {
+        every_owned_province = {
+            remove_core = event_target:foreign_country
+        }
+    }
+}

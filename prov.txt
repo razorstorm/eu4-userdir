@@ -56,15 +56,23 @@ ROOT = {
         change_government = tribal
         add_government_reform = steppe_horde
     }
+    SSB = {
+        override_country_name = "Sibe Horde"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
 
     # Marches | Legion States. Legions were military units of 10000 men. These are heavily militarized subject states, together they make up many of the inummerable "Immortal Bows of the Khaganate".
-    CIR = {
-        override_country_name = "Caucasian Tumen Üls"
-    }
+    # CIR = {
+    #     override_country_name = "Caucasian Tumen Üls"
+    # }
 
     # Defensive Marches | Zakh means borderlands, erhaps Khyazgaar Uls? Meaning border state. These are heavily fortified borderland subject states, together they make up many of the inummerable "Immortal Shields of the Khaganate".
     # ORM = {
     #     override_country_name = "Hormuz Zakh Uls"
+    CIR = {
+        override_country_name = "Caucasian Zakh Üls"
+    }
     # }
 
     # Native Reserves | Obog means ethnic tribe
@@ -166,25 +174,6 @@ random_owned_province = {
         add_siberian_construction = 100
     }
 }
-
-# Remove foreign cores on us
-# every_country = {
-#     limit = {
-#         NOT = {
-#             OR = {
-#                 tag = GOL
-#                 tag = GLH
-#                 scope = ROOT
-#             }
-#         }
-#     }
-#     save_event_target_as = foreign_country
-#     ROOT = {
-#         every_owned_province = {
-#             remove_core = event_target:foreign_country
-#         }
-#     }
-# }
 
 # ======================================= This run only ==================
 
