@@ -1146,3 +1146,241 @@ ROOT = {
 }
 
 # ============================================================================================================================================
+
+
+# Overpowered Byzantium
+
+ROOT = {
+    # every_subject_country = {
+    #   restore_country_color = yes
+    # } 
+    # restore_country_color = yes
+
+    change_country_color = {
+        color = { 149 45 102 } # Vanilla byzantine
+    }
+
+    # Cycling colors
+    # ROOT = {
+    #     every_subject_country = {
+    #         limit = {
+    #             OR = {
+    #                 is_subject_of_type = elysian_subject
+    #             }
+    #             NOT = {
+    #                 OR = {
+    #                     has_country_flag = elysian_subject_color_1
+    #                     has_country_flag = elysian_subject_color_2
+    #                     has_country_flag = elysian_subject_color_3
+    #                 }
+    #             }
+    #         }
+    #         random_list = {
+    #             33 = {
+    #                 set_country_flag = elysian_subject_color_1
+    #                 log = "Setting elysian_subject_color_1 to [This.GetName]"
+    #             }
+    #             33 = {
+    #                 set_country_flag = elysian_subject_color_2
+    #                 log = "Setting elysian_subject_color_2 to [This.GetName]"
+    #             }
+    #             33 = {
+    #                 set_country_flag = elysian_subject_color_3
+    #                 log = "Setting elysian_subject_color_3 to [This.GetName]"
+    #             }
+    #         }
+    #     }
+
+    #     # ================== Finished setting flags, actually change colors now ===============================================
+    #     every_subject_country = {
+    #         limit = {
+    #             has_country_flag = elysian_subject_color_1
+    #         }
+    #         change_country_color = {
+    #             color = { 170 20 80 }
+    #         }
+    #     }
+    #     every_subject_country = {
+    #         limit = {
+    #             has_country_flag = elysian_subject_color_2
+    #         }
+    #         change_country_color = {
+    #             color = { 220 42 100 }
+    #         }
+    #     } 
+    #     every_subject_country = {
+    #         limit = {
+    #             has_country_flag = elysian_subject_color_3
+    #         }
+    #         change_country_color = {
+    #             color = { 255 62 120 }
+    #         }
+    #     }
+    # }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = naval_march
+                is_subject_of_type = pirate_brotherhood_vassal
+            }
+        }
+        change_country_color = {
+            color = { 149 45 180 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = march
+            }
+        }
+        change_country_color = {
+            color = { 180 20 90 } 
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = defensive_march
+            }
+        }
+        change_country_color = {
+            color = { 100 30 60 } 
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = vassal
+                is_subject_of_type = puppet_state
+            }
+        }
+        change_country_color = {
+            color = { 250 90 150 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = native_reserve
+            }
+        }
+        change_country_color = {
+            color = { 240 100 180 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = roman_client_kingdom
+                is_subject_of_type = personal_union
+            }
+        }
+        change_country_color = {
+            color = { 200 100 180 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = brother_kingdom
+            }
+        }
+        change_country_color = {
+            color = { 180 70 70 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = protectorate
+            }
+        }
+        change_country_color = {
+            color = { 255 150 200 }
+        }
+    }
+    
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = fief_subject
+            }
+        }
+        change_country_color = {
+            color = { 170 90 130 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = palatinate_vassal
+            }
+        }
+        change_country_color = {
+            color = { 190 90 100 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = trade_outpost
+                is_subject_of_type = banking_family_subject
+            }
+        }
+        change_country_color = {
+            color = { 255 180 220 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = real_union_subject
+            }
+        }
+        change_country_color = {
+            color = { 180 55 120 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = imperial_city
+            }
+        }
+        change_country_color = {
+            color = { 160 0 110 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = administrative_region
+                is_subject_of_type = exarchate_subject
+            }
+        }
+        change_country_color = {
+            color = { 149 45 102 } # Vanilla byzantine
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = hereditary_pronoia_subject_type
+                is_subject_of_type = pronoia_subject_type
+            }
+        }
+        change_country_color = {
+            color = { 160 55 110 }
+        }
+    }
+
+    
+}

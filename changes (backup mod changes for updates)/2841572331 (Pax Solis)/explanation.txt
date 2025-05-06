@@ -9,3 +9,7 @@ Also migrate F:\Steam\steamapps\workshop\content\236850\2841572331\common\script
 Also migrate F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_triggers\00_scripted_triggers to F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_triggers\00_hf_scripted_triggers.txt
 
 Pax Solis has A TON of missing localization files and random broken UI elements. It feels like one specific author of the mod is just has horrible code quality and makes a habit of shipping half built features with no translations. Guess I'll have to do the work for them
+
+Also rename common/cultures/00_cultures.txt to hf_cultures.txt to stop breaking other mods
+
+Rename F:\Steam\steamapps\workshop\content\236850\2841572331\common\scripted_functions\00_scripted_functions.txt to 00_hf_scripted_functions.txt

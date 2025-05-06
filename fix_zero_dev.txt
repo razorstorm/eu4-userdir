@@ -1,0 +1,26 @@
+every_province = {
+	if = {
+		limit = {
+			NOT = {
+				base_manpower = 1
+			}
+		}
+		add_base_manpower = 1
+	}
+	if = {
+		limit = {
+			NOT = {
+				base_tax = 1
+			}
+		}
+		add_base_tax = 1
+	}
+	if = {
+		limit = {
+			NOT = {
+				base_production = 1
+			}
+		}
+		add_base_production = 1
+	}
+}

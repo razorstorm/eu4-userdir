@@ -2915,7 +2915,13 @@ every_subject_country = {
 }
 
 
-
+# embrace institutions
+every_owned_province = {
+    add_institution_embracement = {
+        which = ins_gunpowder
+        value = 100
+    }
+}
 
 
 
@@ -4638,3 +4644,46 @@ BUR = {
         cede_province = BEL
     }
 }
+
+
+# Random fixing of noculture
+
+every_province = {
+    limit = {
+        is_wasteland = yes
+    }
+    change_culture = null
+}
+every_province = {
+    limit = {
+        OR = {
+            culture = noculture
+        }
+        is_wasteland = no
+    }
+    log = "noculture culture in [This.GetName]"
+
+    random_list = {
+        16 = {
+            change_culture = chihan
+        }
+        16 = {
+            change_culture = kazakh
+        }
+        16 = {
+            change_culture = beijing_culture
+        }
+        16 = {
+            change_culture = tibetan
+        }
+        16 = {
+            change_culture = uyghur
+        }
+        16 = {
+            change_culture = chahar
+        }
+    }
+}
+
+
+

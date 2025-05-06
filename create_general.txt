@@ -1,0 +1,21 @@
+if = {
+	limit = {
+		OR = {
+
+			tag = GLH
+			tag = GOL
+			tag = OIR
+			tag = KHA
+		}
+	}
+	
+	define_general = {
+		name = "Subutai The Great"
+		shock = 10
+		fire = 10
+		manuever = 10
+		siege = 5
+		trait = "dragon_tiger_general_personality"
+	}
+}
+	

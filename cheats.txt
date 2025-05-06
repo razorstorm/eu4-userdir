@@ -267,3 +267,4 @@ every_owned_province = {
         duration = -1
     }
 }
+

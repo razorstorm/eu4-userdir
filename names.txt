@@ -1,0 +1,153 @@
+# Roman Empire - Country
+# Rename countries
+ROOT = {
+	ROOT = {
+		override_country_name = "Imperium Romanum"
+	}
+
+	# Exarchates
+	NED = {
+		override_country_name = "Provincia Nederlandica"
+	}
+	BOH = {
+		override_country_name = "Provincia Bohemiae"
+	}
+	K03 = {
+		override_country_name = "Provincia Britanniae"
+	}
+	OMA = {
+		override_country_name = "Provincia Omanensis"
+	}
+	K02 = {
+		override_country_name = "Provincia Gibuti"
+	}
+
+	# Unions
+	BAV = {
+		override_country_name = "Regnum Bavariae"
+	}
+	SCO = {
+		override_country_name = "Regnum Scotiae"
+	}
+	IRE = {
+		override_country_name = "Regnum Hiberniae"
+	}
+
+	# Fiefdoms
+	MUN = {
+		override_country_name = "Landgravius Munsteriensis"
+	}
+	HES = {
+		override_country_name = "Landgravius Hassiae"
+	}
+	WUR = {
+		override_country_name = "Landgravius Wurttembergensis"
+	}
+	NSA = {
+		override_country_name = "Comitatus Nassauensis"
+	}
+	KLE = {
+		override_country_name = "Comitatus Clivensis"
+	}
+	SWA = {
+		override_country_name = "Comitatus Swabiae"
+	}
+	ALS = {
+		override_country_name = "Comitatus Alsatiae"
+	}
+	XKZ = {
+		override_country_name = "Baronia Katzenelnbogenensis"
+	}
+
+	# Palatinates
+	SAX = {
+		override_country_name = "Dux Palatinus Saxoniae"
+	}
+	PAL = {
+		override_country_name = "Dominus Palatinus Rheni"
+	}
+	KOL = {
+		override_country_name = "Dominus Palatinus Coloniae"
+	}
+	MAI = {
+		override_country_name = "Comes Palatinus Moguntiae"
+	}
+	WBG = {
+		override_country_name = "Comes Palatinus Wurzburgensis"
+	}
+	TRI = {
+		override_country_name = "Comes Palatinus Treverorum"
+	}
+
+	# Marches
+	SWI = {
+		override_country_name = "Marca Helvetica"
+	}
+	PRU = {
+		override_country_name = "Marca Borussiae"
+	}
+	CIR = {
+		override_country_name = "Marca Caucasi"
+	}
+
+	# Naval Marches
+	ORM = {
+		override_country_name = "Portae Hormuzensis"
+	}
+	K06 = {
+		override_country_name = "Portae Gibraltaris"
+	}
+
+	# Imperial Cities
+	K05 = {
+		override_country_name = "Londinium Romanum"
+	}
+	BAD = {
+		override_country_name = "Urbs Aquae"
+	}
+	MTZ = {
+		override_country_name = "Urbs Metensis" 
+	}
+	MEM = {
+		override_country_name = "Urbs Memmingae"
+	}
+	RVA = {
+		override_country_name = "Urbs Dortmundensis"
+	}
+	ADR = {
+		override_country_name = "Urbs Andorrae"
+	}
+	NUM = {
+		override_country_name = "Urbs Norimbergae"
+	}
+	MLH = {
+		override_country_name = "Urbs Mulhouse"
+	}
+	ROT = {
+		override_country_name = "Urbs Rothenburgensis"
+	}
+
+	# Pirates
+	SOM = {
+		override_country_name = "Corsarii Somaliae"
+	}
+	KNI = {
+		override_country_name = "Corsarii Equitum"
+	}
+
+	# Trade outposts
+
+
+	# Banking Clans
+	K07 = {
+		override_country_name = "Familia Medici"
+	}
+	HSA = {
+		override_country_name = "Foedus Hanseaticum"
+	}
+
+	# Administrative Regions
+	TRS = {
+		override_country_name = "Regio Transoxiana"
+	}
+}

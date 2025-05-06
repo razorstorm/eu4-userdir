@@ -1,0 +1,263 @@
+grant_oversea_tributary_state = {
+	category = vassalize
+	alert_tooltip = grant_oversea_tributary_state_tooltip
+	alert_index = 30
+	require_acceptance = yes
+
+	is_visible = {
+		#has_dlc = "Mandate of Heaven"
+		#has_dlc = "Art of War"
+		#has_dlc = "Leviathan"
+		FROM = { is_subject = no }
+		FROM = {
+			NOT = { overlord_of = ROOT }
+		}
+		ROOT = { 
+			OR = {
+				religion_group = eastern
+				religion_group = buddhism_group
+				technology_group = chinese 
+				culture_group = east_asian
+				is_emperor_of_china = yes
+			}
+		}
+	}
+	is_allowed =  {
+		OR = {
+			# ROOT = {
+			# 	custom_trigger_tooltip = {
+			# 		tooltip = hf_has_officer_of_appease_advisor
+			# 		advisor = hf_officer_of_appease
+			# 	}
+			# }
+			custom_trigger_tooltip = {
+				tooltip = hf_send_heavy_ships_to_coast_line
+				FROM = { 
+					any_owned_province = {
+						sea_zone = {
+							OR = { 
+								galleys_in_province = 100
+								heavy_ships_in_province = 50 
+							}
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = hf_send_army_to_border
+				FROM = { 
+					any_owned_province = {
+						any_neighbor_province = {
+							num_of_units_in_province = {
+								who = ROOT
+								amount = 50
+							}
+						}
+					}
+				}
+			}
+		}
+		NOT = {
+			border_distance = {
+				who = FROM
+				distance = 500
+			}
+		}
+		ROOT = {
+			dip_power = 10
+		}
+		ROOT = {
+			navy_size_percentage = 0.5
+		}
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 150
+			}
+		}
+		FROM = {
+			NOT = {
+				army_strength = {
+					who = ROOT
+					value = 0.25
+				}
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject = FROM
+			subject_type = tributary_state
+		}
+		FROM = {
+			add_prestige = 10
+			add_legitimacy = 20
+		}
+		ROOT = {
+			add_dip_power = -10
+		}
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}			
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+			#1 trust = +4 ai points
+			multiply_variable = {
+				which = ai_value
+				value = 0.4
+			}
+		}
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.2
+			}
+		}
+		add_entry = {
+			name = DIPLO_IS_RIVAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_rivalry
+					}
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		add_entry = {
+			name = diplomatic_reputation
+			limit = { }
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 2
+			multiply_variable = {
+				which = ai_value
+				value = 2
+			}
+		}
+		add_entry = {
+			name = STABILITY_AI_MODIFIER
+			export_to_variable = {
+				variable_name = ai_value
+				value = stability
+				who = ROOT
+				with = FROM
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 25
+			}
+		}
+	}
+	ai_will_do = {
+		dip_power = 60
+	}
+}
+recruit_others_subject = { # 招抚纳降
+	category = covert
+	alert_tooltip = recruit_others_subject_tooltip
+	alert_index = 30
+	require_acceptance = no
+
+	is_visible = {
+		#has_dlc = "Mandate of Heaven"
+		#has_dlc = "Art of War"
+		#has_dlc = "Leviathan"
+		#religion_group = eastern
+		FROM = {
+			NOT = { is_subject_of = ROOT }
+			is_subject = yes
+		}
+	}
+	is_allowed =  {
+		FROM = {
+			is_subject = yes
+			NOT = { is_subject_of = ROOT }
+		}
+		FROM = {
+			OR = {
+				is_neighbor_of = ROOT
+				any_neighbor_country = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		FROM = {
+			liberty_desire = 15
+		}
+		AND = {
+			FROM = { is_at_war = no }
+			ROOT = { is_at_war = no }
+		}
+		any_country = {
+			overlord_of = FROM
+			ROOT = {
+				has_spy_network_in = {
+					who = PREV
+					value = 50
+				}
+			}
+		}
+		ROOT = {
+			is_great_power = yes
+		}
+		ROOT = {
+			prestige = 10
+		}
+		ROOT = {
+			dip_power = 20
+		}
+		OR = {
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 120
+				}
+			}
+			FROM = {
+				liberty_desire = 49
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject = FROM
+			subject_type = tributary_state
+		}
+
+		add_dip_power = -20
+
+		add_spy_network_in = {
+			who = FROM
+			value = -90
+		}
+	}
+	ai_will_do = {}
+}

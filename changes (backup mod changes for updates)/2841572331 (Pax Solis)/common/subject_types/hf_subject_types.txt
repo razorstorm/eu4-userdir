@@ -1,0 +1,680 @@
+
+#jimi_state
+#tb_minister_resident
+#sino_jimi_state
+#burma_tusi
+#captaincy_general_vassal
+#protectorate_march
+#prince_vassal
+#mongolian_tribe
+#sister_vassal
+#autonomy_province
+#fief_subject
+
+jimi_state = { #羁縻册封
+	copy_from = default
+
+	upgrade_subject_type = yes
+
+	sprite = GFX_icon_jimi
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_leadjimi
+	diplomacy_subject_sprite = GFX_icon_diplomacy_amjimi
+	
+	should_quit_wars_on_activation = yes
+	can_be_co_belligerented =  no
+	overlord_enforce_peace_attacking = yes
+	transfer_trade_power = no
+	is_voluntary = yes
+	uses_tariffs = yes #官营贸易
+	can_fight_independence_war = no
+	joins_overlords_wars = no
+	joins_colonial_wars = no
+	overlord_can_attack = yes
+	can_be_annexed = no
+	takes_diplo_slot = no
+	base_liberty_desire = -15
+	relative_power_class = 1
+	can_send_tribute = yes
+	can_have_subjects_of_other_types = yes
+	uses_military_focus = no
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_set_mil_focus = no
+	can_send_missionary_to_subject = yes
+	overlord_can_fabricate_for = yes
+	max_government_rank = 0
+	allows_taking_land_without_independence = no
+	extend_trading_range = yes
+	
+	liberty_desire_development_ratio = 0.2
+	liberty_desire_negative_prestige = 0.15
+	trust_on_start = 60
+	diplomacy_view_class = 1
+	
+	
+	can_fight = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		same_overlord = jimi_state
+		same_overlord = sino_jimi_state
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		same_overlord = jimi_state
+		same_overlord = sino_jimi_state
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		same_overlord = jimi_state
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = tributary_state
+		same_overlord = jimi_state
+		same_overlord = sino_jimi_state
+		other_overlord = all
+	}
+
+	# Subject Interactions:
+	# (immediate)
+	send_officers = yes 
+	grant_province = yes
+	return_land = yes
+	increase_tariffs = yes #官营贸易
+	decrease_tariffs = yes
+	enforce_religion = no
+	grant_core_claim = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	demand_artifacts = yes
+	demand_additional_tribute = yes
+	placate_rulers = no
+	knowledge_sharing = yes
+	seize_territory = no
+	takeondebt = yes
+	# (continuous)
+	embargo_rivals = yes
+	divert_trade = yes
+	subsidize_armies = yes
+
+	# Modifiers:
+	modifier_subject = {
+		modifier = jimi_state_subject
+	}
+	modifier_overlord = {
+		modifier = jimi_state_overlord
+	}
+
+	overlord_opinion_modifier = hf_is_jimi
+	subject_opinion_modifier = hf_is_jimi
+}
+tb_minister_resident = { #天朝藏区
+	copy_from = vassal
+	# Graphics:
+	sprite = GFX_icon_tb_minister_resident
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_leadtb_minister_resident
+	diplomacy_subject_sprite = GFX_icon_diplomacy_amtb_minister_resident
+	
+	# Triggers:
+
+	# Properties:
+	can_concentrate_development = no
+	can_be_co_belligerented =  no
+	transfer_trade_power = yes
+	uses_tariffs = yes #官营贸易
+	can_fight_independence_war = no
+	joins_overlords_wars = no
+	joins_colonial_wars = no
+	is_voluntary = no
+	overlord_can_attack = no
+	can_be_annexed = yes #藏区军政在中央
+	takes_diplo_slot = yes #驻藏大臣
+	base_liberty_desire = -50
+	relative_power_class = 0
+	has_colonial_parent = no
+	can_send_tribute = no
+	can_have_subjects_of_other_types = no
+	uses_military_focus = no
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	can_transfer_in_peace = no
+	can_set_mil_focus = no
+	can_send_missionary_to_subject = no
+	overlord_can_fabricate_for = yes
+	overlord_enforce_peace_attacking = yes
+	max_government_rank = 2
+	allows_taking_land_without_independence = no
+	
+	liberty_desire_development_ratio = 0.1
+	trust_on_start = 50
+
+	
+	modifier_subject = {
+		modifier = tb_minister_resident_subject
+	}
+	modifier_overlord = {
+		modifier = tb_minister_resident_overlord
+	}
+	
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+
+	# Subject Interactions:
+	# (immediate)
+	increase_tariffs = yes #官营贸易
+	decrease_tariffs = yes
+	enforce_religion = no
+	grant_core_claim = yes
+	grant_province = yes
+	bestow_gifts = yes
+	send_additional_troops = no
+	demand_artifacts = yes
+	demand_additional_tribute = yes
+	placate_rulers = yes
+	knowledge_sharing = yes
+	# (continuous)
+	embargo_rivals = yes
+	divert_trade= yes
+	subsidize_armies = yes
+	takeondebt = yes
+	overlord_opinion_modifier = hf_is_tb
+	subject_opinion_modifier = hf_is_tb
+ 
+}
+
+sino_jimi_state = { #土司
+	copy_from = default
+
+	upgrade_subject_type = yes
+
+	sprite = GFX_tusi
+	diplomacy_overlord_sprite = GFX_tusi_lead
+	diplomacy_subject_sprite = GFX_tusi_amvassal
+	can_be_co_belligerented =  no
+	separatists_become_subjects = yes
+	can_concentrate_development = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = yes
+	can_fight_independence_war = yes
+	can_be_annexed = no #gaituguiliu
+	takes_diplo_slot = no
+	base_liberty_desire = -50
+	relative_power_class = 0
+	can_have_subjects_of_other_types = yes
+	uses_military_focus = yes
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_set_mil_focus = yes
+	has_colonial_parent = no
+	overlord_can_fabricate_for = yes
+	overlord_enforce_peace_attacking = yes
+	gets_help_with_rebels = no
+	has_power_projection = no
+	max_government_rank = 1
+	allows_taking_land_without_independence = no
+	enforce_culture = yes
+	can_send_tribute = no
+	
+	liberty_desire_development_ratio = 0.1
+	trust_on_start = 50
+
+	# Subject Interactions:
+	# (immediate)
+	conscript_general = yes
+	contribute_to_capital = yes
+	seize_territory = yes
+	increase_tariffs = yes #官营贸易
+	decrease_tariffs = yes
+	enforce_religion = no
+	grant_core_claim = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	placate_rulers = yes
+	knowledge_sharing = yes
+	# (continuous)
+	embargo_rivals = yes
+	divert_trade= yes
+	subsidize_armies = yes
+
+	# Modifiers:
+	modifier_subject = {
+		modifier = sino_jimi_state_subject
+	}
+	#modifier_overlord = {
+		#modifier = vassal_subject
+	#}
+
+	overlord_opinion_modifier = hf_is_tusi
+	subject_opinion_modifier = hf_is_tusi
+
+	can_fight = {
+		independent_nations = yes
+		same_overlord = sino_jimi_state
+		same_overlord = jimi_state
+		other_overlord = all
+	}
+	can_rival = {
+		same_overlord = sino_jimi_state
+		same_overlord = jimi_state
+	}
+	can_ally = {
+		same_overlord = sino_jimi_state
+	}
+	can_marry = {
+		same_overlord = sino_jimi_state
+		same_overlord = jimi_state
+	}
+}
+
+burma_tusi = { #缅甸土邦
+	copy_from = default
+
+
+	upgrade_subject_type = yes
+
+	sprite = GFX_sawboa_state
+	diplomacy_overlord_sprite = GFX_sawboa_state_lead
+	diplomacy_subject_sprite = GFX_sawboa_state_amvassal
+	
+	# Triggers:
+
+	# Properties:
+	can_concentrate_development = no
+	can_be_co_belligerented = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_fight_independence_war = yes
+	can_be_annexed = yes #gaituguiliu
+	takes_diplo_slot = no
+	base_liberty_desire = -10
+	relative_power_class = 0
+	can_have_subjects_of_other_types = no
+	uses_military_focus = no
+	overlord_protects_external = yes
+	counts_for_borders = yes
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_set_mil_focus = no
+	has_colonial_parent = no
+	overlord_can_fabricate_for = yes
+	overlord_enforce_peace_attacking = yes
+	gets_help_with_rebels = no
+	has_power_projection = no
+	max_government_rank = 1
+	allows_taking_land_without_independence = no
+	
+	liberty_desire_development_ratio = 0.175
+	trust_on_start = 25
+
+	# Subject Interactions:
+	# (immediate)
+	enforce_religion = no
+	grant_core_claim = no
+	bestow_gifts = yes
+	placate_rulers = no
+	knowledge_sharing = yes
+	# (continuous)
+	embargo_rivals = yes
+	divert_trade= yes
+	subsidize_armies = yes
+
+	# Modifiers:
+	modifier_subject = {
+		modifier = burma_tusi_subject
+	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+
+	overlord_opinion_modifier = hf_is_bmtusi
+	subject_opinion_modifier = hf_is_bmtusi
+}
+
+captaincy_general_vassal = { #嘟嘟/军阀
+	copy_from = default
+
+	sprite = GFX_general
+	diplomacy_overlord_sprite = GFX_general
+	diplomacy_subject_sprite = GFX_general
+	
+	# Properties:
+	# testing
+	should_quit_wars_on_activation = yes
+	# testing
+	can_be_co_belligerented = no
+	can_have_subjects_of_other_types = yes
+	has_power_projection = yes
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = no
+	has_colonial_parent = no
+	counts_for_borders = yes
+	overlord_can_attack = yes
+	overlord_enforce_peace_attacking = no
+	gives_daimyo_bonuses = yes
+	max_government_rank = 1
+	joins_overlords_wars = no
+	relative_power_class = 2
+	overlord_protects_external = no
+	can_send_missionary_to_subject = yes
+	place_relative_on_throne = yes
+
+	trust_on_start = 10
+	
+	base_liberty_desire = 20
+	military_focus = 1.2
+
+	can_fight = {
+		independent_nations = yes
+		same_overlord = captaincy_general_vassal
+	}
+	can_rival = {
+		same_overlord = captaincy_general_vassal
+	}
+	can_ally = {
+		same_overlord = captaincy_general_vassal
+	}
+	can_marry = {
+		same_overlord = captaincy_general_vassal
+	}
+	
+	# Subject Interactions
+	#(disable)
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	#(enable)
+	contribute_to_capital = no
+	conscript_general = no
+	overlord_opinion_modifier = hf_is_general
+	subject_opinion_modifier = hf_is_general
+	divert_trade = yes
+	
+	# Modifiers
+
+	modifier_subject = {
+		modifier = captaincy_general_vassal_subject
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	
+}
+protectorate_march = { #都护
+	copy_from = vassal
+
+	upgrade_subject_type = yes
+
+	# Graphics:
+	sprite = GFX_duhu
+	diplomacy_overlord_sprite = GFX_duhu
+	diplomacy_subject_sprite = GFX_duhu
+	can_be_co_belligerented = no
+	can_send_tribute = no
+	overlord_protects_external = yes
+	takes_diplo_slot = no
+	can_be_annexed = yes
+	has_colonial_parent = no
+	has_power_projection = yes
+	gets_help_with_rebels = yes
+	counts_for_borders = yes
+	conscript_general = yes
+	can_send_missionary_to_subject = yes
+	can_use_claims = yes
+	max_government_rank = 2
+	relative_power_class = 0
+ 	allows_taking_land_without_independence = no
+ 	extend_trading_range = yes
+ 	cities_required_for_bonuses = 10
+ 	trust_on_start = 200
+
+	replace_governor = yes
+	seize_territory = yes
+	contribute_to_capital = yes
+	grant_core_claim = yes
+	customize_subject = no
+	enforce_culture = yes
+	place_relative_on_throne = yes
+
+	base_liberty_desire = -20
+	liberty_desire_revolution = 0
+	can_fight = {
+	}
+	can_rival = {
+	}
+	can_ally = {
+	}
+	can_marry = {
+	}
+	modifier_subject = {
+		modifier = protectorate_march_subject
+	}
+	modifier_overlord = {
+		modifier = protectorate_march_overlord
+	}
+	overlord_opinion_modifier = hf_is_duhu
+	subject_opinion_modifier = hf_is_duhu
+	divert_trade = yes
+
+}
+prince_vassal = { #藩王
+	copy_from = default
+	can_have_great_projects_moved_by_overlord = no
+
+	sprite = GFX_icon_prince_vassal
+	diplomacy_overlord_sprite = GFX_icon_prince_vassal
+	diplomacy_subject_sprite = GFX_icon_prince_vassal
+	can_be_co_belligerented = yes
+	takes_diplo_slot = no
+	max_government_rank = 1
+	can_send_missionary_to_subject = yes
+	place_relative_on_throne = yes
+	base_liberty_desire = -10
+	relative_power_class = 0
+	counts_for_borders = yes
+	enforce_culture = yes
+	modifier_subject = {
+		modifier = prince_vassal_subject
+	}
+	modifier_overlord = {
+		modifier = prince_vassal_overlord
+	}
+	overlord_opinion_modifier = hf_is_prince
+	subject_opinion_modifier = hf_is_prince
+	divert_trade = yes
+}
+
+mongolian_tribe = { #部众
+	copy_from = default
+	replace_governor = yes
+	upgrade_subject_type = yes
+	can_send_missionary_to_subject = yes
+	place_relative_on_throne = yes
+	
+	sprite = GFX_icon_diplomacy_mongolian_tribe
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_mongolian_tribe_lead
+	diplomacy_subject_sprite = GFX_icon_diplomacy_mongolian_tribe_amvasasl
+
+	
+	max_government_rank = 1
+	base_liberty_desire = 10
+	liberty_desire_development_ratio = 0.1
+	liberty_desire_negative_prestige = 1
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = no
+	counts_for_borders = yes
+	gives_daimyo_bonuses = yes
+	gets_help_with_rebels = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = yes
+	forms_trade_companies = no
+	can_concentrate_development = no
+	overlord_protects_external = yes 
+	can_be_annexed = yes
+	
+	can_fight = {
+		independent_nations = yes 
+		same_overlord = mongolian_tribe
+		same_overlord = tributary_state
+	}
+	can_rival = {
+		same_overlord = mongolian_tribe
+		same_overlord = tributary_state
+	}
+	can_ally = {
+		same_overlord = mongolian_tribe
+		same_overlord = tributary_state
+	}
+	can_marry = {
+		same_overlord = mongolian_tribe
+		same_overlord = tributary_state
+	}
+
+	# Subject Interactions:
+	# (immediate)
+	#place_relative_on_throne = yes
+	seize_territory = yes
+	contribute_to_capital = yes
+	enforce_religion = yes
+	grant_province = yes
+	grant_core_claim = yes
+	bestow_gifts = yes
+	send_additional_troops = yes
+	placate_rulers = no
+	knowledge_sharing = no
+	conscript_general = yes
+	# (continuous)
+	embargo_rivals = no
+	divert_trade = yes
+	#divert_trade= yes
+
+	modifier_subject = {
+		modifier = mongolian_tribe_subject
+	}
+	modifier_overlord = {
+		modifier = mongolian_tribe_overlord
+	}
+	overlord_opinion_modifier = hf_is_tribe
+	subject_opinion_modifier = hf_is_tribe
+}
+
+#supervision_state = {
+	#	copy_from = default
+	#	# Graphics:
+	#	sprite = GFX_icon_vassal
+	#	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal
+	#	diplomacy_subject_sprite = GFX_diplomacy_amvassal
+	#	can_be_annexed = vassal_nation
+	#	max_government_rank = 2
+	#	has_colonial_parent = no
+	#	liberty_desire_development_ratio = 0
+	#	relative_power_class = 3
+	#	base_liberty_desire = -9999
+	#	can_fight_independence_war = no
+	#	trust_on_start = 200
+#}
+
+sister_vassal = {
+	copy_from = vassal
+	sprite = GFX_icon_diplomacy_fr_client
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_fr_client
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_fr_client
+	# testing
+	should_quit_wars_on_activation = yes
+	can_be_co_belligerented = yes
+	divert_trade = yes
+	# testing
+}
+autonomy_province = {
+	copy_from = vassal
+	has_colonial_parent = no
+	takes_diplo_slot = no
+	counts_for_borders = yes
+	can_be_co_belligerented = yes
+	replace_governor = no
+	can_send_missionary_to_subject = yes
+	relative_power_class = 1
+	#	modifier_subject = {
+	#		modifier = protectorate_march_subject
+	#	}
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	overlord_opinion_modifier = hf_is_auto
+	subject_opinion_modifier = hf_is_auto
+	divert_trade = yes
+	
+}
+fief_subject = {
+	copy_from = vassal
+
+	sprite = GFX_fief_subject
+	diplomacy_overlord_sprite = GFX_fief_subject_lead
+	diplomacy_subject_sprite = GFX_fief_subject_amvassal
+	joins_overlords_wars = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	forms_trade_companies = no
+	takes_diplo_slot = no
+	can_be_co_belligerented = yes
+	must_accept_cta_from_overlord = yes
+	opinion_cost_instead_of_favors_cost = yes
+	opinion_cost_to_join_offensive_wars = 40
+	opinion_cost_to_join_defensive_wars = 20
+	opinion_on_subject_integration = 0
+	counts_for_borders = yes
+	replace_governor = no
+	can_send_missionary_to_subject = yes
+	overlord_can_be_subject = yes
+	joins_overlords_wars = yes
+	can_have_subjects_of_other_types = yes
+	overlord_protects_external = yes
+	can_use_claims = yes
+	can_be_annexed = yes
+
+	support_loyalists = yes
+	place_relative_on_throne = yes
+	can_fight = {
+		independent_nations = yes 
+		same_overlord = fief_subject
+	}
+	can_rival = {
+		same_overlord = fief_subject
+	}
+	can_ally = {
+		same_overlord = fief_subject
+	}
+	can_marry = {
+		same_overlord = fief_subject
+	}
+	divert_trade = yes
+}

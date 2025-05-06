@@ -2,96 +2,122 @@
 # Scripts | script.txt | Just general things to run
 ##########################################################################
 
-
-
-
-# ======================================= This run only ==================
-# Marry all christians
-every_known_country = {
-    limit = {
-        OR = {
-            # religion = catholic
-            # religion = orthodox
-            # religion = coptic
-            # religion = protestant
-            # religion = reformed
-
-            religion_group = christian
-        }
-    }
-    ROOT = {
-        create_marriage = PREV
-        add_legitimacy = 2
-    }
-}
-
-every_owned_province = {
-    add_province_modifier = {
-        name = allow_banners_capital_modifier
-        duration = -1
-    } 
-}
-
-# Rename countries
+log = "==============================="
 ROOT = {
-    override_country_name = "Imperium Romanum"
-}
-PLC = {
-    override_country_name = "Commonwealth"
+    add_favors = {
+        who = LIT
+        amount = 100
+    }
+    LIT = {
+        grant_independence = yes
+        create_alliance = ROOT
+    }
 }
 
-# every_province = {
+create_advisor = hf_officer_of_appease
+
+# Names
+ROOT = {
+    ROOT = {
+        override_country_name = "Golden Mongol Horde"
+    }
+	# Subtribes
+    KHA = {
+        override_country_name = "Mongolian Horde"
+    }
+}
+
+# Frontiers
+random_owned_province = {
+    limit = {
+        is_city = yes
+        OR = {
+            fort_level = 2
+            trade_share = {
+                country = ROOT
+                share = 50
+            }
+        }
+        owner = { treasury = 150 }
+        any_empty_neighbor_province = {
+            is_empty = yes
+            has_discovered = ROOT
+        }					
+    }
+    random_empty_neighbor_province = {
+        limit = {
+            is_empty = yes
+        }
+        if = {
+            limit = {
+                NOT = { has_province_flag = hf_prov_native_num }
+            }
+            set_province_flag = hf_prov_native_num
+            change_native_size = 60
+        }
+        add_siberian_construction = 100
+        owner = { add_treasury = -150 }
+    }
+    owner = { set_country_flag = hf_empty_proceed }
+}
+random_owned_province = {
+    limit = {
+        owner = {
+            NOT = { has_country_flag = hf_empty_proceed }
+        }
+        is_city = yes
+        owner = { treasury = 150 }
+        any_empty_neighbor_province = {
+            is_empty = yes
+            has_discovered = ROOT
+        }					
+    }
+    owner = { add_treasury = -150 }
+    random_empty_neighbor_province = {
+        limit = {
+            is_empty = yes
+        }
+        if = {
+            limit = {
+                NOT = { has_province_flag = hf_prov_native_num }
+            }
+            set_province_flag = hf_prov_native_num
+            change_native_size = 60
+        }
+        add_siberian_construction = 100
+    }
+}
+
+# Remove foreign cores on us
+# every_country = {
 #     limit = {
-#         OR = {
-#             culture_group = iberian
-#             # culture = greek
-#         }
 #         NOT = {
 #             OR = {
-#                 owned_by = ROOT
-
+#                 tag = GOL
+#                 tag = GLH
+#                 scope = ROOT
 #             }
 #         }
 #     }
-
-#     export_to_variable = {
-#         variable_name = prov_culture
-#         value = culture
+#     save_event_target_as = foreign_country
+#     ROOT = {
+#         every_owned_province = {
+#             remove_core = event_target:foreign_country
+#         }
 #     }
-
-#     log = "Unowned province [This.GetName] is in [prov_culture.GetValue]"
 # }
 
+# ======================================= This run only ==================
 
 
-
-every_owned_province = {
-    limit = {
-        province_has_center_of_trade_of_level = 1
-    }
-    add_province_modifier = {
-        name = province_trade_power_modifier_cheat
-        duration = -1
-    }
+add_country_modifier = {
+    name = hf_city_massacre
+    duration = -1
 }
-
-every_subject_country = {
-    every_owned_province = {
-        limit = {
-            province_has_center_of_trade_of_level = 1
-        }
-        add_province_modifier = {
-            name = province_trade_power_modifier_cheat
-            duration = -1
-        }
-    }
-}
-
 
 ##########################################################################
 # Colonization
 ##########################################################################
-
 # ROOT = {  
 #     set_variable = {
 #         which = colonyCounter
@@ -160,7 +186,7 @@ ROOT = {
     # restore_country_color = yes
 
     change_country_color = {
-        color = { 149 45 102 } # Vanilla byzantine
+        color = { 255 180 0 } # Golden
     }
 
     # Cycling colors
@@ -224,14 +250,25 @@ ROOT = {
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = naval_march
-                is_subject_of_type = pirate_brotherhood_vassal
+                is_subject_of_type = vassal
             }
         }
         change_country_color = {
-            color = { 149 45 180 }
+            color = { 255 190 50 } # Golden
         }
     }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mongolian_tribe
+            }
+        }
+        change_country_color = {
+            color = { 255 180 0 } # Golden
+        }
+    }
+
     every_subject_country = {
         limit = {
             OR = {
@@ -239,30 +276,21 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 200 30 60 } 
+            color = { 255 150 0 } # Red Golden
         }
     }
+
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = defensive_march
+                is_subject_of_type = captaincy_general_vassal
             }
         }
         change_country_color = {
-            color = { 100 30 60 } 
+            color = { 255 170 50 } # Light Red Golden
         }
     }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = vassal
-                is_subject_of_type = puppet_state
-            }
-        }
-        change_country_color = {
-            color = { 170 90 130 }
-        }
-    }
+
     every_subject_country = {
         limit = {
             OR = {
@@ -270,89 +298,32 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 240 100 180 }
-        }
-    }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = roman_client_kingdom
-                is_subject_of_type = personal_union
-            }
-        }
-        change_country_color = {
-            color = { 200 100 180 }
-        }
-    }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = brother_kingdom
-            }
-        }
-        change_country_color = {
-            color = { 180 70 70 }
-        }
-    }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = protectorate
-            }
-        }
-        change_country_color = {
-            color = { 255 150 200 }
-        }
-    }
-    
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = fief_subject
-            }
-        }
-        change_country_color = {
-            color = { 250 90 150 }
+            color = { 255 210 90 } 
         }
     }
 
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = trade_outpost
+                is_subject_of_type = jimi_state
             }
         }
         change_country_color = {
-            color = { 255 180 220 }
+            color = { 255 200 50 } 
         }
     }
 
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = real_union_subject
-                is_subject_of_type = exarchate_subject
-                is_subject_of_type = administrative_region
-            }
-        }
-        change_country_color = {
-            color = { 149 45 102 } # Vanilla byzantine
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = hereditary_pronoia_subject_type
-                is_subject_of_type = pronoia_subject_type
-            }
-        }
-        change_country_color = {
-            color = { 160 55 110 }
-        }
-    }
-
-    
+    # every_subject_country = {
+    #     limit = {
+    #         OR = {
+    #             is_subject_of_type = naval_march
+    #             is_subject_of_type = pirate_brotherhood_vassal
+    #         }
+    #     }
+    #     change_country_color = {
+    #         color = { 149 45 180 }
+    #     }
+    # }
 }
 
 ##########################################################################
@@ -823,6 +794,10 @@ ROOT = {
     }
     add_country_modifier = { 
         name = hol_strict_control
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = master_of_mint_boost
         duration = -1  
     }
 
@@ -1405,211 +1380,219 @@ ROOT = {
         ROOT = {
             remove_country_modifier = si_scutage_unwilling_vassals
             remove_country_modifier = jason_vassal_income_minus_5_1
+            remove_country_modifier = jason_vassal_income_minus_5_2
             remove_country_modifier = jason_vassal_income_minus_1_1
             remove_country_modifier = jason_vassal_income_minus_1_2
             remove_country_modifier = jason_vassal_income_minus_1_3
             remove_country_modifier = jason_vassal_income_minus_1_4
             remove_country_modifier = jason_vassal_income_minus_10_1
 
-            add_country_modifier = {
-                name = jason_vassal_income_minus_5_1
-                duration = -1
-            }
-            add_country_modifier = {
-                name = jason_vassal_income_minus_5_2
-                duration = -1
-            }
             if = {
                 limit = {
-                    legitimacy = 100
+                    government = monarchy
                 }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_3
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_4
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_5
-                    duration = -1
-                }
-            }
-            else_if = {
-                limit = {
-                    legitimacy = 90
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_3
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_4
-                    duration = -1
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            }
-            else_if = {
-                limit = {
-                    legitimacy = 80
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_3
-                    duration = -1
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            }
-            else_if = {
-                limit = {
-                    legitimacy = 70
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
-                    duration = -1
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_3
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            }
-            else_if = {
-                limit = {
-                    legitimacy = 60
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_2
-                remove_country_modifier = jason_vassal_income_minus_1_3
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            } 
-            else_if = {
-                limit = {
-                    legitimacy = 50
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_1
-                remove_country_modifier = jason_vassal_income_minus_1_2
-                remove_country_modifier = jason_vassal_income_minus_1_3
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            } 
-            else_if = {
-                limit = {
-                    legitimacy = 40
-                }
-                remove_country_modifier = jason_vassal_income_minus_5_2
+                
 
                 add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
+                    name = jason_vassal_income_minus_5_1
                     duration = -1
                 }
                 add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
+                    name = jason_vassal_income_minus_5_2
                     duration = -1
                 }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_3
-                    duration = -1
+                if = {
+                    limit = {
+                        legitimacy = 100
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_4
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_5
+                        duration = -1
+                    }
                 }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_4
-                    duration = -1
+                else_if = {
+                    limit = {
+                        legitimacy = 90
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_4
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_5
                 }
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            } 
-            else_if = {
-                limit = {
-                    legitimacy = 30
+                else_if = {
+                    limit = {
+                        legitimacy = 80
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
                 }
-                remove_country_modifier = jason_vassal_income_minus_5_2
+                else_if = {
+                    limit = {
+                        legitimacy = 70
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                }
+                else_if = {
+                    limit = {
+                        legitimacy = 60
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 50
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_1
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 40
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
 
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_3
-                    duration = -1
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            } 
-            else_if = {
-                limit = {
-                    legitimacy = 20
-                }
-                remove_country_modifier = jason_vassal_income_minus_5_2
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_4
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 30
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
 
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_2
-                    duration = -1
-                }
-                remove_country_modifier = jason_vassal_income_minus_1_3
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            } 
-            else_if = {
-                limit = {
-                    legitimacy = 10
-                }
-                remove_country_modifier = jason_vassal_income_minus_5_2
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 20
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
 
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_1_1
-                    duration = -1
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 10
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else {
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+                    remove_country_modifier = jason_vassal_income_minus_1_1
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                    remove_country_modifier = jason_vassal_income_minus_5_1
                 }
-                remove_country_modifier = jason_vassal_income_minus_1_2
-                remove_country_modifier = jason_vassal_income_minus_1_3
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-            } 
-            else {
-                remove_country_modifier = jason_vassal_income_minus_5_2
-                remove_country_modifier = jason_vassal_income_minus_1_1
-                remove_country_modifier = jason_vassal_income_minus_1_2
-                remove_country_modifier = jason_vassal_income_minus_1_3
-                remove_country_modifier = jason_vassal_income_minus_1_4
-                remove_country_modifier = jason_vassal_income_minus_1_5
-                remove_country_modifier = jason_vassal_income_minus_5_1
             }
         }
     }
@@ -2396,3 +2379,21 @@ ROOT = {
     }
 }
 add_treasury = 1
+
+
+##########################################################################
+# Enabling Estates | parliament.txt
+##########################################################################
+if = {
+    limit = {
+        NOT = {
+            OR = {
+                tag = NHS
+                tag = ELY
+            }
+        }
+    }
+    set_country_flag = enables_estate_burghers_flag
+    set_country_flag = enables_estate_church_flag
+}
+
