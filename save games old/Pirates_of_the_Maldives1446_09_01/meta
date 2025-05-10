@@ -1,0 +1,265 @@
+EU4txt
+date=1446.9.1
+save_game=".eu4"
+player="D00"
+country_colors={
+	flag=38
+	color=5
+	symbol_index=22
+	flag_colors={
+		16 14 12 
+	}
+}
+displayed_country_name="Pirates of the Maldives"
+savegame_version={
+	first=1
+	second=33
+	third=3
+	forth=0
+	name="France"
+}
+savegame_versions={
+	"1.33.3.0"
+}
+dlc_enabled={
+	"Conquest of Paradise"
+	"Wealth of Nations"
+	"Res Publica"
+	"Art of War"
+	"El Dorado"
+	"Common Sense"
+	"The Cossacks"
+	"Mare Nostrum"
+	"Rights of Man"
+	"Mandate of Heaven"
+	"Third Rome"
+	"Cradle of Civilization"
+	"Rule Britannia"
+	"Dharma"
+	"Golden Century"
+	"Emperor"
+	"Leviathan"
+	"Origins"
+}
+mods_enabled_names={
+	{
+		filename="mod/ugc_686284192.mod"
+		name="Buy a Province"
+	}
+ {
+		filename="mod/ugc_1736651173.mod"
+		name="More Diplomats"
+	}
+ {
+		filename="mod/ugc_947749925.mod"
+		name="Uber Custom Nations"
+	}
+ {
+		filename="mod/ugc_1546826435.mod"
+		name="Higher Diplomatic Relations Limit Remastered"
+	}
+ {
+		filename="mod/ugc_1596815683.mod"
+		name="Governments Expanded"
+	}
+ {
+		filename="mod/ugc_1994447693.mod"
+		name="Best Unit Type+"
+	}
+ {
+		filename="mod/ugc_1999969598.mod"
+		name="Cmushi's Simpler Terms Mod [Updated]"
+	}
+ {
+		filename="mod/ugc_2338729472.mod"
+		name="Missions for Custom Nations"
+	}
+ {
+		filename="mod/ugc_2129713984.mod"
+		name="Banners 4.0"
+	}
+ {
+		filename="mod/ugc_2185445645.mod"
+		name="Flavour and Events Expanded"
+	}
+ {
+		filename="mod/ugc_2016264376.mod"
+		name="The Great Exhibition"
+	}
+ {
+		filename="mod/ugc_2136257369.mod"
+		name="Ze Great Kaiser's Cheat Menu (Reupload)"
+	}
+ {
+		filename="mod/ugc_716527938.mod"
+		name="Buy Building Slots"
+	}
+ {
+		filename="mod/ugc_2128766791.mod"
+		name="Idea Groups Expanded 1.33"
+	}
+ {
+		filename="mod/ugc_1834079712.mod"
+		name="Subjects Expanded"
+	}
+ {
+		filename="mod/ugc_2141678271.mod"
+		name="Advisors Expanded 1.33"
+	}
+ {
+		filename="mod/ugc_2372292648.mod"
+		name="Flavor Universalis"
+	}
+ {
+		filename="mod/ugc_1469605293.mod"
+		name="Ad Lucem"
+	}
+ {
+		filename="mod/ugc_2164202838.mod"
+		name="Missions Expanded"
+	}
+ {
+		filename="mod/ugc_782012869.mod"
+		name="Bigger Production UI V1.33"
+	}
+ {
+		filename="mod/+ HD Map Font - Trajan Pro.mod"
+		name="+ HD Map Font - Trajan Pro"
+	}
+ {
+		filename="mod/ugc_2291982168.mod"
+		name="UI a la Artemis"
+	}
+ {
+		filename="mod/ugc_2553303821.mod"
+		name="[1.33] More Policy Slots"
+	}
+ {
+		filename="mod/ugc_2615504872.mod"
+		name="Peace Treaties Expanded"
+	}
+ {
+		filename="mod/ugc_2618291312.mod"
+		name="More Curia Options"
+	}
+ {
+		filename="mod/ugc_2595181784.mod"
+		name="IDEA SLOTS+"
+	}
+ {
+		filename="mod/ugc_2554763672.mod"
+		name="Defender of faith for all religions"
+	}
+ {
+		filename="mod/ugc_1592328478.mod"
+		name="National Ideas Expanded"
+	}
+ {
+		filename="mod/ugc_1770950522.mod"
+		name="Trade Goods Expanded"
+	}
+ 
+}
+multi_player=no
+not_observer=yes
+campaign_id="2283ec3c-f5e5-493d-aa15-50fc8b5a9482"
+campaign_length=76
+campaign_stats={
+{
+		id=0
+		comparison=1
+		key="game_country"
+		selector="D00"
+		localization="D00"
+	}
+{
+		id=1
+		comparison=2
+		key="longest_reign"
+		localization="Kallada I"
+		value=1.000
+	}
+{
+		id=2
+		comparison=2
+		key="wars_won"
+	}
+{
+		id=3
+		comparison=2
+		key="wars_lost"
+	}
+{
+		id=4
+		comparison=2
+		key="army_kills"
+		sample_count=2
+	}
+{
+		id=5
+		comparison=2
+		key="army_losses"
+		sample_count=2
+	}
+{
+		id=6
+		comparison=2
+		key="navy_kills"
+		sample_count=2
+	}
+{
+		id=7
+		comparison=2
+		key="navy_losses"
+		sample_count=2
+	}
+{
+		id=8
+		comparison=2
+		key="countries_removed"
+	}
+{
+		id=9
+		comparison=2
+		key="provs_taken"
+	}
+{
+		id=10
+		comparison=2
+		key="provs_lost"
+	}
+{
+		id=11
+		comparison=0
+		key="leader_count"
+		value=2.000
+	}
+{
+		id=12
+		comparison=0
+		key="best_leader"
+		localization="§G§! ( 3£military_view_icon_fire£ / 5£military_view_icon_shock£ / 6£military_view_icon_maneuver£ / 1£military_view_icon_siege£)"
+		value=20.000
+	}
+{
+		id=13
+		comparison=1
+		key="religion"
+		selector="catholic"
+		localization="Catholic"
+	}
+{
+		id=14
+		comparison=2
+		key="best_prov"
+		localization="Maldives"
+		value=5.000
+	}
+{
+		id=15
+		comparison=2
+		key="disasters"
+	}
+}
+is_random_new_world=yes
+checksum="64ae41061eac4c19ee8856349f936900"

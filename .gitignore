@@ -8,10 +8,11 @@ Screenshots/
 logs/
 crashes/
 Anbennar/
-save\ games/
-save\ games\ old/
 playlists/
 playsets_backup/
 pops_filestorage/
 pdx_login_cache.txt
 launcher-v2.sqlite
+save\ games/
+continue_game.json
+*.sqlite

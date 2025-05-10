@@ -2,6 +2,27 @@
 # Scripts | script.txt | Just general things to run
 ##########################################################################
 
+TODO remove subject cores on me
+
+add_country_modifier = {
+    name = jason_mod_way_more_acc_cultures
+    duration = -1
+}
+
+every_subject_country = {
+    limit = {
+        is_subject_of_type = tributary_state
+        not = {
+            tag = LIT
+        }
+    }
+    ROOT = {
+        create_subject = {
+            subject_type = jimi_state
+            subject = PREV
+        }
+    }
+}
 
 
 
@@ -68,11 +89,40 @@ random_owned_province = {
 
 # ======================================= This run only ==================
 
+if = {
+	limit = {
+		OR = {
 
-add_country_modifier = {
-    name = hf_city_massacre
-    duration = -1
+			tag = GLH
+			tag = GOL
+			tag = OIR
+			tag = KHA
+			tag = MGE
+		}
+		NOT = { 	
+			has_leader_with = {
+				name = "Subutai The Great"
+				fire = 10
+				shock = 10
+				manuever = 10
+				siege = 5
+				trait = "dragon_tiger_general_personality"
+			}
+		}
+	}
+	
+	define_general = {
+		name = "Subutai The Great"
+		shock = 10
+		fire = 10
+		manuever = 10
+		siege = 5
+		trait = "dragon_tiger_general_personality"
+	}
 }
+
+
+
 
 ##########################################################################
 # Colonization
@@ -300,12 +350,17 @@ ROOT = {
 # Names
 ROOT = {
     ROOT = {
-        override_country_name = "Khaganate of The Golden Horde"
+        override_country_name = "Great Mongol Empire"
     }
 	# Subtribes
     # Major Subtribes
     KHA = {
         override_country_name = "Mongolian Khanate"
+        change_government = tribal
+        add_government_reform = steppe_horde
+    }
+    MCH = {
+        override_country_name = "Manchu Khanate"
         change_government = tribal
         add_government_reform = steppe_horde
     }
@@ -356,9 +411,9 @@ ROOT = {
     }
 
     # Marches | Legion States. Legions were military units of 10000 men. These are heavily militarized subject states, together they make up many of the inummerable "Immortal Bows of the Khaganate".
-    # CIR = {
-    #     override_country_name = "Caucasian Tumen Üls"
-    # }
+    KOR = {
+        override_country_name = "Joseon Tumen Üls"
+    }
 
     # Defensive Marches | Zakh means borderlands, erhaps Khyazgaar Uls? Meaning border state. These are heavily fortified borderland subject states, together they make up many of the inummerable "Immortal Shields of the Khaganate".
     # ORM = {
@@ -375,7 +430,10 @@ ROOT = {
 
     # Cliques | Bülüüg means clique
     XX1 = {
-        override_country_name = "Xi-Xia Buluug"
+        override_country_name = "Xi-Xia Sino-Buluug"
+    }
+    MNG = {
+        override_country_name = "Ming Sino-Buluug"
     }
 
     # Vassals | Kharya'at Uls means directly controlled subject state
@@ -405,10 +463,30 @@ ROOT = {
     FEO = {
         override_country_name = "East Gothic Orsun Uls"
     }
+    ALH = {
+        override_country_name = "Haasan Orsun Uls"
+    }
+    YAS = {
+        override_country_name = "Yassite Orsun Uls"
+    }
+    MLW = {
+        override_country_name = "Malwi Orsun Uls"
+    }
+    GUG = {
+        override_country_name = "Guge Orsun Uls"
+    }
+    LDK = {
+        override_country_name = "Ladakhi Orsun Uls"
+    }
 
     # Pirates
     GOT = {
-        override_country_name = "Pirates of Gotland"
+        override_country_name = "Raiders of Gotland"
+    }
+
+    # Naval Marches
+    ORM = {
+        override_country_name = "Hormuz Naval Horde"
     }
 }
 
@@ -1314,7 +1392,6 @@ ROOT = {
 # Subject Benefits / Subject Type Fixes  
 ##########################################################################
 
-
 ROOT = {
     # Annex consequences
     ROOT = {
@@ -1837,15 +1914,17 @@ ROOT = {
 # Reduce Gold Depletion Chance
 ##########################################################################
 
-add_country_modifier = { 
-    name = gold_depletion_cheat
-    duration = -1  
-}
-
-every_subject_country = {
+ROOT = {
     add_country_modifier = { 
         name = gold_depletion_cheat
         duration = -1  
+    }
+
+    every_subject_country = {
+        add_country_modifier = { 
+            name = gold_depletion_cheat
+            duration = -1  
+        }
     }
 }
 
@@ -1915,13 +1994,41 @@ every_subject_country = {
     }
 }
 
+##########################################################################
+# Creating Homeguard Generals
+##########################################################################
+
+# TODO add restriction for num provinces?
+if = {
+	limit = {
+		NOT = { 	
+			has_leader_with = {
+				name = "Homeguard General"
+                shock = 666
+                fire = 666
+                manuever = 666666
+                siege = 666
+			}
+		}
+	}
+	
+    define_general = {
+        name = "Homeguard General"
+        shock = 666
+        fire = 666
+        manuever = 666666
+        siege = 666
+        trait = "siege_specialist_personality"
+    }
+}
+
+
 
 ##########################################################################
 # Build Times
 ##########################################################################
 
-
-every_subject_country = {
+ROOT = {
     add_country_modifier = { 
         name = jason_mod_lessTime
         duration = -1  
@@ -1931,6 +2038,18 @@ every_subject_country = {
         name = jason_global_more_building_slots
         duration = -1
     }
+
+    every_subject_country = {
+        add_country_modifier = { 
+            name = jason_mod_lessTime
+            duration = -1  
+        }
+
+        add_country_modifier = {
+            name = jason_global_more_building_slots
+            duration = -1
+        }
+    }
 }
 
 
@@ -1938,19 +2057,10 @@ every_subject_country = {
 # Supply and Building Slots
 ##########################################################################
 
-
-# For ROOT this is being added in cheats.txt
 ROOT = {
-    if = {
-        limit = {
-            NOT = {
-                has_country_modifier = jason_global_more_building_slots
-            }
-        }
-        add_country_modifier = {
-            name = jason_global_more_building_slots
-            duration = -1
-        }
+    add_country_modifier = {
+        name = jason_global_more_building_slots
+        duration = -1
     }
 
     every_subject_country = {
@@ -2253,7 +2363,6 @@ ROOT = {
             change_religion = ROOT  
         }
     }
-    add_treasury=1
 }
 
 ##########################################################################
@@ -2286,7 +2395,6 @@ ROOT = {
         }
         change_religion = ROOT
     }
-
 
     every_subject_country = {
         ROOT = {
@@ -2427,45 +2535,35 @@ ROOT = {
     }
 }
 
-
 ##########################################################################
-# Adding Provinces to Parliament | parliament.txt
+# Adding Provinces to Parliament + Acceptance Chance | parliament.txt
 ##########################################################################
 
 ROOT = {
     add_country_modifier = { 
         name = bill_of_rights_parliament
         duration = -1  
-        desc = master_of_southern_india:0
-        hidden = no
     }
 
     add_country_modifier = { 
         name = gbr_pax_britannica
         duration = -1  
-        desc = master_of_southern_india:0
-        hidden = no
     }
 
     add_country_modifier = { 
         name = ave_pax_angevina
         duration = -1  
-        desc = master_of_southern_india:0
-        hidden = no
     }
 
     add_country_modifier = { 
         name = eng_the_two_houses
         duration = -1  
-        desc = master_of_southern_india:0
-        hidden = no
     }
 
     every_owned_province = {
         set_seat_in_parliament = yes
     }
 }
-add_treasury = 1
 
 
 ##########################################################################
@@ -2505,7 +2603,7 @@ if = {
             type = commandant
             skill = 5
         }
-    } else if = {
+    } else_fif = {
         limit = {
             current_income_balance = 100
         }
@@ -2521,4 +2619,26 @@ if = {
             skill = 1
         }
     }
+}
+
+if = {
+    limit = {
+        NOT = {
+            employed_advisor = {
+                category = ADM
+                type = natural_scientist
+            }
+        }
+    }
+    if = {
+        limit = {
+            current_income_balance = 200
+            # is_year = 1500 
+        }
+        add_treasury = -400
+        hire_advisor = {
+            type = natural_scientist
+            skill = 5
+        }
+    } 
 }

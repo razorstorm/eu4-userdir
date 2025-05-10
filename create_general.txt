@@ -6,6 +6,17 @@ if = {
 			tag = GOL
 			tag = OIR
 			tag = KHA
+			tag = MGE
+		}
+		NOT = { 	
+			has_leader_with = {
+				name = "Subutai The Great"
+				fire = 10
+				shock = 10
+				manuever = 10
+				siege = 5
+				trait = "dragon_tiger_general_personality"
+			}
 		}
 	}
 	

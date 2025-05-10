@@ -1165,6 +1165,20 @@ MNG = {
 }
 
 
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = tributary_state
+        }
+        ROOT = {
+            create_subject = {
+                subject_type = jimi_state
+                subject = PREV
+            }
+        }
+    }
+
+
+
 every_owned_province = {
     limit = {
         province_has_center_of_trade_of_level = 1
