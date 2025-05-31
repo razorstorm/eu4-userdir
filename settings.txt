@@ -28,7 +28,7 @@ scroll_speed=5.000000
 camera_rotation_speed=50.000000
 zoom_speed=50.000000
 mouse_speed=50.000000
-master_volume=11.000000
+master_volume=19.277107
 ambient_volume=0.000000
 dev_master_volume=75.000000
 graceful_exit=no
@@ -68,7 +68,7 @@ compress_autosave=no
 compress_saves=no
 difficulty="LUCK_NONE"
 outliner={
-	16 20 14 4 12 8 7 15 3 2 5 6 17 
+	16 20 14 4 12 15 3 2 7 5 17 6 
 }
 outliner_open=yes
 messagelist_open=yes
@@ -93,12 +93,13 @@ disabled_alert_names={
 	"can_upgrade_trade_centre"
 	"great_project_can_be_upgraded"
 	"alert_fervor"
+	"can_estate_interaction"
 }
 diplomacy_popup={
 	10 
 }
 primary_mapmode_names={
-	{ GFX_mapmode_terrain GFX_mapmode_religion GFX_mapmode_simple_terrain GFX_mapmode_devastation } { GFX_mapmode_political } { GFX_mapmode_trade GFX_mapmode_trade_goods } { GFX_mapmode_diplomatic GFX_mapmode_culture } { GFX_mapmode_institutions GFX_mapmode_rebel } { GFX_mapmode_states_territories GFX_mapmode_states_edicts GFX_mapmode_great_projects } { GFX_mapmode_tradevalue GFX_mapmode_piracy } { GFX_mapmode_empire GFX_mapmode_opinion } { GFX_mapmode_economical GFX_mapmode_dynasty } { GFX_mapmode_supplylimit GFX_mapmode_coalition } 
+	{ GFX_mapmode_terrain GFX_mapmode_religion GFX_mapmode_simple_terrain } { GFX_mapmode_political } { GFX_mapmode_trade GFX_mapmode_trade_goods } { GFX_mapmode_diplomatic GFX_mapmode_culture } { GFX_mapmode_institutions GFX_mapmode_rebel } { GFX_mapmode_states_territories GFX_mapmode_states_edicts GFX_mapmode_great_projects } { GFX_mapmode_tradevalue GFX_mapmode_piracy } { GFX_mapmode_empire GFX_mapmode_opinion } { GFX_mapmode_economical GFX_mapmode_dynasty } { GFX_mapmode_supplylimit GFX_mapmode_coalition } 
 }
 been_told_of_low_vram=no
 subscription_highlights=5

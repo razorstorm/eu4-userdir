@@ -117,6 +117,7 @@ if = {
                 tag = NHS
                 tag = ENG
                 tag = GBR
+                tag = ARL
             }
         }
     }
@@ -133,8 +134,25 @@ if = {
 }
 if = {
     limit = {
-        tag = ENG
-        tag = GBR
+        tag = ARL
+    }
+    define_ruler = {
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        name = "Ismail I"
+        fixed = yes
+    }
+}
+if = {
+    limit = {
+        OR = {
+            tag = ENG
+            tag = GBR
+        }
     }
     define_ruler = {
         dynasty = "Lancaster"
@@ -268,3 +286,31 @@ every_owned_province = {
     }
 }
 
+
+##########################################################################
+# Capital Metropolis
+##########################################################################
+
+capital_scope = {
+    set_base_tax = 20
+    set_base_production = 25
+    set_base_manpower = 15
+}
+
+
+##########################################################################
+# Tributary Power          
+##########################################################################
+add_country_modifier = {
+    name = mng_reformed_tributary_obligation_system_modifier
+    duration = -1
+}
+
+
+##########################################################################
+# Infinite generals | leaders.txt    
+##########################################################################
+add_country_modifier = { 
+    name = more_generals_cheat
+    duration = -1  
+}

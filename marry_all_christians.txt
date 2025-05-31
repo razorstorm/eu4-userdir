@@ -1,11 +1,11 @@
 every_country = {
     limit = {
         OR = {
-            # religion = catholic
-            # religion = orthodox
-            # religion = coptic
-            # religion = protestant
-            # religion = reformed
+            religion = catholic
+            religion = orthodox
+            religion = coptic
+            religion = protestant
+            religion = reformed
 
             religion_group = christian
         }

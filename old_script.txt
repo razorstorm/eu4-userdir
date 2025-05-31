@@ -719,6 +719,16 @@ ROOT = {
 }
 
 
+
+# Persian Rugs
+change_price = {
+    trade_goods = silk
+    key = PERSIA_SILK_MONOPOLIZATION
+    value = 1.5
+    duration = -1
+}
+
+
 change_national_focus = mil
 
 every_owned_province = {
@@ -4327,94 +4337,7 @@ K00 = {
 }
 
 
-##########################################################################
-# Names of Eyalets
-##########################################################################
 
-
-ROOT = {
-    DS6 = {
-        override_country_name = "Caliphal South Africa"
-    }
-    DW6 = {
-        override_country_name = "Caliphal West Africa"
-    }
-    BRZ = {
-        override_country_name = "Caliphal Brazil"
-    }
-    KIK = {
-        override_country_name = "Caliphal Central Africa"
-    }
-    K06 = {
-        override_country_name = "Caliphal Farmlands of Kyiv"
-    }
-    ADU = {
-        override_country_name = "Sultanate of Andalusia"
-    }
-    PRO = {
-        override_country_name = "Eyalet of Provence"
-    }
-    GOL = {
-        override_country_name = "Golden Sword Of The Caliph"
-    }
-    CIR = {
-        override_country_name = "Wall of the Faith"   
-    }
-    PER = {
-        override_country_name = "Sultanate of Persia"
-    }
-    VL1 = {
-        override_country_name = "Yemenese Sword of the South"
-    }
-    VL8 = {
-        override_country_name = "Eyalet of Tunis"
-    }
-    ALG = {
-        override_country_name = "Eyalet of Algiers"
-    }
-    MOR = {
-        override_country_name = "Eyalet of Morocco"
-    }
-    KZH = {
-        override_country_name = "Eyalet of Kazakh"
-    }
-    TI4 = {
-        override_country_name = "Eyalet of Samarqand"
-    }
-    ADA = {
-        override_country_name = "Pirate Emirate of Somalia"
-    }
-    KZ5 = {
-        override_country_name = "Eyalet of Kypshak"
-    }
-    GNV = {
-        override_country_name = "Timar of Geneva"
-    }
-    PAL = {
-        override_country_name = "Palatinate of the Rhine"
-    }
-    K07 = {
-        override_country_name = "Eyalet of Beyaz Rusya"
-    }
-    ANT = {
-        override_country_name = "March of Madagascar"
-    }
-    WLS = {
-        override_country_name = "Eyalet of Wales"
-    }
-    HUN = {
-        override_country_name = "Eyalet of Hungary"
-    }
-    LIT = {
-        override_country_name = "Eyalet of Lithuania"
-    }
-    POL = {
-        override_country_name = "Eyalet of Poland"
-    }
-    PSA = {
-        override_country_name = "Eyalet of Sumatra"
-    }
-}
 
 
 # Proportionally increase development:
@@ -4512,64 +4435,6 @@ every_owned_province = {
         name = allow_banners_capital_modifier
         duration = -1
     } 
-}
-
-
-# Naval March Upgrades
-
-2999 = {
-    # add_base_tax = 5
-    # add_base_production = 10
-    # add_base_manpower = 3
-
-    add_province_modifier = {
-        name = per_naval_command_modifier
-        duration = -1
-    }
-    add_province_modifier = {
-        name = devils_gate_modifier
-        duration = -1
-    }
-    add_province_modifier = {
-        name = important_natural_harbor
-        duration = -1
-    }
-    add_province_modifier = {
-        name = trade_post_modifier
-        duration = -1
-    }
-    add_province_modifier = {
-        name = venice_galley_conscription
-        duration = -1
-    }
-    add_province_modifier = {
-        name = expansion_of_the_shipbuilding_industry
-        duration = -1
-    }
-    add_province_modifier = {
-        name = per_naval_command_modifier
-        duration = -1
-    }
-    add_province_modifier = {
-        name = hsa_maritime_hegemon_modifier
-        duration = -1
-    }
-    add_province_modifier = {
-        name = tur_barbary_pirates
-        duration = -1
-    }
-    add_province_modifier = {
-        name = qng_presence_global_market_modifier
-        duration = -1
-    }
-    add_province_modifier = {
-        name = feo_lubeck
-        duration = -1
-    }
-    add_province_modifier = {
-        name = GER_wilhelmshaven_modifier
-        duration = -1
-    }
 }
 
 
@@ -4701,3 +4566,175 @@ every_province = {
 
 
 
+# Tariffs to max
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = dominion
+            is_subject_of_type = dominion_tc
+        }
+    }
+    change_primary_culture = ROOT
+    add_tariff_value = 100
+}
+
+
+
+
+# Concentration Camps
+
+BUL = {
+    remove_country_modifier = free_income_cheat
+    every_owned_province = {
+        change_trade_goods = slaves
+        add_province_modifier = {
+            name = no_production_cheat
+            duration = -1
+        }
+    }
+}
+
+
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = dominion
+            is_subject_of_type = dominion_tc
+        }
+    }
+    add_country_modifier = {
+        name = allow_frontiers_cheat
+        duration = -1
+    }
+}
+every_owned_province = {
+    limit = {
+        NOT = {
+            development = 50
+        }
+        is_city = yes
+        OR = {
+            region = maghreb_region
+            continent = europe
+        }
+    }
+    add_base_tax = 2
+    add_base_production = 3
+    add_base_manpower = 1
+}
+
+
+
+MOS = {
+    change_country_color = {
+        color = { 96  131  80 }
+    }
+}
+KOR = {
+    change_country_color = {
+        color = { 26  53  177 }
+    }
+}
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = dominion
+            is_subject_of_type = dominion_tc
+        }
+    }
+    change_primary_culture = ROOT
+    add_tariff_value = 100
+}
+
+
+# Setting gold
+every_province = {
+    limit = {
+        OR = {
+            province_id = 849
+            province_id = 2629
+            province_id = 4572
+            province_id = 2626
+            province_id = 2615
+            province_id = 4571
+            province_id = 2645
+            province_id = 852
+            province_id = 4570
+            province_id = 2877
+            province_id = 2863
+            province_id = 2770
+            province_id = 2002
+            province_id = 2865
+            province_id = 2866
+            province_id = 786
+            province_id = 2868
+            province_id = 775
+            province_id = 2878
+            province_id = 2854
+            province_id = 2834
+            province_id = 810
+            province_id = 2901
+            province_id = 2904
+            province_id = 2903
+            province_id = 2893
+            province_id = 2919
+            province_id = 758
+            province_id = 2905
+            province_id = 2908
+            province_id = 2891
+            province_id = 2860
+            province_id = 2915
+            province_id = 2925
+            province_id = 2911
+            province_id = 2853
+            province_id = 2935
+            province_id = 2934
+            province_id = 2889
+            province_id = 2930
+            province_id = 2859
+            province_id = 2946
+            province_id = 2873
+            province_id = 765
+            province_id = 2902
+            province_id = 799
+            province_id = 804
+            province_id = 795
+            province_id = 2941
+            province_id = 793
+            province_id = 2839
+            province_id = 791
+            province_id = 2841
+            province_id = 780
+            province_id = 792
+            province_id = 814
+            province_id = 2826
+            province_id = 812
+            province_id = 813
+            province_id = 2822
+            province_id = 2836
+            province_id = 2945
+            province_id = 815
+        } 
+    }
+    change_trade_goods = gold
+}
+
+
+
+# Remove foreign cores
+every_country = {
+    limit = {
+        NOT = {
+            # tag = PER
+            tag = ROOT
+        }
+    }
+    save_event_target_as = foreign_country
+    ROOT = {
+        every_owned_province = {
+            remove_core = event_target:foreign_country 
+            log = "Removing foreign cores from [This.GetName] for [event_target:foreign_country.GetName]"
+        }
+    }
+}

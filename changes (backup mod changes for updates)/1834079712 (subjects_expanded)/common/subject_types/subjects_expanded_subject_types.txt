@@ -8143,11 +8143,12 @@ viking_settlement = {
 
 	# Triggers:
 	is_potential_overlord = {
-		religion = norse_pagan_reformed
+		always = yes
 	}
 
 	# Properties:
-	uses_tariffs = no
+	uses_tariffs = yes
+	divert_trade = yes
 	can_release_in_peace = yes
 	joins_colonial_wars = yes
 	overlord_can_be_subject = yes
@@ -8202,8 +8203,8 @@ viking_settlement = {
 	}
 
 	# Subject Interactions:
-	increase_tariffs = no
-	decrease_tariffs = no
+	increase_tariffs = yes
+	decrease_tariffs = yes
 	replace_governor = no
 	support_loyalists = yes
 	press_sailors = yes

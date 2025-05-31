@@ -1,132 +1,59 @@
-##########################################################################
+####################################################################################
 # Scripts | script.txt | Just general things to run
-##########################################################################
+####################################################################################
+log = "===============================Running Prov.txt=========================================="
 
-TODO remove subject cores on me
 
+# change_price = {
+#     trade_goods = silk
+#     key = PERSIA_SILK_MONOPOLIZATION
+#     value = 1.5
+#     duration = -1
+# }
+
+# Remove foreign cores from every country: Very laggy so turned off by default. Turn to true if you want to run it.
+
+
+
+
+MNG = {
+    every_subject_country {
+        limit = {
+            is_subject_of_type = tributary
+        }
+
+        restore_country_color = yes
+    }
+    every_subject_country {
+        limit = {
+            NOT = {
+                is_subject_of_type = tributary
+            }
+        }
+
+        change_country_color = {
+            country = MNG
+        }
+    }
+}
+
+####################################################################################
+# Continuous things to run for this campaign + Global Flags
+####################################################################################
 add_country_modifier = {
-    name = jason_mod_way_more_acc_cultures
+    name = hf_city_massacre
     duration = -1
 }
 
-every_subject_country = {
-    limit = {
-        is_subject_of_type = tributary_state
-        not = {
-            tag = LIT
-        }
-    }
-    ROOT = {
-        create_subject = {
-            subject_type = jimi_state
-            subject = PREV
-        }
-    }
-}
+clr_country_flag = remove_foreign_cores_and_claims
+# Turn this on to remove foreign cores and claims from all countries
+# set_country_flag = remove_foreign_cores_and_claims
 
 
-
-# Frontiers
-random_owned_province = {
-    limit = {
-        is_city = yes
-        OR = {
-            fort_level = 2
-            trade_share = {
-                country = ROOT
-                share = 50
-            }
-        }
-        owner = { treasury = 150 }
-        any_empty_neighbor_province = {
-            is_empty = yes
-            has_discovered = ROOT
-        }					
-    }
-    random_empty_neighbor_province = {
-        limit = {
-            is_empty = yes
-        }
-        if = {
-            limit = {
-                NOT = { has_province_flag = hf_prov_native_num }
-            }
-            set_province_flag = hf_prov_native_num
-            change_native_size = 60
-        }
-        add_siberian_construction = 100
-        owner = { add_treasury = -150 }
-    }
-    owner = { set_country_flag = hf_empty_proceed }
-}
-random_owned_province = {
-    limit = {
-        owner = {
-            NOT = { has_country_flag = hf_empty_proceed }
-        }
-        is_city = yes
-        owner = { treasury = 150 }
-        any_empty_neighbor_province = {
-            is_empty = yes
-            has_discovered = ROOT
-        }					
-    }
-    owner = { add_treasury = -150 }
-    random_empty_neighbor_province = {
-        limit = {
-            is_empty = yes
-        }
-        if = {
-            limit = {
-                NOT = { has_province_flag = hf_prov_native_num }
-            }
-            set_province_flag = hf_prov_native_num
-            change_native_size = 60
-        }
-        add_siberian_construction = 100
-    }
-}
-
-# ======================================= This run only ==================
-
-if = {
-	limit = {
-		OR = {
-
-			tag = GLH
-			tag = GOL
-			tag = OIR
-			tag = KHA
-			tag = MGE
-		}
-		NOT = { 	
-			has_leader_with = {
-				name = "Subutai The Great"
-				fire = 10
-				shock = 10
-				manuever = 10
-				siege = 5
-				trait = "dragon_tiger_general_personality"
-			}
-		}
-	}
-	
-	define_general = {
-		name = "Subutai The Great"
-		shock = 10
-		fire = 10
-		manuever = 10
-		siege = 5
-		trait = "dragon_tiger_general_personality"
-	}
-}
-
-
-
-
-##########################################################################
+####################################################################################
 # Colonization
-##########################################################################
+####################################################################################
+
 # ROOT = {  
 #     set_variable = {
 #         which = colonyCounter
@@ -151,26 +78,20 @@ if = {
 #         log = "Loop iteration [colonyCounter.GetValue]"
 #         random_province = {
 #             limit = {
-#                 OR = {
-#                     continent = oceania
-#                     continent = africa
-#                     superregion = south_elysia_superregion
-#                     superregion = central_elysia_superregion
-#                     superregion = west_elysia_superregion
-#                     superregion = north_elysia_superregion
-#                     superregion = northeast_elysia_superregion
-#                     superregion = southeast_elysia_superregion
-#                     superregion = carribean_superregion
-#                     superregion = east_american_sea_superregion
-#                     superregion = south_elysia_superregion
+#                 # OR = {
+#                     # continent = oceania
+#                     # superregion = central_america_superregion
+#                     # continent = south_america
+#                 # }
+#                 NOT = {
+#                     OR = {
+#                         continent = north_america
+#                         continent = south_america
+#                     }
 #                 }
 #                 OR = {
 #                     is_island = yes
-#                     continent = oceania
-#                     and = {
-#                         continent = africa
-#                         has_port = yes
-#                     }
+#                     has_port = yes
 #                     is_neighbor_of = ROOT
 #                 }
 #                 is_empty = yes
@@ -184,78 +105,132 @@ if = {
 #     }
 # }
 
-##########################################################################
+
+
+####################################################################################
 # Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
-##########################################################################
+####################################################################################
+
 
 # Colors
 ROOT = {
+    QOM = {
+        change_country_color = {
+
+        }
+    }
     # every_subject_country = {
     #   restore_country_color = yes
     # } 
     # restore_country_color = yes
 
     change_country_color = {
-        color = { 255 180 0 } # Golden
+        # color = { 57 123 176 }
+        color = { 90 90 230 }
+    }
+    ORM = {
+        clr_country_flag = dominion_color_1
+        clr_country_flag = dominion_color_2
+        clr_country_flag = dominion_color_3
+
+        set_country_flag = dominion_color_2
+    }
+    OMA = {
+        clr_country_flag = dominion_color_1
+        clr_country_flag = dominion_color_2
+        clr_country_flag = dominion_color_3
+
+        set_country_flag = dominion_color_1
+    }
+    YEM = {
+        clr_country_flag = dominion_color_1
+        clr_country_flag = dominion_color_2
+        clr_country_flag = dominion_color_3
+
+        set_country_flag = dominion_color_3
     }
 
     # Cycling colors
-    # ROOT = {
-    #     every_subject_country = {
-    #         limit = {
-    #             OR = {
-    #                 is_subject_of_type = elysian_subject
-    #             }
-    #             NOT = {
-    #                 OR = {
-    #                     has_country_flag = elysian_subject_color_1
-    #                     has_country_flag = elysian_subject_color_2
-    #                     has_country_flag = elysian_subject_color_3
-    #                 }
-    #             }
-    #         }
-    #         random_list = {
-    #             33 = {
-    #                 set_country_flag = elysian_subject_color_1
-    #                 log = "Setting elysian_subject_color_1 to [This.GetName]"
-    #             }
-    #             33 = {
-    #                 set_country_flag = elysian_subject_color_2
-    #                 log = "Setting elysian_subject_color_2 to [This.GetName]"
-    #             }
-    #             33 = {
-    #                 set_country_flag = elysian_subject_color_3
-    #                 log = "Setting elysian_subject_color_3 to [This.GetName]"
-    #             }
-    #         }
-    #     }
+    ROOT = {
+        every_subject_country = {
+            limit = {
+                OR = {
+                    is_subject_of_type = persian_satrapy
+                }
+                NOT = {
+                    OR = {
+                        has_country_flag = dominion_color_1
+                        has_country_flag = dominion_color_2
+                        has_country_flag = dominion_color_3
+                    }
+                }
+            }
+            random_list = {
+                33 = {
+                    set_country_flag = dominion_color_1
+                    log = "Setting dominion_color_1 to [This.GetName]"
+                }
+                33 = {
+                    set_country_flag = dominion_color_2
+                    log = "Setting dominion_color_2 to [This.GetName]"
+                }
+                33 = {
+                    set_country_flag = dominion_color_3
+                    log = "Setting dominion_color_3 to [This.GetName]"
+                }
+            }
+        }
 
-    #     # ================== Finished setting flags, actually change colors now ===============================================
-    #     every_subject_country = {
-    #         limit = {
-    #             has_country_flag = elysian_subject_color_1
-    #         }
-    #         change_country_color = {
-    #             color = { 170 20 80 }
-    #         }
-    #     }
-    #     every_subject_country = {
-    #         limit = {
-    #             has_country_flag = elysian_subject_color_2
-    #         }
-    #         change_country_color = {
-    #             color = { 220 42 100 }
-    #         }
-    #     } 
-    #     every_subject_country = {
-    #         limit = {
-    #             has_country_flag = elysian_subject_color_3
-    #         }
-    #         change_country_color = {
-    #             color = { 255 62 120 }
-    #         }
-    #     }
-    # }
+        # ================== Finished setting flags, actually change colors now ===============================================
+        every_subject_country = {
+            limit = {
+                has_country_flag = dominion_color_1
+            }
+            change_country_color = {
+                # color = { 180 160 0 }
+                color = { 100 100 255 }
+            }
+        }
+        every_subject_country = {
+            limit = {
+                has_country_flag = dominion_color_2
+            }
+            change_country_color = {
+                color = { 110 110 250 }
+            }
+        } 
+        every_subject_country = {
+            limit = {
+                has_country_flag = dominion_color_3
+            }
+            change_country_color = {
+                color = { 120 120 240 }
+            }
+        }
+    }
+            
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tb_minister_resident
+            }
+        }
+        change_country_color = {
+            color = { 200 200 255 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = fief_subject
+                is_subject_of_type = iqta_vassal
+            }
+        }
+        change_country_color = {
+            color = { 115 115 170 }
+        }
+    }
 
     every_subject_country = {
         limit = {
@@ -264,18 +239,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 190 50 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = mongolian_tribe
-            }
-        }
-        change_country_color = {
-            color = { 255 180 0 } # Golden
+            color = { 130 130 210 }
         }
     }
 
@@ -286,7 +250,18 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 130 00 } 
+            color = { 160 60 220 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = pagan_chiefdom
+            }
+        }
+        change_country_color = {
+            color = { 110 90 150 }
         }
     }
 
@@ -297,21 +272,11 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 190 90 30 } # Red Golden
+            # color = { 160 60 220 }
+            color = { 120 30 180 }
         }
     }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = captaincy_general_vassal
-            }
-        }
-        change_country_color = {
-            color = { 255 170 50 } # Light Red Golden
-        }
-    }
-
+    
     every_subject_country = {
         limit = {
             OR = {
@@ -319,7 +284,8 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 210 90 } 
+            # color = { 160 60 220 }
+            color = { 130 130 245 }
         }
     }
 
@@ -330,10 +296,238 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 200 50 } 
+            # color = { 160 60 220 }
+            color = { 180 180 255 }
         }
     }
 
+}
+
+# Names
+ROOT = {
+    CIR = {
+        override_country_name = "North Caucasia"
+    }    
+    GEO = {
+        override_country_name = "South Caucasia"
+    }
+
+    # Satrapies
+    ORM = {
+        override_country_name = "Satrapy of East Arabia"
+    }
+    OMA = {
+        override_country_name = "Satrapy of Oman"
+    }
+    YEM = {
+        override_country_name = "Satrapy of Yemen"
+    }
+    KAR = {
+        override_country_name = "Satrapy of Karaman"
+    }
+    AST = {
+        override_country_name = "Satrapy of Astrakhan"
+    }
+
+    # tb_minister_resident
+    TIB = {
+        override_country_name = "Himalayan Autonomous Region"
+    }
+
+    # Pagan Chiefdoms (Hordes)
+    NOG = {
+        override_country_name = "Nogai Sub-Horde"
+    }
+    KZH = {
+        override_country_name = "Kazakh Sub-Horde"
+    }
+    SHY = {
+        override_country_name = "Uzbek Sub-Horde"
+    }
+
+    # Native Reservations
+    NAJ = {
+        override_country_name = "Arab Tribes"
+    }
+}
+
+
+# ======================================================================================================================================================================================= #
+###########################################################################################################################################################################################
+# GENERAL SCRIPTS                                                                                                                                                                         #
+###########################################################################################################################################################################################
+# ======================================================================================================================================================================================= #
+
+####################################################################################
+# Subject Benefits / Subject Type Fixes  
+####################################################################################
+
+ROOT = {
+    # Annex consequences
+    ROOT = {
+        remove_country_modifier = annexers_legacy
+    }
+
+    # Blocking all wars amongst subjects
+    every_subject_country = {
+        save_event_target_as = subject
+        ROOT = {
+            every_subject_country = {
+                white_peace = event_target:subject 
+                add_truce_with = event_target:subject 
+            }
+        }
+
+        remove_opinion = {
+            who = ROOT
+            modifier = opinion_annex_vassal
+        }
+    }
+
+    # Discover all subject lands
+    every_subject_country = {
+        every_owned_province = {
+            discover_country = ROOT
+        }
+    }
+
+    # Allow special vassal types
+    set_country_flag = release_invalid_pirate_brotherhoods
+    set_country_flag = release_invalid_native_reserves
+    set_country_flag = releasing_invalid_banking_family_clan
+    set_country_flag = releasing_invalid_sister_republics
+    set_country_flag = releasing_invalid_pagan_chiefdoms
+    set_country_flag = vassalizing_invalid_persian_satrapties
+
+    # Fixing Subtribes and pagan chiefdoms to actally be hordes
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mongolian_tribe
+                is_subject_of_type = pagan_chiefdom
+            }
+        }
+        change_government = tribal
+        add_government_reform = steppe_horde
+        # log = "[This.GetName] is a mongolian tribe"
+    }
+
+    # Force pirate brotherhoods to actually be pirate republics
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = pirate_brotherhood_vassal
+            NOT = {
+            has_reform = pirate_republic_reform
+            }
+        }
+        change_government = republic
+        add_government_reform = pirate_republic_reform
+    }
+
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = trade_outpost
+        }
+        # Allows trade outposts to have many provinces
+        set_country_flag = trade_outpost_annexed_province
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = banking_family_subject
+                is_subject_of_type = sister_republic
+            }
+            NOT = {
+                government = republic
+            }
+        }
+        change_government = republic
+    }
+
+    # Dominions should self colonize and get benefits
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+                AND = {
+                    is_subject_of_type = exarchate_subject
+                    tag = K03
+                }
+            }
+        }
+        # log = "Country is [This.GetName]"
+        add_treasury = 100000
+        add_country_modifier = {
+            name = ultra_free_income_cheat
+            duration = -1
+        }
+        add_country_modifier = {
+            name = colonize_the_continent
+            duration = -1
+        }
+        add_country_modifier = { 
+            name = spice_colony_modifier
+            duration = -1  
+        }
+        add_country_modifier = { 
+            name = cossack_settlers
+            duration = -1  
+        }
+        add_country_modifier = { 
+            name = sea_route_to_india
+            duration = -1  
+        }
+        add_country_modifier = { 
+            name = puritan_colonists
+            duration = -1  
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = concentration_camp
+                is_subject_of_type = revolution_subject
+            }
+
+        }
+        # Constant massacres
+        every_owned_province = {
+            add_nationalism = -10
+            add_devastation = 100
+            add_local_autonomy = -1
+            set_base_tax = 0
+            set_base_production = 0
+            set_base_manpower = 0
+            add_base_tax = -1
+            add_base_production = -1
+            add_base_manpower = -1
+            add_province_modifier = {
+                name = hf_prov_massacre
+                duration = -1
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = brother_kingdom
+                is_subject_of_type = personal_union
+                is_subject_of_type = se_integrated_personal_union
+                is_subject_of_type = real_union_subject
+                is_subject_of_type = administrative_region
+            }
+            NOT = {
+                government = monarchy
+            }
+        }
+        change_government = monarchy
+    }
+
+    # Naval march upgrades
     every_subject_country = {
         limit = {
             OR = {
@@ -341,158 +535,1179 @@ ROOT = {
                 is_subject_of_type = pirate_brotherhood_vassal
             }
         }
-        change_country_color = {
-            color = { 190 150 170 }
+        capital_scope = {
+            add_province_modifier = {
+                name = per_naval_command_modifier
+                duration = -1
+            }
+            add_province_modifier = {
+                name = devils_gate_modifier
+                duration = -1
+            }
+            add_province_modifier = {
+                name = important_natural_harbor
+                duration = -1
+            }
+            add_province_modifier = {
+                name = trade_post_modifier
+                duration = -1
+            }
+            add_province_modifier = {
+                name = venice_galley_conscription
+                duration = -1
+            }
+            add_province_modifier = {
+                name = expansion_of_the_shipbuilding_industry
+                duration = -1
+            }
+            add_province_modifier = {
+                name = hsa_maritime_hegemon_modifier
+                duration = -1
+            }
+            add_province_modifier = {
+                name = tur_barbary_pirates
+                duration = -1
+            }
+            add_province_modifier = {
+                name = qng_presence_global_market_modifier
+                duration = -1
+            }
+            add_province_modifier = {
+                name = feo_lubeck
+                duration = -1
+            }
+            add_province_modifier = {
+                name = GER_wilhelmshaven_modifier
+                duration = -1
+            }
+            add_province_modifier = {
+                name = jason_mod_more_forcelimit
+                duration = -1
+            }
+        }
+    }
+
+    # Every Subject Getting Free Income combined with no more vassal tax
+    ROOT = {
+        every_subject_country = {
+            limit = {
+                # NOT = {
+                #     is_subject_of_type = vassal
+                #     # is_subject_of_type = autonomous_vassal
+                #     # is_subject_of_type = semi_autonomous_vassal
+                #     # is_subject_of_type = non_autonomous_vassal
+                #     is_subject_of_type = dominion
+                #     is_subject_of_type = trade_outpost
+                #     is_subject_of_type = appanage
+                #     is_subject_of_type = fief_subject
+                #     is_subject_of_type = eyalet
+                #     is_subject_of_type = core_eyalet
+                #     # is_subject_of_type = mandala_trade_vassal
+                # }
+                NOT = {
+                    OR = {
+                        # Concentration camps / slave states
+                        is_subject_of_type = revolution_subject
+                        is_subject_of_type = concentration_camp
+                    }
+                }
+            }
+            add_country_modifier = {
+                name = free_income_cheat
+                duration = -1
+            }
+        }
+
+        # Ensuring 0% vassal income
+        ROOT = {
+            remove_country_modifier = si_scutage_unwilling_vassals
+            remove_country_modifier = jason_vassal_income_minus_5_1
+            remove_country_modifier = jason_vassal_income_minus_5_2
+            remove_country_modifier = jason_vassal_income_minus_1_1
+            remove_country_modifier = jason_vassal_income_minus_1_2
+            remove_country_modifier = jason_vassal_income_minus_1_3
+            remove_country_modifier = jason_vassal_income_minus_1_4
+
+            if = {
+                limit = {
+                    government = monarchy
+                }
+                
+
+                add_country_modifier = {
+                    name = jason_vassal_income_minus_5_1
+                    duration = -1
+                }
+                add_country_modifier = {
+                    name = jason_vassal_income_minus_5_2
+                    duration = -1
+                }
+                if = {
+                    limit = {
+                        legitimacy = 100
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_4
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_5
+                        duration = -1
+                    }
+                }
+                else_if = {
+                    limit = {
+                        legitimacy = 90
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_4
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                }
+                else_if = {
+                    limit = {
+                        legitimacy = 80
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                }
+                else_if = {
+                    limit = {
+                        legitimacy = 70
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                }
+                else_if = {
+                    limit = {
+                        legitimacy = 60
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 50
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_1
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 40
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_4
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 30
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_3
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 20
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_2
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else_if = {
+                    limit = {
+                        legitimacy = 10
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+
+                    add_country_modifier = {
+                        name = jason_vassal_income_minus_1_1
+                        duration = -1
+                    }
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                } 
+                else {
+                    remove_country_modifier = jason_vassal_income_minus_5_2
+                    remove_country_modifier = jason_vassal_income_minus_1_1
+                    remove_country_modifier = jason_vassal_income_minus_1_2
+                    remove_country_modifier = jason_vassal_income_minus_1_3
+                    remove_country_modifier = jason_vassal_income_minus_1_4
+                    remove_country_modifier = jason_vassal_income_minus_1_5
+                    remove_country_modifier = jason_vassal_income_minus_5_1
+                }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = pirate_brotherhood_vassal
+            }
+        }
+        add_country_modifier = {
+            name = hsa_maritime_hegemon_modifier
+            duration = -1
+        }
+        every_owned_province = {
+            add_province_modifier = {
+                name = GER_wilhelmshaven_modifier
+                duration = -1
+            }
+        }
+    }
+
+    # No autonomy
+    every_subject_country = {
+        remove_country_modifier = estate_burghers_guaranteed_autonomy_mod
+        every_owned_province = {
+            remove_province_modifier = estate_burghers_guaranteed_autonomy_mod
         }
     }
 }
 
-# Names
+####################################################################################
+# Updating Subject Loyalties | sub.txt
+####################################################################################
+
 ROOT = {
-    ROOT = {
-        override_country_name = "Great Mongol Empire"
-    }
-	# Subtribes
-    # Major Subtribes
-    KHA = {
-        override_country_name = "Mongolian Khanate"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    MCH = {
-        override_country_name = "Manchu Khanate"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    ZUN = {
-        override_country_name = "Dzungarian Khanate"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    # Subtribes
-    PRU = {
-        override_country_name = "Teutonic Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    KLK = {
-        override_country_name = "Khalka Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    AB1 = {
-        override_country_name = "Yeke Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
+    every_subject_country = {
+        limit = {
+            AND = {
+                NOT = {    
+                    or = {
+                        is_subject_of_type = muslim_tributary_vassal
+                        is_subject_of_type = self_governing_colony
+                        tag = ETH
+                        religion = jewish
+                    }
+                }
+            }
+        }
+        change_religion = ROOT
     }
 
-    # Subtribes to be annexed
-    NJZ = {
-        override_country_name = "Ningxia Core Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-    HHH = {
-        override_country_name = "Skewbald Core Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde    
-    }
-    SHC = {
-        override_country_name = "Sahalea Core Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
+    every_subject_country = {
+        limit = {
+            NOT = {
+                OR = {
+                    is_subject_of_type = concentration_camp
+                    is_subject_of_type = revolution_subject
+                }
+            }
+        }
+        ROOT = {
+            if = {
+                limit = {
+                    not = {
+                        marriage_with = PREV
+                    }
+                }
+                create_marriage = PREV
+                add_legitimacy = 5
+            }
+        }
+        add_legitimacy = 100
+        add_devotion = 100
+        add_horde_unity = 100
+        set_meritocracy = 100
+        add_republican_tradition = 100
+        add_trust = {
+            who = ROOT
+            value = 100
+            mutual = yes
+        }
+        # add_treasury = 100000
+
+        set_dynasty = ROOT
+        add_prestige = 100
+        add_stability = 3
+        add_corruption = -100
+        # change_primary_culture = ROOT
+        add_war_exhaustion = -100
+
+        every_owned_province = {
+            add_devastation = -100
+        }
+        
+        add_estate_loyalty = {
+            estate = estate_church
+            loyalty = 100
+        }
+        add_estate_loyalty = {
+            estate = estate_nobles
+            loyalty = 100
+        }
+        add_estate_loyalty = {
+            estate = estate_burghers
+            loyalty = 100
+        }
+        add_estate_loyalty = {
+            estate = estate_dhimmi
+            loyalty = 100
+        }
+        add_estate_loyalty = {
+            estate = estate_jains
+            loyalty = 100
+        }
     }
 
-    # Minor Subtribes 
-    SSB = {
-        override_country_name = "Sibe Minor Horde"
-        change_government = tribal
-        add_government_reform = steppe_horde
-    }
-
-    # Marches | Legion States. Legions were military units of 10000 men. These are heavily militarized subject states, together they make up many of the inummerable "Immortal Bows of the Khaganate".
-    KOR = {
-        override_country_name = "Joseon Tumen Üls"
-    }
-
-    # Defensive Marches | Zakh means borderlands, erhaps Khyazgaar Uls? Meaning border state. These are heavily fortified borderland subject states, together they make up many of the inummerable "Immortal Shields of the Khaganate".
-    # ORM = {
-    #     override_country_name = "Hormuz Zakh Uls"
-    CIR = {
-        override_country_name = "Caucasian Zakh Üls"
-    }
-    # }
-
-    # Native Reserves | Obog means ethnic tribe
-    TK3 = {
-        override_country_name = "Transcaspian Obog"
-    }
-
-    # Cliques | Bülüüg means clique
-    XX1 = {
-        override_country_name = "Xi-Xia Sino-Buluug"
-    }
-    MNG = {
-        override_country_name = "Ming Sino-Buluug"
-    }
-
-    # Vassals | Kharya'at Uls means directly controlled subject state
-    
-    # Tributaries and Jimi States | Orsun means loose subject
-    SRV = {
-        override_country_name = "Shirvani Orsun Uls"
-    }
-    SYG = {
-        override_country_name = "Yuguri Orsun Uls"
-    }
-    DLH = {
-        override_country_name = "Delhiite Orsun Uls"
-    }
-    BLT = {
-        override_country_name = "Bolori Orsun Uls"
-    }
-    TI3 = {
-        override_country_name = "Kabulian Orsun Uls"
-    }
-    KJT = {
-        override_country_name = "Kanjut Orsun Uls"
-    }
-    SK1 = {
-        override_country_name = "Balti Orsun Uls"
-    }
-    FEO = {
-        override_country_name = "East Gothic Orsun Uls"
-    }
-    ALH = {
-        override_country_name = "Haasan Orsun Uls"
-    }
-    YAS = {
-        override_country_name = "Yassite Orsun Uls"
-    }
-    MLW = {
-        override_country_name = "Malwi Orsun Uls"
-    }
-    GUG = {
-        override_country_name = "Guge Orsun Uls"
-    }
-    LDK = {
-        override_country_name = "Ladakhi Orsun Uls"
-    }
-
-    # Pirates
-    GOT = {
-        override_country_name = "Raiders of Gotland"
-    }
-
-    # Naval Marches
-    ORM = {
-        override_country_name = "Hormuz Naval Horde"
+    # Making confucian subjects harmonize with all religions
+    every_subject_country = {
+        limit = {
+            religion = confucianism
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = christian
+                }
+            }
+            add_harmonized_religion = catholic
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = muslim
+                }
+            }
+            add_harmonized_religion = sunni
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = mahayana
+                }
+            }
+            add_harmonized_religion = mahayana
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = shinto
+                }
+            }
+            add_harmonized_religion = shinto
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = vajrayana
+                }
+            }
+            add_harmonized_religion = vajrayana
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = buddhism
+                }
+            }
+            add_harmonized_religion = buddhism
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = dharmic
+                }
+            }
+            add_harmonized_religion = hinduism
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = pagan
+                }
+            }
+            add_harmonized_religion = animism
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = jewish_group
+                }
+            }
+            add_harmonized_religion = jewish
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_harmonized_with = zoroastrian_group
+                }
+            }
+            add_harmonized_religion = zoroastrian
+        }
     }
 }
 
-##########################################################################
+####################################################################################
+# Fixing overlapping subject cores + removing foreign cores on root (+ claims)
+####################################################################################
+
+ROOT = {
+    every_subject_country = {
+        save_event_target_as = subject
+        ROOT = {
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        is_core = event_target:subject
+                        is_claim = event_target:subject
+                        is_permanent_claim = event_target:subject
+                    }
+                }
+    
+                log = "Removing Subject core/claim from [This.GetName]"
+                remove_core = event_target:subject
+                remove_claim = event_target:subject
+                # remove_permanent_claim = event_target:subject
+            }
+        }
+        every_owned_province = {
+            limit = {
+                OR = {
+                    is_core = ROOT
+                    is_claim = ROOT
+                    is_permanent_claim = ROOT
+                }
+            }
+    
+            log = "Removing Root core/claim from subject in [This.GetName]"
+            remove_core = ROOT
+            remove_claim = ROOT
+            # remove_permanent_claim = ROOT
+        }
+    }
+
+    # Removing ALL foreign cores and claims from root. This is slow, will be disabled by default. Set country flag remove_foreign_cores_and_claims to enable.
+    if = {
+        limit = {
+            has_country_flag = remove_foreign_cores_and_claims
+        }
+        every_country = {
+            limit = {
+                NOT = {
+                    # tag = PER
+                    tag = ROOT
+                }
+            }
+            save_event_target_as = foreign_country
+            ROOT = {
+                every_owned_province = {
+                    remove_core = event_target:foreign_country 
+                    remove_claim = event_target:foreign_country
+                    remove_permanent_claim = event_target:foreign_country
+                    log = "Removing foreign cores from [This.GetName] for [event_target:foreign_country]"
+                }
+            }
+        }
+    }
+}
+
+####################################################################################
+# Remove Smallpox
+####################################################################################
+
+ROOT = {
+    every_owned_province = {
+        remove_province_modifier = inc_smallpox_outbreak
+    }
+    every_subject_country = {
+        every_owned_province = {
+            remove_province_modifier = inc_smallpox_outbreak
+        }   
+    }
+}
+
+####################################################################################
+# Fixing Religion | Remove Guaranteed Dhimmi Autonomy | Removing noculture
+####################################################################################
+
+ROOT = {
+    # Propagate religion everywhere
+    set_country_flag = can_propagate_religion_in_abrahamic_provinces
+    every_owned_province = {
+        remove_province_modifier = estate_church_lao_animism_mod
+        remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+    }
+    every_subject_country = {
+        every_owned_province = {
+            remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
+            remove_province_modifier = estate_church_lao_animism_mod
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            culture = noculture
+        }
+        log = "Province [This.GetName] has noculture"
+        change_culture = ROOT
+    }
+    
+}
+
+####################################################################################
+# Make Immortal Royal Family
+####################################################################################
+
+ROOT = {
+    if = {
+        limit = {
+            has_consort = no
+        }
+
+        define_consort = {
+            culture = ROOT
+            adm = 6
+            dip = 6
+            mil = 6
+            female = yes
+        }
+
+        add_queen_personality = immortal_personality
+    }
+
+    if = {
+        limit = {
+            has_heir = no
+        }
+
+        define_heir = {
+            culture = ROOT
+            dynasty = ROOT
+            claim = 100
+            adm = 6
+            dip = 6
+            mil = 6
+            female = no
+        }
+
+        add_heir_personality = immortal_personality
+    }
+
+    if = {
+        limit = {
+            NOT = {
+                OR = {
+                    has_country_flag = fee_events_for_student_of_language_active 
+                    has_ruler_flag = fee_events_for_student_of_language_completed 
+                }
+            }
+        }
+        log = "Running FEE_Advisor_Event.15"
+        country_event = { id = FEE_Advisor_Event.14 }
+        add_ruler_modifier = {
+			name = fee_advisor_student_language
+			duration = -1
+		}
+
+        set_country_flag = fee_events_for_student_of_language_active
+        country_event = { id = FEE_Advisor_Event.15 }
+
+        log = "Finished running FEE_Advisor_Event.15"
+    }
+    if = {
+        limit = {
+            has_consort = yes
+            NOT = { has_ruler_modifier = consort_of_the_people } 
+        }
+		add_ruler_modifier = { 
+			name = consort_of_the_people
+		}
+    }
+}
+
+####################################################################################
+# Reduce Gold Depletion Chance
+####################################################################################
+
+ROOT = {
+    add_country_modifier = { 
+        name = gold_depletion_cheat
+        duration = -1  
+    }
+
+    every_subject_country = {
+        add_country_modifier = { 
+            name = gold_depletion_cheat
+            duration = -1  
+        }
+    }
+}
+
+####################################################################################
+# Golden Age
+####################################################################################
+
+extend_golden_age = 12 # 1 more year
+
+####################################################################################
+# Creating Homeguard Generals
+####################################################################################
+
+if = {
+	limit = {
+		NOT = { 	
+			has_leader_with = {
+				# name = "Homeguard General"
+                shock = 666
+                fire = 666
+                manuever = 666666
+                siege = 666
+			}
+		}
+	}
+
+    define_general = {
+        name = "Homeguard General"
+        shock = 666
+        fire = 666
+        manuever = 666666
+        siege = 666
+        trait = "siege_specialist_personality"
+    }
+}
+
+
+####################################################################################
+# Build Times
+####################################################################################
+
+ROOT = {
+    add_country_modifier = { 
+        name = jason_mod_lessTime
+        duration = -1  
+    }
+
+    add_country_modifier = {
+        name = jason_global_more_building_slots
+        duration = -1
+    }
+
+    every_subject_country = {
+        add_country_modifier = { 
+            name = jason_mod_lessTime
+            duration = -1  
+        }
+
+        add_country_modifier = {
+            name = jason_global_more_building_slots
+            duration = -1
+        }
+    }
+}
+
+
+####################################################################################
+# Supply and Building Slots
+####################################################################################
+
+ROOT = {
+    add_country_modifier = {
+        name = jason_global_more_building_slots
+        duration = -1
+    }
+
+    every_subject_country = {
+        add_country_modifier = {
+            name = jason_global_more_building_slots
+            duration = -1
+        }
+        add_country_modifier = {
+            name = supply_cheat_modifier
+            duration = -1
+        }
+    }
+}
+
+####################################################################################
+# Center of Trade Upgrades | cot.txt
+####################################################################################
+
+ROOT = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                province_has_center_of_trade_of_level = 2
+            }
+            ROOT = {
+                treasury = 200
+            }
+        }
+        add_center_of_trade_level = 1
+        owner = {
+            add_treasury = -200
+        }
+    }
+
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                province_has_center_of_trade_of_level = 1
+                NOT = {
+                    province_has_center_of_trade_of_level = 2
+                }
+                ROOT = {
+                    treasury = 200
+                }
+            }
+            add_center_of_trade_level = 1
+            ROOT = {
+                add_treasury = -200
+            }
+        }
+    }
+
+
+
+    # CoT Upgrades and free prov trade power after X year
+    ROOT = {
+        if = {
+            limit = {
+                is_year = 1600
+            }
+            every_owned_province = {
+                limit = {
+                    province_has_center_of_trade_of_level = 1
+                }
+                add_province_modifier = {
+                    name = province_trade_power_modifier_cheat
+                    duration = -1
+                }
+            }
+            every_subject_country = {
+                every_owned_province = {
+                    limit = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                    add_province_modifier = {
+                        name = province_trade_power_modifier_cheat
+                        duration = -1
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_year = 1500
+            }
+
+            every_owned_province = {
+                limit = {
+                    province_has_center_of_trade_of_level = 2
+                    NOT = {
+                        province_has_center_of_trade_of_level = 3
+                    }
+                    ROOT = {
+                        treasury = 1000
+                    }
+                }
+                add_center_of_trade_level = 1
+                ROOT = {
+                    add_treasury = -1000
+                }
+            }
+
+            every_subject_country = {
+                every_owned_province = {
+                    limit = {
+                        province_has_center_of_trade_of_level = 2
+                        NOT = {
+                            province_has_center_of_trade_of_level = 3
+                        }
+                        ROOT = {
+                            treasury = 1000
+                        }
+                    }
+                    add_center_of_trade_level = 1
+                    ROOT = {
+                        add_treasury = -1000
+                    }
+                }
+            }
+        }
+    }
+}
+
+####################################################################################
+# Trade Company Investments And Conversions | tc.txt
+####################################################################################
+
+ROOT = {
+    # Conversion of trade company provinces
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes
+            owner = {
+                NOT = {
+                    religion = confucianism
+                }
+            }
+        }
+        change_religion = ROOT  
+    }
+
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                is_owned_by_trade_company = yes
+            }
+            change_religion = ROOT  
+        }
+    }
+
+    # Trade Company Investments
+
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes 
+            NOT = {
+                has_trade_company_investment_in_area  = {
+                    investment = townships
+                    investor = ROOT
+                }
+            }
+            owner = {
+                treasury = 400
+            }
+        }
+        add_trade_company_investment = {
+            investor = ROOT
+            investment = townships
+        }
+        owner = {
+            add_treasury = -400
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes 
+            NOT = {
+                has_trade_company_investment_in_area  = {
+                    investment = brokers_exchange
+                    investor = ROOT
+                }
+            }
+            owner = {
+                treasury = 400
+            }
+        }
+        add_trade_company_investment = {
+            investor = ROOT
+            investment = brokers_exchange
+        }
+        owner = {
+            add_treasury = -400
+        }
+    }
+
+
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes 
+            NOT = {
+                has_trade_company_investment_in_area  = {
+                    investment = company_depot
+                    investor = ROOT
+                }
+            }
+            owner = {
+                treasury = 400
+            }
+        }
+        add_trade_company_investment = {
+            investor = ROOT
+            investment = company_depot
+        }
+        owner = {
+            add_treasury = -400
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes 
+            NOT = {
+                has_trade_company_investment_in_area  = {
+                    investment = district
+                    investor = ROOT
+                }
+            }
+            owner = {
+                treasury = 400
+            }
+        }
+        add_trade_company_investment = {
+            investor = ROOT
+            investment = district
+        }
+        owner = {
+            add_treasury = -400
+        }
+    }
+
+
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes 
+            NOT = {
+                has_trade_company_investment_in_area  = {
+                    investment = military_administration
+                    investor = ROOT
+                }
+            }
+            owner = {
+                treasury = 400
+            }
+        }
+        add_trade_company_investment = {
+            investor = ROOT
+            investment = military_administration
+        }
+        owner = {
+            add_treasury = -400
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            is_owned_by_trade_company = yes 
+            NOT = {
+                has_trade_company_investment_in_area  = {
+                    investment = permanent_quarters
+                    investor = ROOT
+                }
+            }
+            owner = {
+                treasury = 400
+            }
+        }
+        add_trade_company_investment = {
+            investor = ROOT
+            investment = permanent_quarters
+        }
+        owner = {
+            add_treasury = -400
+        }
+    }
+}
+
+####################################################################################
+# Adding Provinces to Parliament + Acceptance Chance | parliament.txt
+####################################################################################
+
+ROOT = {
+    add_country_modifier = { 
+        name = bill_of_rights_parliament
+        duration = -1  
+    }
+
+    add_country_modifier = { 
+        name = gbr_pax_britannica
+        duration = -1  
+    }
+
+    add_country_modifier = { 
+        name = ave_pax_angevina
+        duration = -1  
+    }
+
+    add_country_modifier = { 
+        name = eng_the_two_houses
+        duration = -1  
+    }
+
+    every_owned_province = {
+        set_seat_in_parliament = yes
+    }
+}
+
+####################################################################################
+# Enabling Estates
+####################################################################################
+if = {
+    limit = {
+        NOT = {
+            OR = {
+                tag = NHS
+                tag = ELY
+            }
+        }
+    }
+    set_country_flag = enables_estate_burghers_flag
+    set_country_flag = enables_estate_church_flag
+}
+
+####################################################################################
+# Advisors | Creating Advisors Automatically
+####################################################################################
+
+ROOT = {
+    if = {
+        limit = {
+            NOT = {
+                employed_advisor = {
+                    category = MIL
+                    type = commandant
+                }
+            }
+        }
+        if = {
+            limit = {
+                current_income_balance = 200
+            }
+            add_treasury = -400
+            hire_advisor = {
+                type = commandant
+                skill = 5
+            }
+        } else_if = {
+            limit = {
+                current_income_balance = 100
+            }
+            add_treasury = -200
+            hire_advisor = {
+                type = commandant
+                skill = 3
+            }
+        } else = {
+            add_treasury = -10
+            hire_advisor = {
+                type = commandant
+                skill = 1
+            }
+        }
+    }
+
+    # TODO maybe this should be this run only
+    if = {
+        limit = {
+            NOT = {
+                employed_advisor = {
+                    category = ADM
+                    type = natural_scientist
+                }
+            }
+        }
+        if = {
+            limit = {
+                current_income_balance = 500
+                # is_year = 1500 
+            }
+            add_treasury = -400
+            hire_advisor = {
+                type = natural_scientist
+                skill = 5
+            }
+        } 
+    }
+}
+
+####################################################################################
 # Total Conversion Mod Specific Changes
-##########################################################################
+####################################################################################
 
 # ===== Anbennar Specific ===============
 # ROOT = {
@@ -885,10 +2100,35 @@ ROOT = {
         loyalty = 100
     }    
     
-    
     CAPITAL_SCOPE = {
         if = {
             limit = {
+                NOT = {
+                    has_building = university
+                }
+            }
+            add_building = university
+        }
+    }
+
+    if = {
+        limit = {
+            is_year = 1500
+        }
+        log = "Adding University to all provinces"
+        every_owned_province = {
+            limit = { 
+                NOT = {
+                    has_building = university
+                }
+            }
+            add_building = university
+        }
+    }
+    
+    every_subject_country = {
+        every_owned_province = {
+            limit = { 
                 NOT = {
                     has_building = university
                 }
@@ -1382,1263 +2622,4 @@ ROOT = {
 #     }
 # }
 
-# ======================================================================================================================================================================================= #
-###########################################################################################################################################################################################
-# GENERAL SCRIPTS                                                                                                                                                                         #
-###########################################################################################################################################################################################
-# ======================================================================================================================================================================================= #
-
-##########################################################################
-# Subject Benefits / Subject Type Fixes  
-##########################################################################
-
-ROOT = {
-    # Annex consequences
-    ROOT = {
-        remove_country_modifier = annexers_legacy
-    }
-
-    # Allow special vassal types
-    set_country_flag = release_invalid_pirate_brotherhoods
-    set_country_flag = release_invalid_native_reserves
-    set_country_flag = releasing_invalid_banking_family_clan
-    set_country_flag = releasing_invalid_sister_republics
-
-
-    # Force pirate brotherhoods to actually be pirate republics
-    every_subject_country = {
-        limit = {
-            is_subject_of_type = pirate_brotherhood_vassal
-            NOT = {
-            has_reform = pirate_republic_reform
-            }
-        }
-        change_government = republic
-        add_government_reform = pirate_republic_reform
-    }
-
-
-    every_subject_country = {
-        limit = {
-            is_subject_of_type = trade_outpost
-        }
-        # Allows trade outposts to have many provinces
-        set_country_flag = trade_outpost_annexed_province
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = banking_family_subject
-                is_subject_of_type = sister_republic
-            }
-            NOT = {
-                government = republic
-            }
-        }
-        change_government = republic
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = brother_kingdom
-                is_subject_of_type = personal_union
-                is_subject_of_type = se_integrated_personal_union
-                is_subject_of_type = real_union_subject
-                is_subject_of_type = administrative_region
-            }
-            NOT = {
-                government = monarchy
-            }
-        }
-        change_government = monarchy
-    }
-
-    # Naval march upgrades
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = naval_march
-                is_subject_of_type = pirate_brotherhood_vassal
-            }
-        }
-        capital_scope = {
-            add_province_modifier = {
-                name = per_naval_command_modifier
-                duration = -1
-            }
-            add_province_modifier = {
-                name = devils_gate_modifier
-                duration = -1
-            }
-            add_province_modifier = {
-                name = important_natural_harbor
-                duration = -1
-            }
-            add_province_modifier = {
-                name = trade_post_modifier
-                duration = -1
-            }
-            add_province_modifier = {
-                name = venice_galley_conscription
-                duration = -1
-            }
-            add_province_modifier = {
-                name = expansion_of_the_shipbuilding_industry
-                duration = -1
-            }
-            add_province_modifier = {
-                name = hsa_maritime_hegemon_modifier
-                duration = -1
-            }
-            add_province_modifier = {
-                name = tur_barbary_pirates
-                duration = -1
-            }
-            add_province_modifier = {
-                name = qng_presence_global_market_modifier
-                duration = -1
-            }
-            add_province_modifier = {
-                name = feo_lubeck
-                duration = -1
-            }
-            add_province_modifier = {
-                name = GER_wilhelmshaven_modifier
-                duration = -1
-            }
-            add_province_modifier = {
-                name = jason_mod_more_forcelimit
-                duration = -1
-            }
-        }
-    }
-
-
-    # Every Subject Getting Free Income combined with no more vassal tax
-    ROOT = {
-        every_subject_country = {
-            limit = {
-                # NOT = {
-                #     is_subject_of_type = vassal
-                #     # is_subject_of_type = autonomous_vassal
-                #     # is_subject_of_type = semi_autonomous_vassal
-                #     # is_subject_of_type = non_autonomous_vassal
-                #     is_subject_of_type = dominion
-                #     is_subject_of_type = trade_outpost
-                #     is_subject_of_type = appanage
-                #     is_subject_of_type = fief_subject
-                #     is_subject_of_type = eyalet
-                #     is_subject_of_type = core_eyalet
-                #     # is_subject_of_type = mandala_trade_vassal
-                # }
-            }
-            add_country_modifier = {
-                name = free_income_cheat
-                duration = -1
-            }
-        }
-
-        # Ensuring 0% vassal income
-        ROOT = {
-            remove_country_modifier = si_scutage_unwilling_vassals
-            remove_country_modifier = jason_vassal_income_minus_5_1
-            remove_country_modifier = jason_vassal_income_minus_5_2
-            remove_country_modifier = jason_vassal_income_minus_1_1
-            remove_country_modifier = jason_vassal_income_minus_1_2
-            remove_country_modifier = jason_vassal_income_minus_1_3
-            remove_country_modifier = jason_vassal_income_minus_1_4
-            remove_country_modifier = jason_vassal_income_minus_10_1
-
-            if = {
-                limit = {
-                    government = monarchy
-                }
-                
-
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_5_1
-                    duration = -1
-                }
-                add_country_modifier = {
-                    name = jason_vassal_income_minus_5_2
-                    duration = -1
-                }
-                if = {
-                    limit = {
-                        legitimacy = 100
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_3
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_4
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_5
-                        duration = -1
-                    }
-                }
-                else_if = {
-                    limit = {
-                        legitimacy = 90
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_3
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_4
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                }
-                else_if = {
-                    limit = {
-                        legitimacy = 80
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_3
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                }
-                else_if = {
-                    limit = {
-                        legitimacy = 70
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_3
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                }
-                else_if = {
-                    limit = {
-                        legitimacy = 60
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_2
-                    remove_country_modifier = jason_vassal_income_minus_1_3
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                } 
-                else_if = {
-                    limit = {
-                        legitimacy = 50
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_1
-                    remove_country_modifier = jason_vassal_income_minus_1_2
-                    remove_country_modifier = jason_vassal_income_minus_1_3
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                } 
-                else_if = {
-                    limit = {
-                        legitimacy = 40
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_5_2
-
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_3
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_4
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                } 
-                else_if = {
-                    limit = {
-                        legitimacy = 30
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_5_2
-
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_3
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                } 
-                else_if = {
-                    limit = {
-                        legitimacy = 20
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_5_2
-
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_2
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_3
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                } 
-                else_if = {
-                    limit = {
-                        legitimacy = 10
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_5_2
-
-                    add_country_modifier = {
-                        name = jason_vassal_income_minus_1_1
-                        duration = -1
-                    }
-                    remove_country_modifier = jason_vassal_income_minus_1_2
-                    remove_country_modifier = jason_vassal_income_minus_1_3
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                } 
-                else {
-                    remove_country_modifier = jason_vassal_income_minus_5_2
-                    remove_country_modifier = jason_vassal_income_minus_1_1
-                    remove_country_modifier = jason_vassal_income_minus_1_2
-                    remove_country_modifier = jason_vassal_income_minus_1_3
-                    remove_country_modifier = jason_vassal_income_minus_1_4
-                    remove_country_modifier = jason_vassal_income_minus_1_5
-                    remove_country_modifier = jason_vassal_income_minus_5_1
-                }
-            }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = pirate_brotherhood_vassal
-            }
-        }
-        add_country_modifier = {
-            name = hsa_maritime_hegemon_modifier
-            duration = -1
-        }
-        every_owned_province = {
-            add_province_modifier = {
-                name = GER_wilhelmshaven_modifier
-                duration = -1
-            }
-        }
-    }
-
-    # No autonomy
-    every_subject_country = {
-        remove_country_modifier = estate_burghers_guaranteed_autonomy_mod
-        every_owned_province = {
-            remove_province_modifier = estate_burghers_guaranteed_autonomy_mod
-        }
-    }
-}
-
-##########################################################################
-# Subject Peace | subject_peace.txt 
-##########################################################################
-
-ROOT = {
-    every_subject_country = {
-        save_event_target_as = subject
-        ROOT = {
-            every_subject_country = {
-                white_peace = event_target:subject 
-                add_truce_with = event_target:subject 
-            }
-        }
-
-        remove_opinion = {
-            who = ROOT
-            modifier = opinion_annex_vassal
-        }
-    }
-}
-
-##########################################################################
-# Remove Smallpox for Inca
-##########################################################################
-
-ROOT = {
-    every_owned_province = {
-        remove_province_modifier = inc_smallpox_outbreak
-    }
-    every_subject_country = {
-        every_owned_province = {
-            remove_province_modifier = inc_smallpox_outbreak
-        }   
-    }
-}
-
-##########################################################################
-# Remove Guaranteed Dhimmi Autonomy | Removing noculture
-##########################################################################
-
-ROOT = {
-    every_owned_province = {
-        remove_province_modifier = estate_church_lao_animism_mod
-        remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
-    }
-    every_subject_country = {
-        every_owned_province = {
-            remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
-            remove_province_modifier = estate_church_lao_animism_mod
-        }
-    }
-
-    every_owned_province = {
-        limit = {
-            culture = noculture
-        }
-        log = "Province [This.GetName] has noculture"
-        change_culture = ROOT
-    }
-    
-}
-
-
-##########################################################################
-# Make Immortal Royal Family
-##########################################################################
-
-ROOT = {
-    if = {
-        limit = {
-            has_consort = no
-        }
-
-        define_consort = {
-            culture = ROOT
-            adm = 6
-            dip = 6
-            mil = 6
-            female = yes
-        }
-
-        add_queen_personality = immortal_personality
-    }
-
-    if = {
-        limit = {
-            has_heir = no
-        }
-
-        define_heir = {
-            culture = ROOT
-            dynasty = ROOT
-            claim = 100
-            adm = 6
-            dip = 6
-            mil = 6
-            female = no
-        }
-
-        add_heir_personality = immortal_personality
-    }
-
-    if = {
-        limit = {
-            OR = {
-                NOT = { has_country_flag = fee_events_for_student_of_language_active }
-                NOT = { has_ruler_flag = fee_events_for_student_of_language_completed }
-            }
-        }
-        country_event = { id = FEE_Advisor_Event.14 }
-    }
-    if = {
-        limit = {
-            has_consort = yes
-            NOT = { has_ruler_modifier = consort_of_the_people } 
-        }
-		add_ruler_modifier = { 
-			name = consort_of_the_people
-		}
-    }
-}
-
-##########################################################################
-# Reduce Gold Depletion Chance
-##########################################################################
-
-ROOT = {
-    add_country_modifier = { 
-        name = gold_depletion_cheat
-        duration = -1  
-    }
-
-    every_subject_country = {
-        add_country_modifier = { 
-            name = gold_depletion_cheat
-            duration = -1  
-        }
-    }
-}
-
-
-##########################################################################
-# Discover Vassal Lands
-##########################################################################
-
-every_subject_country = {
-    every_owned_province = {
-        discover_country = ROOT
-    }
-}
-
-##########################################################################
-# Golden Age
-##########################################################################
-
-extend_golden_age = 12 # 1 more year
-
-##########################################################################
-# Propagate Religion Everywhere
-##########################################################################
-
-set_country_flag = can_propagate_religion_in_abrahamic_provinces
-
-##########################################################################
-# Dominions Self Colonize
-##########################################################################
-
-every_subject_country = {
-    limit = {
-        OR = {
-            is_subject_of_type = dominion
-            is_subject_of_type = dominion_tc
-            AND = {
-                is_subject_of_type = exarchate_subject
-                tag = K03
-            }
-        }
-    }
-    # log = "Country is [This.GetName]"
-    add_treasury = 100000
-    add_country_modifier = {
-        name = ultra_free_income_cheat
-        duration = -1
-    }
-    add_country_modifier = {
-        name = colonize_the_continent
-        duration = -1
-    }
-    add_country_modifier = { 
-        name = spice_colony_modifier
-        duration = -1  
-    }
-    add_country_modifier = { 
-        name = cossack_settlers
-        duration = -1  
-    }
-    add_country_modifier = { 
-        name = sea_route_to_india
-        duration = -1  
-    }
-    add_country_modifier = { 
-        name = puritan_colonists
-        duration = -1  
-    }
-}
-
-##########################################################################
-# Creating Homeguard Generals
-##########################################################################
-
-# TODO add restriction for num provinces?
-if = {
-	limit = {
-		NOT = { 	
-			has_leader_with = {
-				name = "Homeguard General"
-                shock = 666
-                fire = 666
-                manuever = 666666
-                siege = 666
-			}
-		}
-	}
-	
-    define_general = {
-        name = "Homeguard General"
-        shock = 666
-        fire = 666
-        manuever = 666666
-        siege = 666
-        trait = "siege_specialist_personality"
-    }
-}
-
-
-
-##########################################################################
-# Build Times
-##########################################################################
-
-ROOT = {
-    add_country_modifier = { 
-        name = jason_mod_lessTime
-        duration = -1  
-    }
-
-    add_country_modifier = {
-        name = jason_global_more_building_slots
-        duration = -1
-    }
-
-    every_subject_country = {
-        add_country_modifier = { 
-            name = jason_mod_lessTime
-            duration = -1  
-        }
-
-        add_country_modifier = {
-            name = jason_global_more_building_slots
-            duration = -1
-        }
-    }
-}
-
-
-##########################################################################
-# Supply and Building Slots
-##########################################################################
-
-ROOT = {
-    add_country_modifier = {
-        name = jason_global_more_building_slots
-        duration = -1
-    }
-
-    every_subject_country = {
-        add_country_modifier = {
-            name = jason_global_more_building_slots
-            duration = -1
-        }
-    }
-}
-
-
-##########################################################################
-# Supply for Subjects | supply_limit.txt
-##########################################################################
-
-every_subject_country = {
-    add_country_modifier = {
-        name = supply_cheat_modifier
-        duration = -1
-    }
-}
-
-
-##########################################################################
-# Center of Trade Upgrades | cot.txt
-##########################################################################
-
-ROOT = {
-    every_owned_province = {
-        limit = {
-            province_has_center_of_trade_of_level = 1
-            NOT = {
-                province_has_center_of_trade_of_level = 2
-            }
-            ROOT = {
-                treasury = 200
-            }
-        }
-        add_center_of_trade_level = 1
-        owner = {
-            add_treasury = -200
-        }
-    }
-
-    every_subject_country = {
-        every_owned_province = {
-            limit = {
-                province_has_center_of_trade_of_level = 1
-                NOT = {
-                    province_has_center_of_trade_of_level = 2
-                }
-                ROOT = {
-                    treasury = 200
-                }
-            }
-            add_center_of_trade_level = 1
-            ROOT = {
-                add_treasury = -200
-            }
-        }
-    }
-
-
-
-    # CoT Upgrades and free prov trade power after X year
-    ROOT = {
-        if = {
-            limit = {
-                is_year = 1600
-            }
-            every_owned_province = {
-                limit = {
-                    province_has_center_of_trade_of_level = 1
-                }
-                add_province_modifier = {
-                    name = province_trade_power_modifier_cheat
-                    duration = -1
-                }
-            }
-            every_subject_country = {
-                every_owned_province = {
-                    limit = {
-                        province_has_center_of_trade_of_level = 1
-                    }
-                    add_province_modifier = {
-                        name = province_trade_power_modifier_cheat
-                        duration = -1
-                    }
-                }
-            }
-        }
-        if = {
-            limit = {
-                is_year = 1500
-            }
-
-            every_owned_province = {
-                limit = {
-                    province_has_center_of_trade_of_level = 2
-                    NOT = {
-                        province_has_center_of_trade_of_level = 3
-                    }
-                    ROOT = {
-                        treasury = 1000
-                    }
-                }
-                add_center_of_trade_level = 1
-                ROOT = {
-                    add_treasury = -1000
-                }
-            }
-
-            every_subject_country = {
-                every_owned_province = {
-                    limit = {
-                        province_has_center_of_trade_of_level = 2
-                        NOT = {
-                            province_has_center_of_trade_of_level = 3
-                        }
-                        ROOT = {
-                            treasury = 1000
-                        }
-                    }
-                    add_center_of_trade_level = 1
-                    ROOT = {
-                        add_treasury = -1000
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-##########################################################################
-# Trade Company Investments | tc.txt
-##########################################################################
-
-ROOT = {
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes 
-            NOT = {
-                has_trade_company_investment_in_area  = {
-                    investment = townships
-                    investor = ROOT
-                }
-            }
-            owner = {
-                treasury = 400
-            }
-        }
-        add_trade_company_investment = {
-            investor = ROOT
-            investment = townships
-        }
-        owner = {
-            add_treasury = -400
-        }
-    }
-
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes 
-            NOT = {
-                has_trade_company_investment_in_area  = {
-                    investment = brokers_exchange
-                    investor = ROOT
-                }
-            }
-            owner = {
-                treasury = 400
-            }
-        }
-        add_trade_company_investment = {
-            investor = ROOT
-            investment = brokers_exchange
-        }
-        owner = {
-            add_treasury = -400
-        }
-    }
-
-
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes 
-            NOT = {
-                has_trade_company_investment_in_area  = {
-                    investment = company_depot
-                    investor = ROOT
-                }
-            }
-            owner = {
-                treasury = 400
-            }
-        }
-        add_trade_company_investment = {
-            investor = ROOT
-            investment = company_depot
-        }
-        owner = {
-            add_treasury = -400
-        }
-    }
-
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes 
-            NOT = {
-                has_trade_company_investment_in_area  = {
-                    investment = district
-                    investor = ROOT
-                }
-            }
-            owner = {
-                treasury = 400
-            }
-        }
-        add_trade_company_investment = {
-            investor = ROOT
-            investment = district
-        }
-        owner = {
-            add_treasury = -400
-        }
-    }
-
-
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes 
-            NOT = {
-                has_trade_company_investment_in_area  = {
-                    investment = military_administration
-                    investor = ROOT
-                }
-            }
-            owner = {
-                treasury = 400
-            }
-        }
-        add_trade_company_investment = {
-            investor = ROOT
-            investment = military_administration
-        }
-        owner = {
-            add_treasury = -400
-        }
-    }
-
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes 
-            NOT = {
-                has_trade_company_investment_in_area  = {
-                    investment = permanent_quarters
-                    investor = ROOT
-                }
-            }
-            owner = {
-                treasury = 400
-            }
-        }
-        add_trade_company_investment = {
-            investor = ROOT
-            investment = permanent_quarters
-        }
-        owner = {
-            add_treasury = -400
-        }
-    }
-}
-
-
-##########################################################################
-# Convert Trade Company Provinces | convert_tc.txt
-##########################################################################
-ROOT = {
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes
-            owner = {
-                # NOT = {
-                #     num_of_janissaries = 1
-                # }
-                NOT = {
-                    religion = confucianism
-                }
-            }
-        }
-        change_religion = ROOT  
-    }
-
-    every_subject_country = {
-        every_owned_province = {
-            limit = {
-                is_owned_by_trade_company = yes
-            }
-            change_religion = ROOT  
-        }
-    }
-}
-
-##########################################################################
-# Updating Subject Loyalties | sub.txt
-##########################################################################
-
-# every_subject_country = {
-#     limit = {
-#         NOT = { 
-#             religion = ROOT
-#         }
-#     }
-#     log = "non-compliant subject [This.GetName]"
-# }
-
-ROOT = {
-    every_subject_country = {
-        limit = {
-            AND = {
-                not = {    
-                    or = {
-                        is_subject_of_type = muslim_tributary_vassal
-                        is_subject_of_type = self_governing_colony
-                        # religion = coptic
-                        tag = ETH
-                        religion = jewish
-                    }
-                }
-            }
-        }
-        change_religion = ROOT
-    }
-
-    every_subject_country = {
-        ROOT = {
-            if = {
-                limit = {
-                    not = {
-                        marriage_with = PREV
-                    }
-                }
-                create_marriage = PREV
-                add_legitimacy = 5
-            }
-        }
-        add_legitimacy = 100
-        add_devotion = 100
-        add_horde_unity = 100
-        set_meritocracy = 100
-        add_republican_tradition = 100
-        add_trust = {
-            who = ROOT
-            value = 100
-            mutual = yes
-        }
-        # add_treasury = 100000
-        set_dynasty = ROOT
-        add_prestige = 100
-        add_stability = 3
-        # change_primary_culture = ROOT
-        add_corruption = -100
-        add_war_exhaustion = -100
-        
-        every_owned_province = {
-            add_devastation = -100
-        }
-
-        add_estate_loyalty = {
-            estate = estate_church
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_nobles
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_burghers
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_dhimmi
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_jains
-            loyalty = 100
-        }
-    }
-
-
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = christian
-            }
-        }
-        add_harmonized_religion = catholic
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = muslim
-            }
-        }
-        add_harmonized_religion = sunni
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = mahayana
-            }
-        }
-        add_harmonized_religion = mahayana
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = shinto
-            }
-        }
-        add_harmonized_religion = shinto
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = vajrayana
-            }
-        }
-        add_harmonized_religion = vajrayana
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = buddhism
-            }
-        }
-        add_harmonized_religion = buddhism
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = dharmic
-            }
-        }
-        add_harmonized_religion = hinduism
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = pagan
-            }
-        }
-        add_harmonized_religion = animism
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = jewish_group
-            }
-        }
-        add_harmonized_religion = jewish
-    }
-    every_subject_country = {
-        limit = {
-            NOT = {
-                has_harmonized_with = zoroastrian_group
-            }
-        }
-        add_harmonized_religion = zoroastrian
-    }
-}
-
-##########################################################################
-# Adding Provinces to Parliament + Acceptance Chance | parliament.txt
-##########################################################################
-
-ROOT = {
-    add_country_modifier = { 
-        name = bill_of_rights_parliament
-        duration = -1  
-    }
-
-    add_country_modifier = { 
-        name = gbr_pax_britannica
-        duration = -1  
-    }
-
-    add_country_modifier = { 
-        name = ave_pax_angevina
-        duration = -1  
-    }
-
-    add_country_modifier = { 
-        name = eng_the_two_houses
-        duration = -1  
-    }
-
-    every_owned_province = {
-        set_seat_in_parliament = yes
-    }
-}
-
-
-##########################################################################
-# Enabling Estates | parliament.txt
-##########################################################################
-if = {
-    limit = {
-        NOT = {
-            OR = {
-                tag = NHS
-                tag = ELY
-            }
-        }
-    }
-    set_country_flag = enables_estate_burghers_flag
-    set_country_flag = enables_estate_church_flag
-}
-
-##########################################################################
-# Advisors | Creating Advisors Automatically
-##########################################################################
-if = {
-    limit = {
-        NOT = {
-            employed_advisor = {
-                category = MIL
-                type = commandant
-            }
-        }
-    }
-    if = {
-        limit = {
-            current_income_balance = 200
-        }
-        add_treasury = -400
-        hire_advisor = {
-            type = commandant
-            skill = 5
-        }
-    } else_fif = {
-        limit = {
-            current_income_balance = 100
-        }
-        add_treasury = -200
-        hire_advisor = {
-            type = commandant
-            skill = 3
-        }
-    } else = {
-        add_treasury = -10
-        hire_advisor = {
-            type = commandant
-            skill = 1
-        }
-    }
-}
-
-if = {
-    limit = {
-        NOT = {
-            employed_advisor = {
-                category = ADM
-                type = natural_scientist
-            }
-        }
-    }
-    if = {
-        limit = {
-            current_income_balance = 200
-            # is_year = 1500 
-        }
-        add_treasury = -400
-        hire_advisor = {
-            type = natural_scientist
-            skill = 5
-        }
-    } 
-}
+add_treasury = 1

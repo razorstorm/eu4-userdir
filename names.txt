@@ -151,3 +151,385 @@ ROOT = {
 		override_country_name = "Regio Transoxiana"
 	}
 }
+
+
+# Ottomans
+ROOT = {
+    DS6 = {
+        override_country_name = "Caliphal South Africa"
+    }
+    DW6 = {
+        override_country_name = "Caliphal West Africa"
+    }
+    BRZ = {
+        override_country_name = "Caliphal Brazil"
+    }
+    KIK = {
+        override_country_name = "Caliphal Central Africa"
+    }
+    K06 = {
+        override_country_name = "Caliphal Farmlands of Kyiv"
+    }
+    ADU = {
+        override_country_name = "Sultanate of Andalusia"
+    }
+    PRO = {
+        override_country_name = "Eyalet of Provence"
+    }
+    GOL = {
+        override_country_name = "Golden Sword Of The Caliph"
+    }
+    CIR = {
+        override_country_name = "Wall of the Faith"   
+    }
+    PER = {
+        override_country_name = "Sultanate of Persia"
+    }
+    VL1 = {
+        override_country_name = "Yemenese Sword of the South"
+    }
+    VL8 = {
+        override_country_name = "Eyalet of Tunis"
+    }
+    ALG = {
+        override_country_name = "Eyalet of Algiers"
+    }
+    MOR = {
+        override_country_name = "Eyalet of Morocco"
+    }
+    KZH = {
+        override_country_name = "Eyalet of Kazakh"
+    }
+    TI4 = {
+        override_country_name = "Eyalet of Samarqand"
+    }
+    ADA = {
+        override_country_name = "Pirate Emirate of Somalia"
+    }
+    KZ5 = {
+        override_country_name = "Eyalet of Kypshak"
+    }
+    GNV = {
+        override_country_name = "Timar of Geneva"
+    }
+    PAL = {
+        override_country_name = "Palatinate of the Rhine"
+    }
+    K07 = {
+        override_country_name = "Eyalet of Beyaz Rusya"
+    }
+    ANT = {
+        override_country_name = "March of Madagascar"
+    }
+    WLS = {
+        override_country_name = "Eyalet of Wales"
+    }
+    HUN = {
+        override_country_name = "Eyalet of Hungary"
+    }
+    LIT = {
+        override_country_name = "Eyalet of Lithuania"
+    }
+    POL = {
+        override_country_name = "Eyalet of Poland"
+    }
+    PSA = {
+        override_country_name = "Eyalet of Sumatra"
+    }
+}
+
+
+# Mongols
+ROOT = {
+    ROOT = {
+        override_country_name = GREAT_MONGOL_EMPIRE_NAME
+    }
+
+	### Subtribes ###
+    # Grand Subtribes
+    KHA = {
+        override_country_name = MONGOLIAN_KHANATE_NAME
+    }
+    MCH = {
+        override_country_name = "Manchu Khanate"
+        override_country_name = MANCHU_KHANATE_NAME
+    }
+    ZUN = {
+        override_country_name = "Dzungarian Khanate"
+        override_country_name = DZUNGARIAN_KHANATE_NAME
+    }
+    # Core Subtribes | Subtribes Slated to be Annexed
+    NJZ = {
+        override_country_name = "Ningxia Core Horde"
+        override_country_name = NINGXIA_CORE_HORDE_NAME
+    }
+    HHH = {
+        override_country_name = "Skewbald Core Horde"
+        override_country_name = SKEWBALD_CORE_HORDE_NAME
+    }
+    SHC = {
+        override_country_name = "Sahalea Core Horde"
+        override_country_name = SAHALEA_CORE_HORDE_NAME
+    }
+    # Standard Subtribes
+    PRU = {
+        override_country_name = "Teutonic Horde"
+        override_country_name = TEUTONIC_HORDE_NAME
+    }
+    KLK = {
+        override_country_name = "Khalka Horde"
+        override_country_name = KHALKA_HORDE_NAME
+    }
+    AB1 = {
+        override_country_name = "Yeke Horde"
+        override_country_name = YEKE_HORDE_NAME
+    }
+    # Minor Subtribes 
+    SSB = {
+        override_country_name = "Sibe Minor Horde"
+        override_country_name = SIBE_MINOR_HORDE_NAME
+    }
+
+    ### Marches ###
+    # Standard Marches | Tumen Üls i.e. Tumen States. Tumen were military units of 10000 men. These are heavily militarized subject states, together they are a component of the "Immortal Warbow of the Khaganate". ###
+    KOR = {
+        override_country_name = "Joseon Tumen Uls"
+        override_country_name = JOSEON_TUMEN_ULS_NAME
+    }
+    LIT = {
+        override_country_name = "Lithuanian Tumen Uls"
+    }
+    # Defensive Marches | Zakh means borderlands, erhaps Khyazgaar Uls? Meaning border state. These are heavily fortified borderland subject states, together they make up many of the inummerable "Immortal Shields of the Khaganate".
+    CIR = {
+        override_country_name = "Caucasian Zakh Uls"
+        override_country_name = CAUCASIAN_ZAKH_ULS_NAME
+    }
+
+    ### Natives ###
+    # Native Reserves | Obog means ethnic tribe
+    TK3 = {
+        override_country_name = "Transcaspian Obog"
+        override_country_name = TRANSCASPIAN_OBOG_NAME
+    }
+    AI4 = {
+        override_country_name = "Menasu Obog"
+    }
+    CHU = {
+        override_country_name = "Chukchi Obog"
+    }
+    KMC = {
+        override_country_name = "Itelmen Obog"
+    }
+
+
+    ### Subject Chinese Petty Kingdoms ###
+    # Cliques | Bülüüg means clique
+    XX1 = {
+        override_country_name = "Xi-Xia Sino-Buluug"
+        override_country_name = XI_XIA_SINO_BULUUG_NAME
+    }
+    MNG = {
+        override_country_name = "Ming Sino-Buluug"
+        override_country_name = MING_SINO_BULUUG_NAME
+    }
+    H2G = {
+        override_country_name = "Huguang Sino-Buluug"
+    }
+
+    ### Vassals ###
+    # Vassals | Kharya'at Uls means directly controlled subject state
+    
+    ### Tributaries ###
+    # Jimi States | Orsun means loose subject
+    BNG = {
+        override_country_name = "Bengali Orsun Uls"
+    }
+    SRV = {
+        override_country_name = "Shirvani Orsun Uls"
+        override_country_name = SHIRVANI_ORSUN_ULS_NAME
+    }
+    SYG = {
+        override_country_name = "Yuguri Orsun Uls"
+        override_country_name = YUGURI_ORSUN_ULS_NAME
+    }
+    DLH = {
+        override_country_name = "Delhiite Orsun Uls"
+        override_country_name = DELHIITE_ORSUN_ULS_NAME
+    }
+    BLT = {
+        override_country_name = "Bolori Orsun Uls"
+        override_country_name = BOLORI_ORSUN_ULS_NAME
+    }
+    TI3 = {
+        override_country_name = "Kabulian Orsun Uls"
+        override_country_name = KABULIAN_ORSUN_ULS_NAME
+    }
+    KJT = {
+        override_country_name = "Kanjut Orsun Uls"
+        override_country_name = KANJUT_ORSUN_ULS_NAME
+    }
+    SK1 = {
+        override_country_name = "Balti Orsun Uls"
+        override_country_name = BALTI_ORSUN_ULS_NAME
+    }
+    FEO = {
+        override_country_name = "East Gothic Orsun Uls"
+        override_country_name = EAST_GOTHIC_ORSUN_ULS_NAME
+    }
+    ALH = {
+        override_country_name = "Haasan Orsun Uls"
+        override_country_name = HAASAN_ORSUN_ULS_NAME
+    }
+    YAS = {
+        override_country_name = "Yassite Orsun Uls"
+        override_country_name = YASSITE_ORSUN_ULS_NAME
+    }
+    MLW = {
+        override_country_name = "Malwi Orsun Uls"
+        override_country_name = MALWI_ORSUN_ULS_NAME
+    }
+    GUG = {
+        override_country_name = "Guge Orsun Uls"
+        override_country_name = GUGE_ORSUN_ULS_NAME
+    }
+    LDK = {
+        override_country_name = "Ladakhi Orsun Uls"
+        override_country_name = LADAKHI_ORSUN_ULS_NAME
+    }
+    ARL = {
+        override_country_name = "Safavid Orsun Uls"
+    }
+    # Tributaries | Dagulagch Uls means "follower" and is a looser form of tributary than jimi states 
+
+    ### Trade Oriented Subjects ###
+    # Trade Outposts | Naimaach Uls means trade or deal. So a Treaty State / Treaty Port or Trade Outpost.
+    K00 = {
+        override_country_name = "Chauli Naimaach Uls"
+    }
+
+    ### Naval Subjects ###
+    # Pirates
+    GOT = {
+        override_country_name = "Raiders of Gotland"
+        override_country_name = RAIDERS_OF_GOTLAND_NAME
+    }
+    WOK = {
+        override_country_name = "Wokou Pirates"
+    }
+    # Naval Marches
+    ORM = {
+        override_country_name = "Hormuz Naval Horde"
+        override_country_name = HORMUZ_NAVAL_HORDE_NAME
+    }
+}
+
+
+# Spain 
+ROOT = {
+    ROOT = {
+        override_country_name = IBERIAN_EMPIRE_NAME
+        override_country_name = "Holy Iberian Universal Empire"
+        override_country_name = HOLY_IBERIAN_EMPIRE_NAME
+    }
+    DI3 = {
+        override_country_name = IBERIAN_INDIA_NAME
+    }
+    K07 = {
+        override_country_name = IBERIAN_EAST_AFRICA_NAME
+    }
+    TUN = {
+        override_country_name = IBERIAN_LIBYA_NAME
+    }
+    MOR = {
+        override_country_name = IBERIAN_MOROCCO_NAME
+    }
+    # Commercial Enterprises
+    NED = {
+        override_country_name = IBERIAN_LOWLANDS_NAME
+    }
+    # Real Unions
+    HAB = {
+        override_country_name = "Imperial Iberian Austria"
+    }
+    NAP = {
+        override_country_name = "Imperial Iberian Italy"
+    }
+    SIC = {
+        override_country_name = "Imperial Iberian Sicily"
+    }
+    BUR = {
+        override_country_name = "Imperial Iberian France"
+    }
+    # integrated personal unions
+    ETH = {
+        override_country_name = "Iberian Ethiopian Empire"
+    }
+    ENG = {
+        override_country_name = "Iberian Kingdom of England"
+    }
+    SCO = {
+        override_country_name = "Iberian Kingdom of Scotland"
+    }
+    GRE = {
+        override_country_name = "Iberian Kingdom of Greece"
+    }
+    # Brother Kingdoms
+    EGY = {
+        override_country_name = "Iberian Egyptian Vassal Empire"
+    }
+    IRE = {
+        override_country_name = "Iberian Irish Vassal Kingdom"
+    }
+    DAN = {
+        override_country_name = "Iberian Danish Vassal Kingdom"
+    }
+    # Banking Clans
+    HSA = {
+        override_country_name = "Iberian Hanseatic Banking League"
+    }
+    # Pagan Chiefdoms
+    CRI = {
+        override_country_name = "Iberian Crimean Horde"
+    }
+    NUB = {
+        override_country_name = "Iberian Nubian Horde"
+    }
+    # Peasant Vassals | Commune or People's Republic
+    DTT = {
+        override_country_name = "Iberian Dithmarschen Commune"
+    }
+    # Vikings
+    ICE = {
+        override_country_name = "Iberian Icelandic Raiders"
+    }
+    K19 = {
+        override_country_name = "Iberian Greenlandic Raiders"
+    }
+    # Private Enterprise
+    # Imperial in title implies directly owned by the Iberian State / Crown
+    NOV = {
+        override_country_name = "Imperial Iberian Novgorod Company"
+    }
+    # Commercial Enterprises
+    # Iberian in title implies a company fully subject to the Iberian Empire but potentially sells shares to private investors
+    K17 = {
+        override_country_name = "Iberian Siberian Trading Company"
+    }
+    # Administrative Regions
+    NED = {
+        override_country_name = "Imperial Iberian Lowlands"
+    }
+    # Native Reserves
+    SHM = {
+        override_country_name = "Iberian Arab Tribes"
+    }
+    # Revolution Subject as a slave state / penal state
+    BUL = {
+        override_country_name = "Bulgarian Concentration Camp"
+    }
+    # Marches
+    LVC = {
+        override_country_name = "The Panopticon"
+    }
+}
+
