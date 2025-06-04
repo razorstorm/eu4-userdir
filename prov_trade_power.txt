@@ -1,4 +1,4 @@
-CAPITAL_SCOPE = {
+2992 = {
     add_province_modifier = {
         name = province_trade_power_modifier_cheat
         duration = -1

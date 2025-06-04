@@ -4,50 +4,73 @@
 log = "===============================Running Prov.txt=========================================="
 
 
-# change_price = {
-#     trade_goods = silk
-#     key = PERSIA_SILK_MONOPOLIZATION
-#     value = 1.5
-#     duration = -1
-# }
 
-# Remove foreign cores from every country: Very laggy so turned off by default. Turn to true if you want to run it.
-
-
-
-
-MNG = {
-    every_subject_country {
-        limit = {
-            is_subject_of_type = tributary
-        }
-
-        restore_country_color = yes
-    }
-    every_subject_country {
-        limit = {
-            NOT = {
-                is_subject_of_type = tributary
-            }
-        }
-
-        change_country_color = {
-            country = MNG
-        }
-    }
+# Template for adding modifierS
+add_country_modifier = {
+    name = jason_global_foreign_trade_power_cheat_10000
+    duration = -1
 }
+
+
 
 ####################################################################################
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
-add_country_modifier = {
-    name = hf_city_massacre
-    duration = -1
+
+change_asha_vahishta = { value = 200 }
+
+# add_government_power = {
+#     mechanic_type = the_three_royal_fires_mechanic
+#     power_type = adur_burzhen_mihr
+#     value = 100
+# }
+# add_government_power = {
+#     mechanic_type = the_three_royal_fires_mechanic
+#     power_type = adur_farnbag
+#     value = 100
+# }
+
+every_province = {
+    limit = {
+        OR = {
+            region = west_siberia_region
+            region = east_siberia_region
+            region = mongolia_region
+            region = manchuria_region
+        }
+        NOT = {
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+        # is_colony = yes 
+        is_empty = no
+        is_city = no
+    }
+
+    log = "Colonial prov to be removed = [This.GetName]"
+    decolonize = this
 }
 
-clr_country_flag = remove_foreign_cores_and_claims
-# Turn this on to remove foreign cores and claims from all countries
-# set_country_flag = remove_foreign_cores_and_claims
+
+if = {
+    limit = {
+        NOT = {
+            employed_advisor = {
+                category = DIP
+                type = trader
+            }
+        }
+    }
+    if = {
+        add_treasury = -400
+        hire_advisor = {
+            type = trader
+            skill = 5
+        }
+    } 
+}
 
 
 ####################################################################################
@@ -111,10 +134,9 @@ clr_country_flag = remove_foreign_cores_and_claims
 # Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
 ####################################################################################
 
-
 # Colors
 ROOT = {
-    QOM = {
+    MLC = {
         change_country_color = {
 
         }
@@ -128,30 +150,17 @@ ROOT = {
         # color = { 57 123 176 }
         color = { 90 90 230 }
     }
-    ORM = {
-        clr_country_flag = dominion_color_1
-        clr_country_flag = dominion_color_2
-        clr_country_flag = dominion_color_3
 
-        set_country_flag = dominion_color_2
-    }
-    OMA = {
-        clr_country_flag = dominion_color_1
-        clr_country_flag = dominion_color_2
-        clr_country_flag = dominion_color_3
-
-        set_country_flag = dominion_color_1
-    }
-    YEM = {
-        clr_country_flag = dominion_color_1
-        clr_country_flag = dominion_color_2
-        clr_country_flag = dominion_color_3
-
-        set_country_flag = dominion_color_3
-    }
-
-    # Cycling colors
+    # Cycling colors for Satrapies
     ROOT = {
+        JMB = {
+            clr_country_flag = dominion_color_1
+            clr_country_flag = dominion_color_2
+            clr_country_flag = dominion_color_3
+
+            set_country_flag = dominion_color_1
+        }
+
         every_subject_country = {
             limit = {
                 OR = {
@@ -188,7 +197,7 @@ ROOT = {
             }
             change_country_color = {
                 # color = { 180 160 0 }
-                color = { 100 100 255 }
+                color = { 105 105 255 }
             }
         }
         every_subject_country = {
@@ -196,7 +205,7 @@ ROOT = {
                 has_country_flag = dominion_color_2
             }
             change_country_color = {
-                color = { 110 110 250 }
+                color = { 115 115 250 }
             }
         } 
         every_subject_country = {
@@ -204,8 +213,87 @@ ROOT = {
                 has_country_flag = dominion_color_3
             }
             change_country_color = {
-                color = { 120 120 240 }
+                color = { 125 125 245 }
             }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                # Horde Satrapies
+                is_subject_of_type = pagan_chiefdom
+            }
+        }
+        change_country_color = {
+            color = { 110 90 150 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = real_union_subject
+                is_subject_of_type = administrative_region
+            }
+        }
+        change_country_color = {
+            color = { 90 90 230 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = se_integrated_personal_union
+            }
+        }
+        change_country_color = {
+            color = { 120 120 240 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = commercial_enterprise
+            }
+        }
+        change_country_color = {
+            color = { 180 230 255 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = trade_outpost
+            }
+        }
+        change_country_color = {
+            color = { 210 210 255 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = naval_march
+                is_subject_of_type = pirate_brotherhood_vassal
+            }
+        }
+        change_country_color = {
+            color = { 0 70 255 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = imperial_city
+            }
+        }
+        change_country_color = {
+            color = { 75 75 255 }
         }
     }
             
@@ -216,7 +304,19 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 200 200 255 }
+            color = { 160 160 255 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+            }
+        }
+        change_country_color = {
+            color = { 140 140 180 }
         }
     }
 
@@ -236,6 +336,7 @@ ROOT = {
         limit = {
             OR = {
                 is_subject_of_type = vassal
+                is_subject_of_type = fief_subject
             }
         }
         change_country_color = {
@@ -250,21 +351,9 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 160 60 220 }
+            color = { 130 40 220 }
         }
     }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = pagan_chiefdom
-            }
-        }
-        change_country_color = {
-            color = { 110 90 150 }
-        }
-    }
-
     every_subject_country = {
         limit = {
             OR = {
@@ -272,11 +361,11 @@ ROOT = {
             }
         }
         change_country_color = {
-            # color = { 160 60 220 }
-            color = { 120 30 180 }
+            color = { 110 20 170 }
         }
     }
-    
+
+   
     every_subject_country = {
         limit = {
             OR = {
@@ -284,8 +373,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            # color = { 160 60 220 }
-            color = { 130 130 245 }
+            color = { 150 150 200 }
         }
     }
 
@@ -296,8 +384,29 @@ ROOT = {
             }
         }
         change_country_color = {
-            # color = { 160 60 220 }
             color = { 180 180 255 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tributary
+            }
+        }
+        change_country_color = {
+            color = { 126 87 198 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = protectorate
+            }
+        }
+        change_country_color = {
+            color = { 190 190 255 }
         }
     }
 
@@ -305,16 +414,54 @@ ROOT = {
 
 # Names
 ROOT = {
-    CIR = {
-        override_country_name = "North Caucasia"
-    }    
-    GEO = {
-        override_country_name = "South Caucasia"
+    # Integrated Personal Unions 
+    ETH = {
+        override_country_name = "Persian Sub-Empire of Ethiopia"
     }
-
-    # Satrapies
+    # Real Unions
+    TUS = {
+        override_country_name = "Persian Tuscany"
+    }
+    # Marches | Marzbanate for Marcher Satrapies
+    KHA = {
+        override_country_name = "Marzbanate of Mongols"
+    } 
+    DAI = {
+        override_country_name = "Marzbanate of Viets"
+    }
+    KOR = {
+        override_country_name = "Marzbanate of the Joseon"
+    } 
+    # Defensive Marches | Ispahbud for Semi-autonomous Marches
+    CIR = {
+        override_country_name = "Ispahbud of Caucasia"
+    }   
+    # Naval Marches | Marzbanate for Marcher Satrapies
+    CYP = {
+        override_country_name = "Military Port of Cyprus"
+    }   
+    
+    # External Satrapies | Internal satrapies are fully annexed provinces
+    K10 = {
+        override_country_name = "Satrapy of Central Africa"
+    }
+    PAT = {
+        override_country_name = "Satrapy of Pattani"
+    }
+    JMB = {
+        override_country_name = "Satrapy of Jambi"
+    }
+    IND = {
+        override_country_name = "Satrapy of Indrapura"
+    }
+    DLI = {
+        override_country_name = "Satrapy of Deli"
+    }
     ORM = {
         override_country_name = "Satrapy of East Arabia"
+    }
+    KHM = {
+        override_country_name = "Satrapy of Khmer"
     }
     OMA = {
         override_country_name = "Satrapy of Oman"
@@ -325,29 +472,164 @@ ROOT = {
     KAR = {
         override_country_name = "Satrapy of Karaman"
     }
-    AST = {
-        override_country_name = "Satrapy of Astrakhan"
+    ASS = {
+        override_country_name = "Satrapy of Assam"
+    }
+    MLW = {
+        override_country_name = "Satrapy of Malwa"
+    }
+    K00 = {
+        override_country_name = "Satrapy of Upper Volga"
+    }
+    ORI = {
+        override_country_name = "Satrapy of Orissa"
+    }
+    JNP = {
+        override_country_name = "Satrapy of Jaunpur"
+    }
+    AHM = {
+        override_country_name = "Satrapy of The Deccan"
+    }
+    GOC = {
+        override_country_name = "Satrapy of Golkond"
+    }
+    ADA = {
+        override_country_name = "Satrapy of Adal"
+    }
+    SYG = {
+        override_country_name = "Satrapy of Turkestan"
+    }
+    KOJ = {
+        override_country_name = "Satrapy of The Levant"
+    }
+    EGY = {
+        override_country_name = "Satrapy of Egypt"
+    }
+    K03 = {
+        override_country_name = "Satrapy of Libya"
+    }
+    K04 = {
+        override_country_name = "Satrapy of Ethiopia"
+    }
+    HED = {
+        override_country_name = "Satrapy of The Hejaz"
+    }
+    KND = {
+        override_country_name = "Satrapy of Ceylon"
+    }
+    VIJ = {
+        override_country_name = "Satrapy of Vijayanagar"
+    }
+    K06 = {
+        override_country_name = "Satrapy of Maidan"
+    }
+    SOM = {
+        override_country_name = "Satrapy of Somalia"
+    }
+    BNG = {
+        override_country_name = "Satrapy of Bengal"
+    }
+    LXA = {
+        override_country_name = "Satrapy of Lan Xang"
+    }
+    KAM = {
+        override_country_name = "Satrapy of Kham"
+    }
+    AJU = {
+        override_country_name = "Satrapy of Ajuuraan"
+    }
+    GEN = {
+        override_country_name = "Satrapy of Genoa"
+    }
+    CSH = {
+        override_country_name = "Satrapy of the Shun Dynasty"
+    }
+    ZUN = {
+        override_country_name = "Satrapy of Dzungaria"
+    }
+    
+    # Commercial Enterprises
+    K07 = {
+        override_country_name = "Siberian Commercial Charter"
     }
 
-    # tb_minister_resident
+    # Trade Outposts
+    K12 = {
+        override_country_name = "Trade Port of Singapore"
+    }
+    LFA = {
+        override_country_name = "Trade Port of Lanfang"
+    }
+
+    # Imperial Cities | Shahr meaning city
+    AST = {
+        override_country_name = "Shahr-e Azov"
+    }
+    GOA = {
+        override_country_name = "Shahr-e Goa"
+    }
+    
+    # tb_minister_resident Tibetan minister
     TIB = {
         override_country_name = "Himalayan Autonomous Region"
     }
-
-    # Pagan Chiefdoms (Hordes)
+    
+    # Pagan Chiefdoms (Hordes) | Ordate meaning something akin to "Horde Polity"
     NOG = {
-        override_country_name = "Nogai Sub-Horde"
-    }
-    KZH = {
-        override_country_name = "Kazakh Sub-Horde"
+        override_country_name = "Ordaty of Nogais"
     }
     SHY = {
-        override_country_name = "Uzbek Sub-Horde"
+        override_country_name = "Ordaty of Uzbeks"
+    }
+    KAZ = {
+        override_country_name = "Ordaty of Kazans"
+    }
+    KZH = {
+        override_country_name = "Ordaty of Kazakhs"
+    }
+    HHH = {
+        override_country_name = "Ordaty of Skewbald"
+    }
+    K08 = {
+        override_country_name = "Ordaty of Tataria"
+    }
+    CRI = {
+        override_country_name = "Ordaty of Crimea"
+    }
+    BRT = {
+        override_country_name = "Ordaty of Buryat"
     }
 
     # Native Reservations
     NAJ = {
         override_country_name = "Arab Tribes"
+    }
+    SIB = {
+        override_country_name = "Sibirian Tribes"
+    }
+    PRM = {
+        override_country_name = "Permian Tribes"
+    }
+    GUJ = {
+        override_country_name = "Gujarati Reservation"
+    }
+    CHU = {
+        override_country_name = "Chukchi Reservation"
+    }
+
+    # Protectorates
+    WUU = {
+        override_country_name = "Protectorate of the Wu Dynasty"
+    }
+
+    # Tropical Resort
+    DGL = {
+        override_country_name = "Resort of the Maldives"
+    }
+
+    # Dominions
+    ZIM = {
+        override_country_name = "Zimbabwean Gold Mines"
     }
 }
 
@@ -388,6 +670,19 @@ ROOT = {
     every_subject_country = {
         every_owned_province = {
             discover_country = ROOT
+        }
+    }
+    every_subject_country = {
+        save_event_target_as = subject_country
+        ROOT = {
+            every_subject_country = {
+                every_owned_province = {
+                    discover_country = event_target:subject_country
+                }
+            }
+            every_owned_province = {
+                discover_country = event_target:subject_country
+            }
         }
     }
 
@@ -1059,7 +1354,6 @@ ROOT = {
                 log = "Removing Subject core/claim from [This.GetName]"
                 remove_core = event_target:subject
                 remove_claim = event_target:subject
-                # remove_permanent_claim = event_target:subject
             }
         }
         every_owned_province = {
@@ -1074,31 +1368,6 @@ ROOT = {
             log = "Removing Root core/claim from subject in [This.GetName]"
             remove_core = ROOT
             remove_claim = ROOT
-            # remove_permanent_claim = ROOT
-        }
-    }
-
-    # Removing ALL foreign cores and claims from root. This is slow, will be disabled by default. Set country flag remove_foreign_cores_and_claims to enable.
-    if = {
-        limit = {
-            has_country_flag = remove_foreign_cores_and_claims
-        }
-        every_country = {
-            limit = {
-                NOT = {
-                    # tag = PER
-                    tag = ROOT
-                }
-            }
-            save_event_target_as = foreign_country
-            ROOT = {
-                every_owned_province = {
-                    remove_core = event_target:foreign_country 
-                    remove_claim = event_target:foreign_country
-                    remove_permanent_claim = event_target:foreign_country
-                    log = "Removing foreign cores from [This.GetName] for [event_target:foreign_country]"
-                }
-            }
         }
     }
 }
@@ -1153,7 +1422,12 @@ ROOT = {
 ROOT = {
     if = {
         limit = {
-            has_consort = no
+            OR = {
+                has_consort = no
+                NOT = { consort_adm = 6 }
+                NOT = { consort_dip = 6 }
+                NOT = { consort_mil = 6 }
+            }
         }
 
         define_consort = {
@@ -1169,7 +1443,12 @@ ROOT = {
 
     if = {
         limit = {
-            has_heir = no
+            OR = {
+                has_heir = no
+                NOT = { heir_adm = 6 }
+                NOT = { heir_dip = 6 }
+                NOT = { heir_mil = 6 }
+            }
         }
 
         define_heir = {
@@ -1184,27 +1463,35 @@ ROOT = {
 
         add_heir_personality = immortal_personality
     }
-
+    
     if = {
         limit = {
             NOT = {
-                OR = {
-                    has_country_flag = fee_events_for_student_of_language_active 
-                    has_ruler_flag = fee_events_for_student_of_language_completed 
-                }
+                has_country_flag = fee_events_for_student_of_language_active 
+            }
+            NOT = {
+                has_ruler_modifier = fee_advisor_multilingual_ruler
             }
         }
-        log = "Running FEE_Advisor_Event.15"
-        country_event = { id = FEE_Advisor_Event.14 }
+        add_ruler_modifier = {
+            name = fee_ruler_trait_diligent
+            duration = -1
+        }
+        add_ruler_modifier = {
+            name = fee_ruler_trait_patient
+            duration = -1
+        }
         add_ruler_modifier = {
 			name = fee_advisor_student_language
 			duration = -1
 		}
-
+        add_ruler_modifier = {
+			name = fee_advisor_multilingual_ruler
+			duration = -1
+		}
         set_country_flag = fee_events_for_student_of_language_active
-        country_event = { id = FEE_Advisor_Event.15 }
 
-        log = "Finished running FEE_Advisor_Event.15"
+        log = "Finished running FEE_Advisor_Event.17"
     }
     if = {
         limit = {
@@ -1236,10 +1523,13 @@ ROOT = {
 }
 
 ####################################################################################
-# Golden Age
+# Golden Age + Hegemony
 ####################################################################################
 
-extend_golden_age = 12 # 1 more year
+ROOT = {
+    extend_golden_age = 12 # 1 more year
+    remove_country_modifier = lost_hegemony
+}
 
 ####################################################################################
 # Creating Homeguard Generals
@@ -1359,13 +1649,14 @@ ROOT = {
         }
     }
 
-
-
     # CoT Upgrades and free prov trade power after X year
     ROOT = {
         if = {
             limit = {
-                is_year = 1600
+                OR = {
+                    is_year = 1600
+                    current_income_balance = 9000
+                }
             }
             every_owned_province = {
                 limit = {
@@ -2089,7 +2380,11 @@ ROOT = {
 
 # ===== Pax Solis Specific ==============
 ROOT = {
-
+    remove_country_modifier = hf_estate_int_cool_down_trade
+    remove_country_modifier = hf_estate_int_cool_down_economy
+    remove_country_modifier = hf_estate_int_cool_down_tax
+    remove_country_modifier = hf_estate_int_cool_down_religion
+    remove_country_modifier = hf_estate_int_cool_down_population
     # Intelligentsia
     add_estate_loyalty = {
         estate = estate_intelligentsia
@@ -2115,7 +2410,7 @@ ROOT = {
         limit = {
             is_year = 1500
         }
-        log = "Adding University to all provinces"
+        # log = "Adding University to all provinces"
         every_owned_province = {
             limit = { 
                 NOT = {
@@ -2136,6 +2431,20 @@ ROOT = {
             add_building = university
         }
     }
+
+    # Fixing stupid pax solis bug that causes chinese events to fire on non chinese tags
+    every_owned_province = {
+        add_country_modifier = {
+            name = hf_jianbing_modifier
+            duration = -1
+        }
+    }
+
+    add_country_modifier = {
+        name = hf_city_massacre
+        duration = -1
+    }
+
 
     # Pax Solis Auto Set Town Sizes
     every_owned_province = {

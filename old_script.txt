@@ -646,6 +646,26 @@ every_country = {
 # }
 
 
+#  Adding trade power to certain provinces
+
+every_owned_province = {
+    limit = {
+        OR = {
+            province_id = 285
+            province_id = 2410
+            province_id = 284
+            province_id = 6741
+        }
+    }
+    set_base_tax = 20
+    set_base_production = 25
+    set_base_manpower = 15
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat_10k
+        duration = -1
+    }
+    change_trade_goods = silk
+}
 
 
 
@@ -4738,3 +4758,16 @@ every_country = {
         }
     }
 }
+
+
+
+# Changing cultures by culture
+every_owned_province = {
+    limit = {
+        culture = kirgiz
+    }
+
+    change_culture = ROOT
+    change_religion = ROOT
+}
+
