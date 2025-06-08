@@ -1,0 +1,129 @@
+
+####################################################################################
+# Center of Trade Upgrades | cot.txt
+####################################################################################
+
+ROOT = {
+    every_owned_province = {
+        limit = {
+            province_has_center_of_trade_of_level = 1
+            NOT = {
+                province_has_center_of_trade_of_level = 2
+            }
+            ROOT = {
+                treasury = 200
+            }
+        }
+        add_center_of_trade_level = 1
+        owner = {
+            add_treasury = -200
+        }
+    }
+
+    every_subject_country = {
+        every_owned_province = {
+            limit = {
+                province_has_center_of_trade_of_level = 1
+                NOT = {
+                    province_has_center_of_trade_of_level = 2
+                }
+                ROOT = {
+                    treasury = 200
+                }
+            }
+            add_center_of_trade_level = 1
+            ROOT = {
+                add_treasury = -200
+            }
+        }
+    }
+
+    # CoT Upgrades and free prov trade power after X year
+    ROOT = {
+        if = {
+            limit = {
+                OR = {
+                    is_year = 1600
+                    current_income_balance = 9000
+                }
+            }
+            every_owned_province = {
+                limit = {
+                    province_has_center_of_trade_of_level = 1
+                }
+                add_province_modifier = {
+                    name = province_trade_power_modifier_cheat
+                    duration = -1
+                }
+                set_local_autonomy = 0
+                if = {
+                    limit = {
+                        NOT = {
+                            base_production = 30
+                        }
+                    }
+                    set_base_production = 30
+                }
+            }
+            every_subject_country = {
+                every_owned_province = {
+                    limit = {
+                        province_has_center_of_trade_of_level = 1
+                    }
+                    add_province_modifier = {
+                        name = province_trade_power_modifier_cheat
+                        duration = -1
+                    }
+                    set_local_autonomy = 0
+                    if = {
+                        limit = {
+                            NOT = {
+                                base_production = 30
+                            }
+                        }
+                        set_base_production = 30
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_year = 1500
+            }
+
+            every_owned_province = {
+                limit = {
+                    province_has_center_of_trade_of_level = 2
+                    NOT = {
+                        province_has_center_of_trade_of_level = 3
+                    }
+                    ROOT = {
+                        treasury = 1000
+                    }
+                }
+                add_center_of_trade_level = 1
+                ROOT = {
+                    add_treasury = -1000
+                }
+            }
+
+            every_subject_country = {
+                every_owned_province = {
+                    limit = {
+                        province_has_center_of_trade_of_level = 2
+                        NOT = {
+                            province_has_center_of_trade_of_level = 3
+                        }
+                        ROOT = {
+                            treasury = 1000
+                        }
+                    }
+                    add_center_of_trade_level = 1
+                    ROOT = {
+                        add_treasury = -1000
+                    }
+                }
+            }
+        }
+    }
+}

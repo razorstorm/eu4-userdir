@@ -1,0 +1,18 @@
+every_owned_province = {
+    add_province_modifier = {
+        name = province_trade_power_modifier_cheat
+        duration = -1
+    }
+    set_local_autonomy = 0
+}
+
+every_subject_country = {
+    every_owned_province = {
+        add_province_modifier = {
+            name = province_trade_power_modifier_cheat
+            duration = -1
+        }
+    }
+    set_local_autonomy = 0
+}
+

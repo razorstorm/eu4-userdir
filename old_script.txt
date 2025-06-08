@@ -1453,6 +1453,27 @@ create_advisor = court_mage
     }
 }
 
+# Make everyone else have no trade power
+every_country = {
+    limit = {
+        NOT = {
+            tag = ROOT
+            is_subject_of = ROOT
+        }
+    }
+    add_country_modifier = {
+        name = jason_global_own_trade_power_reduction_10000
+        duration = -1
+    }
+    add_country_modifier = {
+        name = jason_global_foreign_trade_power_reduction_10000
+        duration = -1
+    }
+    log = "Running for country [This.GetName]"
+}
+
+
+
 every_country = {
     remove_opinion = {
         who = ROOT
@@ -4770,4 +4791,78 @@ every_owned_province = {
     change_culture = ROOT
     change_religion = ROOT
 }
+
+
+# Persian Gov
+change_asha_vahishta = { value = 200 }
+add_government_power = {
+    mechanic_type = the_three_royal_fires_mechanic
+    power_type = adur_burzhen_mihr
+    value = 100
+}
+add_government_power = {
+    mechanic_type = the_three_royal_fires_mechanic
+    power_type = adur_farnbag
+    value = 100
+}
+
+# Decolonize other peoples colonies
+every_province = {
+    limit = {
+        OR = {
+            region = west_siberia_region
+            region = east_siberia_region
+            region = mongolia_region
+            region = manchuria_region
+        }
+        NOT = {
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+        # is_colony = yes 
+        is_empty = no
+        is_city = no
+    }
+
+    log = "Colonial prov to be removed = [This.GetName]"
+    decolonize = this
+}
+
+
+# Remove other country royal family
+every_country = {
+    limit = {
+        NOT = {
+            tag = PER
+        }
+        NOT = {
+            is_subject_of = ROOT
+        }
+    }
+    log = "Country [This.GetName] is not a subject of [ROOT.GetName]"
+    remove_consort = yes
+    kill_heir = {}
+}
+
+
+# Reduce overdevved provinces
+
+
+
+every_province = {
+    limit = {
+        base_production = 100
+        NOT = {
+            province_id = 429
+        }
+        NOT = {
+            province_id = 428
+        }
+    }
+    log = "Province [This.GetName] has [This.GetBaseProduction] base production"
+    set_base_production = 50
+}
+
 

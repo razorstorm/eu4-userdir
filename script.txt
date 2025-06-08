@@ -1,3 +1,2 @@
-6163 = {
-    change_trade_goods = gold
-}
+
+marry_everyone = yes

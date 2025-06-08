@@ -75,6 +75,20 @@ every_owned_province = {
     }
 }
 
+every_owned_province = {
+    limit = {
+        NOT = {
+            has_building = brothel
+        }
+        ROOT = {
+            treasury = 127
+        }
+    }
+    add_building = brothel
+    ROOT = {
+        add_treasury = -127
+    }
+}
 
 
 every_subject_country = {
@@ -152,5 +166,21 @@ every_subject_country = {
             add_treasury = -135
         }
     }
+
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = brothel
+            }
+            ROOT = {
+                treasury = 127
+            }
+        }
+        add_building = brothel
+        ROOT = {
+            add_treasury = -127
+        }
+    }
+    
 
 }

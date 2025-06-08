@@ -6,4 +6,6 @@ capital_scope = {
     set_base_tax = 20
     set_base_production = 25
     set_base_manpower = 15
+
+    change_trade_goods = diamonds
 }
