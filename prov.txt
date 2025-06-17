@@ -8,97 +8,29 @@ log = "===============================Running Prov.txt==========================
 # is_core
 # province_id
 
-
 remove_country_modifier = jason_global_own_trade_power_cheat_500
 # Template for adding modifierS
 add_country_modifier = {
-    name = jason_mod_more_ls
+    name = elephants_in_europe
     duration = -1
 }
 
+4283 = {
+    prov_trade_power = yes
+}
 
+# Diamonds
 every_owned_province = {
-    add_province_modifier = {
-        name = jason_mod_more_manufactories
-        duration = -1
-    }
-}
-every_province = {
     limit = {
-        OR = {
-            owned_by = ROOT 
-            owner = {
-                is_subject_of = ROOT
-            }
+        is_specific_diamond_staked_province = yes
+        NOT = {
+            # Ignore provinces that are already highly devved 
+            base_production = 25
         }
-        OR = {
-            province_id = 849
-            province_id = 2629
-            province_id = 4572
-            province_id = 2626
-            province_id = 2615
-            province_id = 4571
-            province_id = 2645
-            province_id = 852
-            province_id = 4570
-            province_id = 2877
-            province_id = 2863
-            province_id = 2770
-            province_id = 2002
-            province_id = 2865
-            province_id = 2866
-            province_id = 786
-            province_id = 2868
-            province_id = 775
-            province_id = 2878
-            province_id = 2854
-            province_id = 2834
-            province_id = 810
-            province_id = 2901
-            province_id = 2904
-            province_id = 2903
-            province_id = 2893
-            province_id = 2919
-            province_id = 758
-            province_id = 2905
-            province_id = 2908
-            province_id = 2891
-            province_id = 2860
-            province_id = 2915
-            province_id = 2925
-            province_id = 2911
-            province_id = 2853
-            province_id = 2935
-            province_id = 2934
-            province_id = 2889
-            province_id = 2930
-            province_id = 2859
-            province_id = 2946
-            province_id = 2873
-            province_id = 765
-            province_id = 2902
-            province_id = 799
-            province_id = 804
-            province_id = 795
-            province_id = 2941
-            province_id = 793
-            province_id = 2839
-            province_id = 791
-            province_id = 2841
-            province_id = 780
-            province_id = 792
-            province_id = 814
-            province_id = 2826
-            province_id = 812
-            province_id = 813
-            province_id = 2822
-            province_id = 2836
-            province_id = 2945
-            province_id = 815
-        } 
     }
-    change_trade_goods = gold
+    set_high_dev_resource_gathering_operation = yes
 }
+
 
 
 
@@ -106,12 +38,18 @@ every_province = {
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
-change_asha_vahishta = { value = 200 }
+
+every_owned_province= {
+    limit = {
+        is_specific_gold_staked_province = yes
+    }
+    change_religion = ROOT
+    set_local_autonomy = 0
+}
+
 every_subject_country = {
     add_tariff_value = 1000
 }
-
-
 
 
 ####################################################################################
@@ -126,14 +64,14 @@ ROOT = {
     while = {
         limit = {
             NOT = {
-                num_of_colonies = 200
+                num_of_colonies = 0
                 # num_of_colonies = 0
             }
             NOT = {
                 # TODO add early exit for when no more eligible provinces
                 check_variable = {
                     which = colonyCounter
-                    value = 200
+                    value = 50
                 }
             }
         }
@@ -141,7 +79,7 @@ ROOT = {
             which = colonyCounter
             value = 1
         }
-        log = "Loop iteration [colonyCounter.GetValue]"
+        # log = "Loop iteration [colonyCounter.GetValue]"
         random_province = {
             limit = {
                 # OR = {
@@ -177,8 +115,9 @@ ROOT = {
 
 # Colors
 ROOT = {
-    JP1 = {
-        change_country_color = { country = JAP }
+    RAS = {
+        change_country_color = {
+        }
     }
     # every_subject_country = {
     #   restore_country_color = yes
@@ -186,215 +125,98 @@ ROOT = {
     # restore_country_color = yes
 
     change_country_color = {
-        # color = { 57 123 176 }
-        color = { 90 90 230 }
+        # color = { 90 90 230 }
+        color = { 230 10 20 }
     }
 
     # Cycling colors for Satrapies
-    ROOT = {
-        KHM = {
-            clr_country_flag = dominion_color_1
-            clr_country_flag = dominion_color_2
-            clr_country_flag = dominion_color_3
+    # ROOT = {
+    #     KHM = {
+    #         clr_country_flag = dominion_color_1
+    #         clr_country_flag = dominion_color_2
+    #         clr_country_flag = dominion_color_3
 
-            set_country_flag = dominion_color_3
-        }
+    #         set_country_flag = dominion_color_3
+    #     }
 
-        every_subject_country = {
-            limit = {
-                OR = {
-                    is_subject_of_type = persian_satrapy
-                }
-                NOT = {
-                    OR = {
-                        has_country_flag = dominion_color_1
-                        has_country_flag = dominion_color_2
-                        has_country_flag = dominion_color_3
-                    }
-                }
-            }
-            random_list = {
-                33 = {
-                    set_country_flag = dominion_color_1
-                    log = "Setting dominion_color_1 to [This.GetName]"
-                }
-                33 = {
-                    set_country_flag = dominion_color_2
-                    log = "Setting dominion_color_2 to [This.GetName]"
-                }
-                33 = {
-                    set_country_flag = dominion_color_3
-                    log = "Setting dominion_color_3 to [This.GetName]"
-                }
-            }
-        }
+    #     every_subject_country = {
+    #         limit = {
+    #             OR = {
+    #                 is_subject_of_type = persian_satrapy
+    #             }
+    #             NOT = {
+    #                 OR = {
+    #                     has_country_flag = dominion_color_1
+    #                     has_country_flag = dominion_color_2
+    #                     has_country_flag = dominion_color_3
+    #                 }
+    #             }
+    #         }
+    #         random_list = {
+    #             33 = {
+    #                 set_country_flag = dominion_color_1
+    #                 log = "Setting dominion_color_1 to [This.GetName]"
+    #             }
+    #             33 = {
+    #                 set_country_flag = dominion_color_2
+    #                 log = "Setting dominion_color_2 to [This.GetName]"
+    #             }
+    #             33 = {
+    #                 set_country_flag = dominion_color_3
+    #                 log = "Setting dominion_color_3 to [This.GetName]"
+    #             }
+    #         }
+    #     }
 
-        # ================== Finished setting flags, actually change colors now ===============================================
-        every_subject_country = {
-            limit = {
-                has_country_flag = dominion_color_1
-            }
-            change_country_color = {
-                # color = { 180 160 0 }
-                color = { 105 105 255 }
-            }
-        }
-        every_subject_country = {
-            limit = {
-                has_country_flag = dominion_color_2
-            }
-            change_country_color = {
-                color = { 115 115 250 }
-            }
-        } 
-        every_subject_country = {
-            limit = {
-                has_country_flag = dominion_color_3
-            }
-            change_country_color = {
-                color = { 125 125 245 }
-            }
-        }
-    }
-
-    # To make satrapies all the same color
-    every_subject_country = {
-        limit = {
-            is_subject_of_type = persian_satrapy
-        }
-        change_country_color = {
-            # color = { 115 115 250 }
-            color = { 105 105 255 }
-        }
-    } 
-    every_subject_country = {
-        limit = {
-            OR = {
-                # Horde Satrapies
-                is_subject_of_type = pagan_chiefdom
-            }
-        }
-        change_country_color = {
-            color = { 110 90 150 }
-        }
-    }
+    #     # ================== Finished setting flags, actually change colors now ===============================================
+    #     every_subject_country = {
+    #         limit = {
+    #             has_country_flag = dominion_color_1
+    #         }
+    #         change_country_color = {
+    #             # color = { 180 160 0 }
+    #             color = { 105 105 255 }
+    #         }
+    #     }
+    #     every_subject_country = {
+    #         limit = {
+    #             has_country_flag = dominion_color_2
+    #         }
+    #         change_country_color = {
+    #             color = { 115 115 250 }
+    #         }
+    #     } 
+    #     every_subject_country = {
+    #         limit = {
+    #             has_country_flag = dominion_color_3
+    #         }
+    #         change_country_color = {
+    #             color = { 125 125 245 }
+    #         }
+    #     }
+    # }
 
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = real_union_subject
-                is_subject_of_type = administrative_region
-            }
-        }
-        change_country_color = {
-            color = { 90 90 230 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = se_integrated_personal_union
-            }
-        }
-        change_country_color = {
-            color = { 130 130 170 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = commercial_enterprise
-                is_mining_corporation = yes
-            }
-        }
-        change_country_color = {
-            color = { 120 170 235 }
-        }
-    }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = trade_outpost
-            }
-        }
-        change_country_color = {
-            color = { 210 210 255 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = naval_march
-                is_subject_of_type = pirate_brotherhood_vassal
-            }
-        }
-        change_country_color = {
-            color = { 0 70 255 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = imperial_city
-            }
-        }
-        change_country_color = {
-            color = { 75 75 255 }
-        }
-    }
-            
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = tb_minister_resident
-            }
-        }
-        change_country_color = {
-            color = { 160 160 255 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = dominion
-                is_subject_of_type = dominion_tc
-            }
-        }
-        change_country_color = {
-            # color = { 140 140 180 }
-            color = { 110 110 230 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = fief_subject
-                is_subject_of_type = iqta_vassal
-            }
-        }
-        change_country_color = {
-            color = { 115 115 170 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
+                is_subject_of_type = puppet_state
                 is_subject_of_type = vassal
+            }
+        }
+        change_country_color = {
+            color = { 255 80 100 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
                 is_subject_of_type = fief_subject
             }
         }
         change_country_color = {
-            color = { 130 130 210 }
+            color = { 240 50 70 }
         }
     }
-
     every_subject_country = {
         limit = {
             OR = {
@@ -402,21 +224,9 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 135 60 245 }
+            color = { 130 0 10 }
         }
     }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = defensive_march
-            }
-        }
-        change_country_color = {
-            color = { 110 20 170 }
-        }
-    }
-
-   
     every_subject_country = {
         limit = {
             OR = {
@@ -424,390 +234,34 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 150 150 200 }
+            color = { 255 150 170 }
         }
     }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = jimi_state
-            }
-        }
-        change_country_color = {
-            color = { 160 180 255 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = tributary
-            }
-        }
-        change_country_color = {
-            color = { 126 87 198 }
-        }
-    }
-
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = protectorate
-            }
-        }
-        change_country_color = {
-            color = { 190 190 255 }
-        }
-    }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = puppet_state
-            }
-        }
-        change_country_color = {
-            color = { 200 140 255 }
-        }
-    }
-    
-
-    QNG = {
-        every_subject_country = {
-            change_country_color = {
-            }   
-        }
-    }
-    
 }
+
 
 # Names
 ROOT = {
-    PER = {
-        override_country_name = PERSIAN_EMPIRE_NAME
-    }
-
-    # Tributaries
-    JP1 = {
-        override_country_name = "Hosokawa Tributary Shogunate"
-    }
-
-    # Integrated Personal Unions 
     ETH = {
-        override_country_name = "Persian Empire of Ethiopia"
-    }
-    POL = {
-        override_country_name = "Persian Kingdom of Poland"
+        override_country_name = ETHIOPIAN_EMPIRE_NAME
     }
 
-    # Real Unions
-    TUS = {
-        override_country_name = "Persian Tuscany"
+    # Marches | X Awrajja, meaning militarized province
+    OMA = {
+        override_country_name = "Omani Awrajja"
     }
 
-    # Fief Subjects
-    ANC = {
-        override_country_name = "County of Ancona"
-    }
-    FIN = {
-        override_country_name = "Grand Duchy of Finland"
-    }
-    SWE = {
-        override_country_name = "Kingdom of Sweden"
-    }
-    NOR = {
-        override_country_name = "Kingdom of Norway"
-    }
+    # Brother Kingdoms | Negusate of X, Negus Meaning Subject King, Negusate being a neologism for Kingdom
 
-    # Marches | Marzbanate for Marcher Satrapies
-    KHA = {
-        override_country_name = "Marzbanate of Mongols"
-    } 
-    DAI = {
-        override_country_name = "Marzbanate of Viets"
-    }
-    KOR = {
-        override_country_name = "Marzbanate of the Joseon"
-    } 
-    K14 = {
-        override_country_name = "Marzbanate of Yunan"
-    }
-    PRU = {
-        override_country_name = "Marzbanate of Prussia"
-    }
+    # Real Unions | Ethiopian X
 
-    # Defensive Marches | Ispahbud for Semi-autonomous Marches
-    CIR = {
-        override_country_name = "Fortresses of Caucasia"
-    }   
-    K11 = {
-        override_country_name = "Grand Wall of the Urals"
-    }
-    BEN = {
-        override_country_name = "Great Walls of Benin"
-    }
-
-    # Naval Marches | Marzbanate for Marcher Satrapies
-    CYP = {
-        override_country_name = "Naval Base of Cyprus"
-    }  
-    FRM = {
-        override_country_name = "Naval Base of Taiwan"
-    }   
-    MIR = {
-        override_country_name = "Naval Base of Madagascar"
-    }
-    
-    # External Satrapies | Internal satrapies are fully annexed provinces
-    ROOT = {
-        K10 = {
-            override_country_name = "Satrapy of Central Africa"
-        }
-        HUN = {
-            override_country_name = "Satrapy of Hungary"
-        }
-        BUL = {
-            override_country_name = "Satrapy of Bulgaria"
-        }
-        RMN = {
-            override_country_name = "Satrapy of Romania"
-        }
-        BEI = {
-            override_country_name = "Satrapy of Brunei"
-        }
-        KBO = {
-            override_country_name = "Satrapy of Kanem Bornu"
-        }
-        ALG = {
-            override_country_name = "Satrapy of Algeria"
-        }
-        MAJ = {
-            override_country_name = "Satrapy of Majapahit"
-        }
-        PAT = {
-            override_country_name = "Satrapy of Pattani"
-        }
-        JMB = {
-            override_country_name = "Satrapy of Jambi"
-        }
-        IND = {
-            override_country_name = "Satrapy of Indrapura"
-        }
-        DLI = {
-            override_country_name = "Satrapy of Deli"
-        }
-        ORM = {
-            override_country_name = "Satrapy of East Arabia"
-        }
-        KHM = {
-            override_country_name = "Satrapy of Khmer"
-        }
-        OMA = {
-            override_country_name = "Satrapy of Oman"
-        }
-        YEM = {
-            override_country_name = "Satrapy of Yemen"
-        }
-        KAR = {
-            override_country_name = "Satrapy of Karaman"
-        }
-        MJZ = {
-            override_country_name = "Satrapy of the Jin Dynasty"
-        }
-        ASS = {
-            override_country_name = "Satrapy of Assam"
-        }
-        MLW = {
-            override_country_name = "Satrapy of Malwa"
-        }
-        K00 = {
-            override_country_name = "Satrapy of Upper Volga"
-        }
-        ORI = {
-            override_country_name = "Satrapy of Orissa"
-        }
-        JNP = {
-            override_country_name = "Satrapy of Jaunpur"
-        }
-        AHM = {
-            override_country_name = "Satrapy of The Deccan"
-        }
-        GOC = {
-            override_country_name = "Satrapy of Golkond"
-        }
-        MOR = {
-            override_country_name = "Satrapy of Morocco"
-        }
-        ADA = {
-            override_country_name = "Satrapy of Adal"
-        }
-        SYG = {
-            override_country_name = "Satrapy of Turkestan"
-        }
-        KOJ = {
-            override_country_name = "Satrapy of The Levant"
-        }
-        EGY = {
-            override_country_name = "Satrapy of Egypt"
-        }
-        K03 = {
-            override_country_name = "Satrapy of Libya"
-        }
-        K04 = {
-            override_country_name = "Satrapy of Ethiopia"
-        }
-        HED = {
-            override_country_name = "Satrapy of The Hejaz"
-        }
-        KND = {
-            override_country_name = "Satrapy of Ceylon"
-        }
-        VIJ = {
-            override_country_name = "Satrapy of Vijayanagar"
-        }
-        K06 = {
-            override_country_name = "Satrapy of Maidan"
-        }
-        SOM = {
-            override_country_name = "Satrapy of Somalia"
-        }
-        BNG = {
-            override_country_name = "Satrapy of Bengal"
-        }
-        LXA = {
-            override_country_name = "Satrapy of Laos"
-        }
-        KAM = {
-            override_country_name = "Satrapy of Kham"
-        }
-        AJU = {
-            override_country_name = "Satrapy of Ajuuraan"
-        }
-        GEN = {
-            override_country_name = "Satrapy of Genoa"
-        }
-        CSH = {
-            override_country_name = "Satrapy of the Shun Dynasty"
-        }
-        ZUN = {
-            override_country_name = "Satrapy of Dzungaria"
-        }
-        AYU = {
-            override_country_name = "Satrapy of Thailand"
-        }
-    }
-    
-    # Mining Corporations 
-    ZIM = {
-        override_country_name = "Zimbabwean Mining Corporation"
-    }
-    MAL = {
-        override_country_name = "Malian Mining Corporation"
-    }
-
-    # Commercial Enterprises
-    K07 = {
-        override_country_name = "Siberian Commercial Charter"
-    }
-    MLC = {
-        override_country_name = "Toll-Company of Malacca"
-    }
-    LFA = {
-        override_country_name = "Lanfang Corporation"
-    }
-    K18 = {
-        override_country_name = "Novgorodian Trade Company"
-    }
-
-    # Trade Outposts
-    K12 = {
-        override_country_name = "Trade Port of Singapore"
-    }
-
-    # Imperial Cities | Shahr meaning city
-    AST = {
-        override_country_name = "Shahr-e Azov"
-    }
-    GOA = {
-        override_country_name = "Shahr-e Goa"
-    }
-    
-    # tb_minister_resident Tibetan minister
-    TIB = {
-        override_country_name = "Himalayan Autonomous Region"
-    }
-    
-    # Pagan Chiefdoms (Hordes) | Ordate meaning something akin to "Horde Polity"
-    NOG = {
-        override_country_name = "Ordaty of Nogai"
-    }
-    K08 = {
-        override_country_name = "Ordaty of Tataria"
-    }
-
-    # Native Reservations
-    ROOT = {
-        NAJ = {
-            override_country_name = "Arab Tribes"
-        }
-        SIB = {
-            override_country_name = "Sibirian Tribes"
-        }
-        PRM = {
-            override_country_name = "Permian Tribes"
-        }
-        GUJ = {
-            override_country_name = "Gujarati Reservation"
-        }
-        NVK = {
-            override_country_name = "Nivkh Reservation"
-        }
-        HS1 = {
-            override_country_name = "Daura Reservation"
-        }
-        AIR = {
-            override_country_name = "Air Reservation"
-        }
-        CHU = {
-            override_country_name = "Chukchi Reservation"
-        }
-        KMC = {
-            override_country_name = "Kamchadal Reservation"
-        }
-    }
-
-    # Protectorates | Protectorate of Name
-    QNG = {
-        override_country_name = "Protectorate of Qing"
-    }
-    E00 = {
-        override_country_name = "Protectorate of Belarus"
-    }
-    DAN = {
-        override_country_name = "Protectorate of Denmark"
-    }
-
-    # Puppet States | Despotate of Name
-    WUU = {
-        override_country_name = "Despotate of Wu"
-    }
-
-    # Tropical Resort
-    DGL = {
-        override_country_name = "Resort of the Maldives"
-    }
-    BLI = {
-        override_country_name = "Bali Resort"
-    }
-
-    # Dominions 
-    KRL = {
-        override_country_name = "Colonial Charter of Karelia"
-    }
-    KON = {
-        override_country_name = "Persian Kongo"
+    # Fief Subjects | Ras Meaning Duke
+    ALH = {
+        override_country_name = "Rasdom of Hajar"
     }
 }
+
+
 
 
 # ======================================================================================================================================================================================= #

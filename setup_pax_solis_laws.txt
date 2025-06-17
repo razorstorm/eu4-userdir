@@ -1,0 +1,64 @@
+
+# Taxation System - Progressive Tax System
+remove_country_modifier = hf_estate_int_farmingtax
+remove_country_modifier = hf_estate_int_headtax
+remove_country_modifier = hf_estate_int_landtax
+remove_country_modifier = hf_estate_int_flattax
+remove_country_modifier = hf_estate_int_salestax
+remove_country_modifier = hf_estate_int_graintax
+
+add_country_modifier = {
+    name = hf_estate_int_flattax
+    duration = -1
+}
+
+clr_country_flag = hf_viewing_estate_int_tax_event
+
+# Economic Basis - Mercantilism
+remove_country_modifier = hf_estate_int_naturaleconomy
+remove_country_modifier = hf_estate_int_physiocracy
+remove_country_modifier = hf_estate_int_mercantilism
+
+add_country_modifier = {
+    name = hf_estate_int_mercantilism
+    duration = -1
+}
+
+clr_country_flag = hf_viewing_estate_int_economy_event
+
+# Trade Principle - Trade Protection
+remove_country_modifier = hf_estate_int_isolationism
+remove_country_modifier = hf_estate_int_freetrade
+
+add_country_modifier = {
+    name = hf_estate_int_protectionism
+    duration = -1
+}
+
+clr_country_flag = hf_viewing_estate_int_trade_event
+
+# Church and State - State Religion
+
+remove_country_modifier = hf_estate_int_sepchurchstate
+remove_country_modifier = hf_estate_int_freeconscience
+
+add_country_modifier = {
+    name = hf_estate_int_statereligion
+    duration = -1
+}
+
+clr_country_flag = hf_viewing_estate_int_religion_event
+
+# Civil Administration - Citizenship Act
+remove_country_modifier = hf_estate_int_sharecropping
+remove_country_modifier = hf_estate_int_serfdom
+remove_country_modifier = hf_estate_int_craftsman
+remove_country_modifier = hf_estate_int_forcedlabor
+remove_country_modifier = hf_estate_int_cool_down_population
+
+add_country_modifier = {
+    name = hf_estate_int_settlemgn
+    duration = -1
+}
+
+clr_country_flag = hf_viewing_estate_int_population_event

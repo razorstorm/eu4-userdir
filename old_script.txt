@@ -4806,6 +4806,13 @@ add_government_power = {
     value = 100
 }
 
+
+change_asha_vahishta = { value = 200 }
+
+every_subject_country = {
+    add_tariff_value = 1000
+}
+
 # Decolonize other peoples colonies
 every_province = {
     limit = {

@@ -101,37 +101,6 @@ add_country_modifier = {
 # Ruler
 ##########################################################################
 
-change_adm = 6
-change_dip = 6
-change_mil = 6
-
-if = {
-    limit = {
-        NOT = {
-            OR = {
-                tag = AZT
-                tag = RUS
-                tag = TUR
-                tag = MJZ
-                tag = BYZ
-                tag = NHS
-                tag = ENG
-                tag = GBR
-                tag = ARL
-            }
-        }
-    }
-    define_ruler = {
-        dynasty = ROOT
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        fixed = yes
-    }
-}
 if = {
     limit = {
         tag = ARL
@@ -147,7 +116,7 @@ if = {
         fixed = yes
     }
 }
-if = {
+else_if = {
     limit = {
         OR = {
             tag = ENG
@@ -166,7 +135,7 @@ if = {
         fixed = yes
     }
 }
-if = {
+else_if = {
     limit = {
         tag = MJZ
     }
@@ -182,7 +151,7 @@ if = {
         fixed = yes
     }
 }
-if = {
+else_if = {
     limit = {
         OR = {
             tag = BYZ
@@ -201,13 +170,47 @@ if = {
         fixed = yes
     }
 }
-
-if = {
+else_if = {
+    limit = {
+        OR = {
+            tag = ETH
+        }
+    }
+    define_ruler = {
+        dynasty = ROOT
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        name = "Menelik II \"The Divine\""
+        fixed = yes
+    }
+}
+else_if = {
     limit = {
         tag = AZT
     }
+    # Don't create new ruler, but make sure to set the montezuma flag if it somehow got unset.
     set_ruler_flag = azt_montezuma    
 }
+else = {
+    define_ruler = {
+        dynasty = ROOT
+        culture = ROOT
+        religion = ROOT
+        adm = 10
+        dip = 10
+        mil = 10
+        male = yes
+        fixed = yes
+    }
+}
+
+change_adm = 6
+change_dip = 6
+change_mil = 6
 
 add_ruler_personality = ruler_of_destiny_personality
 add_ruler_personality = immortal_personality
@@ -314,3 +317,10 @@ add_country_modifier = {
     name = more_generals_cheat
     duration = -1  
 }
+
+
+##########################################################################
+# Pax Solis Laws Set Up | setup_pax_solis_laws.txt
+##########################################################################
+
+setup_pax_solis_laws = yes

@@ -533,3 +533,400 @@ ROOT = {
     }
 }
 
+# Persia
+# Names
+ROOT = {
+    PER = {
+        override_country_name = PERSIAN_EMPIRE_NAME
+    }
+
+    # Tributaries
+    JP1 = {
+        override_country_name = "Hosokawa Tributary Shogunate"
+    }
+
+    # Integrated Personal Unions 
+    ETH = {
+        override_country_name = "Persian Empire of Ethiopia"
+    }
+
+    # Real Unions
+    TUS = {
+        override_country_name = "Persian Tuscany"
+    }
+
+    # Fief Subjects
+    ANC = {
+        override_country_name = "County of Ancona"
+    }
+    FIN = {
+        override_country_name = "Grand Duchy of Finland"
+    }
+    SWE = {
+        override_country_name = "Kingdom of Sweden"
+    }
+    NOR = {
+        override_country_name = "Kingdom of Norway"
+    }
+    BAV = {
+        override_country_name = "Duchy of Bavaria"
+    }
+
+    # Palatinates | palatinate_vassal
+    SAX = {
+        override_country_name = "Palatinate of Saxony"
+    }
+    PAL = {
+        override_country_name = "Palatinate of the Rhine"
+    }
+
+    # Marches | Marzbanate for Marcher Satrapies
+    KHA = {
+        override_country_name = "Marzbanate of Mongols"
+    } 
+    DAI = {
+        override_country_name = "Marzbanate of Viets"
+    }
+    KOR = {
+        override_country_name = "Marzbanate of the Joseon"
+    } 
+    K14 = {
+        override_country_name = "Marzbanate of Yunan"
+    }
+    PRU = {
+        override_country_name = "Marzbanate of Prussia"
+    }
+
+    # Defensive Marches | Ispahbud for Semi-autonomous Marches
+    CIR = {
+        override_country_name = "Fortresses of Caucasia"
+    }   
+    K11 = {
+        override_country_name = "Grand Wall of the Urals"
+    }
+    BEN = {
+        override_country_name = "Great Walls of Benin"
+    }
+    SWI = {
+        override_country_name = "Ispahbud of Switzerland"
+    }
+
+    # Naval Marches | Marzbanate for Marcher Satrapies
+    CYP = {
+        override_country_name = "Naval Base of Cyprus"
+    }  
+    FRM = {
+        override_country_name = "Naval Base of Taiwan"
+    }   
+    MIR = {
+        override_country_name = "Naval Base of Madagascar"
+    }
+
+    # Agricultural March
+    KIE = {
+        override_country_name = "Grain Fields of Ukraine"
+    }
+    
+    # External Satrapies | Internal satrapies are fully annexed provinces
+    ROOT = {
+        E00 = {
+            override_country_name = "Satrapy of Belarus"
+        }
+        ARA = {
+            override_country_name = "Satrapy of Aragon"
+        }
+        GRA = {
+            override_country_name = "Satrapy of Granada"
+        }
+        PRO = {
+            override_country_name = "Satrapy of Provence"
+        }
+        POL = {
+            override_country_name = "Satrapy of Poland"
+        }
+        HAB = {
+            override_country_name = "Satrapy of Austria"
+        }
+        BOH = {
+            override_country_name = "Satrapy of Bohemia"
+        }
+        K10 = {
+            override_country_name = "Satrapy of Central Africa"
+        }
+        HUN = {
+            override_country_name = "Satrapy of Hungary"
+        }
+        BUL = {
+            override_country_name = "Satrapy of Bulgaria"
+        }
+        NED = {
+            override_country_name = "Satrapy of the Netherlands"
+        }
+        BEL = {
+            override_country_name = "Satrapy of Belgium"
+        }
+        POR = {
+            override_country_name = "Satrapy of Portugal"
+        }
+        RMN = {
+            override_country_name = "Satrapy of Romania"
+        }
+        BEI = {
+            override_country_name = "Satrapy of Brunei"
+        }
+        KBO = {
+            override_country_name = "Satrapy of Kanem Bornu"
+        }
+        ALG = {
+            override_country_name = "Satrapy of Algeria"
+        }
+        MAJ = {
+            override_country_name = "Satrapy of Majapahit"
+        }
+        PAT = {
+            override_country_name = "Satrapy of Pattani"
+        }
+        JMB = {
+            override_country_name = "Satrapy of Jambi"
+        }
+        IND = {
+            override_country_name = "Satrapy of Indrapura"
+        }
+        DLI = {
+            override_country_name = "Satrapy of Deli"
+        }
+        ORM = {
+            override_country_name = "Satrapy of East Arabia"
+        }
+        KHM = {
+            override_country_name = "Satrapy of Khmer"
+        }
+        OMA = {
+            override_country_name = "Satrapy of Oman"
+        }
+        YEM = {
+            override_country_name = "Satrapy of Yemen"
+        }
+        KAR = {
+            override_country_name = "Satrapy of Karaman"
+        }
+        MJZ = {
+            override_country_name = "Satrapy of the Jin Dynasty"
+        }
+        ASS = {
+            override_country_name = "Satrapy of Assam"
+        }
+        MLW = {
+            override_country_name = "Satrapy of Malwa"
+        }
+        K00 = {
+            override_country_name = "Satrapy of Upper Volga"
+        }
+        ORI = {
+            override_country_name = "Satrapy of Orissa"
+        }
+        JNP = {
+            override_country_name = "Satrapy of Jaunpur"
+        }
+        SIC = {
+            override_country_name = "Satrapy of Sicily"
+        }
+        NAP = {
+            override_country_name = "Satrapy of Naples"
+        }
+        AHM = {
+            override_country_name = "Satrapy of The Deccan"
+        }
+        GOC = {
+            override_country_name = "Satrapy of Golkond"
+        }
+        MOR = {
+            override_country_name = "Satrapy of Morocco"
+        }
+        ADA = {
+            override_country_name = "Satrapy of Adal"
+        }
+        SYG = {
+            override_country_name = "Satrapy of Turkestan"
+        }
+        KOJ = {
+            override_country_name = "Satrapy of The Levant"
+        }
+        EGY = {
+            override_country_name = "Satrapy of Egypt"
+        }
+        K03 = {
+            override_country_name = "Satrapy of Libya"
+        }
+        K04 = {
+            override_country_name = "Satrapy of Ethiopia"
+        }
+        HED = {
+            override_country_name = "Satrapy of The Hejaz"
+        }
+        KND = {
+            override_country_name = "Satrapy of Ceylon"
+        }
+        VIJ = {
+            override_country_name = "Satrapy of Vijayanagar"
+        }
+        K06 = {
+            override_country_name = "Satrapy of Maidan"
+        }
+        SOM = {
+            override_country_name = "Satrapy of Somalia"
+        }
+        BNG = {
+            override_country_name = "Satrapy of Bengal"
+        }
+        LXA = {
+            override_country_name = "Satrapy of Laos"
+        }
+        KAM = {
+            override_country_name = "Satrapy of Kham"
+        }
+        AJU = {
+            override_country_name = "Satrapy of Ajuuraan"
+        }
+        GEN = {
+            override_country_name = "Satrapy of Genoa"
+        }
+        CSH = {
+            override_country_name = "Satrapy of the Shun Dynasty"
+        }
+        ZUN = {
+            override_country_name = "Satrapy of Dzungaria"
+        }
+        AYU = {
+            override_country_name = "Satrapy of Thailand"
+        }
+        K20 = {
+            override_country_name = "Satrapy of Lithuania"
+        }
+    }
+    
+    # Mining Corporations 
+    ZIM = {
+        override_country_name = "Zimbabwean Mining Corporation"
+    }
+    MAL = {
+        override_country_name = "Malian Mining Corporation"
+    }
+
+    # Commercial Enterprises
+    K07 = {
+        override_country_name = "Siberian Commercial Charter"
+    }
+    MLC = {
+        override_country_name = "Toll-Company of Malacca"
+    }
+    LFA = {
+        override_country_name = "Lanfang Corporation"
+    }
+    K18 = {
+        override_country_name = "Novgorodian Trade Company"
+    }
+
+    # Trade Outposts
+    K12 = {
+        override_country_name = "Trade Port of Singapore"
+    }
+    VEN = {
+        override_country_name = "Venice Trade Outpost"
+    }
+
+    # Imperial Cities | Shahr meaning city
+    AST = {
+        override_country_name = "Shahr-e Azov"
+    }
+    GOA = {
+        override_country_name = "Shahr-e Goa"
+    }
+    
+    # tb_minister_resident Tibetan minister
+    TIB = {
+        override_country_name = "Himalayan Autonomous Region"
+    }
+    
+    # Pagan Chiefdoms (Hordes) | Ordate meaning something akin to "Horde Polity"
+    NOG = {
+        override_country_name = "Ordaty of Nogai"
+    }
+    K08 = {
+        override_country_name = "Ordaty of Tataria"
+    }
+
+    # Native Reservations
+    ROOT = {
+        NAJ = {
+            override_country_name = "Arab Tribes"
+        }
+        SIB = {
+            override_country_name = "Sibirian Tribes"
+        }
+        PRM = {
+            override_country_name = "Permian Tribes"
+        }
+        GUJ = {
+            override_country_name = "Gujarati Reservation"
+        }
+        NVK = {
+            override_country_name = "Nivkh Reservation"
+        }
+        HS1 = {
+            override_country_name = "Daura Reservation"
+        }
+        AIR = {
+            override_country_name = "Air Reservation"
+        }
+        CHU = {
+            override_country_name = "Chukchi Reservation"
+        }
+        KMC = {
+            override_country_name = "Kamchadal Reservation"
+        }
+    }
+
+    # Protectorates | Protectorate of Name
+    QNG = {
+        override_country_name = "Protectorate of Qing"
+    }
+    DAN = {
+        override_country_name = "Protectorate of Denmark"
+    }
+    BRI = {
+        override_country_name = "Protectorate of Brittany"
+    }
+
+    # Puppet States | Despotate of Name
+    WUU = {
+        override_country_name = "Despotate of Wu"
+    }
+    MLO = {
+        override_country_name = "Despotate of Milan"
+    }
+    PAP = {
+        override_country_name = "Despotate of the Papal States"
+    }
+
+    # Tropical Resort
+    DGL = {
+        override_country_name = "Resort of the Maldives"
+    }
+    BLI = {
+        override_country_name = "Bali Resort"
+    }
+
+    # Dominions 
+    KRL = {
+        override_country_name = "Colonial Charter of Karelia"
+    }
+    KON = {
+        override_country_name = "Persian Kongo"
+    }
+    
+    # Banks
+    HSA = {
+        override_country_name = "The Hanseatic League"
+    }
+}
