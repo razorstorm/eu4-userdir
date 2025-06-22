@@ -718,6 +718,8 @@ ROOT = {
     add_treasury = 1
 }
 
+add_accepted_culture = polynesian
+
 ROOT = {
     remove_country_modifier = annexed_subjects
 }
@@ -4804,6 +4806,40 @@ add_government_power = {
     mechanic_type = the_three_royal_fires_mechanic
     power_type = adur_farnbag
     value = 100
+}
+
+
+# Autocomplete estate agenda
+auto_complete_estate_agenda = {
+    estate = all
+}
+
+
+SKA = {
+    every_owned_province = {
+        limit = {
+            NOT = { province_id = 1792 }
+            NOT = { province_id = 4023 }
+            NOT = { province_id = 1194 }
+            NOT = { province_id = 4030 }
+            NOT = { province_id = 4032 }
+        }
+
+        random_list = {
+            25 = {
+                change_trade_goods = spices
+            }
+            25 = {
+                change_trade_goods = tropical_wood
+            }
+            25 = {
+                change_trade_goods = cocoa
+            }
+            25 = {
+                change_trade_goods = ivory
+            }
+        }
+    }
 }
 
 

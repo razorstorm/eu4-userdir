@@ -8,27 +8,12 @@ log = "===============================Running Prov.txt==========================
 # is_core
 # province_id
 
-remove_country_modifier = jason_global_own_trade_power_cheat_500
+
+remove_country_modifier = jason_global_foreign_trade_power_cheat_100
 # Template for adding modifierS
 add_country_modifier = {
-    name = elephants_in_europe
+    name = economic_hegemon_benefits
     duration = -1
-}
-
-4283 = {
-    prov_trade_power = yes
-}
-
-# Diamonds
-every_owned_province = {
-    limit = {
-        is_specific_diamond_staked_province = yes
-        NOT = {
-            # Ignore provinces that are already highly devved 
-            base_production = 25
-        }
-    }
-    set_high_dev_resource_gathering_operation = yes
 }
 
 
@@ -38,15 +23,22 @@ every_owned_province = {
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
-
-every_owned_province= {
-    limit = {
-        is_specific_gold_staked_province = yes
+every_subject_country = {
+    add_country_modifier = {
+        name = jason_mod_more_GC
+        duration = -1
     }
-    change_religion = ROOT
-    set_local_autonomy = 0
 }
-
+add_province_modifier = {
+    name = local_autonomy_cheat
+    duration = -1
+}
+every_subject_country = {
+    add_province_modifier = {
+        name = local_autonomy_cheat
+        duration = -1
+    }
+}
 every_subject_country = {
     add_tariff_value = 1000
 }
@@ -64,8 +56,7 @@ ROOT = {
     while = {
         limit = {
             NOT = {
-                num_of_colonies = 0
-                # num_of_colonies = 0
+                num_of_colonies = 25
             }
             NOT = {
                 # TODO add early exit for when no more eligible provinces
@@ -82,24 +73,13 @@ ROOT = {
         # log = "Loop iteration [colonyCounter.GetValue]"
         random_province = {
             limit = {
-                # OR = {
-                    # continent = oceania
-                    # superregion = central_america_superregion
-                    # continent = south_america
-                # }
-                # NOT = {
-                #     OR = {
-                #         continent = north_america
-                #         continent = south_america
-                #     }
-                # }
                 OR = {
                     is_island = yes
                     has_port = yes
                     is_neighbor_of = ROOT
                 }
                 is_empty = yes
-                # has_discovered = ROOT
+                has_discovered = ROOT
             }
             log = "Creating colony in: [This.GetName]"
             create_colony = 1
@@ -113,57 +93,266 @@ ROOT = {
 # Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
 ####################################################################################
 
-# Colors
+# Names
 ROOT = {
-    RAS = {
-        change_country_color = {
+    ROOT = {
+        override_country_name = AKSUMITE_EMPIRE_NAME
+    }
+
+    # Marches | X Dejazmach meaning militarized province
+    BAL = {
+        override_country_name = "Baluchistani Dejazmach"
+    }
+    TUN = {
+        override_country_name = "Tunisian Dejazmach"
+    }
+
+    # Defensive Marches
+    BEN = {
+        override_country_name = "Fortress of Benin"
+    }
+
+    # Naval Marches
+    CYP = {
+        override_country_name = "Naval Base of Cyprus"
+    }
+    ORM = {
+        override_country_name = "Gates of Hormuz"
+    }
+    SKA = {
+        override_country_name = "Naval Base of Madagascar"
+    }
+
+    # Real Unions | Aksumite Negusate of X
+    EGY = {
+        override_country_name = "Aksumite Negusate of Egypt"
+    }
+    K08 = {
+        override_country_name = "Aksumite Rasdom of Libya"
+    }
+    
+    # Appanages | Royal Fiefdoms: Royal {fiefdom title} of X meaning royal kingdom or Royal Mangesta meaning a Kingdom level land grant for a Negusa of royal blood
+    # Kingdoms: Royal Negusate - Large | Appanage
+    # Duchies: Royal Mangesta - Medium or Small | Appanage
+    KBO = {
+        override_country_name = "Royal Mangesta of Kanem-Bornu"
+    }
+    
+    # Fiefdoms | {fiefdom title} of X
+    # Kingdoms: Negusates - Large | Brother Kingdom
+    # Duchies: Rasdoms - Medium | Fief Subject
+    # Counties: Awrajjas - Small | Fief Subject
+    ROOT = {
+        # Brother Kingdoms | Negusate of X, Negus Meaning Subject King, Negusate being a neologism for Kingdom
+        K07 = {
+            override_country_name = "Negusate of Mali"
+        }
+        POR = {
+            override_country_name = "Kingdom of Portugal"
+        }
+        SON = {
+            override_country_name = "Negusate of Songhai"
+        }
+        ALG = {
+            override_country_name = "Negusate of Algeria"
+        }
+        MOR = {
+            override_country_name = "Negusate of Morocco"
+        }
+        # Fief Subjects | Ras meaning Duke: Rasdom for duchies, Awrajja meaning province for counties. Large fiefdoms should be brother kingdoms: large Neusates
+        ALH = {
+            override_country_name = "Rasdom of Hajar"
+            set_country_flag = rasdom_fiefdom
+        }
+        QAR = {
+            override_country_name = "Rasdom of Qara Qoyunlu"
+            set_country_flag = rasdom_fiefdom
+        }
+        FRS = {
+            override_country_name = "Rasdom of Fars"
+            set_country_flag = rasdom_fiefdom
+        }
+        KRW = {
+            override_country_name = "Rasdom of The Lake"
+            set_country_flag = rasdom_fiefdom
+        }
+        BON = {
+            override_country_name = "Rasdom of Bonoman"
+            set_country_flag = rasdom_fiefdom
+        }
+        K10 = {
+            override_country_name = "Rasdom of Andalusia"
+            set_country_flag = rasdom_fiefdom
+        }
+        # Counties: Awrajja - Small
+        YAO = {
+            override_country_name = "Awrajja of Yao"
+        }
+        K12 = {
+            override_country_name = "Awrajja of the Balearics"
+        }
+        K11 = {
+            override_country_name = "Awrajja of Sardinia"
+        }
+        TI1 = {
+            override_country_name = "Awrajja of Khuttalan"
+        }
+        HM1 = {
+            override_country_name = "Awrajja of Hamadan"
+        }
+        TAB = {
+            override_country_name = "Awrajja of Mazandaran"
+        }
+        LR2 = {
+            override_country_name = "Awrajja of Luristan"
+        }
+        ARD = {
+            override_country_name = "Awrajja of Ardalan"
+        }
+        K02 = {
+            override_country_name = "Awrajja of Basra"
+        }
+        KNG = {
+            override_country_name = "Awrajja of Kong"
+        }
+        DGB = {
+            override_country_name = "Awrajja of Dagbon"
+        }
+        GAL = {
+            override_country_name = "Awrajja of Galicia"
+        }
+        PIO = {
+            # European Fiefs get European titles
+            override_country_name = "County of Piombino"
         }
     }
+
+    # Tropical Resorts 
+    DGL = {
+        override_country_name = "Resort of the Maldives"
+    }
+    K03 = {
+        override_country_name = "Resort of the Mauritius"
+    }
+    BLI = {
+        override_country_name = "Resort of Bali"
+    }
+
+    # Mining Corporations
+    ZIM = {
+        override_country_name = "Mines of Great Zimbabwe"
+    }
+    K06 = {
+        override_country_name = "Mines of Great Mali"
+    }
+
+    # Commercial Enterprises
+    ZAN = {
+        override_country_name = "Zanzibar Trade Company"
+    }
+
+    # Trade Outposts
+    LFA = {
+        override_country_name = "Lanfang Trade Outpost"
+    }
+    K01 = {
+        override_country_name = "Sao Tome Trade Outpost"
+    }
+    K05 = {
+        override_country_name = "West African Trade Outpost"
+    }
+    GEN = {
+        override_country_name = "Genoa Trade Outpost"
+    }
+    WUU = {
+        override_country_name = "Wu Dynasty Trade Outpost"
+    }
+
+    # Integrated Tribe Subjects | Shumate of X - Shum is a tribal chief
+    AIR = {
+        override_country_name = "Shumate of the Sahara"
+    }
+
+    # Native Reserves | Native Tribes
+    BNY = {
+        override_country_name = "Bunyoro Tribal Reserve"
+    }
+    KET = {
+        override_country_name = "Ketu Tribal Reserve"
+    }
+
+    # Puppet States
+    HSN = {
+        override_country_name = "Ayyubid Sub-Caliphate"
+    }
+
+    # Pirate Brotherhoods
+    KNI = {
+        override_country_name = "Knights of Malta"
+    }
+}
+
+# Colors
+ROOT = {
     # every_subject_country = {
     #   restore_country_color = yes
     # } 
     # restore_country_color = yes
 
     change_country_color = {
-        # color = { 90 90 230 }
         color = { 230 10 20 }
     }
 
-    # Cycling colors for Satrapies
+    # Cycling colors for Dominions
     # ROOT = {
-    #     KHM = {
-    #         clr_country_flag = dominion_color_1
-    #         clr_country_flag = dominion_color_2
-    #         clr_country_flag = dominion_color_3
+    #     C02 = {
+    #         clr_country_flag = subject_color_1
+    #         clr_country_flag = subject_color_2
+    #         clr_country_flag = subject_color_3
 
-    #         set_country_flag = dominion_color_3
+    #         set_country_flag = subject_color_1
+    #     }
+    #     C05 = {
+    #         clr_country_flag = subject_color_1
+    #         clr_country_flag = subject_color_2
+    #         clr_country_flag = subject_color_3
+
+    #         set_country_flag = subject_color_2
+    #     }
+    #     C04 = {
+    #         clr_country_flag = subject_color_1
+    #         clr_country_flag = subject_color_2
+    #         clr_country_flag = subject_color_3
+
+    #         set_country_flag = subject_color_3
     #     }
 
     #     every_subject_country = {
     #         limit = {
     #             OR = {
-    #                 is_subject_of_type = persian_satrapy
+    #                 is_subject_of_type = dominion
+    #                 is_subject_of_type = dominion_tc
     #             }
     #             NOT = {
     #                 OR = {
-    #                     has_country_flag = dominion_color_1
-    #                     has_country_flag = dominion_color_2
-    #                     has_country_flag = dominion_color_3
+    #                     has_country_flag = subject_color_1
+    #                     has_country_flag = subject_color_2
+    #                     has_country_flag = subject_color_3
     #                 }
     #             }
     #         }
     #         random_list = {
     #             33 = {
-    #                 set_country_flag = dominion_color_1
-    #                 log = "Setting dominion_color_1 to [This.GetName]"
+    #                 set_country_flag = subject_color_1
+    #                 log = "Setting subject_color_1 to [This.GetName]"
     #             }
     #             33 = {
-    #                 set_country_flag = dominion_color_2
-    #                 log = "Setting dominion_color_2 to [This.GetName]"
+    #                 set_country_flag = subject_color_2
+    #                 log = "Setting subject_color_2 to [This.GetName]"
     #             }
     #             33 = {
-    #                 set_country_flag = dominion_color_3
-    #                 log = "Setting dominion_color_3 to [This.GetName]"
+    #                 set_country_flag = subject_color_3
+    #                 log = "Setting subject_color_3 to [This.GetName]"
     #             }
     #         }
     #     }
@@ -171,35 +360,57 @@ ROOT = {
     #     # ================== Finished setting flags, actually change colors now ===============================================
     #     every_subject_country = {
     #         limit = {
-    #             has_country_flag = dominion_color_1
+    #             has_country_flag = subject_color_1
     #         }
     #         change_country_color = {
     #             # color = { 180 160 0 }
-    #             color = { 105 105 255 }
+    #             color = { 0 0 0 }
     #         }
     #     }
     #     every_subject_country = {
     #         limit = {
-    #             has_country_flag = dominion_color_2
+    #             has_country_flag = subject_color_2
     #         }
     #         change_country_color = {
-    #             color = { 115 115 250 }
+    #             color = { 255 255 255 }
     #         }
     #     } 
     #     every_subject_country = {
     #         limit = {
-    #             has_country_flag = dominion_color_3
+    #             has_country_flag = subject_color_3
     #         }
     #         change_country_color = {
-    #             color = { 125 125 245 }
+    #             color = { 100 100 100 }
     #         }
     #     }
     # }
 
+    
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = puppet_state
+                is_subject_of_type = real_union_subject
+                is_subject_of_type = administrative_region
+            }
+        }
+        change_country_color = {
+            color = { 230 10 20 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = appanage
+            }
+        }
+        change_country_color = {
+            color = { 235 20 30 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
                 is_subject_of_type = vassal
             }
         }
@@ -213,8 +424,39 @@ ROOT = {
                 is_subject_of_type = fief_subject
             }
         }
+        if = {
+            limit = {
+                has_country_flag = rasdom_fiefdom
+            }
+            change_country_color = {
+                color = { 235 50 80 }
+            }
+        } else {
+            change_country_color = {
+                color = { 240 90 110 }
+            }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = brother_kingdom
+            }
+        }
         change_country_color = {
-            color = { 240 50 70 }
+            color = { 255 30 40 }
+        }
+
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = puppet_state
+            }
+        }
+        change_country_color = {
+            # color = { 130 0 0 }
+            color = { 150 50 50 }
         }
     }
     every_subject_country = {
@@ -224,7 +466,27 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 130 0 10 }
+            color = { 160 0 10 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = defensive_march
+            }
+        }
+        change_country_color = {
+            color = { 120 0 0 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = naval_march
+            }
+        }
+        change_country_color = {
+            color = { 170 0 90 }
         }
     }
     every_subject_country = {
@@ -237,32 +499,59 @@ ROOT = {
             color = { 255 150 170 }
         }
     }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = integrated_tribe_subject
+            }
+        }
+        change_country_color = {
+            color = { 255 100 130 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mining_corporation
+            }
+        }
+        change_country_color = {
+            color = { 255 100 50 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = trade_outpost
+            }
+        }
+        change_country_color = {
+            color = { 255 200 220 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tropical_resort
+            }
+        }
+        change_country_color = {
+            color = { 230 100 20 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+            }
+        }
+        change_country_color = {
+            color = { 230 50 70 }
+        }
+    }
 }
-
-
-# Names
-ROOT = {
-    ETH = {
-        override_country_name = ETHIOPIAN_EMPIRE_NAME
-    }
-
-    # Marches | X Awrajja, meaning militarized province
-    OMA = {
-        override_country_name = "Omani Awrajja"
-    }
-
-    # Brother Kingdoms | Negusate of X, Negus Meaning Subject King, Negusate being a neologism for Kingdom
-
-    # Real Unions | Ethiopian X
-
-    # Fief Subjects | Ras Meaning Duke
-    ALH = {
-        override_country_name = "Rasdom of Hajar"
-    }
-}
-
-
-
 
 # ======================================================================================================================================================================================= #
 ###########################################################################################################################################################################################
@@ -369,6 +658,16 @@ ROOT = {
             }
         }
         change_government = republic
+    }
+
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = mining_corporation
+        }
+        add_country_modifier = {
+            name = ultra_free_income_cheat
+            duration = -1
+        }
     }
 
     # Dominions should self colonize and get benefits
@@ -792,180 +1091,6 @@ ROOT = {
 }
 
 ####################################################################################
-# Updating Subject Loyalties | sub.txt
-####################################################################################
-
-ROOT = {
-    every_subject_country = {
-        limit = {
-            AND = {
-                NOT = {    
-                    or = {
-                        is_subject_of_type = muslim_tributary_vassal
-                        is_subject_of_type = self_governing_colony
-                        tag = ETH
-                        religion = jewish
-                    }
-                }
-            }
-        }
-        change_religion = ROOT
-    }
-
-    every_subject_country = {
-        limit = {
-            NOT = {
-                OR = {
-                    is_subject_of_type = concentration_camp
-                    is_subject_of_type = revolution_subject
-                }
-            }
-        }
-        ROOT = {
-            if = {
-                limit = {
-                    not = {
-                        marriage_with = PREV
-                    }
-                }
-                create_marriage = PREV
-                add_legitimacy = 5
-            }
-        }
-        add_legitimacy = 100
-        add_devotion = 100
-        add_horde_unity = 100
-        set_meritocracy = 100
-        add_republican_tradition = 100
-        add_trust = {
-            who = ROOT
-            value = 100
-            mutual = yes
-        }
-        # add_treasury = 100000
-
-        set_dynasty = ROOT
-        add_prestige = 100
-        add_stability = 3
-        add_corruption = -100
-        # change_primary_culture = ROOT
-        add_war_exhaustion = -100
-
-        every_owned_province = {
-            add_devastation = -100
-        }
-        
-        add_estate_loyalty = {
-            estate = estate_church
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_nobles
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_burghers
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_dhimmi
-            loyalty = 100
-        }
-        add_estate_loyalty = {
-            estate = estate_jains
-            loyalty = 100
-        }
-    }
-
-    # Making confucian subjects harmonize with all religions
-    every_subject_country = {
-        limit = {
-            religion = confucianism
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = christian
-                }
-            }
-            add_harmonized_religion = catholic
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = muslim
-                }
-            }
-            add_harmonized_religion = sunni
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = mahayana
-                }
-            }
-            add_harmonized_religion = mahayana
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = shinto
-                }
-            }
-            add_harmonized_religion = shinto
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = vajrayana
-                }
-            }
-            add_harmonized_religion = vajrayana
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = buddhism
-                }
-            }
-            add_harmonized_religion = buddhism
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = dharmic
-                }
-            }
-            add_harmonized_religion = hinduism
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = pagan
-                }
-            }
-            add_harmonized_religion = animism
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = jewish_group
-                }
-            }
-            add_harmonized_religion = jewish
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_harmonized_with = zoroastrian_group
-                }
-            }
-            add_harmonized_religion = zoroastrian
-        }
-    }
-}
-
-####################################################################################
 # Fixing overlapping subject cores + removing foreign cores on root (+ claims)
 ####################################################################################
 
@@ -1004,80 +1129,19 @@ ROOT = {
 }
 
 ####################################################################################
-# Remove Smallpox
+# Remove Maluses on Provinces | Smallpox, Left Trade Company, etc
 ####################################################################################
 
 ROOT = {
     every_owned_province = {
         remove_province_modifier = inc_smallpox_outbreak
+        remove_province_modifier = left_trade_company
     }
     every_subject_country = {
         every_owned_province = {
             remove_province_modifier = inc_smallpox_outbreak
+            remove_province_modifier = left_trade_company
         }   
-    }
-}
-
-####################################################################################
-# Fixing Religion | Remove Guaranteed Dhimmi Autonomy | Removing noculture
-####################################################################################
-
-ROOT = {
-    # Propagate religion everywhere
-    set_country_flag = can_propagate_religion_in_abrahamic_provinces
-    every_owned_province = {
-        remove_province_modifier = estate_church_lao_animism_mod
-        remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
-    }
-    every_subject_country = {
-        every_owned_province = {
-            remove_province_modifier = estate_dhimmi_guaranteed_autonomy_mod
-            remove_province_modifier = estate_church_lao_animism_mod
-        }
-    }
-
-    every_owned_province = {
-        limit = {
-            culture = noculture
-        }
-        log = "Province [This.GetName] has noculture"
-        change_culture = ROOT
-    }
-    
-}
-
-####################################################################################
-# Remove Hegemony Lost Modifier
-####################################################################################
-
-ROOT = {
-    remove_country_modifier = lost_hegemony
-}
-
-####################################################################################
-# Creating Homeguard Generals
-####################################################################################
-
-if = {
-	limit = {
-		NOT = { 	
-			has_leader_with = {
-				# name = "Homeguard General"
-                shock = 666
-                fire = 666
-                manuever = 666666
-                siege = 666
-			}
-		}
-	}
-
-    define_general = {
-        name = "Homeguard General"
-        shock = 666
-        fire = 666
-        manuever = 666666
-        siege = 666
-        trait = "siege_specialist_personality"
     }
 }
 
@@ -1086,28 +1150,6 @@ if = {
 ####################################################################################
 
 ROOT = {
-    # Conversion of trade company provinces
-    every_owned_province = {
-        limit = {
-            is_owned_by_trade_company = yes
-            owner = {
-                NOT = {
-                    religion = confucianism
-                }
-            }
-        }
-        change_religion = ROOT  
-    }
-
-    every_subject_country = {
-        every_owned_province = {
-            limit = {
-                is_owned_by_trade_company = yes
-            }
-            change_religion = ROOT  
-        }
-    }
-
     # Trade Company Investments
     every_owned_province = {
         limit = {
@@ -1241,36 +1283,6 @@ ROOT = {
         owner = {
             add_treasury = -400
         }
-    }
-}
-
-####################################################################################
-# Adding Provinces to Parliament + Acceptance Chance | parliament.txt
-####################################################################################
-
-ROOT = {
-    add_country_modifier = { 
-        name = bill_of_rights_parliament
-        duration = -1  
-    }
-
-    add_country_modifier = { 
-        name = gbr_pax_britannica
-        duration = -1  
-    }
-
-    add_country_modifier = { 
-        name = ave_pax_angevina
-        duration = -1  
-    }
-
-    add_country_modifier = { 
-        name = eng_the_two_houses
-        duration = -1  
-    }
-
-    every_owned_province = {
-        set_seat_in_parliament = yes
     }
 }
 
