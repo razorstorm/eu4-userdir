@@ -4,7 +4,7 @@ every_owned_province = {
 
 every_subject_country = {
     every_owned_province = {
-        change_controller = ROOT
+        change_controller = owner
     }
 }
 

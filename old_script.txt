@@ -3088,7 +3088,40 @@ southern_africa_superregion = {
 }
 
 
+ROOT = {
+    every_country = {
+        limit = {
+            NOT = {
+                tag = AKS
+            }
+            NOT = {
+                is_subject_of = AKS
+            }
+        }
+        add_ruler_personality = infertile_personality
+        remove_country_modifier = sickly_monarch
+        add_country_modifier = {
+            name = very_sickly_monarch
+            duration = -1
+        }
+        # add_country_modifier = {
+        #     name = jason_global_foreign_trade_power_reduction_100000
+        #     duration = -1
+        # } 
+        # add_country_modifier = {
+        #     name = jason_global_own_trade_power_reduction_100000
+        #     duration = -1
+        # } 
+    }
 
+    remove_country_modifier = jason_global_foreign_trade_power_reduction_100000
+    remove_country_modifier = jason_global_own_trade_power_reduction_100000
+
+    every_subject_country = {
+        remove_country_modifier = jason_global_foreign_trade_power_reduction_100000
+        remove_country_modifier = jason_global_own_trade_power_reduction_100000
+    }
+}
 
 
 

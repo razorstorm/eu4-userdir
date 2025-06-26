@@ -1,2 +1,20 @@
+every_owned_province = {
+    limit = {
+        region = hudson_bay_region
+    }
+    cede_province = C13
+}
 
-marry_everyone = yes
+C13 = {
+    every_owned_province = {
+        add_colonysize = 1000
+        add_core = C13
+    }
+}
+
+K17 = {
+    every_owned_province = {
+        add_colonysize = 1000
+        add_core = K17
+    }
+}

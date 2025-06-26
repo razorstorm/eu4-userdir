@@ -1,0 +1,7 @@
+define_admiral = {
+    name = "Imperial Admiral"
+    shock = 10
+    fire = 10
+    manuever = 15
+    siege = 10
+}
