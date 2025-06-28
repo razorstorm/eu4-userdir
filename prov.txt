@@ -1,101 +1,37 @@
+log = "===============================Running Prov.txt=========================================="
 ####################################################################################
 # Scripts | script.txt | Just general things to run
-####################################################################################
-log = "===============================Running Prov.txt=========================================="
-
-# Some common triggers
+#
+# Some common triggers:
 # tag
 # is_core
 # province_id
+####################################################################################
 
-remove_country_modifier = jason_global_own_trade_power_cheat_100
+####################################################################################
+# Removing and Adding Modifiers
+####################################################################################
+remove_country_modifier = asdf
 # Template for adding modifierS
 add_country_modifier = {
     name = jason_mod_way_more_acc_cultures
     duration = -1
 }
 
-# every_owned_province = {
-#     add_colonysize = 1000
-# }
+####################################################################################
+# Misc
+####################################################################################
 
-1195 = {
-    change_trade_goods = cloves
+ROOT = {
+
 }
-
-
-
 
 ####################################################################################
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
-
-# TODO migrate to mod
-# every_subject_country = {
-#     limit = {
-#         is_subject_of_type = mining_corporation
-#     }
-#     every_owned_province = {
-#         change_religion = owner
-#         change_culture = owner
-#     }
-# }
-
-every_subject_country = {
-    add_country_modifier = {
-        name = jason_mod_more_GC
-        duration = -1
-    }
-}
-
-
 ROOT = {
-    every_country = {
-        limit = {
-            NOT = {
-                tag = AKS
-            }
-            NOT = {
-                is_subject_of = AKS
-            }
-        }
-        add_ruler_personality = infertile_personality
-        remove_country_modifier = sickly_monarch
-        add_country_modifier = {
-            name = very_sickly_monarch
-            duration = -1
-        }
-        # add_country_modifier = {
-        #     name = jason_global_foreign_trade_power_reduction_100000
-        #     duration = -1
-        # } 
-        # add_country_modifier = {
-        #     name = jason_global_own_trade_power_reduction_100000
-        #     duration = -1
-        # } 
-    }
 
-    remove_country_modifier = jason_global_foreign_trade_power_reduction_100000
-    remove_country_modifier = jason_global_own_trade_power_reduction_100000
-
-    every_subject_country = {
-        remove_country_modifier = jason_global_foreign_trade_power_reduction_100000
-        remove_country_modifier = jason_global_own_trade_power_reduction_100000
-    }
-}
-
-every_subject_country = {
-    limit = {
-        is_subject_of_type = trade_outpost
-    }
-    capital_scope = {
-        remove_province_modifier = province_trade_power_modifier_cheat_1m
-        add_province_modifier = {
-            name = province_trade_power_modifier_cheat_100k
-            duration = -1
-        }
-    }
 }
 
 
@@ -186,6 +122,9 @@ ROOT = {
     BEN = {
         override_country_name = "Fortress of Benin"
     }
+    CIR = {
+        override_country_name = "Grand Wall of The Caucasus"
+    }
 
     # Naval Marches
     CYP = {
@@ -219,14 +158,14 @@ ROOT = {
     # Kingdoms: Prince-Negusate - Large | Appanage
     # Duchies: Prince-Mangesta - Medium or Small | Appanage
     K07 = {
-        override_country_name = "Prince-Negusate of Mali"
+        override_country_name = "Princely Negusate of Mali"
     }
     # Appanages | Imperial Royal Fiefdoms: Imperial Prince-Appanage of X. Running counter to how they are defined, we use Appanages in a similar way as "The Prince of Wales". There should only be 1 appanage, which is always ruled by the designated imperial heir. This is meant to help with their training before ascension to the throne. During periods of no designated heir, the appanage is ruled by a royal regent appointed by the emperor, or simply temporarily ruled by the emperor directly as a personal union. 
     # Appanages have the most power, prestige, and precedence over all other subject states and are de jure the #1 ranked subject state with the most authority over the others. They are second only to th Empire itself, seeing as they are ruled directly by the Imperial Heir. 
     # Appanages tend to be vast wealthy empires to both help the young prince build up a strong powerbase to help him consolidate power after ascending the throne and also to provide the prince experience running vast empires and its endless headaches. 
     # Sometimes Appanages are also used as a "leader of other subjects" in a de jure hegemony (rather than a de jure subject liege relationship), to help delegate settling remote subject politics or to hone the Hier's diplomatic, problem solving, and conflict resolution skills. 
     KON = {
-        override_country_name = "Imperial Prince-Appanage of Kongo"
+        override_country_name = "Imp. Princely Appanage of Kongo"
     }
     
     # Fiefdoms | {fiefdom title} of X
@@ -252,7 +191,7 @@ ROOT = {
         }
         # EUropean Subject Kingdoms can optionally take European style titles
         BAV = {
-            override_country_name = "Kingdom of Bavaria`"
+            override_country_name = "Kingdom of Bavaria"
         }
         # Fief Subjects | Ras meaning Duke: Rasdom for duchies, Awrajja meaning province for counties. Large fiefdoms should be brother kingdoms: large Neusates
         ALH = {
@@ -289,6 +228,10 @@ ROOT = {
         }
         MUL = {
             override_country_name = "Rasdom of Multan"
+            set_country_flag = rasdom_fiefdom
+        }
+        ISF = {
+            override_country_name = "Rasdom of Isfahan"
             set_country_flag = rasdom_fiefdom
         }
         # Counties: Awrajja - Small
@@ -328,6 +271,30 @@ ROOT = {
         KGR = {
             override_country_name = "Awrajja of Kangra"
         }
+        BEU = {
+            override_country_name = "Awrajja of Berau"
+        }
+        KRY = {
+            override_country_name = "Awrajja of Gilan"
+        }
+        K21 = {
+            override_country_name = "Awrajja of Rasht"
+        }
+        K20 = {
+            override_country_name = "Awrajja of Golestan"
+        }
+        K22 = {
+            override_country_name = "Awrajja of Shiraz"
+        }
+        K23 = {
+            override_country_name = "Awrajja of Abarquh"
+        }
+        K24 = {
+            override_country_name = "Awrajja of Ardakan"
+        }
+        K25 = {
+            override_country_name = "Awrajja of Qumis"
+        }
         # European Fiefs can optionally get European titles
         K11 = {
             override_country_name = "County of Sardinia"
@@ -340,6 +307,16 @@ ROOT = {
         }
         SAV = {
             override_country_name = "County of Savoy"
+        }
+        BRB = {
+            override_country_name = "County of Brabant"
+        }
+        # Baronies | OPM european fiefdoms
+        CLI = {
+            override_country_name = "Barony of Cilli"
+        }
+        CMG = {
+            override_country_name = "Barony of Comminges"
         }
     }
 
@@ -424,6 +401,9 @@ ROOT = {
     }
     K05 = {
         override_country_name = "Arguin Tribal Reserve"
+    }
+    TY1 = {
+        override_country_name = "Tyumen Tribal Reserve"
     }
 
     # Puppet States
@@ -719,48 +699,11 @@ ROOT = {
 
 ROOT = {
     # These have been miograted into mod, todo test
-    ROOT = {
-        # Annex consequences
-        ROOT = {
-            remove_country_modifier = annexers_legacy
-        }
-
-        # Blocking all wars amongst subjects
-        every_subject_country = {
-            save_event_target_as = subject
-            ROOT = {
-                every_subject_country = {
-                    white_peace = event_target:subject 
-                    add_truce_with = event_target:subject 
-                }
-            }
-
-        }
-        every_subject_country = {
-            remove_opinion = {
-                who = ROOT
-                modifier = opinion_annex_vassal
-            }
-        }
-
-        # Discover all subject lands
-        every_subject_country = {
-            every_owned_province = {
-                discover_country = ROOT
-            }
-        }
-        every_subject_country = {
-            save_event_target_as = subject_country
-            ROOT = {
-                every_subject_country = {
-                    every_owned_province = {
-                        discover_country = event_target:subject_country
-                    }
-                }
-                every_owned_province = {
-                    discover_country = event_target:subject_country
-                }
-            }
+    # remove_country_modifier = annexers_legacy
+    every_subject_country = {
+        add_country_modifier = {
+            name = jason_mod_more_GC
+            duration = -1
         }
     }
 

@@ -1,326 +1,326 @@
-add_country_modifier = { 
-    name = mod_more_dip_upkeep
-    duration = -1  
-}
-add_country_modifier = { 
-    name = jason_mod_lessTime
-    duration = -1  
-}
-add_country_modifier = {
-    name = jason_global_more_building_slots
-    duration = -1
-}
-add_country_modifier = { 
-    name = jason_mod_faster_envoy
-    duration = -1  
-}
+# add_country_modifier = { 
+#     name = mod_more_dip_upkeep
+#     duration = -1  
+# }
+# add_country_modifier = { 
+#     name = jason_mod_lessTime
+#     duration = -1  
+# }
+# add_country_modifier = {
+#     name = jason_global_more_building_slots
+#     duration = -1
+# }
+# add_country_modifier = { 
+#     name = jason_mod_faster_envoy
+#     duration = -1  
+# }
 
-add_country_modifier = {
-    name = jason_mod_less_attrition
-    duration = -1  
-}
+# add_country_modifier = {
+#     name = jason_mod_less_attrition
+#     duration = -1  
+# }
 
-add_country_modifier = {
-    name = jason_mod_more_tradition
-    duration = -1  
-}
+# add_country_modifier = {
+#     name = jason_mod_more_tradition
+#     duration = -1  
+# }
 
-add_country_modifier = {
-    name = jason_mod_more_dip_upkeep
-    duration = -1  
-}
+# add_country_modifier = {
+#     name = jason_mod_more_dip_upkeep
+#     duration = -1  
+# }
 
-add_country_modifier = {
-    name = jason_mod_extremely_more_dip_upkeep
-    duration = -1
-}
+# add_country_modifier = {
+#     name = jason_mod_extremely_more_dip_upkeep
+#     duration = -1
+# }
 
-add_country_modifier = { 
-    name = more_diplomats
-    duration = -1  
-}
+# add_country_modifier = { 
+#     name = more_diplomats
+#     duration = -1  
+# }
 
-add_country_modifier = { 
-    name = jason_mod_more_dips
-    duration = -1  
-}
+# add_country_modifier = { 
+#     name = jason_mod_more_dips
+#     duration = -1  
+# }
 
-add_country_modifier = {
-    name = client_states_cheat
-    duration = -1
-}
+# add_country_modifier = {
+#     name = client_states_cheat
+#     duration = -1
+# }
 
-# 2 flagships
-add_country_modifier = {
-    name = ned_one_world
-    duration = -1
-}
+# # 2 flagships
+# add_country_modifier = {
+#     name = ned_one_world
+#     duration = -1
+# }
 
-##########################################################################
-# Supply
-##########################################################################
+# ##########################################################################
+# # Supply
+# ##########################################################################
 
-add_country_modifier = {
-    name = supply_cheat_modifier
-    duration = -1
-}
+# add_country_modifier = {
+#     name = supply_cheat_modifier
+#     duration = -1
+# }
 
-##########################################################################
-# Range
-##########################################################################
+# ##########################################################################
+# # Range
+# ##########################################################################
 
-add_country_modifier = {
-    name = jason_mod_more_trade_range
-    duration = -1
-}
+# add_country_modifier = {
+#     name = jason_mod_more_trade_range
+#     duration = -1
+# }
 
-##########################################################################
-# Policy Slots
-##########################################################################
+# ##########################################################################
+# # Policy Slots
+# ##########################################################################
 
-add_country_modifier = {
-    name = jason_more_policy_slots
-    duration = -1
-}
+# add_country_modifier = {
+#     name = jason_more_policy_slots
+#     duration = -1
+# }
 
-##########################################################################
-# Envoy Travel Speed
-##########################################################################
+# ##########################################################################
+# # Envoy Travel Speed
+# ##########################################################################
  
-add_country_modifier = {
-    name = envoy_travel_time_cheats
-    duration = -1
-}
-add_country_modifier = { 
-    name = emissary_authority
-    duration = -1
-}
+# add_country_modifier = {
+#     name = envoy_travel_time_cheats
+#     duration = -1
+# }
+# add_country_modifier = { 
+#     name = emissary_authority
+#     duration = -1
+# }
 
 
-##########################################################################
-# Ruler
-##########################################################################
+# ##########################################################################
+# # Ruler
+# ##########################################################################
 
-if = {
-    limit = {
-        tag = ARL
-    }
-    define_ruler = {
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        name = "Ismail I"
-        fixed = yes
-    }
-}
-else_if = {
-    limit = {
-        OR = {
-            tag = ENG
-            tag = GBR
-        }
-    }
-    define_ruler = {
-        dynasty = "Lancaster"
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        name = "Henry V"
-        fixed = yes
-    }
-}
-else_if = {
-    limit = {
-        tag = MJZ
-    }
-    define_ruler = {
-        dynasty = ROOT
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        name = "Kangxi"
-        fixed = yes
-    }
-}
-else_if = {
-    limit = {
-        OR = {
-            tag = BYZ
-            tag = NHS
-        }
-    }
-    define_ruler = {
-        dynasty = "Palaiologos"
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        name = "Constantine XII \"The Great\""
-        fixed = yes
-    }
-}
-else_if = {
-    limit = {
-        OR = {
-            tag = ETH
-        }
-    }
-    define_ruler = {
-        dynasty = ROOT
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        name = "Menelik II \"The Divine\""
-        fixed = yes
-    }
-}
-else_if = {
-    limit = {
-        tag = AZT
-    }
-    # Don't create new ruler, but make sure to set the montezuma flag if it somehow got unset.
-    set_ruler_flag = azt_montezuma    
-}
-else = {
-    define_ruler = {
-        dynasty = ROOT
-        culture = ROOT
-        religion = ROOT
-        adm = 10
-        dip = 10
-        mil = 10
-        male = yes
-        fixed = yes
-    }
-}
+# if = {
+#     limit = {
+#         tag = ARL
+#     }
+#     define_ruler = {
+#         culture = ROOT
+#         religion = ROOT
+#         adm = 10
+#         dip = 10
+#         mil = 10
+#         male = yes
+#         name = "Ismail I"
+#         fixed = yes
+#     }
+# }
+# else_if = {
+#     limit = {
+#         OR = {
+#             tag = ENG
+#             tag = GBR
+#         }
+#     }
+#     define_ruler = {
+#         dynasty = "Lancaster"
+#         culture = ROOT
+#         religion = ROOT
+#         adm = 10
+#         dip = 10
+#         mil = 10
+#         male = yes
+#         name = "Henry V"
+#         fixed = yes
+#     }
+# }
+# else_if = {
+#     limit = {
+#         tag = MJZ
+#     }
+#     define_ruler = {
+#         dynasty = ROOT
+#         culture = ROOT
+#         religion = ROOT
+#         adm = 10
+#         dip = 10
+#         mil = 10
+#         male = yes
+#         name = "Kangxi"
+#         fixed = yes
+#     }
+# }
+# else_if = {
+#     limit = {
+#         OR = {
+#             tag = BYZ
+#             tag = NHS
+#         }
+#     }
+#     define_ruler = {
+#         dynasty = "Palaiologos"
+#         culture = ROOT
+#         religion = ROOT
+#         adm = 10
+#         dip = 10
+#         mil = 10
+#         male = yes
+#         name = "Constantine XII \"The Great\""
+#         fixed = yes
+#     }
+# }
+# else_if = {
+#     limit = {
+#         OR = {
+#             tag = ETH
+#         }
+#     }
+#     define_ruler = {
+#         dynasty = ROOT
+#         culture = ROOT
+#         religion = ROOT
+#         adm = 10
+#         dip = 10
+#         mil = 10
+#         male = yes
+#         name = "Menelik II \"The Divine\""
+#         fixed = yes
+#     }
+# }
+# else_if = {
+#     limit = {
+#         tag = AZT
+#     }
+#     # Don't create new ruler, but make sure to set the montezuma flag if it somehow got unset.
+#     set_ruler_flag = azt_montezuma    
+# }
+# else = {
+#     define_ruler = {
+#         dynasty = ROOT
+#         culture = ROOT
+#         religion = ROOT
+#         adm = 10
+#         dip = 10
+#         mil = 10
+#         male = yes
+#         fixed = yes
+#     }
+# }
 
-change_adm = 6
-change_dip = 6
-change_mil = 6
+# change_adm = 6
+# change_dip = 6
+# change_mil = 6
 
-add_ruler_personality = ruler_of_destiny_personality
-add_ruler_personality = immortal_personality
-add_ruler_personality = legendary_conqueror_personality
-add_ruler_personality = scholar_personality
-
-
-# Adding advisor pool
-add_country_modifier = { 
-    name = ger_chancellorship
-    duration = -1  
-}
-add_country_modifier = { 
-    name = tur_reign_of_women_modifier
-    duration = -1  
-}
+# add_ruler_personality = ruler_of_destiny_personality
+# add_ruler_personality = immortal_personality
+# add_ruler_personality = legendary_conqueror_personality
+# add_ruler_personality = scholar_personality
 
 
-##########################################################################
-# Army Professionalism | (1% yearly)
-##########################################################################
-
-add_country_modifier = { 
-    name = mng_yu_qian_manual_modifier
-    duration = -1  
-}
-
-##########################################################################
-# Culture Convert | culture_convert.txt
-##########################################################################
-
-add_country_modifier = {
-    name = culture_conversion_cost_cheat
-    duration = -1
-}
-
-add_country_modifier = {
-    name = jason_mod_more_culture_speed
-    duration = -1
-}
+# # Adding advisor pool
+# add_country_modifier = { 
+#     name = ger_chancellorship
+#     duration = -1  
+# }
+# add_country_modifier = { 
+#     name = tur_reign_of_women_modifier
+#     duration = -1  
+# }
 
 
-##########################################################################
-# Absolutism | abs.txt
-##########################################################################
+# ##########################################################################
+# # Army Professionalism | (1% yearly)
+# ##########################################################################
 
-add_country_modifier = {
-    name = absolutism_cheat
-    duration = -1
-}
-add_country_modifier = {
-    name = jason_mod_more_absolutism_max
-    duration = -1  
-}
+# add_country_modifier = { 
+#     name = mng_yu_qian_manual_modifier
+#     duration = -1  
+# }
 
+# ##########################################################################
+# # Culture Convert | culture_convert.txt
+# ##########################################################################
 
-##########################################################################
-# Ship Build times
-##########################################################################
+# add_country_modifier = {
+#     name = culture_conversion_cost_cheat
+#     duration = -1
+# }
 
-every_owned_province = {
-    limit = {
-        has_port = yes
-    }
-    add_country_modifier = {
-        name = global_ship_recruit_speed_cheat
-        duration = -1
-    }
-    # add_province_modifier = {
-    #     name = global_ship_recruit_speed_cheat
-    #     duration = -1
-    # }
-    add_province_modifier = {
-        name = local_ship_recruit_speed_cheat
-        duration = -1
-    }
-}
+# add_country_modifier = {
+#     name = jason_mod_more_culture_speed
+#     duration = -1
+# }
 
 
-##########################################################################
-# Capital Metropolis
-##########################################################################
+# ##########################################################################
+# # Absolutism | abs.txt
+# ##########################################################################
 
-capital_scope = {
-    set_base_tax = 20
-    set_base_production = 25
-    set_base_manpower = 15
-}
-
-
-##########################################################################
-# Tributary Power          
-##########################################################################
-add_country_modifier = {
-    name = mng_reformed_tributary_obligation_system_modifier
-    duration = -1
-}
+# add_country_modifier = {
+#     name = absolutism_cheat
+#     duration = -1
+# }
+# add_country_modifier = {
+#     name = jason_mod_more_absolutism_max
+#     duration = -1  
+# }
 
 
-##########################################################################
-# Infinite generals | leaders.txt    
-##########################################################################
-add_country_modifier = { 
-    name = more_generals_cheat
-    duration = -1  
-}
+# ##########################################################################
+# # Ship Build times
+# ##########################################################################
+
+# every_owned_province = {
+#     limit = {
+#         has_port = yes
+#     }
+#     add_country_modifier = {
+#         name = global_ship_recruit_speed_cheat
+#         duration = -1
+#     }
+#     # add_province_modifier = {
+#     #     name = global_ship_recruit_speed_cheat
+#     #     duration = -1
+#     # }
+#     add_province_modifier = {
+#         name = local_ship_recruit_speed_cheat
+#         duration = -1
+#     }
+# }
 
 
-##########################################################################
-# Pax Solis Laws Set Up | setup_pax_solis_laws.txt
-##########################################################################
+# ##########################################################################
+# # Capital Metropolis
+# ##########################################################################
 
-setup_pax_solis_laws = yes
+# capital_scope = {
+#     set_base_tax = 20
+#     set_base_production = 25
+#     set_base_manpower = 15
+# }
+
+
+# ##########################################################################
+# # Tributary Power          
+# ##########################################################################
+# add_country_modifier = {
+#     name = mng_reformed_tributary_obligation_system_modifier
+#     duration = -1
+# }
+
+
+# ##########################################################################
+# # Infinite generals | leaders.txt    
+# ##########################################################################
+# add_country_modifier = { 
+#     name = more_generals_cheat
+#     duration = -1  
+# }
+
+
+# ##########################################################################
+# # Pax Solis Laws Set Up | setup_pax_solis_laws.txt
+# ##########################################################################
+
+# setup_pax_solis_laws = yes
