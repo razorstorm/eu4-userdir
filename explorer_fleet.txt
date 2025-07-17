@@ -1,4 +1,4 @@
-CAPITAL_SCOPE = {
+6007 = {
     light_ship = ROOT
     light_ship = ROOT
     light_ship = ROOT

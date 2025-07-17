@@ -1,0 +1,117 @@
+name="American Empire"
+adjective="American"
+country_colors={
+	flag=8
+	color=67
+	symbol_index=118
+	flag_colors={
+		1 13 2 
+	}
+}
+index=2054
+graphical_culture=1
+technology_group=17
+religion=1
+government=2
+government_reform=808
+government_rank=3
+idea={
+	{
+		level=2
+		index=79
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=37
+		name=""
+		desc=""
+	}
+ {
+		level=20
+		index=47
+		name=""
+		desc=""
+	}
+ {
+		level=3
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=102
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=80
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=36
+		name=""
+		desc=""
+	}
+ {
+		level=10
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=5
+		index=67
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=121
+		name=""
+		desc=""
+	}
+ 
+}
+culture="american"
+monarch={
+	admin=10
+	diplomacy=10
+	military=10
+	age=13
+	religion=1
+	culture="american"
+	female=yes
+	name="George"
+	dynasty="Washington"
+	is_null=no
+}
+heir={
+	admin=-1
+	diplomacy=-1
+	military=-1
+	age=1443
+	religion=1
+	culture="american"
+	female=no
+	name="No Heir"
+	dynasty="nodynasty"
+	is_null=yes
+}
+queen={
+	admin=-1
+	diplomacy=-1
+	military=-1
+	age=1443
+	religion=1
+	culture="american"
+	female=no
+	name="No Consort"
+	dynasty="nodynasty"
+	is_null=yes
+}

@@ -1,0 +1,288 @@
+2495 = {
+    cede_province = ACO
+}   
+879 = {
+    cede_province = APA
+}  
+4631 = {
+    cede_province = KER
+}  
+878 = {
+    cede_province = NAH
+}  
+880 = {
+    cede_province = OHK
+}   
+877 = {
+    cede_province = PIM
+}    
+862 = {
+    cede_province = YAQ
+}   
+4636 = {
+    cede_province = YKT
+}  
+4632 = {
+    cede_province = ZIA
+} 
+2494 = {
+    cede_province = ZNI
+}    
+992 = {
+    cede_province = AGQ
+}   
+988 = {
+    cede_province = ATT
+}   
+989 = {
+    cede_province = ATG
+}   
+2585 = {
+    cede_province = ARN
+} 
+987 = {
+    cede_province = ATW
+}    
+2579 = {
+    cede_province = INN
+}    
+4891 = {
+    cede_province = MIK
+}  
+2571 = {
+    cede_province = MAL
+}    
+2671 = {
+    cede_province = MIS
+}  
+993 = {
+    cede_province = OSH
+} 
+994 = {
+    cede_province = STA
+}   
+2587 = {
+    cede_province = OTT
+}  
+2670 = {
+    cede_province = TAH
+}    
+2586 = {
+    cede_province = TIO
+}  
+873 = {
+    cede_province = CNK
+} 
+2022 = {
+    cede_province = HDA
+}   
+874 = {
+    cede_province = SAL
+}  
+2020 = {
+    cede_province = SHO
+}    
+917 = {
+    cede_province = CAH
+} 
+2525 = {
+    cede_province = CHL
+}    
+944 = {
+    cede_province = FOX
+} 
+916 = {
+    cede_province = KSK
+}   
+943 = {
+    cede_province = MMI
+}   
+4898 = {
+    cede_province = OJI
+}  
+913 = {
+    cede_province = ONE
+}  
+2524 = {
+    cede_province = OSA
+}   
+915 = {
+    cede_province = PEO
+}  
+945 = {
+    cede_province = POT
+}  
+2517 = {
+    cede_province = SIO
+}   
+2510 = {
+    cede_province = ARP
+} 
+1809 = {
+    cede_province = COM
+}    
+2503 = {
+    cede_province = KIO
+}   
+907 = {
+    cede_province = LAK
+}  
+901 = {
+    cede_province = PAW
+}  
+4901 = {
+    cede_province = WIC
+}   
+2016 = {
+    cede_province = ASI
+} 
+2004 = {
+    cede_province = BLA
+}   
+4902 = {
+    cede_province = CHY
+}    
+2589 = {
+    cede_province = WCR
+}    
+2593 = {
+    cede_province = NAK
+}  
+2596 = {
+    cede_province = NEH
+} 
+2531 = {
+    cede_province = ABE
+}  
+895 = {
+    cede_province = ANI
+}  
+2532 = {
+    cede_province = ATA
+}    
+894 = {
+    cede_province = CAD
+}   
+897 = {
+    cede_province = CAQ
+}  
+919 = {
+    cede_province = CHI
+}   
+941 = {
+    cede_province = CHS
+}  
+920 = {
+    cede_province = CHO
+} 
+925 = {
+    cede_province = COW
+}  
+4888 = {
+    cede_province = HAT
+} 
+2526 = {
+    cede_province = KIS
+} 
+2529 = {
+    cede_province = NAT
+} 
+2014 = {
+    cede_province = NTC
+}    
+4923 = {
+    cede_province = PAC
+}  
+2528 = {
+    cede_province = QUI
+}    
+2564 = {
+    cede_province = ABE
+} 
+959 = {
+    cede_province = CAY
+}  
+954 = {
+    cede_province = ERI
+}    
+956 = {
+    cede_province = LEN
+}  
+969 = {
+    cede_province = MAH
+} 
+964 = {
+    cede_province = MOH
+}  
+961 = {
+    cede_province = ONE
+}  
+960 = {
+    cede_province = ONO
+}    
+971 = {
+    cede_province = PEN
+}   
+2010 = {
+    cede_province = PEQ
+}  
+958 = {
+    cede_province = SEN
+}  
+2557 = {
+    cede_province = SUS
+}   
+966 = {
+    cede_province = WAM
+}   
+4872 = {
+    cede_province = WEN
+}   
+2669 = {
+    cede_province = HAS
+} 
+883 = {
+    cede_province = LIP
+}   
+882 = {
+    cede_province = MSC
+}   
+886 = {
+    cede_province = WIC
+} 
+2538 = {
+    cede_province = ALT
+}    
+4879 = {
+    cede_province = CHE
+}    
+935 = {
+    cede_province = CHI
+}  
+933 = {
+    cede_province = COF
+}    
+931 = {
+    cede_province = COO
+}   
+2540 = {
+    cede_province = ETO
+}  
+2537 = {
+    cede_province = ICH
+}  
+936 = {
+    cede_province = JOA
+}   
+930 = {
+    cede_province = KAS
+} 
+952 = {
+    cede_province = POW
+}    
+2527 = {
+    cede_province = SAT
+}  
+937 = {
+    cede_province = TUS
+}

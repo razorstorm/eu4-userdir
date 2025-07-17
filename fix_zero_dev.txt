@@ -5,6 +5,7 @@ every_province = {
 				base_manpower = 1
 			}
 		}
+        log = "Fixing zero base manpower in [THIS.GetName]"
 		add_base_manpower = 1
 	}
 	if = {
@@ -13,6 +14,7 @@ every_province = {
 				base_tax = 1
 			}
 		}
+        log = "Fixing zero base tax in [THIS.GetName]"
 		add_base_tax = 1
 	}
 	if = {
@@ -21,6 +23,7 @@ every_province = {
 				base_production = 1
 			}
 		}
+        log = "Fixing zero base production in [THIS.GetName]"
 		add_base_production = 1
 	}
 }

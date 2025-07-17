@@ -378,6 +378,13 @@ every_subject_country = {
 
 # mng_sail_east
 
+add_casus_belli = {
+    target = KOR
+    type = cb_vassalize_mission
+    months = -1
+}
+
+
 remove_country_modifier = mng_imperial_explorers_corps_of_the_ming_dynasty_modifier
 remove_country_modifier = mng_social_and_mercantile_exchanges_with_the_new_world_modifier
 
@@ -733,12 +740,50 @@ every_owned_province = {
     change_religion = ROOT  
 }
 
+add_mod = {
+    name = rus_icon_climacus_bonus
+}
+add_mod = {
+    name = rus_icon_eleusa_bonus
+}
+add_mod = {
+    name = rus_icon_michael_bonus
+}
+add_mod = {
+    name = rus_icon_nicholas_bonus
+}
+add_mod = {
+    name = rus_icon_pancreator_bonus
+}
+
+
+
 ROOT = {
     remove_country_modifier = defender_of_faith_refused_cta
 }
 ROOT = {
     remove_country_modifier = dishonoured_alliance
 }
+
+# Changing tag
+UBV = {
+    change_tag = BAV
+    swap_non_generic_missions = yes
+    on_change_tag_effect = yes
+    remove_non_electors_emperors_from_empire_effect = yes
+}
+
+K04 = {
+    change_tag_with_effects = {
+        tag = AUS
+    }
+}
+
+
+835 = {
+    add_canal = panama_canal
+}
+
 
 
 
@@ -821,6 +866,22 @@ every_subject_country = {
         change_religion = reformed  
     }
 
+}
+
+
+# Undiscover
+
+asia = {
+    discover_country = ROOT
+}
+eastern_europe_superregion = {
+    undiscover_country = ROOT
+}
+near_east_superregion = {
+    undiscover_country = ROOT
+}
+persia_superregion = {
+    undiscover_country = ROOT
 }
 
 DAN = {
@@ -1010,6 +1071,29 @@ capital_scope = {
     }
 }
 
+6702 = {
+    change_province_name = "Kamchatka"
+}
+
+
+accept_all_american_cultures = yes
+add_accepted_culture = sumatran
+add_accepted_culture = evenk
+add_accepted_culture = fon
+add_accepted_culture = khoisan
+add_accepted_culture = kongolese
+add_accepted_culture = madagasque
+add_accepted_culture = nguni
+add_accepted_culture = yakut
+add_accepted_culture = samoyed
+add_accepted_culture = tungus
+add_accepted_culture = yukagyr
+add_accepted_culture = ostyaki
+add_accepted_culture = siberian
+add_accepted_culture = russian
+add_accepted_culture = donghai
+add_accepted_culture = kirgiz
+
 
 create_alliance = FRA
 
@@ -1181,11 +1265,15 @@ every_owned_province = {
 }
 
 
-# Convert jimi states into tributaries
+# Convert mng subjects into tributaries
 MNG = {
     every_subject_country = {
         limit = {
-            is_subject_of_type = jimi_state
+            OR = {
+                is_subject_of_type = mongolian_tribe
+                is_subject_of_type = jimi_state
+                is_subject_of_type = sino_jimi_state
+            }
         }
         MNG = {
             create_subject = {
@@ -2159,6 +2247,23 @@ MNG = {
     add_historical_friend = ERS
 }
 
+
+# Spawning rebels
+    # 1971 = {
+    #     spawn_rebels = {
+    #         type = orthodox_rebels
+    #         religion = orthodox
+    #         culture = muscovite
+    #         size = 40
+    #         friend = MOS
+    #     }
+    # }
+
+# disband_rebels
+
+1971 = {
+    disband_rebels = orthodox_rebels
+}
 
 define_heir = {
     dynasty = "Caesar Immortalis"
@@ -4993,5 +5098,85 @@ every_subject_country = {
             name = province_trade_power_modifier_cheat_100k
             duration = -1
         }
+    }
+}
+
+
+
+
+
+# NOV to 65% admin efficiency
+NOV = {
+    add_country_modifier = { 
+        name = mug_viceroyalty_of_the_deccan
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = fall_of_china
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = ger_kaiserreich
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = hab_supreme_in_europe
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = bur_carolingia
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = sav_alpine_powerhouse
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = pru_german_confederation
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = french_revolution_mission
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = pap_papal_press_rb
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = lit_efficient_leg_proceedings_modifier
+        duration = 5
+    }
+    add_country_modifier = { 
+        name = teu_pru_embraced_the_revolution
+        duration = 5
+    }
+}
+
+
+
+
+
+
+# Consolidated Dominions Chats
+every_subject_country = {
+    limit = {
+        OR = {   
+            is_subject_of_type = consolidated_dominion
+        }
+    }
+    add_mod = {
+        name = jason_ignore_coring_distance
+    }
+    add_mod = {
+        name = allow_frontiers_cheat
+    }
+    change_government = monarchy
+    add_government_reform = autocracy_reform
+    # log = "Country is [This.GetName]"
+    add_treasury = 100000
+    add_country_modifier = {
+        name = ultra_free_income_cheat
+        duration = -1
     }
 }

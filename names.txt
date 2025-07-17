@@ -1,5 +1,143 @@
 # Roman Empire - Country
 # Rename countries
+# TEMPLATE
+# Names
+ROOT = {
+    ROOT = {
+    }
+
+    # dominions | Imperial Russian X
+    ROOT = {
+
+    }
+    
+    # Marches | March of X
+    ROOT = {
+
+    }
+    
+    # Defensive Marches | Fortress of X
+    ROOT = {
+
+    }
+    
+    # Naval Marches | Naval Base of X or Gates of X
+    ROOT = {
+    }
+
+    # Administrative Regions | Imperial Russian X
+    ROOT = {
+    }
+
+    # Tibetain Administrative Regions | Imperial Russian Tibet
+    # TIB = {
+    #     override_country_name = "Imperial Russian Tibet"
+    # }
+    
+    # Real Unions | Russian Empire/Kingdom/Duchy/County of X
+    ROOT = {
+
+    }
+
+    # Princely Vassals (prince_vassal)
+    # A select few Royal fiefs for powerful royal princes or close imperial relatives. These tend to be more powerful than nor royal fiefs. And they have more precedence, de jure power, and prestige than normal vassals. 
+    # They also tend to be given more resources and the responsibility of either holding a large empire or overseeing important strategic operations or profitable industries (such as the mali mines)
+    # Large: Prince-Kingdom of X
+    # Medium: Prince-Duchy of X
+    ROOT = {
+
+    }
+
+    # Appanages 
+    # We use Appanages in a similar way as "The Prince of Wales". There should only be 1 appanage, which is always ruled by the designated imperial heir. This is meant to help with their training before ascension to the throne. During periods of no designated heir, the appanage is ruled by a royal regent appointed by the emperor, or simply temporarily ruled by the emperor directly as a personal union. 
+    # Appanages have the most power, prestige, and precedence over all other subject states and are de jure the #1 ranked subject state with the most authority over the others. They are second only to th Empire itself, seeing as they are ruled directly by the Imperial Heir. 
+    # Appanages tend to be vast wealthy empires to both help the young prince build up a strong powerbase to help him consolidate power after ascending the throne and also to provide the prince experience running vast empires and its endless headaches. 
+    # Sometimes Appanages are also used as a "leader of other subjects" in a de jure hegemony (rather than a de jure subject liege relationship), to help delegate settling remote subject politics or to hone the Hier's diplomatic, problem solving, and conflict resolution skills. 
+    # All: Imperial Princedom of X
+    ROOT = {
+    }
+    
+    # Fiefdoms | {fiefdom title} of X
+    # Kingdoms: Kingdom of X - Large | Brother Kingdom
+    # Duchies: Duchy of X - Medium | Fief Subject (set_country_flag = duchy_fiefdom)
+    # Counties: County of X - Small | Fief Subject
+    # Baronies: Barony of X - OPMs | Fief Subject
+    ROOT = {
+        # Kingdom Tier
+        AAA = {
+            override_country_name = "Kingdom of Da Zhou"
+        }
+        # Duchies
+        AAA = {
+            override_country_name = "Duchy of Baluchistan"
+            set_country_flag = duchy_fiefdom
+        }
+        # Counties
+        AAA = {
+            override_country_name = "County of Mosalsk"
+        }
+        # Baronies
+        AAA = {
+            override_country_name = "Barony of Belyov"
+            set_country_flag = barony_fiefdom
+        }
+    }
+
+    # Imperial Cities | Imperial City of X
+    ROOT = {
+        AAA = {
+            override_country_name = "Imperial City of Theodoro"
+        }
+    }
+
+    # Tropical Resorts | The X Resort
+    ROOT = {
+
+    }
+
+    # Mining Corporations | Mines of X
+    ROOT = {
+
+    }
+
+    # Commercial Enterprises | X Trading Company
+    ROOT = {
+
+    }
+
+    # Trade Outposts | X Trade Outpost
+    ROOT = {
+
+    }
+
+    # Banking Families | Russian Bank of X
+    ROOT = {
+    }
+
+    # Integrated Tribe Subjects | Russian X_adj Tribe
+    ROOT = {
+    }
+
+    # Native Reserves | X_adj Tribal Reserve
+    ROOT = {
+    }
+
+    # Puppet States | X_adj puppet state / Puppet State of X / X_adj Satellite State
+    ROOT = {
+
+    }
+
+    
+    # jimi_states | Imperial Tributary of X
+    ROOT = {
+    }
+
+    # Pirate Brotherhoods
+    ROOT = {
+    }
+}
+
+
 ROOT = {
 	ROOT = {
 		override_country_name = "Imperium Romanum"
@@ -928,5 +1066,1373 @@ ROOT = {
     # Banks
     HSA = {
         override_country_name = "The Hanseatic League"
+    }
+}
+
+# Aksumite Empire
+ROOT = {
+    ROOT = {
+        override_country_name = AKSUMITE_EMPIRE_NAME
+    }
+
+    # dominions
+    C00 = {
+        override_country_name = "Imperial Aksumite Cuba"
+    }
+    C10 = {
+        override_country_name = "Imperial Aksumite East Coast"
+    }
+    K15 = {
+        override_country_name = "Imperial Aksumite Chile"
+    }
+    K04 = {
+        override_country_name = "Imperial Aksumite Capo Verde"
+    }
+    TEX = {
+        override_country_name = "Imperial Aksumite Texas"
+    }
+
+    # Marches | X Dejazmach meaning militarized province
+    BAL = {
+        override_country_name = "Baluchistani Dejazmach"
+    }
+    TUN = {
+        override_country_name = "Tunisian Dejazmach"
+    }
+    MLW = {
+        override_country_name = "Malawian Dejazmach"
+    }
+
+    # Defensive Marches
+    BEN = {
+        override_country_name = "Fortress of Benin"
+    }
+    CIR = {
+        override_country_name = "Grand Wall of The Caucasus"
+    }
+
+    # Naval Marches
+    CYP = {
+        override_country_name = "Naval Base of Cyprus"
+    }
+    ORM = {
+        override_country_name = "Gates of Hormuz"
+    }
+    SKA = {
+        override_country_name = "Naval Base of Madagascar"
+    }
+
+    # Real Unions | Aksumite Negusate of X
+    EGY = {
+        override_country_name = "Aksumite Negusate of Egypt"
+    }
+    K08 = {
+        override_country_name = "Aksumite Rasdom of Libya"
+    }
+
+    HSN = {
+        override_country_name = "Aksumite Negusate of the Ayyubids"
+    }
+    KBO = {
+        override_country_name = "Aksumite Empire of Kanem-Bornu"
+    }
+    
+    # Princely Vassals
+    # A select few Royal fiefs for powerful royal princes or close imperial relatives. These tend to be more powerful than nor royal fiefs. And they have more precedence, de jure power, and prestige than normal vassals. 
+    # They also tend to be given more resources and the responsibility of either holding a large empire or overseeing important strategic operations or profitable industries (such as the mali mines)
+    # Kingdoms: Prince-Negusate - Large | Appanage
+    # Duchies: Prince-Mangesta - Medium or Small | Appanage
+    K07 = {
+        override_country_name = "Princely Negusate of Mali"
+    }
+    # Appanages | Imperial Royal Fiefdoms: Imperial Prince-Appanage of X. Running counter to how they are defined, we use Appanages in a similar way as "The Prince of Wales". There should only be 1 appanage, which is always ruled by the designated imperial heir. This is meant to help with their training before ascension to the throne. During periods of no designated heir, the appanage is ruled by a royal regent appointed by the emperor, or simply temporarily ruled by the emperor directly as a personal union. 
+    # Appanages have the most power, prestige, and precedence over all other subject states and are de jure the #1 ranked subject state with the most authority over the others. They are second only to th Empire itself, seeing as they are ruled directly by the Imperial Heir. 
+    # Appanages tend to be vast wealthy empires to both help the young prince build up a strong powerbase to help him consolidate power after ascending the throne and also to provide the prince experience running vast empires and its endless headaches. 
+    # Sometimes Appanages are also used as a "leader of other subjects" in a de jure hegemony (rather than a de jure subject liege relationship), to help delegate settling remote subject politics or to hone the Hier's diplomatic, problem solving, and conflict resolution skills. 
+    KON = {
+        override_country_name = "Imp. Princely Appanage of Kongo"
+    }
+    
+    # Fiefdoms | {fiefdom title} of X
+    # Kingdoms: Negusates - Large | Brother Kingdom
+    # Duchies: Rasdoms - Medium | Fief Subject
+    # Counties: Awrajjas - Small | Fief Subject
+    ROOT = {
+        # Brother Kingdoms | Negusate of X, Negus Meaning Subject King, Negusate being a neologism for Kingdom
+        POR = {
+            override_country_name = "Kingdom of Portugal"
+        }
+        SON = {
+            override_country_name = "Negusate of Songhai"
+        }
+        ALG = {
+            override_country_name = "Negusate of Algeria"
+        }
+        MOR = {
+            override_country_name = "Negusate of Morocco"
+        }
+        GUJ = {
+            override_country_name = "Negusate of Gujarat"
+        }
+        # EUropean Subject Kingdoms can optionally take European style titles
+        BAV = {
+            override_country_name = "Kingdom of Bavaria"
+        }
+        # Fief Subjects | Ras meaning Duke: Rasdom for duchies, Awrajja meaning province for counties. Large fiefdoms should be brother kingdoms: large Neusates
+        ALH = {
+            override_country_name = "Rasdom of Hajar"
+            set_country_flag = rasdom_fiefdom
+        }
+        BRT = {
+            override_country_name = "Rasdom of Buryat"
+            set_country_flag = rasdom_fiefdom
+        }
+        QAR = {
+            override_country_name = "Rasdom of Qara Qoyunlu"
+            set_country_flag = rasdom_fiefdom
+        }
+        FRS = {
+            override_country_name = "Rasdom of Fars"
+            set_country_flag = rasdom_fiefdom
+        }
+        KRW = {
+            override_country_name = "Rasdom of The Lake"
+            set_country_flag = rasdom_fiefdom
+        }
+        BON = {
+            override_country_name = "Rasdom of Bonoman"
+            set_country_flag = rasdom_fiefdom
+        }
+        K10 = {
+            override_country_name = "Rasdom of Andalusia"
+            set_country_flag = rasdom_fiefdom
+        }
+        SND = {
+            override_country_name = "Rasdom of Sindh"
+            set_country_flag = rasdom_fiefdom
+        }
+        MUL = {
+            override_country_name = "Rasdom of Multan"
+            set_country_flag = rasdom_fiefdom
+        }
+        ISF = {
+            override_country_name = "Rasdom of Isfahan"
+            set_country_flag = rasdom_fiefdom
+        }
+        # Counties: Awrajja - Small
+        YAO = {
+            override_country_name = "Awrajja of Yao"
+        }
+        K12 = {
+            override_country_name = "Awrajja of the Balearics"
+        }
+        TI1 = {
+            override_country_name = "Awrajja of Khuttalan"
+        }
+        HM1 = {
+            override_country_name = "Awrajja of Hamadan"
+        }
+        TAB = {
+            override_country_name = "Awrajja of Mazandaran"
+        }
+        LR2 = {
+            override_country_name = "Awrajja of Luristan"
+        }
+        ARD = {
+            override_country_name = "Awrajja of Ardalan"
+        }
+        K02 = {
+            override_country_name = "Awrajja of Basra"
+        }
+        KNG = {
+            override_country_name = "Awrajja of Kong"
+        }
+        DGB = {
+            override_country_name = "Awrajja of Dagbon"
+        }
+        GAL = {
+            override_country_name = "Awrajja of Galicia"
+        }
+        KGR = {
+            override_country_name = "Awrajja of Kangra"
+        }
+        BEU = {
+            override_country_name = "Awrajja of Berau"
+        }
+        KRY = {
+            override_country_name = "Awrajja of Gilan"
+        }
+        K21 = {
+            override_country_name = "Awrajja of Rasht"
+        }
+        K20 = {
+            override_country_name = "Awrajja of Golestan"
+        }
+        K22 = {
+            override_country_name = "Awrajja of Shiraz"
+        }
+        K23 = {
+            override_country_name = "Awrajja of Abarquh"
+        }
+        K24 = {
+            override_country_name = "Awrajja of Ardakan"
+        }
+        K25 = {
+            override_country_name = "Awrajja of Qumis"
+        }
+        # European Fiefs can optionally get European titles
+        K11 = {
+            override_country_name = "County of Sardinia"
+        }
+        PIO = {
+            override_country_name = "County of Piombino"
+        }
+        SIC = {
+            override_country_name = "County of Sicily"
+        }
+        SAV = {
+            override_country_name = "County of Savoy"
+        }
+        BRB = {
+            override_country_name = "County of Brabant"
+        }
+        # Baronies | OPM european fiefdoms
+        CLI = {
+            override_country_name = "Barony of Cilli"
+        }
+        CMG = {
+            override_country_name = "Barony of Comminges"
+        }
+    }
+
+    # Tropical Resorts 
+    DGL = {
+        override_country_name = "Resort of the Maldives"
+    }
+    K03 = {
+        override_country_name = "Resort of the Mauritius"
+    }
+    BLI = {
+        override_country_name = "Resort of Bali"
+    }
+
+    # Mining Corporations
+    ZIM = {
+        override_country_name = "Mines of the Great Zimbabwe"
+    }
+    K06 = {
+        override_country_name = "Mines of the Wangara"
+    }
+    K18 = {
+        override_country_name = "Mines of the Congo"
+    }
+    K14 = {
+        override_country_name = "Mines of the Western Maghreb"
+    }
+
+    # Commercial Enterprises
+    ZAN = {
+        override_country_name = "Zanzibar Trade Company"
+    }
+
+    # Trade Outposts
+    LFA = {
+        override_country_name = "Lanfang Trade Outpost"
+    }
+    K01 = {
+        override_country_name = "Sao Tome Trade Outpost"
+    }
+    GEN = {
+        override_country_name = "Genoa Trade Outpost"
+    }
+    WUU = {
+        override_country_name = "Wu Dynasty Trade Outpost"
+    }
+    PUN = {
+        override_country_name = "Punjab Trade Outpost"
+    }
+    CEY = {
+        override_country_name = "Ceylon Trade Outpost"
+    }
+    GOC = {
+        override_country_name = "Golkanda Trade Outpost"
+    }
+    BOS = {
+        override_country_name = "Bosnia Trade Outpost"
+    }
+
+    # Bankign Families
+    FRI = {
+        override_country_name = "Aksumite Bank of Frisia"
+    }
+
+    # Integrated Tribe Subjects | Shumate of X - Shum is a tribal chief
+    AIR = {
+        override_country_name = "Shumate of Saharan Tribes"
+    }
+
+    # Native Reserves | Native Tribes
+    BNY = {
+        override_country_name = "Bunyoro Tribal Reserve"
+    }
+    KET = {
+        override_country_name = "Ketu Tribal Reserve"
+    }
+    KMC = {
+        override_country_name = "Kamchadal Tribal Reserve"
+    }
+    CHU = {
+        override_country_name = "Chukchi Tribal Reserve"
+    }
+    K05 = {
+        override_country_name = "Arguin Tribal Reserve"
+    }
+    TY1 = {
+        override_country_name = "Tyumen Tribal Reserve"
+    }
+
+    # Puppet States
+
+    # Pirate Brotherhoods
+    KNI = {
+        override_country_name = "Knights of Malta"
+    }
+}
+
+# Russian Empire
+# Names
+# Names
+ROOT = {
+    ROOT = {
+        # override_country_name = AKSUMITE_EMPIRE_NAME
+        if = {
+            limit = {
+                tag = RUS
+            }
+            override_country_name = RUSSIAN_EMPIRE
+        }
+    }
+
+    # dominions | Imperial Russian X
+    ROOT = {
+        C01 = {
+            override_country_name = "Imperial Russian Alaska"
+        }
+    }
+    
+    # Marches | March of X
+    ROOT = {
+        PRU = {
+            override_country_name = "Prussian March"
+        }
+        ALB = {
+            override_country_name = "March of Albania"
+        }
+        KOR = {
+            override_country_name = "Korean March"
+        }
+    }
+    
+    # Defensive Marches | Fortress of X
+    ROOT = {
+        CIR = {
+            override_country_name = "Wall of the Caucausus"
+        }
+    }
+    
+    # Naval Marches | Naval Base of X or Gates of X
+    ROOT = {
+        MHR = {
+            override_country_name = "Naval Base of Mahra"
+        }
+        FRM = {
+            override_country_name = "Naval Base of Formosa"
+        }
+    }
+
+    # Administrative Regions | Imperial Russian X
+    ROOT = {
+        KIE = {
+            override_country_name = "Imperial Russian Kievan Rus'"
+        }
+    }
+
+    # Tibetain Administrative Regions | Imperial Russian Tibet
+    TIB = {
+        override_country_name = "Imperial Russian Tibet"
+    }
+    
+    # Real Unions | Russian Empire/Kingdom/Duchy/County of X
+    ROOT = {
+        FIN = {
+            override_country_name = "Grand Duchy of Finland"
+        }
+    }
+
+    # Princely Vassals (prince_vassal)
+    # A select few Royal fiefs for powerful royal princes or close imperial relatives. These tend to be more powerful than nor royal fiefs. And they have more precedence, de jure power, and prestige than normal vassals. 
+    # They also tend to be given more resources and the responsibility of either holding a large empire or overseeing important strategic operations or profitable industries (such as the mali mines)
+    # Large: Prince-Kingdom of X
+    # Medium: Prince-Duchy of X
+    ROOT = {
+
+    }
+
+    # Appanages 
+    # We use Appanages in a similar way as "The Prince of Wales". There should only be 1 appanage, which is always ruled by the designated imperial heir. This is meant to help with their training before ascension to the throne. During periods of no designated heir, the appanage is ruled by a royal regent appointed by the emperor, or simply temporarily ruled by the emperor directly as a personal union. 
+    # Appanages have the most power, prestige, and precedence over all other subject states and are de jure the #1 ranked subject state with the most authority over the others. They are second only to th Empire itself, seeing as they are ruled directly by the Imperial Heir. 
+    # Appanages tend to be vast wealthy empires to both help the young prince build up a strong powerbase to help him consolidate power after ascending the throne and also to provide the prince experience running vast empires and its endless headaches. 
+    # Sometimes Appanages are also used as a "leader of other subjects" in a de jure hegemony (rather than a de jure subject liege relationship), to help delegate settling remote subject politics or to hone the Hier's diplomatic, problem solving, and conflict resolution skills. 
+    # All: Imperial Princedom of X
+    ROOT = {
+        BLR = {
+            override_country_name = "Imp. Prince-Kingdom of Belarus"
+        }
+    }
+    
+    # Fiefdoms | {fiefdom title} of X
+    # Kingdoms: Kingdom of X - Large | Brother Kingdom
+    # Duchies: Duchy of X - Medium | Fief Subject (set_country_flag = duchy_fiefdom)
+    # Counties: County of X - Small | Fief Subject
+    # Baronies: Barony of X - OPMs | Fief Subject
+    ROOT = {
+        # Kingdom Tier
+        CZH = {
+            override_country_name = "Kingdom of Da Zhou"
+        }
+        SOG = {
+            override_country_name = "Kingdom of Da Song"
+        }
+        CHC = {
+            override_country_name = "Kingdom of Da Chu"
+        }
+        LNG = {
+            override_country_name = "Kingdom of Da Liang"
+        }
+        LAI = {
+            override_country_name = "Kingdom of Da Liao"
+        }
+        HUN = {
+            override_country_name = "Kingdom of Hungary"
+        }
+        POL = {
+            override_country_name = "Kingdom of Poland"
+        }
+        BOH = {
+            override_country_name = "Kingdom of Bohemia"
+        }
+        NAP = {
+            override_country_name = "Kingdom of Naples"
+        }
+        NOR = {
+            override_country_name = "Kingdom of Norway"
+        }
+        SWE = {
+            override_country_name = "Kingdom of Sweden"
+        }
+        DAN = {
+            override_country_name = "Kingdom of Denmark"
+        }
+        BAV = {
+            override_country_name = "Kingdom of Bavaria"
+        }
+        CXI = {
+            override_country_name = "Kingdom of Xi"
+        }
+        QAR = {
+            override_country_name = "Kingdom of Qara Qoyunlu"
+        }
+        IRE = {
+            override_country_name = "Kingdom of Ireland"
+        }
+        AFG = {
+            override_country_name = "Kingdom of Afghanistan"
+        }
+        JNP = {
+            override_country_name = "Grand Duchy of Jaunpur"
+        }
+        DLH = {
+            override_country_name = "Grand Duchy of Delhi"
+        }
+        # Duchies
+        BAL = {
+            override_country_name = "Duchy of Baluchistan"
+            set_country_flag = duchy_fiefdom
+        }
+        SLO = {
+            override_country_name = "Duchy of Slovakia"
+            set_country_flag = duchy_fiefdom
+        }
+        PRM = {
+            override_country_name = "Duchy of Perm"
+            set_country_flag = duchy_fiefdom
+        }
+        MUL = {
+            override_country_name = "Duchy of Multan"
+            set_country_flag = duchy_fiefdom
+        }
+        K01 = {
+            override_country_name = "Duchy of Latvia"
+            set_country_flag = duchy_fiefdom
+        }
+        TRA = {
+            override_country_name = "Duchy of Transylvania"
+            set_country_flag = duchy_fiefdom
+        }
+        EST = {
+            override_country_name = "Duchy of Estonia"
+            set_country_flag = duchy_fiefdom
+        }
+        ICE = {
+            override_country_name = "Duchy of Iceland"
+            set_country_flag = duchy_fiefdom
+        }
+        LIT = {
+            override_country_name = "Duchy of Lithuania"
+            set_country_flag = duchy_fiefdom
+        }
+        BLO = {
+            override_country_name = "Duchy of Beloozero"
+            set_country_flag = duchy_fiefdom
+        }
+        RYA = {
+            override_country_name = "Duchy of Ryazan"
+            set_country_flag = duchy_fiefdom
+        }
+        GLC = {
+            override_country_name = "Duchy of Galich"
+            set_country_flag = duchy_fiefdom
+        }
+        MOL = {
+            override_country_name = "Duchy of Moldavia"
+            set_country_flag = duchy_fiefdom
+        }
+        WAL = {
+            override_country_name = "Duchy of Wallachia"
+            set_country_flag = duchy_fiefdom
+        }
+        KHI = {
+            override_country_name = "Duchy of Khwarazm"
+            set_country_flag = duchy_fiefdom
+        }
+        SER = {
+            override_country_name = "Duchy of Serbia"
+            set_country_flag = duchy_fiefdom
+        }
+        BB1 = {
+            override_country_name = "Duchy of Baban"
+            set_country_flag = duchy_fiefdom
+        }
+        OUC = {
+            override_country_name = "Grand Daimyo of Ouchi"
+            set_country_flag = duchy_fiefdom
+        }
+        TOK = {
+            override_country_name = "Duch of Tonkin"
+            set_country_flag = duchy_fiefdom
+        }
+        # Counties
+        MOA = {
+            override_country_name = "County of Mosalsk"
+        }
+        BK2 = {
+            override_country_name = "County of Bohtan"
+        }
+        ASS = {
+            override_country_name = "County of Assam"
+        }
+        MAZ = {
+            override_country_name = "County of Mazovia"
+        }
+        HES = {
+            override_country_name = "County of Hesse"
+        }
+        PSK = {
+            override_country_name = "County of Pskov"
+        }
+        K03 = {
+            override_country_name = "County of Maros"
+        }
+        BLT = {
+            override_country_name = "County of Bolor"
+        }
+        MLK = {
+            override_country_name = "County of Karabakh"
+        }
+        SEP =  {
+            override_country_name = "County of Serpukhov"
+        }
+        SIS = {
+            override_country_name = "County of Sistan"
+        }
+        RSO = {
+            override_country_name = "County of Rostov"
+        }
+        SHE = {
+            override_country_name = "County of Sheki"
+        }
+        HLY = {
+            override_country_name = "County of Hlynov"
+        }
+        LB1 = {
+            override_country_name = "County of Golog"
+        }
+        YAR = {
+            override_country_name = "County of Yaroslavl"
+        }
+        IME = {
+            override_country_name = "County of Imereti"
+        }
+        CND = {
+            override_country_name = "County of Candar"
+        }
+        SGT = {
+            override_country_name = "County of Samogitia"
+        }
+        HRZ = {
+            override_country_name = "County of Herzegovina"
+        }
+        BOS = {
+            override_country_name = "County of Bosnia"
+        }
+        FDX = {
+            override_country_name = "County of Fulda"
+        }
+        # Baronies
+        BYV = {
+            override_country_name = "Barony of Belyov"
+            set_country_flag = barony_fiefdom
+        }
+        LVC = {
+            override_country_name = "Barony of Lovech"
+            set_country_flag = barony_fiefdom
+        }
+        TPR = {
+            override_country_name = "Barony of Tripura"
+            set_country_flag = barony_fiefdom
+        }
+        MLB = {
+            override_country_name = "Barony of Manipur"
+            set_country_flag = barony_fiefdom
+        }
+        MON = {
+            override_country_name = "Barony of Montenegro"
+            set_country_flag = barony_fiefdom
+        }
+        DSM = {
+            override_country_name = "Barony of Qinghai"
+            set_country_flag = barony_fiefdom
+        }
+        ABK = {
+            override_country_name = "Barony of Abkhazia"
+            set_country_flag = barony_fiefdom
+        }
+        BAD = {
+            override_country_name = "Barony of Baden"
+            set_country_flag = barony_fiefdom
+        }
+        EG1 = {
+            override_country_name = "Barony of Egil"
+            set_country_flag = barony_fiefdom
+        }
+        LAU = {
+            override_country_name = "Barony of Saxe-Lauenburg"
+            set_country_flag = barony_fiefdom
+        }
+        TAG = {
+            override_country_name = "Barony of Onnigod"
+            set_country_flag = barony_fiefdom
+        }
+        CLI = {
+            override_country_name = "Barony of Cilli"
+            set_country_flag = barony_fiefdom
+        }
+    }
+
+    # Imperial Cities | Imperial City of X
+    ROOT = {
+        FEO = {
+            override_country_name = "Imperial City of Theodoro"
+        }
+        RI1 = {
+            override_country_name = "Imperial City of Riga"
+        }
+        ADR = {
+            override_country_name = "Imperial City of Andorra"
+        }
+    }
+
+    # Tropical Resorts | The X Resort
+    ROOT = {
+
+    }
+
+    # Mining Corporations | Mines of X
+    ROOT = {
+
+    }
+
+    # Commercial Enterprises | X Trading Company
+    ROOT = {
+
+    }
+
+    # Trade Outposts | X Trade Outpost
+    ROOT = {
+        WUU = {
+            override_country_name = "Wu Trade Outpost"
+        }
+    }
+
+    # Banking Families | Russian Bank of X
+    ROOT = {
+        HSA = {
+            override_country_name = "Russian Hanseatic Bank"
+        }
+    }
+
+    # Integrated Tribe Subjects | Russian X_adj Tribe
+    ROOT = {
+        CHU = {
+            override_country_name = "Russian Chukchi Tribe"
+        }
+        KMC = {
+            override_country_name = "Russian kamchatka Tribe"
+        }
+    }
+
+    # Native Reserves | X_adj Tribal Reserve
+    ROOT = {
+        TK3 = {
+            override_country_name = "Chowdur Tribal Reserve"
+        }
+    }
+
+    # Puppet States | X_adj puppet state / Puppet State of X / X_adj Satellite State
+    ROOT = {
+
+    }
+
+    
+    # jimi_states | Imperial Tributary of X
+    ROOT = {
+        ZG1 = {
+            override_country_name = "Gyalkha Jimi State"
+        }
+        BS1 = {
+            override_country_name = "Tsanlha Jimi State"
+        }
+        AX1 = {
+            override_country_name = "Muchi Jimi State"
+        }
+        HZ1 = {
+            override_country_name = "Minyang Jimi State"
+        }
+        LHZ = {
+            override_country_name = "Lijiang Jimi State"
+        }
+        CEN = {
+            override_country_name = "Cengdu Jimi State"
+        }
+    }
+
+    # Pirate Brotherhoods
+    KNI = {
+        override_country_name = "Knights of Malta"
+    }
+}
+
+
+# America 
+ROOT = {
+    ROOT = {
+        override_country_name = IMPERIAL_DIRECTORATE_OF_AMERICA_NAME
+    }
+
+    # Administrative Regions | American Provinces of X
+    ROOT = {
+        CAN = {
+            override_country_name = "American Provinces of Canada"  # Imperial Canadian Directorate? 
+        }
+        MEX = {
+            override_country_name = "American Provinces of Mexico"
+        }
+    }
+
+    # Consolidated Dominions | American Directorate of X
+    ROOT = {
+        CUB = {
+            override_country_name = "Imperial American Carribean"  # Imperial Carribean Directorate? 
+        }
+        PAN = {
+            override_country_name = "Imperial American Panama"  # Imperial Panaman Directorate? 
+        }
+        COL = {
+            override_country_name = "Imperial American Colombia"
+        }
+        INC = {
+            override_country_name = "Imperial American Inca"  # Imperial Incan Directorate? 
+        }
+        CHL = {
+            override_country_name = "Imperial American Rio Plata"
+        }
+        BRZ = {
+            override_country_name = "Imperial American Brazil"
+        }
+        AUS = {
+            override_country_name = "Imperial American Australia"
+        }
+        K10 = {
+            override_country_name = "Imperial American New Zealand"
+        }
+    }
+
+    # Dominions | American X
+    DP1 = {
+        override_country_name = "Dominion of the Philippines"
+    }
+    
+    # Marches | March of X
+    ROOT = {
+        KHA = {
+            override_country_name = "American Mongolian Command"
+        }
+        KOR = {
+            override_country_name = "American Korean Command"
+        }
+        PRU = {
+            override_country_name = "American Prussian Command"
+        }
+    }
+    
+    # Defensive Marches | Fortress of X
+    ROOT = {
+
+    }
+    
+    # Naval Marches | Naval Base of X or Gates of X
+    ROOT = {
+        ICE = {
+            override_country_name = "Seabase of Iceland"
+        }
+        K09 = {
+            override_country_name = "Seabase of Greenland"
+        }
+        FRM = {
+            override_country_name = "Ports of Formosa"
+        }
+    }
+
+
+
+    # Tibetain Administrative Regions | Imperial Russian Tibet
+    # TIB = {
+    #     override_country_name = "Imperial Russian Tibet"
+    # }
+    
+    # Real Unions | American Empire/Kingdom/Duchy/County of X
+    ROOT = {
+        QNG = {
+            override_country_name = "American Celestial Empire"
+        }
+        ETH = {
+            override_country_name = "American Ethiopian Empire"
+        }
+        OTE = {
+            every_owned_province = {
+                limit = {
+                    is_core = ETH
+                }
+                cede_province = ETH
+            }
+        }
+    }
+
+    # Princely Vassals (prince_vassal)
+    ROOT = {
+
+    }
+
+    # Appanages 
+    ROOT = {
+    }
+    
+    # Imperial Cities | Imperial City of X
+    ROOT = {
+        ROT = {
+            override_country_name = "Imperial City of Rothenburg"
+        }
+    }
+
+    # Tropical Resorts | The X Resort
+    ROOT = {
+        K08 = {
+            override_country_name = "The Capo Verde Resort"
+        }
+        RYU = {
+            override_country_name = "The Okinawan Resorts"
+        }
+        DGL = {
+            override_country_name = "The Maldives Resort"
+        }
+    }
+
+    # Mining Corporations | Mines of X
+    ROOT = {
+        ZIM = {
+            override_country_name = "Great Zimbabwe Mining Company"
+        }
+        K12 = {
+            override_country_name = "Ethiopian Mining Company"
+        }
+    }
+
+    # Commercial Enterprises | X Trading Company
+    ROOT = {
+        LFA = {
+            override_country_name = "The Lanfang Company"
+        }
+        NED = {
+            override_country_name = "The Dutch Trading Company"
+        }
+    }
+
+    # Trade Outposts | X Trade Outpost
+    ROOT = {
+        WUU = {
+            override_country_name = "Wu Trade Outpost"
+        }
+        K00 = {
+            override_country_name = "Calais Trade Outpost"
+        }
+        K01 = {
+            override_country_name = "Amsterdam Trade Outpost"
+        }
+        K02 = {
+            override_country_name = "Genoa Trade Outpost"
+        }
+        K03 = {
+            override_country_name = "Istria Trade Outpost"
+        }
+        K04 = {
+            override_country_name = "Aland Trade Outpost"
+        }
+        FEO = {
+            override_country_name = "Theodoro Trade Outpost"
+        }
+        ORM = {
+            override_country_name = "Hormuz Trade Outpost"
+        }
+        K05 = {
+            override_country_name = "Tenerife Trade Outpost"
+        }
+        K06 = {
+            override_country_name = "Comoros Trade Outpost"
+        }
+    }
+
+    # Banking Families | American X Bank
+    ROOT = {
+        HSA = {
+            override_country_name = "American Hanseatic Bank"
+        }
+    }
+
+    # Integrated Tribe Subjects | Russian X_adj Tribe
+    ROOT = {
+    }
+
+    # Pagan Chiefdom | 
+    ROOT = {
+        CHU = {
+            override_country_name = "Chukchi Siberian Reservation"
+        }
+        KMC = {
+            override_country_name = "Kamchadals Siberian Reservation"
+        }
+    }
+
+    # Native Reserves | X_adj Tribal Reserve
+    ROOT = {
+        ERI = {
+            override_country_name = "Erie Reservation"
+        }
+        APA = {
+            override_country_name = "Apache Reservation"
+        }
+        YAQ = {
+            override_country_name = "Yaqui Reservation"
+        }
+        ARP = {
+            override_country_name = "Arapaho Reservation"
+        }
+        BLA = {
+            override_country_name = "Blackfoot Reservation"
+        }
+    }
+
+    # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
+    # Large - Grand Directorate
+    # Medium - Directorate
+    # Small - Satellite
+    ROOT = {
+        # Empire Scale | American X_adj Grand Directorate of X
+
+        # Kingdom Scale | American Directorate of X
+        RUS = {
+            override_country_name = "American Directorate of Russia"
+            set_country_flag = puppet_state_kingdom
+        }
+        SHY = {
+            override_country_name = "American Directorate of the Uzbeks"
+            set_country_flag = puppet_state_kingdom
+        }
+        # Duchy Scale | American Puppet of X
+        DTE = {
+            override_country_name = "American Puppet of Date"
+            set_country_flag = puppet_state_duchy
+        }
+        HSK = {
+            override_country_name = "American Puppet of Hosokawa"
+            set_country_flag = puppet_state_duchy
+        }
+        # County Scale | American Satellite of X
+        LAU = {
+            override_country_name = "American Satellite of Saxe-Lauenburg "
+            set_country_flag = puppet_state_county
+        }
+        OIR = {
+            override_country_name = "American Satellite of Oirat"
+            set_country_flag = puppet_state_county
+        }
+        # Barony Scale -> Should be an Imperial City if consolidated or Jimi State if decentralized
+    }
+
+    # jimi_states | Imperial Tributary of X
+    ROOT = {
+        MUG = {
+            override_country_name = "Mughal Tributary State"
+        }
+    }
+
+    # Pirate Brotherhoods
+    ROOT = {
+        NSS = {
+            override_country_name = "Pirates of New Providence"
+        }
+        SOO = {
+            override_country_name = "Pirates of Tsushima"
+        }
+        KNI = {
+            override_country_name = "Knightly Pirates of Rhodes"
+        }
+    }
+}
+
+# Qing China New Format
+
+# Names
+ROOT = {
+ 
+    # Layers of Integration
+    # 1. Qing China Core -> 
+    # 2. Core Regions (Admin region, real union subjects, imperial cities, etc) -> 
+    # 3. Special Administrative Regions + Direct Commanderies (Marches / Defensive Marches, Appanage, Princely Vassals) -> 
+    # 4. Core Vassals (Fief subjects, Resorts, Native Reserves, tropical resorts, Mining Corporation) -> 
+    # 5. Core Tributaries (Jimi States) -> 
+    # 6. Core Colonies (Consolidated Dominions) -> 
+    # 7. Internal Tributaries (Chinese Tributary Vassals) -> 
+    # 8. External Vassals (Protectorates, Vassals, Trade Outposts, Puppet States, etc) -> 
+    # 9. Internal Colonies (Dominions) ->
+    # 10. External Tributaries (Tributaries) -> 
+    # 11. External Colonies (Colonies)
+
+    #####################################################################################
+    # Layer 1: Qing China Core:
+    #####################################################################################
+
+    ROOT = {
+        if = {
+            limit = {
+                tag = MCH
+            }
+            override_country_name = LATER_JIN_DYNASTY_NAME
+        }
+        if = {
+            limit = {
+                tag = QNG
+            }
+            override_country_name = GREAT_QING_EMPIRE_NAME
+        }
+    }
+
+    #####################################################################################
+    # Layer 2: Core Regions (Admin region, real union subjects, imperial cities, etc):
+    #####################################################################################
+
+    ROOT = {
+        # Administrative Regions | American Provinces of X
+        ROOT = {
+        }
+
+        # Imperial Cities | Imperial City of X
+        ROOT = {
+        }
+
+        # Banking Families | American X Bank
+        ROOT = {
+            HSA = {
+                override_country_name = "American Hanseatic Bank"
+            }
+        }
+
+        # Real Unions | American Empire/Kingdom/Duchy/County of X
+        ROOT = {
+        }
+    }
+
+    #####################################################################################
+    # Layer 3: Special Administrative Regions + Direct Commanderies (Marches / Defensive Marches, Appanage, Princely Vassals) 
+    #####################################################################################
+
+    ROOT = {
+
+        # Appanages 
+        ROOT = {
+        }
+        
+        # Princely Vassals (prince_vassal)
+        ROOT = {
+            
+        }
+        
+        # Marches | Commandery of X
+        ROOT = {
+            KOR = {
+                override_country_name = "Joseon Imperial Commandery"
+            }
+            DAI = {
+                override_country_name = "Viet Imperial Commandery"
+            }
+            KHA = {
+                override_country_name = "Mongol Imperial Commandery"
+            }
+        }
+        
+        # Defensive Marches | Fortress of X
+        ROOT = {
+            
+        }
+        
+        # Naval Marches | Naval Base of X or Gates of X
+        ROOT = {
+            FRM = {
+                override_country_name = "Taiwan Imperial Naval Base"
+            }
+        }
+    }
+    
+    #####################################################################################
+    # Layer 4: Core Vassals (Fief subjects, Resorts, Native Reserves, tropical resorts, Mining Corporation): 
+    #####################################################################################
+    
+    ROOT = {
+        # Fiefdoms | {fiefdom title} of X
+        # Kingdoms: Kingdom of X - Large | Brother Kingdom
+        # Duchies: Duchy of X - Medium | Fief Subject (set_country_flag = duchy_fiefdom)
+        # Counties: County of X - Small | Fief Subject
+        # Baronies: Barony of X - OPMs | Fief Subject
+        ROOT = {
+            # Kingdom Tier
+            CZH = {
+                override_country_name = "Kingdom of Da Zhou"
+            }
+            # Duchies
+            BAL = {
+                override_country_name = "Duchy of Baluchistan"
+                set_country_flag = duchy_fiefdom
+            }
+            # Counties
+            MOA = {
+                override_country_name = "County of Mosalsk"
+            }
+            # Baronies
+            BYV = {
+                override_country_name = "Barony of Belyov"
+                set_country_flag = barony_fiefdom
+            }
+        }
+        
+        # Native Reserves | X_adj Tribal Reserve
+        ROOT = {
+            CHU = {
+                override_country_name = "Chukchi Siberian Reservation"
+            }
+            KMC = {
+                override_country_name = "Kamchadals Siberian Reservation"
+            }
+            AI1 = {
+                override_country_name = "Ainu Tribal Reservation"
+            }
+        }
+
+        # Integrated Tribe Subjects | Russian X_adj Tribe
+        ROOT = {
+        }
+
+        # Pagan Chiefdom | 
+        ROOT = {
+            # CHU = {
+            #     override_country_name = "Chukchi Siberian Reservation"
+            # }
+            # KMC = {
+            #     override_country_name = "Kamchadals Siberian Reservation"
+            # }
+        }
+
+        # Tropical Resorts | The X Resort
+        ROOT = {
+        }
+
+        
+        # Mining Corporations | Mines of X
+        ROOT = {
+        }
+    }
+    
+    #####################################################################################
+    # Layer 5: Core Tributaries (Jimi States):
+    #####################################################################################
+
+    ROOT = {
+        # jimi_states | X Tributary of X
+        # Large - X Imperial Tributary
+        # Medium - X Grand Tributary
+        # Small - X Tributary
+        ROOT = {
+            # Imperial Tributaries
+            JNP = {
+                override_country_name = "Jaunpur Imperial Tributary"
+                set_country_flag = imperial_tributary
+            }
+            # Grand Tributaries
+            K00 = {
+                override_country_name = "Hidustan Grand Tributary"
+                set_country_flag = grand_tributary
+            }
+            # Tributaries
+            CEL = {
+                override_country_name = "Cheli Tributary"
+            }
+            PTT = {
+                override_country_name = "Patna Tributary"
+            }
+            PP1 = {
+                override_country_name = "Palpa Tributary"
+            }
+            ASS = {
+                override_country_name = "Assam Tributary"
+            }
+            KAC = {
+                override_country_name = "Kachar Tributary"
+            }
+            DTI = {
+                override_country_name = "Doti Tributary"
+            }
+            LXA = {
+                override_country_name = "Lan Xang Tributary"
+            }
+            MMS = {
+                override_country_name = "Longchuan Tributary"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 6: Core Colonies (Consolidated Dominions):
+    #####################################################################################
+
+    # Consolidated Dominions | American Directorate of X
+    ROOT = {
+    }
+
+    #####################################################################################
+    # Layer 7: Internal Tributaries (Chinese Tributary Vassals):
+    #####################################################################################
+
+    # Chinese tributary subjects | Less integrated tributaries compared to jimi states, will not fight for the emperor. Part of the greater Chinese Empire, but not part of the Chinese Realm
+    ROOT = {
+
+    }
+
+    ####################################################################################
+    # Layer 8: External Vassals (Protectorates, Trade Outposts, Commercial Enterprises, etc):
+    #####################################################################################
+
+    ROOT = {
+
+        # Trade Outposts | X Trade Outpost
+        ROOT = {
+        }
+        
+        # Commercial Enterprises | X Trading Company
+        ROOT = {
+            LFA = {
+                override_country_name = "The Lanfang Company"
+            }
+        }
+        
+        # Protectorate | The X Protectorate
+        ROOT = {
+            TEST = {
+                override_country_name = "The Blah Protectorate"
+            }
+        }
+        
+        # Generic Vassals (Waiting to be annexed)
+        ROOT = {
+            AAA = {
+                override_country_name = "Test"
+            }
+        }
+        
+        # Pirate Brotherhoods
+        ROOT = {
+        }
+        
+        # # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
+        # # Large - Grand Directorate
+        # # Medium - Directorate
+        # # Small - Satellite
+        ROOT = {
+        }
+    }
+        
+        
+    #####################################################################################
+    # Layer 9: Internal Colonies (Dominions)
+    #####################################################################################
+
+
+    # Dominions | American X
+    ROOT = {
+        
+    }
+
+    #####################################################################################
+    # Layer 10: External Tributaries (Tributaries)
+    #####################################################################################
+
+    # Tributary Subjects | Even less integrated than Chinese Tributaries. Part of the greater Chinese Hegemony, not part of the Greater Chinese Empire proper
+    ROOT = {
+
+    }
+
+    #####################################################################################
+    # Layer 11: External Colonies (Colonies)
+    #####################################################################################
+    # Raw Colonies
+    ROOT = {
+
     }
 }

@@ -1,0 +1,24 @@
+add_mod = {
+    name = azt_rise_of_montezuma_4
+}
+add_mod = {
+    name = azt_rise_of_montezuma_3
+}
+add_mod = {
+    name = azt_rise_of_montezuma_2
+}
+add_mod = {
+    name = azt_rise_of_montezuma
+}
+add_mod = {
+    name = jap_divine_aspirations_modifier
+}
+add_mod = {
+    name = chi_new_emperor_modifier
+}
+add_mod = {
+    name = mng_the_puppetmaster_modifier
+}
+add_mod = {
+    name = mng_reformed_tributary_obligation_system_modifier
+}
