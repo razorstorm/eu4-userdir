@@ -49,6 +49,7 @@ ROOT = {
         name = s
         duration = -1
     }
+
 }
 
 ####################################################################################
@@ -226,10 +227,10 @@ ROOT = {
         # Integrated Tribe Subjects | Great Horde of X | Essentially Horde Marches
         ROOT = {
             KAZ = {
-                override_country_name = "Great Horde of Kazan"
+                override_country_name = "Kazani Imperial Horde"
             }
             NOG = {
-                override_country_name = "Great Horde of Nogai"
+                override_country_name = "Nogai Imperial Horde"
             }
         }
 
