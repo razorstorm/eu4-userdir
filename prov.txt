@@ -104,7 +104,7 @@ ROOT = {
     #####################################################################################
 
     ROOT = {
-        # Administrative Regions | American Provinces of X
+        # Administrative Regions | Imperial Qing Provinces of X
         ROOT = {
         }
 
@@ -115,11 +115,11 @@ ROOT = {
             }
         }
 
-        # Banking Families | American X Bank
+        # Banking Families | Imperial Qing X Bank
         ROOT = {
         }
 
-        # Real Unions | American Empire/Kingdom/Duchy/County of X
+        # Real Unions | Qing Empire/Kingdom/Duchy/County of X
         ROOT = {
         }
         
@@ -235,19 +235,15 @@ ROOT = {
 
         # Pagan Chiefdom 
         ROOT = {
-            # CHU = {
-            #     override_country_name = "Chukchi Siberian Reservation"
-            # }
-            # KMC = {
-            #     override_country_name = "Kamchadals Siberian Reservation"
-            # }
-
         }
 
         # Tropical Resorts | The X Resort
         ROOT = {
             K02 = {
                 override_country_name = "Andamans Tropical Resort"
+            }
+            BLI = {
+                override_country_name = "Bali Tropical Resort"
             }
         }
 
