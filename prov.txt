@@ -29,27 +29,35 @@ log = "===============================Running Prov.txt==========================
 ####################################################################################
 # Removing and Adding Modifiers
 ####################################################################################
-remove_country_modifier = charter_colonies_mod_1
+remove_country_modifier = jason_mod_more_trade_steer_max
+
 # Template for adding modifierS
 add_mod = {
-    name = jason_mod_unlimited_more_acc_cultures
+    name = jason_naval_movespeed_2_1
 }
+
+reduce_foreign_country_trade_power = yes
 
 ####################################################################################
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
+
 ROOT = {
     accept_all_cultures = yes
-    add_country_modifier = {
-        name = ven_venetian_new_world_charters
-        duration = -1
-    }
-    add_country_modifier = {
-        name = s
-        duration = -1
-    }
 
+    C00 = {
+        grant_independence = yes
+        every_owned_province = {
+            change_controller = CUB
+        }
+    }
+    
+    # every_subject_country = {
+    #     every_owned_province = {
+    #         add_colonysize = 1000
+    #     }
+    # }
 }
 
 ####################################################################################
@@ -63,23 +71,23 @@ ROOT = {
 
     # Tiers of Integration
     
-    # Layer A: Qing China De Jure Lands
+    # Layer A: De jure lands of the Empire
     # 1. Qing China Core
     # 2. Core Regions (Admin region, real union subjects, imperial cities, etc)
     # 3. Special Administrative Regions + Direct Commanderies (Marches / Defensive Marches, Appanage, Princely Vassals)
-    # 4. Core Vassals (Fief subjects, Resorts, Native Reserves, tropical resorts, Mining Corporation)
+    # 4. Delegated Semi-autonomous Regions aka Core Subjects (Resorts, Tusi, Native Reserves, tropical resorts, Mining Corporation)
     # 5. Core Colonies (Consolidated Dominions)
     
-    # Layer B: De Jure part of the Greater Qing Chinese Empire
-    # 6. Internal Vassals (Vassals, Commercial Enterprises)
+    # Layer B: De jure subjects of the Greater Realm
+    # 6. Internal Vassals (Fiefdoms, Brother Kingdoms, Vassals, Commercial Enterprises)
     # 7. Internal Colonies (Dominions)
     # 8. Internal Tributaries (Jimi States)
     
-    # Layer C: De Jure part of the Greater Chinese Hegemony, and some might be de facto more integrated than others
-    # 9. External Vassals (Protectorates, Vassals, Trade Outposts, Puppet States, etc)
+    # Layer C: De jure subjects of the Greater Hegemony
+    # 9. External Vassals (Protectorates, Vassals, Trade Outposts, Puppet States, Pirate Brotherhoods, etc)
     # 10. External Colonies (Colonies)
     # 11. External Tributaries (Tributaries)
-    # 12. Miscellaneous (Pirate Brotherhoods, etc)
+    # 12. Miscellaneous
 
     #####################################################################################
     # Layer 1: Qing China Core:
@@ -105,26 +113,37 @@ ROOT = {
     #####################################################################################
 
     ROOT = {
-        # Administrative Regions | Imperial Qing Provinces of X
+        # Administrative Regions | Qing Imperial Provinces of X
         ROOT = {
+            MOR = {
+                override_country_name = "Maghrebi Imperial Governorate"
+                clr_country_flag = kingdom_fiefdom
+            }
         }
 
-        # Imperial Cities | Imperial City of X
+        # Imperial Cities | Imperial City of X | imperial_city
         ROOT = {
             TI4 = {
                 override_country_name = "Samarkand Imperial City"
+            }
+            AST = {
+                override_country_name = "Astrakhan Imperial City"
+            }
+            K15 = {
+                override_country_name = "Moscow Imperial City"
             }
         }
 
         # Banking Families | Imperial Qing X Bank
         ROOT = {
         }
-
+        
         # Real Unions | Qing Empire/Kingdom/Duchy/County of X
         ROOT = {
+            ETH = {
+                override_country_name = "Qing Imperial Empire of Ethiopia"
+            }
         }
-        
-
     }
 
     #####################################################################################
@@ -142,13 +161,6 @@ ROOT = {
             # Special case for honoring the vanquished prior dynasty
             MNG = {
                 override_country_name = "Dynastic Ming Altar State"
-            }
-        }
-        
-        # Tusi (sino_jimi_state) | Tusi of X
-        ROOT = {
-            PIQ = {
-                override_country_name = "Pianqiao Tusi Chiefdom"
             }
         }
         
@@ -191,11 +203,14 @@ ROOT = {
             MLC = {
                 override_country_name = "Malacca Imperial Sea Gates"
             }
+            ANT = {
+                override_country_name = "Madagascar Sea Commandery"
+            }
         }
     }
     
     #####################################################################################
-    # Layer 4: Core Vassals (Fief subjects, Resorts, Native Reserves, tropical resorts, Mining Corporation, etc): 
+    # Layer 4: Core Vassals (Tu-Si (sino_jimi_state), Resorts, Native Reserves, tropical resorts, Mining Corporation, etc): 
     #####################################################################################
     
     # Deeply entangled subject states that are really integral parts of the Empire proper, rather than semi-sovereign associated states. These are typically specialized governments or bureaus built for specialized purposes or for administrating special lands. These are considered de jure lands owned by the Empire proper. 
@@ -208,18 +223,8 @@ ROOT = {
             HDA = {
                 override_country_name = "Haida Tribal Reservation"
             }
-        }
-        
-        # Tu Si 
-        ROOT = {
-            CHU = {
-                override_country_name = "Chukchi Siberian Tusi"
-            }
-            KMC = {
-                override_country_name = "Kamchadals Siberian Tusi"
-            }
-            AKK = {
-                override_country_name = "Aq Qoyunlu Tusi"
+            WAD = {
+                override_country_name = "Wadai Tribal Reservation"
             }
         }
 
@@ -229,8 +234,12 @@ ROOT = {
             KAZ = {
                 override_country_name = "Kazani Imperial Horde"
             }
-            NOG = {
-                override_country_name = "Nogai Imperial Horde"
+            GOL = {
+                override_country_name = "Golden Imperial Horde"
+                set_country_flag = imperial_horde
+            }
+            CRI = {
+                override_country_name = "Crimean Imperial Horde"
             }
         }
 
@@ -246,11 +255,20 @@ ROOT = {
             BLI = {
                 override_country_name = "Bali Tropical Resort"
             }
+            DGL = {
+                override_country_name = "Maldives Tropical Resort"
+            }
         }
 
         
         # Mining Corporations | Mines of X
         ROOT = {
+            K19 = {
+                override_country_name = "Qing Ethiopian Mining Co"
+            }
+            ZIM = {
+                override_country_name = "Qing Zimbabwean Mining Co"
+            }
         }
     }
     
@@ -262,7 +280,13 @@ ROOT = {
     # Consolidated Dominions | American Directorate of X
     ROOT = {
         TDO = {
-            override_country_name = "Core Dominion of the Philippines"
+            override_country_name = "Imperial Qing Philippines"
+        }
+        AUS = {
+            override_country_name = "Imperial Qing Australia"
+        }
+        C09 = {
+            override_country_name = "Imperial Qing Indonesia"
         }
     }
 
@@ -272,11 +296,22 @@ ROOT = {
 
     # Internal Vassals are typically subsidiary governments or organizations set up by the central regime and answerable directly to the throne. They are small localized governments for specialized purposes, not a true vassal state" perse
     ROOT = {
-
         # Trade Outposts | X Trade Outpost
         ROOT = {
             K05 = {
                 override_country_name = "Indonesian Trade Outpost"
+            }
+            K18 = {
+                override_country_name = "West African Trade Outpost"
+            }
+            C02 = {
+                override_country_name = "Arkhangelsk Trade Outpost"
+            }
+            SYR = {
+                override_country_name = "Syrian Trade Outpost"
+            }
+            MON = {
+                override_country_name = "Montenegro Trade Outpost"
             }
         }
 
@@ -297,8 +332,104 @@ ROOT = {
             clr_country_flag = barony_fiefdom
         }
 
+        # Tu Si (sino_jimi_state) | X Tusi / X Siberian Tusi
+        # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
+        ROOT = {
+            PIQ = {
+                override_country_name = "Pianqiao Tusi"
+            }
+            KNG = {
+                override_country_name = "Kong Tusi"
+            }
+            GYA = {
+                override_country_name = "Gyaman Tusi"
+            }
+            DKR = {
+                override_country_name = "Denkera Tusi"
+            }
+            MLK = {
+                override_country_name = "Karabakh Tusi"
+            }
+            BON = {
+                override_country_name = "Bonoman Tusi"
+            }
+            DGB = {
+                override_country_name = "Dagbon Tusi"
+            }
+            SHE = {
+                override_country_name = "Sheki Tusi"
+            }
+            TFL = {
+                override_country_name = "Sigilmasa Tusi"
+            }
+            RYA = {
+                override_country_name = "Ryazan Tusi"
+            }
+            CHU = {
+                override_country_name = "Chukchi Siberian Tusi"
+            }
+            KMC = {
+                override_country_name = "Kamchadals Siberian Tusi"
+            }
+            AKK = {
+                override_country_name = "Aq Qoyunlu Tusi"
+            }
+            MOZ = {
+                override_country_name = "Mozhaysk Tusi"
+            }
+            MRM = {
+                override_country_name = "Murom Tusi"
+            }
+            NZH = {
+                override_country_name = "Nizhny Novgorod Tusi"
+            }
+            SEP = {
+                override_country_name = "Serpukhov Tusi"
+            }
+            OBL = {
+                override_country_name = "Kaluga Tusi"
+            }
+            K06 = {
+                override_country_name = "Kasimov Tusi"
+            }
+            K07 = {
+                override_country_name = "Guugu Yimithirr Tusi"
+            }
+            SDB = {
+                override_country_name = "Starodub Tusi"
+            }
+            RIF = {
+                override_country_name = "Rif Tusi"
+            }
+            K08 = {
+                override_country_name = "Wuli-Wuli Tusi"
+            }
+            K09 = {
+                override_country_name = "Veda Suvar Tusi"
+            }
+            K10 = {
+                override_country_name = "Orehovo-Zuyevo Tusi"
+            }
+            K11 = {
+                override_country_name = "Vladimir Tusi"
+            }
+            K12 = {
+                override_country_name = "Suzdal Tusi"
+            }
+            TVE = {
+                override_country_name = "Tver Tusi"
+            }
+            K14 = {
+                override_country_name = "Zubtsov Tusi"
+            }
+            BYV = {
+                override_country_name = "Belyov Tusi"
+            }
+        }
+
         # Fiefdoms | {fiefdom title} of X
-        # Kingdoms: Kingdom of X - Large | Brother Kingdom
+        # Fiefdoms are a bit more autonomous than tusi and normal vassals. They are subservient to the laws of the central empire but fuedal lords have decent leeway to implement their own policies
+        # Kingdoms: Kingdom of X - Large
         # Duchies: Duchy of X - Medium | Fief Subject (set_country_flag = duchy_fiefdom)
         # Counties: County of X - Small | Fief Subject
         # Baronies: Barony of X - OPMs | Fief Subject
@@ -325,6 +456,10 @@ ROOT = {
                 override_country_name = "Duchy of Laos"
                 set_country_flag = duchy_fiefdom
             }
+            RSO = {
+                override_country_name = "Duchy of Rostov"
+                set_country_flag = duchy_fiefdom
+            }
             # Counties
             SRV = {
                 override_country_name = "Shirvan County"
@@ -334,13 +469,13 @@ ROOT = {
                 override_country_name = "Ligor County"
                 set_country_flag = county_fiefdom
             }
+            YAR = {
+                override_country_name = "Yarosavl County"
+                set_country_flag = county_fiefdom
+            }
             # Baronies
             HSN = {
                 override_country_name = "Hisn Kayfa Barony"
-                set_country_flag = barony_fiefdom
-            }
-            SHE = {
-                override_country_name = "Sheki Barony"
                 set_country_flag = barony_fiefdom
             }
             CHK = {
@@ -362,9 +497,9 @@ ROOT = {
     }
 
     #####################################################################################
-    # Layer 7: Internal Tributaries (Ji-Mi Tributary Vassals):
+    # Layer 7: Internal Tributaries (Jimi Tributary Vassals):
     #####################################################################################
-     # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Ji-Mi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
+     # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
 
     ROOT = {
         # jimi_states | Empire > Kingdom > Prefectures > Counties > Districts
@@ -379,213 +514,265 @@ ROOT = {
             clr_country_flag = district_jimi
         }
         ROOT = {
-            # Empires (Empire sized | "X_adj Ji-Mi Empire" or "Ji-Mi Empire of X")
+            # Empires (Empire sized | "X_adj Jimi Empire" or "Jimi Empire of X")
             PER = {
-                override_country_name = "Persian Ji-Mi Empire"
+                override_country_name = "Persian Jimi Empire"
                 set_country_flag = empire_jimi
             }
             DLH = {
-                override_country_name = "Hindustani Ji-Mi Empire"
+                override_country_name = "Hindustani Jimi Empire"
                 set_country_flag = empire_jimi
             }
-            # Kingdoms (Kingdom sized| "X-adj Ji-Mi Kingdom" or "Ji-Mi Kingdom of X")
+            HSK = {
+                override_country_name = "Hosokawa Jimi Shogunate"
+                set_country_flag = empire_jimi
+            }
+            # Kingdoms (Kingdom sized| "X-adj Jimi Kingdom" or "Jimi Kingdom of X")
             BAH = {
-                override_country_name = "Bahmani Ji-Mi Sultanate"
+                override_country_name = "Bahmani Jimi Sultanate"
+                set_country_flag = kingdom_jimi
+            }
+            SON = {
+                override_country_name = "Jimi Kingdom of Songhai"
+                set_country_flag = kingdom_jimi
+            }
+            POR = {
+                override_country_name = "Portuguese Jimi Kingdom"
                 set_country_flag = kingdom_jimi
             }
             BNG = {
-                override_country_name = "Bengali Ji-Mi Sultanate"
+                override_country_name = "Bengali Jimi Sultanate"
                 set_country_flag = kingdom_jimi
             }
             BEI = {
-                override_country_name = "Ji-Mi Sultanate of Brunei"
+                override_country_name = "Jimi Sultanate of Brunei"
                 set_country_flag = kingdom_jimi
             }
             MAJ = {
-                override_country_name = "Majapahit Ji-Mi Kingdom"
+                override_country_name = "Majapahit Jimi Kingdom"
                 set_country_flag = kingdom_jimi
             }
             OMA = {
-                override_country_name = "Omani Ji-Mi Kingdom"
+                override_country_name = "Omani Jimi Kingdom"
                 set_country_flag = kingdom_jimi
             }
-            # Prefectures (Duchy Sized | "X Ji-Mi Prefecture")
+            # Prefectures (Duchy Sized | "X Jimi Prefecture")
             BNJ = {
-                override_country_name = "Banjar Ji-Mi Prefecture"
+                override_country_name = "Banjar Jimi Prefecture"
+                set_country_flag = duchy_jimi
+            }
+            GRA = {
+                override_country_name = "Granada Jimi Prefecture"
+                set_country_flag = duchy_jimi
+            }
+            ZAN = {
+                override_country_name = "Zanzibar Jimi Prefecture"
+                set_country_flag = duchy_jimi
+            }
+            JOL = {
+                override_country_name = "Jolof Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             JNP = {
-                override_country_name = "Jaunpur Ji-Mi Prefecture"
+                override_country_name = "Jaunpur Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             SND = {
-                override_country_name = "Sindh Ji-Mi Prefecture"
+                override_country_name = "Sindh Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             PEG = {
-                override_country_name = "Pegu Ji-Mi Prefecture"
+                override_country_name = "Pegu Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             ASS = {
-                override_country_name = "Assam Ji-Mi Prefecture"
+                override_country_name = "Assam Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             GUJ = {
-                override_country_name = "Gujrat Ji-Mi Prefecture"
+                override_country_name = "Gujrat Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             YOR = {
-                override_country_name = "Satavahanasa Ji-Mi Prefecture"
+                override_country_name = "Satavahanasa Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             VIJ = {
-                override_country_name = "Vijayanagar Ji-Mi Prefecture"
+                override_country_name = "Vijayanagar Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             PSA = {
-                override_country_name = "Pasai Ji-Mi Prefecture"
+                override_country_name = "Pasai Jimi Prefecture"
+                set_country_flag = duchy_jimi
+            }
+            KBO = {
+                override_country_name = "Kanem Bornu Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             SUN = {
-                override_country_name = "Sunda Ji-Mi Prefecture"
+                override_country_name = "Sunda Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
-            # Counties (County Sized | "X Ji-Mi County")
+            BNY = {
+                override_country_name = "Bunyoro Jimi Prefecture"
+                set_country_flag = duchy_jimi
+            }
+            # Counties (County Sized | "X Jimi County")
             CEY = {
-                override_country_name = "Ceylondia Ji-Mi County"
+                override_country_name = "Ceylondia Jimi County"
+                set_country_flag = county_jimi
+            }
+            NUB = {
+                override_country_name = "Nubia Jimi County"
+                set_country_flag = county_jimi
+            }
+            NOV = {
+                override_country_name = "Novgorod Jimi County"
+                set_country_flag = county_jimi
+            }
+            TLA = {
+                override_country_name = "Tlapanec Jimi County"
+                set_country_flag = county_jimi
+            }
+            MIX = {
+                override_country_name = "Mixtec Jimi County"
                 set_country_flag = county_jimi
             }
             TI3 = {
-                override_country_name = "Kabul Ji-Mi County"
+                override_country_name = "Kabul Jimi County"
                 set_country_flag = county_jimi
             }
             TNJ = {
-                override_country_name = "Tanjore Ji-Mi County"
+                override_country_name = "Tanjore Jimi County"
                 set_country_flag = county_jimi
             }
             ALH = {
-                override_country_name = "Qatar Ji-Mi County"
+                override_country_name = "Qatar Jimi County"
                 set_country_flag = county_jimi
             }
             CEL = {
-                override_country_name = "Cheli Ji-Mi County"
+                override_country_name = "Cheli Jimi County"
                 set_country_flag = county_jimi
             }
             MYS = {
-                override_country_name = "Mysore Ji-Mi County"
+                override_country_name = "Mysore Jimi County"
                 set_country_flag = county_jimi
             }
             MLW = {
-                override_country_name = "Malwa Ji-Mi County"
+                override_country_name = "Malwa Jimi County"
                 set_country_flag = county_jimi
             }
             PTT = {
-                override_country_name = "Patna Ji-Mi County"
+                override_country_name = "Patna Jimi County"
                 set_country_flag = county_jimi
             }
             PP1 = {
-                override_country_name = "Palpa Ji-Mi County"
+                override_country_name = "Palpa Jimi County"
                 set_country_flag = county_jimi
             }
             KAC = {
-                override_country_name = "Kachar Ji-Mi County"
+                override_country_name = "Kachar Jimi County"
+                set_country_flag = county_jimi
+            }
+            YAO = {
+                override_country_name = "Yao Jimi County"
                 set_country_flag = county_jimi
             }
             DTI = {
-                override_country_name = "Doti Ji-Mi County"
+                override_country_name = "Doti Jimi County"
                 set_country_flag = county_jimi
             }
             LXA = {
-                override_country_name = "Lan Xang Ji-Mi County"
+                override_country_name = "Lan Xang Jimi County"
                 set_country_flag = county_jimi
             }
             MMS = {
-                override_country_name = "Longchuan Ji-Mi County"
+                override_country_name = "Longchuan Jimi County"
                 set_country_flag = county_jimi
             }
             BD1 = {
-                override_country_name = "Badakhshan Ji-Mi County"
+                override_country_name = "Badakhshan Jimi County"
                 set_country_flag = county_jimi
             }
             JM2 = {
-                override_country_name = "Ganmeng Ji-Mi County"
+                override_country_name = "Ganmeng Jimi County"
                 set_country_flag = county_jimi
             }
             LNA = {
-                override_country_name = "Lan Na Ji-Mi County"
+                override_country_name = "Lan Na Jimi County"
                 set_country_flag = county_jimi
             }
             SUK = {
-                override_country_name = "Sukhothai Ji-Mi County"
+                override_country_name = "Sukhothai Jimi County"
                 set_country_flag = county_jimi
             }
             GM2 = {
-                override_country_name = "Ganmeng Ji-Mi County"
-                set_country_flag = county_jimi
-            }
-            GAZ = {
-                override_country_name = "Gazikumukh Ji-Mi County"
+                override_country_name = "Ganmeng Jimi County"
                 set_country_flag = county_jimi
             }
             KUT = {
-                override_country_name = "Kutai Ji-Mi County"
+                override_country_name = "Kutai Jimi County"
                 set_country_flag = county_jimi  
             }
             BEU = {
-                override_country_name = "Berau Ji-Mi County"
+                override_country_name = "Berau Jimi County"
                 set_country_flag = county_jimi
             }
             PAT = {
-                override_country_name = "Pattani Ji-Mi County"
+                override_country_name = "Pattani Jimi County"
                 set_country_flag = county_jimi
             }
             KED = {
-                override_country_name = "Kedah Ji-Mi County"
+                override_country_name = "Kedah Jimi County"
                 set_country_flag = county_jimi
             }
             PGR = {
-                override_country_name = "Pagarruyung Ji-Mi County"
+                override_country_name = "Pagarruyung Jimi County"
                 set_country_flag = county_jimi
             }
             JMB = {
-                override_country_name = "Jambi Ji-Mi County"
+                override_country_name = "Jambi Jimi County"
                 set_country_flag = county_jimi
             }
             PLB = {
-                override_country_name = "Palembang Ji-Mi County"
+                override_country_name = "Palembang Jimi County"
                 set_country_flag = county_jimi
             }
             IND = {
-                override_country_name = "Indrapura Ji-Mi County"
+                override_country_name = "Indrapura Jimi County"
                 set_country_flag = county_jimi
             }
-            # Petty Tributaries (Small Counties + OPMs | "X Ji-Mi District")
-            ATJ = {
-                override_country_name = "Aceh Ji-Mi District"
+            RWA = {
+                override_country_name = "Rwanda Jimi County"
+                set_country_flag = county_jimi
+            }
+            # Petty Tributaries (Small Counties + OPMs | "X Jimi District")
+            KRW = {
+                override_country_name = "Karagwe Jimi District"
                 set_country_flag = district_jimi
             }
-            CNY = {
-                override_country_name = "Chechnya Ji-Mi District"
+            ATJ = {
+                override_country_name = "Aceh Jimi District"
                 set_country_flag = district_jimi
             }
             MER = {
-                override_country_name = "Mewar Ji-Mi District"
+                override_country_name = "Mewar Jimi District"
                 set_country_flag = district_jimi
             }
             K03 = {
-                override_country_name = "Mahe Ji-Mi District"
+                override_country_name = "Mahe Jimi District"
                 set_country_flag = district_jimi
             }
             K04 = {
-                override_country_name = "Salim Ji-Mi District"
+                override_country_name = "Salim Jimi District"
                 set_country_flag = district_jimi
             }
-            PRK = {
-                override_country_name = "Perak Ji-Mi District"
+            FEO = {
+                override_country_name = "Theodoro Jimi District"
                 set_country_flag = district_jimi
             }
-            ALN = {
-                override_country_name = "Alan Ji-Mi District"
+            DH1 = {
+                override_country_name = "Allada Jimi District"
                 set_country_flag = district_jimi
             }
         }
@@ -596,6 +783,57 @@ ROOT = {
     #####################################################################################
 
     ROOT = {
+        C01 = {
+            override_country_name = "Qing Paraguayan Dominion"
+        }
+        COL = {
+            override_country_name = "Qing Colombian Dominion"
+        }
+        CUB = {
+            override_country_name = "Qing Caribbean Dominion"
+        }
+        MEX = {
+            override_country_name = "Qing Mexican Dominion"
+        }
+        ILI = {
+            override_country_name = "Qing Dominion of Illinois"
+        }
+        USA = {
+            override_country_name = "Qing Dominion of Manhattan"
+        }
+        CHL = {
+            override_country_name = "Qing Chilean Dominion"
+        }
+        INC = {
+            override_country_name = "Qing Incan Dominion"
+        }
+        CAL = {
+            override_country_name = "Qing Californian Dominion"
+        }
+        ALA = {
+            override_country_name = "Qing Alaskan Dominion"
+        }
+        FLO = {
+            override_country_name = "Qing Dominion of Florida"
+        }
+        CAN = {
+            override_country_name = QING_CANADIAN_DOMINION_NAME
+        }
+        BRZ = {
+            override_country_name = "Qing Brazilian Dominion"
+        }
+        TEX = {
+            override_country_name = "Qing Texan Dominion"
+        }
+        LAP = {
+            override_country_name = "Qing Dominion of La Plata"
+        }
+        CHT = {
+            override_country_name = "Qing Central American Dominion"
+        }
+        LOU = {
+            override_country_name = "Qing Dominion of Louisiana"
+        }
     }
 
     ####################################################################################
@@ -612,6 +850,15 @@ ROOT = {
         
         # Pirate Brotherhoods
         ROOT = {
+            SOM = {
+                override_country_name = "Imperial Pirates of Somalia"
+            }
+            KNI = {
+                override_country_name = "Imperial Knightly Corsairs"
+            }
+            GOT = {
+                override_country_name = "Qing Imperial Gotlandic Pirates"
+            }
         }
         
         # # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
@@ -686,94 +933,10 @@ ROOT = {
                 is_subject_of_type = consolidated_dominion
             }
         }
-        # A bit darker than main domain to be more dinstinct
         change_country_color = {
-            color = { 250 170 80 }
+            color = { 237 152 18 }
         }
     }
-
-    # Cycling colors for Dominions
-    # ROOT = {
-    #     C02 = {
-    #         clr_country_flag = subject_color_1
-    #         clr_country_flag = subject_color_2
-    #         clr_country_flag = subject_color_3
-
-    #         set_country_flag = subject_color_1
-    #     }
-    #     C05 = {
-    #         clr_country_flag = subject_color_1
-    #         clr_country_flag = subject_color_2
-    #         clr_country_flag = subject_color_3
-
-    #         set_country_flag = subject_color_2
-    #     }
-    #     C04 = {
-    #         clr_country_flag = subject_color_1
-    #         clr_country_flag = subject_color_2
-    #         clr_country_flag = subject_color_3
-
-    #         set_country_flag = subject_color_3
-    #     }
-
-    #     every_subject_country = {
-    #         limit = {
-    #             OR = {
-    #                 is_subject_of_type = dominion
-    #                 is_subject_of_type = dominion_tc
-    #             }
-    #             NOT = {
-    #                 OR = {
-    #                     has_country_flag = subject_color_1
-    #                     has_country_flag = subject_color_2
-    #                     has_country_flag = subject_color_3
-    #                 }
-    #             }
-    #         }
-    #         random_list = {
-    #             33 = {
-    #                 set_country_flag = subject_color_1
-    #                 log = "Setting subject_color_1 to [This.GetName]"
-    #             }
-    #             33 = {
-    #                 set_country_flag = subject_color_2
-    #                 log = "Setting subject_color_2 to [This.GetName]"
-    #             }
-    #             33 = {
-    #                 set_country_flag = subject_color_3
-    #                 log = "Setting subject_color_3 to [This.GetName]"
-    #             }
-    #         }
-    #     }
-
-    #     # ================== Finished setting flags, actually change colors now ===============================================
-    #     every_subject_country = {
-    #         limit = {
-    #             has_country_flag = subject_color_1
-    #         }
-    #         change_country_color = {
-    #             # color = { 180 160 0 }
-    #             color = { 0 0 0 }
-    #         }
-    #     }
-    #     every_subject_country = {
-    #         limit = {
-    #             has_country_flag = subject_color_2
-    #         }
-    #         change_country_color = {
-    #             color = { 255 255 255 }
-    #         }
-    #     } 
-    #     every_subject_country = {
-    #         limit = {
-    #             has_country_flag = subject_color_3
-    #         }
-    #         change_country_color = {
-    #             color = { 100 100 100 }
-    #         }
-    #     }
-    # }
-
 
     every_subject_country = {
         limit = {
@@ -905,7 +1068,6 @@ ROOT = {
         limit = {
             OR = {
                 is_subject_of_type = march
-                is_subject_of_type = integrated_tribe_subject
             }
         }
         if = {
@@ -913,21 +1075,58 @@ ROOT = {
                 has_country_flag = imperial_march
             }
             change_country_color = {
-                color = { 255 70 0 }
+                color = { 255 100 20 }
+                color = { 255 150 18 }
             }
         } else {
             change_country_color = {
                 color = { 240 100 0 }
+                color = { 255 110 20 }
+                color = { 255 100 20 }
             }
         }
     }
 
     every_subject_country = {
         limit = {
-            is_subject_of_type = naval_march
+            OR = {
+                is_subject_of_type = integrated_tribe_subject
+                is_subject_of_type = pagan_chiefdom
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = imperial_horde
+            }
+            change_country_color = {
+                color = { 205 75 15 }
+                color = { 250 120 5 }
+            }
+        } else {
+            change_country_color = {
+                color = { 250 140 18 }
+            }
+        }
+    }  
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = naval_march
+            }
         }
         change_country_color = {
-            color = { 200 80 80 }
+            color = { 200 60 95 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = pirate_brotherhood_vassal
+            }
+        }
+        change_country_color = {
+            color = { 250 100 75 }
         }
     }
 
@@ -977,25 +1176,35 @@ ROOT = {
         limit = {
             OR = {
                 is_subject_of_type = commercial_enterprise
+                is_subject_of_type = trade_outpost 
             }
         }
         change_country_color = {
             color = { 255 250 180 }
         }
     }
-
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = trade_outpost
+                is_subject_of_type = protectorate
             }
         }
         change_country_color = {
-            color = { 255 250 180 }
+            color = { 255 250 200 }
         }
     }
-
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mining_corporation
+            }
+        }
+        change_country_color = {
+            color = { 255 185 0 }
+        }
+    }
     
+
 }
 
 ####################################################################################
@@ -1028,15 +1237,16 @@ ROOT = {
         random_province = {
             limit = {
                 # OR = {
-                    # # region = cascadia_region
-                    # continent = oceania
-                    # superregion = east_indies_superregion
+                #     region = cascadia_region
+                #     continent = oceania
+                #     superregion = east_indies_superregion
+                #     region = australia_region
                 # }
-                OR = {
-                    is_island = yes
-                    has_port = yes
-                    is_neighbor_of = ROOT
-                }
+                # OR = {
+                #     is_island = yes
+                #     has_port = yes
+                #     is_neighbor_of = ROOT
+                # }
                 is_empty = yes
                 # has_discovered = ROOT
             }
@@ -1123,6 +1333,7 @@ ROOT = {
     # Setting high dev imperial cities
     every_subject_country = {
         limit = {
+            is_subject_of_type = imperial_city
             capital_scope = {
                 OR = {
                     NOT = {
