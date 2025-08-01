@@ -33,10 +33,8 @@ remove_country_modifier = jason_mod_more_trade_steer_max
 
 # Template for adding modifierS
 add_mod = {
-    name = jason_naval_movespeed_2_1
+    name = mandate_cheat_100
 }
-
-reduce_foreign_country_trade_power = yes
 
 ####################################################################################
 # Continuous things to run for this campaign + Global Flags
@@ -44,21 +42,61 @@ reduce_foreign_country_trade_power = yes
 
 
 ROOT = {
-    accept_all_cultures = yes
-
-    C00 = {
-        grant_independence = yes
+    C01 = {
         every_owned_province = {
-            change_controller = CUB
+            log = "                province_id = [This.prov_id.GetValue]"
         }
     }
-    
-    # every_subject_country = {
-    #     every_owned_province = {
-    #         add_colonysize = 1000
-    #     }
+
+    every_owned_province = {
+        limit = {
+            region = south_africa_region
+        }
+        cede_province = K22
+    }
+
+    # 2435 = {
+    #     change_trade_goods = fur
     # }
+    # 2147 = {
+    #     set_random_precious_non_gold_trade_good = yes
+    # }
+    # change_one_gold_province_to_random = yes
+    # set_variable = {
+    #     which = religionCounter
+    #     value = 0
+    # }
+    # while = {
+    #     limit = {
+    #         NOT = {
+    #             # TODO add early exit for when no more eligible provinces
+    #             check_variable = {
+    #                 which = religionCounter
+    #                 value = 1
+    #             }
+    #         }
+    #     }
+    #     change_variable = {
+    #         which = religionCounter
+    #         value = 1
+    #     }
+    #     every_owned_province = {
+    #         limit = {
+    #             is_valuable_goods_producing_province = yes
+    #         }
+    #         log = "Changing [This.GetName] province to random"
+    #     }
+    #     # change_one_gold_province_to_random = yes
+    # }
+    every_owned_province = {
+        add_core = ROOT
+    }
+    accept_all_cultures = yes
+    
+    reduce_foreign_country_trade_power = yes
+    change_one_gold_province_to_random = yes
 }
+
 
 ####################################################################################
 # Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
@@ -66,6 +104,10 @@ ROOT = {
 
 # Names
 ROOT = {
+    # Naming: Qing -> Chinese 
+    # Naming: Qing Imperial -> Celestial
+    # Naming: Imperial -> Celestial
+    # Celestial is short for both Imperial Chinese and Imperial. So Celestial Chinese [Title], and Celestial [Title] mostly mean the sam ething, but the different wording may denote rank
     # Overall layering Home Lands > Vassals > Colonies > Tributaries
     # Overall layering levels: Core > Internal > External
 
@@ -102,9 +144,20 @@ ROOT = {
         }
         if = {
             limit = {
-                tag = QNG
+                OR = {
+                    tag = QNG
+                }
             }
             override_country_name = GREAT_QING_EMPIRE_NAME
+        }
+        if = {
+            limit = {
+                or = {
+                    tag = EMC
+                }
+            }
+            # override_country_name = GREAT_CELESTIAL_EMPIRE
+            override_country_name = "Imperial Chinese Celestial Empire"
         }
     }
 
@@ -116,21 +169,23 @@ ROOT = {
         # Administrative Regions | Qing Imperial Provinces of X
         ROOT = {
             MOR = {
-                override_country_name = "Maghrebi Imperial Governorate"
-                clr_country_flag = kingdom_fiefdom
+                override_country_name = "Maghrebi Celestial Governorate"
+            }
+            KON = {
+                override_country_name = "Kongo Celestial Governorate"
             }
         }
 
         # Imperial Cities | Imperial City of X | imperial_city
         ROOT = {
             TI4 = {
-                override_country_name = "Samarkand Imperial City"
+                override_country_name = "Samarkand Celestial City"
             }
             AST = {
-                override_country_name = "Astrakhan Imperial City"
+                override_country_name = "Astrakhan Celestial City"
             }
             K15 = {
-                override_country_name = "Moscow Imperial City"
+                override_country_name = "Moscow Celestial City"
             }
         }
 
@@ -141,7 +196,7 @@ ROOT = {
         # Real Unions | Qing Empire/Kingdom/Duchy/County of X
         ROOT = {
             ETH = {
-                override_country_name = "Qing Imperial Empire of Ethiopia"
+                override_country_name = "Celestial Ethiopian Empire"
             }
         }
     }
@@ -167,50 +222,57 @@ ROOT = {
         # Marches | Commandery of X
         ROOT = {
             KHA = {
-                override_country_name = "Mongol Imperial Commandery"
+                override_country_name = "Mongol Celestial Supreme Commandery"
                 set_country_flag = imperial_march
             }
             KOR = {
-                override_country_name = "Joseon Commandery"
+                override_country_name = "Joseon Celestial Supreme Commandery"
+                set_country_flag = imperial_march
             }
             DAI = {
-                override_country_name = "Viet Commandery"
+                override_country_name = "Viet Celestial Commandery"
             }
             AVA = {
-                override_country_name = "Burmese Commandery"
+                override_country_name = "Burmese Celestial Commandery"
+            }
+            PRU = {
+                override_country_name = "Prussian Celestial Commandery"
             }
         }
         
         # Defensive Marches | Fortress of X
         ROOT = {
             TIB = {
-                override_country_name = "Xi'Zang Chang'Cheng"
+                override_country_name = "Celestial Xi'Zang Chang'Cheng"
                 set_country_flag = wall_march
             }
             CIR = {
-                override_country_name = "Fortress Caucasia"
+                override_country_name = "Celestial Fortress Caucasia"
+            }
+            BEN = {
+                override_country_name = "Celestial Walls of Benin"
             }
         }
         
         # Naval Marches | Naval Base of X or Gates of X
         ROOT = {
             FRM = {
-                override_country_name = "Taiwanese Imperial Naval Base"
+                override_country_name = "Taiwan Celestial Naval Base"
             }
             ORM = {
-                override_country_name = "Hormuzi Imperial Sea Gates"
+                override_country_name = "Hormuz Celestial Sea Gates"
             }
             MLC = {
-                override_country_name = "Malacca Imperial Sea Gates"
+                override_country_name = "Malacca Celestial Sea Gates"
             }
             ANT = {
-                override_country_name = "Madagascar Sea Commandery"
+                override_country_name = "Madagascar Celestial Sea Commandery"
             }
         }
     }
     
     #####################################################################################
-    # Layer 4: Core Vassals (Tu-Si (sino_jimi_state), Resorts, Native Reserves, tropical resorts, Mining Corporation, etc): 
+    # Layer 4: Core Vassals (Tu-Si), Resorts, Native Reserves, tropical resorts, Mining Corporation, etc): 
     #####################################################################################
     
     # Deeply entangled subject states that are really integral parts of the Empire proper, rather than semi-sovereign associated states. These are typically specialized governments or bureaus built for specialized purposes or for administrating special lands. These are considered de jure lands owned by the Empire proper. 
@@ -218,13 +280,13 @@ ROOT = {
         # Native Reserves | X_adj Tribal Reserve
         ROOT = {
             AI1 = {
-                override_country_name = "Ainu Tribal Reservation"
+                override_country_name = "Ainu Celestial Tribal Reservation"
             }
-            HDA = {
-                override_country_name = "Haida Tribal Reservation"
+            K21 = {
+                override_country_name = "Saharan Celestial Tribal Reservation"
             }
-            WAD = {
-                override_country_name = "Wadai Tribal Reservation"
+            DAW = {
+                override_country_name = "Arabian Celestial Tribal Reservation"
             }
         }
 
@@ -232,14 +294,14 @@ ROOT = {
         # Integrated Tribe Subjects | Great Horde of X | Essentially Horde Marches
         ROOT = {
             KAZ = {
-                override_country_name = "Kazani Imperial Horde"
+                override_country_name = "Kazani Celestial Horde"
             }
             GOL = {
-                override_country_name = "Golden Imperial Horde"
+                override_country_name = "Golden Grand Celestial Horde"
                 set_country_flag = imperial_horde
             }
             CRI = {
-                override_country_name = "Crimean Imperial Horde"
+                override_country_name = "Crimean Celestial Horde"
             }
         }
 
@@ -250,24 +312,24 @@ ROOT = {
         # Tropical Resorts | The X Resort
         ROOT = {
             K02 = {
-                override_country_name = "Andamans Tropical Resort"
+                override_country_name = "Andamans Celestial Tropical Resort"
             }
             BLI = {
-                override_country_name = "Bali Tropical Resort"
+                override_country_name = "Bali Celestial Tropical Resort"
             }
             DGL = {
-                override_country_name = "Maldives Tropical Resort"
+                override_country_name = "Maldives Celestial Tropical Resort"
             }
         }
 
         
         # Mining Corporations | Mines of X
         ROOT = {
-            K19 = {
-                override_country_name = "Qing Ethiopian Mining Co"
-            }
             ZIM = {
-                override_country_name = "Qing Zimbabwean Mining Co"
+                override_country_name = "Zimbabwe Celestial Mining Co"
+            }
+            HS3 = {
+                override_country_name = "Mali Celestial Mining Co"
             }
         }
     }
@@ -280,13 +342,16 @@ ROOT = {
     # Consolidated Dominions | American Directorate of X
     ROOT = {
         TDO = {
-            override_country_name = "Imperial Qing Philippines"
+            override_country_name = "Philippines Celestial Core Dominion"
         }
         AUS = {
-            override_country_name = "Imperial Qing Australia"
+            override_country_name = "Australia Celestial Core Dominion"
         }
         C09 = {
-            override_country_name = "Imperial Qing Indonesia"
+            override_country_name = "Indonesia Celestial Core Dominion"
+        }
+        K22 = {
+            override_country_name = "Celestial Crown Dominion of the Cape"
         }
     }
 
@@ -299,26 +364,143 @@ ROOT = {
         # Trade Outposts | X Trade Outpost
         ROOT = {
             K05 = {
-                override_country_name = "Indonesian Trade Outpost"
+                override_country_name = "Indonesian Celestial Trade Outpost"
             }
             K18 = {
-                override_country_name = "West African Trade Outpost"
+                override_country_name = "West African Celestial Trade Outpost"
             }
             C02 = {
-                override_country_name = "Arkhangelsk Trade Outpost"
+                override_country_name = "Arkhangelsk Celestial Trade Outpost"
             }
             SYR = {
-                override_country_name = "Syrian Trade Outpost"
+                override_country_name = "Syrian Celestial Trade Outpost"
             }
             MON = {
-                override_country_name = "Montenegro Trade Outpost"
+                override_country_name = "Montenegro Celestial Trade Outpost"
             }
         }
 
         # Generic Vassals (Waiting to be annexed)
         ROOT = {
-            AAA = {
+            RSA = {
                 override_country_name = "Test"
+            }
+        }
+
+        # Commercial Enterprises | X Commercial Enterprise
+        ROOT = {
+            LFA = {
+                override_country_name = "Celestial Lanfang Company"
+            }
+            ZAN = {
+                override_country_name = "Celestial Zanzibar Trading Co"
+            }
+        }
+
+        # Tu Si | X Tusi / X Siberian Tusi
+        # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
+        ROOT = {
+            PIQ = {
+                override_country_name = "Pianqiao Celestial Tusi"
+            }
+            NUB = {
+                override_country_name = "Nubia Celestial Tusi"
+            }
+            HDA = {
+                override_country_name = "Haida Celestial Tusi"
+            }
+            ASH = {
+                override_country_name = "Ashanti Celestial Tusi"
+            }
+            AKW = {
+                override_country_name = "Akwamu Celestial Tusi"
+            }
+            KNG = {
+                override_country_name = "Kong Celestial Tusi"
+            }
+            GYA = {
+                override_country_name = "Gyaman Celestial Tusi"
+            }
+            DKR = {
+                override_country_name = "Denkera Celestial Tusi"
+            }
+            MLK = {
+                override_country_name = "Karabakh Celestial Tusi"
+            }
+            BON = {
+                override_country_name = "Bonoman Celestial Tusi"
+            }
+            DGB = {
+                override_country_name = "Dagbon Celestial Tusi"
+            }
+            SHE = {
+                override_country_name = "Sheki Celestial Tusi"
+            }
+            TFL = {
+                override_country_name = "Sigilmasa Celestial Tusi"
+            }
+            RYA = {
+                override_country_name = "Ryazan Celestial Tusi"
+            }
+            CHU = {
+                override_country_name = "Chukchi Celestial Siberian-Tusi"
+            }
+            KMC = {
+                override_country_name = "Kamchadals Celestial Siberian-Tusi"
+            }
+            AKK = {
+                override_country_name = "Aq Qoyunlu Celestial Tusi"
+            }
+            MOZ = {
+                override_country_name = "Mozhaysk Celestial Tusi"
+            }
+            MRM = {
+                override_country_name = "Murom Celestial Tusi"
+            }
+            NZH = {
+                override_country_name = "Nizhny Novgorod Celestial Tusi"
+            }
+            SEP = {
+                override_country_name = "Serpukhov Celestial Tusi"
+            }
+            OBL = {
+                override_country_name = "Kaluga Celestial Tusi"
+            }
+            K06 = {
+                override_country_name = "Kasimov Celestial Tusi"
+            }
+            K07 = {
+                override_country_name = "Guugu Yimithirr Celestial Tusi"
+            }
+            SDB = {
+                override_country_name = "Starodub Celestial Tusi"
+            }
+            RIF = {
+                override_country_name = "Rif Celestial Tusi"
+            }
+            K08 = {
+                override_country_name = "Wuli-Wuli Celestial Tusi"
+            }
+            K09 = {
+                override_country_name = "Veda Suvar Celestial Tusi"
+            }
+            K10 = {
+                override_country_name = "Orehovo-Zuyevo Celestial Tusi"
+            }
+            K11 = {
+                override_country_name = "Vladimir Celestial Tusi"
+            }
+            K12 = {
+                override_country_name = "Suzdal Celestial Tusi"
+            }
+            TVE = {
+                override_country_name = "Tver Celestial Tusi"
+            }
+            K14 = {
+                override_country_name = "Zubtsov Celestial Tusi"
+            }
+            BYV = {
+                override_country_name = "Belyov Celestial Tusi"
             }
         }
 
@@ -332,101 +514,6 @@ ROOT = {
             clr_country_flag = barony_fiefdom
         }
 
-        # Tu Si (sino_jimi_state) | X Tusi / X Siberian Tusi
-        # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
-        ROOT = {
-            PIQ = {
-                override_country_name = "Pianqiao Tusi"
-            }
-            KNG = {
-                override_country_name = "Kong Tusi"
-            }
-            GYA = {
-                override_country_name = "Gyaman Tusi"
-            }
-            DKR = {
-                override_country_name = "Denkera Tusi"
-            }
-            MLK = {
-                override_country_name = "Karabakh Tusi"
-            }
-            BON = {
-                override_country_name = "Bonoman Tusi"
-            }
-            DGB = {
-                override_country_name = "Dagbon Tusi"
-            }
-            SHE = {
-                override_country_name = "Sheki Tusi"
-            }
-            TFL = {
-                override_country_name = "Sigilmasa Tusi"
-            }
-            RYA = {
-                override_country_name = "Ryazan Tusi"
-            }
-            CHU = {
-                override_country_name = "Chukchi Siberian Tusi"
-            }
-            KMC = {
-                override_country_name = "Kamchadals Siberian Tusi"
-            }
-            AKK = {
-                override_country_name = "Aq Qoyunlu Tusi"
-            }
-            MOZ = {
-                override_country_name = "Mozhaysk Tusi"
-            }
-            MRM = {
-                override_country_name = "Murom Tusi"
-            }
-            NZH = {
-                override_country_name = "Nizhny Novgorod Tusi"
-            }
-            SEP = {
-                override_country_name = "Serpukhov Tusi"
-            }
-            OBL = {
-                override_country_name = "Kaluga Tusi"
-            }
-            K06 = {
-                override_country_name = "Kasimov Tusi"
-            }
-            K07 = {
-                override_country_name = "Guugu Yimithirr Tusi"
-            }
-            SDB = {
-                override_country_name = "Starodub Tusi"
-            }
-            RIF = {
-                override_country_name = "Rif Tusi"
-            }
-            K08 = {
-                override_country_name = "Wuli-Wuli Tusi"
-            }
-            K09 = {
-                override_country_name = "Veda Suvar Tusi"
-            }
-            K10 = {
-                override_country_name = "Orehovo-Zuyevo Tusi"
-            }
-            K11 = {
-                override_country_name = "Vladimir Tusi"
-            }
-            K12 = {
-                override_country_name = "Suzdal Tusi"
-            }
-            TVE = {
-                override_country_name = "Tver Tusi"
-            }
-            K14 = {
-                override_country_name = "Zubtsov Tusi"
-            }
-            BYV = {
-                override_country_name = "Belyov Tusi"
-            }
-        }
-
         # Fiefdoms | {fiefdom title} of X
         # Fiefdoms are a bit more autonomous than tusi and normal vassals. They are subservient to the laws of the central empire but fuedal lords have decent leeway to implement their own policies
         # Kingdoms: Kingdom of X - Large
@@ -435,55 +522,75 @@ ROOT = {
         # Baronies: Barony of X - OPMs | Fief Subject
         ROOT = {
             # Kingdom Tier
-            XXX = {
-                override_country_name = "Kingdom of Da Zhou"
-                set_country_flag = kingdom_fiefdom
-            }
             AYU = {
-                override_country_name = "Kingdom of Ayutthaya"
+                override_country_name = "Celestial Kingdom of Ayutthaya"
                 set_country_flag = kingdom_fiefdom
             }
             YEM = {
-                override_country_name = "Kingdom of Yemen"
+                override_country_name = "Celestial Kingdom of Yemen"
+                set_country_flag = kingdom_fiefdom
+            }
+            VL3 = {
+                override_country_name = "Celestial Kingdom of Mesopotamia"
+                set_country_flag = kingdom_fiefdom
+            }
+            GEO = {
+                override_country_name = "Celestial Kingdom of Georgia"
                 set_country_flag = kingdom_fiefdom
             }
             # Duchies
+            K23 = {
+                override_country_name = "Celestial Duchy of Libya"
+                set_country_flag = duchy_fiefdom
+            }
             KHM = {
-                override_country_name = "Duchy of Khmer"
+                override_country_name = "Celestial Duchy of Khmer"
                 set_country_flag = duchy_fiefdom
             }
             K01 = {
-                override_country_name = "Duchy of Laos"
+                override_country_name = "Celestial Duchy of Laos"
                 set_country_flag = duchy_fiefdom
             }
             RSO = {
-                override_country_name = "Duchy of Rostov"
+                override_country_name = "Celestial Duchy of Rostov"
+                set_country_flag = duchy_fiefdom
+            }
+            MOL = {
+                override_country_name = "Celestial Duchy of Moldavia"
                 set_country_flag = duchy_fiefdom
             }
             # Counties
+            VL4 = {
+                override_country_name = "Celestial Basra County"
+                set_country_flag = county_fiefdom
+            }
             SRV = {
-                override_country_name = "Shirvan County"
+                override_country_name = "Celestial Shirvan County"
                 set_country_flag = county_fiefdom
             }
             LIG = {
-                override_country_name = "Ligor County"
+                override_country_name = "Celestial Ligor County"
                 set_country_flag = county_fiefdom
             }
             YAR = {
-                override_country_name = "Yarosavl County"
+                override_country_name = "Celestial Yarosavl County"
+                set_country_flag = county_fiefdom
+            }
+            HSN = {
+                override_country_name = "Celestial Hisn Kayfa County"
                 set_country_flag = county_fiefdom
             }
             # Baronies
-            HSN = {
-                override_country_name = "Hisn Kayfa Barony"
+            HS1 = {
+                override_country_name = "Celestial Daura Barony"
                 set_country_flag = barony_fiefdom
             }
             CHK = {
-                override_country_name = "Champasak Barony"
+                override_country_name = "Celestial Champasak Barony"
                 set_country_flag = barony_fiefdom
             }
             BHT = {
-                override_country_name = "Soran Barony"
+                override_country_name = "Celestial Soran Barony"
                 set_country_flag = barony_fiefdom
             }
         }
@@ -532,6 +639,14 @@ ROOT = {
                 override_country_name = "Bahmani Jimi Sultanate"
                 set_country_flag = kingdom_jimi
             }
+            EGY = {
+                override_country_name = "Egyptian Jimi Kingdom"
+                set_country_flag = kingdom_jimi
+            }
+            TUN = {
+                override_country_name = "Tunisia Jimi Sultanate"
+                set_country_flag = kingdom_jimi
+            }
             SON = {
                 override_country_name = "Jimi Kingdom of Songhai"
                 set_country_flag = kingdom_jimi
@@ -561,12 +676,12 @@ ROOT = {
                 override_country_name = "Banjar Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
-            GRA = {
-                override_country_name = "Granada Jimi Prefecture"
+            VL2 = {
+                override_country_name = "Hijazi Jimi Kingdom"
                 set_country_flag = duchy_jimi
             }
-            ZAN = {
-                override_country_name = "Zanzibar Jimi Prefecture"
+            GRA = {
+                override_country_name = "Granada Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
             JOL = {
@@ -622,10 +737,6 @@ ROOT = {
                 override_country_name = "Ceylondia Jimi County"
                 set_country_flag = county_jimi
             }
-            NUB = {
-                override_country_name = "Nubia Jimi County"
-                set_country_flag = county_jimi
-            }
             NOV = {
                 override_country_name = "Novgorod Jimi County"
                 set_country_flag = county_jimi
@@ -644,6 +755,10 @@ ROOT = {
             }
             TNJ = {
                 override_country_name = "Tanjore Jimi County"
+                set_country_flag = county_jimi
+            }
+            WAD = {
+                override_country_name = "Wadai Jimi County"
                 set_country_flag = county_jimi
             }
             ALH = {
@@ -682,6 +797,10 @@ ROOT = {
                 override_country_name = "Doti Jimi County"
                 set_country_flag = county_jimi
             }
+            DAH = {
+                override_country_name = "Dahomey Jimi County"
+                set_country_flag = county_jimi
+            }
             LXA = {
                 override_country_name = "Lan Xang Jimi County"
                 set_country_flag = county_jimi
@@ -692,10 +811,6 @@ ROOT = {
             }
             BD1 = {
                 override_country_name = "Badakhshan Jimi County"
-                set_country_flag = county_jimi
-            }
-            JM2 = {
-                override_country_name = "Ganmeng Jimi County"
                 set_country_flag = county_jimi
             }
             LNA = {
@@ -746,6 +861,18 @@ ROOT = {
                 override_country_name = "Rwanda Jimi County"
                 set_country_flag = county_jimi
             }
+            BZ5 = {
+                override_country_name = "Kwararaea Jimi County"
+                set_country_flag = county_jimi
+            }
+            OYO = {
+                override_country_name = "Oyo Jimi County"
+                set_country_flag = county_jimi
+            }
+            EGB = {
+                override_country_name = "Egba Jimi County"
+                set_country_flag = county_jimi
+            }
             # Petty Tributaries (Small Counties + OPMs | "X Jimi District")
             KRW = {
                 override_country_name = "Karagwe Jimi District"
@@ -775,6 +902,10 @@ ROOT = {
                 override_country_name = "Allada Jimi District"
                 set_country_flag = district_jimi
             }
+            KIK = {
+                override_country_name = "Kikondja Jimi District"
+                set_country_flag = district_jimi
+            }
         }
     }
 
@@ -784,55 +915,55 @@ ROOT = {
 
     ROOT = {
         C01 = {
-            override_country_name = "Qing Paraguayan Dominion"
+            override_country_name = "Paraguay Celestial Dominion"
         }
         COL = {
-            override_country_name = "Qing Colombian Dominion"
+            override_country_name = "Colombia Celestial Dominion"
         }
         CUB = {
-            override_country_name = "Qing Caribbean Dominion"
+            override_country_name = "Caribbean Celestial Dominion"
         }
         MEX = {
-            override_country_name = "Qing Mexican Dominion"
+            override_country_name = "Mexico Celestial Dominion"
         }
         ILI = {
-            override_country_name = "Qing Dominion of Illinois"
+            override_country_name = "Illinois Celestial Dominion"
         }
         USA = {
-            override_country_name = "Qing Dominion of Manhattan"
+            override_country_name = "Manhattan Celestial Dominion"
         }
         CHL = {
-            override_country_name = "Qing Chilean Dominion"
+            override_country_name = "Chile Celestial Dominion"
         }
         INC = {
-            override_country_name = "Qing Incan Dominion"
+            override_country_name = "Inca Celestial Dominion"
         }
         CAL = {
-            override_country_name = "Qing Californian Dominion"
+            override_country_name = "California Celestial Dominion"
         }
         ALA = {
-            override_country_name = "Qing Alaskan Dominion"
+            override_country_name = "Alaska Celestial Dominion"
         }
         FLO = {
-            override_country_name = "Qing Dominion of Florida"
+            override_country_name = "Florida Celestial Dominion"
         }
         CAN = {
-            override_country_name = QING_CANADIAN_DOMINION_NAME
+            override_country_name = "Canadian Celestial Dominion"
         }
         BRZ = {
-            override_country_name = "Qing Brazilian Dominion"
+            override_country_name = "Brazilian Celestial Dominion"
         }
         TEX = {
-            override_country_name = "Qing Texan Dominion"
+            override_country_name = "Texan Celestial Dominion"
         }
         LAP = {
-            override_country_name = "Qing Dominion of La Plata"
+            override_country_name = "La Plata Celestial Dominion"
         }
         CHT = {
-            override_country_name = "Qing Central American Dominion"
+            override_country_name = "Central America Celestial Dominion"
         }
         LOU = {
-            override_country_name = "Qing Dominion of Louisiana"
+            override_country_name = "Louisiana Celestial Dominion"
         }
     }
 
@@ -843,21 +974,24 @@ ROOT = {
     ROOT = {
         # Protectorate | The X Protectorate
         ROOT = {
-            TEST = {
-                override_country_name = "The Blah Protectorate"
+            BYZ = {
+                override_country_name = "The Byzantine Celestial Protectorate"
             }
         }
         
         # Pirate Brotherhoods
         ROOT = {
             SOM = {
-                override_country_name = "Imperial Pirates of Somalia"
+                override_country_name = "Somalian Celestial Privateers"
             }
             KNI = {
-                override_country_name = "Imperial Knightly Corsairs"
+                override_country_name = "Knightly Celestial Corsairs"
             }
             GOT = {
-                override_country_name = "Qing Imperial Gotlandic Pirates"
+                override_country_name = "Gotlandic Celestial Privateers"
+            }
+            RUG = {
+                override_country_name = "Rugenese Celestial Privateers"
             }
         }
         
@@ -1116,7 +1250,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 200 60 95 }
+            color = { 250 120 85 }
         }
     }
     every_subject_country = {
@@ -1126,10 +1260,10 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 250 100 75 }
+            color = { 255 100 75 }
         }
     }
-
+    
     every_subject_country = {
         limit = {
             OR = {
@@ -1141,11 +1275,13 @@ ROOT = {
                 has_country_flag = wall_march
             }
             change_country_color = {
-                color = { 100 90 60 }
+                color = { 130 105 30 }
             }
         } else = {
             change_country_color = {
-                color = { 130 80 20}
+                color = { 190 90 20 }
+
+                color = { 142 91 11 }
                 # color = { 240 100 0 }
             }
         }
@@ -1176,11 +1312,21 @@ ROOT = {
         limit = {
             OR = {
                 is_subject_of_type = commercial_enterprise
+            }
+        }
+        change_country_color = {
+            color = { 230 230 80 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
                 is_subject_of_type = trade_outpost 
             }
         }
         change_country_color = {
-            color = { 255 250 180 }
+            color = { 255 250 150 }
         }
     }
     every_subject_country = {
