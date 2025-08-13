@@ -41,60 +41,21 @@ add_mod = {
 ####################################################################################
 
 
-ROOT = {
-    C01 = {
-        every_owned_province = {
-            log = "                province_id = [This.prov_id.GetValue]"
-        }
-    }
+ROOT = {   
+    # K30 = {
+    #     change_tag_with_effects = {
+    #         tag = LIV
+    #     }
+    # }
 
-    every_owned_province = {
-        limit = {
-            region = south_africa_region
-        }
-        cede_province = K22
-    }
-
-    # 2435 = {
-    #     change_trade_goods = fur
+    # every_owned_province = {
+    #     add_core = ROOT
     # }
-    # 2147 = {
-    #     set_random_precious_non_gold_trade_good = yes
-    # }
-    # change_one_gold_province_to_random = yes
-    # set_variable = {
-    #     which = religionCounter
-    #     value = 0
-    # }
-    # while = {
-    #     limit = {
-    #         NOT = {
-    #             # TODO add early exit for when no more eligible provinces
-    #             check_variable = {
-    #                 which = religionCounter
-    #                 value = 1
-    #             }
-    #         }
-    #     }
-    #     change_variable = {
-    #         which = religionCounter
-    #         value = 1
-    #     }
-    #     every_owned_province = {
-    #         limit = {
-    #             is_valuable_goods_producing_province = yes
-    #         }
-    #         log = "Changing [This.GetName] province to random"
-    #     }
-    #     # change_one_gold_province_to_random = yes
-    # }
-    every_owned_province = {
-        add_core = ROOT
-    }
-    accept_all_cultures = yes
+    # accept_all_cultures = yes
     
-    reduce_foreign_country_trade_power = yes
-    change_one_gold_province_to_random = yes
+    # reduce_foreign_country_trade_power = yes
+
+    # confucian_subjects_full_harmonize = yes
 }
 
 
@@ -156,8 +117,8 @@ ROOT = {
                     tag = EMC
                 }
             }
-            # override_country_name = GREAT_CELESTIAL_EMPIRE
-            override_country_name = "Imperial Chinese Celestial Empire"
+            override_country_name = CELESTIAL_EMPIRE_TIAN_XIA
+            override_country_name = "Divine Celestial Empire of TianXia"
         }
     }
 
@@ -168,11 +129,11 @@ ROOT = {
     ROOT = {
         # Administrative Regions | Qing Imperial Provinces of X
         ROOT = {
-            MOR = {
-                override_country_name = "Maghrebi Celestial Governorate"
-            }
             KON = {
                 override_country_name = "Kongo Celestial Governorate"
+            }
+            MOR = {
+                override_country_name = "Morocco Celestial Province"
             }
         }
 
@@ -196,7 +157,7 @@ ROOT = {
         # Real Unions | Qing Empire/Kingdom/Duchy/County of X
         ROOT = {
             ETH = {
-                override_country_name = "Celestial Ethiopian Empire"
+                override_country_name = "Celestial Ethiopian Core Empire"
             }
         }
     }
@@ -208,25 +169,26 @@ ROOT = {
     ROOT = {
         # Appanages 
         ROOT = {
-
+            JAP = {
+                override_country_name = "Celestial Crown-Appanage of Japan"
+            }
         }
         
-        # Princely Vassals (prince_vassal)
+        # Princely Vassals (prince_vassal) or royal privileges
         ROOT = {
             # Special case for honoring the vanquished prior dynasty
             MNG = {
                 override_country_name = "Dynastic Ming Altar State"
+            }
+            KOR = {
+                override_country_name = "Celestial Appanage of Korea"
             }
         }
         
         # Marches | Commandery of X
         ROOT = {
             KHA = {
-                override_country_name = "Mongol Celestial Supreme Commandery"
-                set_country_flag = imperial_march
-            }
-            KOR = {
-                override_country_name = "Joseon Celestial Supreme Commandery"
+                override_country_name = "Celestial Supreme Commandery"
                 set_country_flag = imperial_march
             }
             DAI = {
@@ -266,7 +228,17 @@ ROOT = {
                 override_country_name = "Malacca Celestial Sea Gates"
             }
             ANT = {
-                override_country_name = "Madagascar Celestial Sea Commandery"
+                override_country_name = "Madagascar Naval Command"
+            }
+        }
+
+        # Religious Marches / Religious SARs
+        ROOT = {
+            KOJ = {
+                override_country_name = "Jerusalem Celestial Holy Kingdom"
+            }
+            LIV = {
+                override_country_name = "Livonian Celestial Holy Order"
             }
         }
     }
@@ -320,6 +292,9 @@ ROOT = {
             DGL = {
                 override_country_name = "Maldives Celestial Tropical Resort"
             }
+            C04 = {
+                override_country_name = "The Balearics Celestial Resort"
+            }
         }
 
         
@@ -353,6 +328,9 @@ ROOT = {
         K22 = {
             override_country_name = "Celestial Crown Dominion of the Cape"
         }
+        K26 = {
+            override_country_name = "Celestial Russian Dominate"
+        }
     }
 
     ####################################################################################
@@ -371,9 +349,6 @@ ROOT = {
             }
             C02 = {
                 override_country_name = "Arkhangelsk Celestial Trade Outpost"
-            }
-            SYR = {
-                override_country_name = "Syrian Celestial Trade Outpost"
             }
             MON = {
                 override_country_name = "Montenegro Celestial Trade Outpost"
@@ -417,6 +392,12 @@ ROOT = {
             }
             KNG = {
                 override_country_name = "Kong Celestial Tusi"
+            }
+            K27 = {
+                override_country_name = "Torzhok Celestial Tusi"
+            }
+            K28 = {
+                override_country_name = "Galich Celestial Tusi"
             }
             GYA = {
                 override_country_name = "Gyaman Celestial Tusi"
@@ -513,7 +494,6 @@ ROOT = {
             clr_country_flag = county_fiefdom
             clr_country_flag = barony_fiefdom
         }
-
         # Fiefdoms | {fiefdom title} of X
         # Fiefdoms are a bit more autonomous than tusi and normal vassals. They are subservient to the laws of the central empire but fuedal lords have decent leeway to implement their own policies
         # Kingdoms: Kingdom of X - Large
@@ -523,7 +503,7 @@ ROOT = {
         ROOT = {
             # Kingdom Tier
             AYU = {
-                override_country_name = "Celestial Kingdom of Ayutthaya"
+                override_country_name = "Celestial Thai Kingdom"
                 set_country_flag = kingdom_fiefdom
             }
             YEM = {
@@ -555,42 +535,50 @@ ROOT = {
                 override_country_name = "Celestial Duchy of Rostov"
                 set_country_flag = duchy_fiefdom
             }
+            SYR = {
+                override_country_name = "Celestial Duchy of Syria"
+                set_country_flag = duchy_fiefdom
+            }
             MOL = {
                 override_country_name = "Celestial Duchy of Moldavia"
                 set_country_flag = duchy_fiefdom
             }
+            PSK = {
+                override_country_name = "Celestial Duchy of Pskov"
+                set_country_flag = duchy_fiefdom
+            }
             # Counties
             VL4 = {
-                override_country_name = "Celestial Basra County"
+                override_country_name = "Basra Celestial County"
                 set_country_flag = county_fiefdom
             }
             SRV = {
-                override_country_name = "Celestial Shirvan County"
+                override_country_name = "Shirvan Celestial County"
                 set_country_flag = county_fiefdom
             }
             LIG = {
-                override_country_name = "Celestial Ligor County"
+                override_country_name = "Ligor Celestial County"
                 set_country_flag = county_fiefdom
             }
             YAR = {
-                override_country_name = "Celestial Yarosavl County"
+                override_country_name = "Yarosavl Celestial County"
                 set_country_flag = county_fiefdom
             }
             HSN = {
-                override_country_name = "Celestial Hisn Kayfa County"
+                override_country_name = "Hisn Kayfa Celestial County"
                 set_country_flag = county_fiefdom
             }
             # Baronies
             HS1 = {
-                override_country_name = "Celestial Daura Barony"
+                override_country_name = "Daura Celestial Barony"
                 set_country_flag = barony_fiefdom
             }
             CHK = {
-                override_country_name = "Celestial Champasak Barony"
+                override_country_name = "Champasak Celestial Barony"
                 set_country_flag = barony_fiefdom
             }
             BHT = {
-                override_country_name = "Celestial Soran Barony"
+                override_country_name = "Soran Celestial Barony"
                 set_country_flag = barony_fiefdom
             }
         }
@@ -606,7 +594,7 @@ ROOT = {
     #####################################################################################
     # Layer 7: Internal Tributaries (Jimi Tributary Vassals):
     #####################################################################################
-     # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
+    # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
 
     ROOT = {
         # jimi_states | Empire > Kingdom > Prefectures > Counties > Districts
@@ -975,7 +963,10 @@ ROOT = {
         # Protectorate | The X Protectorate
         ROOT = {
             BYZ = {
-                override_country_name = "The Byzantine Celestial Protectorate"
+                override_country_name = "Byzantine Celestial Protectorate"
+            }
+            TUR = {
+                override_country_name = "Ottoman Celestial Protectorate"
             }
         }
         
@@ -1038,6 +1029,26 @@ ROOT = {
         color = { 237 152 18 }
     }
 
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = appanage
+            }
+        }
+        change_country_color = {
+            color = { 250 180 5 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = prince_vassal
+            }
+        }
+        change_country_color = {
+            color = { 240 180 40 }
+        }
+    }
     every_subject_country = {
         limit = {
             OR = {
@@ -1122,6 +1133,16 @@ ROOT = {
         limit = {
             OR = {
                 is_subject_of_type = native_reserve
+            }
+        }
+        change_country_color = {
+            color = { 240 175 90 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
                 is_subject_of_type = sino_jimi_state
             }
         }
@@ -1209,7 +1230,6 @@ ROOT = {
                 has_country_flag = imperial_march
             }
             change_country_color = {
-                color = { 255 100 20 }
                 color = { 255 150 18 }
             }
         } else {
@@ -1281,8 +1301,7 @@ ROOT = {
             change_country_color = {
                 color = { 190 90 20 }
 
-                color = { 142 91 11 }
-                # color = { 240 100 0 }
+                color = { 170 100 0 }
             }
         }
     }
