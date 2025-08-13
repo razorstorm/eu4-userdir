@@ -42,20 +42,14 @@ add_mod = {
 
 
 ROOT = {   
-    # K30 = {
-    #     change_tag_with_effects = {
-    #         tag = LIV
-    #     }
-    # }
-
-    # every_owned_province = {
-    #     add_core = ROOT
-    # }
-    # accept_all_cultures = yes
+    every_owned_province = {
+        add_core = ROOT
+    }
+    accept_all_cultures = yes
     
-    # reduce_foreign_country_trade_power = yes
+    reduce_foreign_country_trade_power = yes
 
-    # confucian_subjects_full_harmonize = yes
+    confucian_subjects_full_harmonize = yes
 }
 
 
@@ -313,6 +307,7 @@ ROOT = {
     # Layer 5: Core Colonies (Consolidated Dominions):
     #####################################################################################
     # Core Colonies are rare and typically only present when playing a new world nation. Colonial charters being granted to home regions to help speed up colonization would count as a consolidated dominion. When doing overseas colonization, the colony must be either an external or internal colony, not a core colony. 
+    # Crown dominion, core dominion, and Dominant mostly mean the same thing. 
 
     # Consolidated Dominions | American Directorate of X
     ROOT = {
@@ -326,10 +321,10 @@ ROOT = {
             override_country_name = "Indonesia Celestial Core Dominion"
         }
         K22 = {
-            override_country_name = "Celestial Crown Dominion of the Cape"
+            override_country_name = "Capetown Celestial Crown Dominion"
         }
-        K26 = {
-            override_country_name = "Celestial Russian Dominate"
+        RUS = {
+            override_country_name = "Russian Celestial Dominate"
         }
     }
 
@@ -352,6 +347,9 @@ ROOT = {
             }
             MON = {
                 override_country_name = "Montenegro Celestial Trade Outpost"
+            }
+            NOV = {
+                override_country_name = "Novgorod Trade Outpost"
             }
         }
 
@@ -386,6 +384,12 @@ ROOT = {
             }
             ASH = {
                 override_country_name = "Ashanti Celestial Tusi"
+            }
+            K31 = {
+                override_country_name = "Ostashkov Celestial Tusi"
+            }
+            K32 = {
+                override_country_name = "Rzhev Celestial Tusi"
             }
             AKW = {
                 override_country_name = "Akwamu Celestial Tusi"
@@ -516,6 +520,10 @@ ROOT = {
             }
             GEO = {
                 override_country_name = "Celestial Kingdom of Georgia"
+                set_country_flag = kingdom_fiefdom
+            }
+            FIN = {
+                override_country_name = "Celestial Grand Duchy of Finland"
                 set_country_flag = kingdom_fiefdom
             }
             # Duchies
@@ -664,6 +672,10 @@ ROOT = {
                 override_country_name = "Banjar Jimi Prefecture"
                 set_country_flag = duchy_jimi
             }
+            K25 = {
+                override_country_name = "Karelian Jimi Prefecture"
+                set_country_flag = duchy_jimi
+            }
             VL2 = {
                 override_country_name = "Hijazi Jimi Kingdom"
                 set_country_flag = duchy_jimi
@@ -723,10 +735,6 @@ ROOT = {
             # Counties (County Sized | "X Jimi County")
             CEY = {
                 override_country_name = "Ceylondia Jimi County"
-                set_country_flag = county_jimi
-            }
-            NOV = {
-                override_country_name = "Novgorod Jimi County"
                 set_country_flag = county_jimi
             }
             TLA = {
@@ -1083,6 +1091,7 @@ ROOT = {
         }
     }
 
+
     every_subject_country = {
         limit = {
             OR = {
@@ -1283,6 +1292,18 @@ ROOT = {
             color = { 255 100 75 }
         }
     }
+
+    
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = religious_march
+            }
+        }
+        change_country_color = {
+            color = { 170 50 140 }
+        }   
+    }
     
     every_subject_country = {
         limit = {
@@ -1371,6 +1392,16 @@ ROOT = {
     
 
 }
+
+
+
+RUS = {
+    change_country_color = {
+        color = { 55 55 55 }
+    }
+}
+
+
 
 ####################################################################################
 # Colonization
