@@ -2436,3 +2436,7 @@ ROOT = {
 
     }
 }
+
+
+# For full world naming: 
+# userdir\EMC_WORLD_CONQUEST_NAMES.txt

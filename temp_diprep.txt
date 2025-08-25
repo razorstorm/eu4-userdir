@@ -1,0 +1,4 @@
+add_country_modifier = { 
+    name = jason_mod_more_dip_rep
+    duration = 10
+}

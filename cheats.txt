@@ -212,10 +212,10 @@
 # change_dip = 6
 # change_mil = 6
 
-# add_ruler_personality = ruler_of_destiny_personality
-# add_ruler_personality = immortal_personality
-# add_ruler_personality = legendary_conqueror_personality
-# add_ruler_personality = scholar_personality
+add_ruler_personality = ruler_of_destiny_personality
+add_ruler_personality = immortal_personality
+add_ruler_personality = legendary_conqueror_personality
+add_ruler_personality = scholar_personality
 
 
 # # Adding advisor pool

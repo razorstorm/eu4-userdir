@@ -1,0 +1,33 @@
+add_mod = {
+    name = jason_mod_more_forcelimit
+}
+add_mod = {
+    name = jason_mod_more_land_morale
+}
+add_mod = {
+    name = jason_mod_more_disc
+}
+add_mod = {
+    name = jason_mod_more_leader_limit
+}
+add_mod = {
+    name = jason_mod_lessAN_maintenance
+}
+add_mod = {
+    name = jason_mod_less_attrition
+}
+add_mod = {
+    name = jason_mod_more_garrison_growth
+}
+add_mod = {
+    name = jason_mod_more_garrison_huge
+}
+add_mod = {
+    name = jason_mod_more_fort
+}
+add_mod = {
+    name = jason_mod_more_siege
+}
+add_mod = {
+    name = jason_mod_more_tradition
+}
