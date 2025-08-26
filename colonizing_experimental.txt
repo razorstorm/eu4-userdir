@@ -1,0 +1,124 @@
+set_variable = {
+    which = numColonistsTotal
+    value = 5
+}
+
+# Try adjacent ones first
+ROOT = {  
+    set_variable = {
+        which = colonyCounter
+        value = 0
+    }
+    while = {
+        export_to_variable = {
+            which = numColonies
+            value = num_of_colonies
+            who = ROOT
+        }
+        log = "[Root].numColonies is [Root.numColonies], numColonistsTotal is [numColonistsTotal.GetValue]"
+        limit = {
+
+            NOT = {
+                check_variable = {
+                    which = numColonies
+                    which = numColonistsTotal
+                }
+            }
+            NOT = {
+                # TODO add early exit for when no more eligible provinces
+                check_variable = {
+                    which = colonyCounter
+                    value =     20
+                }
+            }
+        }
+        change_variable = {
+            which = colonyCounter
+            value = 1
+        }
+        # log = "Loop iteration [colonyCounter.GetValue]"
+        random_province = {
+            limit = {
+                has_discovered = ROOT
+                is_empty = yes
+                OR = {
+                    continent = africa
+                    continent = north_america
+                    continent = south_america
+                    continent = oceania
+                }
+                OR = {
+                    is_island = yes
+                    is_neighbor_of = ROOT
+                }
+                # has_port = yes
+            }
+            log = "Creating colony in: [This.GetName]"
+            create_colony = 1
+            # add_colonysize = -200
+            discover_country = ROOT
+        }
+    }
+}
+
+
+set_variable = {
+    which = numColonistsTotal
+    value = 5
+}
+
+# Try all ones first
+ROOT = {  
+    set_variable = {
+        which = colonyCounter
+        value = 0
+    }
+    while = {
+        export_to_variable = {
+            which = numColonies
+            value = num_of_colonies
+            who = ROOT
+        }
+        limit = {
+
+            NOT = {
+                check_variable = {
+                    which = numColonies
+                    which = numColonistsTotal
+                }
+            }
+            NOT = {
+                # TODO add early exit for when no more eligible provinces
+                check_variable = {
+                    which = colonyCounter
+                    value =     20
+                }
+            }
+        }
+        change_variable = {
+            which = colonyCounter
+            value = 1
+        }
+        # log = "Loop iteration [colonyCounter.GetValue]"
+        random_province = {
+            limit = {
+                has_discovered = ROOT
+                is_empty = yes
+                OR = {
+                    continent = africa
+                    continent = north_america
+                    continent = south_america
+                    continent = oceania
+                }
+                OR = {
+                    is_island = yes
+                    has_port = yes
+                }
+            }
+            log = "Creating colony in: [This.GetName]"
+            create_colony = 1
+            # add_colonysize = -200
+            discover_country = ROOT
+        }
+    }
+}

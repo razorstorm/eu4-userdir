@@ -74,6 +74,10 @@ add_estate_influence_modifier = {
     estate = estate_sangha
     influence = -30
 }
+add_estate_influence_modifier = {
+    estate = estate_intelligentsia
+    influence = -30
+}
 
 # Third Odyssey
 add_estate_influence_modifier = {
