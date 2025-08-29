@@ -417,6 +417,35 @@ add_casus_belli = {
 
 # ======= End Get Naples PU =============
 
+# Help austria 
+
+
+HAB = {
+    add_country_modifier = { 
+        name = improved_dip_reputation
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = hol_de_witt
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = jap_sword_of_the_daimyo
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = enhanced_reputation
+        duration = -1  
+    }
+    add_country_modifier = { 
+        name = popular_noble
+        duration = -1  
+    }
+    remove_country_modifier = annexed_subjects
+    remove_country_modifier = annexers_legacy
+}
+
+
 # ===== annex =====
 
 every_country = {
@@ -4459,19 +4488,19 @@ if = {
     change_price = {
         trade_goods = silk
         key = PERSIA_SILK
-        value = 0.2
+        value = 1.5
         duration = -1
     }
     change_price = {
         trade_goods = cloth
         key = PERSIA_CLOTH
-        value = 0.1
+        value = 1.1
         duration = -1
     }
     change_price = {
         trade_goods = dyes
         key = PERSIA_DYES
-        value = 0.1
+        value = 1.1
         duration = -1
     }
 }

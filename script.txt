@@ -1,20 +1,3 @@
-every_owned_province = {
-    limit = {
-        region = hudson_bay_region
-    }
-    cede_province = C13
-}
-
-C13 = {
-    every_owned_province = {
-        add_colonysize = 1000
-        add_core = C13
-    }
-}
-
-K17 = {
-    every_owned_province = {
-        add_colonysize = 1000
-        add_core = K17
-    }
+add_mod = {
+    name = jason_mod_more_dips
 }

@@ -1,5 +1,7 @@
 log = "===============================Running Prov.txt=========================================="
 ####################################################################################
+# Scripts | script.txt | Just general things to run
+#
 # Some Common Commands:
 # 
 # Triggers:
@@ -9,27 +11,27 @@ log = "===============================Running Prov.txt==========================
 # * province_id  
 # 
 # Effects:
-# Template
-JAN = {
-    HOL = {
-        change_tag_with_effects = {
-            tag = NED
-        }
-    }
-    culture_convert_all_provinces_of_given_culture = {
-        culture = kurdish
-    }
-    convert_all_provinces_of_given_religion = {
-        religion = catholic
-    }
+#
+# JAN = {
+#     HOL = {
+#         change_tag_with_effects = {
+#             tag = NED
+#         }
+#     }
+#     culture_convert_all_provinces_of_given_culture = {
+#         culture = kurdish
+#     }
+#     convert_all_provinces_of_given_religion = {
+#         religion = catholic
+#     }
 
-    remove_country_modifier = jason_mod_more_trade_steer_max
+#     remove_country_modifier = jason_mod_more_trade_steer_max
 
-    # Template for adding modifierS
-    add_mod = {
-        name = mandate_cheat_100
-    }
-}
+#     # Template for adding modifierS
+#     add_mod = {
+#         name = mandate_cheat_100
+#     }
+# }
 
 
 ####################################################################################
@@ -37,26 +39,20 @@ JAN = {
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
-ROOT = {   
-    1116 = {
-        set_random_precious_non_gold_trade_good = yes
-        set_base_tax = 1
-        set_base_production = 2
-        set_base_manpower = 1
-    }
-    # =======================================================
 
-    add_accepted_culture = yorumba
+add_treasury = 1
 
-    constitute_colombia = yes
-    # constitute_caribbeans = yes
-    constitute_brazil = yes
-    constitute_chile = yes
-    constitute_florida = yes
-    constitute_louisiana = yes
+# ROOT = {   
+#     # WOL = {
+#     #     every_owned_province = {
+#     #         change_controller = ROOT
+#     #     }
+#     # }
 
-    remove_colonists_from_non_colonial_subjects = yes
-}
+#     target_zero_vassal_taxes = yes
+
+#     add_accepted_culture = portugese
+# }
 
 
 ####################################################################################
@@ -97,10 +93,8 @@ ROOT = {
     #####################################################################################
     # Foreign Countries
     #####################################################################################
-
-    # LAN = {
-    #     ch
-    # }
+    
+    # TODO Automated naming somehow, in mod
 
     #####################################################################################
     # Layer 1: Qing China Core:
@@ -135,34 +129,22 @@ ROOT = {
 
     ROOT = {
         # Administrative Regions | Qing Imperial Provinces of X
-        # Viceroyalities (Empires) > Governorates (Kingdoms) > Prefectures (Duchies) > Provinces (Counties) > Districts (Baronies)
+        # Grand Governorate (Empires) Governorate (Kingdoms) > Prefecture (Duchies) > Province (counties) > Distrinct (Baronies)
         ROOT = {
-            # Viceroyalities (Empire Sized Regions) | Viceroyality of X or X_adj Viceroyalty
-
-            # Governorates (Kingdom Sized Regions) | Governorate of X
-            BRI = {
-                override_country_name = "Governorate of Brittany"
-            }
-
-            # Prefectures (Duchy Sized Regions) | X Prefecture
-            GUY = {
-                override_country_name = "Gascony Prefecture"
-            }
-
-            # Provinces (County Sized Regions) | X Province
+            # PRovince : Close by internal
+            # Governorate : Far away
+            # 
             K03 = {
                 override_country_name = "Picardie Province"
             }
+            NRM = {
+                override_country_name = "Normandy Imperial Province"
+            }
+            GUY = {
+                override_country_name = "Gascony Province"
+            }
             K06 = {
                 override_country_name = "Anjou Province"
-            }
-
-            # Districts (Barony Sized Regions) | X District
-            K10 = {
-                override_country_name = "Shetland District"
-            }
-            K11 = {
-                override_country_name = "Faroe Islands District"
             }
         }
 
@@ -171,12 +153,12 @@ ROOT = {
             JAN = {
                 override_country_name = "Aachen Celestial Imperial City"
             }
-            ADR = {
-                override_country_name = "Andorra City"
-            }
         }
         # HRE Free Cities | Free City of X | imperial_city
         ROOT = {
+            ADR = {
+                override_country_name = "Andorra City"
+            }
             VDD = {
                 override_country_name = "Verdun Free City"
                 set_country_flag = free_city
@@ -187,10 +169,6 @@ ROOT = {
             }
             NUM = {
                 override_country_name = "Nuremberg Free City"
-                set_country_flag = free_city
-            }
-            RVA = {
-                override_country_name = "Dortmund Free City"
                 set_country_flag = free_city
             }
         }
@@ -218,11 +196,8 @@ ROOT = {
     ROOT = {
         # Appanages 
         ROOT = {
-            # IRE = {
-            #     override_country_name = "Ireland Crown Appanage"
-            # }
-            NRM = {
-                override_country_name = "Normandy Imperial Appanage"
+            IRE = {
+                override_country_name = "Ireland Crown Appanage"
             }
         }
         
@@ -239,7 +214,7 @@ ROOT = {
     }
     
     #####################################################################################
-    # Layer 4: Core Vassals (Tu-Si), Marches Resorts, Native Reserves, tropical resorts, Mining Corporation, Tibetain Ministries, etc): 
+    # Layer 4: Core Vassals (Tu-Si), Marches Resorts, Native Reserves, tropical resorts, Mining Corporation, etc): 
     #####################################################################################
     
     # Deeply entangled subject states that are really integral parts of the Empire proper, rather than semi-sovereign associated states. These are typically specialized governments or bureaus built for specialized purposes or for administrating special lands. These are considered de jure lands owned by the Empire proper. 
@@ -279,9 +254,6 @@ ROOT = {
         ROOT = {
             JAN = {
                 override_country_name = "Zimbabwe Celestial Mining Co"
-            }
-            K07 = {
-                override_country_name = "British Malian Mining Co"
             }
         }
 
@@ -341,17 +313,8 @@ ROOT = {
 
     # Consolidated Dominions | American Directorate of X
     ROOT = {
-        CUB = {
-            override_country_name = "British Caribbean"
-        }
-        K09 = {
-            override_country_name = "British South Africa"
-        }
-        K08 = {
-            override_country_name = "The Gambia"
-        }
-        FLO = {
-            override_country_name = "British Florida"
+        JAN = {
+            override_country_name = "Australia Celestial Core Dominion"
         }
     }
 
@@ -394,34 +357,10 @@ ROOT = {
 
         # Tu Si | X Tusi / X Siberian Tusi
         # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
-        # For non-chinese, they can be tiered
-        # Tribal Kingdom
-        # Tribal Duchy
-        # Tribal County
-        # Tribal Barony
-        every_subject_country = {
-            clr_country_flag = tribal_kingdom
-            clr_country_flag = tribal_duchy
-            clr_country_flag = tribal_county
-            clr_country_flag = tribal_barony
-        }
         ROOT = {
-            # Tribal Kingdoms | Tribal Kingdom of X
-            # Tribal Duchy | Tribal Duchy of X
-            KNG = {
-                override_country_name = "Tribal Duchy of Kong"
-                set_country_flag = tribal_duchy
+            JAN = {
+                override_country_name = "Pianqiao Celestial Tusi"
             }
-            HS3 = {
-                override_country_name = "Tribal Duchy of Rano"
-                set_country_flag = tribal_duchy
-            }
-            # Tribal County | X Tribal County
-            NUP = {
-                override_country_name = "Nupe Tribal County"
-                set_country_flag = tribal_county
-            }
-            # Tribal Barony | X Tribal Barony
         }
 
         ROOT = {
@@ -430,7 +369,10 @@ ROOT = {
             # This grants them heightened social prestige and a bit more de facto autonomy, but is largely the same as a kingly fiefdom. A bit of a philosophical cross between a client Kingdom and a vassal Kingdom fiefdom. 
             # Functionally identical to a fief Kingdom.
             BOH = {
-                override_country_name = "Bohemian Brother Kingdom"
+                override_country_name = "Bohemian Kingdom"
+            }
+            K05 = {
+                override_country_name = "Kingdom of Aquitaine"
             }
         }
 
@@ -462,53 +404,33 @@ ROOT = {
         # Baronies: Barony of X - OPMs | Fief Subject
         ROOT = {
             # Kingdom Tier
-            K05 = {
-                override_country_name = "Kingdom of Aquitaine"
-                set_country_flag = kingdom_fiefdom
-            }
             BUR = {
                 override_country_name = "Kingdom of Burgundy"
                 set_country_flag = kingdom_fiefdom
             }
-            SAV = {
-                override_country_name = "Kingdom of Savoy"
-                set_country_flag = kingdom_fiefdom
-            }
             BOS = {
-                override_country_name = "Kingdom of Bosnia"
+                override_country_name = "Bosnian Kingdom"
                 set_country_flag = kingdom_fiefdom
             }
             SER = {
-                override_country_name = "Kingdom of Serbia"
+                override_country_name = "Serbian Kingdom"
                 set_country_flag = kingdom_fiefdom
             }
             FIN = {
-                override_country_name = "Grand Duchy of Finland"
+                override_country_name = "Finnish Grand Duchy"
                 set_country_flag = kingdom_fiefdom
             }
             GRE = {
                 override_country_name = "Kingdom of Greece"
                 set_country_flag = kingdom_fiefdom
             }
+            # Duchies
             BAV = {
                 override_country_name = "Kingdom of Bavaria"
-                set_country_flag = kingdom_fiefdom
-            }
-            BAV = {
-                override_country_name = "Petty Kingdom of Bavaria"
-                set_country_flag = kingdom_fiefdom
-            }
-            # Duchies 
-            PRO = {
-                override_country_name = "Duchy of Provence"
-                set_country_flag = duchy_fiefdom
-            }
-            STY = {
-                override_country_name = "Duchy of Sytria"
                 set_country_flag = duchy_fiefdom
             }
             WUR = {
-                override_country_name = "Duchy of Wuerttemberg"
+                override_country_name = "Duchy of Württemberg"
                 set_country_flag = duchy_fiefdom
             }
             BEL = {
@@ -519,21 +441,17 @@ ROOT = {
                 override_country_name = "Duchy of Morea"
                 set_country_flag = duchy_fiefdom
             }
+            BRI = {
+                override_country_name = "Petty Kingdom of Brittany"
+                set_country_flag = duchy_fiefdom
+            }
             WOL = {
                 override_country_name = "Duchy of Wolgast"
                 set_country_flag = duchy_fiefdom
             }
             # Counties
-            TIR = {
-                override_country_name = "Tyrol County"
-                set_country_flag = county_fiefdom
-            }
             CLI = {
                 override_country_name = "Cilli County"
-                set_country_flag = county_fiefdom
-            }
-            SLZ = {
-                override_country_name = "Salzburg County"
                 set_country_flag = county_fiefdom
             }
             ANS = {
@@ -576,10 +494,6 @@ ROOT = {
                 override_country_name = "Oldenburg County"
                 set_country_flag = county_fiefdom
             }
-            HES = {
-                override_country_name = "Hesse County"
-                set_country_flag = county_fiefdom
-            }
             VER = {
                 override_country_name = "Verden County"
                 set_country_flag = county_fiefdom
@@ -592,19 +506,7 @@ ROOT = {
                 override_country_name = "Bregenz County"
                 set_country_flag = county_fiefdom
             }
-            SIE = {
-                override_country_name = "Sienna County"
-                set_country_flag = county_fiefdom
-            }
-            BYT = {
-                override_country_name = "Bayreuth County"
-                set_country_flag = county_fiefdom
-            }
             # Baronies
-            NIC = {
-                override_country_name = "Barony of Nizza"
-                set_country_flag = barony_fiefdom
-            }
             ALE = {
                 override_country_name = ALE_BARONY
                 set_country_flag = barony_fiefdom
@@ -629,10 +531,6 @@ ROOT = {
                 override_country_name = "Barony of Pio"
                 set_country_flag = barony_fiefdom
             }
-            WDK = {
-                override_country_name = "Barony of Waldeck"
-                set_country_flag = barony_fiefdom
-            }
         }
         
         # # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
@@ -647,9 +545,6 @@ ROOT = {
             }
             JAN = {
                 override_country_name = "Transitional French Regime"
-            }
-            GRA = {
-                override_country_name = "Granada Directorate"
             }
         }
 
@@ -677,9 +572,9 @@ ROOT = {
         # C01 = {
         #     override_country_name = "Paraguay Celestial Dominion"
         # }
-        COL = {
-            override_country_name = "British Colombia Dominion"
-        }
+        # COL = {
+        #     override_country_name = "Colombia Celestial Dominion"
+        # }
         # CUB = {
         #     override_country_name = "Caribbean Celestial Dominion"
         # }
@@ -692,9 +587,9 @@ ROOT = {
         # USA = {
         #     override_country_name = "Manhattan Celestial Dominion"
         # }
-        CHL = {
-            override_country_name = "British Chile Dominion"
-        }
+        # CHL = {
+        #     override_country_name = "Chile Celestial Dominion"
+        # }
         # INC = {
         #     override_country_name = "Inca Celestial Dominion"
         # }
@@ -709,10 +604,10 @@ ROOT = {
         # }
         # CAN = {
         #     override_country_name = "Canadian Celestial Dominion"
+        # }`autosave
+        # BRZ = {
+        #     override_country_name = "Brazilian Celestial Dominion"
         # }
-        BRZ = {
-            override_country_name = "British Brazil Dominion"
-        }
         # TEX = {
         #     override_country_name = "Texan Celestial Dominion"
         # }
@@ -722,9 +617,9 @@ ROOT = {
         # CHT = {
         #     override_country_name = "Central America Celestial Dominion"
         # }
-        LOU = {
-            override_country_name = "British Louisiana Dominion"
-        }
+        # LOU = {
+        #     override_country_name = "Louisiana Celestial Dominion"
+        # }
     }
 
     ####################################################################################
@@ -743,27 +638,15 @@ ROOT = {
     ROOT = {
         # Protectorate | The X Protectorate
         ROOT = {
-            POR = {
-                override_country_name = "Protectorate of Portugal"
+            JAN = {
+                override_country_name = "Byzantine Celestial Protectorate"
             }
         }
         
         # Pirate Brotherhoods
         ROOT = {
             KNI = {
-                override_country_name = "Knights of Rhodes and Malta"
-            }
-            K13 = {
-                override_country_name = "British Barbary Corsairs"
-            }
-            RUG = {
-                override_country_name = "Pirate Haven of Rugen"
-            }
-            GOT = {
-                override_country_name = "Pirate Kingdom of Gotland"
-            }
-            K14 = {
-                override_country_name = "British Privateers of the Caribbean"
+                override_country_name = "Knightly Corsairs of Rhodes"
             }
         }
         
@@ -815,27 +698,21 @@ ROOT = {
     # Other countries
     DAN = {
         change_country_color = {
-            color = { 100 150 170 }
-        }
-    }
-    LAN = {
-        change_country_color = {
             color = { 120 100 170 }
         }
     }
+    # restore_country_color = yes
 
     every_subject_country = {
         limit = {
             OR = {
                 is_subject_of_type = administrative_region
-                is_subject_of_type = appanage
             }
         }
         change_country_color = {
-            color = { 180 20 20 }
+            color = { 160 0 0 }
         }
     }
-
 
     every_subject_country = {
         limit = {
@@ -913,7 +790,7 @@ ROOT = {
                 has_country_flag = kingdom_fiefdom
             }
             change_country_color = {
-                color = { 160 30 30 }
+                color = { 190 10 10 }
             }
         } 
         else_if = {
@@ -922,7 +799,7 @@ ROOT = {
             }
             
             change_country_color = {
-                color = { 205 30 30 }
+                color = { 205 15 15 }
             }
         } 
         else_if = {
@@ -951,50 +828,13 @@ ROOT = {
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = sino_jimi_state
+                is_subject_of_type = appanage
             }
         }
-
-        if = {
-            limit = {
-                has_country_flag = tribal_kingdom
-            }
-            change_country_color = {
-                color = { 160 35 25 }
-            }
-        } 
-        else_if = {
-            limit = {
-                has_country_flag = tribal_duchy
-            }
-            
-            change_country_color = {
-                color = { 205 35 25 }
-            }
-        } 
-        else_if = {
-            limit = {
-                has_country_flag = tribal_county
-            }
-            change_country_color = {
-                color = { 230 55 45 }
-            }
-        }        
-        else_if = {
-            limit = {
-                has_country_flag = tribal_barony
-            }
-            change_country_color = {
-                color = { 255 100 80 }
-            }
-        }        
-        else {
-            change_country_color = {
-                color = { 0 0 0 }
-            }
+        change_country_color = {
+            color = { 160 10 10 }
         }
     }
-
     every_subject_country = {
         limit = {
             OR = {
@@ -1069,7 +909,8 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 220 0 0 }
+            # color = { 130 0 0 }
+            color = { 100 50 50 }
         }
     }
 
@@ -1175,7 +1016,7 @@ ROOT = {
             is_subject_of_type = pirate_brotherhood_vassal
         }
         change_country_color = {
-            color = { 180 0 100 }
+            color = { 180 96 158 }
         }
     }
     every_subject_country = {
@@ -1200,22 +1041,12 @@ ROOT = {
             color = { 180 50 70 }
         }
     }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = consolidated_dominion
-            }
-        }
-        change_country_color = {
-            color = { 170 30 40 }
-            # color = { 180 50 70 }
-        }
-    }
 }
 
 ####################################################################################
 # Colonization
 ####################################################################################
+
 
 # Try adjacent ones first
 ROOT = {  
@@ -1226,7 +1057,7 @@ ROOT = {
     while = {
         limit = {
             NOT = {
-                num_of_colonies = 14
+                num_of_colonies = 10
             }
             NOT = {
                 # TODO add early exit for when no more eligible provinces
@@ -1251,10 +1082,10 @@ ROOT = {
                     continent = south_america
                     continent = oceania
                 }
-                # OR = {
-                    # is_island = yes
-                is_neighbor_of = ROOT
-                # }
+                OR = {
+                    is_island = yes
+                    is_neighbor_of = ROOT
+                }
             }
             log = "Creating colony in: [This.GetName]"
             create_colony = 1
@@ -1272,7 +1103,7 @@ ROOT = {
     while = {
         limit = {
             NOT = {
-                num_of_colonies = 14
+                num_of_colonies = 10
             }
             NOT = {
                 # TODO add early exit for when no more eligible provinces
