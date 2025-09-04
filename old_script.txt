@@ -4196,6 +4196,11 @@ every_country = {
     }
 }
 
+
+
+remove_country_modifier = countdown_next_buy_prov
+
+
 # Auto colonize
 if = {
     limit = {
@@ -5270,3 +5275,66 @@ every_subject_country = {
         duration = -1
     }
 }
+
+
+# Magical Awakening:
+
+every_owned_province = {
+        if = {
+            limit = {
+                culture = scottish
+            }
+            random_list = {
+                20 = { 
+                    change_culture = magical
+                }
+                80 = { 
+                    
+                }
+            }
+        }
+
+
+        if = {
+            limit = {
+                culture = english
+            }
+            random_list = {
+                10 = { 
+                    change_culture = magical
+                }
+                90 = { 
+                    
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                culture = welsh
+            }
+            random_list = {
+                20 = { 
+                    change_culture = magical
+                }
+                80 = { 
+                    
+                }
+            }
+        }
+
+
+        if = {
+            limit = {
+                culture = irish
+            }
+            random_list = {
+                15 = { 
+                    change_culture = magical
+                }
+                85 = { 
+                    
+                }
+            }
+        }
+    }
