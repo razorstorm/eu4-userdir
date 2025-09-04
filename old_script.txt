@@ -4196,6 +4196,11 @@ every_country = {
     }
 }
 
+
+
+remove_country_modifier = countdown_next_buy_prov
+
+
 # Auto colonize
 if = {
     limit = {

@@ -1,65 +1,28 @@
 achievements_window = {
 	"close_button"="ESCAPE"
 }
-menu_load = {
-	"cancel"="ESCAPE"
-}
 OfferCondottieriDiplomacyDialogue = {
 	"AgreeButton"="c"
 	"DeclineButton"="z"
 }
+menu_load = {
+	"cancel"="ESCAPE"
+}
 ages_view = {
-	"close_button"="ESCAPE"
-}
-InviteToFederationDiplomacyDialog = {
-	"AgreeButton"="c"
-	"DeclineButton"="z"
-}
-celestial_window = {
-	"hf_eoc_fengshan_close_button"="ESCAPE"
-	"close_button"="ESCAPE"
-	"hf_eoc_map_close_button"="ESCAPE"
-}
-blessings_window = {
 	"close_button"="ESCAPE"
 }
 domesticpanel_naval_doctrine_select = {
 	"back_button"="ESCAPE"
 }
-EndOfNavalCombatPopup = {
-	"DeclineButton"="z"
-	"CenterOK"="c"
-	"AgreeButton"="c"
+blessings_window = {
+	"close_button"="ESCAPE"
 }
-countryview_tabs = {
-	"tab_decisions"="9"
-	"tab_court"="1"
-	"tab_gov"="2"
-	"tab_diplomacy"="3"
-	"tab_ideas"="7"
-	"tab_economy"="4"
-	"tab_technology"="6"
-	"tab_trade"="5"
-	"tab_missions"="8"
-	"tab_stability"="0"
-	"tab_religion"=","
-	"tab_military"="."
-	"tab_subjects"="x"
-	"tab_estates"="k"
+celestial_window = {
+	"close_button"="ESCAPE"
+	"hf_eoc_fengshan_close_button"="ESCAPE"
+	"hf_eoc_map_close_button"="ESCAPE"
 }
-manage_overext_window = {
-	"core_all"="c"
-	"back"="z"
-}
-SubjectInteractionDialog = {
-	"AgreeButton"="c"
-	"DeclineButton"="ESCAPE"
-}
-select_minority_culture_window = {
-	"cancel_button"="ESCAPE"
-	"send_colonist_button"="c"
-}
-FormCoalitionDialog = {
+InviteToFederationDiplomacyDialog = {
 	"AgreeButton"="c"
 	"DeclineButton"="z"
 }
@@ -72,12 +35,49 @@ court_select = {
 new_policy_window = {
 	"back"="z"
 }
-TransferTradePowerDialog = {
+select_minority_culture_window = {
+	"cancel_button"="ESCAPE"
+	"send_colonist_button"="c"
+}
+FormCoalitionDialog = {
+	"AgreeButton"="c"
+	"DeclineButton"="z"
+}
+manage_overext_window = {
+	"back"="z"
+	"core_all"="c"
+}
+SubjectInteractionDialog = {
 	"AgreeButton"="c"
 	"DeclineButton"="ESCAPE"
 }
+countryview_tabs = {
+	"tab_court"="1"
+	"tab_decisions"="9"
+	"tab_gov"="2"
+	"tab_diplomacy"="3"
+	"tab_economy"="4"
+	"tab_technology"="6"
+	"tab_ideas"="7"
+	"tab_trade"="5"
+	"tab_missions"="8"
+	"tab_stability"="0"
+	"tab_religion"=","
+	"tab_military"="."
+	"tab_subjects"="x"
+	"tab_estates"="k"
+}
+EndOfNavalCombatPopup = {
+	"DeclineButton"="z"
+	"CenterOK"="c"
+	"AgreeButton"="c"
+}
 colonisationpanel = {
 	"close_button"="ESCAPE"
+}
+TransferTradePowerDialog = {
+	"AgreeButton"="c"
+	"DeclineButton"="ESCAPE"
 }
 blessing_selection = {
 	"cancel_button"="ESCAPE"
@@ -88,44 +88,44 @@ browser_window = {
 select_minority_province_window = {
 	"cancel_button"="ESCAPE"
 }
-countrystabilityview = {
-	"overex_manage"="c"
-	"close_button"="ESCAPE"
-}
 combat = {
 	"closebutton"="ESCAPE"
+}
+countrystabilityview = {
+	"close_button"="ESCAPE"
+	"overex_manage"="c"
+}
+countrycourtview = {
+	"close_button"="ESCAPE"
 }
 DeclareWarDialog = {
 	"DeclineButton"="z"
 	"AgreeButton"="c"
 }
-countrycourtview = {
-	"close_button"="ESCAPE"
-}
 countrydecisionsview = {
 	"close_button"="ESCAPE"
 	"artifice_close_inventions"="ESCAPE"
 }
+countrydiplomacyview = {
+	"close_button"="ESCAPE"
+	"show_diplofeedback"="d"
+	"button_view_player_country"="z"
+	"show_diploactions"="a"
+	"show_opinions"="s"
+	"button_createvassals"="z"
+}
 natives_window = {
 	"close_button"="ESCAPE"
-}
-countrydiplomacyview = {
-	"button_view_player_country"="z"
-	"show_diplofeedback"="d"
-	"close_button"="ESCAPE"
-	"show_opinions"="s"
-	"show_diploactions"="a"
-	"button_createvassals"="z"
 }
 vassal_select_window = {
 	"back_button"="z"
 }
+select_rivals_window = {
+	"back"="z"
+}
 DemandUnlawfulTerritoryDiplomacyDialogue = {
 	"AgreeButton"="c"
 	"DeclineButton"="z"
-}
-select_rivals_window = {
-	"back"="z"
 }
 GiftDiplomacyDialog = {
 	"AgreeButton"="c"
@@ -134,12 +134,12 @@ GiftDiplomacyDialog = {
 countryestatesview = {
 	"close_button"="ESCAPE"
 }
-minor_landing_page = {
-	"close_button"="ESCAPE"
-}
 DefaultDiplomacyDialog = {
 	"AgreeButton"="c"
 	"DeclineButton"="z"
+}
+minor_landing_page = {
+	"close_button"="ESCAPE"
 }
 SendInsultDiplomacyDialog = {
 	"AgreeButton"="c"
@@ -148,6 +148,13 @@ SendInsultDiplomacyDialog = {
 ProvDialog = {
 	"AgreeButton"="RETURN"
 	"DeclineButton"="ESCAPE"
+}
+AppointCardinalDiplomacyDialog = {
+	"AgreeButton"="c"
+	"DeclineButton"="z"
+}
+countrytradeview = {
+	"close_button"="ESCAPE"
 }
 ClientStateSetup = {
 	"DeclineButton"="z"
@@ -161,27 +168,6 @@ EndOfLandCombatPopup = {
 	"CenterOK"="c"
 	"AgreeButton"="c"
 }
-countrytradeview = {
-	"close_button"="ESCAPE"
-}
-AppointCardinalDiplomacyDialog = {
-	"AgreeButton"="c"
-	"DeclineButton"="z"
-}
-countrytechnologyview = {
-	"close_button"="ESCAPE"
-	"show_institutions"="n"
-}
-WarSubsidyDialog = {
-	"AgreeButton"="c"
-	"DeclineButton"="z"
-}
-countrysubjectview = {
-	"close_button"="ESCAPE"
-}
-countryideasview = {
-	"close_button"="ESCAPE"
-}
 pdx_online_login_dialog = {
 	"DeclineButton"="ESCAPE"
 }
@@ -192,6 +178,20 @@ VassalCreationDialog = {
 ShareMapDialog = {
 	"AgreeButton"="c"
 	"DeclineButton"="z"
+}
+countryideasview = {
+	"close_button"="ESCAPE"
+}
+WarSubsidyDialog = {
+	"AgreeButton"="c"
+	"DeclineButton"="z"
+}
+countrysubjectview = {
+	"close_button"="ESCAPE"
+}
+countrytechnologyview = {
+	"close_button"="ESCAPE"
+	"show_institutions"="n"
 }
 NewClientVassalPopup = {
 	"DeclineButton"="z"
@@ -226,8 +226,8 @@ SellProvDialog = {
 	"DeclineButton"="z"
 }
 nudge_window_ambient_object = {
-	"ao_update_button"="u"
 	"ao_duplicate_button"="d"
+	"ao_update_button"="u"
 	"ao_save_button"="s"
 	"ao_delete_button"="s"
 }
@@ -235,15 +235,15 @@ SellShipsDialog = {
 	"AgreeButton"="c"
 	"DeclineButton"="z"
 }
-countrymissionsview = {
-	"close_button"="ESCAPE"
+OfferLoanDialog = {
+	"AgreeButton"="c"
+	"DeclineButton"="z"
 }
 country_history_window = {
 	"close_button"="ESCAPE"
 }
-OfferLoanDialog = {
-	"AgreeButton"="c"
-	"DeclineButton"="z"
+countrymissionsview = {
+	"close_button"="ESCAPE"
 }
 countryeconomyview = {
 	"close_button"="ESCAPE"
@@ -278,8 +278,8 @@ selected_subject_window = {
 	"close_button"="ESCAPE"
 }
 institutions_window = {
-	"institution_close_button"="n"
 	"back_button"="n"
+	"institution_close_button"="n"
 }
 expansion_landing_page = {
 	"close_button"="ESCAPE"
@@ -299,43 +299,43 @@ endgame_dialog = {
 estate_privileges_window = {
 	"close_button"="ESCAPE"
 }
-edit_idea_name_window = {
-	"ok_button"="RETURN"
+sub_message_window = {
+	"close_button"="ESCAPE"
 }
 DefaultDialog = {
 	"DeclineButton"="z"
 	"AgreeButton"="c"
 }
-sub_message_window = {
-	"close_button"="ESCAPE"
+edit_idea_name_window = {
+	"ok_button"="RETURN"
 }
 DefaultConfirm = {
 	"DeclineButton"="z"
 	"AgreeButton"="c"
 }
+DefaultInfoDialog = {
+	"AgreeButton"="c"
+}
 menu_message_settings = {
 	"close"="ESCAPE"
 }
-DefaultInfoDialog = {
+ShieldedInformationDialog = {
 	"AgreeButton"="c"
 }
 multi_unitpanel = {
 	"mergebutton"="g"
 	"reorganizebutton"="r"
 }
-ShieldedInformationDialog = {
-	"AgreeButton"="c"
-}
 DefaultPopup = {
 	"DeclineButton"="z"
 	"AgreeButton"="c"
 	"CenterOK"="c"
 }
-ConfirmRemoveTeamDialog = {
+ConfirmAndNameLeaderDialog = {
 	"DeclineButton"="z"
 	"AgreeButton"="c"
 }
-ConfirmAndNameLeaderDialog = {
+ConfirmRemoveTeamDialog = {
 	"DeclineButton"="z"
 	"AgreeButton"="c"
 }
@@ -366,21 +366,24 @@ ImperialIncidentPopup = {
 	"AgreeButton"="c"
 	"CenterOK"="c"
 }
-merchant_republic_faction_view = {
-	"close_button"="ESCAPE"
-}
 EventWindow = {
 	"event_goto_province"="f"
+}
+merchant_republic_faction_view = {
+	"close_button"="ESCAPE"
 }
 default_faction_view = {
 	"close_button"="ESCAPE"
 }
+revolutionary_republic_faction_view = {
+	"close_button"="ESCAPE"
+}
 province_window = {
 	"fort_maintenance_checkbox"="h"
-	"settlement_growth_checkbox"="="
 	"build_landunit_button"=","
-	"raze_button"="z"
+	"settlement_growth_checkbox"="="
 	"likely_rebel_shield"="v"
+	"raze_button"="z"
 	"hre_button"="z"
 	"add_core_button"="x"
 	"claim_province_button"="x"
@@ -397,61 +400,58 @@ province_window = {
 	"AN_census_tab"="shift+c"
 	"buildings_button"="d"
 }
-revolutionary_republic_faction_view = {
-	"close_button"="ESCAPE"
+actual = {
+	"leader_button"="n"
+	"remove_unit_from_selection_button"="v"
+	"attach_to_transport_button"="a"
+	"detach_siege_button"="m"
+	"detach_damaged_button"="a"
+	"conform_to_template_button"=","
+	"newunitbutton02"="s"
+	"detach_blockade_button"="d"
 }
 hre_window = {
 	"hint_heretic_princes6kzhk"="The fastest way to see heretic princes §l if you are the emperor §! is to use diplomacy macrobuilder and check who can you enforce religion on"
-	"join_league_button"="ESCAPE"
 	"close_button"="ESCAPE"
+	"join_league_button"="ESCAPE"
 	"join_heretic_league_button"="ESCAPE"
 }
-actual = {
-	"remove_unit_from_selection_button"="v"
-	"leader_button"="n"
-	"conform_to_template_button"=","
-	"detach_damaged_button"="a"
-	"detach_siege_button"="m"
-	"attach_to_transport_button"="a"
-	"detach_blockade_button"="d"
-	"newunitbutton02"="s"
-}
 pdx_online_linkaccount_dialog = {
+	"DeclineButton"="ESCAPE"
+	"AgreeButton"="RETURN"
+}
+pdx_online_createprofile_dialog = {
 	"DeclineButton"="ESCAPE"
 	"AgreeButton"="RETURN"
 }
 select_building_large = {
 	"back_button"="ESCAPE"
 }
-pdx_online_createprofile_dialog = {
-	"DeclineButton"="ESCAPE"
-	"AgreeButton"="RETURN"
-}
 menu_save = {
 	"cancel"="ESCAPE"
 }
-history_window = {
-	"back_button"="ESCAPE"
-}
 ledger = {
-	"bookmark_3"="F5"
-	"index"="DOWN"
 	"close"="ESCAPE"
-	"bookmark_2"="F4"
+	"index"="DOWN"
+	"bookmark_3"="F5"
 	"prev"="LEFT"
+	"bookmark_2"="F4"
 	"next"="RIGHT"
 	"bookmark_0"="F1"
 	"bookmark_1"="F3"
 	"bookmark_4"="F6"
 }
+history_window = {
+	"back_button"="ESCAPE"
+}
 macro_build_interface = {
 	"land_units_button"="1"
-	"missionary_button"="4"
 	"navy_units_button"="2"
-	"development_button"="8"
+	"missionary_button"="4"
 	"core_button"="3"
-	"states_button"="9"
+	"development_button"="8"
 	"autonomy_button"="5"
+	"states_button"="9"
 	"culture_button"="6"
 	"buildings_button"="7"
 	"diplomacy_button"="0"
@@ -466,9 +466,9 @@ diplomacy_header = {
 	"relations_button"="a"
 	"alliances_button"="s"
 	"influence_button"="d"
-	"great_power_button"="v"
-	"economic_button"="z"
 	"dynastic_button"="g"
+	"economic_button"="z"
+	"great_power_button"="v"
 	"papal_button"="x"
 	"hre_button"="c"
 }
@@ -488,16 +488,16 @@ MessageSettingWindow = {
 	"close_button"="ESCAPE"
 }
 minimap_panel = {
-	"OPENbutton"="<"
 	"ledger_button"="l"
 	"button_goto"="f"
-	"custom_mapmode_4"="r"
+	"OPENbutton"="<"
 	"closebutton"="<"
+	"custom_mapmode_4"="r"
 	"custom_mapmode_1"="q"
 	"custom_mapmode_2"="w"
 	"custom_mapmode_3"="e"
-	"custom_mapmode_10"="p"
 	"custom_mapmode_5"="t"
+	"custom_mapmode_10"="p"
 	"custom_mapmode_6"="y"
 	"custom_mapmode_7"="u"
 	"custom_mapmode_8"="i"
@@ -526,12 +526,12 @@ NewColonialCountryPopup = {
 	"CenterOK"="c"
 }
 nudge_province_window = {
-	"nudge_rotation_minus"="q"
 	"nudge_rotation_plus"="e"
+	"nudge_rotation_minus"="q"
 	"nudge_rotation_plus_plus"="f"
 	"nudge_rotation_minus_minus"="r"
-	"nudge_z_minus"="s"
 	"nudge_z_plus"="w"
+	"nudge_z_minus"="s"
 	"nudge_save"="-"
 	"nudge_x_plus"="d"
 	"nudge_x_minus"="a"
@@ -544,11 +544,11 @@ nudge_province_window = {
 	"nudge_mapmode"="t"
 }
 nudge_window_trade_route = {
-	"update_button"="u"
 	"route_minus"="p"
+	"update_button"="u"
 	"route_plus"="n"
-	"control_point_plus"="n"
 	"control_point_minus"="p"
+	"control_point_plus"="n"
 	"delete_button"="s"
 	"save_button"="s"
 }
@@ -584,11 +584,11 @@ change_culture_view = {
 build_army_view = {
 	"back_button"="ESCAPE"
 }
-country_subjects_info = {
-	"toggle_overlord"="z"
-}
 build_navy_view = {
 	"back_button"="ESCAPE"
+}
+country_subjects_info = {
+	"toggle_overlord"="z"
 }
 client_state_selection = {
 	"close_button"="z"
@@ -599,14 +599,14 @@ transfer_occupation_window = {
 tradegoods_province_window = {
 	"close_button"="ESCAPE"
 }
-state_window = {
-	"core_all"="x"
-	"view_edicts_button"="d"
-	"concentrate_development"="x"
-	"make_state"="x"
-}
 ee_upgrade_buildings_window = {
 	"upgrade_buildings_toggle_quit"="ESCAPE"
+}
+state_window = {
+	"view_edicts_button"="d"
+	"core_all"="x"
+	"concentrate_development"="x"
+	"make_state"="x"
 }
 select_building = {
 	"back_button"="ESCAPE"
@@ -652,11 +652,11 @@ startup_screen = {
 	"close_button"="ESCAPE"
 }
 topbar = {
-	"player_shield"="F1"
-	"ee_macrobuilder_button"="Shift+b"
 	"gamerule_frontend_open_button"="CTRL+G"
-	"current_age_button"="Shift+A"
+	"ee_macrobuilder_button"="Shift+b"
+	"player_shield"="F1"
 	"open_build_interface_button"="b"
+	"current_age_button"="Shift+A"
 	"great_power_button"="Shift+G"
 }
 TradeNodeInterface = {
@@ -674,22 +674,22 @@ naval_units = {
 	"unit4_type"="v"
 }
 single_unitpanel = {
-	"army_drill_button"="j"
 	"goto_siege_button"="v"
+	"army_drill_button"="j"
 	"reorganize_units_button"="shift+b"
-	"toggle_foreign_armies_button"="m"
+	"enable_force_march_button"="m"
 	"detach_marines_button"="/"
 	"consolidate_button"="k"
-	"enable_force_march_button"="m"
+	"toggle_foreign_armies_button"="m"
 	"mothball_button"="h"
 	"next_unit_button"="PAGE_UP"
 	"prev_unit_button"="PAGE_DOWN"
 	"detach_unit_button"="d"
 	"attach_unit_button"="shift+d"
 	"select_mission_button"="m"
-	"raidslaves_button"="r"
-	"enable_rebel_button"="t"
 	"allow_attach"="shift+f"
+	"enable_rebel_button"="t"
+	"raidslaves_button"="r"
 }
 leader_selection_panel = {
 	"back_button"="ESCAPE"
@@ -705,11 +705,11 @@ waroverview_battles = {
 waroverview = {
 	"close"="ESCAPE"
 }
-present_envoy_window = {
-	"cancel_colonist"="z"
-}
 caliphate_custom_window = {
 	"caliphate_custom_close_button"="ESCAPE"
+}
+present_envoy_window = {
+	"cancel_colonist"="z"
 }
 send_envoy_window = {
 	"send_colonist"="c"
@@ -739,14 +739,14 @@ left = {
 	"find_button"="f"
 }
 top = {
-	"mapmode_religion"="r"
 	"mapmode_terrain"="q"
+	"mapmode_religion"="r"
 	"mapmode_political"="w"
-	"mapmode_culture"="o"
 	"mapmode_trade"="e"
 	"mapmode_diplomacy"="y"
-	"mapmode_region"="i"
+	"mapmode_culture"="o"
 	"mapmode_empire"="t"
+	"mapmode_region"="i"
 	"mapmode_economy"="u"
 	"mapmode_players"="p"
 }
@@ -801,12 +801,12 @@ button_window = {
 }
 debugging_custom_window = {
 	"debugging_target_set"="["
-	"debug_transfer_occupation_button"="c"
 	"debugging_target_reset"="]"
-	"debug_own_button"="ctrl+x"
+	"debug_transfer_occupation_button"="c"
 	"debug_claim_button"="ctrl+c"
-	"debug_prev_page_button"="ctrl+["
+	"debug_own_button"="ctrl+x"
 	"debug_core_button"="ctrl+c"
+	"debug_prev_page_button"="ctrl+["
 	"debug_next_page_button"="ctrl+]"
 	"debug_own_core_button"="shift+x"
 }
