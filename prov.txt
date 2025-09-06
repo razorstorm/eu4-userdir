@@ -76,6 +76,10 @@ ROOT = {
         change_government = republic
         add_government_reform = imperial_city
     }
+
+
+    # Auto free city setting
+    # Some more diplo options for vassal types
 }
 
 
@@ -702,6 +706,7 @@ ROOT = {
         # Tribal County
         # Tribal Barony
         every_subject_country = {
+            clr_country_flag = tribal_empire
             clr_country_flag = tribal_kingdom
             clr_country_flag = tribal_duchy
             clr_country_flag = tribal_county
@@ -709,10 +714,6 @@ ROOT = {
         }
         ROOT = {
             # Tribal Empires | Tribal Empire of X
-            SON = {
-                override_country_name = "Songhai Tribal Empire"
-                set_country_flag = tribal_empire
-            }
             KBO = {
                 override_country_name = "Kanem Bornu Tribal Empire"
                 set_country_flag = tribal_empire
@@ -722,17 +723,17 @@ ROOT = {
                 set_country_flag = tribal_empire
             }
             # Tribal Kingdoms | Tribal Kingdom of X
-            BZ1 = {
-                override_country_name = "Tribal Kingdom of Zamfara"
+            SON = {
+                override_country_name = "Songhai Tribal Kingdom"
                 set_country_flag = tribal_kingdom
             }
             # Tribal Duchy | Tribal Duchy of X
-            KNG = {
-                override_country_name = "Tribal Duchy of Kong"
+            BZ1 = {
+                override_country_name = "Zamfara Tribal Duchy"
                 set_country_flag = tribal_duchy
             }
-            HS3 = {
-                override_country_name = "Tribal Duchy of Rano"
+            KNG = {
+                override_country_name = "Kong Tribal Duchy"
                 set_country_flag = tribal_duchy
             }
             # Tribal County | X Tribal County
@@ -740,11 +741,19 @@ ROOT = {
                 override_country_name = "Nupe Tribal County"
                 set_country_flag = tribal_county
             }
+            HS3 = {
+                override_country_name = "Rano Tribal County"
+                set_country_flag = tribal_county
+            }
             ASH = {
                 override_country_name = "Ashanti Tribal County"
                 set_country_flag = tribal_county
             }
             # Tribal Barony | X Tribal Barony
+            K18 = {
+                override_country_name = "Ketu Tribal Barony"
+                set_country_flag = tribal_barony
+            }
         }
 
         ROOT = {
@@ -1433,7 +1442,7 @@ ROOT = {
                 has_country_flag = tribal_county
             }
             change_country_color = {
-                color = { 230 55 45 }
+                color = { 240 85 70 }
             }
         }        
         else_if = {
@@ -1441,7 +1450,7 @@ ROOT = {
                 has_country_flag = tribal_barony
             }
             change_country_color = {
-                color = { 255 100 80 }
+                color = { 255 120 100 }
             }
         }        
         else {
