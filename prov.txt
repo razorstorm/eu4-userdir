@@ -1,4 +1,4 @@
-z`log = "===============================Running Prov.txt=========================================="
+log = "===============================Running Prov.txt=========================================="
 ####################################################################################
 # Some Common Commands:
 # 
@@ -40,620 +40,42 @@ JAN = {
 ####################################################################################
 
 ROOT = {   
-    # target_zero_vassal_taxes = yes
-    2573 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2577 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2600 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2574 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2575 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    981 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    980 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2595 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    974 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2610 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2604 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2606 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2607 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    972 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2609 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    975 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    973 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2605 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2003 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2599 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2597 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2582 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2583 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    997 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2572 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    986 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    994 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2017 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2596 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2601 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1813 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2018 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4893 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1011 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    990 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2603 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    995 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    993 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2580 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2602 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1010 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2005 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4919 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1008 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    998 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2576 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2004 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1000 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    996 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1006 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2578 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1005 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2592 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2594 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1009 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1004 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1003 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2591 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2593 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1007 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2015 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2590 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2589 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2588 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    991 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2581 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4894 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1002 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2598 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4920 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    999 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2579 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2571 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4896 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2570 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    983 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4891 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    982 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2569 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    984 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    985 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2568 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2012 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2584 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4895 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    992 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    1001 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2587 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2671 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4897 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2585 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    989 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4890 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    988 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    987 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2586 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    2670 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
-    }
-    4892 = {
-        constitute_colonial_province = {
-            tag = CAN
-            ROOT = GBR
-        }
+
+    # constitute_new_world = {
+    #     tag = NSA
+    #     ROOT = GBR
+    # }
+
+    add_mod = {
+        name = naval_hegemon_benefits
     }
 
+    add_mod = {
+        name = cultural_hegemon_benefits
+    }
+    add_country_modifier = {
+        name = eng_the_two_houses
+        duration = -1
+    }
 
-    4896 = {
-        constitute_colonial_province = {
-            tag = CAN
+    # Complete missions
+    # Reconstitute world
+    # Build man of wars
+    
+    accept_all_cultures = yes
+    add_accepted_culture = occitain
+
+
+
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = imperial_city
+            has_country_flag = free_city
+            # NOT =  { has_reform = imperial_city }
         }
+        change_government = republic
+        add_government_reform = imperial_city
     }
-        
-    HUN = {
-        every_owned_province = {
-            limit = {
-                is_core = WAL
-            }
-            cede_province = WAL
-        }
-    }
-
-    HAN = {
-        set_in_empire = yes
-    }
-
-    add_accepted_culture = castillian
-    add_accepted_culture = ligurian
-    add_accepted_culture = andalucian
-    add_accepted_culture = tuareg
 }
 
 
@@ -664,7 +86,7 @@ ROOT = {
 
 set_variable = {
     which = colonyLimit
-    value = 19
+    value = 30
 }
 
 set_variable = {
@@ -827,7 +249,7 @@ ROOT = {
     # 5. Core Colonies (Consolidated Dominions)
     
     # Layer B: De jure subjects of the Greater Realm
-    # 6. Internal Vassals (Fiefdoms, Brother Kingdoms, Vassals, Commercial Enterprises)
+    # 6. Internal Vassals (Fiefdoms, Brother Kingdoms, Vassals, Commercial Enterprises, Agricultural Marches)
     # 7. Internal Colonies (Dominions)
     # 8. Internal Tributaries (Jimi States)
     
@@ -835,7 +257,7 @@ ROOT = {
     # 9. External Vassals (Protectorates, Vassals, Trade Outposts, Puppet States, Pirate Brotherhoods, etc)
     # 10. External Colonies (Colonies)
     # 11. External Tributaries (Tributaries)
-    # 12. Miscellaneous
+    # 12. Miscellaneous (Concentratoin Camps)
 
     
     #####################################################################################
@@ -845,6 +267,10 @@ ROOT = {
     # LAN = {
     #     ch
     # }
+
+    SPA = {
+        override_country_name = "Spanish Rump State"
+    }
 
     #####################################################################################
     # Layer 1: Qing China Core:
@@ -882,7 +308,9 @@ ROOT = {
         # Viceroyalities (Empires) > Governorates (Kingdoms) > Prefectures (Duchies) > Provinces (Counties) > Districts (Baronies)
         ROOT = {
             # Viceroyalities (Empire Sized Regions) | Viceroyality of X or X_adj Viceroyalty
-
+            K17 = {
+                override_country_name = "Spanish Viceroyality"
+            }
             # Governorates (Kingdom Sized Regions) | Governorate of X
             BRI = {
                 override_country_name = "Breton Governorate"
@@ -929,6 +357,14 @@ ROOT = {
             }
             LAN = {
                 override_country_name = "Florence Urban Free Quarter"
+            }
+            K16 = {
+                override_country_name = "Molise Township"
+                set_country_flag = township
+            }
+            ANC = {
+                override_country_name = "Ancona Township"
+                set_country_flag = township
             }
         }
         # HRE Free Cities | Free City of X | imperial_city
@@ -989,8 +425,7 @@ ROOT = {
                 override_country_name = "United Belgian Kingdom"
             }
             TUN = {
-                override_country_name = "United British Empire of Carthage"
-                clr_country_flag = empire_fiefdom
+                override_country_name = "British Carthaginian Empire"
             }
             HAN = {
                 override_country_name = "British Kingdom of Hanover"
@@ -1008,19 +443,18 @@ ROOT = {
             # IRE = {
             #     override_country_name = "Ireland Crown Appanage"
             # }
-            NRM = {
-                override_country_name = "Normandy Imperial Appanage"
+            POR = {
+                override_country_name = "Portugal Imperial Heir Appanage"
             }
         }
         
         # Princely Vassals (prince_vassal) or royal privileges
         ROOT = {
-            # Special case for honoring the vanquished prior dynasty
-            ALS = {
-                override_country_name = "Alsace Princely Appanage"
+            BOS = {
+                override_country_name = "Bosinia Princely Appanage"
             }
-            LOR = {
-                override_country_name = "Lorraine Princely Appanage"
+            SER = {
+                override_country_name = "Serbia Princely Appanage"
             }
         }
     }
@@ -1077,6 +511,9 @@ ROOT = {
             CRO = {
                 override_country_name = "Croatian Resort Kingdom"
             }
+            DAL = {
+                override_country_name = "Dalmatian Resort Corporation"
+            }
         }
 
         
@@ -1086,26 +523,28 @@ ROOT = {
                 override_country_name = "Mali British Mining Co"
             }
             K15 = {
-                override_country_name = "Morocco British Mining Co"
+                override_country_name = "Morocco British Mining Outpost"
             }
             ZIM = {
                 override_country_name = "Great Zimbabwe British Mining Co"
+            }
+            PG1 = {
+                override_country_name = "Ethiopia British Mining Co"
             }
         }
 
            
         # Marches | Commandery of X
         ROOT = {
-            JAN = {
-                override_country_name = "Mongol Supreme Celestial CMDRY"
-                override_country_name = "The Supreme Celestial Commandery"
-                set_country_flag = imperial_march
-            }
             ALB = {
                 override_country_name = "Albanian Commandery"
             }
             PRU = {
                 override_country_name = "Prussian Supreme Commandery"
+                set_country_flag = imperial_march
+            }
+            MLO = {
+                override_country_name = "Milan Commandery"
             }
         }
         
@@ -1159,50 +598,47 @@ ROOT = {
     # Consolidated Dominions | American Directorate of X
     ROOT = {
         CUB = {
-            override_country_name = "British Caribbean Crown-Colony"
+            override_country_name = "Caribbean British Crown-Colony"
         }
         K09 = {
-            override_country_name = "British Cape Crown-Colony"
+            override_country_name = "Cape British Crown-Colony"
         }
         FLO = {
-            override_country_name = "British Floridian Crown-Colony"
+            override_country_name = "Florida British Crown-Colony"
         }
         MOR = {
-            override_country_name = "British Moroccan Crown-Colony"
+            override_country_name = "Morocco British Crown-Colony"
         }
         TEX = {
-            override_country_name = "British Texan Crown-Colony"
+            override_country_name = "Texas British Crown-Colony"
         }
         CAN = {
-            override_country_name = "British Canadian Crown-Colony"
+            override_country_name = "Canada British Crown-Colony"
         }
         LOU = {
-            override_country_name = "British Louisianian Crown-Colony"
-        }
-        USA = {
-            override_country_name = "British American Crown Colonyy"
+            override_country_name = "Louisiana British Crown-Colony"
         }
         C04 = {
-            override_country_name = "Imperial British Qubec Crown-Colony"
+            override_country_name = "Quebec British Crown-Colony"
         }
-        # MEX = {
-        #     override_country_name = "Mexico Celestial Dominion"
-        # }
+        ALA = {
+            override_country_name = "Alaska British Crown-Colony"
+        }
+        CAL = {
+            override_country_name = "California British Crown-Colony"
+        }
+        MEX = {
+            override_country_name = "Mexico British Crown-Colony"
+        }
         # ILI = {
         #     override_country_name = "Illinois Celestial Dominion"
         # }
-        # USA = {
-        #     override_country_name = "Manhattan Celestial Dominion"
-        # }
-        # CAL = {
-        #     override_country_name = "California Celestial Dominion"
-        # }
-        # ALA = {
-        #     override_country_name = "Alaska Celestial Dominion"
-        # }
-        # CHT = {
-        #     override_country_name = "Central America Celestial Dominion"
-        # }
+        USA = {
+            override_country_name = "Manhattan British Crown-Colony"
+        }
+        CHT = {
+            override_country_name = "Central America British Crown Colony"
+        }
     }
 
     ####################################################################################
@@ -1245,6 +681,19 @@ ROOT = {
             }
         }
 
+        # Agricultural Marches | Agricultural March of X
+        ROOT = {
+            WAL = {
+                override_country_name = "Walachia Romanian Wheat Fields"
+            }
+            MOL = {
+                override_country_name = "Moldavian Romanian Wheat Fields"
+            }
+            TRA = {
+                override_country_name = "Transylvannian Romanian Wheat Fields"
+            }
+        }
+
         # Tu Si | X Tusi / X Siberian Tusi
         # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
         # For non-chinese, they can be tiered
@@ -1261,7 +710,11 @@ ROOT = {
         ROOT = {
             # Tribal Empires | Tribal Empire of X
             SON = {
-                override_country_name = "Tribal Empire of Songhai"
+                override_country_name = "Songhai Tribal Empire"
+                set_country_flag = tribal_empire
+            }
+            KBO = {
+                override_country_name = "Kanem Bornu Tribal Empire"
                 set_country_flag = tribal_empire
             }
             MAL = {
@@ -1310,7 +763,7 @@ ROOT = {
                 override_country_name = "Anglo Grand Duchy of Finland"
             }
             HUN = {
-                override_country_name = "Anglo Grand Duchy of Hungary"
+                override_country_name = "Anglo Kingdom of Hungary"
             }
         }
 
@@ -1327,7 +780,9 @@ ROOT = {
             }
             KOL = {
                 override_country_name = "Cologne Electorate City"
-                clr_country_flag = free_city
+            }
+            SAX = {
+                override_country_name = "Electorate of Saxony"
             }
         }
 
@@ -1370,20 +825,16 @@ ROOT = {
                 override_country_name = "Kingdom of Sweden"
                 set_country_flag = kingdom_fiefdom
             }
+            DAN = {
+                override_country_name = "Kingdom of Denmark"
+                set_country_flag = kingdom_fiefdom
+            }
             BUR = {
                 override_country_name = "Kingdom of Burgundy"
                 set_country_flag = kingdom_fiefdom
             }
             SAV = {
                 override_country_name = "Kingdom of Savoy"
-                set_country_flag = kingdom_fiefdom
-            }
-            BOS = {
-                override_country_name = "Kingdom of Bosnia"
-                set_country_flag = kingdom_fiefdom
-            }
-            SER = {
-                override_country_name = "Kingdom of Serbia"
                 set_country_flag = kingdom_fiefdom
             }
             GRE = {
@@ -1648,9 +1099,6 @@ ROOT = {
     ROOT = {
         # Protectorate | The X Protectorate
         ROOT = {
-            POR = {
-                override_country_name = "Protectorate of Portugal"
-            }
         }
         
         # Pirate Brotherhoods
@@ -1708,8 +1156,11 @@ ROOT = {
     #####################################################################################
     # Layer 12: Miscellaneous
     #####################################################################################
+    # Concentration camps
     ROOT = {
-
+        PAP = {
+            override_country_name = "Catholics Reeducation Camp"
+        }
     }
 }
 
@@ -1796,11 +1247,37 @@ ROOT = {
                 is_subject_of_type = imperial_city
             }
         }
-        change_country_color = {
-            color = { 130 0 80 }
+        if = {
+            limit = {
+                has_country_flag = township
+            }
+            change_country_color = {
+                color = { 170 0 80 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = free_city
+            }
+            change_country_color = {
+                color = { 100 0 100 }
+            }
+        } else { 
+            change_country_color = {
+                color = { 130 0 80 }
+            }
         }
     }
 
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = concentration_camp
+            }
+        }
+        change_country_color = {
+            color = { 30 30 30 }
+        }
+    }
     every_subject_country = {
         limit = {
             OR = {
@@ -1818,8 +1295,17 @@ ROOT = {
                 is_subject_of_type = march
             }
         }
-        change_country_color = {
-            color = { 150 5 5 }
+        if = {
+            limit = {
+                has_country_flag = imperial_march
+            }
+            change_country_color = {
+                color = { 120 0 0 }
+            }
+        } else { 
+            change_country_color = {
+                color = { 130 5 5 }
+            }
         }
     }
     every_subject_country = {
