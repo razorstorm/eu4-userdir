@@ -68,7 +68,7 @@ compress_autosave=no
 compress_saves=no
 difficulty="LUCK_NONE"
 outliner={
-	16 20 14 4 12 3 2 10 21 15 7 17 6 
+	16 20 14 4 12 3 2 10 21 15 7 17 
 }
 outliner_open=yes
 messagelist_open=yes

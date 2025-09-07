@@ -10,7 +10,7 @@ while = {
         NOT = {
             check_variable = {
                 which = counter
-                value = 10
+                value = 50
             }
         }
     }

@@ -8,20 +8,18 @@ while = {
         NOT = {
             check_variable = {
                 which = myCountingVariable
-                value = 20
+                value = 62
             }
         }
     }
     
 
     # CAPITAL_SCOPE = {
-    373 = {
-        ROOT = {
-            # galley = ROOT
-            # light_ship = PREV
-            heavy_ship = PREV
-            # transport = PREV
-        }
+    206 = {
+        galley = ROOT
+        # light_ship = PREV
+        # heavy_ship = PREV
+        # transport = PREV
     }
 
     add_treasury = 1

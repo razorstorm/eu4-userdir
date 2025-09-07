@@ -48,11 +48,18 @@ ROOT = {
         name = cultural_hegemon_benefits
     }
 
-    # Complete missions
-    # Reconstitute world
-    # Build man of wars
-    # Try coal
-    add_building = blast_furnace
+    # add_building = blast_furnace
+
+    accept_all_cultures = yes
+    add_accepted_culture = occitain
+
+    ETH = {
+        add_country_modifier = {
+            name = very_sickly_monarch
+            duration = -1
+        }
+    }
+
 
     accept_all_cultures = yes
     add_accepted_culture = occitain
@@ -123,12 +130,12 @@ ROOT = {
             limit = {
                 has_discovered = ROOT
                 is_empty = yes
-                OR = {
-                    continent = africa
-                    continent = north_america
-                    continent = south_america
-                    continent = oceania
-                }
+                # OR = {
+                #     continent = africa
+                #     continent = north_america
+                #     continent = south_america
+                #     continent = oceania
+                # }
 
                 is_neighbor_of = ROOT
             }
@@ -180,12 +187,12 @@ ROOT = {
             limit = {
                 has_discovered = ROOT
                 is_empty = yes
-                OR = {
-                    continent = africa
-                    continent = north_america
-                    continent = south_america
-                    continent = oceania
-                }
+                # OR = {
+                #     continent = africa
+                #     continent = north_america
+                #     continent = south_america
+                #     continent = oceania
+                # }
                 OR = {
                     is_island = yes
                     has_port = yes
@@ -508,7 +515,7 @@ ROOT = {
             ZIM = {
                 override_country_name = "Great Zimbabwe British Mining Co"
             }
-            PG1 = {
+            K19 = {
                 override_country_name = "Ethiopia British Mining Co"
             }
         }
@@ -610,9 +617,9 @@ ROOT = {
         MEX = {
             override_country_name = "Mexico British Crown-Colony"
         }
-        # ILI = {
-        #     override_country_name = "Illinois Celestial Dominion"
-        # }
+        ILI = {
+            override_country_name = "Illinois British Crown-Colony"
+        }
         USA = {
             override_country_name = "Manhattan British Crown-Colony"
         }
@@ -791,6 +798,10 @@ ROOT = {
             # Empire Tier
             NOV = {
                 override_country_name = "Grand Republic of Novgorod"
+                set_country_flag = empire_fiefdom
+            }
+            ZAN = {
+                override_country_name = "Zanzibar British Mercantile Empire"
                 set_country_flag = empire_fiefdom
             }
             # Kingdom Tier - Archbishoprics, Kingdoms, Sultanates, Grand Duchies, Archduchies, Electorates, etc
@@ -1046,20 +1057,24 @@ ROOT = {
     # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
 
     ROOT = {
-        # C01 = {
-        #     override_country_name = "Paraguay - British Dominion"
-        # }
         COL = {
             override_country_name = "Colombia - British Dominion"
         }
-
+        K20 = {
+            override_country_name = "New Zealand - British Dominion"
+        }
         CHL = {
             override_country_name = "Chile - British Dominion"
         }
         # INC = {
         #     override_country_name = "Inca - British Dominion"
         # }
-    
+        AUS = {
+            override_country_name = "Australia - British Dominion"
+        }
+        GUY = {
+            override_country_name = "Paraguay - British Dominion"
+        }
         BRZ = {
             override_country_name = "Brazil - British Dominion"
         }
@@ -1126,7 +1141,7 @@ ROOT = {
     # Viking Settlements 
     ROOT = {
         ICE = {
-            override_country_name = "Viking Kingdom of Iceland"
+            override_country_name = "Icelandic British Viking Kingdom"
         }
     }
 
@@ -1605,7 +1620,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 220 140 0 } # GOLD!!!
+            color = { 220 130 50 } # WHEAT!!!
         }
     }
     every_subject_country = {
