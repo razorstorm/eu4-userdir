@@ -13,12 +13,7 @@ playsets_backup/
 pops_filestorage/
 pdx_login_cache.txt
 launcher-v2.sqlite
-save\ games/
 continue_game.json
 *.sqlite
 save\ games/
-<<<<<<< HEAD
 2095475587/gfx/event_pictures
-=======
-2095475587/gfx/event_pictures
->>>>>>> 4ce30be (removing saved games from git and adding back to git ignore)
