@@ -445,8 +445,7 @@ dominion_tc = {
 				OR = {
 					ai = no
 					AND = {
-						NOT = { has_dlc = "Wealth of Nations" }
-						NOT = { has_dlc = "Dharma" }
+						always = no
 					}
 				}
 				capital_scope = {

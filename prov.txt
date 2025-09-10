@@ -50,6 +50,16 @@ ROOT = {
 
     # add_building = blast_furnace
 
+    # VEN = {
+    #     every_owned_province = {
+    #         remove_province_modifier = province_trade_power_modifier_cheat
+    #     }
+    # }
+
+    # Get ethiopian subject
+    every_subject_country = {
+        set_in_empire = yes
+    }
     accept_all_cultures = yes
     add_accepted_culture = occitain
 
@@ -405,7 +415,7 @@ ROOT = {
             }
         }
         
-        # Real Unions | Qing Empire/Kingdom/Duchy/County of X
+        # Real Unions
         # Different than a fiefdom in that a real union is directly ruled by the monarch and his bureaucracy, rather than being indirectly ruled by a vassal king.
         ROOT = {
             BEL = {
@@ -443,6 +453,9 @@ ROOT = {
             SER = {
                 override_country_name = "Serbia Princely Appanage"
             }
+            C14 = {
+                override_country_name = "Philippines Princely Appanage"
+            }
         }
     }
     
@@ -475,6 +488,14 @@ ROOT = {
             GYA = {
                 override_country_name = "Gyaman Native Reservation"
             }
+            CHU = {
+                override_country_name = "Chukchi Siberian Reservation"
+                set_country_flag = siberian_reservation
+            }
+            KMC = {
+                override_country_name = "Kamchatka Native Reservation"
+                set_country_flag = siberian_reservation
+            }
         }
 
         # These are basically marches for hordes, they are given mroe autonomy though, seeing as this a tier 4 not a tier 3 subject
@@ -501,6 +522,9 @@ ROOT = {
             DAL = {
                 override_country_name = "Dalmatian Resort Corporation"
             }
+            RAG = {
+                override_country_name = "Ragusan Resort Republic"
+            }
         }
 
         
@@ -516,7 +540,7 @@ ROOT = {
                 override_country_name = "Great Zimbabwe British Mining Co"
             }
             K19 = {
-                override_country_name = "Ethiopia British Mining Co"
+                override_country_name = "Ethiopian British Mining Co"
             }
         }
 
@@ -532,6 +556,12 @@ ROOT = {
             }
             MLO = {
                 override_country_name = "Milan Commandery"
+            }
+            BUL = {
+                override_country_name = "Bulgarian Commandery"
+            }
+            TTS = {
+                override_country_name = "Commandery of the Two Sicilies"
             }
         }
         
@@ -562,6 +592,12 @@ ROOT = {
             }
             CYP = {
                 override_country_name = "Cyprus Sea Base"
+            }
+            BTS = {
+                override_country_name = "Madagascar Naval Commandery"
+            }
+            ORM = {
+                override_country_name = "Hormuzi Naval Gates"
             }
         }
 
@@ -666,6 +702,9 @@ ROOT = {
             K08 = {
                 override_country_name = "The Gambia Company"
             }
+            LFA = {
+                override_country_name = "Lanfang Trading Company"
+            }
         }
 
         # Agricultural Marches | Agricultural March of X
@@ -757,6 +796,9 @@ ROOT = {
             HUN = {
                 override_country_name = "Anglo Kingdom of Hungary"
             }
+            ETH = {
+                override_country_name = "Anglo Empire of Ethiopia"
+            }
         }
 
         # Palatinates | Electorate fiefdoms. Slightly elevated above equally ranked fiefdoms in terms of precedence and prestige.
@@ -771,10 +813,13 @@ ROOT = {
                 override_country_name = "Electorate of Trier"
             }
             KOL = {
-                override_country_name = "Cologne Electorate City"
+                override_country_name = "Electoral City of Cologne"
             }
             SAX = {
                 override_country_name = "Electorate of Saxony"
+            }
+            THU = {
+                override_country_name = "Electorate of Thuringia"
             }
         }
 
@@ -801,7 +846,7 @@ ROOT = {
                 set_country_flag = empire_fiefdom
             }
             ZAN = {
-                override_country_name = "Zanzibar British Mercantile Empire"
+                override_country_name = "Zanzibar British Merchant Empire"
                 set_country_flag = empire_fiefdom
             }
             # Kingdom Tier - Archbishoprics, Kingdoms, Sultanates, Grand Duchies, Archduchies, Electorates, etc
@@ -895,6 +940,10 @@ ROOT = {
                 override_country_name = "Tyrol County"
                 set_country_flag = county_fiefdom
             }
+            SOR = {
+                override_country_name = "Lusatia County"
+                set_country_flag = county_fiefdom
+            }
             CLI = {
                 override_country_name = "Cilli County"
                 set_country_flag = county_fiefdom
@@ -907,9 +956,9 @@ ROOT = {
                 override_country_name = "Ansbach County"
                 set_country_flag = county_fiefdom
             }
-            TOU = {
-                override_country_name = "Grant County of Toulouse"
-                set_country_flag = barony_fiefdom
+            PLB = {
+                override_country_name = "County of Palembang"
+                set_country_flag = county_fiefdom
             }
             ORL = {
                 override_country_name = ORL_COUNTY
@@ -1066,9 +1115,9 @@ ROOT = {
         CHL = {
             override_country_name = "Chile - British Dominion"
         }
-        # INC = {
-        #     override_country_name = "Inca - British Dominion"
-        # }
+        INC = {
+            override_country_name = "Inca - British Dominion"
+        }
         AUS = {
             override_country_name = "Australia - British Dominion"
         }
@@ -1080,6 +1129,12 @@ ROOT = {
         }
         LAP = {
             override_country_name = "Argentina - British Dominion"
+        }
+        C12 = {
+            override_country_name = "Indonesia - British Dominion"
+        }
+        C17 = {
+            override_country_name = "New Zealand - British Dominion"
         }
     }
 
@@ -1098,11 +1153,15 @@ ROOT = {
 
     ROOT = {
         # Protectorate | The X Protectorate
-        ROOT = {
+        KON = {
+            override_country_name = "Kongo Protectorate"
         }
         
         # Pirate Brotherhoods
         ROOT = {
+            NSS = {
+                override_country_name = "New Providence: Pirates of the Caribbean"
+            }
             KNI = {
                 override_country_name = "Knights of Rhodes and Malta"
             }
@@ -1115,8 +1174,8 @@ ROOT = {
             GOT = {
                 override_country_name = "Pirate Kingdom of Gotland"
             }
-            K14 = {
-                override_country_name = "British Privateers of the Caribbean"
+            SOM = {
+                override_country_name = "Somali Pirate Brotherhood"
             }
         }
         
@@ -1187,6 +1246,11 @@ ROOT = {
     LAN = {
         change_country_color = {
             color = { 120 100 170 }
+        }
+    }
+    MAJ = {
+        change_country_color = {
+            country = MSA
         }
     }
 
@@ -1567,8 +1631,17 @@ ROOT = {
                 is_subject_of_type = native_reserve
             }
         }
-        change_country_color = {
-            color = { 230 150 170 }
+        if = {
+            limit = {
+                has_country_flag = siberian_reservation
+            }
+            change_country_color = {
+                color = { 255 170 255 }
+            }
+        } else {
+            change_country_color = {
+                color = { 230 150 170 }
+            }
         }
     }
     every_subject_country = {

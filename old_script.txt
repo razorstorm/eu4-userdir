@@ -5280,61 +5280,133 @@ every_subject_country = {
 # Magical Awakening:
 
 every_owned_province = {
-        if = {
-            limit = {
-                culture = scottish
-            }
-            random_list = {
-                20 = { 
-                    change_culture = magical
-                }
-                80 = { 
-                    
-                }
-            }
+    if = {
+        limit = {
+            culture = scottish
         }
-
-
-        if = {
-            limit = {
-                culture = english
+        random_list = {
+            20 = { 
+                change_culture = magical
             }
-            random_list = {
-                10 = { 
-                    change_culture = magical
-                }
-                90 = { 
-                    
-                }
-            }
-        }
-
-        if = {
-            limit = {
-                culture = welsh
-            }
-            random_list = {
-                20 = { 
-                    change_culture = magical
-                }
-                80 = { 
-                    
-                }
-            }
-        }
-
-
-        if = {
-            limit = {
-                culture = irish
-            }
-            random_list = {
-                15 = { 
-                    change_culture = magical
-                }
-                85 = { 
-                    
-                }
+            80 = { 
+                
             }
         }
     }
+
+
+    if = {
+        limit = {
+            culture = english
+        }
+        random_list = {
+            10 = { 
+                change_culture = magical
+            }
+            90 = { 
+                
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            culture = welsh
+        }
+        random_list = {
+            20 = { 
+                change_culture = magical
+            }
+            80 = { 
+                
+            }
+        }
+    }
+
+
+    if = {
+        limit = {
+            culture = irish
+        }
+        random_list = {
+            15 = { 
+                change_culture = magical
+            }
+            85 = { 
+                
+            }
+        }
+    }
+}
+
+
+# Newcastle Coal
+236 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+249 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+246 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+1861 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+6713 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+241 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+6831 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+375 = {
+    add_building = mills
+    change_trade_goods = newcastle_coal
+    add_building = blast_furnace
+    add_building = furnace
+}
+
+
+
+# Taking all oceanian provinces
+every_subject_country = {
+    every_owned_province = {
+        if = {
+            limit = {
+                continent = oceania
+                NOT = {
+                    region = moluccas_region
+                }
+                NOT = {
+                    region = australia_region
+                }
+            }
+            cede_province = ROOT
+            remove_province_modifier = colonial_governor
+        }
+    }   
+}
