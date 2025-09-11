@@ -40,22 +40,22 @@ JAN = {
 ####################################################################################
 
 ROOT = {   
-    every_owned_province = {
-        limit = {
-            region = british_isles_region
-        }
+    # every_owned_province = {
+    #     limit = {
+    #         region = british_isles_region
+    #     }
 
-        add_building = furnace
-        add_treasury = -475
-    }
-    every_owned_province = {
-        limit = {
-            region = british_isles_region
-        }
+    #     add_building = furnace
+    #     add_treasury = -475
+    # }
+    # every_owned_province = {
+    #     limit = {
+    #         region = british_isles_region
+    #     }
 
-        add_building = blast_furnace
-        add_treasury = -475
-    }
+    #     add_building = blast_furnace
+    #     add_treasury = -475
+    # }
 
     every_subject_country = {
         add_country_modifier = {
@@ -64,16 +64,14 @@ ROOT = {
         }
     }
 
-    # VEN = {
-    #     every_owned_province = {
-    #         remove_province_modifier = province_trade_power_modifier_cheat
-    #     }
-    # }
+    VEN = {
+        every_owned_province = {
+            remove_province_modifier = province_trade_power_modifier_cheat
+        }
+    }
     every_subject_country = {
         set_in_empire = yes
     }
-    accept_all_cultures = yes
-    add_accepted_culture = occitain
 
     ETH = {
         remove_country_modifier = very_sickly_monarch
