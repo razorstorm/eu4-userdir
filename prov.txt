@@ -40,23 +40,35 @@ JAN = {
 ####################################################################################
 
 ROOT = {   
-    add_mod = {
-        name = naval_hegemon_benefits
+    every_owned_province = {
+        limit = {
+            region = british_isles_region
+        }
+
+        add_building = furnace
+        add_treasury = -475
+    }
+    every_owned_province = {
+        limit = {
+            region = british_isles_region
+        }
+
+        add_building = blast_furnace
+        add_treasury = -475
     }
 
-    add_mod = {
-        name = cultural_hegemon_benefits
+    every_subject_country = {
+        add_country_modifier = {
+            name = jason_mod_less_nat_unrest
+            duration = -1
+        }
     }
-
-    # add_building = blast_furnace
 
     # VEN = {
     #     every_owned_province = {
     #         remove_province_modifier = province_trade_power_modifier_cheat
     #     }
     # }
-
-    # Get ethiopian subject
     every_subject_country = {
         set_in_empire = yes
     }
@@ -64,11 +76,10 @@ ROOT = {
     add_accepted_culture = occitain
 
     ETH = {
-        add_country_modifier = {
-            name = very_sickly_monarch
-            duration = -1
-        }
+        remove_country_modifier = very_sickly_monarch
     }
+
+    remove_country_modifier = very_sickly_monarch
 
 
     accept_all_cultures = yes
@@ -761,6 +772,10 @@ ROOT = {
             # Tribal County | X Tribal County
             NUP = {
                 override_country_name = "Nupe Tribal County"
+                set_country_flag = tribal_county
+            }
+            AIR = {
+                override_country_name = "Air Tribal County"
                 set_country_flag = tribal_county
             }
             HS3 = {
