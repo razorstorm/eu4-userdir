@@ -36,6 +36,12 @@
 
 # =============================
 
+# Force trade company
+1964 = {
+    set_in_empire = no
+    add_to_trade_company = ROOT
+}
+
 
 # Pax Solis Buildings
 

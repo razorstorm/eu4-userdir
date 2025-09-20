@@ -39,24 +39,7 @@ JAN = {
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
-ROOT = {   
-    # every_owned_province = {
-    #     limit = {
-    #         region = british_isles_region
-    #     }
-
-    #     add_building = furnace
-    #     add_treasury = -475
-    # }
-    # every_owned_province = {
-    #     limit = {
-    #         region = british_isles_region
-    #     }
-
-    #     add_building = blast_furnace
-    #     add_treasury = -475
-    # }
-
+ROOT = {  
     every_subject_country = {
         add_country_modifier = {
             name = jason_mod_less_nat_unrest
@@ -64,24 +47,13 @@ ROOT = {
         }
     }
 
-    VEN = {
-        every_owned_province = {
-            remove_province_modifier = province_trade_power_modifier_cheat
+    add_accepted_culture = occitain
+
+    MOS = {
+        change_tag_with_effects = {
+            tag = RUS
         }
     }
-    every_subject_country = {
-        set_in_empire = yes
-    }
-
-    ETH = {
-        remove_country_modifier = very_sickly_monarch
-    }
-
-    remove_country_modifier = very_sickly_monarch
-
-
-    accept_all_cultures = yes
-    add_accepted_culture = occitain
 }
 
 
@@ -346,6 +318,9 @@ ROOT = {
 
         # Imperial Cities | Imperial City of X | imperial_city
         ROOT = {
+            AST = {
+                override_country_name = "Metropolis of Astrakhan"
+            }
             RI1 = {
                 override_country_name = "City of Riga"
             }
@@ -371,6 +346,9 @@ ROOT = {
             ANC = {
                 override_country_name = "Ancona Township"
                 set_country_flag = township
+            }
+            K21 = {
+                override_country_name = "City of Kosovo"
             }
         }
         # HRE Free Cities | Free City of X | imperial_city
@@ -431,10 +409,18 @@ ROOT = {
                 override_country_name = "United Belgian Kingdom"
             }
             TUN = {
-                override_country_name = "British Carthaginian Empire"
+                override_country_name = "United Carthaginian Empire"
             }
             HAN = {
-                override_country_name = "British Kingdom of Hanover"
+                override_country_name = "United Kingdom of Hanover"
+            }
+        }
+
+        # Integrated Personal Unions
+        # A bit less control than real unions
+        ROOT = {
+            LIT = {
+                override_country_name = "Crown Kingdom of Lithuania"
             }
         }
     }
@@ -482,6 +468,9 @@ ROOT = {
             ML4 = {
                 override_country_name = "Kabura Native Reservation"
             }
+            WDH = {
+                override_country_name = "Uda Native Reservation"
+            }
             SMI = {
                 override_country_name = "Sami Tribal Reservation"
             }
@@ -497,6 +486,9 @@ ROOT = {
             GYA = {
                 override_country_name = "Gyaman Native Reservation"
             }
+            NJZ = {
+                override_country_name = "Guli Native Reservation"
+            }
             CHU = {
                 override_country_name = "Chukchi Siberian Reservation"
                 set_country_flag = siberian_reservation
@@ -510,8 +502,11 @@ ROOT = {
         # These are basically marches for hordes, they are given mroe autonomy though, seeing as this a tier 4 not a tier 3 subject
         # Integrated Tribe Subjects | Great Horde of X | Essentially Horde Marches
         ROOT = {
-            JAN = {
-                override_country_name = "Kazani Celestial Horde"
+            ZAZ = {
+                override_country_name = "Zaporozhian Cossacks"
+            }
+            CRI = {
+                override_country_name = "Crimea Horde"
             }
             JAN = {
                 override_country_name = "Grand Golden Celestial Horde"
@@ -714,6 +709,9 @@ ROOT = {
             LFA = {
                 override_country_name = "Lanfang Trading Company"
             }
+            VEN = {
+                override_country_name = "Venetian Trading Co"
+            }
         }
 
         # Agricultural Marches | Agricultural March of X
@@ -726,6 +724,9 @@ ROOT = {
             }
             TRA = {
                 override_country_name = "Transylvannian Romanian Wheat Fields"
+            }
+            RMN = {
+                override_country_name = "Romanian Wheat Fields"
             }
         }
 
@@ -767,6 +768,10 @@ ROOT = {
                 override_country_name = "Kong Tribal Duchy"
                 set_country_flag = tribal_duchy
             }
+            ASH = {
+                override_country_name = "Ashanti Tribal Duchy"
+                set_country_flag = tribal_duchy
+            }
             # Tribal County | X Tribal County
             NUP = {
                 override_country_name = "Nupe Tribal County"
@@ -778,10 +783,6 @@ ROOT = {
             }
             HS3 = {
                 override_country_name = "Rano Tribal County"
-                set_country_flag = tribal_county
-            }
-            ASH = {
-                override_country_name = "Ashanti Tribal County"
                 set_country_flag = tribal_county
             }
             # Tribal Barony | X Tribal Barony
@@ -863,8 +864,8 @@ ROOT = {
                 set_country_flag = empire_fiefdom
             }
             # Kingdom Tier - Archbishoprics, Kingdoms, Sultanates, Grand Duchies, Archduchies, Electorates, etc
-            K05 = {
-                override_country_name = "Kingdom of Aquitaine"
+            YEM = {
+                override_country_name = "Kingdom of Yemen"
                 set_country_flag = kingdom_fiefdom
             }
             K05 = {
@@ -969,6 +970,10 @@ ROOT = {
                 override_country_name = "Ansbach County"
                 set_country_flag = county_fiefdom
             }
+            K22 = {
+                override_country_name = "County of North Macedonia"
+                set_country_flag = county_fiefdom
+            }
             PLB = {
                 override_country_name = "County of Palembang"
                 set_country_flag = county_fiefdom
@@ -1041,11 +1046,11 @@ ROOT = {
                 override_country_name = "Spoleto County"
                 set_country_flag = county_fiefdom
             }
-            PAD = {
-                override_country_name = "Lippe County"
-                set_country_flag = county_fiefdom
-            }
             # Baronies - Parishes, Baronies, Towns, Holdings, Castles, Fortresses, Manors, etc (Heavily urbanized holdings should be Imperial Cities instead)
+            PAD = {
+                override_country_name = "Paderborn Barony"
+                set_country_flag = barony_fiefdom
+            }
             NIC = {
                 override_country_name = "Barony of Nizza"
                 set_country_flag = barony_fiefdom
@@ -1166,9 +1171,15 @@ ROOT = {
 
     ROOT = {
         # Protectorate | The X Protectorate
-        KON = {
-            override_country_name = "Kongo Protectorate"
+        ROOT = {
+            HAB = {
+                override_country_name = "Habsburgs Crown Protectorate"
+            }
+            KON = {
+                override_country_name = "Kongo Protectorate"
+            }
         }
+            
         
         # Pirate Brotherhoods
         ROOT = {
