@@ -39,166 +39,183 @@ JAN = {
 # Continuous things to run for this campaign + Global Flags
 ####################################################################################
 
-ROOT = {  
-    every_subject_country = {
-        add_country_modifier = {
-            name = jason_mod_less_nat_unrest
-            duration = -1
-        }
-    }
 
-    add_accepted_culture = occitain
+# every_owned_province = {
+#     add_building = square
+#     add_building = prison
+#     add_building = academy
+#     add_building = moat
+#     add_building = trade_depot
+# }
+# every_subject_country = {
+#     every_owned_province = {
+#         add_building = square
+#         add_building = prison
+#         add_building = academy
+#         add_building = moat
+#         add_building = trade_depot
+#     }
+# }
 
-    MOS = {
-        change_tag_with_effects = {
-            tag = RUS
-        }
-    }
-}
-
-
+# every_owned_province = {
+#     limit = {
+#         has_port = yes
+#     }
+#     add_building = naval_battery
+# }
+# every_subject_country = {
+#     every_owned_province = {
+#         limit = {
+#             has_port = yes
+#         }
+#         add_building = naval_battery
+#     }
+# }
+    
 
 ####################################################################################
 # Colonization
 ####################################################################################
 
-set_variable = {
-    which = colonyLimit
-    value = 30
-}
-
-set_variable = {
-    which = numColonies
-    value = 0
-}
-
-# Get initial count of provinces. Then simply increment this variable whenever we add a colony and then use it for both loops below
-# Allows both lops to check against the same constant
-every_owned_province = {
-    limit = {
-        is_colony = yes
-    }
-    ROOT = {
-        change_variable = {
-            which = numColonies
-            value = 1
-        }
-    }
-}
-log = "colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential adjacent colonies."
-
-# Try adjacent ones first
-ROOT = {  
+ROOT = {
     set_variable = {
-        which = colonyCounter
+        which = colonyLimit
+        value = 30
+    }
+
+    set_variable = {
+        which = numColonies
         value = 0
     }
-    while = {
-        limit = {
-            # AKA !(numColonies >= colonyLimit)
-            # AKA colonyLimit > numColonies
-            # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
-            NOT = {
-                check_variable = {
-                    which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
-                    which = colonyLimit
-                }
-            }
-            NOT = {
-                check_variable = {
-                    which = colonyCounter
-                    value = 20
-                }
-            }
-            # Early exit for when no more eligible provinces
-            # Simply add an any_province with identical limit as the random_province from down below. Avoiding this to avoid having duplicated identical code.
-        }
-        change_variable = {
-            which = colonyCounter
-            value = 1
-        }
-        random_province = {
-            limit = {
-                has_discovered = ROOT
-                is_empty = yes
-                # OR = {
-                #     continent = africa
-                #     continent = north_america
-                #     continent = south_america
-                #     continent = oceania
-                # }
 
-                is_neighbor_of = ROOT
+    # Get initial count of provinces. Then simply increment this variable whenever we add a colony and then use it for both loops below
+    # Allows both lops to check against the same constant
+    every_owned_province = {
+        limit = {
+            is_colony = yes
+        }
+        ROOT = {
+            change_variable = {
+                which = numColonies
+                value = 1
             }
-            log = "Creating adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
-            create_colony = 1
-            ROOT = {
-                change_variable = {
-                    which = numColonies
-                    value = 1
-                }
-            }
-            discover_country = ROOT
         }
     }
-}
+    log = "colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential adjacent colonies."
 
-log = "Done adding adjacents. colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential non-adjacent colonies."
-
-ROOT = {  
-    set_variable = {
-        which = colonyCounter
-        value = 0
-    }
-    while = {
-        limit = {
-            # AKA !(numColonies >= colonyLimit)
-            # AKA colonyLimit > numColonies
-            # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
-            NOT = {
-                check_variable = {
-                    which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
-                    which = colonyLimit
-                }
-            }
-            NOT = {
-                # TODO add early exit for when no more eligible provinces
-                check_variable = {
-                    which = colonyCounter
-                    value = 10
-                }
-            }
-        }
-        change_variable = {
+    # Try adjacent ones first
+    ROOT = {  
+        set_variable = {
             which = colonyCounter
-            value = 1
+            value = 0
         }
-        # log = "Loop iteration [colonyCounter.GetValue]"
-        random_province = {
+        while = {
             limit = {
-                has_discovered = ROOT
-                is_empty = yes
-                # OR = {
-                #     continent = africa
-                #     continent = north_america
-                #     continent = south_america
-                #     continent = oceania
-                # }
-                OR = {
-                    is_island = yes
-                    has_port = yes
+                # AKA !(numColonies >= colonyLimit)
+                # AKA colonyLimit > numColonies
+                # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
+                NOT = {
+                    check_variable = {
+                        which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
+                        which = colonyLimit
+                    }
+                }
+                NOT = {
+                    check_variable = {
+                        which = colonyCounter
+                        value = 20
+                    }
+                }
+                # Early exit for when no more eligible provinces
+                # Simply add an any_province with identical limit as the random_province from down below. Avoiding this to avoid having duplicated identical code.
+            }
+            change_variable = {
+                which = colonyCounter
+                value = 1
+            }
+            random_province = {
+                limit = {
+                    has_discovered = ROOT
+                    is_empty = yes
+                    # OR = {
+                    #     continent = africa
+                    #     continent = north_america
+                    #     continent = south_america
+                    #     continent = oceania
+                    # }
+
                     is_neighbor_of = ROOT
                 }
+                log = "Creating adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
+                create_colony = 1
+                ROOT = {
+                    change_variable = {
+                        which = numColonies
+                        value = 1
+                    }
+                }
+                discover_country = ROOT
             }
-            log = "Creating potentially non-adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
-            create_colony = 1
-            ROOT = {
-                change_variable = {
-                    which = numColonies
-                    value = 1
+        }
+    }
+
+    log = "Done adding adjacents. colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential non-adjacent colonies."
+
+    ROOT = {  
+        set_variable = {
+            which = colonyCounter
+            value = 0
+        }
+        while = {
+            limit = {
+                # AKA !(numColonies >= colonyLimit)
+                # AKA colonyLimit > numColonies
+                # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
+                NOT = {
+                    check_variable = {
+                        which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
+                        which = colonyLimit
+                    }
+                }
+                NOT = {
+                    # TODO add early exit for when no more eligible provinces
+                    check_variable = {
+                        which = colonyCounter
+                        value = 10
+                    }
                 }
             }
-            discover_country = ROOT
+            change_variable = {
+                which = colonyCounter
+                value = 1
+            }
+            # log = "Loop iteration [colonyCounter.GetValue]"
+            random_province = {
+                limit = {
+                    has_discovered = ROOT
+                    is_empty = yes
+                    # OR = {
+                    #     continent = africa
+                    #     continent = north_america
+                    #     continent = south_america
+                    #     continent = oceania
+                    # }
+                    OR = {
+                        is_island = yes
+                        has_port = yes
+                        is_neighbor_of = ROOT
+                    }
+                }
+                log = "Creating potentially non-adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
+                create_colony = 1
+                ROOT = {
+                    change_variable = {
+                        which = numColonies
+                        value = 1
+                    }
+                }
+                discover_country = ROOT
+            }
         }
     }
 }
@@ -591,6 +608,9 @@ ROOT = {
         
         # Naval Marches | Naval Base of X or Gates of X
         ROOT = {
+            CEY = {
+                override_country_name = "Ceylon Naval Commandery"
+            }
             JAN = {
                 override_country_name = "Taiwan Celestial Naval Base"
             }
@@ -613,7 +633,11 @@ ROOT = {
             LIV = {
                 override_country_name = "Livonian Holy Order"
             }
+            TIB = {
+                override_country_name = "British Tibetan Ministry"
+            }
         }
+
     }
     
     #####################################################################################
@@ -692,6 +716,13 @@ ROOT = {
         ROOT = {
             JAN = {
                 override_country_name = "Test"
+            }
+        }
+
+        # Trade Companies
+        ROOT = {
+            EIC = {
+                override_country_name = "Imperial British East India Company"
             }
         }
 
@@ -1173,10 +1204,13 @@ ROOT = {
         # Protectorate | The X Protectorate
         ROOT = {
             HAB = {
-                override_country_name = "Habsburgs Crown Protectorate"
+                override_country_name = "British Protectorate of the Habsburg Crown"
             }
             KON = {
-                override_country_name = "Kongo Protectorate"
+                override_country_name = "British Kongo Protectorate"
+            }
+            TAU = {
+                override_country_name = "British Burmese Protectorate"
             }
         }
             

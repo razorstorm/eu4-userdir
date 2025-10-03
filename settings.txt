@@ -31,6 +31,7 @@ mouse_speed=50.000000
 master_volume=24.698795
 ambient_volume=0.000000
 dev_master_volume=75.000000
+graceful_exit=no
 combat_sound_random=6
 mapRenderingOptions={
 	draw_terrain=yes
