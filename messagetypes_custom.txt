@@ -6630,9 +6630,9 @@ COLONYCITYUS={
 	to_me={
 		log=yes
 		onmap=no
-		popup=no
+		popup=yes
 		pausepopup=no
-		icon=yes
+		icon=no
 	}
 }
 FULLALLYINWAR={

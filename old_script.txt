@@ -603,7 +603,9 @@ add_country_modifier = {
     duration = -1
 }
 
-
+russia_region = {
+    add_permanent_claim = ROOT
+}
 
 # remove ugly claims
 every_country = {
@@ -4421,42 +4423,14 @@ ROOT = {
 
 # =====
 
+hf_artillery_bombard = ROOT
+
 
 every_owned_province = {
     limit = {
         region = egypt_region
     }
 }
-
-# 321 = {
-#     infantry = CYP
-#     infantry = CYP
-#     artillery = CYP
-#     infantry = CYP
-#     infantry = CYP
-#     artillery = CYP
-#     infantry = CYP
-#     infantry = CYP
-#     artillery = CYP
-#     infantry = CYP
-#     infantry = CYP
-#     artillery = CYP
-# }
-
-# 2998 = {
-#     infantry = WAL
-#     infantry = WAL
-#     artillery = WAL
-#     infantry = WAL
-#     infantry = WAL
-#     artillery = WAL
-#     infantry = WAL
-#     infantry = WAL
-#     artillery = WAL
-#     infantry = WAL
-#     infantry = WAL
-#     artillery = WAL
-# }
 
 every_owned_province = {
     limit = {
@@ -4469,6 +4443,12 @@ every_owned_province = {
         }
     }
     change_trade_goods = silk
+}
+
+change_price = {
+    trade_goods = diamond
+    value = 1.5
+    duration = -1
 }
 
 # ====================
@@ -5447,3 +5427,66 @@ every_subject_country = {
 #         }
 #     }
 # }
+
+
+
+# Make man of wars
+set_variable = {
+    which = shipsToBuild
+    value = 291
+}
+
+
+while = {
+    limit = {
+        check_variable = {
+            which = shipsToBuild       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
+            which = 0
+        }
+    }
+
+    4371 = {
+        man_of_war_heavy = ROOT
+    }
+    change_variable = {
+        which = shipsToBuild
+        value = -1
+    }
+}
+
+# Subjects siege ability
+every_subject_country = {
+    set_in_empire = yes
+    every_owned_province = {
+        set_in_empire = yes
+    }
+
+    add_mod = {
+        name = jason_mod_more_siege
+    }
+    add_mod = {
+        name = breached_great_wall
+    }
+    add_mod = {
+        name = mng_eastern_campaigns_modifier
+    }
+    add_mod = {
+        name = spa_bid_for_the_hab_crown_modifier
+    }
+}
+
+
+# Target war enemies
+
+every_country = {
+    limit = {
+        is_in_war = {
+            attacker_leader = GOL
+            defenders = THIS
+        }
+    }
+    every_owned_province = {
+        change_controller = GOL
+    }
+    log = "At war as attacker: [This.GetName] [This.tag.GetValue]"
+}

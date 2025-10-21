@@ -28,7 +28,7 @@ scroll_speed=5.000000
 camera_rotation_speed=50.000000
 zoom_speed=50.000000
 mouse_speed=50.000000
-master_volume=24.698795
+master_volume=15.000000
 ambient_volume=0.000000
 dev_master_volume=75.000000
 graceful_exit=no
@@ -68,7 +68,7 @@ compress_autosave=no
 compress_saves=no
 difficulty="LUCK_NONE"
 outliner={
-	16 20 14 4 12 3 2 10 21 15 7 17 
+	16 20 14 4 12 3 2 10 15 7 17 6 5 21 
 }
 outliner_open=yes
 messagelist_open=yes
