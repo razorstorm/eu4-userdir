@@ -1748,6 +1748,28 @@ if = {
 }
 
 
+set_revolution_target = RUS
+
+set_country_flag = is_ussr
+
+# removing religious zela:
+
+every_owned_province = {
+    limit = {
+        # NOT = {
+        #     religion = ROOT
+        # }
+        OR = {
+            has_province_modifier = religious_zeal_at_conv
+            has_province_modifier = conversion_zeal
+        }
+    }
+
+    remove_province_modifier = religious_zeal_at_conv
+    remove_province_modifier = conversion_zeal
+}
+
+
 FTM = {
     every_owned_province = {
         add_unrest = 1000
@@ -2001,6 +2023,15 @@ every_subject_country = {
 }
 
 
+every_owned_province = {
+    limit = {
+        NOT = {
+            is_core = RUS
+        }
+        is_core = MNG
+    }
+    cede_province = MNG
+}
 
 # -----
 
@@ -4451,6 +4482,26 @@ change_price = {
     duration = -1
 }
 
+
+every_owned_province = {
+    limit = {
+        is_primary_or_secondary_capital = yes
+    }
+    change_trade_goods = diamonds
+}
+
+
+every_province = {
+    limit = {
+        is_core = AYU 
+        NOT = {
+            owned_by = AYU
+        }
+    }
+    remove_core = AYU
+    add_core = MNG
+}
+    
 # ====================
 
 BUR = {

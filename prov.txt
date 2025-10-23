@@ -7,6 +7,8 @@ log = "===============================Running Prov.txt==========================
 # * tag
 # * is_core
 # * province_id  
+# * is_core = AYU 
+# * owned_by = AYU 
 # 
 # Effects:
 # Template
@@ -40,25 +42,88 @@ JAN = {
 ####################################################################################
 
 ROOT = {
+    QOM = {
+        change_tag_with_effects = {
+            tag = SND
+        }
+    }
+
+
+    QOM = {
+        change_tag_with_effects = {
+            tag = SND
+        }
+    }
+
+
+
+    # ----- Continuous -----
+
+    # Setting Government Properly
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = puppet_state
-                is_subject_of_type = administrative_region
+                is_subject_of_type = comintern_member_state
+
+                AND = {
+                    # overlord = {
+                    #     OR = {
+                    #         has_country_flag = is_ussr
+                    #         has_reform = union_of_soviet_socialist_republics
+                    #     }
+                    # }
+
+                    OR = {
+                        # Core Lands / Colonies
+                        is_subject_of_type = administrative_region
+                        is_subject_of_type = dominion
+                        is_subject_of_type = dominion_tc
+                        is_subject_of_type = consolidated_dominion
+                        is_subject_of_type = crown_colony
+
+                        # Satellites
+                        is_subject_of_type = puppet_state
+
+                        # Appanages
+                        is_subject_of_type = appanage
+                        is_subject_of_type = prince_vassal
+
+                        # Vassals
+                        is_subject_of_type = vassal
+                        is_subject_of_type = semi_free_vassal
+                        is_subject_of_type = free_vassal
+                        
+                        # Marches
+                        is_subject_of_type = march
+                        is_subject_of_type = defensive_march
+                        is_subject_of_type = naval_march
+                        is_subject_of_type = religious_march
+                        is_subject_of_type = agricultural_march
+
+                        # Unions
+                        is_subject_of_type = real_union_subject
+                        is_subject_of_type = se_integrated_personal_union
+                        is_subject_of_type = sister_republic
+                        is_subject_of_type = brother_kingdom
+
+                        # Industry
+                        is_subject_of_type = mining_corporation
+                        is_subject_of_type = tropical_resort
+                        is_subject_of_type = commercial_enterprise
+                    }
+                }
             }
         }
-        log = "changing [This.GetName]"
+        log = "[This.GetName] has USSR as overlord"
         change_government = dictatorship
-        add_government_reform = union_of_soviet_socialist_republics
+        remove_government_reform = union_of_soviet_socialist_republics
+        add_government_reform = soviet_socialist_republic
     }
 
+    # Remove Religious Zeal
     every_owned_province = {
-        limit = {
-            is_primary_or_secondary_capital = yes
-        }
-        change_trade_goods = diamonds
-        remove_building = furnace
-        remove_building = blast_furnace
+        remove_province_modifier = religious_zeal_at_conv
+        remove_province_modifier = conversion_zeal
     }
 }
 
@@ -102,7 +167,7 @@ ROOT = {
         while = {
             limit = {
                 # AKA !(numColonies >= colonyLimit)
-                # AKA colonyLimit > numColonies
+                # AKA numColonies < colonyLimit
                 # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
                 NOT = {
                     check_variable = {
@@ -285,12 +350,30 @@ ROOT = {
             PLC = {
                 override_country_name = "Polish-Lithuanian S.F.S.R." # Soviet Federalist Socialist Republic
             }
-            # Governorates (Kingdom Sized Regions) | Governorate of X
+            # Governorates (Kingdom Sized Regions) | SSR (Soviet Socialist Republic)
+            KHO = {
+                override_country_name = "Khorasan S.S.R."
+            }
+            K00 = {
+                override_country_name = "Persia S.S.R."
+            }
+            AFG = {
+                override_country_name = "Afghanistan S.S.R."
+            }
             LIV = {
-                override_country_name = "Baltic S.S.R." # (Soviet Socialist Republic)
+                override_country_name = "Baltic S.S.R." 
+            }
+            MUG = {
+                override_country_name = "Hindustan S.S.R."
             }
             BOH = {
-                override_country_name = "Bohemia S.S.R." # (Soviet Socialist Republic)
+                override_country_name = "Bohemia S.S.R." 
+            }
+            LXA = {
+                override_country_name = "Laos S.S.R."
+            }
+            GUJ = {
+                override_country_name = "Gujarat S.S.R."
             }
             # Prefectures (Duchy Sized Regions) | X SSO (Soviet Socialist Oblast)
             SAX = {
@@ -299,9 +382,18 @@ ROOT = {
             WAL = {
                 override_country_name = "Walachia S.S.O."
             }
+            ASS = {
+                override_country_name = "Assam S.S.O."
+            }
             # Provinces (County Sized Regions) | X SSP (Soviet Socialist Province)
             GEO = {
                 override_country_name = "Georgia S.S.P."
+            }
+            KSH = {
+                override_country_name = "Kashmir S.S.P."
+            }
+            SND = {
+                override_country_name = "Sindh S.S.P."
             }
 
             # Districts (Barony Sized Regions) | X S.S.D (Soviet Socialist District)
@@ -419,14 +511,27 @@ ROOT = {
             }
         }
 
+        # Sister Republics - Partner Revolutionary Republics under Soviet leadership. 
+        ROOT = {
+            MNG = {
+                override_country_name = "People's Soviet Republic of China"
+            }
+        }
+
            
         # Marches | Commandery of X
         ROOT = {
             PRU = {
                 override_country_name = "Prussia Soviet Commandery"
             }
+            AVA = {
+                override_country_name = "Burma Soviet Commandery"
+            }
             KOR = {
                 override_country_name = "Korea Soviet Commandery"
+            }
+            DAI = {
+                override_country_name = "Viet Soviet Commandery"
             }
         }
         
@@ -475,16 +580,14 @@ ROOT = {
     }
 
     ####################################################################################
-    # Layer 6: Internal Vassals (Vassals, Trade Outposts, Fiefdoms, Commercial Enterprises):     
+    # Layer 6: Internal Vassals (Vassals, Trade Outposts, Fiefdoms, Puppet STates, Commercial Enterprises):     
     #####################################################################################
 
     # Internal Vassals are typically subsidiary governments or organizations set up by the central regime and answerable directly to the throne. They are small localized governments for specialized purposes, not a true vassal state" perse
     ROOT = {
         # Trade Outposts | X Trade Outpost
         ROOT = {
-            SND = {
-                override_country_name = "Sindh Soviet Free Trade Outpost"
-            }
+
         }
 
         # Client States
@@ -510,8 +613,8 @@ ROOT = {
 
         # Commercial Enterprises | X Commercial Enterprise
         ROOT = {
-            JAN = {
-                override_country_name = "British Dutch Trading Co"
+            LFA = {
+                override_country_name = "Lanfang Soviet State Enterprise"
             }
         }
 
@@ -625,27 +728,69 @@ ROOT = {
             }
         }
         
-        # # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
-        # # Large - Grand Directorate
-        # # Medium - Directorate
-        # # Small - Satellite
+        # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
+        # Large - Grand Directorate
+        # Medium - Directorate
+        # Small - Satellite
         ROOT = {
             # Vanquished foes under direct military occupation
             # Intense de facto oppression, but with high amount of de jure autonomy compared to more core subject states
-            TI3 = {
-                override_country_name = "Kabul Soviet Satellite"
-            }
             CND = {
-                override_country_name = "Candar Soviet Satellite"
+                override_country_name = "Candar Soviet Satellite State"
             }
             GEL = {
-                override_country_name = "Gelre Soviet Satellite"
+                override_country_name = "Gelre Soviet Satellite State"
             }
             G2D = {
-                override_country_name = "Guangdong Soviet Satellite"
+                override_country_name = "Guangdong Soviet Satellite State"
             }
-            MNG = {
-                override_country_name = "People's Soviet Republic of China"
+            SND = {
+                override_country_name = "Sindh Soviet Satellite State"
+            }
+            AYU = {
+                override_country_name = "Thai Soviet Satellite State"
+            }
+            MAJ = {
+                override_country_name = "Majapahit Soviet Satellite State"
+            }
+            PLB = {
+                override_country_name = "Palembang Soviet Satellite State"
+            }
+            MLW = {
+                override_country_name = "Malwa Soviet Satellite State"
+            }
+            TNJ = {
+                override_country_name = "Tanjore Soviet Satellite State"
+            }
+            TPR = {
+                override_country_name = "Tripura Soviet Satellite State"
+            }
+            MLB = {
+                override_country_name = "Manipur Soviet Satellite State"
+            }
+            TBU = {
+                override_country_name = "Thoburi Soviet Satellite State"
+            }
+            KHM = {
+                override_country_name = "Cambodia Soviet Satellite State"
+            }
+            BB1 = {
+                override_country_name = "Baban Soviet Satellite State"
+            }
+        }
+
+        # Comintern Members
+        ROOT = {
+            BYZ = {
+                override_country_name = "People's Republic of Constantinople"
+            }
+        }
+        
+        # Vassals
+        ROOT = {
+            # China's Vassal
+            WUU = {
+                override_country_name = "Wu Provisional State"
             }
         }
 
@@ -686,30 +831,19 @@ ROOT = {
     }
 
     ####################################################################################
-    # Layer 9: External Vassals (Protectorates, Pirate Brotherhoods, Puppet States, etc etc):
+    # Layer 9: External Vassals (Protectorates, Pirate Brotherhoods, etc):
     #####################################################################################
 
     ROOT = {
         # Protectorate | The X Protectorate
         ROOT = {
-            BYZ = {
-                override_country_name = "Soviet Eastern Roman Protectorate"
-            }
         }
-            
         
         # Pirate Brotherhoods
         ROOT = {
             KNI = {
                 override_country_name = "Rhodes Soviet Spy Fleet"
             }
-        }
-        
-        # # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
-        # # Large - Grand Directorate
-        # # Medium - Directorate
-        # # Small - Satellite
-        ROOT = {
         }
     }
 
@@ -761,6 +895,14 @@ ROOT = {
     # }
     change_country_color = {
         color = { 160 0 0 }
+    }
+
+    MNG = {
+        every_subject_country = {
+            change_country_color = {
+                color = { 180 50 50 }
+            }
+        }
     }
 
     # Full provinces, and thus should have identical color as the overlord. These are core lands.
@@ -1113,7 +1255,18 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 0 0 }
+            color = { 210 0 0 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = sister_republic
+                is_subject_of_type = comintern_member_state
+            }
+        }
+        change_country_color = {
+            color = { 180 30 30 }
         }
     }
 
@@ -1176,7 +1329,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 230 180 200 }
+            color = { 240 60 85 }
         }
     }
     every_subject_country = {
