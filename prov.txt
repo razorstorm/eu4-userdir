@@ -42,22 +42,12 @@ JAN = {
 ####################################################################################
 
 ROOT = {
-    QOM = {
-        change_tag_with_effects = {
-            tag = SND
-        }
-    }
-
-
-    QOM = {
-        change_tag_with_effects = {
-            tag = SND
-        }
-    }
-
-
-
     # ----- Continuous -----
+    K00 = {
+        change_tag_with_effects = {
+            tag = NED
+        }
+    }
 
     # Setting Government Properly
     every_subject_country = {
@@ -115,16 +105,23 @@ ROOT = {
             }
         }
         log = "[This.GetName] has USSR as overlord"
-        change_government = dictatorship
+        # change_government = monarchy
+        change_government = republic
         remove_government_reform = union_of_soviet_socialist_republics
         add_government_reform = soviet_socialist_republic
     }
 
+    # BOH = {
+    #     change_government = dictatorship
+    #     remove_government_reform = union_of_soviet_socialist_republics
+    #     add_government_reform = soviet_socialist_republic
+    # }
+
     # Remove Religious Zeal
-    every_owned_province = {
-        remove_province_modifier = religious_zeal_at_conv
-        remove_province_modifier = conversion_zeal
-    }
+    # every_owned_province = {
+    #     remove_province_modifier = religious_zeal_at_conv
+    #     remove_province_modifier = conversion_zeal
+    # }
 }
 
 
@@ -132,148 +129,148 @@ ROOT = {
 # Colonization
 ####################################################################################
 
-ROOT = {
-    set_variable = {
-        which = colonyLimit
-        value = 0
-    }
+# ROOT = {
+#     set_variable = {
+#         which = colonyLimit
+#         value = 0
+#     }
 
-    set_variable = {
-        which = numColonies
-        value = 0
-    }
+#     set_variable = {
+#         which = numColonies
+#         value = 0
+#     }
 
-    # Get initial count of provinces. Then simply increment this variable whenever we add a colony and then use it for both loops below
-    # Allows both lops to check against the same constant
-    every_owned_province = {
-        limit = {
-            is_colony = yes
-        }
-        ROOT = {
-            change_variable = {
-                which = numColonies
-                value = 1
-            }
-        }
-    }
-    log = "colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential adjacent colonies."
+#     # Get initial count of provinces. Then simply increment this variable whenever we add a colony and then use it for both loops below
+#     # Allows both lops to check against the same constant
+#     every_owned_province = {
+#         limit = {
+#             is_colony = yes
+#         }
+#         ROOT = {
+#             change_variable = {
+#                 which = numColonies
+#                 value = 1
+#             }
+#         }
+#     }
+#     log = "colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential adjacent colonies."
 
-    # Try adjacent ones first
-    ROOT = {  
-        set_variable = {
-            which = colonyCounter
-            value = 0
-        }
-        while = {
-            limit = {
-                # AKA !(numColonies >= colonyLimit)
-                # AKA numColonies < colonyLimit
-                # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
-                NOT = {
-                    check_variable = {
-                        which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
-                        which = colonyLimit
-                    }
-                }
-                NOT = {
-                    check_variable = {
-                        which = colonyCounter
-                        value = 20
-                    }
-                }
-                # Early exit for when no more eligible provinces
-                # Simply add an any_province with identical limit as the random_province from down below. Avoiding this to avoid having duplicated identical code.
-            }
-            change_variable = {
-                which = colonyCounter
-                value = 1
-            }
-            random_province = {
-                limit = {
-                    has_discovered = ROOT
-                    is_empty = yes
-                    # OR = {
-                    #     continent = africa
-                    #     continent = north_america
-                    #     continent = south_america
-                    #     continent = oceania
-                    # }
+#     # Try adjacent ones first
+#     ROOT = {  
+#         set_variable = {
+#             which = colonyCounter
+#             value = 0
+#         }
+#         while = {
+#             limit = {
+#                 # AKA !(numColonies >= colonyLimit)
+#                 # AKA numColonies < colonyLimit
+#                 # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
+#                 NOT = {
+#                     check_variable = {
+#                         which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
+#                         which = colonyLimit
+#                     }
+#                 }
+#                 NOT = {
+#                     check_variable = {
+#                         which = colonyCounter
+#                         value = 20
+#                     }
+#                 }
+#                 # Early exit for when no more eligible provinces
+#                 # Simply add an any_province with identical limit as the random_province from down below. Avoiding this to avoid having duplicated identical code.
+#             }
+#             change_variable = {
+#                 which = colonyCounter
+#                 value = 1
+#             }
+#             random_province = {
+#                 limit = {
+#                     has_discovered = ROOT
+#                     is_empty = yes
+#                     # OR = {
+#                     #     continent = africa
+#                     #     continent = north_america
+#                     #     continent = south_america
+#                     #     continent = oceania
+#                     # }
 
-                    is_neighbor_of = ROOT
-                }
-                log = "Creating adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
-                create_colony = 1
-                ROOT = {
-                    change_variable = {
-                        which = numColonies
-                        value = 1
-                    }
-                }
-                discover_country = ROOT
-            }
-        }
-    }
+#                     is_neighbor_of = ROOT
+#                 }
+#                 log = "Creating adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
+#                 create_colony = 1
+#                 ROOT = {
+#                     change_variable = {
+#                         which = numColonies
+#                         value = 1
+#                     }
+#                 }
+#                 discover_country = ROOT
+#             }
+#         }
+#     }
 
-    log = "Done adding adjacents. colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential non-adjacent colonies."
+#     log = "Done adding adjacents. colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential non-adjacent colonies."
 
-    ROOT = {  
-        set_variable = {
-            which = colonyCounter
-            value = 0
-        }
-        while = {
-            limit = {
-                # AKA !(numColonies >= colonyLimit)
-                # AKA colonyLimit > numColonies
-                # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
-                NOT = {
-                    check_variable = {
-                        which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
-                        which = colonyLimit
-                    }
-                }
-                NOT = {
-                    # TODO add early exit for when no more eligible provinces
-                    check_variable = {
-                        which = colonyCounter
-                        value = 10
-                    }
-                }
-            }
-            change_variable = {
-                which = colonyCounter
-                value = 1
-            }
-            # log = "Loop iteration [colonyCounter.GetValue]"
-            random_province = {
-                limit = {
-                    has_discovered = ROOT
-                    is_empty = yes
-                    # OR = {
-                    #     continent = africa
-                    #     continent = north_america
-                    #     continent = south_america
-                    #     continent = oceania
-                    # }
-                    OR = {
-                        is_island = yes
-                        has_port = yes
-                        is_neighbor_of = ROOT
-                    }
-                }
-                log = "Creating potentially non-adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
-                create_colony = 1
-                ROOT = {
-                    change_variable = {
-                        which = numColonies
-                        value = 1
-                    }
-                }
-                discover_country = ROOT
-            }
-        }
-    }
-}
+#     ROOT = {  
+#         set_variable = {
+#             which = colonyCounter
+#             value = 0
+#         }
+#         while = {
+#             limit = {
+#                 # AKA !(numColonies >= colonyLimit)
+#                 # AKA colonyLimit > numColonies
+#                 # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
+#                 NOT = {
+#                     check_variable = {
+#                         which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
+#                         which = colonyLimit
+#                     }
+#                 }
+#                 NOT = {
+#                     # TODO add early exit for when no more eligible provinces
+#                     check_variable = {
+#                         which = colonyCounter
+#                         value = 10
+#                     }
+#                 }
+#             }
+#             change_variable = {
+#                 which = colonyCounter
+#                 value = 1
+#             }
+#             # log = "Loop iteration [colonyCounter.GetValue]"
+#             random_province = {
+#                 limit = {
+#                     has_discovered = ROOT
+#                     is_empty = yes
+#                     # OR = {
+#                     #     continent = africa
+#                     #     continent = north_america
+#                     #     continent = south_america
+#                     #     continent = oceania
+#                     # }
+#                     OR = {
+#                         is_island = yes
+#                         has_port = yes
+#                         is_neighbor_of = ROOT
+#                     }
+#                 }
+#                 log = "Creating potentially non-adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
+#                 create_colony = 1
+#                 ROOT = {
+#                     change_variable = {
+#                         which = numColonies
+#                         value = 1
+#                     }
+#                 }
+#                 discover_country = ROOT
+#             }
+#         }
+#     }
+# }
 
 ####################################################################################
 # Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
@@ -354,7 +351,7 @@ ROOT = {
             KHO = {
                 override_country_name = "Khorasan S.S.R."
             }
-            K00 = {
+            TIM = {
                 override_country_name = "Persia S.S.R."
             }
             AFG = {
@@ -737,6 +734,15 @@ ROOT = {
             # Intense de facto oppression, but with high amount of de jure autonomy compared to more core subject states
             CND = {
                 override_country_name = "Candar Soviet Satellite State"
+            }
+            ORM = {
+                override_country_name = "Hormuz Soviet Satellite State"
+            }
+            IRQ = {
+                override_country_name = "Iraq Soviet Satellite State"
+            }
+            LR2 = {
+                override_country_name = "Larestan Soviet Satellite State"
             }
             GEL = {
                 override_country_name = "Gelre Soviet Satellite State"
