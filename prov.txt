@@ -42,86 +42,149 @@ JAN = {
 ####################################################################################
 
 ROOT = {
-    # ----- Continuous -----
-    K00 = {
-        change_tag_with_effects = {
-            tag = NED
-        }
-    }
-
-    # Setting Government Properly
     every_subject_country = {
         limit = {
             OR = {
-                is_subject_of_type = comintern_member_state
-
-                AND = {
-                    # overlord = {
-                    #     OR = {
-                    #         has_country_flag = is_ussr
-                    #         has_reform = union_of_soviet_socialist_republics
-                    #     }
-                    # }
-
-                    OR = {
-                        # Core Lands / Colonies
-                        is_subject_of_type = administrative_region
-                        is_subject_of_type = dominion
-                        is_subject_of_type = dominion_tc
-                        is_subject_of_type = consolidated_dominion
-                        is_subject_of_type = crown_colony
-
-                        # Satellites
-                        is_subject_of_type = puppet_state
-
-                        # Appanages
-                        is_subject_of_type = appanage
-                        is_subject_of_type = prince_vassal
-
-                        # Vassals
-                        is_subject_of_type = vassal
-                        is_subject_of_type = semi_free_vassal
-                        is_subject_of_type = free_vassal
-                        
-                        # Marches
-                        is_subject_of_type = march
-                        is_subject_of_type = defensive_march
-                        is_subject_of_type = naval_march
-                        is_subject_of_type = religious_march
-                        is_subject_of_type = agricultural_march
-
-                        # Unions
-                        is_subject_of_type = real_union_subject
-                        is_subject_of_type = se_integrated_personal_union
-                        is_subject_of_type = sister_republic
-                        is_subject_of_type = brother_kingdom
-
-                        # Industry
-                        is_subject_of_type = mining_corporation
-                        is_subject_of_type = tropical_resort
-                        is_subject_of_type = commercial_enterprise
-                    }
-                }
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+                is_subject_of_type = consolidated_dominion
             }
         }
-        log = "[This.GetName] has USSR as overlord"
-        # change_government = monarchy
-        change_government = republic
-        remove_government_reform = union_of_soviet_socialist_republics
-        add_government_reform = soviet_socialist_republic
+        if = {
+            limit = {
+                has_government = monarchy
+            }
+            # log = "[This.GetName] is a monarchy adding revolutionary_empire_reform"
+            add_government_reform = revolutionary_empire_reform 
+        } else_if = {
+            limit = {
+                has_government = republic
+            }
+            # log = "[This.GetName] is a republic adding revolutionary_republic_reform"
+            add_government_reform = revolutionary_republic_reform 
+        } else {
+            # log = "[This.GetName] is not a monarchy nor republic, changing to republic and adding revolutionary_republic_reform"
+            change_government = republic
+            add_government_reform = revolutionary_republic_reform
+        }
+        # every_owned_province = {
+        #     add_core = PREV
+        # }
     }
+    
+    every_subject_country = {
+        add_tariff_value = 100
+        add_mod = {
+            name = allow_frontiers_cheat
+        }
+        change_primary_culture = ROOT
+    }
+    
+    # ----- Continuous -----
+    australia_region = {
+        limit = {
+            is_city = yes
+            OR = {
+                owned_by = ROOT
+                owned_by_subject_of = ROOT
+            }
+        }
+        cede_province = AUS
+    }
+    # constitute_australia = yes
+    # constitute_paraguay = yes
+    # constitute_chile = yes
+    # constitute_paraguay = yes
+    # constitute_brazil = yes
+    # constitute_la_plata = yes
+    # constitute_inca = yes
 
-    # BOH = {
-    #     change_government = dictatorship
-    #     remove_government_reform = union_of_soviet_socialist_republics
-    #     add_government_reform = soviet_socialist_republic
-    # }
-
+    ROOT = {
+        every_subject_country = {
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        superregion = oceania_superregion
+                    }
+                    NOT = {
+                        region = australia_region
+                    }
+                }
+                cede_province = ROOT
+            }
+        }
+        # American Proper Colonization
+        CAN = {
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        region = great_lakes_region
+                        region = great_plains_region
+                        area = red_river_area
+                        area = columbia_river_area
+                        area = salish_sea_area
+                    }
+                }
+                decolonize = this
+            }
+        }
+        
+        MEX = {
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        AND = {
+                            region = rio_grande_region
+                            NOT = {
+                                area = rio_grande_area   
+                            }
+                            NOT = {
+                                province_id = 2667
+                            }
+                        }
+                        region = cascadia_region
+                        region = great_plains_region
+                        region = northeast_america_region
+                        region = mississippi_region
+                        region = southeast_america_region
+                        area = apacheria_area
+                        area = new_mexico_area
+                        area = arizona_area
+                        area = california_area
+                        area = northern_california_area
+                    }
+                }
+                decolonize = this
+            }
+        }
+        
+        CUB = {
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        region = rio_grande_region
+                        region = cascadia_region
+                        region = great_plains_region
+                        region = northeast_america_region
+                        region = mississippi_region
+                        region = southeast_america_region
+                        area = apacheria_area
+                        area = new_mexico_area
+                        area = arizona_area
+                        area = california_area
+                        area = northern_california_area
+                    }
+                }
+                decolonize = this
+            }
+        }
+    }
+    
     # Remove Religious Zeal
-    # every_owned_province = {
-    #     remove_province_modifier = religious_zeal_at_conv
-    #     remove_province_modifier = conversion_zeal
-    # }
+    every_owned_province = {
+        remove_province_modifier = religious_zeal_at_conv
+        remove_province_modifier = conversion_zeal
+    }
 }
 
 
@@ -129,148 +192,92 @@ ROOT = {
 # Colonization
 ####################################################################################
 
-# ROOT = {
-#     set_variable = {
-#         which = colonyLimit
-#         value = 0
-#     }
+ROOT = {
+    set_variable = {
+        which = colonyLimit
+        value = 30
+    }
 
-#     set_variable = {
-#         which = numColonies
-#         value = 0
-#     }
+    set_variable = {
+        which = numColonies
+        value = 0
+    }
 
-#     # Get initial count of provinces. Then simply increment this variable whenever we add a colony and then use it for both loops below
-#     # Allows both lops to check against the same constant
-#     every_owned_province = {
-#         limit = {
-#             is_colony = yes
-#         }
-#         ROOT = {
-#             change_variable = {
-#                 which = numColonies
-#                 value = 1
-#             }
-#         }
-#     }
-#     log = "colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential adjacent colonies."
+    # Get initial count of provinces. Then simply increment this variable whenever we add a colony and then use it for both loops below
+    # Allows both lops to check against the same constant
+    every_owned_province = {
+        limit = {
+            is_colony = yes
+        }
+        ROOT = {
+            change_variable = {
+                which = numColonies
+                value = 1
+            }
+            log = "Found colony in [Prev.GetName], incrementing numColonies to [numColonies.GetValue]"
+        }
+    }
+    log = "colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential adjacent colonies."
 
-#     # Try adjacent ones first
-#     ROOT = {  
-#         set_variable = {
-#             which = colonyCounter
-#             value = 0
-#         }
-#         while = {
-#             limit = {
-#                 # AKA !(numColonies >= colonyLimit)
-#                 # AKA numColonies < colonyLimit
-#                 # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
-#                 NOT = {
-#                     check_variable = {
-#                         which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
-#                         which = colonyLimit
-#                     }
-#                 }
-#                 NOT = {
-#                     check_variable = {
-#                         which = colonyCounter
-#                         value = 20
-#                     }
-#                 }
-#                 # Early exit for when no more eligible provinces
-#                 # Simply add an any_province with identical limit as the random_province from down below. Avoiding this to avoid having duplicated identical code.
-#             }
-#             change_variable = {
-#                 which = colonyCounter
-#                 value = 1
-#             }
-#             random_province = {
-#                 limit = {
-#                     has_discovered = ROOT
-#                     is_empty = yes
-#                     # OR = {
-#                     #     continent = africa
-#                     #     continent = north_america
-#                     #     continent = south_america
-#                     #     continent = oceania
-#                     # }
+    ROOT = {  
+        set_variable = {
+            which = colonyCounter
+            value = 0
+        }
+        while = {
+            limit = {
+                current_income_balance = 100 # Make sure we have positive income to support more colonies
 
-#                     is_neighbor_of = ROOT
-#                 }
-#                 log = "Creating adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
-#                 create_colony = 1
-#                 ROOT = {
-#                     change_variable = {
-#                         which = numColonies
-#                         value = 1
-#                     }
-#                 }
-#                 discover_country = ROOT
-#             }
-#         }
-#     }
-
-#     log = "Done adding adjacents. colonyLimit is [colonyLimit.GetValue], numColonies is [numColonies.GetValue]. Adding potential non-adjacent colonies."
-
-#     ROOT = {  
-#         set_variable = {
-#             which = colonyCounter
-#             value = 0
-#         }
-#         while = {
-#             limit = {
-#                 # AKA !(numColonies >= colonyLimit)
-#                 # AKA colonyLimit > numColonies
-#                 # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
-#                 NOT = {
-#                     check_variable = {
-#                         which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
-#                         which = colonyLimit
-#                     }
-#                 }
-#                 NOT = {
-#                     # TODO add early exit for when no more eligible provinces
-#                     check_variable = {
-#                         which = colonyCounter
-#                         value = 10
-#                     }
-#                 }
-#             }
-#             change_variable = {
-#                 which = colonyCounter
-#                 value = 1
-#             }
-#             # log = "Loop iteration [colonyCounter.GetValue]"
-#             random_province = {
-#                 limit = {
-#                     has_discovered = ROOT
-#                     is_empty = yes
-#                     # OR = {
-#                     #     continent = africa
-#                     #     continent = north_america
-#                     #     continent = south_america
-#                     #     continent = oceania
-#                     # }
-#                     OR = {
-#                         is_island = yes
-#                         has_port = yes
-#                         is_neighbor_of = ROOT
-#                     }
-#                 }
-#                 log = "Creating potentially non-adjacent colony in: [This.GetName] [This.prov_id.GetValue]"
-#                 create_colony = 1
-#                 ROOT = {
-#                     change_variable = {
-#                         which = numColonies
-#                         value = 1
-#                     }
-#                 }
-#                 discover_country = ROOT
-#             }
-#         }
-#     }
-# }
+                # AKA !(numColonies >= colonyLimit)
+                # AKA colonyLimit > numColonies
+                # Don't iterate on the == case, since if numColonies already equals colonyLimit, we're done
+                NOT = {
+                    check_variable = {
+                        which = numColonies       # Used in place of value, checks if the first <var> is equal or higher than the second <var> / <scope>'s value of <var>
+                        which = colonyLimit
+                    }
+                }
+                NOT = {
+                    # TODO add early exit for when no more eligible provinces
+                    check_variable = {
+                        which = colonyCounter
+                        value = 10
+                    }
+                }
+            }
+            change_variable = {
+                which = colonyCounter
+                value = 1
+            }
+            # log = "Loop iteration [colonyCounter.GetValue]"
+            random_province = {
+                limit = {
+                    # has_discovered = ROOT
+                    is_empty = yes
+                    OR = {
+                        superregion = oceania_superregion
+                        superregion = east_indies_superregion
+                        superregion = china_superregion
+                    }
+                    # OR = {
+                    #     # is_island = yes
+                    #     has_port = yes
+                    #     is_neighbor_of = ROOT
+                    # }
+                }
+                log = "Creating potentially non-adjacent colony in: [This.GetName] [This.prov_id.GetValue] [CurrentIncomebalance.GetValue]"
+                create_colony = 1
+                ROOT = {
+                    change_variable = {
+                        which = numColonies
+                        value = 1
+                    }
+                }
+                discover_country = ROOT
+            }
+        }
+    }
+}
 
 ####################################################################################
 # Changing Colors and Names | color.txt | This should be edited EACH CAMPAIGN
@@ -311,10 +318,6 @@ ROOT = {
     # Foreign Countries
     #####################################################################################
 
-    SPA = {
-        override_country_name = "Spanish Rump State"
-    }
-
     #####################################################################################
     # Layer 1: Core:
     #####################################################################################
@@ -327,8 +330,7 @@ ROOT = {
             #     }
             # }
             # override_country_name = CELESTIAL_EMPIRE_TIAN_XIA
-            override_country_name = USSR_NAME
-            # override_country_name = "ASDF"
+            override_country_name = IMPERIAL_AMERICAN_DIRECTORATE_NAME
         }
 
         # set_country_flag = british_empire_flag
@@ -344,55 +346,21 @@ ROOT = {
         # Viceroyalities (Empires) > Governorates (Kingdoms) > Prefectures (Duchies) > Provinces (Counties) > Districts (Baronies)
         ROOT = {
             # Viceroyalities (Empire Sized Regions) | Viceroyality of X or X_adj Viceroyalty
-            PLC = {
+            JAN = {
                 override_country_name = "Polish-Lithuanian S.F.S.R." # Soviet Federalist Socialist Republic
             }
             # Governorates (Kingdom Sized Regions) | SSR (Soviet Socialist Republic)
-            KHO = {
+            JAN = {
                 override_country_name = "Khorasan S.S.R."
             }
-            TIM = {
-                override_country_name = "Persia S.S.R."
-            }
-            AFG = {
-                override_country_name = "Afghanistan S.S.R."
-            }
-            LIV = {
-                override_country_name = "Baltic S.S.R." 
-            }
-            MUG = {
-                override_country_name = "Hindustan S.S.R."
-            }
-            BOH = {
-                override_country_name = "Bohemia S.S.R." 
-            }
-            LXA = {
-                override_country_name = "Laos S.S.R."
-            }
-            GUJ = {
-                override_country_name = "Gujarat S.S.R."
-            }
             # Prefectures (Duchy Sized Regions) | X SSO (Soviet Socialist Oblast)
-            SAX = {
+            JAN = {
                 override_country_name = "Saxony S.S.O."
             }
-            WAL = {
-                override_country_name = "Walachia S.S.O."
-            }
-            ASS = {
-                override_country_name = "Assam S.S.O."
-            }
             # Provinces (County Sized Regions) | X SSP (Soviet Socialist Province)
-            GEO = {
-                override_country_name = "Georgia S.S.P."
+            JAN = {
+                override_country_name = "Seneca Governate"
             }
-            KSH = {
-                override_country_name = "Kashmir S.S.P."
-            }
-            SND = {
-                override_country_name = "Sindh S.S.P."
-            }
-
             # Districts (Barony Sized Regions) | X S.S.D (Soviet Socialist District)
             JAN = {
                 override_country_name = "Shetland S.S.D."
@@ -401,8 +369,9 @@ ROOT = {
 
         # Imperial Cities | Imperial City of X | imperial_city
         ROOT = {
-            FEO = {
-                override_country_name = "Theodoro Soviet Outpost"
+            CAO = {
+                override_country_name = "Cahokia Metropolis"
+                set_country_flag = metropolis
             }
         }
         # HRE Free Cities | Free City of X | imperial_city
@@ -468,13 +437,13 @@ ROOT = {
     ROOT = {
         # Native Reserves | X_adj Tribal Reserve
         ROOT = {
-            JAN = {
-                override_country_name = "Allada Native Reservation"
+            HDA = {
+                override_country_name = "Haida Tribal Reservation"
             }
-            JAN = {
-                override_country_name = "Chukchi Siberian Reservation"
-                set_country_flag = siberian_reservation
-            }
+            # JAN = {
+            #     override_country_name = "Chukchi Siberian Reservation"
+            #     set_country_flag = siberian_reservation
+            # }
         }
 
         # These are basically marches for hordes, they are given mroe autonomy though, seeing as this a tier 4 not a tier 3 subject
@@ -510,7 +479,7 @@ ROOT = {
 
         # Sister Republics - Partner Revolutionary Republics under Soviet leadership. 
         ROOT = {
-            MNG = {
+            JAN = {
                 override_country_name = "People's Soviet Republic of China"
             }
         }
@@ -518,17 +487,8 @@ ROOT = {
            
         # Marches | Commandery of X
         ROOT = {
-            PRU = {
+            JAN = {
                 override_country_name = "Prussia Soviet Commandery"
-            }
-            AVA = {
-                override_country_name = "Burma Soviet Commandery"
-            }
-            KOR = {
-                override_country_name = "Korea Soviet Commandery"
-            }
-            DAI = {
-                override_country_name = "Viet Soviet Commandery"
             }
         }
         
@@ -564,15 +524,21 @@ ROOT = {
     }
     
     #####################################################################################
-    # Layer 5: Core Colonies (`nions):
+    # Layer 5: Core Colonies (Consolidated Dominions):
     #####################################################################################
     # Core Colonies are rare and typically only present when playing a new world nation. Colonial charters being granted to home regions to help speed up colonization would count as a consolidated dominion. When doing overseas colonization, the colony must be either an external or internal colony, not a core colony. 
     # Crown dominion, core dominion, and Dominate mostly mean the same thing. 
 
     # Consolidated Dominions | American Directorate of X
     ROOT = {
-        JAN = {
-            override_country_name = "Caribbean British Crown-Colony"
+        CAN = {
+            override_country_name = "American Canadian Directorate"
+        }
+        CUB = {
+            override_country_name = "American Caribbean Directorate"
+        }
+        MEX = {
+            override_country_name = "American Mexican Directorate"
         }
     }
 
@@ -642,8 +608,13 @@ ROOT = {
                 override_country_name = "Kanem Bornu Tribal Empire"
                 set_country_flag = tribal_empire
             }
+            # Tribal Kingdoms
             JAN = {
                 override_country_name = "Songhai Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            F00 = {
+                override_country_name = "Natchez Federation Governate"
                 set_country_flag = tribal_kingdom
             }
             # Tribal Duchy | Tribal Duchy of X
@@ -654,6 +625,10 @@ ROOT = {
             # Tribal County | X Tribal County
             JAN = {
                 override_country_name = "Nupe Tribal County"
+                set_country_flag = tribal_county
+            }
+            SEN = {
+                override_country_name = "Seneca Tribal Governate"
                 set_country_flag = tribal_county
             }
             # Tribal Barony | X Tribal Barony
@@ -732,56 +707,8 @@ ROOT = {
         ROOT = {
             # Vanquished foes under direct military occupation
             # Intense de facto oppression, but with high amount of de jure autonomy compared to more core subject states
-            CND = {
+            JAN = {
                 override_country_name = "Candar Soviet Satellite State"
-            }
-            ORM = {
-                override_country_name = "Hormuz Soviet Satellite State"
-            }
-            IRQ = {
-                override_country_name = "Iraq Soviet Satellite State"
-            }
-            LR2 = {
-                override_country_name = "Larestan Soviet Satellite State"
-            }
-            GEL = {
-                override_country_name = "Gelre Soviet Satellite State"
-            }
-            G2D = {
-                override_country_name = "Guangdong Soviet Satellite State"
-            }
-            SND = {
-                override_country_name = "Sindh Soviet Satellite State"
-            }
-            AYU = {
-                override_country_name = "Thai Soviet Satellite State"
-            }
-            MAJ = {
-                override_country_name = "Majapahit Soviet Satellite State"
-            }
-            PLB = {
-                override_country_name = "Palembang Soviet Satellite State"
-            }
-            MLW = {
-                override_country_name = "Malwa Soviet Satellite State"
-            }
-            TNJ = {
-                override_country_name = "Tanjore Soviet Satellite State"
-            }
-            TPR = {
-                override_country_name = "Tripura Soviet Satellite State"
-            }
-            MLB = {
-                override_country_name = "Manipur Soviet Satellite State"
-            }
-            TBU = {
-                override_country_name = "Thoburi Soviet Satellite State"
-            }
-            KHM = {
-                override_country_name = "Cambodia Soviet Satellite State"
-            }
-            BB1 = {
-                override_country_name = "Baban Soviet Satellite State"
             }
         }
 
@@ -821,8 +748,43 @@ ROOT = {
     # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
 
     ROOT = {
-        JAN = {
-            override_country_name = "British Colombia"
+        COL = {
+            override_country_name = "American Colombia"
+        }
+        INC = {
+            override_country_name = "American Inca"
+            set_country_flag = dark_dominion
+        }
+        BRZ = {
+            override_country_name = "American Brazil"
+            set_country_flag = very_light_dominion
+        }
+        LAP = {
+            override_country_name = "American La Plata"
+            set_country_flag = dark_dominion
+        }
+        K00 = {
+            # American Guyanas
+            set_country_flag = dark_dominion
+        }
+        K01 = {
+            # American Bolivia
+        }
+        
+        GUY = {
+            override_country_name = "American Paraguay"
+            set_country_flag = light_dominion
+        }
+        CHL = {
+            override_country_name = "American Chile"
+            set_country_flag = light_dominion
+        }
+        VNZ = {
+            override_country_name = "American Venezuela"
+            set_country_flag = dark_dominion
+        }
+        AUS = {
+            override_country_name = "American Australia"
         }
     }
 
@@ -900,15 +862,7 @@ ROOT = {
     #     restore_country_name = yes
     # }
     change_country_color = {
-        color = { 160 0 0 }
-    }
-
-    MNG = {
-        every_subject_country = {
-            change_country_color = {
-                color = { 180 50 50 }
-            }
-        }
+        color = { 0 0 160 }
     }
 
     # Full provinces, and thus should have identical color as the overlord. These are core lands.
@@ -919,7 +873,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 160 0 0 }
+            color = { 0 0 160 }
         }
     }
 
@@ -931,7 +885,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 170 10 10 }
+            color = { 10 10 170 }
         }
     }
 
@@ -943,7 +897,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 180 20 20 }
+            color = { 20 20 180 }
         }
     }
 
@@ -958,7 +912,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 170 15 15 }
+            color = { 15 15 170 }
         }
     }
 
@@ -973,7 +927,7 @@ ROOT = {
                 has_country_flag = township
             }
             change_country_color = {
-                color = { 170 0 80 }
+                color = { 80 0 170 }
             }
         } else_if = {
             limit = {
@@ -982,9 +936,16 @@ ROOT = {
             change_country_color = {
                 color = { 100 0 100 }
             }
+        } else_if = {
+            limit = {
+                has_country_flag = metropolis
+            }
+            change_country_color = {
+                color = { 0 0 150 }
+            }
         } else { 
             change_country_color = {
-                color = { 130 0 80 }
+                color = { 80 0 130 }
             }
         }
     }
@@ -1006,7 +967,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 100 25 15 }
+            color = { 25 25 100 }
         }
     }
 
@@ -1021,19 +982,19 @@ ROOT = {
                 has_country_flag = imperial_march
             }
             change_country_color = {
-                color = { 120 0 0 }
+                color = { 0 0 120 }
             }
         } else_if = {
             limit = {
                 has_country_flag = regional_march
             }
             change_country_color = {
-                color = { 150 5 5 }
+                color = { 5 5 150 }
             }
         } 
         else { 
             change_country_color = {
-                color = { 130 5 5 }
+                color = { 5 5 130 }
             }
         }
     }
@@ -1049,11 +1010,11 @@ ROOT = {
                 has_country_flag = imperial_horde
             }
             change_country_color = {
-                color = { 140 15 0 }
+                color = { 0 15 140 }
             }
         } else {
             change_country_color = {
-                color = { 130 10 0 }
+                color = { 0 10 130 }
             }
         }
     } 
@@ -1065,7 +1026,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 200 75 0 }
+            color = { 0 75 200 }
         }
     }  
 
@@ -1082,7 +1043,7 @@ ROOT = {
                 has_country_flag = empire_fiefdom
             }
             change_country_color = {
-                color = { 170 15 15 }
+                color = { 15 15 170 }
             }
         } 
         else_if = {
@@ -1090,7 +1051,7 @@ ROOT = {
                 has_country_flag = kingdom_fiefdom
             }
             change_country_color = {
-                color = { 180 30 30 }
+                color = { 30 30 180 }
             }
         } 
         else_if = {
@@ -1099,7 +1060,7 @@ ROOT = {
             }
             
             change_country_color = {
-                color = { 200 50 50 }
+                color = { 50 50 200 }
             }
         } 
         else_if = {
@@ -1107,7 +1068,7 @@ ROOT = {
                 has_country_flag = vassal_fiefdom
             }
             change_country_color = {
-                color = { 180 80 100 }
+                color = { 100 80 180 }
             }
         } 
         else_if = {
@@ -1115,7 +1076,7 @@ ROOT = {
                 has_country_flag = county_fiefdom
             }
             change_country_color = {
-                color = { 250 75 75 }
+                color = { 75 75 250 }
             }
         }        
         else_if = {
@@ -1123,7 +1084,7 @@ ROOT = {
                 has_country_flag = barony_fiefdom
             }
             change_country_color = {
-                color = { 255 120 120 }
+                color = { 120 120 255 }
             }
         }        
         else {
@@ -1145,7 +1106,7 @@ ROOT = {
                 has_country_flag = tribal_empire
             }
             change_country_color = {
-                color = { 160 5 0 }
+                color = { 0 5 160 }
             }
         } 
         else_if = {
@@ -1153,7 +1114,7 @@ ROOT = {
                 has_country_flag = tribal_kingdom
             }
             change_country_color = {
-                color = { 180 30 25 }
+                color = { 25 30 180 }
             }
         } 
         else_if = {
@@ -1162,7 +1123,7 @@ ROOT = {
             }
             
             change_country_color = {
-                color = { 210 50 35 }
+                color = { 35 50 210 }
             }
         } 
         else_if = {
@@ -1170,7 +1131,7 @@ ROOT = {
                 has_country_flag = tribal_county
             }
             change_country_color = {
-                color = { 240 85 70 }
+                color = { 70 85 240 }
             }
         }        
         else_if = {
@@ -1178,7 +1139,7 @@ ROOT = {
                 has_country_flag = tribal_barony
             }
             change_country_color = {
-                color = { 255 120 100 }
+                color = { 100 120 255 }
             }
         }        
         else {
@@ -1195,7 +1156,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 160 40 70 }
+            color = { 70 40 160 }
         }
     }
     every_subject_country = {
@@ -1205,7 +1166,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 180 80 100 }
+            color = { 100 80 180 }
         }
     }
 
@@ -1217,7 +1178,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 250 130 130 }
+            color = { 130 130 250 }
         }
     }
 
@@ -1228,7 +1189,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 250 170 170 }
+            color = { 170 170 250 }
         }
     }
 
@@ -1239,7 +1200,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 185 185 }
+            color = { 185 185 255 }
         }
     }  
 
@@ -1250,7 +1211,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 180 40 50 }
+            color = { 50 40 180 }
         }
 
     }
@@ -1261,7 +1222,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 210 0 0 }
+            color = { 0 0 210 }
         }
     }
     every_subject_country = {
@@ -1272,7 +1233,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 180 30 30 }
+            color = { 30 30 180 }
         }
     }
 
@@ -1284,7 +1245,7 @@ ROOT = {
         }
         change_country_color = {
             # color = { 130 0 0 }
-            color = { 255 100 60 }
+            color = { 60 100 255 }
         }
     }
 
@@ -1296,7 +1257,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 130 0 90 }
+            color = { 90 0 130 }
         }
     }
     every_subject_country = {
@@ -1324,7 +1285,7 @@ ROOT = {
             }
         } else {
             change_country_color = {
-                color = { 230 150 170 }
+                color = { 170 150 230 }
             }
         }
     }
@@ -1335,7 +1296,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 240 60 85 }
+            color = { 85 60 240 }
         }
     }
     every_subject_country = {
@@ -1346,7 +1307,7 @@ ROOT = {
         }
         change_country_color = {
             # color = { 0 0 0 } 
-            color = { 200 180 250 }
+            color = { 250 180 200 }
         }
     }
     every_subject_country = {
@@ -1356,7 +1317,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 180 30 40 }
+            color = { 40 30 180 }
         }
     }
     every_subject_country = {
@@ -1376,7 +1337,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 255 100 100 } # Pink
+            color = { 100 100 255 } 
         }
     }
     every_subject_country = {
@@ -1398,7 +1359,7 @@ ROOT = {
         }
         change_country_color = {
             # color = { 0 0 0 } 
-            color = { 255 160 160 }
+            color = { 160 160 255 }
         }
     }
     every_subject_country = {
@@ -1406,7 +1367,7 @@ ROOT = {
             is_subject_of_type = pirate_brotherhood_vassal
         }
         change_country_color = {
-            color = { 180 0 100 }
+            color = { 100 0 180 }
         }
     }
 
@@ -1417,7 +1378,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 250 80 20 } # Sun, Sand, Sea: Red, Orange, Yellow, BLue
+            color = { 20 80 250 } # Sun, Sand, Sea: Red, Orange, Yellow, BLue
         }
     }
 
@@ -1428,8 +1389,33 @@ ROOT = {
                 is_subject_of_type = dominion_tc
             }
         }
-        change_country_color = {
-            color = { 220 50 50 }
+        if = {
+            limit = {
+                has_country_flag = dark_dominion
+            }
+            change_country_color = {
+                color = { 40 40 190 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = light_dominion
+            }
+            change_country_color = {
+                color = { 95 95 250 }
+            }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = very_light_dominion
+            }
+            change_country_color = {
+                color = { 110 110 255 }
+            }
+        } else = {
+            change_country_color = {
+                color = { 70 70 220 }
+            }
         }
     }
     every_subject_country = {
@@ -1439,7 +1425,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 180 40 40 }
+            color = { 25 25 190 }
         }
     }
 }
@@ -1463,6 +1449,7 @@ ROOT = {
         remove_country_modifier = estate_burghers_guaranteed_autonomy_mod
         every_owned_province = {
             remove_province_modifier = estate_burghers_guaranteed_autonomy_mod
+            discover_country = ROOT
         }
     }
 }

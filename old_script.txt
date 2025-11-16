@@ -3146,6 +3146,245 @@ change_variable = {
 # }
 
 
+# every_province = {
+#     limit = {
+#         tribal_land_of = NTZ
+#     }
+#     # cede_province = COF
+#     log = "Ceding [This.GetName] ([This.prov_id.GetValue]) to NTZ"
+# }
+
+
+
+# Keeping american colonies to themselves
+# American Proper Colonization
+CAN = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = great_lakes_region
+                region = great_plains_region
+                area = red_river_area
+                area = columbia_river_area
+                area = salish_sea_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+MEX = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                AND = {
+                    region = rio_grande_region
+                    NOT = {
+                        area = rio_grande_area   
+                    }
+                    NOT = {
+                        province_id = 2667
+                    }
+                }
+                region = cascadia_region
+                region = great_plains_region
+                region = northeast_america_region
+                region = mississippi_region
+                region = southeast_america_region
+                area = apacheria_area
+                area = new_mexico_area
+                area = arizona_area
+                area = california_area
+                area = northern_california_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+CUB = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = rio_grande_region
+                region = cascadia_region
+                region = great_plains_region
+                region = northeast_america_region
+                region = mississippi_region
+                region = southeast_america_region
+                area = apacheria_area
+                area = new_mexico_area
+                area = arizona_area
+                area = california_area
+                area = northern_california_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+
+# Join the revolution
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = dominion
+            is_subject_of_type = dominion_tc
+            is_subject_of_type = consolidated_dominion
+        }
+    }
+    if = {
+        limit = {
+            has_government = monarchy
+        }
+        # log = "[This.GetName] is a monarchy adding revolutionary_empire_reform"
+        add_government_reform = revolutionary_empire_reform 
+    } else_if = {
+        limit = {
+            has_government = republic
+        }
+        # log = "[This.GetName] is a republic adding revolutionary_republic_reform"
+        add_government_reform = revolutionary_republic_reform 
+    } else {
+        # log = "[This.GetName] is not a monarchy nor republic, changing to republic and adding revolutionary_republic_reform"
+        change_government = republic
+        add_government_reform = revolutionary_republic_reform
+    }
+    every_owned_province = {
+        add_core = PREV
+    }
+}
+
+
+K00 = {
+    # Printing province ids
+    every_owned_province = {
+        log = "Province [This.prov_id.GetValue]"
+    }
+}
+
+
+# Setting Government Properly
+every_subject_country = {
+    limit = {
+        OR = {
+            is_subject_of_type = comintern_member_state
+
+            AND = {
+                # overlord = {
+                #     OR = {
+                #         has_country_flag = is_ussr
+                #         has_reform = union_of_soviet_socialist_republics
+                #     }
+                # }
+
+                OR = {
+                    # Core Lands / Colonies
+                    is_subject_of_type = administrative_region
+                    is_subject_of_type = dominion
+                    is_subject_of_type = dominion_tc
+                    is_subject_of_type = consolidated_dominion
+                    is_subject_of_type = crown_colony
+
+                    # Satellites
+                    is_subject_of_type = puppet_state
+
+                    # Appanages
+                    is_subject_of_type = appanage
+                    is_subject_of_type = prince_vassal
+
+                    # Vassals
+                    is_subject_of_type = vassal
+                    is_subject_of_type = semi_free_vassal
+                    is_subject_of_type = free_vassal
+                    
+                    # Marches
+                    is_subject_of_type = march
+                    is_subject_of_type = defensive_march
+                    is_subject_of_type = naval_march
+                    is_subject_of_type = religious_march
+                    is_subject_of_type = agricultural_march
+
+                    # Unions
+                    is_subject_of_type = real_union_subject
+                    is_subject_of_type = se_integrated_personal_union
+                    is_subject_of_type = sister_republic
+                    is_subject_of_type = brother_kingdom
+
+                    # Industry
+                    is_subject_of_type = mining_corporation
+                    is_subject_of_type = tropical_resort
+                    is_subject_of_type = commercial_enterprise
+                }
+            }
+        }
+    }
+    log = "[This.GetName] has USSR as overlord"
+    # change_government = monarchy
+    change_government = republic
+    remove_government_reform = union_of_soviet_socialist_republics
+    add_government_reform = soviet_socialist_republic
+}
+
+
+# American Proper Colonization
+CAN = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = great_lakes_region
+                region = great_plains_region
+                area = red_river_area
+                area = columbia_river_area
+                area = salish_sea_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+MEX = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = rio_grande_region
+                region = cascadia_region
+                region = great_plains_region
+                region = northeast_america_region
+                region = mississippi_region
+                region = southeast_america_region
+                area = apacheria_area
+                area = new_mexico_area
+                area = arizona_area
+                area = california_area
+                area = northern_california_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+CUB = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = rio_grande_region
+                region = cascadia_region
+                region = great_plains_region
+                region = northeast_america_region
+                region = mississippi_region
+                region = southeast_america_region
+                area = apacheria_area
+                area = new_mexico_area
+                area = arizona_area
+                area = california_area
+                area = northern_california_area
+            }
+        }
+        decolonize = this
+    }
+}
+
 
 every_country = {
     ROOT = {

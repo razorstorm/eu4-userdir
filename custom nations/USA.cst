@@ -1,0 +1,126 @@
+name="USA"
+adjective="American"
+country_colors={
+	flag=53
+	color=69
+	symbol_index=57
+	flag_colors={
+		4 5 10 
+	}
+}
+index=2054
+graphical_culture=1
+technology_group=12
+religion=16
+government=1
+government_reform=304
+government_rank=3
+idea={
+	{
+		level=4
+		index=79
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=0
+		name=""
+		desc=""
+	}
+ {
+		level=1
+		index=319
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=35
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=2
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=80
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=47
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=1
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=148
+		name=""
+		desc=""
+	}
+ {
+		level=4
+		index=36
+		name=""
+		desc=""
+	}
+ 
+}
+culture="american"
+monarch={
+	admin=6
+	diplomacy=6
+	military=6
+	age=30
+	religion=16
+	culture="american"
+	female=yes
+	name="Moconnoquah I"
+	dynasty="Mantua"
+	is_null=no
+	personality={
+		"ancestor_careful_personality"
+	}
+}
+heir={
+	admin=2
+	diplomacy=2
+	military=2
+	age=15
+	religion=16
+	culture="american"
+	female=yes
+	name="Awowas I"
+	dynasty="Mantua"
+	is_null=no
+	personality={
+		"ancestor_expansionist_personality"
+	}
+}
+queen={
+	admin=6
+	diplomacy=6
+	military=6
+	age=21
+	religion=16
+	culture="american"
+	female=no
+	name="Hockingpomskenn"
+	dynasty="Passaic"
+	is_null=no
+	personality={
+		"ancestor_just_personality"
+	}
+}

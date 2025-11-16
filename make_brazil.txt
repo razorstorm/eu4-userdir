@@ -1,0 +1,252 @@
+757 = {
+    cede_province = BRZ
+}
+2921 = {
+    cede_province = BRZ
+}
+755 = {
+    cede_province = BRZ
+}
+764 = {
+    cede_province = BRZ
+}
+762 = {
+    cede_province = BRZ
+}
+751 = {
+    cede_province = BRZ
+}
+753 = {
+    cede_province = BRZ
+}
+754 = {
+    cede_province = BRZ
+}
+763 = {
+    cede_province = BRZ
+}
+2912 = {
+    cede_province = BRZ
+}
+756 = {
+    cede_province = BRZ
+}
+2886 = {
+    cede_province = BRZ
+}
+2894 = {
+    cede_province = BRZ
+}
+761 = {
+    cede_province = BRZ
+}
+760 = {
+    cede_province = BRZ
+}
+765 = {
+    cede_province = BRZ
+}
+2899 = {
+    cede_province = BRZ
+}
+2897 = {
+    cede_province = BRZ
+}
+766 = {
+    cede_province = BRZ
+}
+2898 = {
+    cede_province = BRZ
+}
+2916 = {
+    cede_province = BRZ
+}
+2914 = {
+    cede_province = BRZ
+}
+2915 = {
+    cede_province = BRZ
+}
+2913 = {
+    cede_province = BRZ
+}
+750 = {
+    cede_province = BRZ
+}
+2922 = {
+    cede_province = BRZ
+}
+2924 = {
+    cede_province = BRZ
+}
+749 = {
+    cede_province = BRZ
+}
+2885 = {
+    cede_province = BRZ
+}
+759 = {
+    cede_province = BRZ
+}
+2896 = {
+    cede_province = BRZ
+}
+2892 = {
+    cede_province = BRZ
+}
+2927 = {
+    cede_province = BRZ
+}
+748 = {
+    cede_province = BRZ
+}
+758 = {
+    cede_province = BRZ
+}
+2890 = {
+    cede_province = BRZ
+}
+2891 = {
+    cede_province = BRZ
+}
+2919 = {
+    cede_province = BRZ
+}
+2893 = {
+    cede_province = BRZ
+}
+2906 = {
+    cede_province = BRZ
+}
+2917 = {
+    cede_province = BRZ
+}
+2918 = {
+    cede_province = BRZ
+}
+2920 = {
+    cede_province = BRZ
+}
+2925 = {
+    cede_province = BRZ
+}
+2929 = {
+    cede_province = BRZ
+}
+2887 = {
+    cede_province = BRZ
+}
+2857 = {
+    cede_province = BRZ
+}
+747 = {
+    cede_province = BRZ
+}
+773 = {
+    cede_province = BRZ
+}
+2935 = {
+    cede_province = BRZ
+}
+2850 = {
+    cede_province = BRZ
+}
+769 = {
+    cede_province = BRZ
+}
+2895 = {
+    cede_province = BRZ
+}
+2879 = {
+    cede_province = BRZ
+}
+772 = {
+    cede_province = BRZ
+}
+2907 = {
+    cede_province = BRZ
+}
+2930 = {
+    cede_province = BRZ
+}
+2938 = {
+    cede_province = BRZ
+}
+2934 = {
+    cede_province = BRZ
+}
+2933 = {
+    cede_province = BRZ
+}
+2833 = {
+    cede_province = BRZ
+}
+803 = {
+    cede_province = BRZ
+}
+2834 = {
+    cede_province = BRZ
+}
+801 = {
+    cede_province = BRZ
+}
+2881 = {
+    cede_province = BRZ
+}
+768 = {
+    cede_province = BRZ
+}
+2855 = {
+    cede_province = BRZ
+}
+2903 = {
+    cede_province = BRZ
+}
+2832 = {
+    cede_province = BRZ
+}
+2926 = {
+    cede_province = BRZ
+}
+752 = {
+    cede_province = BRZ
+}
+2923 = {
+    cede_province = BRZ
+}
+2888 = {
+    cede_province = BRZ
+}
+2905 = {
+    cede_province = BRZ
+}
+2908 = {
+    cede_province = BRZ
+}
+2909 = {
+    cede_province = BRZ
+}
+2904 = {
+    cede_province = BRZ
+}
+2902 = {
+    cede_province = BRZ
+}
+2901 = {
+    cede_province = BRZ
+}
+2900 = {
+    cede_province = BRZ
+}
+2889 = {
+    cede_province = BRZ
+}
+2910 = {
+    cede_province = BRZ
+}
+2928 = {
+    cede_province = BRZ
+}
+2911 = {
+    cede_province = BRZ
+}

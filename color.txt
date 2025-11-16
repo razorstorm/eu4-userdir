@@ -1853,7 +1853,558 @@ ROOT = {
 }
 
 
+ROOT = {
+    # every_subject_country = {
+    #   restore_country_color = yes
+    # } 
+    # SOS = {
+    #     restore_country_color = yes
+    #     restore_country_name = yes
+    # }
+    change_country_color = {
+        color = { 160 0 0 }
+    }
 
+    MNG = {
+        every_subject_country = {
+            change_country_color = {
+                color = { 180 50 50 }
+            }
+        }
+    }
+
+    # Full provinces, and thus should have identical color as the overlord. These are core lands.
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = administrative_region
+            }
+        }
+        change_country_color = {
+            color = { 160 0 0 }
+        }
+    }
+
+    # Very close to complete integration, thus very similar colors to overlord.
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = real_union_subject
+            }
+        }
+        change_country_color = {
+            color = { 170 10 10 }
+        }
+    }
+
+    # Strong ties, but due to wanting to give the prince practice running a real country, a decent amount of autonomy is given, giving this country a slightly different color.
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = appanage
+            }
+        }
+        change_country_color = {
+            color = { 180 20 20 }
+        }
+    }
+
+    # A less closely integrated union as a real union, but still much further along than a mere personal or dynastic union, and has gone far down the path of becoming one country. 
+    # Not seen as a vassal of the Empire, but rather as a junior partner of the Empire itself. The lesser half of a unified overlord, rather than being a servant to a foreign overlord. 
+    # But these tend to have less cultural unity with the metropole, and thus takes longer to integrate. 
+    # This also tends to mean less influence than that of a Real Union. And are seen as more explicit junior partners, rather than two equal parts of a whole. 
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = se_integrated_personal_union
+            }
+        }
+        change_country_color = {
+            color = { 170 15 15 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = imperial_city
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = township
+            }
+            change_country_color = {
+                color = { 170 0 80 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = free_city
+            }
+            change_country_color = {
+                color = { 100 0 100 }
+            }
+        } else { 
+            change_country_color = {
+                color = { 130 0 80 }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = concentration_camp
+            }
+        }
+        change_country_color = {
+            color = { 30 30 30 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = defensive_march
+            }
+        }
+        change_country_color = {
+            color = { 100 25 15 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = march
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = imperial_march
+            }
+            change_country_color = {
+                color = { 120 0 0 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = regional_march
+            }
+            change_country_color = {
+                color = { 150 5 5 }
+            }
+        } 
+        else { 
+            change_country_color = {
+                color = { 130 5 5 }
+            }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = integrated_tribe_subject
+                is_subject_of_type = pagan_chiefdom
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = imperial_horde
+            }
+            change_country_color = {
+                color = { 140 15 0 }
+            }
+        } else {
+            change_country_color = {
+                color = { 130 10 0 }
+            }
+        }
+    } 
+    
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = palatinate_vassal
+            }
+        }
+        change_country_color = {
+            color = { 200 75 0 }
+        }
+    }  
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = fief_subject
+            }
+        }
+
+        
+        if = {
+            limit = {
+                has_country_flag = empire_fiefdom
+            }
+            change_country_color = {
+                color = { 170 15 15 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = kingdom_fiefdom
+            }
+            change_country_color = {
+                color = { 180 30 30 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = duchy_fiefdom
+            }
+            
+            change_country_color = {
+                color = { 200 50 50 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = vassal_fiefdom
+            }
+            change_country_color = {
+                color = { 180 80 100 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = county_fiefdom
+            }
+            change_country_color = {
+                color = { 250 75 75 }
+            }
+        }        
+        else_if = {
+            limit = {
+                has_country_flag = barony_fiefdom
+            }
+            change_country_color = {
+                color = { 255 120 120 }
+            }
+        }        
+        else {
+            change_country_color = {
+                color = { 0 0 0 }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = sino_jimi_state
+            }
+        }
+
+        if = {
+            limit = {
+                has_country_flag = tribal_empire
+            }
+            change_country_color = {
+                color = { 160 5 0 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = tribal_kingdom
+            }
+            change_country_color = {
+                color = { 180 30 25 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = tribal_duchy
+            }
+            
+            change_country_color = {
+                color = { 210 50 35 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = tribal_county
+            }
+            change_country_color = {
+                color = { 240 85 70 }
+            }
+        }        
+        else_if = {
+            limit = {
+                has_country_flag = tribal_barony
+            }
+            change_country_color = {
+                color = { 255 120 100 }
+            }
+        }        
+        else {
+            change_country_color = {
+                color = { 0 0 0 }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = prince_vassal
+            }
+        }
+        change_country_color = {
+            color = { 160 40 70 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = vassal
+            }
+        }
+        change_country_color = {
+            color = { 180 80 100 }
+        }
+    }
+
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = semi_free_vassal
+            }
+        }
+        change_country_color = {
+            color = { 250 130 130 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = free_vassal
+            }
+        }
+        change_country_color = {
+            color = { 250 170 170 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = protectorate
+            }
+        }
+        change_country_color = {
+            color = { 255 185 185 }
+        }
+    }  
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = brother_kingdom
+            }
+        }
+        change_country_color = {
+            color = { 180 40 50 }
+        }
+
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = puppet_state
+            }
+        }
+        change_country_color = {
+            color = { 210 0 0 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = sister_republic
+                is_subject_of_type = comintern_member_state
+            }
+        }
+        change_country_color = {
+            color = { 180 30 30 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = trade_outpost
+            }
+        }
+        change_country_color = {
+            # color = { 130 0 0 }
+            color = { 255 100 60 }
+        }
+    }
+
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = naval_march
+            }
+        }
+        change_country_color = {
+            color = { 130 0 90 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = religious_march
+            }
+        }
+        change_country_color = {
+            country = LIV
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = native_reserve
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = siberian_reservation
+            }
+            change_country_color = {
+                color = { 255 170 255 }
+            }
+        } else {
+            change_country_color = {
+                color = { 230 150 170 }
+            }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tb_minister_resident
+            }
+        }
+        change_country_color = {
+            color = { 240 60 85 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = viking_settlement
+            }
+        }
+        change_country_color = {
+            # color = { 0 0 0 } 
+            color = { 200 180 250 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = integrated_tribe_subject
+            }
+        }
+        change_country_color = {
+            color = { 180 30 40 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mining_corporation
+            }
+        }
+        change_country_color = {
+            color = { 255 100 0 } # GOLD!!!
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = commercial_enterprise
+            }
+        }
+        change_country_color = {
+            color = { 255 100 100 } # Pink
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = agricultural_march
+            }
+        }
+        change_country_color = {
+            color = { 220 130 50 } # WHEAT!!!
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = banking_family_subject
+                is_subject_of_type = stato_da_mar_vassal
+            }
+        }
+        change_country_color = {
+            # color = { 0 0 0 } 
+            color = { 255 160 160 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = pirate_brotherhood_vassal
+        }
+        change_country_color = {
+            color = { 180 0 100 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tropical_resort
+            }
+        }
+        change_country_color = {
+            color = { 250 80 20 } # Sun, Sand, Sea: Red, Orange, Yellow, BLue
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+            }
+        }
+        change_country_color = {
+            color = { 220 50 50 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = consolidated_dominion
+            }
+        }
+        change_country_color = {
+            color = { 180 40 40 }
+        }
+    }
+}
 
 
 # Qing - Yellow
@@ -2278,4 +2829,551 @@ ROOT = {
     }
     
 
+}
+
+
+# Blue US
+ROOT = {
+    # every_subject_country = {
+    #   restore_country_color = yes
+    # } 
+    # SOS = {
+    #     restore_country_color = yes
+    #     restore_country_name = yes
+    # }
+    change_country_color = {
+        color = { 0 0 160 }
+    }
+
+    # Full provinces, and thus should have identical color as the overlord. These are core lands.
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = administrative_region
+            }
+        }
+        change_country_color = {
+            color = { 0 0 160 }
+        }
+    }
+
+    # Very close to complete integration, thus very similar colors to overlord.
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = real_union_subject
+            }
+        }
+        change_country_color = {
+            color = { 10 10 170 }
+        }
+    }
+
+    # Strong ties, but due to wanting to give the prince practice running a real country, a decent amount of autonomy is given, giving this country a slightly different color.
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = appanage
+            }
+        }
+        change_country_color = {
+            color = { 20 20 180 }
+        }
+    }
+
+    # A less closely integrated union as a real union, but still much further along than a mere personal or dynastic union, and has gone far down the path of becoming one country. 
+    # Not seen as a vassal of the Empire, but rather as a junior partner of the Empire itself. The lesser half of a unified overlord, rather than being a servant to a foreign overlord. 
+    # But these tend to have less cultural unity with the metropole, and thus takes longer to integrate. 
+    # This also tends to mean less influence than that of a Real Union. And are seen as more explicit junior partners, rather than two equal parts of a whole. 
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = se_integrated_personal_union
+            }
+        }
+        change_country_color = {
+            color = { 15 15 170 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = imperial_city
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = township
+            }
+            change_country_color = {
+                color = { 80 0 170 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = free_city
+            }
+            change_country_color = {
+                color = { 100 0 100 }
+            }
+        } else { 
+            change_country_color = {
+                color = { 80 0 130 }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = concentration_camp
+            }
+        }
+        change_country_color = {
+            color = { 30 30 30 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = defensive_march
+            }
+        }
+        change_country_color = {
+            color = { 25 25 100 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = march
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = imperial_march
+            }
+            change_country_color = {
+                color = { 0 0 120 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = regional_march
+            }
+            change_country_color = {
+                color = { 5 5 150 }
+            }
+        } 
+        else { 
+            change_country_color = {
+                color = { 5 5 130 }
+            }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = integrated_tribe_subject
+                is_subject_of_type = pagan_chiefdom
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = imperial_horde
+            }
+            change_country_color = {
+                color = { 0 15 140 }
+            }
+        } else {
+            change_country_color = {
+                color = { 0 10 130 }
+            }
+        }
+    } 
+    
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = palatinate_vassal
+            }
+        }
+        change_country_color = {
+            color = { 0 75 200 }
+        }
+    }  
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = fief_subject
+            }
+        }
+
+        
+        if = {
+            limit = {
+                has_country_flag = empire_fiefdom
+            }
+            change_country_color = {
+                color = { 15 15 170 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = kingdom_fiefdom
+            }
+            change_country_color = {
+                color = { 30 30 180 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = duchy_fiefdom
+            }
+            
+            change_country_color = {
+                color = { 50 50 200 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = vassal_fiefdom
+            }
+            change_country_color = {
+                color = { 100 80 180 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = county_fiefdom
+            }
+            change_country_color = {
+                color = { 75 75 250 }
+            }
+        }        
+        else_if = {
+            limit = {
+                has_country_flag = barony_fiefdom
+            }
+            change_country_color = {
+                color = { 120 120 255 }
+            }
+        }        
+        else {
+            change_country_color = {
+                color = { 0 0 0 }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = sino_jimi_state
+            }
+        }
+
+        if = {
+            limit = {
+                has_country_flag = tribal_empire
+            }
+            change_country_color = {
+                color = { 0 5 160 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = tribal_kingdom
+            }
+            change_country_color = {
+                color = { 25 30 180 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = tribal_duchy
+            }
+            
+            change_country_color = {
+                color = { 35 50 210 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = tribal_county
+            }
+            change_country_color = {
+                color = { 70 85 240 }
+            }
+        }        
+        else_if = {
+            limit = {
+                has_country_flag = tribal_barony
+            }
+            change_country_color = {
+                color = { 100 120 255 }
+            }
+        }        
+        else {
+            change_country_color = {
+                color = { 0 0 0 }
+            }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = prince_vassal
+            }
+        }
+        change_country_color = {
+            color = { 70 40 160 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = vassal
+            }
+        }
+        change_country_color = {
+            color = { 100 80 180 }
+        }
+    }
+
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = semi_free_vassal
+            }
+        }
+        change_country_color = {
+            color = { 130 130 250 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = free_vassal
+            }
+        }
+        change_country_color = {
+            color = { 170 170 250 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = protectorate
+            }
+        }
+        change_country_color = {
+            color = { 185 185 255 }
+        }
+    }  
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = brother_kingdom
+            }
+        }
+        change_country_color = {
+            color = { 50 40 180 }
+        }
+
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = puppet_state
+            }
+        }
+        change_country_color = {
+            color = { 0 0 210 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = sister_republic
+                is_subject_of_type = comintern_member_state
+            }
+        }
+        change_country_color = {
+            color = { 30 30 180 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = trade_outpost
+            }
+        }
+        change_country_color = {
+            # color = { 130 0 0 }
+            color = { 60 100 255 }
+        }
+    }
+
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = naval_march
+            }
+        }
+        change_country_color = {
+            color = { 90 0 130 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = religious_march
+            }
+        }
+        change_country_color = {
+            country = LIV
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = native_reserve
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = siberian_reservation
+            }
+            change_country_color = {
+                color = { 255 170 255 }
+            }
+        } else {
+            change_country_color = {
+                color = { 170 150 230 }
+            }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tb_minister_resident
+            }
+        }
+        change_country_color = {
+            color = { 85 60 240 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = viking_settlement
+            }
+        }
+        change_country_color = {
+            # color = { 0 0 0 } 
+            color = { 250 180 200 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = integrated_tribe_subject
+            }
+        }
+        change_country_color = {
+            color = { 40 30 180 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mining_corporation
+            }
+        }
+        change_country_color = {
+            color = { 255 100 0 } # GOLD!!!
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = commercial_enterprise
+            }
+        }
+        change_country_color = {
+            color = { 100 100 255 } 
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = agricultural_march
+            }
+        }
+        change_country_color = {
+            color = { 220 130 50 } # WHEAT!!!
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = banking_family_subject
+                is_subject_of_type = stato_da_mar_vassal
+            }
+        }
+        change_country_color = {
+            # color = { 0 0 0 } 
+            color = { 160 160 255 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            is_subject_of_type = pirate_brotherhood_vassal
+        }
+        change_country_color = {
+            color = { 100 0 180 }
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = tropical_resort
+            }
+        }
+        change_country_color = {
+            color = { 20 80 250 } # Sun, Sand, Sea: Red, Orange, Yellow, BLue
+        }
+    }
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+            }
+        }
+        change_country_color = {
+            color = { 50 50 220 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = consolidated_dominion
+            }
+        }
+        change_country_color = {
+            color = { 40 40 180 }
+        }
+    }
 }

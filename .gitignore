@@ -16,4 +16,5 @@ launcher-v2.sqlite
 continue_game.json
 *.sqlite
 save\ games/
+old_saves/
 2095475587/gfx/event_pictures
