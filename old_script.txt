@@ -2632,7 +2632,7 @@ VNE = {
 # =========================================================================
 
 
-Spain
+# Spain
 
 
 # SPA: color = { 244 184 12  }
@@ -3264,6 +3264,51 @@ K00 = {
 }
 
 
+
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = consolidated_dominion
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = dark_dominion
+            }
+            change_country_color = {
+                color = { 40 40 190 }
+            }
+        } 
+        else_if = {
+            limit = {
+                has_country_flag = light_dominion
+            }
+            change_country_color = {
+                color = { 95 95 250 }
+            }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = medium_dominion
+            }
+            change_country_color = {
+                color = { 50 50 200 }
+            }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = very_light_dominion
+            }
+            change_country_color = {
+                color = { 110 110 255 }
+            }
+        } else = {
+            change_country_color = {
+                color = { 70 70 220 }
+            }
+        }
+    }
+
 # Setting Government Properly
 every_subject_country = {
     limit = {
@@ -3348,6 +3393,72 @@ MEX = {
         limit = {
             OR = {
                 region = rio_grande_region
+                region = cascadia_region
+                region = great_plains_region
+                region = northeast_america_region
+                region = mississippi_region
+                region = southeast_america_region
+                area = apacheria_area
+                area = new_mexico_area
+                area = arizona_area
+                area = california_area
+                area = northern_california_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+CUB = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = rio_grande_region
+                region = cascadia_region
+                region = great_plains_region
+                region = northeast_america_region
+                region = mississippi_region
+                region = southeast_america_region
+                area = apacheria_area
+                area = new_mexico_area
+                area = arizona_area
+                area = california_area
+                area = northern_california_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+# American Proper Colonization
+CAN = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                region = great_lakes_region
+                region = great_plains_region
+                area = red_river_area
+                area = columbia_river_area
+                area = salish_sea_area
+            }
+        }
+        decolonize = this
+    }
+}
+
+MEX = {
+    every_owned_province = {
+        limit = {
+            OR = {
+                AND = {
+                    region = rio_grande_region
+                    NOT = {
+                        area = rio_grande_area   
+                    }
+                    NOT = {
+                        province_id = 2667
+                    }
+                }
                 region = cascadia_region
                 region = great_plains_region
                 region = northeast_america_region
@@ -4891,8 +5002,28 @@ K00 = {
 }
 
 
+# remove ramparts
+every_owned_province = {
+    if = {
+        limit = {
+            has_building = ramparts
+        }
+        remove_building = ramparts
+    }
+}
 
+# Remove Religious Zeal
+every_owned_province = {
+    remove_province_modifier = religious_zeal_at_conv
+    remove_province_modifier = conversion_zeal
+}
 
+2868 = {
+    change_province_name = "Bahia"
+}
+860 = { 
+    change_province_name = "San Antonio"
+}
 
 # Proportionally increase development:
 every_owned_province = {

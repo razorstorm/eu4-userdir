@@ -1,0 +1,343 @@
+ROOT = {
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = workshop
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = workshop
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = temple
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = temple
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = marketplace
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = marketplace
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = academy
+            }
+            ROOT = {
+                treasury = 142
+            }
+        }
+        add_building = academy
+        ROOT = {
+            add_treasury = -142
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = courthouse
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = courthouse
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = brothel
+            }
+            ROOT = {
+                treasury = 161
+            }
+        }
+        add_building = brothel
+        ROOT = {
+            add_treasury = -161
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = naval_battery
+            }
+            has_port = yes
+            ROOT = {
+                treasury = 203
+            }
+        }
+        add_building = naval_battery
+        ROOT = {
+            add_treasury = -203
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = royal_mausoleums
+            }
+            ROOT = {
+                treasury = 203
+            }
+        }
+        add_building = royal_mausoleums
+        ROOT = {
+            add_treasury = -203
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = ditch
+            }
+            ROOT = {
+                treasury = 224
+            }
+        }
+        add_building = ditch
+        ROOT = {
+            add_treasury = -224
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = moat
+            }
+            ROOT = {
+                treasury = 250
+            }
+        }
+        add_building = moat
+        ROOT = {
+            add_treasury = -250
+        }
+    }
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = prison
+            }
+            ROOT = {
+                treasury = 50
+            }
+        }
+        add_building = prison
+        ROOT = {
+            add_treasury = -50
+        }
+    }
+}
+
+every_subject_country = {
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = workshop
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = workshop
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = temple
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = temple
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = marketplace
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = marketplace
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = academy
+            }
+            ROOT = {
+                treasury = 142
+            }
+        }
+        add_building = academy
+        ROOT = {
+            add_treasury = -142
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = courthouse
+            }
+            ROOT = {
+                treasury = 95
+            }
+        }
+        add_building = courthouse
+        ROOT = {
+            add_treasury = -95
+        }
+    }
+
+    every_owned_province = {
+        limit = {
+            NOT = {
+                has_building = brothel
+            }
+            ROOT = {
+                treasury = 161
+            }
+        }
+        add_building = brothel
+        ROOT = {
+            add_treasury = -161
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = naval_battery
+            }
+            has_port = yes
+            ROOT = {
+                treasury = 203
+            }
+        }
+        add_building = naval_battery
+        ROOT = {
+            add_treasury = -203
+        }
+    }
+
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = royal_mausoleums
+            }
+            ROOT = {
+                treasury = 203
+            }
+        }
+        add_building = royal_mausoleums
+        ROOT = {
+            add_treasury = -203
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = ditch
+            }
+            ROOT = {
+                treasury = 224
+            }
+        }
+        add_building = ditch
+        ROOT = {
+            add_treasury = -224
+        }
+    }
+
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = moat
+            }
+            ROOT = {
+                treasury = 250
+            }
+        }
+        add_building = moat
+        ROOT = {
+            add_treasury = -250
+        }
+    }
+    every_owned_province = {
+        limit = { 
+            NOT = {
+                has_building = prison
+            }
+            ROOT = {
+                treasury = 50
+            }
+        }
+        add_building = prison
+        ROOT = {
+            add_treasury = -50
+        }
+    }
+}

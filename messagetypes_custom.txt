@@ -1690,7 +1690,7 @@ TREASURE_FLEET_TO_US={
 		onmap=yes
 		popup=no
 		pausepopup=no
-		icon=yes
+		icon=no
 	}
 }
 TREASURE_FLEET_WE_INTERCEPT={
@@ -5097,11 +5097,11 @@ LEADERDIED={
 	category="cat_government"
 	option=no
 	to_me={
-		log=no
-		onmap=no
+		log=yes
+		onmap=yes
 		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 MISSSUCC_SELF={
