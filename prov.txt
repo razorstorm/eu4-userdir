@@ -42,85 +42,10 @@ JAN = {
 ####################################################################################
 
 ROOT = {
-
-    CCH = {
-        grant_independence = yes
-    }
-
-
-    # TODO Make atheism religion like confucianism
-    # ----- Continuous -----
-    add_mod = {
-        name = has_competent_doctors
-        duration = -1
-    }
-    every_owned_province = {
-        set_province_flag = province_had_influenza
-    }
-
-    every_owned_province = {
-        add_province_modifier = {
-            name = public_works_of_cairo
-            duration = -1  
-        } 
-    }
-
-    every_owned_province = {
-        if = {
-            limit = {
-                NOT = {
-                    development = 20
-                }
-            }
-            add_base_tax = 2
-            add_base_production = 3
-            add_base_manpower = 1
-        }
-    }
-    
-    
-    every_subject_country = {
-        change_primary_culture = ROOT
-    }
-    constitute_australia = yes
-
-    ROOT = {
-        every_subject_country = {
-            every_owned_province = {
-                limit = {
-                    OR = {
-                        superregion = oceania_superregion
-                    }
-                    NOT = {
-                        region = australia_region
-                    }
-                }
-                cede_province = ROOT                                  
-            }
-        }
-    }
-    
-    # Remove Religious Zeal
-    remove_religious_zeal = yes
-
-    # Revolutionary Subjects
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = dominion
-                is_subject_of_type = dominion_tc
-                is_subject_of_type = consolidated_dominion
-                is_subject_of_type = administrative_region
-            }
-        }
-
-        if = {
-            limit = {
-                is_revolutionary = no
-            }
-            log = "[This.GetName] is not revolutionary, adding revolutionary_empire_reform"
-            change_government = monarchy
-            add_government_reform = revolutionary_empire_reform 
+    4201 = {            
+        add_great_project_tier = {
+            type = hf_ancient_koguryo_kingdom
+            tier = 3
         }
     }
 }
@@ -133,7 +58,7 @@ ROOT = {
 ROOT = {
     set_variable = {
         which = colonyLimit
-        value = 35
+        value = 0
     }
 
     set_variable = {
@@ -255,9 +180,9 @@ ROOT = {
     #####################################################################################
     # Foreign Countries
     #####################################################################################
-        JP3 = {
-            override_country_name = "Choseon Dynasty"
-        }
+    # JP3 = {
+    #     override_country_name = "Choseon Dynasty"
+    # }
     #####################################################################################
     # Layer 1: Core:
     #####################################################################################
@@ -270,8 +195,12 @@ ROOT = {
             #     }
             # }
             # override_country_name = CELESTIAL_EMPIRE_TIAN_XIA
-            override_country_name = IMPERIAL_AMERICAN_DIRECTORATE_NAME
+            # override_country_name = IMPERIAL_AMERICAN_DIRECTORATE_NAME
         }
+        # override_country_name = CELESTIAL_EMPIRE_TIAN_XIA
+        override_country_name = "Mongol Empire"
+        # "Mongol Empire"
+        # restore_country_name = yes
 
         # set_country_flag = british_empire_flag
     }
@@ -284,14 +213,8 @@ ROOT = {
     ROOT = {
         # Administrative Regions | Qing Imperial Provinces of X
         ROOT = {
-            CAN = {
+            JAN = {
                 override_country_name = "Governorate of Canada"
-            }
-            MEX = {
-                override_country_name = "Governorate of Mexico"
-            }
-            CUB = {
-                override_country_name = "Governorate of the Caribbean"
             }
         }
 
@@ -321,7 +244,7 @@ ROOT = {
 
         # Imperial Cities | Imperial City of X | imperial_city
         ROOT = {
-            CAO = {
+            JAN = {
                 override_country_name = "Cahokia Metropolis"
                 set_country_flag = metropolis
             }
@@ -347,12 +270,6 @@ ROOT = {
             JAN = {
                 override_country_name = "United Belgian Kingdom"
             }
-            ETH = {
-                override_country_name = "Ethiopian Imperial Directorate"
-            }
-            MNG = {
-                override_country_name = "Chinese Imperial Directorate"
-            }
         }
 
         # Integrated Personal Unions
@@ -377,9 +294,6 @@ ROOT = {
             JAN = {
                 override_country_name = "Portugal Imperial Heir Appanage"
             }
-            AYU = {
-                override_country_name = "Thailand Sub-Directorate"
-            }
         }
         
         # Princely Vassals (prince_vassal) or royal privileges
@@ -398,30 +312,19 @@ ROOT = {
     ROOT = {
         # Native Reserves | X_adj Tribal Reserve
         ROOT = {
-            HDA = {
+            JAN = {
                 override_country_name = "Haida Tribal Reservation"
             }
-            DH1 = {
-                override_country_name = "Allada Tribal Reservation"
-            }
-            CHU = {
-                override_country_name = "Chukchi Siberian Reservation"
-                set_country_flag = siberian_reservation
-            }
-            KMC = {
-                override_country_name = "Kamchatka Siberian Reservation"
-                set_country_flag = siberian_reservation
-            }
         }
-
+        
         # These are basically marches for hordes, they are given mroe autonomy though, seeing as this a tier 4 not a tier 3 subject
         # Integrated Tribe Subjects | Great Horde of X | Essentially Horde Marches
         ROOT = {
             JAN = {
                 override_country_name = "Zaporozhian Cossacks"
             }
-            JAN = {
-                override_country_name = "British Golden Horde"
+            CRI = {
+                override_country_name = "Crimean Horde"
                 set_country_flag = imperial_horde
             }
         }
@@ -439,11 +342,8 @@ ROOT = {
         
         # Mining Corporations | Mines of X
         ROOT = {
-            K08 = {
+            JAN = {
                 override_country_name = "Ethiopian Mining Co"
-            }
-            ZIM = {
-                override_country_name = "Zimbabwe Mining Co"
             }
         }
 
@@ -458,33 +358,35 @@ ROOT = {
         ROOT = {
             JAN = {
                 override_country_name = "Prussia Soviet Commandery"
+                set_country_flag = regional_march
+                set_country_flag = imperial_march
+            }
+            AYU = {
+                override_country_name = "Commandery of Thailand"
             }
             DAI = {
-                override_country_name = "Vietnam Regional Commandery"
-                set_country_flag = regional_march
+                override_country_name = "Imperial Commandery of Vietnam"
+                set_country_flag = imperial_march
             }
-            GEO = {
-                override_country_name = "S. Caucasian Commandery"
-            }
-            AVA = {
-                override_country_name = "Burma Commandery"
+            TUR = {
+                override_country_name = "Ottoman Imperial Commandery"
+                set_country_flag = imperial_march
             }
         }
         
         # Defensive Marches | Fortress of X
         ROOT = {
-            BEN = {
+            JAN = {
                 override_country_name = "Great Walls of Benin"
             }
-            CIR = {
-                override_country_name = "N. Caucasian Mountain Fortress"
-                # set_country_flag = wall_march
+            GEO = {
+                override_country_name = "Fortress of Caucasus"
             }
         }
         
         # Naval Marches | Naval Base of X or Gates of X
         ROOT = {
-            K04 = {
+            JAN = {
                 override_country_name = "Coasta Rica Naval Commandery"
             }
         }
@@ -498,7 +400,7 @@ ROOT = {
 
         # Tibetan Ministries
         ROOT = {
-            TIB = {
+            JAN = {
                 override_country_name = "Tibetan Ministry of US Affairs"
             }
         }
@@ -522,55 +424,9 @@ ROOT = {
             clr_country_flag = dark_dominion
             clr_country_flag = medium_dominion
         }
-        AUS = {
+        JAN = {
             override_country_name = "Australian Viceroyality"
             set_country_flag = medium_dominion
-        }
-        COL = {
-            override_country_name = "Colombian Viceroyality"
-            set_country_flag = dark_dominion
-        }
-        PEU = {
-            override_country_name = "Peruvian Viceroyality"
-            set_country_flag = light_dominion
-        }
-        VNZ = {
-            override_country_name = "Venezuelan Viceroyality"
-            set_country_flag = very_light_dominion
-        }
-        BRZ = {
-            override_country_name = "Brazilian Viceroyality"
-            set_country_flag = medium_dominion
-        }
-        QTO = {
-            override_country_name = "Ecuadorian Viceroyality"
-            set_country_flag = very_light_dominion
-        }
-        LAP = {
-            override_country_name = "Argentinian Viceroyality"
-            set_country_flag = light_dominion
-        }
-        CHL = {
-            override_country_name = "Chilean Viceroyality"
-            set_country_flag = medium_dominion
-        }
-        
-        K00 = {
-            override_country_name = "Guyanese Viceroyality"
-            set_country_flag = light_dominion
-        }
-        K01 = {
-            override_country_name = "Bolivian Viceroyality"
-            set_country_flag = dark_dominion
-        }
-        K03 = {
-            override_country_name = "Uruguayan Viceroyality"
-            set_country_flag = dark_dominion
-        }
-        
-        GUY = {
-            override_country_name = "Paraguayan Viceroyality"
-            set_country_flag = very_light_dominion
         }
     }
 
@@ -582,11 +438,8 @@ ROOT = {
     ROOT = {
         # Trade Outposts | X Trade Outpost
         ROOT = {
-            K02 = {
+            JAN = {
                 override_country_name = "Singapore Trade Outpost"
-            }
-            K06 = {
-                override_country_name = "Hong Kong Trade Outpost"
             }
         }
 
@@ -613,11 +466,8 @@ ROOT = {
 
         # Commercial Enterprises | X Commercial Enterprise
         ROOT = {
-            LFA = {
+            JAN = {
                 override_country_name = "The Lanfang Corporation"
-            }
-            K05 = {
-                override_country_name = "Macau Grand Casino Metropolis"
             }
         }
 
@@ -644,11 +494,11 @@ ROOT = {
         }
         ROOT = {
             # Tribal Empires | Tribal Empire of X
-            KBO = {
+            JAN = {
                 override_country_name = "Kanem Bornu Tribal Empire"
                 set_country_flag = tribal_empire
             }
-            SON = {
+            JAN = {
                 override_country_name = "Songhai Tribal Empire"
                 set_country_flag = tribal_empire
             }
@@ -657,11 +507,11 @@ ROOT = {
                 override_country_name = "Songhai Tribal Kingdom"
                 set_country_flag = tribal_kingdom
             }
-            MPH = {
+            JAN = {
                 override_country_name = "Laos Tribal Kingdom"
                 set_country_flag = tribal_kingdom
             }
-            HS3 = {
+            JAN = {
                 override_country_name = "Rano Tribal Kingdom"
                 set_country_flag = tribal_kingdom
             }
@@ -671,7 +521,7 @@ ROOT = {
                 set_country_flag = tribal_duchy
             }
             # Tribal County | X Tribal County
-            AIR = {
+            JAN = {
                 override_country_name = "Tribal Saharan Passways"
                 set_country_flag = tribal_county
             }
@@ -726,14 +576,30 @@ ROOT = {
                 override_country_name = "Grand Republic of Novgorod"
                 set_country_flag = empire_fiefdom
             }
+            AVA = {
+                override_country_name = "Grand Kingdom of Burma"
+                set_country_flag = empire_fiefdom
+            }
             # Kingdom Tier - Archbishoprics, Kingdoms, Sultanates, Grand Duchies, Archduchies, Electorates, etc
             JAN = {
                 override_country_name = "Kingdom of Yemen"
                 set_country_flag = kingdom_fiefdom
             }
+            YNN = {
+                override_country_name = "Kingdom of Laos"
+                set_country_flag = kingdom_fiefdom
+            }
+            SYR = {
+                override_country_name = "Kingdom of Syria"
+                set_country_flag = kingdom_fiefdom
+            }
             # Duchies - Bishoprics, Duchies, Grand Emirates, Petty Kingdoms, etc
             JAN = {
                 override_country_name = "Petty Kingdom of Nepal"
+                set_country_flag = duchy_fiefdom
+            }
+            KHM = {
+                override_country_name = "Petty Kingdom of Cambodia"
                 set_country_flag = duchy_fiefdom
             }
             # Counties - Petty Bishoprics, Counties, Emirates, Duchies, Jarldoms, Earldoms, etc
@@ -755,38 +621,14 @@ ROOT = {
         ROOT = {
             # Vanquished foes under direct military occupation
             # Intense de facto oppression, but with high amount of de jure autonomy compared to more core subject states
-			DMK = {
+			JAN = {
 				override_country_name = "Demak Satellite State"
 			}
-			DLI = {
-				override_country_name = "Deli Satellite State"
-			}
-			ATJ = {
-				override_country_name = "Aceh Satellite State"
-			}
-            PAH = {
-                override_country_name = "Pahang Satellite State"
-            }
-            PSA = {
-                override_country_name = "Pasai Satellite State"
-            }
-            KHM = {
-                override_country_name = "Cambodia Satellite State"
-            }
-            AX1 = {
-                override_country_name = "Muchi Satellite State"
-            }
-            BNG = {
-                override_country_name = "Bangladesh Satellite State"
-            }
-            TRT = {
-                override_country_name = "Tirhut Satellite State"
-            }
         }
 
         # Comintern Members
         ROOT = {
-            BYZ = {
+            JAN = {
                 override_country_name = "People's Republic of Constantinople"
             }
         }
@@ -819,20 +661,16 @@ ROOT = {
     # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
 
     ROOT = {
-        NZL = {
+        JAN = {
             override_country_name = "American New Zealand"
         }
     }
 
     # Revolutionary Subjects
     ROOT = {
-        LNG = {
+        JAN = {
             override_country_name = "Liang Provisional State"
             set_country_flag = revolutionary_subject_1
-        }
-        WUU = {
-            override_country_name = "Wu Provisional State"
-            set_country_flag = revolutionary_subject_2
         }
     }
 
@@ -845,9 +683,6 @@ ROOT = {
         JAN = {
             override_country_name = "Japanese Crown Tributary"
         }
-        MLC = {
-            override_country_name = "Malacca Tributary State"
-        }
     }
 
     ####################################################################################
@@ -856,16 +691,13 @@ ROOT = {
 
     ROOT = {
         # Protectorate | The X Protectorate
-        YUE = {
+        JAN = {
             override_country_name = "Protectorate of Yue"
-        }
-        ZAN = {
-            override_country_name = "Protectorate of Zanzibar"
         }
         
         # Pirate Brotherhoods
         ROOT = {
-            KNI = {
+            JAN = {
                 override_country_name = "Rhodes Soviet Spy Fleet"
             }
         }
@@ -885,6 +717,18 @@ ROOT = {
     ROOT = {
         JAN = {
             override_country_name = "Icelandic British Viking Kingdom"
+        }
+        NOR = {
+            override_country_name = "Kingdom of Norway"
+            set_country_flag = color_medium
+        }
+        SWE = {
+            override_country_name = "Kingdom of Sweden"
+            set_country_flag = color_dark
+        }
+        FIN = {
+            override_country_name = "Kingdom of Finland"
+            set_country_flag = color_light
         }
     }
 
@@ -917,8 +761,9 @@ ROOT = {
     #     restore_country_color = yes
     #     restore_country_name = yes
     # }
+    # restore_country_color = yes
     change_country_color = {
-        color = { 0 0 160 }
+        color = { 190 0 0 }
     }
 
     TAU = {
@@ -1017,7 +862,7 @@ ROOT = {
             change_country_color = {
                 color = { 0 0 150 }
             }
-        } else { 
+        } else ={ 
             change_country_color = {
                 color = { 80 0 130 }
             }
@@ -1042,7 +887,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 20 20 60 }
+            color = { 80 0 0 }
         }
     }
 
@@ -1057,7 +902,7 @@ ROOT = {
                 has_country_flag = imperial_march
             }
             change_country_color = {
-                color = { 20 0 120 }
+                color = { 120 0 0 }
             }
         } else_if = {
             limit = {
@@ -1066,10 +911,9 @@ ROOT = {
             change_country_color = {
                 color = { 70 20 150 }
             }
-        } 
-        else { 
+        } else = { 
             change_country_color = {
-                color = { 55 5 130 }
+                color = { 150 0 0 }
             }
         }
     }
@@ -1085,11 +929,11 @@ ROOT = {
                 has_country_flag = imperial_horde
             }
             change_country_color = {
-                color = { 0 15 140 }
+                color = { 110 10 10 }
             }
-        } else {
+        } else = {
             change_country_color = {
-                color = { 0 10 130 }
+                color = { 120 10 10 }
             }
         }
     } 
@@ -1118,7 +962,7 @@ ROOT = {
                 has_country_flag = empire_fiefdom
             }
             change_country_color = {
-                color = { 15 15 170 }
+                color = { 170 15 15 }
             }
         } 
         else_if = {
@@ -1126,7 +970,7 @@ ROOT = {
                 has_country_flag = kingdom_fiefdom
             }
             change_country_color = {
-                color = { 30 30 180 }
+                color = { 180 30 30 }
             }
         } 
         else_if = {
@@ -1135,7 +979,7 @@ ROOT = {
             }
             
             change_country_color = {
-                color = { 50 50 200 }
+                color = { 200 50 50 }
             }
         } 
         else_if = {
@@ -1143,7 +987,7 @@ ROOT = {
                 has_country_flag = vassal_fiefdom
             }
             change_country_color = {
-                color = { 100 80 180 }
+                color = { 180 80 100 }
             }
         } 
         else_if = {
@@ -1151,7 +995,7 @@ ROOT = {
                 has_country_flag = county_fiefdom
             }
             change_country_color = {
-                color = { 75 75 250 }
+                color = { 250 75 75 }
             }
         }        
         else_if = {
@@ -1159,10 +1003,10 @@ ROOT = {
                 has_country_flag = barony_fiefdom
             }
             change_country_color = {
-                color = { 120 120 255 }
+                color = { 255 120 120 }
             }
         }        
-        else {
+        else = {
             change_country_color = {
                 color = { 0 0 0 }
             }
@@ -1217,7 +1061,7 @@ ROOT = {
                 color = { 120 150 255 }
             }
         }        
-        else {
+        else = {
             change_country_color = {
                 color = { 0 0 0 }
             }
@@ -1241,7 +1085,17 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 90 90 180 }
+            color = { 220 20 20 }
+        }
+    }
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = mongolian_tribe
+            }
+        }
+        change_country_color = {
+            color = { 220 40 40 }
         }
     }
 
@@ -1275,7 +1129,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 120 150 255 }
+            color = { 200 100 100 }
         }
     }  
 
@@ -1343,7 +1197,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 60 0 150 }
+            color = { 150 0 60 }
         }
     }
     every_subject_country = {
@@ -1354,6 +1208,10 @@ ROOT = {
         }
         change_country_color = {
             country = LIV
+        }
+
+        change_country_color = {
+            color = { 150 50 50 }
         }
     }
     every_subject_country = {
@@ -1369,7 +1227,7 @@ ROOT = {
             change_country_color = {
                 color = { 140 140 255 }
             }
-        } else {
+        } else = {
             change_country_color = {
                 color = { 30 30 230 }
             }
@@ -1395,7 +1253,7 @@ ROOT = {
             change_country_color = {
                 color = { 126 87 198 }
             }
-        } else {
+        } else = {
             change_country_color = {
                 color = { 0 0 0 }
             }
@@ -1408,7 +1266,7 @@ ROOT = {
             }
         }
         change_country_color = {
-            color = { 200 200 255 }
+            color = { 255 200 200 }
         }
     }
     every_subject_country = {
@@ -1417,19 +1275,31 @@ ROOT = {
                 is_subject_of_type = viking_settlement
             }
         }
-        change_country_color = {
-            # color = { 0 0 0 } 
-            color = { 250 180 200 }
-        }
-    }
-    every_subject_country = {
-        limit = {
-            OR = {
-                is_subject_of_type = integrated_tribe_subject
+        if = {
+            limit = {
+                has_country_flag = color_medium
             }
-        }
-        change_country_color = {
-            color = { 40 30 180 }
+            change_country_color = {
+                color = { 250 185 205 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = color_dark
+            }
+            change_country_color = {
+                color = { 235 160 175 }
+            }
+        } else_if = {
+            limit = {
+                has_country_flag = color_light
+            }
+            change_country_color = {
+                color = { 255 195 215 }
+            }
+        } else = {
+            change_country_color = {
+                color = { 0 0 0 } 
+            }
         }
     }
     every_subject_country = {
@@ -1549,7 +1419,7 @@ ROOT = {
             change_country_color = {
                 color = { 65 65 225 }
             }
-        } else {
+        } else = {
             change_country_color = {
             }
         }

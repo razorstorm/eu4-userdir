@@ -3560,3 +3560,1252 @@ ROOT = {
         }
     }
 }
+
+
+
+# USA
+
+ROOT = {
+    # Naming: Britain -> British
+    # Naming: England -> English
+    # Naming: United Kingdom -> British
+    # Naming: British Empire -> Imperial British
+    # Celestial is short for both Imperial Chinese and Imperial. So Celestial Chinese [Title], and Celestial [Title] mostly mean the sam ething, but the different wording may denote rank
+    # Overall layering Home Lands > Vassals > Colonies > Tributaries
+    # Overall layering levels: Core > Internal > External
+
+    # Tiers of Integration
+    
+    # Layer A: De jure lands of the Empire
+    # 1. British Core
+    # 2. Core Regions (Admin region, real union subjects, imperial cities, etc)
+    # 3. Special Administrative Regions + Direct Commanderies (Marches / Defensive Marches, Appanage, Princely Vassals)
+    # 4. Delegated Semi-autonomous Regions aka Core Subjects (Resorts, Tusi, Native Reserves, tropical resorts, Mining Corporation)
+    # 5. Core Colonies (Consolidated Dominions)
+    
+    # Layer B: De jure subjects of the Greater Realm
+    # 6. Internal Vassals (Fiefdoms, Brother Kingdoms, Vassals, Commercial Enterprises, Agricultural Marches)
+    # 7. Internal Colonies (Dominions)
+    # 8. Internal Tributaries (Jimi States)
+    
+    # Layer C: De jure subjects of the Greater Hegemony
+    # 9. External Vassals (Protectorates, Vassals, Trade Outposts, Puppet States, Pirate Brotherhoods, etc)
+    # 10. External Colonies (Colonies)
+    # 11. External Tributaries (Tributaries)
+    # 12. Miscellaneous (Concentratoin Camps)
+
+    
+    #####################################################################################
+    # Foreign Countries
+    #####################################################################################
+        JP3 = {
+            override_country_name = "Choseon Dynasty"
+        }
+    #####################################################################################
+    # Layer 1: Core:
+    #####################################################################################
+
+    ROOT = {
+        if = {
+            # limit = {
+            #     or = {
+            #         tag = RUS
+            #     }
+            # }
+            # override_country_name = CELESTIAL_EMPIRE_TIAN_XIA
+            override_country_name = IMPERIAL_AMERICAN_DIRECTORATE_NAME
+        }
+
+        # set_country_flag = british_empire_flag
+    }
+
+
+    #####################################################################################
+    # Layer 2: Core Regions (Admin region, real union subjects, imperial cities, etc):
+    #####################################################################################
+
+    ROOT = {
+        # Administrative Regions | Qing Imperial Provinces of X
+        ROOT = {
+            CAN = {
+                override_country_name = "Governorate of Canada"
+            }
+            MEX = {
+                override_country_name = "Governorate of Mexico"
+            }
+            CUB = {
+                override_country_name = "Governorate of the Caribbean"
+            }
+        }
+
+        # Viceroyalities (Empires) > Governorates (Kingdoms) > Prefectures (Duchies) > Provinces (Counties) > Districts (Baronies)
+        ROOT = {
+            # Viceroyalities (Empire Sized Regions) | Viceroyality of X or X_adj Viceroyalty
+            JAN = {
+                override_country_name = "American Jayan Viceroyality"
+            }
+            # Governorates (Kingdom Sized Regions) | SSR (Soviet Socialist Republic)
+            JAN = {
+                override_country_name = "Khorasan S.S.R."
+            }
+            # Prefectures (Duchy Sized Regions) | X SSO (Soviet Socialist Oblast)
+            JAN = {
+                override_country_name = "Saxony S.S.O."
+            }
+            # Provinces (County Sized Regions) | X SSP (Soviet Socialist Province)
+            JAN = {
+                override_country_name = "Seneca Governate"
+            }
+            # Districts (Barony Sized Regions) | X S.S.D (Soviet Socialist District)
+            JAN = {
+                override_country_name = "Shetland S.S.D."
+            }
+        }
+
+        # Imperial Cities | Imperial City of X | imperial_city
+        ROOT = {
+            CAO = {
+                override_country_name = "Cahokia Metropolis"
+                set_country_flag = metropolis
+            }
+        }
+        # HRE Free Cities | Free City of X | imperial_city
+        ROOT = {
+            JAN = {
+                override_country_name = "Bremen Free City"
+                set_country_flag = free_city
+            }
+        }
+
+        # Banking Families | Imperial Qing X Bank
+        ROOT = {
+            JAN = {
+                override_country_name = "The Hanseatic League"
+            }
+        }
+        
+        # Real Unions
+        # Different than a fiefdom in that a real union is directly ruled by the monarch and his bureaucracy, rather than being indirectly ruled by a vassal king.
+        ROOT = {
+            JAN = {
+                override_country_name = "United Belgian Kingdom"
+            }
+            ETH = {
+                override_country_name = "Ethiopian Imperial Directorate"
+            }
+            MNG = {
+                override_country_name = "Chinese Imperial Directorate"
+            }
+        }
+
+        # Integrated Personal Unions
+        # A bit less control than real unions
+        ROOT = {
+            JAN = {
+                override_country_name = "Crown Kingdom of Lithuania"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 3: Special Administrative Regions + Royal Family Demesnes: (Appanages and Princely Appanages) 
+    #####################################################################################
+
+    ROOT = {
+        # Appanages 
+        ROOT = {
+            # IRE = {
+            #     override_country_name = "Ireland Crown Appanage"
+            # }
+            JAN = {
+                override_country_name = "Portugal Imperial Heir Appanage"
+            }
+            AYU = {
+                override_country_name = "Thailand Sub-Directorate"
+            }
+        }
+        
+        # Princely Vassals (prince_vassal) or royal privileges
+        ROOT = {
+            JAN = {
+                override_country_name = "Bosinia Princely Appanage"
+            }
+        }
+    }
+    
+    #####################################################################################
+    # Layer 4: Core Vassals (Tu-Si), Marches Resorts, Native Reserves, tropical resorts, Mining Corporation, Tibetain Ministries, etc): 
+    #####################################################################################
+    
+    # Deeply entangled subject states that are really integral parts of the Empire proper, rather than semi-sovereign associated states. These are typically specialized governments or bureaus built for specialized purposes or for administrating special lands. These are considered de jure lands owned by the Empire proper. 
+    ROOT = {
+        # Native Reserves | X_adj Tribal Reserve
+        ROOT = {
+            HDA = {
+                override_country_name = "Haida Tribal Reservation"
+            }
+            DH1 = {
+                override_country_name = "Allada Tribal Reservation"
+            }
+            CHU = {
+                override_country_name = "Chukchi Siberian Reservation"
+                set_country_flag = siberian_reservation
+            }
+            KMC = {
+                override_country_name = "Kamchatka Siberian Reservation"
+                set_country_flag = siberian_reservation
+            }
+        }
+
+        # These are basically marches for hordes, they are given mroe autonomy though, seeing as this a tier 4 not a tier 3 subject
+        # Integrated Tribe Subjects | Great Horde of X | Essentially Horde Marches
+        ROOT = {
+            JAN = {
+                override_country_name = "Zaporozhian Cossacks"
+            }
+            JAN = {
+                override_country_name = "British Golden Horde"
+                set_country_flag = imperial_horde
+            }
+        }
+
+        # Pagan Chiefdom 
+        ROOT = {
+        }
+
+        # Tropical Resorts | Name X Resort
+        ROOT = {
+            BLI = {
+                override_country_name = "Bali Tropical Resort"
+            }
+        }
+        
+        # Mining Corporations | Mines of X
+        ROOT = {
+            K08 = {
+                override_country_name = "Ethiopian Mining Co"
+            }
+            ZIM = {
+                override_country_name = "Zimbabwe Mining Co"
+            }
+        }
+
+        # Sister Republics - Partner Revolutionary Republics under Soviet leadership. 
+        ROOT = {
+            JAN = {
+                override_country_name = "People's Soviet Republic of China"
+            }
+        }
+           
+        # Marches | Commandery of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Prussia Soviet Commandery"
+            }
+            DAI = {
+                override_country_name = "Vietnam Regional Commandery"
+                set_country_flag = regional_march
+            }
+            GEO = {
+                override_country_name = "S. Caucasian Commandery"
+            }
+            AVA = {
+                override_country_name = "Burma Commandery"
+            }
+        }
+        
+        # Defensive Marches | Fortress of X
+        ROOT = {
+            BEN = {
+                override_country_name = "Great Walls of Benin"
+            }
+            CIR = {
+                override_country_name = "N. Caucasian Mountain Fortress"
+                # set_country_flag = wall_march
+            }
+        }
+        
+        # Naval Marches | Naval Base of X or Gates of X
+        ROOT = {
+            K04 = {
+                override_country_name = "Coasta Rica Naval Commandery"
+            }
+        }
+
+        # Religious Marches / Religious SARs
+        ROOT = {
+            JAN = {
+                override_country_name = "Jerusalem Celestial Holy Kingdom"
+            }
+        }
+
+        # Tibetan Ministries
+        ROOT = {
+            TIB = {
+                override_country_name = "Tibetan Ministry of US Affairs"
+            }
+        }
+
+    }
+    
+    #####################################################################################
+    # Layer 5: Core Colonies (Consolidated Dominions):
+    #####################################################################################
+    # Core Colonies are rare and typically only present when playing a new world nation. Colonial charters being granted to home regions to help speed up colonization would count as a consolidated dominion. When doing overseas colonization, the colony must be either an external or internal colony, not a core colony. 
+    # Crown dominion, core dominion, and Dominate mostly mean the same thing. 
+
+    # Consolidated Dominions | American Directorate of X
+    ROOT = {
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = consolidated_dominion
+            }
+            clr_country_flag = very_light_dominion
+            clr_country_flag = light_dominion
+            clr_country_flag = dark_dominion
+            clr_country_flag = medium_dominion
+        }
+        AUS = {
+            override_country_name = "Australian Viceroyality"
+            set_country_flag = medium_dominion
+        }
+        COL = {
+            override_country_name = "Colombian Viceroyality"
+            set_country_flag = dark_dominion
+        }
+        PEU = {
+            override_country_name = "Peruvian Viceroyality"
+            set_country_flag = light_dominion
+        }
+        VNZ = {
+            override_country_name = "Venezuelan Viceroyality"
+            set_country_flag = very_light_dominion
+        }
+        BRZ = {
+            override_country_name = "Brazilian Viceroyality"
+            set_country_flag = medium_dominion
+        }
+        QTO = {
+            override_country_name = "Ecuadorian Viceroyality"
+            set_country_flag = very_light_dominion
+        }
+        LAP = {
+            override_country_name = "Argentinian Viceroyality"
+            set_country_flag = light_dominion
+        }
+        CHL = {
+            override_country_name = "Chilean Viceroyality"
+            set_country_flag = medium_dominion
+        }
+        
+        K00 = {
+            override_country_name = "Guyanese Viceroyality"
+            set_country_flag = light_dominion
+        }
+        K01 = {
+            override_country_name = "Bolivian Viceroyality"
+            set_country_flag = dark_dominion
+        }
+        K03 = {
+            override_country_name = "Uruguayan Viceroyality"
+            set_country_flag = dark_dominion
+        }
+        
+        GUY = {
+            override_country_name = "Paraguayan Viceroyality"
+            set_country_flag = very_light_dominion
+        }
+    }
+
+    ####################################################################################
+    # Layer 6: Internal Vassals (Vassals, Trade Outposts, Fiefdoms, Puppet STates, Commercial Enterprises):     
+    #####################################################################################
+
+    # Internal Vassals are typically subsidiary governments or organizations set up by the central regime and answerable directly to the throne. They are small localized governments for specialized purposes, not a true vassal state" perse
+    ROOT = {
+        # Trade Outposts | X Trade Outpost
+        ROOT = {
+            K02 = {
+                override_country_name = "Singapore Trade Outpost"
+            }
+            K06 = {
+                override_country_name = "Hong Kong Trade Outpost"
+            }
+        }
+
+        # Client States
+        ROOT = {
+            JAN = {
+                override_country_name = "Karelian Client Prefecture"
+            }
+        }
+
+        # Generic Vassals (Waiting to be annexed)
+        ROOT = {
+            JAN = {
+                override_country_name = "Test"
+            }
+        }
+
+        # Trade Companies
+        ROOT = {
+            JAN = {
+                override_country_name = "British East India Company"
+            }
+        }
+
+        # Commercial Enterprises | X Commercial Enterprise
+        ROOT = {
+            LFA = {
+                override_country_name = "The Lanfang Corporation"
+            }
+            K05 = {
+                override_country_name = "Macau Grand Casino Metropolis"
+            }
+        }
+
+        # Agricultural Marches | Agricultural March of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Walachia Romanian Wheat Fields"
+            }
+        }
+
+        # Tu Si | X Tusi / X Siberian Tusi
+        # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
+        # For non-chinese, they can be tiered
+        # Tribal Kingdom
+        # Tribal Duchy
+        # Tribal County
+        # Tribal Barony
+        every_subject_country = {
+            clr_country_flag = tribal_empire
+            clr_country_flag = tribal_kingdom
+            clr_country_flag = tribal_duchy
+            clr_country_flag = tribal_county
+            clr_country_flag = tribal_barony
+        }
+        ROOT = {
+            # Tribal Empires | Tribal Empire of X
+            KBO = {
+                override_country_name = "Kanem Bornu Tribal Empire"
+                set_country_flag = tribal_empire
+            }
+            SON = {
+                override_country_name = "Songhai Tribal Empire"
+                set_country_flag = tribal_empire
+            }
+            # Tribal Kingdoms
+            JAN = {
+                override_country_name = "Songhai Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            MPH = {
+                override_country_name = "Laos Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            HS3 = {
+                override_country_name = "Rano Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            # Tribal Duchy | Tribal Duchy of X
+            JAN = {
+                override_country_name = "Zamfara Tribal Duchy"
+                set_country_flag = tribal_duchy
+            }
+            # Tribal County | X Tribal County
+            AIR = {
+                override_country_name = "Tribal Saharan Passways"
+                set_country_flag = tribal_county
+            }
+            JAN = {
+                override_country_name = "Nupe Tribal County"
+                set_country_flag = tribal_county
+            }
+            # Tribal Barony | X Tribal Barony
+            JAN = {
+                override_country_name = "Ketu Tribe"
+                set_country_flag = tribal_barony
+            }
+        }
+
+        ROOT = {
+            # Brother Kingdoms 
+            # Essentially identical to a Kingdom tier Fiefdom, except granted to friends of the Emperor or the dynasty. 
+            # This grants them heightened social prestige and a bit more de facto autonomy, but is largely the same as a kingly fiefdom. A bit of a philosophical cross between a client Kingdom and a vassal Kingdom fiefdom. 
+            # Functionally identical to a fief Kingdom.
+            # Anglo instead of British to refer to an associated realm but not directly ruled by the monarch
+            JAN = {
+                override_country_name = "Anglo Kingdom of Bohemia"
+            }
+        }
+
+        # Palatinates | Electorate fiefdoms. Slightly elevated above equally ranked fiefdoms in terms of precedence and prestige.
+        ROOT = {
+            JAN = {
+                override_country_name = "Palatinate of the Rhine"
+            }
+        }
+
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = fief_subject
+            }
+            clr_country_flag = empire_fiefdom
+            clr_country_flag = kingdom_fiefdom
+            clr_country_flag = duchy_fiefdom
+            clr_country_flag = county_fiefdom
+            clr_country_flag = barony_fiefdom
+        }
+        # Fiefdoms | {fiefdom title} of X
+        # Fiefdoms are a bit more autonomous than tusi and normal vassals. They are subservient to the laws of the central empire but fuedal lords have decent leeway to implement their own policies
+        # Kingdoms: Kingdom of X - Large
+        # Duchies: Duchy of X - Medium | Fief Subject (set_country_flag = duchy_fiefdom)
+        # Counties: County of X - Small | Fief Subject
+        # Baronies: Barony of X - OPMs | Fief Subject
+        ROOT = {
+            # Empire Tier
+            JAN = {
+                override_country_name = "Grand Republic of Novgorod"
+                set_country_flag = empire_fiefdom
+            }
+            # Kingdom Tier - Archbishoprics, Kingdoms, Sultanates, Grand Duchies, Archduchies, Electorates, etc
+            JAN = {
+                override_country_name = "Kingdom of Yemen"
+                set_country_flag = kingdom_fiefdom
+            }
+            # Duchies - Bishoprics, Duchies, Grand Emirates, Petty Kingdoms, etc
+            JAN = {
+                override_country_name = "Petty Kingdom of Nepal"
+                set_country_flag = duchy_fiefdom
+            }
+            # Counties - Petty Bishoprics, Counties, Emirates, Duchies, Jarldoms, Earldoms, etc
+            JAN = {
+                override_country_name = "Tyrol County"
+                set_country_flag = county_fiefdom
+            }
+            # Baronies - Parishes, Baronies, Towns, Holdings, Castles, Fortresses, Manors, etc (Heavily urbanized holdings should be Imperial Cities instead)
+            JAN = {
+                override_country_name = "Paderborn Barony"
+                set_country_flag = barony_fiefdom
+            }
+        }
+        
+        # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
+        # Large - Grand Directorate
+        # Medium - Directorate
+        # Small - Satellite
+        ROOT = {
+            # Vanquished foes under direct military occupation
+            # Intense de facto oppression, but with high amount of de jure autonomy compared to more core subject states
+			DMK = {
+				override_country_name = "Demak Satellite State"
+			}
+			DLI = {
+				override_country_name = "Deli Satellite State"
+			}
+			ATJ = {
+				override_country_name = "Aceh Satellite State"
+			}
+            PAH = {
+                override_country_name = "Pahang Satellite State"
+            }
+            PSA = {
+                override_country_name = "Pasai Satellite State"
+            }
+            KHM = {
+                override_country_name = "Cambodia Satellite State"
+            }
+            AX1 = {
+                override_country_name = "Muchi Satellite State"
+            }
+            BNG = {
+                override_country_name = "Bangladesh Satellite State"
+            }
+            TRT = {
+                override_country_name = "Tirhut Satellite State"
+            }
+        }
+
+        # Comintern Members
+        ROOT = {
+            BYZ = {
+                override_country_name = "People's Republic of Constantinople"
+            }
+        }
+        
+        # Vassals
+        ROOT = {
+            JAN = {
+                override_country_name = "Wu Provisional State"
+            }
+        }
+
+        # Semi Free Vassals 
+        ROOT = {             
+            JAN = {
+                override_country_name = "Basque Free Country"
+            }
+        }
+
+        # Free Vassals 
+        ROOT = {             
+            JAN = {
+                override_country_name = "Catalonia Autonomous Region"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 7: Internal Colonies (Dominions):
+    #####################################################################################
+    # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
+
+    ROOT = {
+        NZL = {
+            override_country_name = "American New Zealand"
+        }
+    }
+
+    # Revolutionary Subjects
+    ROOT = {
+        LNG = {
+            override_country_name = "Liang Provisional State"
+            set_country_flag = revolutionary_subject_1
+        }
+        WUU = {
+            override_country_name = "Wu Provisional State"
+            set_country_flag = revolutionary_subject_2
+        }
+    }
+
+    ####################################################################################
+    # Layer 8: Internal Tributaries (Jimi Tributary Vassals): 
+    #####################################################################################
+    
+    # Jimi States
+    ROOT = {
+        JAN = {
+            override_country_name = "Japanese Crown Tributary"
+        }
+        MLC = {
+            override_country_name = "Malacca Tributary State"
+        }
+    }
+
+    ####################################################################################
+    # Layer 9: External Vassals (Protectorates, Pirate Brotherhoods, etc):
+    #####################################################################################
+
+    ROOT = {
+        # Protectorate | The X Protectorate
+        YUE = {
+            override_country_name = "Protectorate of Yue"
+        }
+        ZAN = {
+            override_country_name = "Protectorate of Zanzibar"
+        }
+        
+        # Pirate Brotherhoods
+        ROOT = {
+            KNI = {
+                override_country_name = "Rhodes Soviet Spy Fleet"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 10: External Colonies (Colonies)
+    #####################################################################################
+    # Colonies | Root Adj X
+    ROOT = {   
+        JAN = {
+            override_country_name = "Norwegian Celestial Colony"
+        }   
+    }
+
+    # Viking Settlements 
+    ROOT = {
+        JAN = {
+            override_country_name = "Icelandic British Viking Kingdom"
+        }
+    }
+
+    #####################################################################################
+    # Layer 11: External Tributaries (Tributaries)
+    #####################################################################################
+    # Tributary Subjects | Even less integrated than Chinese Tributaries. Part of the greater Chinese Hegemony, not part of the Greater Chinese Empire proper
+    ROOT = {
+
+    }
+
+    #####################################################################################
+    # Layer 12: Miscellaneous
+    #####################################################################################
+    # Concentration camps
+    ROOT = {
+        JAN = {
+            override_country_name = "Catholics Reeducation Camp"
+        }
+    }
+}
+
+
+# EMPTY
+ROOT = {
+    # Naming: Britain -> British
+    # Naming: England -> English
+    # Naming: United Kingdom -> British
+    # Naming: British Empire -> Imperial British
+    # Celestial is short for both Imperial Chinese and Imperial. So Celestial Chinese [Title], and Celestial [Title] mostly mean the sam ething, but the different wording may denote rank
+    # Overall layering Home Lands > Vassals > Colonies > Tributaries
+    # Overall layering levels: Core > Internal > External
+
+    # Tiers of Integration
+    
+    # Layer A: De jure lands of the Empire
+    # 1. British Core
+    # 2. Core Regions (Admin region, real union subjects, imperial cities, etc)
+    # 3. Special Administrative Regions + Direct Commanderies (Marches / Defensive Marches, Appanage, Princely Vassals)
+    # 4. Delegated Semi-autonomous Regions aka Core Subjects (Resorts, Tusi, Native Reserves, tropical resorts, Mining Corporation)
+    # 5. Core Colonies (Consolidated Dominions)
+    
+    # Layer B: De jure subjects of the Greater Realm
+    # 6. Internal Vassals (Fiefdoms, Brother Kingdoms, Vassals, Commercial Enterprises, Agricultural Marches)
+    # 7. Internal Colonies (Dominions)
+    # 8. Internal Tributaries (Jimi States)
+    
+    # Layer C: De jure subjects of the Greater Hegemony
+    # 9. External Vassals (Protectorates, Vassals, Trade Outposts, Puppet States, Pirate Brotherhoods, etc)
+    # 10. External Colonies (Colonies)
+    # 11. External Tributaries (Tributaries)
+    # 12. Miscellaneous (Concentratoin Camps)
+
+    
+    #####################################################################################
+    # Foreign Countries
+    #####################################################################################
+        JP3 = {
+            override_country_name = "Choseon Dynasty"
+        }
+    #####################################################################################
+    # Layer 1: Core:
+    #####################################################################################
+
+    ROOT = {
+        if = {
+            # limit = {
+            #     or = {
+            #         tag = RUS
+            #     }
+            # }
+            # override_country_name = CELESTIAL_EMPIRE_TIAN_XIA
+            override_country_name = IMPERIAL_AMERICAN_DIRECTORATE_NAME
+        }
+
+        # set_country_flag = british_empire_flag
+    }
+
+
+    #####################################################################################
+    # Layer 2: Core Regions (Admin region, real union subjects, imperial cities, etc):
+    #####################################################################################
+
+    ROOT = {
+        # Administrative Regions | Qing Imperial Provinces of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Governorate of Canada"
+            }
+        }
+
+        # Viceroyalities (Empires) > Governorates (Kingdoms) > Prefectures (Duchies) > Provinces (Counties) > Districts (Baronies)
+        ROOT = {
+            # Viceroyalities (Empire Sized Regions) | Viceroyality of X or X_adj Viceroyalty
+            JAN = {
+                override_country_name = "American Jayan Viceroyality"
+            }
+            # Governorates (Kingdom Sized Regions) | SSR (Soviet Socialist Republic)
+            JAN = {
+                override_country_name = "Khorasan S.S.R."
+            }
+            # Prefectures (Duchy Sized Regions) | X SSO (Soviet Socialist Oblast)
+            JAN = {
+                override_country_name = "Saxony S.S.O."
+            }
+            # Provinces (County Sized Regions) | X SSP (Soviet Socialist Province)
+            JAN = {
+                override_country_name = "Seneca Governate"
+            }
+            # Districts (Barony Sized Regions) | X S.S.D (Soviet Socialist District)
+            JAN = {
+                override_country_name = "Shetland S.S.D."
+            }
+        }
+
+        # Imperial Cities | Imperial City of X | imperial_city
+        ROOT = {
+            JAN = {
+                override_country_name = "Cahokia Metropolis"
+                set_country_flag = metropolis
+            }
+        }
+        # HRE Free Cities | Free City of X | imperial_city
+        ROOT = {
+            JAN = {
+                override_country_name = "Bremen Free City"
+                set_country_flag = free_city
+            }
+        }
+
+        # Banking Families | Imperial Qing X Bank
+        ROOT = {
+            JAN = {
+                override_country_name = "The Hanseatic League"
+            }
+        }
+        
+        # Real Unions
+        # Different than a fiefdom in that a real union is directly ruled by the monarch and his bureaucracy, rather than being indirectly ruled by a vassal king.
+        ROOT = {
+            JAN = {
+                override_country_name = "United Belgian Kingdom"
+            }
+        }
+
+        # Integrated Personal Unions
+        # A bit less control than real unions
+        ROOT = {
+            JAN = {
+                override_country_name = "Crown Kingdom of Lithuania"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 3: Special Administrative Regions + Royal Family Demesnes: (Appanages and Princely Appanages) 
+    #####################################################################################
+
+    ROOT = {
+        # Appanages 
+        ROOT = {
+            # IRE = {
+            #     override_country_name = "Ireland Crown Appanage"
+            # }
+            JAN = {
+                override_country_name = "Portugal Imperial Heir Appanage"
+            }
+        }
+        
+        # Princely Vassals (prince_vassal) or royal privileges
+        ROOT = {
+            JAN = {
+                override_country_name = "Bosinia Princely Appanage"
+            }
+        }
+    }
+    
+    #####################################################################################
+    # Layer 4: Core Vassals (Tu-Si), Marches Resorts, Native Reserves, tropical resorts, Mining Corporation, Tibetain Ministries, etc): 
+    #####################################################################################
+    
+    # Deeply entangled subject states that are really integral parts of the Empire proper, rather than semi-sovereign associated states. These are typically specialized governments or bureaus built for specialized purposes or for administrating special lands. These are considered de jure lands owned by the Empire proper. 
+    ROOT = {
+        # Native Reserves | X_adj Tribal Reserve
+        ROOT = {
+            JAN = {
+                override_country_name = "Haida Tribal Reservation"
+            }
+        }
+
+        # These are basically marches for hordes, they are given mroe autonomy though, seeing as this a tier 4 not a tier 3 subject
+        # Integrated Tribe Subjects | Great Horde of X | Essentially Horde Marches
+        ROOT = {
+            JAN = {
+                override_country_name = "Zaporozhian Cossacks"
+            }
+            JAN = {
+                override_country_name = "British Golden Horde"
+                set_country_flag = imperial_horde
+            }
+        }
+
+        # Pagan Chiefdom 
+        ROOT = {
+        }
+
+        # Tropical Resorts | Name X Resort
+        ROOT = {
+            BLI = {
+                override_country_name = "Bali Tropical Resort"
+            }
+        }
+        
+        # Mining Corporations | Mines of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Ethiopian Mining Co"
+            }
+        }
+
+        # Sister Republics - Partner Revolutionary Republics under Soviet leadership. 
+        ROOT = {
+            JAN = {
+                override_country_name = "People's Soviet Republic of China"
+            }
+        }
+           
+        # Marches | Commandery of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Prussia Soviet Commandery"
+                set_country_flag = regional_march
+                set_country_flag = imperial_march
+            }
+        }
+        
+        # Defensive Marches | Fortress of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Great Walls of Benin"
+            }
+        }
+        
+        # Naval Marches | Naval Base of X or Gates of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Coasta Rica Naval Commandery"
+            }
+        }
+
+        # Religious Marches / Religious SARs
+        ROOT = {
+            JAN = {
+                override_country_name = "Jerusalem Celestial Holy Kingdom"
+            }
+        }
+
+        # Tibetan Ministries
+        ROOT = {
+            JAN = {
+                override_country_name = "Tibetan Ministry of US Affairs"
+            }
+        }
+
+    }
+    
+    #####################################################################################
+    # Layer 5: Core Colonies (Consolidated Dominions):
+    #####################################################################################
+    # Core Colonies are rare and typically only present when playing a new world nation. Colonial charters being granted to home regions to help speed up colonization would count as a consolidated dominion. When doing overseas colonization, the colony must be either an external or internal colony, not a core colony. 
+    # Crown dominion, core dominion, and Dominate mostly mean the same thing. 
+
+    # Consolidated Dominions | American Directorate of X
+    ROOT = {
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = consolidated_dominion
+            }
+            clr_country_flag = very_light_dominion
+            clr_country_flag = light_dominion
+            clr_country_flag = dark_dominion
+            clr_country_flag = medium_dominion
+        }
+        JAN = {
+            override_country_name = "Australian Viceroyality"
+            set_country_flag = medium_dominion
+        }
+    }
+
+    ####################################################################################
+    # Layer 6: Internal Vassals (Vassals, Trade Outposts, Fiefdoms, Puppet STates, Commercial Enterprises):     
+    #####################################################################################
+
+    # Internal Vassals are typically subsidiary governments or organizations set up by the central regime and answerable directly to the throne. They are small localized governments for specialized purposes, not a true vassal state" perse
+    ROOT = {
+        # Trade Outposts | X Trade Outpost
+        ROOT = {
+            JAN = {
+                override_country_name = "Singapore Trade Outpost"
+            }
+        }
+
+        # Client States
+        ROOT = {
+            JAN = {
+                override_country_name = "Karelian Client Prefecture"
+            }
+        }
+
+        # Generic Vassals (Waiting to be annexed)
+        ROOT = {
+            JAN = {
+                override_country_name = "Test"
+            }
+        }
+
+        # Trade Companies
+        ROOT = {
+            JAN = {
+                override_country_name = "British East India Company"
+            }
+        }
+
+        # Commercial Enterprises | X Commercial Enterprise
+        ROOT = {
+            JAN = {
+                override_country_name = "The Lanfang Corporation"
+            }
+        }
+
+        # Agricultural Marches | Agricultural March of X
+        ROOT = {
+            JAN = {
+                override_country_name = "Walachia Romanian Wheat Fields"
+            }
+        }
+
+        # Tu Si | X Tusi / X Siberian Tusi
+        # Tu Si are smaller than fiefdoms, but are more centralized. They require centralized control and follow the laws of the central empire.
+        # For non-chinese, they can be tiered
+        # Tribal Kingdom
+        # Tribal Duchy
+        # Tribal County
+        # Tribal Barony
+        every_subject_country = {
+            clr_country_flag = tribal_empire
+            clr_country_flag = tribal_kingdom
+            clr_country_flag = tribal_duchy
+            clr_country_flag = tribal_county
+            clr_country_flag = tribal_barony
+        }
+        ROOT = {
+            # Tribal Empires | Tribal Empire of X
+            JAN = {
+                override_country_name = "Kanem Bornu Tribal Empire"
+                set_country_flag = tribal_empire
+            }
+            JAN = {
+                override_country_name = "Songhai Tribal Empire"
+                set_country_flag = tribal_empire
+            }
+            # Tribal Kingdoms
+            JAN = {
+                override_country_name = "Songhai Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            JAN = {
+                override_country_name = "Laos Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            JAN = {
+                override_country_name = "Rano Tribal Kingdom"
+                set_country_flag = tribal_kingdom
+            }
+            # Tribal Duchy | Tribal Duchy of X
+            JAN = {
+                override_country_name = "Zamfara Tribal Duchy"
+                set_country_flag = tribal_duchy
+            }
+            # Tribal County | X Tribal County
+            JAN = {
+                override_country_name = "Tribal Saharan Passways"
+                set_country_flag = tribal_county
+            }
+            JAN = {
+                override_country_name = "Nupe Tribal County"
+                set_country_flag = tribal_county
+            }
+            # Tribal Barony | X Tribal Barony
+            JAN = {
+                override_country_name = "Ketu Tribe"
+                set_country_flag = tribal_barony
+            }
+        }
+
+        ROOT = {
+            # Brother Kingdoms 
+            # Essentially identical to a Kingdom tier Fiefdom, except granted to friends of the Emperor or the dynasty. 
+            # This grants them heightened social prestige and a bit more de facto autonomy, but is largely the same as a kingly fiefdom. A bit of a philosophical cross between a client Kingdom and a vassal Kingdom fiefdom. 
+            # Functionally identical to a fief Kingdom.
+            # Anglo instead of British to refer to an associated realm but not directly ruled by the monarch
+            JAN = {
+                override_country_name = "Anglo Kingdom of Bohemia"
+            }
+        }
+
+        # Palatinates | Electorate fiefdoms. Slightly elevated above equally ranked fiefdoms in terms of precedence and prestige.
+        ROOT = {
+            JAN = {
+                override_country_name = "Palatinate of the Rhine"
+            }
+        }
+
+        every_subject_country = {
+            limit = {
+                is_subject_of_type = fief_subject
+            }
+            clr_country_flag = empire_fiefdom
+            clr_country_flag = kingdom_fiefdom
+            clr_country_flag = duchy_fiefdom
+            clr_country_flag = county_fiefdom
+            clr_country_flag = barony_fiefdom
+        }
+        # Fiefdoms | {fiefdom title} of X
+        # Fiefdoms are a bit more autonomous than tusi and normal vassals. They are subservient to the laws of the central empire but fuedal lords have decent leeway to implement their own policies
+        # Kingdoms: Kingdom of X - Large
+        # Duchies: Duchy of X - Medium | Fief Subject (set_country_flag = duchy_fiefdom)
+        # Counties: County of X - Small | Fief Subject
+        # Baronies: Barony of X - OPMs | Fief Subject
+        ROOT = {
+            # Empire Tier
+            JAN = {
+                override_country_name = "Grand Republic of Novgorod"
+                set_country_flag = empire_fiefdom
+            }
+            # Kingdom Tier - Archbishoprics, Kingdoms, Sultanates, Grand Duchies, Archduchies, Electorates, etc
+            JAN = {
+                override_country_name = "Kingdom of Yemen"
+                set_country_flag = kingdom_fiefdom
+            }
+            # Duchies - Bishoprics, Duchies, Grand Emirates, Petty Kingdoms, etc
+            JAN = {
+                override_country_name = "Petty Kingdom of Nepal"
+                set_country_flag = duchy_fiefdom
+            }
+            # Counties - Petty Bishoprics, Counties, Emirates, Duchies, Jarldoms, Earldoms, etc
+            JAN = {
+                override_country_name = "Tyrol County"
+                set_country_flag = county_fiefdom
+            }
+            # Baronies - Parishes, Baronies, Towns, Holdings, Castles, Fortresses, Manors, etc (Heavily urbanized holdings should be Imperial Cities instead)
+            JAN = {
+                override_country_name = "Paderborn Barony"
+                set_country_flag = barony_fiefdom
+            }
+        }
+        
+        # Puppet States | American X_adj directorate / Puppet State of X / X_adj Satellite State
+        # Large - Grand Directorate
+        # Medium - Directorate
+        # Small - Satellite
+        ROOT = {
+            # Vanquished foes under direct military occupation
+            # Intense de facto oppression, but with high amount of de jure autonomy compared to more core subject states
+			JAN = {
+				override_country_name = "Demak Satellite State"
+			}
+        }
+
+        # Comintern Members
+        ROOT = {
+            JAN = {
+                override_country_name = "People's Republic of Constantinople"
+            }
+        }
+        
+        # Vassals
+        ROOT = {
+            JAN = {
+                override_country_name = "Wu Provisional State"
+            }
+        }
+
+        # Semi Free Vassals 
+        ROOT = {             
+            JAN = {
+                override_country_name = "Basque Free Country"
+            }
+        }
+
+        # Free Vassals 
+        ROOT = {             
+            JAN = {
+                override_country_name = "Catalonia Autonomous Region"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 7: Internal Colonies (Dominions):
+    #####################################################################################
+    # Core tributaries make up the bulk of the Chinese Hegemony, they are heavily integrated Jimi states which not only pay tributes but are expected to organize together for mutual defense and wellfare. 
+
+    ROOT = {
+        JAN = {
+            override_country_name = "American New Zealand"
+        }
+    }
+
+    # Revolutionary Subjects
+    ROOT = {
+        JAN = {
+            override_country_name = "Liang Provisional State"
+            set_country_flag = revolutionary_subject_1
+        }
+    }
+
+    ####################################################################################
+    # Layer 8: Internal Tributaries (Jimi Tributary Vassals): 
+    #####################################################################################
+    
+    # Jimi States
+    ROOT = {
+        JAN = {
+            override_country_name = "Japanese Crown Tributary"
+        }
+    }
+
+    ####################################################################################
+    # Layer 9: External Vassals (Protectorates, Pirate Brotherhoods, etc):
+    #####################################################################################
+
+    ROOT = {
+        # Protectorate | The X Protectorate
+        JAN = {
+            override_country_name = "Protectorate of Yue"
+        }
+        
+        # Pirate Brotherhoods
+        ROOT = {
+            JAN = {
+                override_country_name = "Rhodes Soviet Spy Fleet"
+            }
+        }
+    }
+
+    #####################################################################################
+    # Layer 10: External Colonies (Colonies)
+    #####################################################################################
+    # Colonies | Root Adj X
+    ROOT = {   
+        JAN = {
+            override_country_name = "Norwegian Celestial Colony"
+        }   
+    }
+
+    # Viking Settlements 
+    ROOT = {
+        JAN = {
+            override_country_name = "Icelandic British Viking Kingdom"
+        }
+    }
+
+    #####################################################################################
+    # Layer 11: External Tributaries (Tributaries)
+    #####################################################################################
+    # Tributary Subjects | Even less integrated than Chinese Tributaries. Part of the greater Chinese Hegemony, not part of the Greater Chinese Empire proper
+    ROOT = {
+
+    }
+
+    #####################################################################################
+    # Layer 12: Miscellaneous
+    #####################################################################################
+    # Concentration camps
+    ROOT = {
+        JAN = {
+            override_country_name = "Catholics Reeducation Camp"
+        }
+    }
+}

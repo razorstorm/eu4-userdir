@@ -389,6 +389,16 @@ add_casus_belli = {
     type = cb_vassalize_mission
     months = -1
 }
+RUS = {
+    every_owned_province = {
+        add_permanent_claim = ROOT
+    }
+}
+add_casus_belli = {
+    target = RUS
+    type = cb_imperial
+    months = -1
+}
 
 
 remove_country_modifier = mng_imperial_explorers_corps_of_the_ming_dynasty_modifier
@@ -822,6 +832,88 @@ K04 = {
 }
 
 
+# USA
+ CCH = {
+        grant_independence = yes
+    }
+
+
+    # TODO Make atheism religion like confucianism
+    # ----- Continuous -----
+    add_mod = {
+        name = has_competent_doctors
+        duration = -1
+    }
+    every_owned_province = {
+        set_province_flag = province_had_influenza
+    }
+
+    every_owned_province = {
+        add_province_modifier = {
+            name = public_works_of_cairo
+            duration = -1  
+        } 
+    }
+
+    every_owned_province = {
+        if = {
+            limit = {
+                NOT = {
+                    development = 20
+                }
+            }
+            add_base_tax = 2
+            add_base_production = 3
+            add_base_manpower = 1
+        }
+    }
+    
+    
+    every_subject_country = {
+        change_primary_culture = ROOT
+    }
+    constitute_australia = yes
+
+    ROOT = {
+        every_subject_country = {
+            every_owned_province = {
+                limit = {
+                    OR = {
+                        superregion = oceania_superregion
+                    }
+                    NOT = {
+                        region = australia_region
+                    }
+                }
+                cede_province = ROOT                                  
+            }
+        }
+    }
+    
+    # Remove Religious Zeal
+    remove_religious_zeal = yes
+
+    # Revolutionary Subjects
+    every_subject_country = {
+        limit = {
+            OR = {
+                is_subject_of_type = dominion
+                is_subject_of_type = dominion_tc
+                is_subject_of_type = consolidated_dominion
+                is_subject_of_type = administrative_region
+            }
+        }
+
+        if = {
+            limit = {
+                is_revolutionary = no
+            }
+            log = "[This.GetName] is not revolutionary, adding revolutionary_empire_reform"
+            change_government = monarchy
+            add_government_reform = revolutionary_empire_reform 
+        }
+    }
+
 
 
 # Persian Rugs
@@ -1111,7 +1203,10 @@ capital_scope = {
 6702 = {
     change_province_name = "Kamchatka"
 }
-
+28 = {
+    change_province_name = "Helsinki"
+    rename_capital = "Helsinki"
+}
 
 accept_all_american_cultures = yes
 add_accepted_culture = sumatran
@@ -5898,7 +5993,6 @@ every_subject_country = {
 
 
 # Target war enemies
-
 every_country = {
     limit = {
         is_in_war = {
@@ -5911,3 +6005,21 @@ every_country = {
     }
     log = "At war as attacker: [This.GetName] [This.tag.GetValue]"
 }
+
+every_owned_province = {
+    add_institution_embracement = {
+        which = ins_centralisation
+        value = 100
+    }
+}
+
+4201 = {            
+    add_great_project_tier = {
+        type = hf_ancient_koguryo_kingdom
+        tier = 3
+    }
+}
+
+
+# Search Exclude:
+# positions.txt, terrain.txt, continent.txt, area.txt, *trade_companies*, flavor*.txt, *native*.txt, *output.*txt,

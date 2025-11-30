@@ -5253,11 +5253,11 @@ LANDBATTLEOVER={
 	category="cat_combat"
 	option=no
 	to_me={
-		log=no
+		log=yes
 		onmap=no
 		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 SIEGEOVER={
@@ -5303,11 +5303,11 @@ NAVALBATTLEOVER={
 	category="cat_combat"
 	option=no
 	to_me={
-		log=no
+		log=yes
 		onmap=no
 		popup=no
 		pausepopup=no
-		icon=no
+		icon=yes
 	}
 }
 CHATMESSAGE={
